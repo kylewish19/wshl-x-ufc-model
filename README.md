@@ -29,16 +29,28 @@ A versioned UFC prediction and grading project for WSHL_X.
 
 The September 15, 2026 project handoff is the source of truth for the recoverable pre-repository history. It records:
 
-- preserved official roles: winner v0.3.1, method v0.4.0, round/timing v0.3.1;
+- preserved historical official roles: winner v0.3.1, method v0.4.0, round/timing v0.3.1;
 - 64 clean UFC fights through UFC Paris with winner 36-28, displayed method 28-36, and winner+method 15-49;
-- a demonstrated decision-heavy method bias: 37 DEC / 25 KO / 2 SUB predicted versus 21 DEC / 31 KO / 12 SUB actual;
+- a demonstrated decision-heavy method localization problem: 37 DEC / 25 KO / 2 SUB predicted versus 21 DEC / 31 KO / 12 SUB actual;
 - strong Paris timing-market directional grading, but correlated observations that must not be treated as independent bets;
-- an experimental v0.26 update that was executed in a prior workspace but not safely archived, so it is **not** treated as a recoverable trained package here.
+- an experimental v0.26 update that was executed in a prior workspace but not safely archived.
 
-This repository starts by preserving that history and rebuilding forward without inventing missing artifacts.
+## Recovery status — September 18, 2026
 
-## Status
+The three recovery tasks from the handoff are now materially complete:
 
-**Repository scaffold / research rebuild. No new UFC model has been promoted from this repo yet.**
+- the clean 64-fight ledger and append-only master audit through Paris are in GitHub;
+- the stale UFC performance history has been causally rebuilt from **8,630 fights through Aug. 1** to **8,707 decisive fights through Sep. 12**, restoring 77 post-August-1 prefight rows;
+- the documented lost-v0.26 residual-method idea has been rebuilt, trained and hashed as **v0.27-reconstruction**.
 
-See `docs/MODEL_GOVERNANCE.md` and `docs/HISTORICAL_HANDOFF.md`.
+The exact old v0.26 binary is still not recoverable and is not being impersonated.
+
+The new v0.27 residual challenger remains **shadow only**. On its reconstructed chronology benchmark it tied baseline accuracy but produced worse Brier score and log loss, so it has not earned promotion.
+
+No new model from this repository has been promoted over the preserved historical champions.
+
+See:
+- `docs/RECOVERY_COMPLETE_2026-09-18.md`
+- `docs/MASTER_UFC_RECORD_AUDIT_2026-09-18.md`
+- `docs/MODEL_GOVERNANCE.md`
+- `artifacts/v027_reconstruction/manifest.json`
