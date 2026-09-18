@@ -37,6 +37,13 @@ HISTORY_ALIASES = {
     "patriciopitbull": "patriciofreire",
 }
 
+NON_PERFORMANCE_HISTORY_EXCLUSIONS = {
+    # Official TKO result, but the bout ended when Pantoja dislocated his elbow
+    # while posting on the mat 26 seconds into the fight. Preserve the result
+    # ledger; exclude it from current matchup performance-history aggregation.
+    ("UFC 323: Dvalishvili vs. Yan 2", "Alexandre Pantoja vs. Joshua Van"),
+}
+
 CURRENT_PROFILE_OVERRIDES = {
     "Michael Aswell Jr.": {"age_years": 25.0, "height_inches": 68.0, "reach_inches": 69.0},
     "Gable Steveson": {"height_inches": 71.0, "reach_inches": 74.0},
@@ -63,6 +70,8 @@ def completed_history(fights, fight_stats):
     for date, group in fights.groupby("event_date", sort=True):
         pending = []
         for fight in group.itertuples(index=False):
+            if (rb.norm_text(fight.event), rb.norm_text(fight.bout)) in NON_PERFORMANCE_HISTORY_EXCLUSIONS:
+                continue
             ek = rb.norm_text(fight.event)
             bk = rb.norm_text(fight.bout)
             sa = fight_stats.get((ek, bk, rb.norm_name(fight.fighter_a)), {})
@@ -250,12 +259,13 @@ def main():
     payload={
         "event":"UFC 331: Van vs Pantoja 2",
         "event_date":"2026-09-19",
-        "stage":"A_MODEL_ONLY_ODDS_BLIND_V2_IDENTITY_AUDITED",
+        "stage":"A_MODEL_ONLY_ODDS_BLIND_V3_INJURY_AND_IDENTITY_AUDITED",
         "generated_at_utc":datetime.now(timezone.utc).isoformat(),
         "data_corrections":{
             "patricio_pitbull_alias":"Merged UFCStats history stored as Patricio Freire + Patricio Pitbull",
             "michael_aswell_jr_static":"Age 25, height 68, reach 69 from current UFC profile",
             "gable_steveson_static":"Height 71, reach 74 from current UFC profile",
+            "van_pantoja_ufc323_injury":"Official result preserved, excluded from performance-history aggregation because the 0:26 stoppage was caused by Pantoja elbow dislocation",
             "odds_used":False
         },
         "model_state":{
@@ -272,7 +282,7 @@ def main():
     lock=freeze_payload(payload)
     out=ROOT/"data/locks/ufc331_2026-09-19"
     out.mkdir(parents=True,exist_ok=True)
-    (out/"stage_a_model_raw_v2.json").write_text(
+    (out/"stage_a_model_raw_v3.json").write_text(
         json.dumps({"sha256":lock.sha256,"payload":lock.payload},indent=2,sort_keys=True),
         encoding="utf-8"
     )
@@ -292,7 +302,7 @@ def main():
             "gtd_no":r["timing_direct"]["GTD_NO"],
             "model_evidence":r["evidence_density"],
         })
-    (out/"stage_a_model_summary_v2.json").write_text(
+    (out/"stage_a_model_summary_v3.json").write_text(
         json.dumps(summary,indent=2,sort_keys=True),encoding="utf-8"
     )
     print(json.dumps({"lock_sha256":lock.sha256,"summary":summary},indent=2))
