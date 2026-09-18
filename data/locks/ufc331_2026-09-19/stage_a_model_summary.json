@@ -1,0 +1,230 @@
+[
+  {
+    "fight": "Giga Chikadze vs Joanderson Brito",
+    "gtd_no": 0.4915895811971297,
+    "gtd_yes": 0.5084104188028703,
+    "model_evidence": {
+      "a_age": 38.06785902516821,
+      "a_days_since_last": 280.0,
+      "a_prior_ufc_bouts": 12,
+      "a_reach": 74.0,
+      "b_age": 31.603660581668343,
+      "b_days_since_last": 105.0,
+      "b_prior_ufc_bouts": 10,
+      "b_reach": 72.0
+    },
+    "top_joint_outcome": "A_DEC",
+    "top_joint_probability": 0.30446723730897224,
+    "winner_model": "Joanderson Brito",
+    "winner_probability": 0.5066291705202013
+  },
+  {
+    "fight": "Casey O'Neill vs Eduarda Moura",
+    "gtd_no": 0.3388892151661055,
+    "gtd_yes": 0.6611107848338945,
+    "model_evidence": {
+      "a_age": 28.95062869189648,
+      "a_days_since_last": 175.0,
+      "a_prior_ufc_bouts": 8,
+      "a_reach": 69.0,
+      "b_age": 32.55645222010035,
+      "b_days_since_last": 224.0,
+      "b_prior_ufc_bouts": 5,
+      "b_reach": 67.0
+    },
+    "top_joint_outcome": "A_DEC",
+    "top_joint_probability": 0.3951776899142143,
+    "winner_model": "Casey O'Neill",
+    "winner_probability": 0.5992113625380402
+  },
+  {
+    "fight": "Edmen Shahbazyan vs Brunno Ferreira",
+    "gtd_no": 0.5720283686048235,
+    "gtd_yes": 0.4279716313951764,
+    "model_evidence": {
+      "a_age": 28.830160783588983,
+      "a_days_since_last": 105.0,
+      "a_prior_ufc_bouts": 15,
+      "a_reach": 75.0,
+      "b_age": 33.873385490461814,
+      "b_days_since_last": 84.0,
+      "b_prior_ufc_bouts": 10,
+      "b_reach": 72.0
+    },
+    "top_joint_outcome": "A_DEC",
+    "top_joint_probability": 0.33502841610349965,
+    "winner_model": "Edmen Shahbazyan",
+    "winner_probability": 0.7025107171730383
+  },
+  {
+    "fight": "Ryan Gandra vs Ozzy Diaz",
+    "gtd_no": 0.655350887809462,
+    "gtd_yes": 0.3446491121905379,
+    "model_evidence": {
+      "a_age": 31.36820057906733,
+      "a_days_since_last": 70.0,
+      "a_prior_ufc_bouts": 2,
+      "a_reach": 74.0,
+      "b_age": 35.825513186444624,
+      "b_days_since_last": 133.0,
+      "b_prior_ufc_bouts": 3,
+      "b_reach": 79.0
+    },
+    "top_joint_outcome": "A_KO",
+    "top_joint_probability": 0.40150368001513487,
+    "winner_model": "Ryan Gandra",
+    "winner_probability": 0.7239651302912301
+  },
+  {
+    "fight": "Michael Aswell Jr. vs Joosang Yoo",
+    "gtd_no": 0.5626037867835123,
+    "gtd_yes": 0.43739621321648775,
+    "model_evidence": {
+      "a_age": null,
+      "a_days_since_last": 91.0,
+      "a_prior_ufc_bouts": 4,
+      "a_reach": null,
+      "b_age": 32.660492686365906,
+      "b_days_since_last": 350.0,
+      "b_prior_ufc_bouts": 2,
+      "b_reach": 71.0
+    },
+    "top_joint_outcome": "A_KO",
+    "top_joint_probability": 0.2720709995559255,
+    "winner_model": "Joosang Yoo",
+    "winner_probability": 0.5425362587838334
+  },
+  {
+    "fight": "Tai Tuivasa vs Robelis Despaigne",
+    "gtd_no": 0.6158130537236775,
+    "gtd_yes": 0.3841869462763226,
+    "model_evidence": {
+      "a_age": 33.51198176553933,
+      "a_days_since_last": 140.0,
+      "a_prior_ufc_bouts": 18,
+      "a_reach": 75.0,
+      "b_age": 38.026790420063385,
+      "b_days_since_last": 700.0,
+      "b_prior_ufc_bouts": 3,
+      "b_reach": 84.0
+    },
+    "top_joint_outcome": "B_KO",
+    "top_joint_probability": 0.28220315867546863,
+    "winner_model": "Tai Tuivasa",
+    "winner_probability": 0.5036953056526576
+  },
+  {
+    "fight": "Marlon Vera vs Charles Jourdain",
+    "gtd_no": 0.3946897898733759,
+    "gtd_yes": 0.6053102101266241,
+    "model_evidence": {
+      "a_age": 33.79672409426614,
+      "a_days_since_last": 203.0,
+      "a_prior_ufc_bouts": 26,
+      "a_reach": 70.0,
+      "b_age": 30.812405456648666,
+      "b_days_since_last": 154.0,
+      "b_prior_ufc_bouts": 16,
+      "b_reach": 69.0
+    },
+    "top_joint_outcome": "B_DEC",
+    "top_joint_probability": 0.3591736162252236,
+    "winner_model": "Charles Jourdain",
+    "winner_probability": 0.61104806590212
+  },
+  {
+    "fight": "Alonzo Menifield vs Iwo Baraniewski",
+    "gtd_no": 0.6664838721340971,
+    "gtd_yes": 0.33351612786590296,
+    "model_evidence": {
+      "a_age": 38.922086011348625,
+      "a_days_since_last": 112.0,
+      "a_prior_ufc_bouts": 17,
+      "a_reach": 76.0,
+      "b_age": 27.83082472603818,
+      "b_days_since_last": 105.0,
+      "b_prior_ufc_bouts": 3,
+      "b_reach": 73.0
+    },
+    "top_joint_outcome": "B_KO",
+    "top_joint_probability": 0.34782255314954313,
+    "winner_model": "Alonzo Menifield",
+    "winner_probability": 0.5387944834487403
+  },
+  {
+    "fight": "Gable Steveson vs Sean Sharaf",
+    "gtd_no": 0.8438430143991192,
+    "gtd_yes": 0.15615698560088076,
+    "model_evidence": {
+      "a_age": 26.303072616138593,
+      "a_days_since_last": 70.0,
+      "a_prior_ufc_bouts": 1,
+      "a_reach": null,
+      "b_age": 33.191646645721676,
+      "b_days_since_last": 280.0,
+      "b_prior_ufc_bouts": 2,
+      "b_reach": 77.0
+    },
+    "top_joint_outcome": "A_KO",
+    "top_joint_probability": 0.5970060925212155,
+    "winner_model": "Gable Steveson",
+    "winner_probability": 0.8266165718314533
+  },
+  {
+    "fight": "Patricio Pitbull vs Dooho Choi",
+    "gtd_no": 0.6273354642843083,
+    "gtd_yes": 0.37266453571569175,
+    "model_evidence": {
+      "a_age": null,
+      "a_days_since_last": 161.0,
+      "a_prior_ufc_bouts": 1,
+      "a_reach": null,
+      "b_age": 35.444944112473216,
+      "b_days_since_last": 126.0,
+      "b_prior_ufc_bouts": 9,
+      "b_reach": 70.0
+    },
+    "top_joint_outcome": "B_KO",
+    "top_joint_probability": 0.30166719822000615,
+    "winner_model": "Dooho Choi",
+    "winner_probability": 0.5830216736534404
+  },
+  {
+    "fight": "Arman Tsarukyan vs Mauricio Ruffy",
+    "gtd_no": 0.6016933144944712,
+    "gtd_yes": 0.3983066855055289,
+    "model_evidence": {
+      "a_age": 29.93901312141933,
+      "a_days_since_last": 301.0,
+      "a_prior_ufc_bouts": 12,
+      "a_reach": 72.0,
+      "b_age": 30.256610334229997,
+      "b_days_since_last": 97.0,
+      "b_prior_ufc_bouts": 6,
+      "b_reach": 75.0
+    },
+    "top_joint_outcome": "A_DEC",
+    "top_joint_probability": 0.2802646295581862,
+    "winner_model": "Arman Tsarukyan",
+    "winner_probability": 0.6792748627500002
+  },
+  {
+    "fight": "Joshua Van vs Alexandre Pantoja",
+    "gtd_no": 0.5688503279309207,
+    "gtd_yes": 0.4311496720690793,
+    "model_evidence": {
+      "a_age": 24.942332833665304,
+      "a_days_since_last": 133.0,
+      "a_prior_ufc_bouts": 11,
+      "a_reach": 65.0,
+      "b_age": 36.42785272798209,
+      "b_days_since_last": 287.0,
+      "b_prior_ufc_bouts": 18,
+      "b_reach": 67.0
+    },
+    "top_joint_outcome": "A_KO",
+    "top_joint_probability": 0.3397865069458504,
+    "winner_model": "Joshua Van",
+    "winner_probability": 0.7243588549742722
+  }
+]
