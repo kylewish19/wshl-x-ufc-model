@@ -1,0 +1,44 @@
+name: rebuild-v027
+
+on:
+  push:
+    paths:
+      - "training_request.json"
+      - "tools/rebuild_v027.py"
+      - ".github/workflows/rebuild-v027.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Rebuild causal feature history and v0.27 shadow
+        run: |
+          PYTHONPATH=src python tools/rebuild_v027.py
+      - name: Run tests
+        run: pytest -q
+      - name: Commit verified generated artifacts
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add artifacts/v027_reconstruction reports/v027_reconstruction data/features/reconstructed
+          if git diff --cached --quiet; then
+            echo "No generated changes."
+            exit 0
+          fi
+          git commit -m "model: rebuild v0.27 reconstruction through current cutoff"
+          git push
