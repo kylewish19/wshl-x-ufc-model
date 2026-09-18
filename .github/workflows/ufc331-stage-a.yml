@@ -1,0 +1,45 @@
+name: ufc331-stage-a
+
+on:
+  push:
+    paths:
+      - "stage_a_request_ufc331.json"
+      - "tools/run_ufc331_stage_a.py"
+      - ".github/workflows/ufc331-stage-a.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  stage_a:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Run UFC 331 odds-blind model card
+        run: PYTHONPATH=src python tools/run_ufc331_stage_a.py
+      - name: Test
+        run: pytest -q
+      - name: Commit frozen model run
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git fetch origin main
+          git rebase origin/main
+          git add data/locks/ufc331_2026-09-19
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "lock: UFC 331 Stage A odds-blind model run"
+          git push
