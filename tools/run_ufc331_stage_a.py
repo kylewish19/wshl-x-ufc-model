@@ -186,7 +186,7 @@ def main():
         sim_base = simulate_joint_outcomes(joint_base,trials=TRIALS,seed=BASE_SEED+i)
         sim_shadow = simulate_joint_outcomes(joint_shadow,trials=TRIALS,seed=BASE_SEED+100+i)
 
-        tx = pd.Series(wf)
+        tx = pd.Series({name: wf.get(name, np.nan) for name in timing_model.base_feature_names_}, index=timing_model.base_feature_names_)
         timing_direct = timing_model.market_probabilities(tx,f["scheduled_seconds"])
         timing_sim, finish_round = timing_simulation(
             timing_model,tx,f["scheduled_seconds"],BASE_SEED+200+i
