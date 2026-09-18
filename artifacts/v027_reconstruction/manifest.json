@@ -1,0 +1,182 @@
+{
+  "artifact_sha256": {
+    "method_baseline": "91cc68aa269b766958c3a67e4466ebf1e4fe0d3561fa052fab57fce5d10e365e",
+    "method_residual_v027": "9f8d43e6c10eca6e23acf036ac064b2196986624a869d446ed41bfc41c643f12",
+    "timing": "90bd9a3802b75956fb856d70cd402f99b1588be2a75bcd9883192bf16c2268be",
+    "winner": "fb08125a96791dc332b024c896db64f39b90cb998ce777dd859a60afb638b7c0"
+  },
+  "cutoff_exclusive": "2026-09-13T00:00:00+00:00",
+  "feature_contract": {
+    "method_baseline_feature_count": 107,
+    "residual_features": [
+      "knockdown_interaction",
+      "ground_strike_interaction",
+      "submission_attempt_interaction",
+      "td_access_interaction",
+      "control_interaction",
+      "offensive_wrestling_exposure_interaction",
+      "winner_round3_retention",
+      "opponent_round3_retention",
+      "winner_log_ufc_bouts",
+      "opponent_log_ufc_bouts"
+    ],
+    "residual_formula_status": "new v0.27 reconstruction formulas; not claimed byte-identical to lost v0.26",
+    "same_day_leakage_rule": "same-day fights frozen before any same-day outcome update",
+    "winner_feature_count": 107
+  },
+  "generated_at_utc": "2026-09-18T22:24:12.206026+00:00",
+  "integrity_note": "This rebuild uses public UFCStats-derived fight/round data pinned to an upstream Git commit. It reconstructs current causal fighter histories through the latest completed event before the cutoff. It does not claim to reproduce the lost v0.26 binaries or its exact coefficients.",
+  "method_clean64_reconstruction_benchmark": {
+    "baseline_all_64": {
+      "accuracy": 0.390625,
+      "actual": {
+        "DEC": 21,
+        "KO": 31,
+        "SUB": 12
+      },
+      "calls": {
+        "DEC": 41,
+        "KO": 22,
+        "SUB": 1
+      },
+      "log_loss": 1.0417601755109134,
+      "multiclass_brier": 0.659330904438709,
+      "n": 64,
+      "recall": {
+        "DEC": 0.6190476190476191,
+        "KO": 0.3548387096774194,
+        "SUB": 0.08333333333333333
+      }
+    },
+    "chronology_baseline": {
+      "accuracy": 0.38461538461538464,
+      "actual": {
+        "DEC": 16,
+        "KO": 27,
+        "SUB": 9
+      },
+      "calls": {
+        "DEC": 35,
+        "KO": 16,
+        "SUB": 1
+      },
+      "log_loss": 1.0574703341159757,
+      "multiclass_brier": 0.6643794445818578,
+      "n": 52,
+      "recall": {
+        "DEC": 0.625,
+        "KO": 0.3333333333333333,
+        "SUB": 0.1111111111111111
+      }
+    },
+    "chronology_candidate": {
+      "accuracy": 0.38461538461538464,
+      "actual": {
+        "DEC": 16,
+        "KO": 27,
+        "SUB": 9
+      },
+      "calls": {
+        "DEC": 36,
+        "KO": 13,
+        "SUB": 3
+      },
+      "log_loss": 1.1048436032707933,
+      "multiclass_brier": 0.702833558416692,
+      "n": 52,
+      "recall": {
+        "DEC": 0.75,
+        "KO": 0.25925925925925924,
+        "SUB": 0.1111111111111111
+      }
+    },
+    "chronology_evaluation_fights": 52,
+    "folds": [
+      {
+        "test_date": "2026-08-15T00:00:00+00:00",
+        "test_fights": 12,
+        "train_clean_fights": 12
+      },
+      {
+        "test_date": "2026-08-22T00:00:00+00:00",
+        "test_fights": 13,
+        "train_clean_fights": 24
+      },
+      {
+        "test_date": "2026-08-29T00:00:00+00:00",
+        "test_fights": 13,
+        "train_clean_fights": 37
+      },
+      {
+        "test_date": "2026-09-05T00:00:00+00:00",
+        "test_fights": 14,
+        "train_clean_fights": 50
+      }
+    ],
+    "note": "Retrospective reconstruction only. Architecture and feature formulas were defined after historical results were known; this is not prospective proof."
+  },
+  "population": {
+    "clean_feedback_rows": 64,
+    "conditional_method_training_rows": 8707,
+    "decisive_fights": 8707,
+    "first_event_date": "1994-03-11T00:00:00+00:00",
+    "last_event_date": "2026-09-12T00:00:00+00:00",
+    "timing_training_rows": 8707,
+    "winner_training_rows": 8707
+  },
+  "post_august_feature_delta": {
+    "first_event_date": "2026-08-08T00:00:00+00:00",
+    "last_event_date": "2026-09-12T00:00:00+00:00",
+    "method_delta_sha256": "c48f6440033f59e30ff52ab907117b1fe4618a2f9116c8ca970432abc41691f1",
+    "method_rows": 77,
+    "winner_delta_sha256": "d63ea664f871e39281b8af7e893c2659c7f149d2fe40109607ca8cacd46a445d",
+    "winner_rows": 77
+  },
+  "promotion": {
+    "authorized": false,
+    "prospective_fights_since_rebuild": 0,
+    "role": "shadow/reconstruction"
+  },
+  "status": "V0.27_RECONSTRUCTION_TRAINED_SHADOW",
+  "upstream": {
+    "commit": "cb4ecb64dd62324a7a51a378f6b5bbb0fc99bc65",
+    "files": {
+      "events": {
+        "bytes": 102113,
+        "filename": "ufc_event_details.csv",
+        "sha256": "8ca09d42df17cd89fef5ad24e92549fdf07a4ee475ba5a1164d43751c203f0b7",
+        "upstream_git_blob_sha": "27f416337b93d523357a29e57a2660126e27eb44",
+        "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/cb4ecb64dd62324a7a51a378f6b5bbb0fc99bc65/ufc_event_details.csv"
+      },
+      "results": {
+        "bytes": 2093368,
+        "filename": "ufc_fight_results.csv",
+        "sha256": "8ff11b8acbbc0f3618953c2e376aaa2ff83205fea9d4cbf675410c96363e3088",
+        "upstream_git_blob_sha": "395f46ba4a4811f0a6b15ed0d4003df51b164704",
+        "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/cb4ecb64dd62324a7a51a378f6b5bbb0fc99bc65/ufc_fight_results.csv"
+      },
+      "stats": {
+        "bytes": 7624885,
+        "filename": "ufc_fight_stats.csv",
+        "sha256": "a31f62b8e22cebfca038ea8b88bf6379da28653f9eaf47e74a741d4f4b3dddca",
+        "upstream_git_blob_sha": "6763ee38bea2edc63ae341d84adbbeb3a2a0eb2b",
+        "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/cb4ecb64dd62324a7a51a378f6b5bbb0fc99bc65/ufc_fight_stats.csv"
+      },
+      "tott": {
+        "bytes": 507405,
+        "filename": "ufc_fighter_tott.csv",
+        "sha256": "7ab0b4d1c064cd3ae65bd42fdea712033feb79b7888bc534ffba3d79ee7b40bb",
+        "upstream_git_blob_sha": "a4e17fa437c361eb74eb94c98dcb17470f09bb28",
+        "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/cb4ecb64dd62324a7a51a378f6b5bbb0fc99bc65/ufc_fighter_tott.csv"
+      }
+    },
+    "repository": "Greco1899/scrape_ufc_stats"
+  },
+  "winner_clean64_reconstruction_benchmark": {
+    "accuracy": 0.609375,
+    "brier": 0.24228754531631924,
+    "log_loss": 0.6811044192929936,
+    "n": 64,
+    "note": "New reconstruction benchmark, not the historical official v0.3.1 score."
+  }
+}

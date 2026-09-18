@@ -1,0 +1,115 @@
+{
+  "delta": {
+    "first_event_date": "2026-08-08T00:00:00+00:00",
+    "last_event_date": "2026-09-12T00:00:00+00:00",
+    "method_delta_sha256": "c48f6440033f59e30ff52ab907117b1fe4618a2f9116c8ca970432abc41691f1",
+    "method_rows": 77,
+    "winner_delta_sha256": "d63ea664f871e39281b8af7e893c2659c7f149d2fe40109607ca8cacd46a445d",
+    "winner_rows": 77
+  },
+  "method": {
+    "baseline_all_64": {
+      "accuracy": 0.390625,
+      "actual": {
+        "DEC": 21,
+        "KO": 31,
+        "SUB": 12
+      },
+      "calls": {
+        "DEC": 41,
+        "KO": 22,
+        "SUB": 1
+      },
+      "log_loss": 1.0417601755109134,
+      "multiclass_brier": 0.659330904438709,
+      "n": 64,
+      "recall": {
+        "DEC": 0.6190476190476191,
+        "KO": 0.3548387096774194,
+        "SUB": 0.08333333333333333
+      }
+    },
+    "chronology_baseline": {
+      "accuracy": 0.38461538461538464,
+      "actual": {
+        "DEC": 16,
+        "KO": 27,
+        "SUB": 9
+      },
+      "calls": {
+        "DEC": 35,
+        "KO": 16,
+        "SUB": 1
+      },
+      "log_loss": 1.0574703341159757,
+      "multiclass_brier": 0.6643794445818578,
+      "n": 52,
+      "recall": {
+        "DEC": 0.625,
+        "KO": 0.3333333333333333,
+        "SUB": 0.1111111111111111
+      }
+    },
+    "chronology_candidate": {
+      "accuracy": 0.38461538461538464,
+      "actual": {
+        "DEC": 16,
+        "KO": 27,
+        "SUB": 9
+      },
+      "calls": {
+        "DEC": 36,
+        "KO": 13,
+        "SUB": 3
+      },
+      "log_loss": 1.1048436032707933,
+      "multiclass_brier": 0.702833558416692,
+      "n": 52,
+      "recall": {
+        "DEC": 0.75,
+        "KO": 0.25925925925925924,
+        "SUB": 0.1111111111111111
+      }
+    },
+    "chronology_evaluation_fights": 52,
+    "folds": [
+      {
+        "test_date": "2026-08-15T00:00:00+00:00",
+        "test_fights": 12,
+        "train_clean_fights": 12
+      },
+      {
+        "test_date": "2026-08-22T00:00:00+00:00",
+        "test_fights": 13,
+        "train_clean_fights": 24
+      },
+      {
+        "test_date": "2026-08-29T00:00:00+00:00",
+        "test_fights": 13,
+        "train_clean_fights": 37
+      },
+      {
+        "test_date": "2026-09-05T00:00:00+00:00",
+        "test_fights": 14,
+        "train_clean_fights": 50
+      }
+    ],
+    "note": "Retrospective reconstruction only. Architecture and feature formulas were defined after historical results were known; this is not prospective proof."
+  },
+  "population": {
+    "clean_feedback_rows": 64,
+    "conditional_method_training_rows": 8707,
+    "decisive_fights": 8707,
+    "first_event_date": "1994-03-11T00:00:00+00:00",
+    "last_event_date": "2026-09-12T00:00:00+00:00",
+    "timing_training_rows": 8707,
+    "winner_training_rows": 8707
+  },
+  "winner": {
+    "accuracy": 0.609375,
+    "brier": 0.24228754531631924,
+    "log_loss": 0.6811044192929936,
+    "n": 64,
+    "note": "New reconstruction benchmark, not the historical official v0.3.1 score."
+  }
+}
