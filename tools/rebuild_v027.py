@@ -836,7 +836,7 @@ def save_final_models(
         timing_df[TIMING_FEATURES],
         timing_df["duration_seconds"].to_numpy(float),
         timing_df["scheduled_seconds"].to_numpy(int),
-        (timing_df["method"] != "DEC").astype(int).to_numpy(),
+        ((timing_df["method"] != "DEC") | (timing_df["duration_seconds"] < timing_df["scheduled_seconds"] - 1)).astype(int).to_numpy(),
     )
 
     paths = {
