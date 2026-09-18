@@ -693,7 +693,7 @@ def grade_methods(y: np.ndarray, p: np.ndarray) -> dict[str, object]:
     return {
         "n": int(len(y)),
         "accuracy": float(accuracy_score(y, pred)),
-        "log_loss": float(log_loss(y, p, labels=classes)),
+        "log_loss": float(log_loss(y, p[:, [2, 0, 1]], labels=["DEC", "KO", "SUB"])),
         "multiclass_brier": float(multiclass_brier(y, p, classes)),
         "calls": {c: int(np.sum(pred == c)) for c in classes},
         "actual": {c: int(np.sum(y == c)) for c in classes},
@@ -836,7 +836,7 @@ def save_final_models(
         timing_df[TIMING_FEATURES],
         timing_df["duration_seconds"].to_numpy(float),
         timing_df["scheduled_seconds"].to_numpy(int),
-        ((timing_df["method"] != "DEC") | (timing_df["duration_seconds"] < timing_df["scheduled_seconds"] - 1)).astype(int).to_numpy(),
+        ((timing_df["method"] != "DEC") | (timing_df["duration_seconds"] < timing_df["scheduled_seconds"])).astype(int).to_numpy(),
     )
 
     paths = {
