@@ -1,0 +1,8 @@
+{
+  "requested_at": "2026-09-18",
+  "purpose": "Recover post-Aug-1 causal UFC feature history and train verified v0.27 reconstruction shadow",
+  "upstream_repo": "Greco1899/scrape_ufc_stats",
+  "upstream_commit": "cb4ecb64dd62324a7a51a378f6b5bbb0fc99bc65",
+  "training_cutoff_exclusive": "2026-09-13",
+  "promotion_authorized": false
+}
