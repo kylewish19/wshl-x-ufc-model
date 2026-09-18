@@ -256,7 +256,7 @@ def main():
             "patricio_pitbull_alias":"Merged UFCStats history stored as Patricio Freire + Patricio Pitbull",
             "michael_aswell_jr_static":"Age 25, height 68, reach 69 from current UFC profile",
             "gable_steveson_static":"Height 71, reach 74 from current UFC profile",
-            "odds_used":false
+            "odds_used":False
         },
         "model_state":{
             "winner":"winner_reconstruction shadow/current operational reconstruction",
