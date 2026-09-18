@@ -210,21 +210,21 @@
   },
   {
     "fight": "Joshua Van vs Alexandre Pantoja",
-    "gtd_no": 0.556548271118607,
-    "gtd_yes": 0.44345172888139295,
+    "gtd_no": 0.5484245181174592,
+    "gtd_yes": 0.4515754818825408,
     "model_evidence": {
       "a_age": 24.942332833665304,
       "a_days_since_last": 133.0,
       "a_prior_ufc_bouts": 10,
       "a_reach": 65.0,
       "b_age": 36.42785272798209,
-      "b_days_since_last": 448.0,
+      "b_days_since_last": 287.0,
       "b_prior_ufc_bouts": 17,
       "b_reach": 67.0
     },
     "top_joint_outcome": "A_DEC",
-    "top_joint_probability": 0.37615757432806124,
+    "top_joint_probability": 0.3807137946640087,
     "winner_model": "Joshua Van",
-    "winner_probability": 0.7416036760259527
+    "winner_probability": 0.7405227484107599
   }
 ]
