@@ -34,12 +34,12 @@ jobs:
         run: |
           git config user.name "WSHL_X model bot"
           git config user.email "actions@users.noreply.github.com"
-          git fetch origin main
-          git rebase origin/main
           git add data/locks/ufc331_2026-09-19
           if git diff --cached --quiet; then
             echo "No changes"
             exit 0
           fi
           git commit -m "lock: UFC 331 Stage A odds-blind model run"
+          git fetch origin main
+          git rebase origin/main
           git push
