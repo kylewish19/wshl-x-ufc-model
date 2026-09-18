@@ -47,6 +47,7 @@ NON_PERFORMANCE_HISTORY_EXCLUSIONS = {
 CURRENT_PROFILE_OVERRIDES = {
     "Michael Aswell Jr.": {"age_years": 25.0, "height_inches": 68.0, "reach_inches": 69.0},
     "Gable Steveson": {"height_inches": 71.0, "reach_inches": 74.0},
+    "Alexandre Pantoja": {"days_since_last": 287.0},
 }
 
 CARD = [
