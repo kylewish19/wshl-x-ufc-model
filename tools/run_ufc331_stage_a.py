@@ -30,6 +30,18 @@ EVENT_DATE = pd.Timestamp("2026-09-19", tz="UTC")
 TRIALS = 10_000
 BASE_SEED = 33119
 
+
+# Card-specific identity/static corrections discovered during the post-run audit.
+# These use prefight public UFC profile information only; no odds or post-fight data.
+HISTORY_ALIASES = {
+    "patriciopitbull": "patriciofreire",
+}
+
+CURRENT_PROFILE_OVERRIDES = {
+    "Michael Aswell Jr.": {"age_years": 25.0, "height_inches": 68.0, "reach_inches": 69.0},
+    "Gable Steveson": {"height_inches": 71.0, "reach_inches": 74.0},
+}
+
 CARD = [
     {"a":"Giga Chikadze","b":"Joanderson Brito","weight_class":"Featherweight","scheduled_seconds":900},
     {"a":"Casey O'Neill","b":"Eduarda Moura","weight_class":"Women's Flyweight","scheduled_seconds":900},
@@ -137,6 +149,14 @@ def main():
     fight_stats = rb.aggregate_fight_stats(fights, stats)
     history = completed_history(fights, fight_stats)
 
+    # Canonicalize known fighter-name aliases without deleting the original provenance.
+    for target, source in HISTORY_ALIASES.items():
+        merged = list(history.get(target, [])) + list(history.get(source, []))
+        merged.sort(key=lambda x: pd.Timestamp(x["event_date"]))
+        history[target] = merged
+        if target not in static and source in static:
+            static[target] = dict(static[source])
+
     artifacts = ROOT / "artifacts/v027_reconstruction"
     winner_model = joblib.load(artifacts / "winner_reconstruction.joblib")
     method_model = joblib.load(artifacts / "method_baseline_reconstruction.joblib")
@@ -147,6 +167,9 @@ def main():
     for i,f in enumerate(CARD, start=1):
         a = rb.summarize_history(f["a"], history, static, EVENT_DATE)
         b = rb.summarize_history(f["b"], history, static, EVENT_DATE)
+        for name, side in [(f["a"], a), (f["b"], b)]:
+            for key, value in CURRENT_PROFILE_OVERRIDES.get(name, {}).items():
+                side[key] = float(value)
         wf = rb.winner_features(a,b,f["weight_class"],f["scheduled_seconds"])
         wx = pd.DataFrame([wf], columns=rb.WINNER_FEATURES)
         p_a = float(winner_model.predict_proba(wx)[0,0])
@@ -227,8 +250,14 @@ def main():
     payload={
         "event":"UFC 331: Van vs Pantoja 2",
         "event_date":"2026-09-19",
-        "stage":"A_MODEL_ONLY_ODDS_BLIND",
+        "stage":"A_MODEL_ONLY_ODDS_BLIND_V2_IDENTITY_AUDITED",
         "generated_at_utc":datetime.now(timezone.utc).isoformat(),
+        "data_corrections":{
+            "patricio_pitbull_alias":"Merged UFCStats history stored as Patricio Freire + Patricio Pitbull",
+            "michael_aswell_jr_static":"Age 25, height 68, reach 69 from current UFC profile",
+            "gable_steveson_static":"Height 71, reach 74 from current UFC profile",
+            "odds_used":false
+        },
         "model_state":{
             "winner":"winner_reconstruction shadow/current operational reconstruction",
             "method_baseline":"method_baseline_reconstruction",
@@ -243,7 +272,7 @@ def main():
     lock=freeze_payload(payload)
     out=ROOT/"data/locks/ufc331_2026-09-19"
     out.mkdir(parents=True,exist_ok=True)
-    (out/"stage_a_model_raw.json").write_text(
+    (out/"stage_a_model_raw_v2.json").write_text(
         json.dumps({"sha256":lock.sha256,"payload":lock.payload},indent=2,sort_keys=True),
         encoding="utf-8"
     )
@@ -263,7 +292,7 @@ def main():
             "gtd_no":r["timing_direct"]["GTD_NO"],
             "model_evidence":r["evidence_density"],
         })
-    (out/"stage_a_model_summary.json").write_text(
+    (out/"stage_a_model_summary_v2.json").write_text(
         json.dumps(summary,indent=2,sort_keys=True),encoding="utf-8"
     )
     print(json.dumps({"lock_sha256":lock.sha256,"summary":summary},indent=2))
