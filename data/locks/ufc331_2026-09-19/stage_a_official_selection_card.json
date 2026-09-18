@@ -1,0 +1,167 @@
+{
+  "event": "UFC 331: Van vs Pantoja 2",
+  "event_date": "2026-09-19",
+  "stage": "A_OFFICIAL_ODDS_BLIND_SELECTION_CARD",
+  "raw_model_lock_sha256": "e0c2e174522a77a0fb6a6b5abd3faf8e07d2f17b7b24ac86669eb4986f6f5c4c",
+  "odds_used": false,
+  "tape_policy": "Continuous video playback unavailable in this run. Official full-fight/replay sources were located where available; no visual tape claims are made. Research layer uses official results, statistics, current form/context, and source-located tape metadata.",
+  "picks": [
+    {
+      "fight": "Giga Chikadze vs Joanderson Brito",
+      "winner": "Joanderson Brito",
+      "raw_win_probability": 0.5066,
+      "winner_confidence_10": 5.8,
+      "official_method": null,
+      "secondary_method": "DEC",
+      "method_score_10": 5.2,
+      "timing_lean": "Over 1.5 rounds",
+      "timing_probability": 0.702,
+      "research_override": false
+    },
+    {
+      "fight": "Casey O'Neill vs Eduarda Moura",
+      "winner": "Casey O'Neill",
+      "raw_win_probability": 0.5992,
+      "winner_confidence_10": 6.4,
+      "official_method": null,
+      "secondary_method": "DEC",
+      "method_score_10": 6.6,
+      "timing_lean": "Over 2.5 rounds",
+      "timing_probability": 0.708,
+      "research_override": false
+    },
+    {
+      "fight": "Edmen Shahbazyan vs Brunno Ferreira",
+      "winner": "Edmen Shahbazyan",
+      "raw_win_probability": 0.7025,
+      "winner_confidence_10": 7.1,
+      "official_method": null,
+      "secondary_method": "DEC",
+      "method_score_10": 5.8,
+      "timing_lean": "Over 1.5 rounds",
+      "timing_probability": 0.642,
+      "research_override": false
+    },
+    {
+      "fight": "Ryan Gandra vs Ozzy Diaz",
+      "winner": "Ryan Gandra",
+      "raw_win_probability": 0.724,
+      "winner_confidence_10": 7.4,
+      "official_method": "KO/TKO",
+      "secondary_method": null,
+      "method_score_10": 7.4,
+      "timing_lean": "Goes the distance: NO",
+      "timing_probability": 0.655,
+      "research_override": false
+    },
+    {
+      "fight": "Michael Aswell Jr. vs JooSang Yoo",
+      "winner": "Michael Aswell Jr.",
+      "raw_win_probability": 0.59,
+      "winner_confidence_10": 6,
+      "official_method": null,
+      "secondary_method": "KO/TKO",
+      "method_score_10": 5.8,
+      "timing_lean": "Over 2.5 rounds",
+      "timing_probability": 0.62,
+      "research_override": false
+    },
+    {
+      "fight": "Tai Tuivasa vs Robelis Despaigne",
+      "winner": "Robelis Despaigne",
+      "raw_win_probability": 0.4963,
+      "winner_confidence_10": 6.6,
+      "official_method": "KO/TKO",
+      "secondary_method": null,
+      "method_score_10": 7.2,
+      "timing_lean": "Goes the distance: NO",
+      "timing_probability": 0.616,
+      "research_override": true,
+      "research_reason": "UFC-only feature history misses Despaigne's active post-UFC run: multiple Karate Combat KOs/title win and a May 2026 MMA KO of Junior dos Santos; Tuivasa enters on a seven-fight UFC losing streak."
+    },
+    {
+      "fight": "Marlon Vera vs Charles Jourdain",
+      "winner": "Charles Jourdain",
+      "raw_win_probability": 0.611,
+      "winner_confidence_10": 6.6,
+      "official_method": null,
+      "secondary_method": "DEC",
+      "method_score_10": 6.4,
+      "timing_lean": "Over 2.5 rounds",
+      "timing_probability": 0.658,
+      "research_override": false
+    },
+    {
+      "fight": "Alonzo Menifield vs Iwo Baraniewski",
+      "winner": "Iwo Baraniewski",
+      "raw_win_probability": 0.4612,
+      "winner_confidence_10": 6.5,
+      "official_method": null,
+      "secondary_method": "KO/TKO",
+      "method_score_10": 6.9,
+      "timing_lean": "Goes the distance: NO",
+      "timing_probability": 0.666,
+      "research_override": true,
+      "research_reason": "Winner model narrowly prefers the veteran, but the exact-outcome layer's largest path is Baraniewski KO; current UFC record is 9-0 with nine first-round finishes and three rapid UFC stoppages."
+    },
+    {
+      "fight": "Gable Steveson vs Sean Sharaf",
+      "winner": "Gable Steveson",
+      "raw_win_probability": 0.899,
+      "winner_confidence_10": 8.6,
+      "official_method": "KO/TKO",
+      "secondary_method": null,
+      "method_score_10": 8.8,
+      "timing_lean": "Under 2.5 rounds",
+      "timing_probability": 0.798,
+      "research_override": false
+    },
+    {
+      "fight": "Patricio Pitbull vs Dooho Choi",
+      "winner": "Dooho Choi",
+      "raw_win_probability": 0.509,
+      "winner_confidence_10": 5.7,
+      "official_method": null,
+      "secondary_method": "DEC",
+      "method_score_10": 5.8,
+      "timing_lean": "Over 2.5 rounds",
+      "timing_probability": 0.607,
+      "research_override": false
+    },
+    {
+      "fight": "Arman Tsarukyan vs Mauricio Ruffy",
+      "winner": "Arman Tsarukyan",
+      "raw_win_probability": 0.6793,
+      "winner_confidence_10": 7.4,
+      "official_method": null,
+      "secondary_method": "SUB (informational pathway only)",
+      "method_score_10": 6.2,
+      "timing_lean": "Over 1.5 rounds",
+      "timing_probability": 0.729,
+      "research_override": false
+    },
+    {
+      "fight": "Joshua Van vs Alexandre Pantoja",
+      "winner": "Joshua Van",
+      "raw_win_probability": 0.7405,
+      "winner_confidence_10": 7,
+      "official_method": null,
+      "secondary_method": "DEC",
+      "method_score_10": 6.3,
+      "timing_lean": "Over 1.5 rounds",
+      "timing_probability": 0.761,
+      "research_override": false,
+      "research_note": "UFC 323 injury stoppage is preserved as an official result but excluded from ordinary performance-rate evidence; it remains activity for layoff timing."
+    }
+  ],
+  "method_bets_official": [
+    "Ryan Gandra by KO/TKO",
+    "Robelis Despaigne by KO/TKO",
+    "Gable Steveson by KO/TKO"
+  ],
+  "submission_hazards_informational": [
+    "Arman Tsarukyan submission",
+    "Joanderson Brito submission",
+    "Alexandre Pantoja submission"
+  ]
+}
