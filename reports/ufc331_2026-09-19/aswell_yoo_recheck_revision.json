@@ -1,0 +1,30 @@
+{
+  "event": "UFC 331: Van vs Pantoja 2",
+  "fight": "Michael Aswell Jr. vs JooSang Yoo",
+  "requested_recheck": true,
+  "isolated_rerun": {
+    "Michael_Aswell_Jr": 0.5903336692978516,
+    "JooSang_Yoo": 0.4096663307021484,
+    "trials": 10000,
+    "odds_used_as_features": false
+  },
+  "research_conclusion": {
+    "final_matchup_lean": "JooSang Yoo",
+    "confidence": "LOW",
+    "betting_action": "PASS",
+    "remove_previous_stage_b_aswell_value_bet": true,
+    "do_not_bet_yoo_at_current_price": true,
+    "rationale": [
+      "Yoo has the cleaner UFC striking-efficiency profile: higher accuracy, lower absorption, positive strike differential, and much greater knockdown rate.",
+      "Aswell has more UFC cage time, youth, activity, durability, and a pace/attrition path, but has repeatedly been out-damaged in decision losses.",
+      "Aswell's strongest path is extending the fight, making Yoo work under pressure, and winning volume/late minutes.",
+      "Yoo's strongest path is landing the cleaner and more damaging offense early and at mid-range.",
+      "The numerical model likely overweights Aswell's age/activity/experience advantages relative to Yoo's impact and efficiency in this sparse two-fight UFC sample."
+    ]
+  },
+  "governance": {
+    "original_stage_a_lock_unchanged": true,
+    "original_stage_b_card_preserved": true,
+    "this_file_is_an_append_only_user_requested_revision": true
+  }
+}
