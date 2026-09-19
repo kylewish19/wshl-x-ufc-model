@@ -1,0 +1,76 @@
+{
+  "conditional_method_if_aswell_wins_baseline": {
+    "DEC": 0.3940542008990486,
+    "KO": 0.46133506363240534,
+    "SUB": 0.14461073546854616
+  },
+  "conditional_method_if_aswell_wins_v027_shadow": {
+    "DEC": 0.29202617480423443,
+    "KO": 0.5883844272829096,
+    "SUB": 0.11958939791285593
+  },
+  "conditional_method_if_yoo_wins_baseline": {
+    "DEC": 0.6481069791395959,
+    "KO": 0.2976232528218977,
+    "SUB": 0.054269768038506444
+  },
+  "conditional_method_if_yoo_wins_v027_shadow": {
+    "DEC": 0.7717387431425431,
+    "KO": 0.20783892498963408,
+    "SUB": 0.02042233186782282
+  },
+  "event": "UFC 331: Van vs Pantoja 2",
+  "evidence_density": {
+    "aswell_age": 25.0,
+    "aswell_days_since_last": 91.0,
+    "aswell_prior_ufc_bouts": 4,
+    "aswell_reach": 69.0,
+    "yoo_age": 32.660492686365906,
+    "yoo_days_since_last": 350.0,
+    "yoo_prior_ufc_bouts": 2,
+    "yoo_reach": 71.0
+  },
+  "fight": "Michael Aswell Jr. vs JooSang Yoo",
+  "generated_at_utc": "2026-09-19T23:16:22.811188+00:00",
+  "governance": {
+    "odds_used_as_features": false,
+    "official_stage_a_lock_unchanged": true,
+    "purpose": "isolated diagnostic rerun requested by user"
+  },
+  "joint_outcomes_baseline": {
+    "A_DEC": 0.2326234623189681,
+    "A_KO": 0.2723416208898757,
+    "A_SUB": 0.08536858608900783,
+    "B_DEC": 0.2655076080465721,
+    "B_KO": 0.12192622591518468,
+    "B_SUB": 0.022232496740391666
+  },
+  "joint_simulation_10000": {
+    "A_DEC": 0.2319,
+    "A_KO": 0.2774,
+    "A_SUB": 0.0877,
+    "B_DEC": 0.2565,
+    "B_KO": 0.1258,
+    "B_SUB": 0.0207
+  },
+  "rerun_type": "ISOLATED_ODDS_BLIND_RECHECK",
+  "timing": {
+    "GTD_NO": 0.4362492954688014,
+    "GTD_YES": 0.5637507045311986,
+    "OVER_0.5": 0.9118115945770069,
+    "OVER_1.5": 0.7407900509706319,
+    "OVER_2.5": 0.6197449076262403,
+    "ROUND_2_STARTS_NO": 0.1980560716807641,
+    "ROUND_2_STARTS_YES": 0.8019439283192359,
+    "ROUND_3_STARTS_NO": 0.33656655386905554,
+    "ROUND_3_STARTS_YES": 0.6634334461309445,
+    "UNDER_0.5": 0.08818840542299311,
+    "UNDER_1.5": 0.2592099490293681,
+    "UNDER_2.5": 0.38025509237375965
+  },
+  "trials": 10000,
+  "winner": {
+    "JooSang Yoo": 0.4096663307021484,
+    "Michael Aswell Jr.": 0.5903336692978516
+  }
+}
