@@ -1,0 +1,46 @@
+name: audit-v030-winner-reliability
+
+on:
+  push:
+    paths:
+      - "v030_winner_request.json"
+      - "tools/audit_winner_reliability_v030.py"
+      - ".github/workflows/audit-v030-winner-reliability.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: audit-v030-winner-reliability
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Audit winner reliability
+        run: PYTHONPATH=src python tools/audit_winner_reliability_v030.py
+      - name: Test
+        run: pytest -q
+      - name: Save report
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git fetch origin main
+          git rebase origin/main
+          git add reports/v030_winner_reliability
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "model: audit v0.30 winner reliability"
+          git push
