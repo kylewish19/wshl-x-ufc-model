@@ -1,0 +1,184 @@
+{
+  "architecture_changes": {
+    "method_baseline": "same architecture; refit with 12 new causal feedback rows",
+    "method_residual": "same residual architecture; final fit now uses clean-76 feedback",
+    "selection_policy": "new research-override, sparse-sample, method-promotion and timing-promotion gates live in src/wshlx_ufc/selection_policy.py",
+    "timing": "candidate changed from 60-second to 30-second hazard bins so half-round sportsbook thresholds are represented exactly",
+    "winner": "same reconstruction architecture; refit with 12 new causal feedback rows"
+  },
+  "artifact_sha256": {
+    "method_baseline": "2e73688874cdee35ba19fd96f4df65e2638ed0cff7660f6f0ad9a8e93c097dff",
+    "method_residual": "b1f22e6646b58d9484625d30617a20d2b218667b4b199c17826a7d9a735be225",
+    "timing": "39911e9ce0424d8dfdce2c57fca32ac4e2b7c5decfd59feda18b8d5120a3ff51",
+    "winner": "4df551e64cf726c20d5561d951652866b58fea27a66400d470856225dd6c662c"
+  },
+  "causal_integrity": {
+    "note": "Full UFC 331 round stats will update fighter histories after the upstream feed refreshes; they are not needed to label the already-frozen UFC 331 prefight rows.",
+    "same_day_leakage": false,
+    "ufc331_postfight_inputs_used": [
+      "winner",
+      "method_class",
+      "duration_seconds"
+    ],
+    "ufc331_prefight_features": "reconstructed from data available before 2026-09-19",
+    "ufc331_round_stats_used": false
+  },
+  "clean76_method_reconstruction_benchmark": {
+    "baseline_all_64": {
+      "accuracy": 0.3684210526315789,
+      "actual": {
+        "DEC": 26,
+        "KO": 37,
+        "SUB": 13
+      },
+      "calls": {
+        "DEC": 49,
+        "KO": 26,
+        "SUB": 1
+      },
+      "log_loss": 1.0493620980637173,
+      "multiclass_brier": 0.662791773467342,
+      "n": 76,
+      "recall": {
+        "DEC": 0.5769230769230769,
+        "KO": 0.32432432432432434,
+        "SUB": 0.07692307692307693
+      }
+    },
+    "chronology_baseline": {
+      "accuracy": 0.359375,
+      "actual": {
+        "DEC": 21,
+        "KO": 33,
+        "SUB": 10
+      },
+      "calls": {
+        "DEC": 43,
+        "KO": 20,
+        "SUB": 1
+      },
+      "log_loss": 1.0636363296419733,
+      "multiclass_brier": 0.6676129228940698,
+      "n": 64,
+      "recall": {
+        "DEC": 0.5714285714285714,
+        "KO": 0.30303030303030304,
+        "SUB": 0.1
+      }
+    },
+    "chronology_candidate": {
+      "accuracy": 0.375,
+      "actual": {
+        "DEC": 21,
+        "KO": 33,
+        "SUB": 10
+      },
+      "calls": {
+        "DEC": 43,
+        "KO": 18,
+        "SUB": 3
+      },
+      "log_loss": 1.0999281128452876,
+      "multiclass_brier": 0.6977529824186126,
+      "n": 64,
+      "recall": {
+        "DEC": 0.6666666666666666,
+        "KO": 0.2727272727272727,
+        "SUB": 0.1
+      }
+    },
+    "chronology_evaluation_fights": 64,
+    "folds": [
+      {
+        "test_date": "2026-08-15T00:00:00+00:00",
+        "test_fights": 12,
+        "train_clean_fights": 12
+      },
+      {
+        "test_date": "2026-08-22T00:00:00+00:00",
+        "test_fights": 13,
+        "train_clean_fights": 24
+      },
+      {
+        "test_date": "2026-08-29T00:00:00+00:00",
+        "test_fights": 13,
+        "train_clean_fights": 37
+      },
+      {
+        "test_date": "2026-09-05T00:00:00+00:00",
+        "test_fights": 14,
+        "train_clean_fights": 50
+      },
+      {
+        "test_date": "2026-09-19T00:00:00+00:00",
+        "test_fights": 12,
+        "train_clean_fights": 64
+      }
+    ],
+    "note": "Retrospective reconstruction only. Architecture and feature formulas were defined after historical results were known; this is not prospective proof."
+  },
+  "clean76_winner_reconstruction_benchmark": {
+    "accuracy": 0.618421052631579,
+    "brier": 0.24098149894619514,
+    "log_loss": 0.6832483458844766,
+    "n": 76,
+    "note": "New reconstruction benchmark, not the historical official v0.3.1 score."
+  },
+  "generated_at_utc": "2026-09-20T14:40:32.635954+00:00",
+  "promotion": {
+    "authorized": false,
+    "reason": "Core coefficients now include UFC 331 labels, so the next unseen UFC card is required for prospective validation before promotion.",
+    "role": "shadow_candidate"
+  },
+  "prospective_ufc331_locked_evaluation": {
+    "method_baseline_on_actual_winner": {
+      "accuracy": 0.3333333333333333,
+      "actual": {
+        "DEC": 5,
+        "KO": 6,
+        "SUB": 1
+      },
+      "brier": 0.6821893490913463,
+      "calls": {
+        "DEC": 7,
+        "KO": 5,
+        "SUB": 0
+      },
+      "log_loss": 1.090981942132108,
+      "n": 12
+    },
+    "method_v027_shadow_on_actual_winner": {
+      "accuracy": 0.4166666666666667,
+      "actual": {
+        "DEC": 5,
+        "KO": 6,
+        "SUB": 1
+      },
+      "brier": 0.6767283135426544,
+      "calls": {
+        "DEC": 6,
+        "KO": 6,
+        "SUB": 0
+      },
+      "log_loss": 1.0798556836118294,
+      "n": 12
+    },
+    "winner_raw": {
+      "accuracy": 0.6666666666666666,
+      "brier": 0.23442207200955026,
+      "log_loss": 0.6955278472854601,
+      "n": 12
+    }
+  },
+  "status": "V0.28_UFC331_FEEDBACK_SHADOW",
+  "training_data": {
+    "clean_feedback_rows": 76,
+    "historical_feed_last_event": "2026-09-12T00:00:00+00:00",
+    "historical_upstream_commit": "cb4ecb64dd62324a7a51a378f6b5bbb0fc99bc65",
+    "historical_upstream_repo": "Greco1899/scrape_ufc_stats",
+    "method_training_rows": 8719,
+    "timing_training_rows": 8719,
+    "ufc331_feedback_rows": 12,
+    "winner_training_rows": 8719
+  }
+}
