@@ -1,0 +1,49 @@
+name: train-v028-ufc331-feedback
+
+on:
+  push:
+    paths:
+      - "v028_training_request.json"
+      - "tools/train_v028_ufc331_feedback.py"
+      - ".github/workflows/train-v028-ufc331-feedback.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: train-v028-ufc331-feedback
+  cancel-in-progress: true
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Train v0.28 feedback shadow
+        run: PYTHONPATH=src python tools/train_v028_ufc331_feedback.py
+      - name: Test
+        run: pytest -q
+      - name: Save generated artifacts
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git fetch origin main
+          git rebase origin/main
+          git add artifacts/v028_ufc331_feedback reports/v028_ufc331_feedback
+          if git diff --cached --quiet; then
+            echo "No generated changes."
+            exit 0
+          fi
+          git commit -m "model: train v0.28 UFC 331 feedback shadow"
+          git push
