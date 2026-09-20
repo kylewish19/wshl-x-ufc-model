@@ -1,0 +1,76 @@
+{
+  "conditional_method_if_iwo_wins_baseline": {
+    "DEC": 0.1677314542094136,
+    "KO": 0.7541595680607717,
+    "SUB": 0.07810897772981483
+  },
+  "conditional_method_if_iwo_wins_v027_shadow": {
+    "DEC": 0.2945551810247883,
+    "KO": 0.670317543311727,
+    "SUB": 0.035127275663484704
+  },
+  "conditional_method_if_menifield_wins_baseline": {
+    "DEC": 0.4460362557722548,
+    "KO": 0.4615859386765513,
+    "SUB": 0.09237780555119388
+  },
+  "conditional_method_if_menifield_wins_v027_shadow": {
+    "DEC": 0.37287752047860623,
+    "KO": 0.5490676410598132,
+    "SUB": 0.07805483846158058
+  },
+  "event": "UFC 331: Van vs Pantoja 2",
+  "evidence_density": {
+    "iwo_age": 27.83082472603818,
+    "iwo_days_since_last": 105.0,
+    "iwo_prior_ufc_bouts": 3,
+    "iwo_reach": 73.0,
+    "menifield_age": 38.922086011348625,
+    "menifield_days_since_last": 112.0,
+    "menifield_prior_ufc_bouts": 17,
+    "menifield_reach": 76.0
+  },
+  "fight": "Alonzo Menifield vs Iwo Baraniewski",
+  "generated_at_utc": "2026-09-20T01:06:31.415247+00:00",
+  "governance": {
+    "odds_used_as_features": false,
+    "official_stage_a_lock_unchanged": true,
+    "purpose": "isolated diagnostic rerun requested by user"
+  },
+  "joint_outcomes_baseline": {
+    "A_DEC": 0.24032187402822208,
+    "A_KO": 0.2486999573964342,
+    "A_SUB": 0.049772652024083645,
+    "B_DEC": 0.07735867198054662,
+    "B_KO": 0.34782255314954336,
+    "B_SUB": 0.03602429142117012
+  },
+  "joint_simulation_10000": {
+    "A_DEC": 0.2401,
+    "A_KO": 0.2543,
+    "A_SUB": 0.0473,
+    "B_DEC": 0.0794,
+    "B_KO": 0.3428,
+    "B_SUB": 0.0361
+  },
+  "rerun_type": "ISOLATED_ODDS_BLIND_RECHECK",
+  "timing": {
+    "GTD_NO": 0.6664838721340971,
+    "GTD_YES": 0.33351612786590296,
+    "OVER_0.5": 0.8383686615498905,
+    "OVER_1.5": 0.5634040699614715,
+    "OVER_2.5": 0.40009886999346345,
+    "ROUND_2_STARTS_NO": 0.3441646536769577,
+    "ROUND_2_STARTS_YES": 0.6558353463230423,
+    "ROUND_3_STARTS_NO": 0.5439953753966702,
+    "ROUND_3_STARTS_YES": 0.45600462460332974,
+    "UNDER_0.5": 0.16163133845010946,
+    "UNDER_1.5": 0.4365959300385285,
+    "UNDER_2.5": 0.5999011300065366
+  },
+  "trials": 10000,
+  "winner": {
+    "Alonzo Menifield": 0.5387944834487399,
+    "Iwo Baraniewski": 0.4612055165512601
+  }
+}
