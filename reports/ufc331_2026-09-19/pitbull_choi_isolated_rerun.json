@@ -1,0 +1,76 @@
+{
+  "conditional_method_if_choi_wins_baseline": {
+    "DEC": 0.5531291098167356,
+    "KO": 0.3774365426740033,
+    "SUB": 0.06943434750926115
+  },
+  "conditional_method_if_choi_wins_v027_shadow": {
+    "DEC": 0.6100983443353007,
+    "KO": 0.34114865316508797,
+    "SUB": 0.04875300249961134
+  },
+  "conditional_method_if_pitbull_wins_baseline": {
+    "DEC": 0.5674494017953855,
+    "KO": 0.2491929489167346,
+    "SUB": 0.18335764928787993
+  },
+  "conditional_method_if_pitbull_wins_v027_shadow": {
+    "DEC": 0.6120456340947091,
+    "KO": 0.24498997056920213,
+    "SUB": 0.14296439533608868
+  },
+  "event": "UFC 331: Van vs Pantoja 2",
+  "evidence_density": {
+    "choi_age": 35.444944112473216,
+    "choi_days_since_last": 126.0,
+    "choi_prior_ufc_bouts": 9,
+    "choi_reach": 70.0,
+    "pitbull_age": 39.20409043306844,
+    "pitbull_days_since_last": 161.0,
+    "pitbull_prior_ufc_bouts": 3,
+    "pitbull_reach": 67.0
+  },
+  "fight": "Patricio Pitbull vs Dooho Choi",
+  "generated_at_utc": "2026-09-20T02:17:03.009855+00:00",
+  "governance": {
+    "odds_used_as_features": false,
+    "official_stage_a_lock_unchanged": true,
+    "purpose": "isolated diagnostic rerun requested by user"
+  },
+  "joint_outcomes_baseline": {
+    "A_DEC": 0.2787703933640229,
+    "A_KO": 0.12242081174685604,
+    "A_SUB": 0.09007795912121887,
+    "B_DEC": 0.28139383432462367,
+    "B_KO": 0.19201360780389318,
+    "B_SUB": 0.035323393639385386
+  },
+  "joint_simulation_10000": {
+    "A_DEC": 0.2855,
+    "A_KO": 0.1201,
+    "A_SUB": 0.087,
+    "B_DEC": 0.2792,
+    "B_KO": 0.1915,
+    "B_SUB": 0.0367
+  },
+  "rerun_type": "ISOLATED_ODDS_BLIND_RECHECK",
+  "timing": {
+    "GTD_NO": 0.4503176522137957,
+    "GTD_YES": 0.5496823477862043,
+    "OVER_0.5": 0.9081213630117817,
+    "OVER_1.5": 0.7310750867144696,
+    "OVER_2.5": 0.6068171915908059,
+    "ROUND_2_STARTS_NO": 0.20580132061016643,
+    "ROUND_2_STARTS_YES": 0.7941986793898336,
+    "ROUND_3_STARTS_NO": 0.34844665367648864,
+    "ROUND_3_STARTS_YES": 0.6515533463235114,
+    "UNDER_0.5": 0.0918786369882183,
+    "UNDER_1.5": 0.26892491328553036,
+    "UNDER_2.5": 0.39318280840919406
+  },
+  "trials": 10000,
+  "winner": {
+    "Dooho Choi": 0.5087308357679022,
+    "Patricio Pitbull": 0.49126916423209777
+  }
+}
