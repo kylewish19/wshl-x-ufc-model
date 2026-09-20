@@ -1,0 +1,47 @@
+name: benchmark-v029-method-calibration
+
+on:
+  push:
+    paths:
+      - "v029_method_request.json"
+      - "src/wshlx_ufc/method_calibration.py"
+      - "tools/benchmark_method_calibration_v029.py"
+      - ".github/workflows/benchmark-v029-method-calibration.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: benchmark-v029-method-calibration
+  cancel-in-progress: true
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Benchmark v0.29 method calibration
+        run: PYTHONPATH=src python tools/benchmark_method_calibration_v029.py
+      - name: Test
+        run: pytest -q
+      - name: Save reports
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git fetch origin main
+          git rebase origin/main
+          git add reports/v029_method_calibration artifacts/v029_method_calibration
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "model: benchmark v0.29 method calibration shadow"
+          git push
