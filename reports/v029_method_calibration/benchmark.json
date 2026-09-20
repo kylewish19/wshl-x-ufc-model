@@ -1,0 +1,509 @@
+{
+  "candidate_grid": [
+    {
+      "baseline": {
+        "accuracy": 0.359375,
+        "actual": {
+          "DEC": 21,
+          "KO": 33,
+          "SUB": 10
+        },
+        "brier": 0.6676129228940698,
+        "calls": {
+          "DEC": 43,
+          "KO": 20,
+          "SUB": 1
+        },
+        "log_loss": 1.0636363296419733,
+        "n": 64,
+        "recall": {
+          "DEC": 0.5714285714285714,
+          "KO": 0.30303030303030304,
+          "SUB": 0.1
+        }
+      },
+      "candidate": {
+        "accuracy": 0.390625,
+        "actual": {
+          "DEC": 21,
+          "KO": 33,
+          "SUB": 10
+        },
+        "brier": 0.6455309970173195,
+        "calls": {
+          "DEC": 26,
+          "KO": 35,
+          "SUB": 3
+        },
+        "log_loss": 1.0389305891571254,
+        "n": 64,
+        "recall": {
+          "DEC": 0.23809523809523808,
+          "KO": 0.5757575757575758,
+          "SUB": 0.1
+        }
+      },
+      "folds": [
+        {
+          "finish_offset": 0.15740997114920155,
+          "sub_offset": 0.4003638073950361,
+          "test_date": "2026-08-15T00:00:00+00:00",
+          "test_n": 12,
+          "train_n": 12
+        },
+        {
+          "finish_offset": 0.38237572649670454,
+          "sub_offset": 0.35918419764192033,
+          "test_date": "2026-08-22T00:00:00+00:00",
+          "test_n": 13,
+          "train_n": 24
+        },
+        {
+          "finish_offset": 0.6019430225977863,
+          "sub_offset": 0.12586225229104248,
+          "test_date": "2026-08-29T00:00:00+00:00",
+          "test_n": 13,
+          "train_n": 37
+        },
+        {
+          "finish_offset": 0.7797870303234917,
+          "sub_offset": -0.10715754007832805,
+          "test_date": "2026-09-05T00:00:00+00:00",
+          "test_n": 14,
+          "train_n": 50
+        },
+        {
+          "finish_offset": 0.6275589583804904,
+          "sub_offset": -0.126782102853084,
+          "test_date": "2026-09-19T00:00:00+00:00",
+          "test_n": 12,
+          "train_n": 64
+        }
+      ],
+      "ridge": 0.5
+    },
+    {
+      "baseline": {
+        "accuracy": 0.359375,
+        "actual": {
+          "DEC": 21,
+          "KO": 33,
+          "SUB": 10
+        },
+        "brier": 0.6676129228940698,
+        "calls": {
+          "DEC": 43,
+          "KO": 20,
+          "SUB": 1
+        },
+        "log_loss": 1.0636363296419733,
+        "n": 64,
+        "recall": {
+          "DEC": 0.5714285714285714,
+          "KO": 0.30303030303030304,
+          "SUB": 0.1
+        }
+      },
+      "candidate": {
+        "accuracy": 0.390625,
+        "actual": {
+          "DEC": 21,
+          "KO": 33,
+          "SUB": 10
+        },
+        "brier": 0.6456499783592944,
+        "calls": {
+          "DEC": 26,
+          "KO": 35,
+          "SUB": 3
+        },
+        "log_loss": 1.038757083991432,
+        "n": 64,
+        "recall": {
+          "DEC": 0.23809523809523808,
+          "KO": 0.5757575757575758,
+          "SUB": 0.1
+        }
+      },
+      "folds": [
+        {
+          "finish_offset": 0.13445694066268404,
+          "sub_offset": 0.31288822143720546,
+          "test_date": "2026-08-15T00:00:00+00:00",
+          "test_n": 12,
+          "train_n": 12
+        },
+        {
+          "finish_offset": 0.3511445515022231,
+          "sub_offset": 0.3155665969935565,
+          "test_date": "2026-08-22T00:00:00+00:00",
+          "test_n": 13,
+          "train_n": 24
+        },
+        {
+          "finish_offset": 0.5667824945540013,
+          "sub_offset": 0.11512592643126929,
+          "test_date": "2026-08-29T00:00:00+00:00",
+          "test_n": 13,
+          "train_n": 37
+        },
+        {
+          "finish_offset": 0.7436375289349054,
+          "sub_offset": -0.09998565220120387,
+          "test_date": "2026-09-05T00:00:00+00:00",
+          "test_n": 14,
+          "train_n": 50
+        },
+        {
+          "finish_offset": 0.6053389264267323,
+          "sub_offset": -0.11956968929823567,
+          "test_date": "2026-09-19T00:00:00+00:00",
+          "test_n": 12,
+          "train_n": 64
+        }
+      ],
+      "ridge": 1.0
+    },
+    {
+      "baseline": {
+        "accuracy": 0.359375,
+        "actual": {
+          "DEC": 21,
+          "KO": 33,
+          "SUB": 10
+        },
+        "brier": 0.6676129228940698,
+        "calls": {
+          "DEC": 43,
+          "KO": 20,
+          "SUB": 1
+        },
+        "log_loss": 1.0636363296419733,
+        "n": 64,
+        "recall": {
+          "DEC": 0.5714285714285714,
+          "KO": 0.30303030303030304,
+          "SUB": 0.1
+        }
+      },
+      "candidate": {
+        "accuracy": 0.40625,
+        "actual": {
+          "DEC": 21,
+          "KO": 33,
+          "SUB": 10
+        },
+        "brier": 0.6464046447639018,
+        "calls": {
+          "DEC": 26,
+          "KO": 36,
+          "SUB": 2
+        },
+        "log_loss": 1.0391862304247055,
+        "n": 64,
+        "recall": {
+          "DEC": 0.23809523809523808,
+          "KO": 0.6060606060606061,
+          "SUB": 0.1
+        }
+      },
+      "folds": [
+        {
+          "finish_offset": 0.10416278105766869,
+          "sub_offset": 0.21731207188738708,
+          "test_date": "2026-08-15T00:00:00+00:00",
+          "test_n": 12,
+          "train_n": 12
+        },
+        {
+          "finish_offset": 0.3021221180093996,
+          "sub_offset": 0.25352075767392046,
+          "test_date": "2026-08-22T00:00:00+00:00",
+          "test_n": 13,
+          "train_n": 24
+        },
+        {
+          "finish_offset": 0.5081141288934636,
+          "sub_offset": 0.09829675916265648,
+          "test_date": "2026-08-29T00:00:00+00:00",
+          "test_n": 13,
+          "train_n": 37
+        },
+        {
+          "finish_offset": 0.6813665266738487,
+          "sub_offset": -0.08821195016659299,
+          "test_date": "2026-09-05T00:00:00+00:00",
+          "test_n": 14,
+          "train_n": 50
+        },
+        {
+          "finish_offset": 0.5656142560969457,
+          "sub_offset": -0.10738876860344396,
+          "test_date": "2026-09-19T00:00:00+00:00",
+          "test_n": 12,
+          "train_n": 64
+        }
+      ],
+      "ridge": 2.0
+    },
+    {
+      "baseline": {
+        "accuracy": 0.359375,
+        "actual": {
+          "DEC": 21,
+          "KO": 33,
+          "SUB": 10
+        },
+        "brier": 0.6676129228940698,
+        "calls": {
+          "DEC": 43,
+          "KO": 20,
+          "SUB": 1
+        },
+        "log_loss": 1.0636363296419733,
+        "n": 64,
+        "recall": {
+          "DEC": 0.5714285714285714,
+          "KO": 0.30303030303030304,
+          "SUB": 0.1
+        }
+      },
+      "candidate": {
+        "accuracy": 0.4375,
+        "actual": {
+          "DEC": 21,
+          "KO": 33,
+          "SUB": 10
+        },
+        "brier": 0.6490681556178404,
+        "calls": {
+          "DEC": 28,
+          "KO": 35,
+          "SUB": 1
+        },
+        "log_loss": 1.0415843532673237,
+        "n": 64,
+        "recall": {
+          "DEC": 0.3333333333333333,
+          "KO": 0.6060606060606061,
+          "SUB": 0.1
+        }
+      },
+      "folds": [
+        {
+          "finish_offset": 0.062220613602990485,
+          "sub_offset": 0.1130863886926387,
+          "test_date": "2026-08-15T00:00:00+00:00",
+          "test_n": 12,
+          "train_n": 12
+        },
+        {
+          "finish_offset": 0.21349901727262915,
+          "sub_offset": 0.15885935575530105,
+          "test_date": "2026-08-22T00:00:00+00:00",
+          "test_n": 13,
+          "train_n": 24
+        },
+        {
+          "finish_offset": 0.38937366122629297,
+          "sub_offset": 0.06822185027601996,
+          "test_date": "2026-08-29T00:00:00+00:00",
+          "test_n": 13,
+          "train_n": 37
+        },
+        {
+          "finish_offset": 0.5471956005460666,
+          "sub_offset": -0.06526318756296999,
+          "test_date": "2026-09-05T00:00:00+00:00",
+          "test_n": 14,
+          "train_n": 50
+        },
+        {
+          "finish_offset": 0.47376314654257523,
+          "sub_offset": -0.08235160404908169,
+          "test_date": "2026-09-19T00:00:00+00:00",
+          "test_n": 12,
+          "train_n": 64
+        }
+      ],
+      "ridge": 5.0
+    },
+    {
+      "baseline": {
+        "accuracy": 0.359375,
+        "actual": {
+          "DEC": 21,
+          "KO": 33,
+          "SUB": 10
+        },
+        "brier": 0.6676129228940698,
+        "calls": {
+          "DEC": 43,
+          "KO": 20,
+          "SUB": 1
+        },
+        "log_loss": 1.0636363296419733,
+        "n": 64,
+        "recall": {
+          "DEC": 0.5714285714285714,
+          "KO": 0.30303030303030304,
+          "SUB": 0.1
+        }
+      },
+      "candidate": {
+        "accuracy": 0.40625,
+        "actual": {
+          "DEC": 21,
+          "KO": 33,
+          "SUB": 10
+        },
+        "brier": 0.6524833544826792,
+        "calls": {
+          "DEC": 32,
+          "KO": 31,
+          "SUB": 1
+        },
+        "log_loss": 1.0452083569588808,
+        "n": 64,
+        "recall": {
+          "DEC": 0.38095238095238093,
+          "KO": 0.5151515151515151,
+          "SUB": 0.1
+        }
+      },
+      "folds": [
+        {
+          "finish_offset": 0.03725440798679123,
+          "sub_offset": 0.06277608875991754,
+          "test_date": "2026-08-15T00:00:00+00:00",
+          "test_n": 12,
+          "train_n": 12
+        },
+        {
+          "finish_offset": 0.1436897450671317,
+          "sub_offset": 0.09765770880597259,
+          "test_date": "2026-08-22T00:00:00+00:00",
+          "test_n": 13,
+          "train_n": 24
+        },
+        {
+          "finish_offset": 0.2814387125361703,
+          "sub_offset": 0.0451178372535206,
+          "test_date": "2026-08-29T00:00:00+00:00",
+          "test_n": 13,
+          "train_n": 37
+        },
+        {
+          "finish_offset": 0.4143293139866663,
+          "sub_offset": -0.045581100271707364,
+          "test_date": "2026-09-05T00:00:00+00:00",
+          "test_n": 14,
+          "train_n": 50
+        },
+        {
+          "finish_offset": 0.37417556957008435,
+          "sub_offset": -0.05939074713529337,
+          "test_date": "2026-09-19T00:00:00+00:00",
+          "test_n": 12,
+          "train_n": 64
+        }
+      ],
+      "ridge": 10.0
+    }
+  ],
+  "final_offsets": {
+    "finish_logit_offset": 0.5522547394880348,
+    "sub_given_finish_logit_offset": -0.24494826958569058
+  },
+  "generated_at_utc": "2026-09-20T14:42:59.725813+00:00",
+  "input_rows": 76,
+  "promotion": {
+    "authorized": false,
+    "role": "shadow_candidate",
+    "rule": "Must beat the baseline on future prospective method Brier/log loss before promotion."
+  },
+  "selected_chronology_grade": {
+    "baseline": {
+      "accuracy": 0.359375,
+      "actual": {
+        "DEC": 21,
+        "KO": 33,
+        "SUB": 10
+      },
+      "brier": 0.6676129228940698,
+      "calls": {
+        "DEC": 43,
+        "KO": 20,
+        "SUB": 1
+      },
+      "log_loss": 1.0636363296419733,
+      "n": 64,
+      "recall": {
+        "DEC": 0.5714285714285714,
+        "KO": 0.30303030303030304,
+        "SUB": 0.1
+      }
+    },
+    "candidate": {
+      "accuracy": 0.390625,
+      "actual": {
+        "DEC": 21,
+        "KO": 33,
+        "SUB": 10
+      },
+      "brier": 0.6455309970173195,
+      "calls": {
+        "DEC": 26,
+        "KO": 35,
+        "SUB": 3
+      },
+      "log_loss": 1.0389305891571254,
+      "n": 64,
+      "recall": {
+        "DEC": 0.23809523809523808,
+        "KO": 0.5757575757575758,
+        "SUB": 0.1
+      }
+    },
+    "folds": [
+      {
+        "finish_offset": 0.15740997114920155,
+        "sub_offset": 0.4003638073950361,
+        "test_date": "2026-08-15T00:00:00+00:00",
+        "test_n": 12,
+        "train_n": 12
+      },
+      {
+        "finish_offset": 0.38237572649670454,
+        "sub_offset": 0.35918419764192033,
+        "test_date": "2026-08-22T00:00:00+00:00",
+        "test_n": 13,
+        "train_n": 24
+      },
+      {
+        "finish_offset": 0.6019430225977863,
+        "sub_offset": 0.12586225229104248,
+        "test_date": "2026-08-29T00:00:00+00:00",
+        "test_n": 13,
+        "train_n": 37
+      },
+      {
+        "finish_offset": 0.7797870303234917,
+        "sub_offset": -0.10715754007832805,
+        "test_date": "2026-09-05T00:00:00+00:00",
+        "test_n": 14,
+        "train_n": 50
+      },
+      {
+        "finish_offset": 0.6275589583804904,
+        "sub_offset": -0.126782102853084,
+        "test_date": "2026-09-19T00:00:00+00:00",
+        "test_n": 12,
+        "train_n": 64
+      }
+    ],
+    "ridge": 0.5
+  },
+  "selected_ridge": 0.5,
+  "status": "V0.29_METHOD_INTERCEPT_CALIBRATION_SHADOW"
+}
