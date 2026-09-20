@@ -1,0 +1,7 @@
+{
+  "requested_at": "2026-09-19T22:15:00-04:00",
+  "event": "UFC 331",
+  "fight": "Patricio Pitbull vs Dooho Choi",
+  "purpose": "isolated odds-blind diagnostic rerun",
+  "preserve_stage_a_lock": true
+}
