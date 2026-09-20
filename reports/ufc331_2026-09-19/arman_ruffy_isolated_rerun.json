@@ -1,0 +1,84 @@
+{
+  "conditional_method_if_arman_wins_baseline": {
+    "DEC": 0.4125938481273296,
+    "KO": 0.3810784601622453,
+    "SUB": 0.20632769171042514
+  },
+  "conditional_method_if_arman_wins_v027_shadow": {
+    "DEC": 0.21799842171431397,
+    "KO": 0.4647734495247465,
+    "SUB": 0.31722812876093964
+  },
+  "conditional_method_if_ruffy_wins_baseline": {
+    "DEC": 0.3338226286211474,
+    "KO": 0.5979368876109539,
+    "SUB": 0.0682404837678987
+  },
+  "conditional_method_if_ruffy_wins_v027_shadow": {
+    "DEC": 0.4638090454031707,
+    "KO": 0.510217157246223,
+    "SUB": 0.025973797350606308
+  },
+  "event": "UFC 331: Van vs Pantoja 2",
+  "evidence_density": {
+    "arman_age": 29.93901312141933,
+    "arman_days_since_last": 301.0,
+    "arman_prior_ufc_bouts": 12,
+    "arman_reach": 72.0,
+    "ruffy_age": 30.256610334229997,
+    "ruffy_days_since_last": 97.0,
+    "ruffy_prior_ufc_bouts": 6,
+    "ruffy_reach": 75.0
+  },
+  "fight": "Arman Tsarukyan vs Mauricio Ruffy",
+  "generated_at_utc": "2026-09-20T02:45:01.226845+00:00",
+  "governance": {
+    "odds_used_as_features": false,
+    "official_stage_a_lock_unchanged": true,
+    "purpose": "isolated diagnostic rerun requested by user"
+  },
+  "joint_outcomes_baseline": {
+    "A_DEC": 0.2802646295581862,
+    "A_KO": 0.25885701872369055,
+    "A_SUB": 0.14015321446812337,
+    "B_DEC": 0.10706530838167323,
+    "B_KO": 0.1917733903458609,
+    "B_SUB": 0.021886438522465697
+  },
+  "joint_simulation_10000": {
+    "A_DEC": 0.2783,
+    "A_KO": 0.257,
+    "A_SUB": 0.1428,
+    "B_DEC": 0.1063,
+    "B_KO": 0.1925,
+    "B_SUB": 0.0231
+  },
+  "rerun_type": "ISOLATED_ODDS_BLIND_RECHECK",
+  "timing": {
+    "GTD_NO": 0.6016933144944712,
+    "GTD_YES": 0.3983066855055289,
+    "OVER_0.5": 0.9086924826998247,
+    "OVER_1.5": 0.7291367593302825,
+    "OVER_2.5": 0.5998764236180766,
+    "OVER_3.5": 0.5046181422903966,
+    "OVER_4.5": 0.4329428249950992,
+    "ROUND_2_STARTS_NO": 0.20626365442390038,
+    "ROUND_2_STARTS_YES": 0.7937363455760996,
+    "ROUND_3_STARTS_NO": 0.3532475807692129,
+    "ROUND_3_STARTS_YES": 0.6467524192307871,
+    "ROUND_4_STARTS_NO": 0.4605929241378429,
+    "ROUND_4_STARTS_YES": 0.5394070758621571,
+    "ROUND_5_STARTS_NO": 0.5407177486919821,
+    "ROUND_5_STARTS_YES": 0.45928225130801786,
+    "UNDER_0.5": 0.09130751730017528,
+    "UNDER_1.5": 0.27086324066971745,
+    "UNDER_2.5": 0.4001235763819234,
+    "UNDER_3.5": 0.4953818577096034,
+    "UNDER_4.5": 0.5670571750049008
+  },
+  "trials": 10000,
+  "winner": {
+    "Arman Tsarukyan": 0.6792748627500002,
+    "Mauricio Ruffy": 0.32072513724999985
+  }
+}
