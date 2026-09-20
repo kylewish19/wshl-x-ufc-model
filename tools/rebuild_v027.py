@@ -660,8 +660,9 @@ def find_clean_rows(clean: pd.DataFrame, method_df: pd.DataFrame) -> pd.DataFram
         r["clean_winner_correct"] = int(c.winner_correct)
         rows.append(r)
     out = pd.DataFrame(rows)
-    if len(out) != 64:
-        raise RuntimeError(f"Expected 64 clean fights, matched {len(out)}")
+    expected = len(clean)
+    if len(out) != expected:
+        raise RuntimeError(f"Expected {expected} clean fights, matched {len(out)}")
     return out.sort_values(["event_date", "bout"]).reset_index(drop=True)
 
 
