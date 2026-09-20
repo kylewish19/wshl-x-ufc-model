@@ -1,0 +1,40 @@
+name: menifield-iwo-rerun
+
+on:
+  push:
+    paths:
+      - "menifield_iwo_rerun_request.json"
+      - "tools/rerun_menifield_iwo.py"
+      - ".github/workflows/menifield-iwo-rerun.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  rerun:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Run isolated Menifield-Iwo recheck
+        run: PYTHONPATH=src python tools/rerun_menifield_iwo.py
+      - name: Test
+        run: pytest -q
+      - name: Save rerun report
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add reports/ufc331_2026-09-19/menifield_iwo_isolated_rerun.json
+          git commit -m "report: save Menifield-Iwo isolated rerun"
+          git fetch origin main
+          git rebase origin/main
+          git push
