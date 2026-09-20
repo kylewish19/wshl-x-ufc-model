@@ -1,0 +1,44 @@
+{
+  "event": "UFC 331: Van vs Pantoja 2",
+  "fight": "Patricio Pitbull vs Dooho Choi",
+  "requested_recheck": true,
+  "isolated_rerun": {
+    "Patricio_Pitbull": 0.49126916423209777,
+    "Dooho_Choi": 0.5087308357679022,
+    "trials": 10000,
+    "odds_used_as_features": false,
+    "largest_joint_outcomes": [
+      {
+        "outcome": "Dooho Choi by decision",
+        "probability": 0.28139383432462367
+      },
+      {
+        "outcome": "Patricio Pitbull by decision",
+        "probability": 0.2787703933640229
+      },
+      {
+        "outcome": "Dooho Choi by KO/TKO",
+        "probability": 0.19201360780389318
+      }
+    ]
+  },
+  "research_conclusion": {
+    "final_matchup_lean": "Dooho Choi",
+    "confidence": "LOW",
+    "betting_action": "PASS at current favorite price",
+    "keep_original_stage_a_side": true,
+    "rationale": [
+      "The corrected winner model is almost exactly 50/50 after merging Pitbull's split UFC identity history.",
+      "Choi has the current-form edge: three straight wins and consecutive knockouts over Nate Landwehr and Daniel Santos.",
+      "Recent Choi has shown better composure and smarter shot selection than the older brawl-heavy version.",
+      "Pitbull remains the more experienced and adaptable fighter, and all three UFC bouts have gone to decision, which keeps his upset path very live.",
+      "Pitbull has struggled with the size/speed/athleticism of UFC featherweights, while Choi owns a reach edge and is the harder hitter.",
+      "The two most likely exact outcomes are essentially tied decisions, so this is not a high-confidence winner pick."
+    ]
+  },
+  "governance": {
+    "original_stage_a_lock_unchanged": true,
+    "original_stage_b_card_preserved": true,
+    "this_file_is_an_append_only_user_requested_revision": true
+  }
+}
