@@ -1,0 +1,224 @@
+{
+  "event": "UFC 331: Van vs Pantoja 2",
+  "event_date": "2026-09-19",
+  "official_results": [
+    {
+      "fight": "Giga Chikadze vs Joanderson Brito",
+      "winner": "Joanderson Brito",
+      "method": "KO",
+      "round": 1,
+      "time": "1:57"
+    },
+    {
+      "fight": "Casey O'Neill vs Eduarda Moura",
+      "winner": "Casey O'Neill",
+      "method": "SUB",
+      "round": 1,
+      "time": "3:22",
+      "note": "UFC event page lists 3:22; UFC scorecards search result lists 3:20."
+    },
+    {
+      "fight": "Edmen Shahbazyan vs Brunno Ferreira",
+      "winner": "Edmen Shahbazyan",
+      "method": "DEC",
+      "round": 3,
+      "time": "5:00"
+    },
+    {
+      "fight": "Ryan Gandra vs Ozzy Diaz",
+      "winner": "Ryan Gandra",
+      "method": "KO",
+      "round": 1,
+      "time": "2:04"
+    },
+    {
+      "fight": "Michael Aswell Jr. vs JooSang Yoo",
+      "winner": "Michael Aswell Jr.",
+      "method": "DEC",
+      "round": 3,
+      "time": "5:00"
+    },
+    {
+      "fight": "Tai Tuivasa vs Robelis Despaigne",
+      "winner": "Robelis Despaigne",
+      "method": "DEC",
+      "round": 3,
+      "time": "5:00"
+    },
+    {
+      "fight": "Marlon Vera vs Charles Jourdain",
+      "winner": "Marlon Vera",
+      "method": "KO",
+      "round": 3,
+      "time": "2:02"
+    },
+    {
+      "fight": "Alonzo Menifield vs Iwo Baraniewski",
+      "winner": "Alonzo Menifield",
+      "method": "DEC",
+      "round": 3,
+      "time": "5:00"
+    },
+    {
+      "fight": "Gable Steveson vs Sean Sharaf",
+      "winner": "Sean Sharaf",
+      "method": "KO",
+      "round": 1,
+      "time": "0:12"
+    },
+    {
+      "fight": "Patricio Pitbull vs Dooho Choi",
+      "winner": "Patricio Pitbull",
+      "method": "KO",
+      "round": 1,
+      "time": "3:28"
+    },
+    {
+      "fight": "Arman Tsarukyan vs Mauricio Ruffy",
+      "winner": "Arman Tsarukyan",
+      "method": "KO",
+      "round": 1,
+      "time": "4:56"
+    },
+    {
+      "fight": "Joshua Van vs Alexandre Pantoja",
+      "winner": "Joshua Van",
+      "method": "DEC",
+      "round": 5,
+      "time": "5:00"
+    }
+  ],
+  "stage_a": {
+    "winner_record": "8-4",
+    "winner_accuracy": 0.6666666666666666,
+    "displayed_method_class_record": "4-8",
+    "displayed_method_class_accuracy": 0.3333333333333333,
+    "exact_winner_plus_displayed_method_record": "3-9",
+    "exact_winner_plus_method_accuracy": 0.25,
+    "official_method_bets_record": "1-2",
+    "official_method_bets_accuracy": 0.3333333333333333,
+    "timing_lean_record": "5-7",
+    "timing_lean_accuracy": 0.4166666666666667,
+    "actual_method_distribution": {
+      "KO": 6,
+      "SUB": 1,
+      "DEC": 5
+    },
+    "displayed_method_distribution": {
+      "KO": 5,
+      "SUB": 1,
+      "DEC": 6
+    },
+    "confidence_buckets": {
+      "7.0_plus": {
+        "record": "4-1",
+        "accuracy": 0.8
+      },
+      "6.4_to_6.9": {
+        "record": "2-2",
+        "accuracy": 0.5
+      },
+      "6.0_and_below": {
+        "record": "2-1",
+        "accuracy": 0.6666666666666666
+      }
+    }
+  },
+  "stage_b": {
+    "frozen_original_card": {
+      "record": "3-3",
+      "units": -0.300977,
+      "risked_units": 4.5,
+      "roi": -0.066884
+    },
+    "final_actionable_after_aswell_recheck": {
+      "record": "2-3",
+      "units": -1.140977,
+      "risked_units": 4,
+      "roi": -0.285244
+    },
+    "bets": [
+      {
+        "market": "Joshua Van ML",
+        "odds": -140,
+        "stake": 1,
+        "result": "W",
+        "units": 0.7142857142857143
+      },
+      {
+        "market": "Tsarukyan-Ruffy O2.5",
+        "odds": -108,
+        "stake": 1,
+        "result": "L",
+        "units": -1
+      },
+      {
+        "market": "Chikadze-Brito starts R3 YES",
+        "odds": -104,
+        "stake": 0.75,
+        "result": "L",
+        "units": -0.75
+      },
+      {
+        "market": "Edmen Shahbazyan ML",
+        "odds": -190,
+        "stake": 0.75,
+        "result": "W",
+        "units": 0.39473684210526316
+      },
+      {
+        "market": "Michael Aswell Jr. ML",
+        "odds": 168,
+        "stake": 0.5,
+        "result": "W",
+        "removed_by_recheck": true,
+        "units": 0.84
+      },
+      {
+        "market": "Pitbull-Choi O2.5",
+        "odds": -130,
+        "stake": 0.5,
+        "result": "L",
+        "units": -0.5
+      }
+    ]
+  },
+  "price_passes": {
+    "hypothetical_record_if_bet": "2-6",
+    "note": "The explicit price-pass gate avoided six losing wagers while passing two winners (Brito ML and Gandra KO)."
+  },
+  "user_requested_rechecks": {
+    "aswell_yoo": {
+      "final_recheck_lean": "JooSang Yoo",
+      "actual_winner": "Michael Aswell Jr.",
+      "correct": false,
+      "lesson": "Research override reversed a correct 59% model side and should have been a downgrade/pass, not a flip."
+    },
+    "menifield_iwo": {
+      "final_recheck_lean": "Iwo Baraniewski",
+      "actual_winner": "Alonzo Menifield",
+      "correct": false,
+      "lesson": "Research override over-weighted an extreme tiny-sample finish streak; raw 53.9% Menifield side was correct."
+    },
+    "pitbull_choi": {
+      "final_recheck_lean": "Dooho Choi",
+      "actual_winner": "Patricio Pitbull",
+      "correct": false,
+      "lesson": "Near-50/50 model should stay low-confidence; research did not justify directional certainty."
+    },
+    "arman_ruffy": {
+      "final_recheck_lean": "Arman Tsarukyan",
+      "actual_winner": "Arman Tsarukyan",
+      "correct": true,
+      "lesson": "Winner side was robust, but the timing over failed and method uncertainty remained real."
+    }
+  },
+  "lessons": [
+    "Do not apply a blanket anti-decision correction: predicted method distribution (5 KO / 1 SUB / 6 DEC) was close to actual (6 KO / 1 SUB / 5 DEC). The problem was fight-level assignment, not aggregate DEC bias.",
+    "Research should usually downgrade or pass rather than flip a model side. A flip requires a verified material data omission or a near-coinflip raw model.",
+    "Sparse-sample prospects must carry an uncertainty flag; Gable Steveson's 89.9% raw probability was overconfident with only one prior UFC bout.",
+    "Timing promotion was too loose. Require larger price edge and conflict checks before betting overs/round-starts.",
+    "Exact method promotion should require winner certainty, exact-outcome mass, baseline/shadow agreement, and sufficient UFC evidence density."
+  ],
+  "source_note": "Official results verified against UFC event/results/scorecards pages on 2026-09-20."
+}
