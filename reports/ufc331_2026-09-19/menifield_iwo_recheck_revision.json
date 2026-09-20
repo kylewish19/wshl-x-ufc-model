@@ -1,0 +1,35 @@
+{
+  "event": "UFC 331: Van vs Pantoja 2",
+  "fight": "Alonzo Menifield vs Iwo Baraniewski",
+  "requested_recheck": true,
+  "isolated_rerun": {
+    "Alonzo_Menifield": 0.5387944834487399,
+    "Iwo_Baraniewski": 0.4612055165512601,
+    "trials": 10000,
+    "odds_used_as_features": false,
+    "largest_joint_outcome": {
+      "outcome": "Iwo Baraniewski by KO/TKO",
+      "probability": 0.34782255314954336
+    }
+  },
+  "research_conclusion": {
+    "final_matchup_lean": "Iwo Baraniewski",
+    "confidence": "MODERATE-LOW",
+    "betting_action": "PASS at current favorite price",
+    "keep_stage_a_research_override": true,
+    "rationale": [
+      "The raw winner model favors Menifield because of 17 UFC bouts, deeper late-fight evidence, and a reach edge.",
+      "Iwo's three UFC wins all ended in Round 1 and his entire UFC sample is only 3:22, so the winner model heavily penalizes uncertainty.",
+      "The conditional method model strongly favors KO if Iwo wins: 75.4% baseline and 67.0% shadow; the largest joint outcome is Iwo KO at 34.8%.",
+      "Menifield has been knocked out by Carlos Ulberg and Azamat Murzakanov, so the power path is not theoretical.",
+      "Iwo is 27, 9-0, has seven KO wins and two submissions, a judo base, and every professional win has come in Round 1.",
+      "Menifield's best path is surviving the opening storm, using his 3-inch reach advantage and experience, and forcing Iwo into minutes and rounds he has never shown as a professional.",
+      "Because Iwo's sample is extremely short, the research lean should not be converted into a high numeric probability or used to justify an expensive favorite price."
+    ]
+  },
+  "governance": {
+    "original_stage_a_lock_unchanged": true,
+    "original_stage_b_card_preserved": true,
+    "this_file_is_an_append_only_user_requested_revision": true
+  }
+}
