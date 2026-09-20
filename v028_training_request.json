@@ -1,0 +1,9 @@
+{
+  "requested_at": "2026-09-20",
+  "version": "v0.28-ufc331-feedback",
+  "purpose": "Append UFC 331 frozen prefight rows with observed winner/method/duration labels and retrain shadow models",
+  "clean_ledger": "data/results/clean_ufc_76_2026-09-19.csv",
+  "historical_upstream_commit": "cb4ecb64dd62324a7a51a378f6b5bbb0fc99bc65",
+  "ufc331_round_stats_available_in_upstream": false,
+  "promotion_authorized": false
+}
