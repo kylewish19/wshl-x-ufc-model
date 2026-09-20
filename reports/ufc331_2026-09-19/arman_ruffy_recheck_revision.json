@@ -1,0 +1,48 @@
+{
+  "event": "UFC 331: Van vs Pantoja 2",
+  "fight": "Arman Tsarukyan vs Mauricio Ruffy",
+  "requested_recheck": true,
+  "isolated_rerun": {
+    "Arman_Tsarukyan": 0.6792748627500002,
+    "Mauricio_Ruffy": 0.32072513724999985,
+    "trials": 10000,
+    "odds_used_as_features": false,
+    "largest_joint_outcomes": [
+      {
+        "outcome": "Arman Tsarukyan by decision",
+        "probability": 0.2802646295581862
+      },
+      {
+        "outcome": "Arman Tsarukyan by KO/TKO",
+        "probability": 0.25885701872369055
+      },
+      {
+        "outcome": "Mauricio Ruffy by KO/TKO",
+        "probability": 0.1917733903458609
+      },
+      {
+        "outcome": "Arman Tsarukyan by submission",
+        "probability": 0.14015321446812337
+      }
+    ]
+  },
+  "research_conclusion": {
+    "final_matchup_lean": "Arman Tsarukyan",
+    "confidence": "MODERATE-HIGH",
+    "betting_action": "KEEP Arman side prediction; prefer Over 2.5 rounds to expensive moneyline at previously supplied prices",
+    "keep_original_stage_a_side": true,
+    "rationale": [
+      "Ruffy's clearest historical weakness is sustained pressure, takedowns, mat returns and back exposure, exactly the area Tsarukyan is best equipped to attack.",
+      "Tsarukyan has a much deeper UFC sample and has gone 10-1 since his UFC debut loss to Islam Makhachev.",
+      "Ruffy is dangerous enough on the feet that Tsarukyan should not be treated as a lock if he elects to strike at range for long stretches.",
+      "Ruffy's recent KO wins over Rafael Fiziev and Michael Chandler show genuine improvement and finishing threat.",
+      "Method disagreement remains large: baseline Arman conditional method is 41.3% DEC / 38.1% KO / 20.6% SUB, while v0.27 shadow shifts to 21.8% DEC / 46.5% KO / 31.7% SUB.",
+      "Because the side is stable but the method is not, keep Arman as the winner pick and do not promote a method bet."
+    ]
+  },
+  "governance": {
+    "original_stage_a_lock_unchanged": true,
+    "original_stage_b_card_preserved": true,
+    "this_file_is_an_append_only_user_requested_revision": true
+  }
+}
