@@ -5,5 +5,6 @@
   "clean_ledger": "data/results/clean_ufc_76_2026-09-19.csv",
   "historical_upstream_commit": "cb4ecb64dd62324a7a51a378f6b5bbb0fc99bc65",
   "ufc331_round_stats_available_in_upstream": false,
-  "promotion_authorized": false
+  "promotion_authorized": false,
+  "retry_after_dynamic_ledger_fix": "2026-09-20T14:40:00Z"
 }
