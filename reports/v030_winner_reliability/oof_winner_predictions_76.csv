@@ -1,0 +1,77 @@
+event_date,clean_fight,fighter_a,fighter_b,winner,p_a_win_oof,model_confidence,predicted_winner,correct
+2026-08-08T00:00:00+00:00,Mateusz Gamrot vs Quillan Salkilld,Mateusz Gamrot,Quillan Salkilld,Quillan Salkilld,0.4223345418908353,0.5776654581091647,Quillan Salkilld,1
+2026-08-08T00:00:00+00:00,Diego Ferreira vs Billy Quarantillo,Diego Ferreira,Billy Quarantillo,Diego Ferreira,0.459970905572659,0.5400290944273409,Billy Quarantillo,0
+2026-08-08T00:00:00+00:00,Darren Elkins vs Yadier del Valle,Darren Elkins,Yadier del Valle,Yadier del Valle,0.32899283099730525,0.6710071690026947,Yadier del Valle,1
+2026-08-08T00:00:00+00:00,Amanda Lemos vs Alexia Thainara,Amanda Lemos,Alexia Thainara,Alexia Thainara,0.3392783645291533,0.6607216354708467,Alexia Thainara,1
+2026-08-08T00:00:00+00:00,Ty Miller vs Billy Ray Goff,Billy Ray Goff,Ty Miller,Ty Miller,0.47972111451733135,0.5202788854826687,Ty Miller,1
+2026-08-08T00:00:00+00:00,Steven Asplund vs Guilherme Pat,Steven Asplund,Guilherme Pat,Steven Asplund,0.7995364831544953,0.7995364831544953,Steven Asplund,1
+2026-08-08T00:00:00+00:00,Diyar Nurgozhay vs Bruno Lopes,Diyar Nurgozhay,Bruno Lopes,Diyar Nurgozhay,0.7449623699534442,0.7449623699534442,Diyar Nurgozhay,1
+2026-08-08T00:00:00+00:00,Louie Sutherland vs Jose Montanha,Louie Sutherland,Jose Montanha,Jose Montanha,0.5820279587640819,0.5820279587640819,Louie Sutherland,0
+2026-08-08T00:00:00+00:00,Manoel Sousa vs Richie Miranda,Manoel Sousa,Richie Miranda,Manoel Sousa,0.609434714665281,0.609434714665281,Manoel Sousa,1
+2026-08-08T00:00:00+00:00,Miles Johns vs Gianni Vazquez,Miles Johns,Gianni Vazquez,Miles Johns,0.6685741215310799,0.6685741215310799,Miles Johns,1
+2026-08-08T00:00:00+00:00,Juliana Miller vs Ravena Oliveira,Juliana Miller,Ravena Oliveira,Juliana Miller,0.545381889115524,0.545381889115524,Juliana Miller,1
+2026-08-08T00:00:00+00:00,Gigi Canuto vs Carol Foro,Gigi Canuto,Carol Foro,Carol Foro,0.4272124296190816,0.5727875703809184,Carol Foro,1
+2026-08-15T00:00:00+00:00,Jeremiah Wells vs Myktybek Orolbai,Jeremiah Wells,Myktybek Orolbai,Jeremiah Wells,0.34118611794658615,0.6588138820534138,Myktybek Orolbai,0
+2026-08-15T00:00:00+00:00,Neil Magny vs Ramiz Brahimaj,Neil Magny,Ramiz Brahimaj,Neil Magny,0.45116247851465174,0.5488375214853483,Ramiz Brahimaj,0
+2026-08-15T00:00:00+00:00,Rafael Tobias vs Lucas Fernando,Rafael Tobias,Lucas Fernando,Lucas Fernando,0.6309558157525612,0.6309558157525612,Rafael Tobias,0
+2026-08-15T00:00:00+00:00,Vicente Luque vs Tresean Gore,Vicente Luque,Tresean Gore,Tresean Gore,0.4419706657422417,0.5580293342577582,Tresean Gore,1
+2026-08-15T00:00:00+00:00,Donte Johnson vs Eric McConico,Donte Johnson,Eric McConico,Donte Johnson,0.8814971405076188,0.8814971405076188,Donte Johnson,1
+2026-08-15T00:00:00+00:00,Jalin Turner vs Kaue Fernandes,Jalin Turner,Kaue Fernandes,Jalin Turner,0.5142731289652707,0.5142731289652707,Jalin Turner,1
+2026-08-15T00:00:00+00:00,Charles Johnson vs Eduardo Chapolin,Charles Johnson,Eduardo Chapolin,Charles Johnson,0.5083624595409076,0.5083624595409076,Charles Johnson,1
+2026-08-15T00:00:00+00:00,Chidi Njokuani vs Joel Alvarez,Chidi Njokuani,Joel Alvarez,Chidi Njokuani,0.5149214223052094,0.5149214223052094,Chidi Njokuani,1
+2026-08-15T00:00:00+00:00,Edson Barboza vs Esteban Ribovics,Edson Barboza,Esteban Ribovics,Esteban Ribovics,0.27109111250493484,0.7289088874950651,Esteban Ribovics,1
+2026-08-15T00:00:00+00:00,Mansur Abdul-Malik vs Dustin Stoltzfus,Mansur Abdul-Malik,Dustin Stoltzfus,Dustin Stoltzfus,0.6868087312055782,0.6868087312055782,Mansur Abdul-Malik,0
+2026-08-15T00:00:00+00:00,Mackenzie Dern vs Gillian Robertson,Mackenzie Dern,Gillian Robertson,Mackenzie Dern,0.4861454925288078,0.5138545074711922,Gillian Robertson,0
+2026-08-15T00:00:00+00:00,Islam Makhachev vs Ian Machado Garry,Islam Makhachev,Ian Machado Garry,Islam Makhachev,0.5757751486033488,0.5757751486033488,Islam Makhachev,1
+2026-08-22T00:00:00+00:00,Shanelle Dyer vs Elise Reed,Shanelle Dyer,Elise Reed,Shanelle Dyer,0.9047684600201877,0.9047684600201877,Shanelle Dyer,1
+2026-08-22T00:00:00+00:00,Wes Schultz vs Jackson McVey,Wes Schultz,Jackson McVey,Jackson McVey,0.516369015924479,0.516369015924479,Wes Schultz,0
+2026-08-22T00:00:00+00:00,Gauge Young vs Stanley Dorsainvil,Gauge Young,Stan Dorsainvil,Stan Dorsainvil,0.6415124465249491,0.6415124465249491,Gauge Young,0
+2026-08-22T00:00:00+00:00,Marcio Barbosa vs Ryan Kuse,Marcio Barbosa,Ryan Kuse,Marcio Barbosa,0.8306967238471653,0.8306967238471653,Marcio Barbosa,1
+2026-08-22T00:00:00+00:00,Chris Padilla vs Nasrat Haqparast,Chris Padilla,Nasrat Haqparast,Chris Padilla,0.6706244865368388,0.6706244865368388,Chris Padilla,1
+2026-08-22T00:00:00+00:00,Kennedy Nzechukwu vs Shamil Gaziev,Kennedy Nzechukwu,Shamil Gaziev,Shamil Gaziev,0.7084425782926593,0.7084425782926593,Kennedy Nzechukwu,0
+2026-08-22T00:00:00+00:00,Jamall Emmers vs Lerryan Douglas,Jamall Emmers,Lerryan Douglas,Jamall Emmers,0.4849336907473364,0.5150663092526636,Lerryan Douglas,0
+2026-08-22T00:00:00+00:00,Anthony Wint vs Terrance Chatman,Anthony Wint,Terrance Chatman,Anthony Wint,0.8552860385204593,0.8552860385204593,Anthony Wint,1
+2026-08-22T00:00:00+00:00,Carli Judice vs Jeisla Chaves,Carli Judice,Jeisla Chaves,Carli Judice,0.6923772756619684,0.6923772756619684,Carli Judice,1
+2026-08-22T00:00:00+00:00,MarQuel Mederos vs Mason Jones,MarQuel Mederos,Mason Jones,MarQuel Mederos,0.4681604077879278,0.5318395922120722,Mason Jones,0
+2026-08-22T00:00:00+00:00,Reinier de Ridder vs Roman Dolidze,Reinier de Ridder,Roman Dolidze,Reinier de Ridder,0.7551887226073709,0.7551887226073709,Reinier de Ridder,1
+2026-08-22T00:00:00+00:00,Serghei Spivac vs Vitor Petrino,Serghei Spivac,Vitor Petrino,Vitor Petrino,0.5642135352950766,0.5642135352950766,Serghei Spivac,0
+2026-08-22T00:00:00+00:00,Anthony Hernandez vs Gregory Rodrigues,Anthony Hernandez,Gregory Rodrigues,Gregory Rodrigues,0.7388427527603819,0.7388427527603819,Anthony Hernandez,0
+2026-08-29T00:00:00+00:00,Ding Meng vs Cam Nelson,Ding Meng,Cam Nelson,Cam Nelson,0.8594150152579095,0.8594150152579095,Ding Meng,0
+2026-08-29T00:00:00+00:00,Xiong Jingnan vs Julia Polastri,Xiong Jingnan,Julia Polastri,Julia Polastri,0.08149423123132851,0.9185057687686715,Julia Polastri,1
+2026-08-29T00:00:00+00:00,Lawrence Lui vs Hector Santiago,Lawrence Lui,Hector Santiago,Hector Santiago,0.9027165762039423,0.9027165762039423,Lawrence Lui,0
+2026-08-29T00:00:00+00:00,Xiao Long vs Francesco Nuzzi,Xiao Long,Francesco Nuzzi,Francesco Nuzzi,0.5906951750211532,0.5906951750211532,Xiao Long,0
+2026-08-29T00:00:00+00:00,Jack Jenkins vs Sean Woodson,Jack Jenkins,Sean Woodson,Sean Woodson,0.4799844856409651,0.5200155143590349,Sean Woodson,1
+2026-08-29T00:00:00+00:00,Rei Tsuruya vs Kevin Borjas,Rei Tsuruya,Kevin Borjas,Rei Tsuruya,0.7584564697126297,0.7584564697126297,Rei Tsuruya,1
+2026-08-29T00:00:00+00:00,Namsrai Batbayar vs Andre Lima,Namsrai Batbayar,Andre Lima,Andre Lima,0.6719247820723993,0.6719247820723993,Namsrai Batbayar,0
+2026-08-29T00:00:00+00:00,Bilal Hasan vs Nilson Rojas,Bilal Hasan,Nilson Rojas,Bilal Hasan,0.6260993131760637,0.6260993131760637,Bilal Hasan,1
+2026-08-29T00:00:00+00:00,Liu Ce vs Levi Rodrigues Jr.,Liu Ce,Levi Rodrigues Jr.,Liu Ce,0.8944357734492352,0.8944357734492352,Liu Ce,1
+2026-08-29T00:00:00+00:00,Alex Perez vs Sumudaerji,Alex Perez,Sumudaerji,Sumudaerji,0.3979964565008181,0.602003543499182,Sumudaerji,1
+2026-08-29T00:00:00+00:00,Aoriqileng vs Kai Asakura,Aoriqileng,Kai Asakura,Kai Asakura,0.4932100601671433,0.5067899398328567,Kai Asakura,1
+2026-08-29T00:00:00+00:00,Yan Xiaonan vs Denise Gomes,Yan Xiaonan,Denise Gomes,Denise Gomes,0.35252786546687837,0.6474721345331216,Denise Gomes,1
+2026-08-29T00:00:00+00:00,Umar Nurmagomedov vs Song Yadong,Umar Nurmagomedov,Song Yadong,Song Yadong,0.7222679076731424,0.7222679076731424,Umar Nurmagomedov,0
+2026-09-05T00:00:00+00:00,Delphine Benouaich vs Sofia Montenegro,Delphine Benouaich,Sofia Montenegro,Delphine Benouaich,0.24882998565713055,0.7511700143428695,Sofia Montenegro,0
+2026-09-05T00:00:00+00:00,Matthieu Duclos vs Luis Felipe Dias,Matthieu Duclos,Luis Felipe Dias,Matthieu Duclos,0.5267740369472849,0.5267740369472849,Matthieu Duclos,1
+2026-09-05T00:00:00+00:00,Nora Cornolle vs Klaudia Sygula,Nora Cornolle,Klaudia Sygula,Nora Cornolle,0.3462154807664439,0.6537845192335561,Klaudia Sygula,0
+2026-09-05T00:00:00+00:00,Michael Aljarouj vs Fabia Sintes,Michael Aljarouj,Fabia Sintes,Fabia Sintes,0.6819970561157745,0.6819970561157745,Michael Aljarouj,0
+2026-09-05T00:00:00+00:00,Nathaniel Wood vs Pavel Andrusca,Nathaniel Wood,Pavel Andrusca,Pavel Andrusca,0.5412852859759513,0.5412852859759513,Nathaniel Wood,0
+2026-09-05T00:00:00+00:00,Oumar Sy vs Modestas Bukauskas,Oumar Sy,Modestas Bukauskas,Modestas Bukauskas,0.7983744145139191,0.7983744145139191,Oumar Sy,0
+2026-09-05T00:00:00+00:00,Mario Pinto vs Ryan Spann,Mario Pinto,Ryan Spann,Mario Pinto,0.9083727260344673,0.9083727260344673,Mario Pinto,1
+2026-09-05T00:00:00+00:00,Morgan Charriere vs Felipe Lima,Morgan Charriere,Felipe Lima,Felipe Lima,0.4763790606019096,0.5236209393980904,Felipe Lima,1
+2026-09-05T00:00:00+00:00,Losene Keita vs Muhammad Naimov,Losene Keita,Muhammad Naimov,Losene Keita,0.6952033159515337,0.6952033159515337,Losene Keita,1
+2026-09-05T00:00:00+00:00,Kurtis Campbell vs Trevor Peek,Kurtis Campbell,Trevor Peek,Kurtis Campbell,0.6639433001406174,0.6639433001406174,Kurtis Campbell,1
+2026-09-05T00:00:00+00:00,Daniil Donchenko vs Punahele Soriano,Daniil Donchenko,Punahele Soriano,Daniil Donchenko,0.8341159675882621,0.8341159675882621,Daniil Donchenko,1
+2026-09-05T00:00:00+00:00,Michael Page vs Nursulton Ruziboev,Michael Page,Nursulton Ruziboev,Michael Page,0.5256691981149021,0.5256691981149021,Michael Page,1
+2026-09-05T00:00:00+00:00,Fares Ziam vs Axel Sola,Fares Ziam,Axel Sola,Axel Sola,0.5235289408621497,0.5235289408621497,Fares Ziam,0
+2026-09-05T00:00:00+00:00,Dan Hooker vs Salahdine Parnasse,Dan Hooker,Salahdine Parnasse,Salahdine Parnasse,0.3187345787500003,0.6812654212499998,Salahdine Parnasse,1
+2026-09-19T00:00:00+00:00,Giga Chikadze vs Joanderson Brito,Giga Chikadze,Joanderson Brito,Joanderson Brito,0.49337082947979866,0.5066291705202013,Joanderson Brito,1
+2026-09-19T00:00:00+00:00,Casey O'Neill vs Eduarda Moura,Casey O'Neill,Eduarda Moura,Casey O'Neill,0.5992113625380402,0.5992113625380402,Casey O'Neill,1
+2026-09-19T00:00:00+00:00,Edmen Shahbazyan vs Brunno Ferreira,Edmen Shahbazyan,Brunno Ferreira,Edmen Shahbazyan,0.7025107171730383,0.7025107171730383,Edmen Shahbazyan,1
+2026-09-19T00:00:00+00:00,Ryan Gandra vs Ozzy Diaz,Ryan Gandra,Ozzy Diaz,Ryan Gandra,0.7239651302912296,0.7239651302912296,Ryan Gandra,1
+2026-09-19T00:00:00+00:00,Michael Aswell Jr. vs JooSang Yoo,Michael Aswell Jr.,Joosang Yoo,Michael Aswell Jr.,0.5903336692978516,0.5903336692978516,Michael Aswell Jr.,1
+2026-09-19T00:00:00+00:00,Tai Tuivasa vs Robelis Despaigne,Tai Tuivasa,Robelis Despaigne,Robelis Despaigne,0.5036953056526575,0.5036953056526575,Tai Tuivasa,0
+2026-09-19T00:00:00+00:00,Marlon Vera vs Charles Jourdain,Marlon Vera,Charles Jourdain,Marlon Vera,0.38895193409788004,0.61104806590212,Charles Jourdain,0
+2026-09-19T00:00:00+00:00,Alonzo Menifield vs Iwo Baraniewski,Alonzo Menifield,Iwo Baraniewski,Alonzo Menifield,0.5387944834487399,0.5387944834487399,Alonzo Menifield,1
+2026-09-19T00:00:00+00:00,Gable Steveson vs Sean Sharaf,Gable Steveson,Sean Sharaf,Sean Sharaf,0.8987199687986236,0.8987199687986236,Gable Steveson,0
+2026-09-19T00:00:00+00:00,Patricio Pitbull vs Dooho Choi,Patricio Pitbull,Dooho Choi,Patricio Pitbull,0.49126916423209777,0.5087308357679022,Dooho Choi,0
+2026-09-19T00:00:00+00:00,Arman Tsarukyan vs Mauricio Ruffy,Arman Tsarukyan,Mauricio Ruffy,Arman Tsarukyan,0.6792748627500002,0.6792748627500002,Arman Tsarukyan,1
+2026-09-19T00:00:00+00:00,Joshua Van vs Alexandre Pantoja,Joshua Van,Alexandre Pantoja,Joshua Van,0.7405227484107599,0.7405227484107599,Joshua Van,1

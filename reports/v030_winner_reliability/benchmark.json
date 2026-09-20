@@ -1,0 +1,159 @@
+{
+  "bins": [
+    {
+      "accuracy": 0.5454545454545454,
+      "hi": 0.55,
+      "lo": 0.5,
+      "losses": 10,
+      "mean_confidence": 0.5224885216846568,
+      "n": 22,
+      "wins": 12
+    },
+    {
+      "accuracy": 0.6666666666666666,
+      "hi": 0.6,
+      "lo": 0.55,
+      "losses": 3,
+      "mean_confidence": 0.5789710235852659,
+      "n": 9,
+      "wins": 6
+    },
+    {
+      "accuracy": 0.5714285714285714,
+      "hi": 0.65,
+      "lo": 0.6,
+      "losses": 3,
+      "mean_confidence": 0.624075147721897,
+      "n": 7,
+      "wins": 4
+    },
+    {
+      "accuracy": 0.6428571428571429,
+      "hi": 0.7,
+      "lo": 0.65,
+      "losses": 5,
+      "mean_confidence": 0.6740228970697357,
+      "n": 14,
+      "wins": 9
+    },
+    {
+      "accuracy": 0.625,
+      "hi": 0.75,
+      "lo": 0.7,
+      "losses": 3,
+      "mean_confidence": 0.7263028865062151,
+      "n": 8,
+      "wins": 5
+    },
+    {
+      "accuracy": 0.6,
+      "hi": 0.8,
+      "lo": 0.75,
+      "losses": 2,
+      "mean_confidence": 0.7725452208662569,
+      "n": 5,
+      "wins": 3
+    },
+    {
+      "accuracy": 0.7142857142857143,
+      "hi": 0.9,
+      "lo": 0.8,
+      "losses": 2,
+      "mean_confidence": 0.8648809468527533,
+      "n": 7,
+      "wins": 5
+    },
+    {
+      "accuracy": 0.75,
+      "hi": 1.000001,
+      "lo": 0.9,
+      "losses": 1,
+      "mean_confidence": 0.9085908827568172,
+      "n": 4,
+      "wins": 3
+    }
+  ],
+  "generated_at_utc": "2026-09-20T14:45:15.108015+00:00",
+  "note": "All probabilities are chronology/out-of-fold for their event date. Thresholds are descriptive development evidence, not guaranteed future hit rates.",
+  "overall": {
+    "accuracy": 0.618421052631579,
+    "brier": 0.24104562847840838,
+    "log_loss": 0.6833818026602253,
+    "n": 76
+  },
+  "status": "V0.30_WINNER_RELIABILITY_AUDIT",
+  "thresholds": [
+    {
+      "accuracy": 0.618421052631579,
+      "coverage": 1.0,
+      "losses": 29,
+      "n": 76,
+      "threshold": 0.5,
+      "wins": 47
+    },
+    {
+      "accuracy": 0.6481481481481481,
+      "coverage": 0.7105263157894737,
+      "losses": 19,
+      "n": 54,
+      "threshold": 0.55,
+      "wins": 35
+    },
+    {
+      "accuracy": 0.6444444444444445,
+      "coverage": 0.5921052631578947,
+      "losses": 16,
+      "n": 45,
+      "threshold": 0.6,
+      "wins": 29
+    },
+    {
+      "accuracy": 0.6578947368421053,
+      "coverage": 0.5,
+      "losses": 13,
+      "n": 38,
+      "threshold": 0.65,
+      "wins": 25
+    },
+    {
+      "accuracy": 0.6666666666666666,
+      "coverage": 0.3157894736842105,
+      "losses": 8,
+      "n": 24,
+      "threshold": 0.7,
+      "wins": 16
+    },
+    {
+      "accuracy": 0.6875,
+      "coverage": 0.21052631578947367,
+      "losses": 5,
+      "n": 16,
+      "threshold": 0.75,
+      "wins": 11
+    },
+    {
+      "accuracy": 0.7272727272727273,
+      "coverage": 0.14473684210526316,
+      "losses": 3,
+      "n": 11,
+      "threshold": 0.8,
+      "wins": 8
+    },
+    {
+      "accuracy": 0.6666666666666666,
+      "coverage": 0.11842105263157894,
+      "losses": 3,
+      "n": 9,
+      "threshold": 0.85,
+      "wins": 6
+    },
+    {
+      "accuracy": 0.75,
+      "coverage": 0.05263157894736842,
+      "losses": 1,
+      "n": 4,
+      "threshold": 0.9,
+      "wins": 3
+    }
+  ]
+}
