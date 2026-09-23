@@ -1,0 +1,185 @@
+{
+  "method_intercept_calibration_clean76": {
+    "baseline": {
+      "accuracy": 0.359375,
+      "actual": {
+        "DEC": 21,
+        "KO": 33,
+        "SUB": 10
+      },
+      "brier": 0.6607392636000966,
+      "calls": {
+        "DEC": 41,
+        "KO": 22,
+        "SUB": 1
+      },
+      "log_loss": 1.0538005870988898,
+      "n": 64,
+      "recall": {
+        "DEC": 0.5238095238095238,
+        "KO": 0.3333333333333333,
+        "SUB": 0.1
+      }
+    },
+    "candidate": {
+      "accuracy": 0.40625,
+      "actual": {
+        "DEC": 21,
+        "KO": 33,
+        "SUB": 10
+      },
+      "brier": 0.6416616227431511,
+      "calls": {
+        "DEC": 25,
+        "KO": 36,
+        "SUB": 3
+      },
+      "log_loss": 1.0339919126328834,
+      "n": 64,
+      "recall": {
+        "DEC": 0.23809523809523808,
+        "KO": 0.6060606060606061,
+        "SUB": 0.1
+      }
+    },
+    "folds": [
+      {
+        "finish_offset": 0.15740997114920163,
+        "sub_offset": 0.4003638073950358,
+        "test_date": "2026-08-15T00:00:00+00:00",
+        "test_n": 12,
+        "train_n": 12
+      },
+      {
+        "finish_offset": 0.38237572649670465,
+        "sub_offset": 0.35918419764192006,
+        "test_date": "2026-08-22T00:00:00+00:00",
+        "test_n": 13,
+        "train_n": 24
+      },
+      {
+        "finish_offset": 0.6019430225977863,
+        "sub_offset": 0.12586225229104217,
+        "test_date": "2026-08-29T00:00:00+00:00",
+        "test_n": 13,
+        "train_n": 37
+      },
+      {
+        "finish_offset": 0.7797870303234918,
+        "sub_offset": -0.10715754007832826,
+        "test_date": "2026-09-05T00:00:00+00:00",
+        "test_n": 14,
+        "train_n": 50
+      },
+      {
+        "finish_offset": 0.6275589583804904,
+        "sub_offset": -0.1267821028530842,
+        "test_date": "2026-09-19T00:00:00+00:00",
+        "test_n": 12,
+        "train_n": 64
+      }
+    ],
+    "ridge": 0.5
+  },
+  "method_residual_clean76": {
+    "baseline_all_64": {
+      "accuracy": 0.3684210526315789,
+      "actual": {
+        "DEC": 26,
+        "KO": 37,
+        "SUB": 13
+      },
+      "calls": {
+        "DEC": 47,
+        "KO": 28,
+        "SUB": 1
+      },
+      "log_loss": 1.041079367501121,
+      "multiclass_brier": 0.657003428798733,
+      "n": 76,
+      "recall": {
+        "DEC": 0.5384615384615384,
+        "KO": 0.35135135135135137,
+        "SUB": 0.07692307692307693
+      }
+    },
+    "chronology_baseline": {
+      "accuracy": 0.359375,
+      "actual": {
+        "DEC": 21,
+        "KO": 33,
+        "SUB": 10
+      },
+      "calls": {
+        "DEC": 41,
+        "KO": 22,
+        "SUB": 1
+      },
+      "log_loss": 1.0538005870988898,
+      "multiclass_brier": 0.6607392636000966,
+      "n": 64,
+      "recall": {
+        "DEC": 0.5238095238095238,
+        "KO": 0.3333333333333333,
+        "SUB": 0.1
+      }
+    },
+    "chronology_candidate": {
+      "accuracy": 0.390625,
+      "actual": {
+        "DEC": 21,
+        "KO": 33,
+        "SUB": 10
+      },
+      "calls": {
+        "DEC": 42,
+        "KO": 19,
+        "SUB": 3
+      },
+      "log_loss": 1.0904925012848188,
+      "multiclass_brier": 0.6904312853980679,
+      "n": 64,
+      "recall": {
+        "DEC": 0.6666666666666666,
+        "KO": 0.30303030303030304,
+        "SUB": 0.1
+      }
+    },
+    "chronology_evaluation_fights": 64,
+    "folds": [
+      {
+        "test_date": "2026-08-15T00:00:00+00:00",
+        "test_fights": 12,
+        "train_clean_fights": 12
+      },
+      {
+        "test_date": "2026-08-22T00:00:00+00:00",
+        "test_fights": 13,
+        "train_clean_fights": 24
+      },
+      {
+        "test_date": "2026-08-29T00:00:00+00:00",
+        "test_fights": 13,
+        "train_clean_fights": 37
+      },
+      {
+        "test_date": "2026-09-05T00:00:00+00:00",
+        "test_fights": 14,
+        "train_clean_fights": 50
+      },
+      {
+        "test_date": "2026-09-19T00:00:00+00:00",
+        "test_fights": 12,
+        "train_clean_fights": 64
+      }
+    ],
+    "note": "Retrospective reconstruction only. Architecture and feature formulas were defined after historical results were known; this is not prospective proof."
+  },
+  "winner_clean76": {
+    "accuracy": 0.6052631578947368,
+    "brier": 0.24222028362454245,
+    "log_loss": 0.6820502846938679,
+    "n": 76,
+    "note": "New reconstruction benchmark, not the historical official v0.3.1 score."
+  }
+}
