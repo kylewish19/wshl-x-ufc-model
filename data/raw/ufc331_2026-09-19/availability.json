@@ -1,0 +1,35 @@
+{
+  "checked_at_utc": "2026-09-23T21:47:11.477342+00:00",
+  "event": "UFC 331: Van vs. Pantoja 2",
+  "event_rows": 1,
+  "fight_stat_rows": 52,
+  "full_card_stats_available": true,
+  "missing_stat_bouts": [],
+  "receipt": {
+    "ufc_event_details.csv": {
+      "bytes": 102243,
+      "sha256": "30d49090a5c13da0e0782dcd9ff340d02943940ad4423c0206d795dc71571e70",
+      "source": "Greco1899/scrape_ufc_stats@a3c5452eee2f5bb4f5eae4ce958f0f23dd8863d8"
+    },
+    "ufc_fight_results.csv": {
+      "bytes": 2096087,
+      "sha256": "87fab227441be7d99e546ae8f3f1be198ab19b52a2e1d533cb1de8f278ceb889",
+      "source": "Greco1899/scrape_ufc_stats@a3c5452eee2f5bb4f5eae4ce958f0f23dd8863d8"
+    },
+    "ufc_fight_stats.csv": {
+      "bytes": 7634297,
+      "sha256": "5a72e433ad9a09173d14a483494e78d72b0254ad12e0cdf43346d44709269a22",
+      "source": "Greco1899/scrape_ufc_stats@a3c5452eee2f5bb4f5eae4ce958f0f23dd8863d8"
+    },
+    "ufc_fighter_tott.csv": {
+      "bytes": 507405,
+      "sha256": "7ab0b4d1c064cd3ae65bd42fdea712033feb79b7888bc534ffba3d79ee7b40bb",
+      "source": "Greco1899/scrape_ufc_stats@a3c5452eee2f5bb4f5eae4ce958f0f23dd8863d8"
+    }
+  },
+  "result_rows": 12,
+  "unique_result_bouts": 12,
+  "unique_stat_bouts": 12,
+  "upstream_commit": "a3c5452eee2f5bb4f5eae4ce958f0f23dd8863d8",
+  "upstream_repo": "Greco1899/scrape_ufc_stats"
+}
