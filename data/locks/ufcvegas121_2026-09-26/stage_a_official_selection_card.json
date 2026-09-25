@@ -1,0 +1,193 @@
+{
+  "event": "UFC Fight Night: Rosas Jr. vs Barcelos",
+  "event_date": "2026-09-26",
+  "stage": "A_OFFICIAL_ODDS_BLIND_SELECTION_CARD_V031",
+  "raw_model_lock_sha256": "27a736280512be4929dcec2b87b6fb08445cfef0e662626ce71959963e63013c",
+  "odds_used": false,
+  "weigh_in_status": "All 24 fighters made weight; John Castaneda made 136 on his second attempt.",
+  "tape_policy": "Direct continuous video playback was not available in this run. Official UFC replay/full-fight links and current fight-week material were located where available; no visual tape claims are made. Research uses official results, UFCStats-derived statistics, current-form/context, and replay metadata. Debut/TUF fights are explicitly treated as sparse evidence.",
+  "governance": {
+    "research_flips_of_raw_model": 0,
+    "sparse_sample_confidence_penalty_applied": true,
+    "method_promotion_gate_applied": true,
+    "timing_markets_are_model_leans_only_until_stage_b_prices": true
+  },
+  "picks": [
+    {
+      "fight": "Vanessa Demopoulos vs Yazmin Jauregui",
+      "winner": "Yazmin Jauregui",
+      "raw_win_probability": 0.8379317675557405,
+      "winner_confidence_10": 8,
+      "official_method": "DEC",
+      "secondary_method": null,
+      "method_score_10": 6.8,
+      "timing_lean": "Over 2.5 rounds",
+      "timing_probability": 0.7426373523769308,
+      "research_override": false,
+      "research_note": "Strong model agreement and age/reach edge, but Jauregui's roughly two-year layoff prevents lock-level confidence."
+    },
+    {
+      "fight": "John Castaneda vs Alatengheili",
+      "winner": "John Castaneda",
+      "raw_win_probability": 0.510470476773957,
+      "winner_confidence_10": 5.1,
+      "official_method": null,
+      "secondary_method": "DEC",
+      "method_score_10": 5,
+      "timing_lean": "Over 2.5 rounds",
+      "timing_probability": 0.6860979384882568,
+      "research_override": false,
+      "research_note": "Essentially a coin flip; no research evidence justified a directional flip."
+    },
+    {
+      "fight": "Montel Jackson vs Ricky Simon",
+      "winner": "Montel Jackson",
+      "raw_win_probability": 0.6987692960532937,
+      "winner_confidence_10": 7,
+      "official_method": null,
+      "secondary_method": "DEC",
+      "method_score_10": 5.9,
+      "timing_lean": "Over 2.5 rounds",
+      "timing_probability": 0.6134924374677557,
+      "research_override": false,
+      "research_note": "Both reference and v0.31 agree on Jackson; this is a rematch of Jackson's first career loss, so Simon's wrestling remains meaningful upset risk."
+    },
+    {
+      "fight": "Elves Brener vs Josiah Harrell",
+      "winner": "Elves Brener",
+      "raw_win_probability": 0.6323300294137639,
+      "winner_confidence_10": 6,
+      "official_method": null,
+      "secondary_method": "KO/TKO",
+      "method_score_10": 6.3,
+      "timing_lean": "Goes the distance: NO",
+      "timing_probability": 0.618414478713618,
+      "research_override": false,
+      "research_note": "Brener's finish pathway is strong, but Harrell has only one UFC bout and now has a full camp; sparse-sample method gate blocks a KO promotion."
+    },
+    {
+      "fight": "Rodolfo Bellato vs Christian Edwards",
+      "winner": "Christian Edwards",
+      "raw_win_probability": 0.6153192718706066,
+      "winner_confidence_10": 5.9,
+      "official_method": null,
+      "secondary_method": "KO/TKO",
+      "method_score_10": 5.7,
+      "timing_lean": "Goes the distance: NO",
+      "timing_probability": 0.5921546063971822,
+      "research_override": false,
+      "research_note": "Edwards showed he could compete on short notice in his UFC debut and now has a full camp, but only one UFC bout makes this a low-trust side."
+    },
+    {
+      "fight": "Rodolfo Vieira vs Robert Bryczek",
+      "winner": "Rodolfo Vieira",
+      "raw_win_probability": 0.7230492136572094,
+      "winner_confidence_10": 7,
+      "official_method": null,
+      "secondary_method": "SUB",
+      "method_score_10": 6.4,
+      "timing_lean": "Over 1.5 rounds",
+      "timing_probability": 0.664790803353419,
+      "research_override": false,
+      "research_note": "Vieira side is stable, but calibrated method favors decision while the residual raises submission; disagreement blocks an exact-method promotion."
+    },
+    {
+      "fight": "Brady Hiestand vs Rinya Nakamura",
+      "winner": "Brady Hiestand",
+      "raw_win_probability": 0.7075145439366725,
+      "winner_confidence_10": 6.3,
+      "official_method": null,
+      "secondary_method": "SUB",
+      "method_score_10": 6.2,
+      "timing_lean": "Over 2.5 rounds",
+      "timing_probability": 0.6128313201329716,
+      "research_override": false,
+      "research_note": "The model likes Hiestand, but an 834-day layoff materially widens uncertainty; research downgrades confidence rather than flipping the side."
+    },
+    {
+      "fight": "Melissa Amaya vs Tina Black",
+      "winner": "Melissa Amaya",
+      "raw_win_probability": 0.5210192278897687,
+      "winner_confidence_10": 5.6,
+      "official_method": null,
+      "secondary_method": "DEC",
+      "method_score_10": 5.2,
+      "timing_lean": "Over 2.5 rounds",
+      "timing_probability": 0.5874508332070537,
+      "research_override": false,
+      "research_note": "Identity audit corrected Tina Black to Valesca Machado. Amaya's TUF run supports the slight lean, while Black's veteran experience and never-stopped pro history keep this near a pass."
+    },
+    {
+      "fight": "Mahammadali Osmanli vs Ilimbek Akylbek",
+      "winner": "Mahammadali Osmanli",
+      "raw_win_probability": 0.6105867229143209,
+      "winner_confidence_10": 6.4,
+      "official_method": null,
+      "secondary_method": "SUB",
+      "method_score_10": 6.1,
+      "timing_lean": "Over 1.5 rounds",
+      "timing_probability": 0.6362949614996095,
+      "research_override": false,
+      "research_note": "Identity/static audit flipped the erroneous pre-audit output. Osmanli's reach edge, long win streak and two TUF submission wins support the corrected model side; both remain UFC debut-level evidence."
+    },
+    {
+      "fight": "Luis Hernandez vs Sedriques Dumas",
+      "winner": "Luis Hernandez",
+      "raw_win_probability": 0.6091846884174721,
+      "winner_confidence_10": 6.4,
+      "official_method": null,
+      "secondary_method": "KO/TKO",
+      "method_score_10": 5.9,
+      "timing_lean": "Goes the distance: NO",
+      "timing_probability": 0.5887195234438383,
+      "research_override": false,
+      "research_note": "Core mirror omits Hernandez's recent DWCS contract-winning submission, a verified current-data omission that supports rather than flips the model side. Two-day notice, 11-day turnaround and Dumas' reach keep confidence moderate."
+    },
+    {
+      "fight": "Norma Dumont vs Ailin Perez",
+      "winner": "Ailin Perez",
+      "raw_win_probability": 0.5915400080569078,
+      "winner_confidence_10": 6.2,
+      "official_method": null,
+      "secondary_method": "DEC",
+      "method_score_10": 6,
+      "timing_lean": "Over 2.5 rounds",
+      "timing_probability": 0.7441791742417357,
+      "research_override": false,
+      "research_note": "Perez's six-fight streak and repeat takedown path align with the model, but Dumont is her toughest recent test and the raw edge is modest."
+    },
+    {
+      "fight": "Raul Rosas Jr. vs Raoni Barcelos",
+      "winner": "Raul Rosas Jr.",
+      "raw_win_probability": 0.8290324336744624,
+      "winner_confidence_10": 7.7,
+      "official_method": null,
+      "secondary_method": "SUB",
+      "method_score_10": 6.6,
+      "timing_lean": "Over 2.5 rounds",
+      "timing_probability": 0.6518409829282935,
+      "research_override": false,
+      "research_note": "Raw model is very strong on Rosas, but Barcelos enters on five straight wins, is the most experienced grappler Rosas has faced in this run, and this is the first five-round UFC main event for both. Confidence is deliberately capped."
+    }
+  ],
+  "method_promotions_pre_odds": [
+    "Yazmin Jauregui by decision"
+  ],
+  "strongest_side_candidates_pre_odds": [
+    "Yazmin Jauregui",
+    "Raul Rosas Jr.",
+    "Rodolfo Vieira",
+    "Montel Jackson"
+  ],
+  "low_confidence_or_sparse_pass_zone": [
+    "John Castaneda vs Alatengheili",
+    "Melissa Amaya vs Tina Black",
+    "Rodolfo Bellato vs Christian Edwards"
+  ],
+  "submission_hazards_informational": [
+    "Rodolfo Vieira submission",
+    "Brady Hiestand submission",
+    "Mahammadali Osmanli submission",
+    "Raul Rosas Jr. submission"
+  ]
+}
