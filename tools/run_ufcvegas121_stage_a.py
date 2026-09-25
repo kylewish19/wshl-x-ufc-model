@@ -57,6 +57,8 @@ CARD = [
 # lacks static values for new/debuting athletes.
 PROFILE_OVERRIDES = {
     "Melissa Amaya":{"age_years":31.0,"height_inches":64.5,"reach_inches":64.5},
+    "Tina Black":{"age_years":30.0,"height_inches":64.0,"reach_inches":63.0},
+    "Mahammadali Osmanli":{"age_years":22.0,"height_inches":69.5,"reach_inches":71.5},
     "Ilimbek Akylbek":{"age_years":23.0,"height_inches":67.0,"reach_inches":66.5},
     "Luis Hernandez":{"age_years":30.0,"height_inches":69.0,"reach_inches":73.5},
     "Josiah Harrell":{"age_years":27.0,"height_inches":67.5,"reach_inches":68.0},
@@ -66,6 +68,8 @@ PROFILE_OVERRIDES = {
 # Name reconciliation between user/UFC display names and UFCStats storage.
 HISTORY_ALIASES = {
     "alatengheili":"heilialateng",
+    "tinablack":"valescamachado",
+    "mahammadaliosmanli":"mehemmedeliosmanli",
     "raulrosasjr":"raulrosasjr",
 }
 
@@ -230,7 +234,7 @@ def main():
     payload={
         "event":"UFC Fight Night: Rosas Jr. vs Barcelos (UFC Vegas 121)",
         "event_date":"2026-09-26",
-        "stage":"A_ODDS_BLIND_MODEL_RAW_V031_PROSPECTIVE_TEST",
+        "stage":"A_ODDS_BLIND_MODEL_RAW_V031_IDENTITY_AUDITED",
         "generated_at_utc":datetime.now(timezone.utc).isoformat(),
         "odds_used":False,
         "model_state":{
@@ -250,7 +254,7 @@ def main():
     lock=freeze_payload(payload)
     out=ROOT/"data/locks/ufcvegas121_2026-09-26"
     out.mkdir(parents=True,exist_ok=True)
-    (out/"stage_a_model_raw_v031.json").write_text(
+    (out/"stage_a_model_raw_v031_identity_audited.json").write_text(
         json.dumps({"sha256":lock.sha256,"payload":lock.payload},indent=2,sort_keys=True),encoding="utf-8"
     )
 
@@ -273,7 +277,7 @@ def main():
             "over_2_5":r["timing_v031_direct"].get("OVER_2.5"),
             "evidence":r["evidence_density"],
         })
-    (out/"stage_a_model_summary_v031.json").write_text(json.dumps(summary,indent=2),encoding="utf-8")
+    (out/"stage_a_model_summary_v031_identity_audited.json").write_text(json.dumps(summary,indent=2),encoding="utf-8")
     print(json.dumps({"sha256":lock.sha256,"summary":summary},indent=2))
 
 
