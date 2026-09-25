@@ -1,0 +1,9 @@
+{
+  "requested_at": "2026-09-25",
+  "event": "UFC Fight Night: Rosas Jr. vs Barcelos",
+  "card_fights": 12,
+  "stage": "A",
+  "odds_used": false,
+  "model_state": "v0.31 full-stat prospective test",
+  "trials_per_fight": 10000
+}
