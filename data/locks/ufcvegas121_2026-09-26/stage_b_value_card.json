@@ -1,0 +1,183 @@
+{
+  "event": "UFC Fight Night: Rosas Jr. vs Barcelos",
+  "event_date": "2026-09-26",
+  "stage": "B_OFFICIAL_VALUE_CARD",
+  "created_at_utc": "2026-09-26T04:06:34.157Z",
+  "stage_a_lock_sha256": "27a736280512be4929dcec2b87b6fb08445cfef0e662626ce71959963e63013c",
+  "odds_source": "User-supplied sportsbook screenshots",
+  "odds_used_to_change_stage_a_predictions": false,
+  "selection_rule": "At most one qualified wager per fight. Model EV is diagnostic, not a guaranteed return. Sparse/research conflict gates can override raw EV promotion.",
+  "selected_wagers": [
+    {
+      "fight": "Raul Rosas Jr. vs Raoni Barcelos",
+      "market": "Raul Rosas Jr. ML",
+      "odds": -156,
+      "p": 0.8290324336744624,
+      "stake_units": 1,
+      "tier": "A",
+      "rationale": "Strongest robust side/value combination; method uncertainty makes ML preferable to submission/double-chance props.",
+      "break_even": 0.609375,
+      "model_ev": 0.360463480901682,
+      "model_fair_odds": -485
+    },
+    {
+      "fight": "Rodolfo Vieira vs Robert Bryczek",
+      "market": "Rodolfo Vieira ML",
+      "odds": -158,
+      "p": 0.7230492136572094,
+      "stake_units": 1,
+      "tier": "A-",
+      "rationale": "Stable Stage A side with adequate UFC evidence; choose ML over timing/method because method layers disagree and timing model remains shadow.",
+      "break_even": 0.6124031007751938,
+      "model_ev": 0.18067529825037998,
+      "model_fair_odds": -261
+    },
+    {
+      "fight": "Elves Brener vs Josiah Harrell",
+      "market": "Elves Brener ML",
+      "odds": 106,
+      "p": 0.6323300294137639,
+      "stake_units": 0.75,
+      "tier": "B+",
+      "rationale": "Model favors Brener while market makes him a small underdog. Harrell has only one UFC bout, so stake is reduced and method props are blocked.",
+      "break_even": 0.4854368932038835,
+      "model_ev": 0.3025998605923538,
+      "model_fair_odds": -172
+    },
+    {
+      "fight": "Brady Hiestand vs Rinya Nakamura",
+      "market": "Brady Hiestand ML",
+      "odds": 300,
+      "p": 0.7075145439366725,
+      "stake_units": 0.25,
+      "tier": "C+ speculative",
+      "rationale": "Extreme model-market disagreement and both reference/v0.31 pick Hiestand. 834-day layoff creates major uncertainty, so this is a small longshot only, not a core play.",
+      "break_even": 0.25,
+      "model_ev": 1.8300581757466898,
+      "model_fair_odds": -242
+    }
+  ],
+  "core_wagers": [
+    {
+      "fight": "Raul Rosas Jr. vs Raoni Barcelos",
+      "market": "Raul Rosas Jr. ML",
+      "odds": -156,
+      "p": 0.8290324336744624,
+      "stake_units": 1,
+      "tier": "A",
+      "rationale": "Strongest robust side/value combination; method uncertainty makes ML preferable to submission/double-chance props.",
+      "break_even": 0.609375,
+      "model_ev": 0.360463480901682,
+      "model_fair_odds": -485
+    },
+    {
+      "fight": "Rodolfo Vieira vs Robert Bryczek",
+      "market": "Rodolfo Vieira ML",
+      "odds": -158,
+      "p": 0.7230492136572094,
+      "stake_units": 1,
+      "tier": "A-",
+      "rationale": "Stable Stage A side with adequate UFC evidence; choose ML over timing/method because method layers disagree and timing model remains shadow.",
+      "break_even": 0.6124031007751938,
+      "model_ev": 0.18067529825037998,
+      "model_fair_odds": -261
+    },
+    {
+      "fight": "Elves Brener vs Josiah Harrell",
+      "market": "Elves Brener ML",
+      "odds": 106,
+      "p": 0.6323300294137639,
+      "stake_units": 0.75,
+      "tier": "B+",
+      "rationale": "Model favors Brener while market makes him a small underdog. Harrell has only one UFC bout, so stake is reduced and method props are blocked.",
+      "break_even": 0.4854368932038835,
+      "model_ev": 0.3025998605923538,
+      "model_fair_odds": -172
+    }
+  ],
+  "speculative_wagers": [
+    {
+      "fight": "Brady Hiestand vs Rinya Nakamura",
+      "market": "Brady Hiestand ML",
+      "odds": 300,
+      "p": 0.7075145439366725,
+      "stake_units": 0.25,
+      "tier": "C+ speculative",
+      "rationale": "Extreme model-market disagreement and both reference/v0.31 pick Hiestand. 834-day layoff creates major uncertainty, so this is a small longshot only, not a core play.",
+      "break_even": 0.25,
+      "model_ev": 1.8300581757466898,
+      "model_fair_odds": -242
+    }
+  ],
+  "parlays": {
+    "favorite_2_leg": {
+      "legs": [
+        "Raul Rosas Jr. ML -156",
+        "Rodolfo Vieira ML -158"
+      ],
+      "approx_american_odds": 168,
+      "note": "Core sides only."
+    },
+    "favorite_3_leg": {
+      "legs": [
+        "Raul Rosas Jr. ML -156",
+        "Rodolfo Vieira ML -158",
+        "Elves Brener ML +106"
+      ],
+      "approx_american_odds": 452,
+      "note": "Higher variance because Brener is an underdog and Harrell has sparse UFC evidence."
+    },
+    "hiestand_note": "Do not use Hiestand +300 as a parlay anchor; if played, keep it as a small standalone speculative wager."
+  },
+  "passes": [
+    {
+      "fight": "Vanessa Demopoulos vs Yazmin Jauregui",
+      "reason": "Jauregui ML -1000 requires 90.9% vs model 83.8%; Jauregui DEC -140 requires 58.3% vs exact joint 48.5%. O2.5/GTD/R3-start show modest edges but do not clear the tightened timing-promotion threshold."
+    },
+    {
+      "fight": "John Castaneda vs Alatengheili",
+      "reason": "Stage A is essentially 51/49 and was designated low-confidence/pass-zone. Alatengheili +270 is model-value on paper but opposes the frozen side in a near-coinflip; no official wager."
+    },
+    {
+      "fight": "Montel Jackson vs Ricky Simon",
+      "reason": "Jackson -220 is approximately fair to the model (69.9% vs 68.8% break-even); no meaningful edge."
+    },
+    {
+      "fight": "Rodolfo Bellato vs Christian Edwards",
+      "reason": "Edwards +150 is a large raw model-market disagreement, but Edwards has only one UFC bout and this matchup was explicitly sparse/pass-zone. No official wager until prospective sparse-data performance improves."
+    },
+    {
+      "fight": "Melissa Amaya vs Valesca Machado",
+      "reason": "Amaya +188 looks attractive numerically, but both fighters have zero ordinary UFC bouts in the core sample and Stage A was only 52.1%. Sparse-data gate blocks promotion."
+    },
+    {
+      "fight": "Mehemmedeli Osmanli vs Ilimbek Akylbek",
+      "reason": "Osmanli -300 requires 75.0% vs model 61.1%; opposite-side value is not promoted in a zero-UFC-bout TUF matchup."
+    },
+    {
+      "fight": "Luis Hernandez vs Sedriques Dumas",
+      "reason": "Hernandez -235 requires 70.1% vs model 60.9%. Timing markets show enormous raw disagreement, but Hernandez is a UFC debutant on an unusually short turnaround, so timing promotion is blocked by research/sparse conflict."
+    },
+    {
+      "fight": "Norma Dumont vs Ailin Perez",
+      "reason": "Perez -154 requires 60.6% vs model 59.2%; essentially no value. O2.5 and GTD prices are worse than model fair."
+    },
+    {
+      "fight": "Raul Rosas Jr. vs Raoni Barcelos",
+      "reason": "Rosas submission +340 and method double-chances are not promoted because baseline/calibrated/residual method layers disagree; ML is the one qualified wager for this fight."
+    },
+    {
+      "fight": "Rodolfo Vieira vs Robert Bryczek",
+      "reason": "Vieira R3-start YES +120 clears the mechanical timing edge threshold, but ML is chosen as the single qualified wager because the winner layer is more mature than the timing shadow."
+    }
+  ],
+  "summary": {
+    "best_straight": "Raul Rosas Jr. ML -156",
+    "second_straight": "Rodolfo Vieira ML -158",
+    "best_plus_money_value": "Elves Brener ML +106",
+    "speculative_longshot": "Brady Hiestand ML +300",
+    "safest_anchor": "Raul Rosas Jr. ML -156",
+    "official_method_bets": [],
+    "note": "Jauregui by decision was the only pre-odds method promotion, but -140 is negative model value, so there are no official method bets."
+  }
+}
