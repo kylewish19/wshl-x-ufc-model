@@ -1,0 +1,274 @@
+{
+  "artifact_sha256": {
+    "method_baseline": "f5e410454288ef91bfdd0d8e250407e6a87ef8904906047f4eae52376636700d",
+    "method_residual": "7a4d55ffa28b51cdc29be6e8305763e3ccaddf996beb788b0e0a6f5561039a3e",
+    "timing_30s": "1b309c0b8a6d59043a2cc63f7a8862c8fdd55d769efc12dc5dc1bfaf6b3a60b7",
+    "winner": "8214bfd541bc8f999184138b36d9c60b26da473d5cbdf88418caf4f04928954e"
+  },
+  "benchmarks": {
+    "method_intercept_calibration_clean87": {
+      "baseline": {
+        "accuracy": 0.4,
+        "actual": {
+          "DEC": 24,
+          "KO": 39,
+          "SUB": 12
+        },
+        "brier": 0.6606142247020702,
+        "calls": {
+          "DEC": 51,
+          "KO": 23,
+          "SUB": 1
+        },
+        "log_loss": 1.0541313426024956,
+        "n": 75,
+        "recall": {
+          "DEC": 0.6666666666666666,
+          "KO": 0.3333333333333333,
+          "SUB": 0.08333333333333333
+        }
+      },
+      "candidate": {
+        "accuracy": 0.4266666666666667,
+        "actual": {
+          "DEC": 24,
+          "KO": 39,
+          "SUB": 12
+        },
+        "brier": 0.6300663654205395,
+        "calls": {
+          "DEC": 31,
+          "KO": 39,
+          "SUB": 5
+        },
+        "log_loss": 1.017154961279952,
+        "n": 75,
+        "recall": {
+          "DEC": 0.3333333333333333,
+          "KO": 0.5641025641025641,
+          "SUB": 0.16666666666666666
+        }
+      },
+      "folds": [
+        {
+          "finish_offset": 0.1585996867384736,
+          "sub_offset": 0.39963771987127317,
+          "test_date": "2026-08-15T00:00:00+00:00",
+          "test_n": 12,
+          "train_n": 12
+        },
+        {
+          "finish_offset": 0.38355381733442223,
+          "sub_offset": 0.3580984555150495,
+          "test_date": "2026-08-22T00:00:00+00:00",
+          "test_n": 13,
+          "train_n": 24
+        },
+        {
+          "finish_offset": 0.6025385870232328,
+          "sub_offset": 0.12489307087874847,
+          "test_date": "2026-08-29T00:00:00+00:00",
+          "test_n": 13,
+          "train_n": 37
+        },
+        {
+          "finish_offset": 0.7807612717007525,
+          "sub_offset": -0.10796388113313997,
+          "test_date": "2026-09-05T00:00:00+00:00",
+          "test_n": 14,
+          "train_n": 50
+        },
+        {
+          "finish_offset": 0.62819867099118,
+          "sub_offset": -0.12790917389059456,
+          "test_date": "2026-09-19T00:00:00+00:00",
+          "test_n": 12,
+          "train_n": 64
+        },
+        {
+          "finish_offset": 0.5324769584804935,
+          "sub_offset": -0.20847643944156388,
+          "test_date": "2026-09-26T00:00:00+00:00",
+          "test_n": 11,
+          "train_n": 76
+        }
+      ],
+      "ridge": 0.5
+    },
+    "method_residual_clean87": {
+      "baseline_all_64": {
+        "accuracy": 0.40229885057471265,
+        "actual": {
+          "DEC": 29,
+          "KO": 43,
+          "SUB": 15
+        },
+        "calls": {
+          "DEC": 57,
+          "KO": 29,
+          "SUB": 1
+        },
+        "log_loss": 1.0431310487562095,
+        "multiclass_brier": 0.6574481951014681,
+        "n": 87,
+        "recall": {
+          "DEC": 0.6551724137931034,
+          "KO": 0.3488372093023256,
+          "SUB": 0.06666666666666667
+        }
+      },
+      "chronology_baseline": {
+        "accuracy": 0.4,
+        "actual": {
+          "DEC": 24,
+          "KO": 39,
+          "SUB": 12
+        },
+        "calls": {
+          "DEC": 51,
+          "KO": 23,
+          "SUB": 1
+        },
+        "log_loss": 1.0541313426024956,
+        "multiclass_brier": 0.6606142247020702,
+        "n": 75,
+        "recall": {
+          "DEC": 0.6666666666666666,
+          "KO": 0.3333333333333333,
+          "SUB": 0.08333333333333333
+        }
+      },
+      "chronology_candidate": {
+        "accuracy": 0.41333333333333333,
+        "actual": {
+          "DEC": 24,
+          "KO": 39,
+          "SUB": 12
+        },
+        "calls": {
+          "DEC": 49,
+          "KO": 22,
+          "SUB": 4
+        },
+        "log_loss": 1.0925993977320556,
+        "multiclass_brier": 0.6895701641032811,
+        "n": 75,
+        "recall": {
+          "DEC": 0.7083333333333334,
+          "KO": 0.3333333333333333,
+          "SUB": 0.08333333333333333
+        }
+      },
+      "chronology_evaluation_fights": 75,
+      "folds": [
+        {
+          "test_date": "2026-08-15T00:00:00+00:00",
+          "test_fights": 12,
+          "train_clean_fights": 12
+        },
+        {
+          "test_date": "2026-08-22T00:00:00+00:00",
+          "test_fights": 13,
+          "train_clean_fights": 24
+        },
+        {
+          "test_date": "2026-08-29T00:00:00+00:00",
+          "test_fights": 13,
+          "train_clean_fights": 37
+        },
+        {
+          "test_date": "2026-09-05T00:00:00+00:00",
+          "test_fights": 14,
+          "train_clean_fights": 50
+        },
+        {
+          "test_date": "2026-09-19T00:00:00+00:00",
+          "test_fights": 12,
+          "train_clean_fights": 64
+        },
+        {
+          "test_date": "2026-09-26T00:00:00+00:00",
+          "test_fights": 11,
+          "train_clean_fights": 76
+        }
+      ],
+      "note": "Retrospective reconstruction only. Architecture and feature formulas were defined after historical results were known; this is not prospective proof."
+    },
+    "winner_clean87": {
+      "accuracy": 0.632183908045977,
+      "brier": 0.22797802007921247,
+      "log_loss": 0.6505007507074294,
+      "n": 87,
+      "note": "New reconstruction benchmark, not the historical official v0.3.1 score."
+    }
+  },
+  "final_method_calibration": {
+    "finish_offset": 0.6194545624259225,
+    "ridge": 0.5,
+    "sub_given_finish_offset": -0.29816911455205625
+  },
+  "generated_at_utc": "2026-09-27T22:15:46.341237+00:00",
+  "identity_handling": {
+    "alatengheili_to_heili_alateng": true,
+    "mahammadali_to_mehemmedeli_osmanli": true,
+    "tina_black_to_valesca_machado": true
+  },
+  "nonperformance_handling": {
+    "dq_nc_excluded_from_performance_training": true,
+    "known_injury_stoppages_excluded_from_performance_training": true,
+    "official_activity_dates_saved_separately": true,
+    "ufcvegas121_dq": "Mahammadali Osmanli vs Ilimbek Akylbek preserved as activity/official result, excluded from clean performance labels"
+  },
+  "population": {
+    "clean_feedback_rows": 87,
+    "latest_performance_event_date": "2026-09-26 00:00:00+00:00",
+    "training_rows": 8729
+  },
+  "promotion": {
+    "method_calibration": "LEADING_SHADOW: clearly best method layer prospectively, but one unseen card is not enough for champion promotion",
+    "timing": "SHADOW: 7-4 clean timing leans; retain 30-second bins and current gate",
+    "v032_role": "current data backbone + shadow retrain",
+    "winner_v031": "NOT_PROMOTED: same 9-2 accuracy as reference and slightly worse prospective Brier/log loss on first unseen card"
+  },
+  "prospective_ufcvegas121": {
+    "method_baseline_on_actual_winner_clean": {
+      "accuracy": 0.36363636363636365,
+      "brier": 0.6757510934966224,
+      "log_loss": 1.0975225834316884,
+      "n": 11
+    },
+    "method_calibrated_on_actual_winner_clean": {
+      "accuracy": 0.5454545454545454,
+      "brier": 0.5830744209633804,
+      "log_loss": 0.9649317748243914,
+      "n": 11
+    },
+    "method_residual_on_actual_winner_clean": {
+      "accuracy": 0.45454545454545453,
+      "brier": 0.7064047571719552,
+      "log_loss": 1.1591720131826895,
+      "n": 11
+    },
+    "note": "DQ bout excluded from clean prospective model metrics.",
+    "winner_reference_clean": {
+      "accuracy": 0.8181818181818182,
+      "brier": 0.13088957191378825,
+      "log_loss": 0.43633940764431234,
+      "n": 11
+    },
+    "winner_v031_clean": {
+      "accuracy": 0.8181818181818182,
+      "brier": 0.13120574762789083,
+      "log_loss": 0.4370952034219332,
+      "n": 11
+    }
+  },
+  "source": {
+    "fighter_round_stat_rows": 54,
+    "full_card_stats_available": true,
+    "unique_result_bouts": 12,
+    "unique_stat_bouts": 12,
+    "upstream_commit": "b93901a2ab58d7c9880797451c7ef0ef5e03ce1a"
+  },
+  "status": "V0.32_UFCVEGAS121_FULL_STATS_SHADOW"
+}
