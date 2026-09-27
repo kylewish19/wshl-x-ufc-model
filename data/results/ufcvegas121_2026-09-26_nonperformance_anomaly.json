@@ -1,0 +1,14 @@
+{
+  "event": "UFC Fight Night: Rosas Jr. vs Barcelos",
+  "event_date": "2026-09-26",
+  "fight": "Mahammadali Osmanli vs Ilimbek Akylbek",
+  "official_winner": "Ilimbek Akylbek",
+  "official_result": "Disqualification (illegal knee), Round 1 2:19",
+  "locked_pick": "Mahammadali Osmanli",
+  "betting_grade": "LOSS if moneyline were played",
+  "stage_a_winner_grade": "LOSS",
+  "clean_model_training_included": false,
+  "performance_history_included": false,
+  "activity_should_be_retained": true,
+  "rationale": "The bout ended because of an illegal knee while Akylbek was down. Preserve the official result and betting grade, but do not use DQ as a clean winner/method/timing performance label."
+}
