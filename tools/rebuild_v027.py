@@ -152,6 +152,10 @@ def norm_name(value: object) -> str:
     aliases = {
         "stanleydorsainvil": "standorsainvil",
         "marquelmederos": "marquelmederos",
+        # UFC/display-name reconciliation discovered in audited prospective cards.
+        "alatengheili": "heilialateng",
+        "tinablack": "valescamachado",
+        "mahammadaliosmanli": "mehemmedeliosmanli",
     }
     return aliases.get(s, s)
 
