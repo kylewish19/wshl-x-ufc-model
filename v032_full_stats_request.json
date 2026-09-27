@@ -1,0 +1,7 @@
+{
+  "requested_at": "2026-09-27",
+  "version": "v0.32-ufcvegas121-full-stats",
+  "clean_ledger": "data/results/clean_ufc_87_2026-09-26.csv",
+  "source_commit": "b93901a2ab58d7c9880797451c7ef0ef5e03ce1a",
+  "promotion_authorized": false
+}
