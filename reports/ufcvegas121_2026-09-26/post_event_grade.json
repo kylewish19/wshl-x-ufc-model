@@ -1,0 +1,308 @@
+{
+  "event": "UFC Fight Night: Rosas Jr. vs Barcelos",
+  "event_date": "2026-09-26",
+  "official_results": [
+    {
+      "fight": "Vanessa Demopoulos vs Yazmin Jauregui",
+      "winner": "Yazmin Jauregui",
+      "method": "KO",
+      "round": 1,
+      "time": "1:02",
+      "duration": 62,
+      "clean": true
+    },
+    {
+      "fight": "John Castaneda vs Alatengheili",
+      "winner": "Alatengheili",
+      "method": "DEC",
+      "round": 3,
+      "time": "5:00",
+      "duration": 900,
+      "clean": true
+    },
+    {
+      "fight": "Montel Jackson vs Ricky Simon",
+      "winner": "Montel Jackson",
+      "method": "KO",
+      "round": 2,
+      "time": "2:39",
+      "duration": 459,
+      "clean": true
+    },
+    {
+      "fight": "Elves Brener vs Josiah Harrell",
+      "winner": "Elves Brener",
+      "method": "KO",
+      "round": 1,
+      "time": "4:14",
+      "duration": 254,
+      "clean": true
+    },
+    {
+      "fight": "Rodolfo Bellato vs Christian Edwards",
+      "winner": "Christian Edwards",
+      "method": "KO",
+      "round": 3,
+      "time": "1:47",
+      "duration": 707,
+      "clean": true
+    },
+    {
+      "fight": "Rodolfo Vieira vs Robert Bryczek",
+      "winner": "Rodolfo Vieira",
+      "method": "DEC",
+      "round": 3,
+      "time": "5:00",
+      "duration": 900,
+      "clean": true
+    },
+    {
+      "fight": "Brady Hiestand vs Rinya Nakamura",
+      "winner": "Brady Hiestand",
+      "method": "SUB",
+      "round": 2,
+      "time": "4:07",
+      "duration": 547,
+      "clean": true
+    },
+    {
+      "fight": "Melissa Amaya vs Tina Black",
+      "winner": "Tina Black",
+      "method": "KO",
+      "round": 2,
+      "time": "3:19",
+      "duration": 499,
+      "clean": true
+    },
+    {
+      "fight": "Mahammadali Osmanli vs Ilimbek Akylbek",
+      "winner": "Ilimbek Akylbek",
+      "method": "DQ",
+      "round": 1,
+      "time": "2:19",
+      "duration": 139,
+      "clean": false
+    },
+    {
+      "fight": "Luis Hernandez vs Sedriques Dumas",
+      "winner": "Luis Hernandez",
+      "method": "SUB",
+      "round": 1,
+      "time": "0:50",
+      "duration": 50,
+      "clean": true
+    },
+    {
+      "fight": "Norma Dumont vs Ailin Perez",
+      "winner": "Ailin Perez",
+      "method": "DEC",
+      "round": 3,
+      "time": "5:00",
+      "duration": 900,
+      "clean": true
+    },
+    {
+      "fight": "Raul Rosas Jr. vs Raoni Barcelos",
+      "winner": "Raul Rosas Jr.",
+      "method": "KO",
+      "round": 5,
+      "time": "1:38",
+      "duration": 1298,
+      "clean": true
+    }
+  ],
+  "stage_a": {
+    "official_winner": {
+      "wins": 9,
+      "losses": 3,
+      "record": "9-3",
+      "accuracy": 0.75
+    },
+    "clean_performance_winner": {
+      "wins": 9,
+      "losses": 2,
+      "record": "9-2",
+      "accuracy": 0.8181818181818182
+    },
+    "displayed_method_strict": {
+      "wins": 3,
+      "losses": 9,
+      "record": "3-9",
+      "accuracy": 0.25
+    },
+    "displayed_method_clean": {
+      "wins": 3,
+      "losses": 8,
+      "record": "3-8",
+      "accuracy": 0.2727272727272727
+    },
+    "exact_winner_method_strict": {
+      "wins": 2,
+      "losses": 10,
+      "record": "2-10",
+      "accuracy": 0.16666666666666666
+    },
+    "exact_winner_method_clean": {
+      "wins": 2,
+      "losses": 9,
+      "record": "2-9",
+      "accuracy": 0.18181818181818182
+    },
+    "timing_lean_strict": {
+      "wins": 7,
+      "losses": 5,
+      "record": "7-5",
+      "accuracy": 0.5833333333333334
+    },
+    "timing_lean_clean": {
+      "wins": 7,
+      "losses": 4,
+      "record": "7-4",
+      "accuracy": 0.6363636363636364
+    },
+    "strongest_side_candidates": {
+      "record": "4-0",
+      "fighters": [
+        "Yazmin Jauregui",
+        "Raul Rosas Jr.",
+        "Rodolfo Vieira",
+        "Montel Jackson"
+      ]
+    },
+    "low_confidence_pass_zone": {
+      "record": "1-2",
+      "fights": [
+        "John Castaneda vs Alatengheili",
+        "Melissa Amaya vs Tina Black",
+        "Rodolfo Bellato vs Christian Edwards"
+      ]
+    },
+    "confidence_buckets": {
+      "7.0_plus": {
+        "wins": 4,
+        "losses": 0,
+        "record": "4-0",
+        "accuracy": 1
+      },
+      "6.0_to_6.9_strict": {
+        "wins": 4,
+        "losses": 1,
+        "record": "4-1",
+        "accuracy": 0.8
+      },
+      "under_6.0": {
+        "wins": 1,
+        "losses": 2,
+        "record": "1-2",
+        "accuracy": 0.3333333333333333
+      }
+    }
+  },
+  "prospective_model_metrics": {
+    "method_baseline_on_actual_winner_clean": {
+      "n": 11,
+      "accuracy": 0.36363636363636365,
+      "brier": 0.6757510934966224,
+      "log_loss": 1.0975225834316884
+    },
+    "method_calibrated_on_actual_winner_clean": {
+      "n": 11,
+      "accuracy": 0.5454545454545454,
+      "brier": 0.5830744209633804,
+      "log_loss": 0.9649317748243914
+    },
+    "method_residual_on_actual_winner_clean": {
+      "n": 11,
+      "accuracy": 0.45454545454545453,
+      "brier": 0.7064047571719552,
+      "log_loss": 1.1591720131826895
+    },
+    "note": "DQ bout excluded from clean prospective model metrics."
+  },
+  "stage_b": {
+    "selected_wagers": [
+      {
+        "fight": "Raul Rosas Jr. vs Raoni Barcelos",
+        "market": "Raul Rosas Jr. ML",
+        "odds": -156,
+        "p": 0.8290324336744624,
+        "stake_units": 1,
+        "tier": "A",
+        "rationale": "Strongest robust side/value combination; method uncertainty makes ML preferable to submission/double-chance props.",
+        "break_even": 0.609375,
+        "model_ev": 0.360463480901682,
+        "model_fair_odds": -485,
+        "result": "W",
+        "pnl_units": 0.6410256410256411
+      },
+      {
+        "fight": "Rodolfo Vieira vs Robert Bryczek",
+        "market": "Rodolfo Vieira ML",
+        "odds": -158,
+        "p": 0.7230492136572094,
+        "stake_units": 1,
+        "tier": "A-",
+        "rationale": "Stable Stage A side with adequate UFC evidence; choose ML over timing/method because method layers disagree and timing model remains shadow.",
+        "break_even": 0.6124031007751938,
+        "model_ev": 0.18067529825037998,
+        "model_fair_odds": -261,
+        "result": "W",
+        "pnl_units": 0.6329113924050633
+      },
+      {
+        "fight": "Elves Brener vs Josiah Harrell",
+        "market": "Elves Brener ML",
+        "odds": 106,
+        "p": 0.6323300294137639,
+        "stake_units": 0.75,
+        "tier": "B+",
+        "rationale": "Model favors Brener while market makes him a small underdog. Harrell has only one UFC bout, so stake is reduced and method props are blocked.",
+        "break_even": 0.4854368932038835,
+        "model_ev": 0.3025998605923538,
+        "model_fair_odds": -172,
+        "result": "W",
+        "pnl_units": 0.795
+      },
+      {
+        "fight": "Brady Hiestand vs Rinya Nakamura",
+        "market": "Brady Hiestand ML",
+        "odds": 300,
+        "p": 0.7075145439366725,
+        "stake_units": 0.25,
+        "tier": "C+ speculative",
+        "rationale": "Extreme model-market disagreement and both reference/v0.31 pick Hiestand. 834-day layoff creates major uncertainty, so this is a small longshot only, not a core play.",
+        "break_even": 0.25,
+        "model_ev": 1.8300581757466898,
+        "model_fair_odds": -242,
+        "result": "W",
+        "pnl_units": 0.75
+      }
+    ],
+    "record": "4-0",
+    "risked_units": 3,
+    "pnl_units": 2.8189370334307045,
+    "roi": 0.9396456778102348,
+    "core_record": "3-0",
+    "speculative_record": "1-0",
+    "favorite_2_leg_result": "W",
+    "favorite_3_leg_result": "W",
+    "method_bets_official": [],
+    "avoided_method_loss": "Jauregui by decision -140 was rejected in Stage B and Jauregui won by KO/TKO."
+  },
+  "anomaly": {
+    "fight": "Mahammadali Osmanli vs Ilimbek Akylbek",
+    "official_stage_a_grade": "LOSS",
+    "clean_training_grade": "EXCLUDED",
+    "reason": "Disqualification for illegal knee is preserved as an official result but excluded from clean performance learning."
+  },
+  "lessons": [
+    "The winner layer had a strong first unseen test: 9-2 on clean performance bouts. The older reference and v0.31 chose the same sides, so v0.31 is not promoted on accuracy alone.",
+    "Confidence gating behaved well: all four 7.0+ picks won, while the under-6.0 group went 1-2.",
+    "Stage B selection was excellent: all four official wagers won, including Brener +106 and the deliberately tiny Hiestand +300 speculative play.",
+    "The method price gate worked: Jauregui decision was the only pre-odds method promotion, but Stage B rejected -140 as negative value; Jauregui won by first-round KO.",
+    "The calibrated method layer clearly beat both the baseline and residual on clean prospective method probability quality; retain it as the leading shadow but require more unseen fights before champion promotion.",
+    "Do not train on the Osmanli-Akylbek DQ as a normal winner/method/timing result. Preserve activity separately.",
+    "Timing improved to 7-4 on clean leans, but no broad threshold relaxation is justified from one card."
+  ],
+  "source_note": "Official results verified against UFC official results/scorecards on 2026-09-27."
+}
