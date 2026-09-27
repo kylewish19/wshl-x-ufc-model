@@ -1,0 +1,30 @@
+{
+  "checked_at_utc": "2026-09-27T22:11:02.561890+00:00",
+  "event": "UFC Fight Night: Rosas Jr. vs. Barcelos",
+  "event_rows": 1,
+  "fight_stat_rows": 54,
+  "full_card_stats_available": true,
+  "missing_stat_bouts": [],
+  "receipt": {
+    "ufc_event_details.csv": {
+      "bytes": 102380,
+      "sha256": "a93868bba319fe0750c547dbe572be2222402cbf56bb86284f867c1b4ac96f13"
+    },
+    "ufc_fight_results.csv": {
+      "bytes": 2098877,
+      "sha256": "67d25395a7925922c92f8c98e5cace863ebe4d47fc8fb7f1d47e4e798802c41b"
+    },
+    "ufc_fight_stats.csv": {
+      "bytes": 7644543,
+      "sha256": "f7ceb4db1b0493a65358507680542d1281a7cc4d604775608fc65250c0ee1aa5"
+    },
+    "ufc_fighter_tott.csv": {
+      "bytes": 507888,
+      "sha256": "1da9b4b9ab459b20cf40ee04eeb603960eb751c21a19eca1d474087264add8d1"
+    }
+  },
+  "result_rows": 12,
+  "unique_result_bouts": 12,
+  "unique_stat_bouts": 12,
+  "upstream_commit": "b93901a2ab58d7c9880797451c7ef0ef5e03ce1a"
+}
