@@ -26,6 +26,7 @@ if str(SRC) not in sys.path:
 from wshlx_ufc.grading import multiclass_brier
 from wshlx_ufc.method_residual_v027 import V027MethodResidualChallenger, V027_FEATURES
 from wshlx_ufc.models import ConditionalMethodModel, WinnerModel
+from wshlx_ufc.nonperformance import is_known_nonperformance_bout
 from wshlx_ufc.timing import DiscreteTimeHazardModel
 
 UPSTREAM_REPO = "Greco1899/scrape_ufc_stats"
@@ -250,6 +251,8 @@ def load_fights(raw_dir: Path) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, di
         elif outcome == "L/W":
             winner = b
         else:
+            continue
+        if is_known_nonperformance_bout(r["EVENT"], r["BOUT"]):
             continue
         m3 = method3(r["METHOD"])
         if m3 is None:
