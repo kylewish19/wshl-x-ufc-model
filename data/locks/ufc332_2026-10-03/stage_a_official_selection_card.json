@@ -1,0 +1,284 @@
+{
+  "event": "UFC 332: Silva vs Wang",
+  "event_date": "2026-10-03",
+  "stage": "A_OFFICIAL_ODDS_BLIND_SELECTION_CARD_V032",
+  "raw_model_lock_sha256": "f0ea1d37719c032804003d54e1833a4a91f03bb838a373cb857d3f171dab1ded",
+  "odds_used": false,
+  "weigh_in_status": "All fighters made their contracted limit except Esteban Ribovics, who weighed 156.5 for lightweight. Green-Ribovics proceeds at catchweight; Ribovics forfeits 20% of purse. Natalia Silva 125 and Wang Cong 124.5 made title weight.",
+  "tape_policy": "Direct continuous video playback was not available in this run. Official UFC replay/full-fight links, official profile histories, KSW free-fight links for Roberto Soldic, and regional/current fight metadata were located where available. No visual tape claim is made. Debutants/regional fighters are explicitly treated as sparse evidence.",
+  "governance": {
+    "research_flips_of_raw_model": 0,
+    "winner_champion": "v0.27 reconstruction reference applied to current v0.32 fighter state",
+    "winner_shadow": "v0.32 full-stat shadow",
+    "winner_model_side_agreement": "14/14",
+    "sparse_sample_confidence_penalty_applied": true,
+    "method_promotion_gate_applied": true,
+    "method_leading_shadow": "v0.32 intercept-calibrated method layer",
+    "timing_markets_are_model_leans_only_until_stage_b_prices": true,
+    "simulations_per_fight": 10000
+  },
+  "picks": [
+    {
+      "fight": "Court McGee vs Eric Nolan",
+      "winner": "Eric Nolan",
+      "raw_win_probability": 0.6491558030911129,
+      "winner_confidence_10": 6.4,
+      "official_method": null,
+      "secondary_method": "KO/TKO",
+      "method_score_10": 5.8,
+      "timing_lean": "Over 1.5 rounds",
+      "timing_probability": 0.675652474153214,
+      "research_override": false,
+      "research_note": "Both winner models agree. McGee is 41, has been inactive 476 days and is making his final career appearance in Utah; Nolan has only two UFC bouts, so no lock treatment."
+    },
+    {
+      "fight": "Marvin Vettori vs Ismail Naurdiev",
+      "winner": "Ismail Naurdiev",
+      "raw_win_probability": 0.5472365466783522,
+      "winner_confidence_10": 5.5,
+      "official_method": null,
+      "secondary_method": "KO/TKO",
+      "method_score_10": 4.8,
+      "timing_lean": "Over 1.5 rounds",
+      "timing_probability": 0.7516421392803547,
+      "research_override": false,
+      "research_note": "True low-margin side. Vettori's experience/durability and Naurdiev's inconsistent UFC history keep this in the pass zone."
+    },
+    {
+      "fight": "Rafael dos Anjos vs Alexander Hernandez",
+      "winner": "Alexander Hernandez",
+      "raw_win_probability": 0.6909336704609881,
+      "winner_confidence_10": 6.9,
+      "official_method": null,
+      "secondary_method": "KO/TKO",
+      "method_score_10": 6.1,
+      "timing_lean": "Over 1.5 rounds",
+      "timing_probability": 0.7087539898909444,
+      "research_override": false,
+      "research_note": "The model already captures dos Anjos' 707-day layoff and age. Hernandez side remains intact; method layers disagree between KO and decision."
+    },
+    {
+      "fight": "Jacobe Smith vs Bruce Whitehead",
+      "winner": "Jacobe Smith",
+      "raw_win_probability": 0.9795773076642681,
+      "winner_confidence_10": 7.5,
+      "official_method": null,
+      "secondary_method": "KO/TKO",
+      "method_score_10": 6.9,
+      "timing_lean": "Goes the distance: NO",
+      "timing_probability": 0.7080694297418721,
+      "research_override": false,
+      "research_note": "Raw probability is extreme but Whitehead has zero UFC bouts and enters on a late addition after fighting 13 days earlier. Sparse gate caps confidence and blocks the KO promotion."
+    },
+    {
+      "fight": "Johnny Walker vs Mick Parkin",
+      "winner": "Johnny Walker",
+      "raw_win_probability": 0.5516823746057589,
+      "winner_confidence_10": 5.5,
+      "official_method": null,
+      "secondary_method": "KO/TKO",
+      "method_score_10": 5.5,
+      "timing_lean": "Over 1.5 rounds",
+      "timing_probability": 0.6149096569818281,
+      "research_override": false,
+      "research_note": "Near coin flip. Walker is making his UFC heavyweight debut while Parkin returns from a long layoff. No research basis to flip; treat as pass-zone side."
+    },
+    {
+      "fight": "Anthony Wint vs Lucas Armand",
+      "winner": "Anthony Wint",
+      "raw_win_probability": 0.7752635014879146,
+      "winner_confidence_10": 7.2,
+      "official_method": null,
+      "secondary_method": "KO/TKO",
+      "method_score_10": 5.3,
+      "timing_lean": "Over 1.5 rounds",
+      "timing_probability": 0.7044784360574451,
+      "research_override": false,
+      "research_note": "Wint has one UFC bout and Armand is a 6-0 debutant whose regional competition is difficult to translate. Strong side lean, but sparse evidence prevents lock/method treatment."
+    },
+    {
+      "fight": "Marcus McGhee vs Anthony Romero",
+      "winner": "Marcus McGhee",
+      "raw_win_probability": 0.9632864538787137,
+      "winner_confidence_10": 7.5,
+      "official_method": null,
+      "secondary_method": "KO/TKO",
+      "method_score_10": 6,
+      "timing_lean": "Over 1.5 rounds",
+      "timing_probability": 0.6953693434804751,
+      "research_override": false,
+      "research_note": "Identity audit removed a same-name static-data leak for Romero. Romero is making his UFC debut on three days' notice at featherweight. Zero-UFC opponent evidence caps McGhee despite the raw probability."
+    },
+    {
+      "fight": "Damian Pinas vs Andrey Pulyaev",
+      "winner": "Damian Pinas",
+      "raw_win_probability": 0.588861507882877,
+      "winner_confidence_10": 5.9,
+      "official_method": null,
+      "secondary_method": "KO/TKO",
+      "method_score_10": 7.5,
+      "timing_lean": "Goes the distance: NO",
+      "timing_probability": 0.7306890137653672,
+      "research_override": false,
+      "research_note": "All three method layers favor Pinas KO strongly, but the winner probability is below the 60% method gate. Side remains modest despite Pinas' recent knockout form."
+    },
+    {
+      "fight": "Imanol Rodriguez vs Alden Coria",
+      "winner": "Imanol Rodriguez",
+      "raw_win_probability": 0.7027464397767232,
+      "winner_confidence_10": 6.7,
+      "official_method": null,
+      "secondary_method": "DEC",
+      "method_score_10": 5.2,
+      "timing_lean": "Over 1.5 rounds",
+      "timing_probability": 0.7392046082307635,
+      "research_override": false,
+      "research_note": "Rodriguez has only one official UFC bout while Coria has three and remains unbeaten in the UFC. Sparse-sample uncertainty trims the displayed confidence without flipping the model side."
+    },
+    {
+      "fight": "Ateba Gautier vs Roman Kopylov",
+      "winner": "Ateba Gautier",
+      "raw_win_probability": 0.8259034795773053,
+      "winner_confidence_10": 8.2,
+      "official_method": "KO/TKO",
+      "secondary_method": null,
+      "method_score_10": 8.1,
+      "timing_lean": "Goes the distance: NO",
+      "timing_probability": 0.7230248965496426,
+      "research_override": false,
+      "research_note": "Five UFC bouts versus an experienced opponent gives this substantially better evidence density than the debutant-heavy favorites. Baseline, calibrated and residual method layers all favor KO; calibrated conditional KO is 74.2% and exact joint KO mass is 61.3%."
+    },
+    {
+      "fight": "Roberto Soldic vs Khaos Williams",
+      "winner": "Roberto Soldic",
+      "raw_win_probability": 0.5951480239529626,
+      "winner_confidence_10": 5.8,
+      "official_method": null,
+      "secondary_method": "KO/TKO",
+      "method_score_10": 5.6,
+      "timing_lean": "Over 1.5 rounds",
+      "timing_probability": 0.6074294127008956,
+      "research_override": false,
+      "research_note": "Soldic's elite KSW history is real but sits outside the UFC-stat winner model, and this is his UFC debut after a 590-day MMA layoff. Keep the model side but treat it as low-confidence."
+    },
+    {
+      "fight": "King Green vs Esteban Ribovics",
+      "winner": "Esteban Ribovics",
+      "raw_win_probability": 0.5788876221888799,
+      "winner_confidence_10": 5.6,
+      "official_method": null,
+      "secondary_method": "DEC",
+      "method_score_10": 5.2,
+      "timing_lean": "Over 1.5 rounds",
+      "timing_probability": 0.7492985344002924,
+      "research_override": false,
+      "research_note": "Low-margin model side. Ribovics missed lightweight by 0.5 lb; the bout continues at catchweight. Weight miss lowers confidence but does not justify a directional flip."
+    },
+    {
+      "fight": "Natalia Silva vs Wang Cong",
+      "winner": "Natalia Silva",
+      "raw_win_probability": 0.6813436953186934,
+      "winner_confidence_10": 6.7,
+      "official_method": null,
+      "secondary_method": "DEC",
+      "method_score_10": 6,
+      "timing_lean": "Over 2.5 rounds",
+      "timing_probability": 0.7676751522581571,
+      "research_override": false,
+      "research_note": "Silva's 8-0 UFC run and model edge remain intact, but Wang brings elite striking efficiency. First UFC five-round assignment for both plus Salt Lake City altitude widens uncertainty; method gate does not clear."
+    },
+    {
+      "fight": "Deiveson Figueiredo vs Payton Talbott",
+      "winner": "Payton Talbott",
+      "raw_win_probability": 0.6902936659923617,
+      "winner_confidence_10": 6.7,
+      "official_method": null,
+      "secondary_method": "KO/TKO",
+      "method_score_10": 5.8,
+      "timing_lean": "Over 1.5 rounds",
+      "timing_probability": 0.664879702955788,
+      "research_override": false,
+      "research_note": "Talbott has the age/size/current-form advantages, while Figueiredo's experience and grappling keep upset risk meaningful. Talbott's roughly 10-month layoff prevents a higher confidence tier."
+    }
+  ],
+  "method_promotions_pre_odds": [
+    "Ateba Gautier by KO/TKO"
+  ],
+  "strongest_robust_side_candidates_pre_odds": [
+    "Ateba Gautier",
+    "Alexander Hernandez",
+    "Natalia Silva",
+    "Payton Talbott",
+    "Eric Nolan"
+  ],
+  "high_raw_but_sparse_sides": [
+    "Jacobe Smith",
+    "Marcus McGhee",
+    "Anthony Wint"
+  ],
+  "low_confidence_or_sparse_pass_zone": [
+    "Marvin Vettori vs Ismail Naurdiev",
+    "Johnny Walker vs Mick Parkin",
+    "Damian Pinas vs Andrey Pulyaev",
+    "Roberto Soldic vs Khaos Williams",
+    "King Green vs Esteban Ribovics"
+  ],
+  "tape_access_audit": [
+    {
+      "fight": "Court McGee vs Eric Nolan",
+      "classification": "official UFC replay links/history located; continuous playback unavailable"
+    },
+    {
+      "fight": "Marvin Vettori vs Ismail Naurdiev",
+      "classification": "official UFC replay links/history located; continuous playback unavailable"
+    },
+    {
+      "fight": "Rafael dos Anjos vs Alexander Hernandez",
+      "classification": "official UFC replay links/history located; continuous playback unavailable"
+    },
+    {
+      "fight": "Jacobe Smith vs Bruce Whitehead",
+      "classification": "Smith UFC replay history located; Whitehead regional/Fury results and recent-fight metadata located; full regional playback not verified"
+    },
+    {
+      "fight": "Johnny Walker vs Mick Parkin",
+      "classification": "official UFC replay history located; continuous playback unavailable"
+    },
+    {
+      "fight": "Anthony Wint vs Lucas Armand",
+      "classification": "Wint UFC/DWCS replay history located; Armand regional fight record/metadata located; full regional playback not verified"
+    },
+    {
+      "fight": "Marcus McGhee vs Anthony Romero",
+      "classification": "McGhee UFC replay history located; Romero regional title/finish metadata located; full regional playback not verified"
+    },
+    {
+      "fight": "Damian Pinas vs Andrey Pulyaev",
+      "classification": "official UFC replay links/history located for both; continuous playback unavailable"
+    },
+    {
+      "fight": "Imanol Rodriguez vs Alden Coria",
+      "classification": "official UFC replay links/history located for both; continuous playback unavailable"
+    },
+    {
+      "fight": "Ateba Gautier vs Roman Kopylov",
+      "classification": "official UFC replay history located for both; continuous playback unavailable"
+    },
+    {
+      "fight": "Roberto Soldic vs Khaos Williams",
+      "classification": "multiple full KSW free-fight links located for Soldic; UFC replay history located for Williams; continuous playback unavailable"
+    },
+    {
+      "fight": "King Green vs Esteban Ribovics",
+      "classification": "official UFC replay history located for both; continuous playback unavailable"
+    },
+    {
+      "fight": "Natalia Silva vs Wang Cong",
+      "classification": "official UFC full-fight links identified in fight-week preview; continuous playback unavailable"
+    },
+    {
+      "fight": "Deiveson Figueiredo vs Payton Talbott",
+      "classification": "official UFC replay history located for both; continuous playback unavailable"
+    }
+  ]
+}
