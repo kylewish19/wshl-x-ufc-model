@@ -1,0 +1,38 @@
+name: run-ufc332-stage-a
+on:
+  push:
+    paths:
+      - "ufc332_stage_a_request.json"
+      - "tools/run_ufc332_stage_a.py"
+      - ".github/workflows/run-ufc332-stage-a.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: run-ufc332-stage-a
+  cancel-in-progress: true
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11", cache: "pip"}
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Run Stage A
+        run: PYTHONPATH=src python tools/run_ufc332_stage_a.py
+      - name: Test
+        run: pytest -q
+      - name: Save Stage A raw lock
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/locks/ufc332_2026-10-03
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "model: freeze UFC 332 Stage A raw v0.32"
+          git pull --rebase origin main
+          git push
