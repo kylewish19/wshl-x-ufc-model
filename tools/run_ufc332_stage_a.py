@@ -62,7 +62,10 @@ PROFILE_OVERRIDES = {
     "Bruce Whitehead":{"age_years":29.0,"height_inches":71.0},
     "Anthony Wint":{"age_years":31.0,"height_inches":71.0,"reach_inches":78.0},
     "Lucas Armand":{"age_years":30.0},
-    "Anthony Romero":{"age_years":29.0,"height_inches":65.0},
+    # UFC has two Anthony Romero profile records; force the Oct. 3 debutant's
+    # known current-profile statics and blank an unverified reach so an older
+    # same-name profile cannot leak into this fight.
+    "Anthony Romero":{"age_years":29.0,"height_inches":65.0,"reach_inches":float("nan")},
     "Damian Pinas":{"age_years":24.0,"height_inches":73.0,"reach_inches":79.5},
     "Andrey Pulyaev":{"age_years":29.0,"height_inches":76.0,"reach_inches":78.5},
     "Imanol Rodriguez":{"age_years":26.0,"height_inches":64.0,"reach_inches":64.5},
@@ -160,9 +163,11 @@ def main():
         apply_activity_recency(b,f["b"],EVENT_DATE,activity_dates)
 
         for name,side in ((f["a"],a),(f["b"],b)):
+            # Audited current-profile overrides take precedence for these
+            # explicitly identified fighters; this prevents same-name/static
+            # collisions for UFC debutants.
             for k,v in PROFILE_OVERRIDES.get(name,{}).items():
-                if not np.isfinite(side.get(k,np.nan)):
-                    side[k]=float(v)
+                side[k]=float(v)
 
         wf=rb.winner_features(a,b,f["weight_class"],f["scheduled_seconds"])
         wx=pd.DataFrame([wf],columns=rb.WINNER_FEATURES)
@@ -233,7 +238,7 @@ def main():
     payload={
         "event":"UFC 332: Silva vs Wang",
         "event_date":"2026-10-03",
-        "stage":"A_ODDS_BLIND_MODEL_RAW_V032",
+        "stage":"A_ODDS_BLIND_MODEL_RAW_V032_IDENTITY_AUDITED",
         "generated_at_utc":datetime.now(timezone.utc).isoformat(),
         "odds_used":False,
         "model_state":{
@@ -253,7 +258,7 @@ def main():
     lock=freeze_payload(payload)
     out=ROOT/"data/locks/ufc332_2026-10-03"
     out.mkdir(parents=True,exist_ok=True)
-    (out/"stage_a_model_raw_v032.json").write_text(
+    (out/"stage_a_model_raw_v032_identity_audited.json").write_text(
         json.dumps({"sha256":lock.sha256,"payload":lock.payload},indent=2,sort_keys=True),encoding="utf-8"
     )
 
@@ -279,7 +284,7 @@ def main():
             "over_4_5":r["timing_v032_direct"].get("OVER_4.5"),
             "evidence":r["evidence_density"],
         })
-    (out/"stage_a_model_summary_v032.json").write_text(json.dumps(summary,indent=2),encoding="utf-8")
+    (out/"stage_a_model_summary_v032_identity_audited.json").write_text(json.dumps(summary,indent=2),encoding="utf-8")
     print(json.dumps({"sha256":lock.sha256,"summary":summary},indent=2))
 
 if __name__=="__main__":
