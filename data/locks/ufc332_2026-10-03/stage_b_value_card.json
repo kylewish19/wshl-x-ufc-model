@@ -1,0 +1,221 @@
+{
+  "event": "UFC 332: Silva vs Wang",
+  "event_date": "2026-10-03",
+  "stage": "B_OFFICIAL_VALUE_CARD",
+  "created_at_utc": "2026-10-03T01:47:00Z",
+  "stage_a_raw_lock_sha256": "f0ea1d37719c032804003d54e1833a4a91f03bb838a373cb857d3f171dab1ded",
+  "odds_source": "User-supplied FanDuel screenshots in chat on 2026-10-02",
+  "odds_used_to_change_stage_a_predictions": false,
+  "selection_rule": "At most one qualified official wager per fight. Current 12 percentage-point timing gate is enforced. Exact method requires the frozen Stage A method gate. Sparse/research conflicts may block promotion even when raw EV is large.",
+  "selected_wagers": [
+    {
+      "fight": "Imanol Rodriguez vs Alden Coria",
+      "market": "Imanol Rodriguez ML",
+      "odds": -148,
+      "model_probability": 0.7027464397767232,
+      "market_break_even": 0.5967741935483871,
+      "probability_edge": 0.10597224622833612,
+      "model_ev_per_unit": 0.17757511530153625,
+      "model_fair_american": -236,
+      "stake_units": 0.75,
+      "tier": "B+",
+      "action": "BET",
+      "rationale": "Clear winner-price edge, but Rodriguez has only one prior UFC bout, so stake is reduced by the sparse-evidence policy."
+    },
+    {
+      "fight": "Ateba Gautier vs Roman Kopylov",
+      "market": "Ateba Gautier by KO/TKO",
+      "odds": 110,
+      "model_probability": 0.6129242475923004,
+      "market_break_even": 0.47619047619047616,
+      "probability_edge": 0.1367337714018242,
+      "model_ev_per_unit": 0.28714091994383084,
+      "model_fair_american": -158,
+      "stake_units": 0.75,
+      "tier": "A-",
+      "action": "BET",
+      "rationale": "Only exact method on the card that cleared the frozen Stage A method gate. Non-sparse matchup, all method layers favored KO, and the +110 price is materially better than model fair."
+    },
+    {
+      "fight": "King Green vs Esteban Ribovics",
+      "market": "Over 2.5 rounds",
+      "odds": 114,
+      "model_probability": 0.6380359012941889,
+      "market_break_even": 0.4672897196261682,
+      "probability_edge": 0.17074618166802064,
+      "model_ev_per_unit": 0.36539682876956414,
+      "model_fair_american": -176,
+      "stake_units": 0.5,
+      "tier": "B",
+      "action": "BET",
+      "rationale": "Timing edge clears the tightened 12-point gate. Over 2.5 is preferred to GTD Yes because it needs less survival; Ribovics' small weight miss keeps the stake reduced."
+    }
+  ],
+  "core_wagers": [
+    "Ateba Gautier by KO/TKO +110 — 0.75u",
+    "Imanol Rodriguez ML -148 — 0.75u",
+    "King Green vs Esteban Ribovics Over 2.5 +114 — 0.50u"
+  ],
+  "passes": [
+    {
+      "fight": "Court McGee vs Eric Nolan",
+      "reason": "Nolan ML -240 needs 70.6% vs frozen 64.9%. No timing market clears the current 12-point promotion gate."
+    },
+    {
+      "fight": "Marvin Vettori vs Ismail Naurdiev",
+      "reason": "Naurdiev ML -134 needs 57.3% vs frozen 54.7%. Positive-looking method prices are not eligible because Stage A did not promote a method."
+    },
+    {
+      "fight": "Rafael dos Anjos vs Alexander Hernandez",
+      "reason": "Hernandez ML -260 needs 72.2% vs frozen 69.1%. KO +155 is approximately model fair and no timing market clears 12 points."
+    },
+    {
+      "fight": "Jacobe Smith vs Bruce Whitehead",
+      "reason": "Smith ML -950 has raw numeric value but Whitehead has zero UFC bouts. Large timing/long-method disagreements are blocked by the sparse/research conflict gate; no official wager."
+    },
+    {
+      "fight": "Johnny Walker vs Mick Parkin",
+      "reason": "Walker ML -118 has only about a 1-point probability edge in a frozen low-confidence fight. Method/double-chance edges are too small and the method gate did not clear."
+    },
+    {
+      "fight": "Anthony Wint vs Lucas Armand",
+      "reason": "Wint ML -550 is negative model value. Huge timing-model edges are classified MODEL_ONLY because the matchup is 1 UFC bout vs 0 and regional-to-UFC timing translation is unreliable."
+    },
+    {
+      "fight": "Marcus McGhee vs Anthony Romero",
+      "reason": "McGhee ML -560 shows raw model value, but Romero has zero UFC bouts and entered on three days' notice. The sparse gate blocks laying a heavy price."
+    },
+    {
+      "fight": "Damian Pinas vs Andrey Pulyaev",
+      "reason": "Pinas ML -590 needs 85.5% vs frozen 58.9%. O1.5 +124 is only about 3.8 points above break-even, far below the timing gate."
+    },
+    {
+      "fight": "Roberto Soldic vs Khaos Williams",
+      "reason": "Soldic ML -265 is negative value. GTD Yes +300 and R3-start Yes +154 clear the mechanical timing edge, but Soldic has zero UFC bouts, important KSW history outside the core timing sample, and a long layoff; research/sparse conflict blocks promotion."
+    },
+    {
+      "fight": "Natalia Silva vs Wang Cong",
+      "reason": "Silva ML -215 is essentially model fair. Silva KO +700 and KO/Sub +390 look valuable numerically, but Stage A did not promote a Silva method; timing markets do not clear the 12-point gate."
+    },
+    {
+      "fight": "Deiveson Figueiredo vs Payton Talbott",
+      "reason": "Talbott ML -750 needs 88.2% vs frozen 69.0%. No timing market clears the promotion threshold and no method was promoted."
+    }
+  ],
+  "model_only_disagreements": [
+    {
+      "fight": "Jacobe Smith vs Bruce Whitehead",
+      "markets": [
+        "Fight starts R2 YES +142",
+        "Fight starts R3 YES +370",
+        "GTD YES +680"
+      ],
+      "reason": "Mechanical timing edges exceed 12 points, but Whitehead has zero UFC bouts, was added late, and fought 13 days earlier. Sparse/research conflict blocks timing promotion."
+    },
+    {
+      "fight": "Anthony Wint vs Lucas Armand",
+      "markets": [
+        "Over 1.5 +180",
+        "Fight starts R2 YES +120",
+        "Fight starts R3 YES +270",
+        "GTD YES +440"
+      ],
+      "reason": "Mechanical edges are extremely large, which is itself a warning in a 1-UFC-bout vs debutant heavyweight matchup. Sparse evidence blocks promotion."
+    },
+    {
+      "fight": "Roberto Soldic vs Khaos Williams",
+      "markets": [
+        "GTD YES +300",
+        "Fight starts R3 YES +154"
+      ],
+      "reason": "Mechanical timing gate clears, but Soldic is a UFC debutant whose strongest history is outside the UFC feature sample; long layoff adds a material research conflict."
+    }
+  ],
+  "method_value_blocked": [
+    {
+      "fight": "Natalia Silva vs Wang Cong",
+      "market": "Natalia Silva KO/TKO +700",
+      "model_probability": 0.2652366839313698,
+      "reason": "Raw price edge is large, but Stage A method gate did not clear; do not backfit a method bet after seeing +700."
+    },
+    {
+      "fight": "Rafael dos Anjos vs Alexander Hernandez",
+      "market": "Alexander Hernandez submission +1800",
+      "model_probability": 0.09215618470212027,
+      "reason": "Positive raw EV is not enough; submission was not the frozen promoted method."
+    },
+    {
+      "fight": "Marvin Vettori vs Ismail Naurdiev",
+      "market": "Ismail Naurdiev submission +2000",
+      "model_probability": 0.057010299872131215,
+      "reason": "Positive raw EV is not enough; no Stage A method promotion."
+    }
+  ],
+  "unsupported_for_ev": [
+    "Exact winner-in-round markets",
+    "Method + round combination markets"
+  ],
+  "unsupported_reason": "The frozen Stage A lock has fight-duration probabilities but no validated coherent fighter-by-round or fighter-method-by-round probability layer, so these markets are not reverse-engineered from sportsbook prices.",
+  "alternatives_not_official": [
+    {
+      "fight": "Ateba Gautier vs Roman Kopylov",
+      "market": "Ateba Gautier ML -245",
+      "p": 0.8259034795773053,
+      "reason": "Strong robust side and positive price edge, but Gautier KO +110 is the single official wager selected for this fight."
+    },
+    {
+      "fight": "Ateba Gautier vs Roman Kopylov",
+      "market": "Ateba Gautier KO or Submission -110",
+      "p": 0.6738132186145209,
+      "reason": "Safer than exact KO but essentially the same modeled EV; not stacked with the official Gautier KO wager."
+    },
+    {
+      "fight": "King Green vs Esteban Ribovics",
+      "market": "GTD YES +150",
+      "p": 0.5936281426681835,
+      "reason": "Also clears the timing gate, but Over 2.5 +114 is chosen as the less demanding survival condition."
+    }
+  ],
+  "parlays": {
+    "favorite_2_leg": {
+      "legs": [
+        "Ateba Gautier ML -245",
+        "Imanol Rodriguez ML -148"
+      ],
+      "approx_american_odds": 136,
+      "note": "Parlay-only safer expression. Gautier ML replaces the official KO prop; do not stack both Gautier markets in the same slip."
+    },
+    "favorite_3_leg": {
+      "legs": [
+        "Ateba Gautier ML -245",
+        "Imanol Rodriguez ML -148",
+        "Green vs Ribovics Over 2.5 +114"
+      ],
+      "approx_american_odds": 405,
+      "note": "Uses one market per fight; the timing leg is still a shadow-model play."
+    },
+    "value_3_leg": {
+      "legs": [
+        "Ateba Gautier KO/TKO +110",
+        "Imanol Rodriguez ML -148",
+        "Green vs Ribovics Over 2.5 +114"
+      ],
+      "approx_american_odds": 653,
+      "note": "All three official Stage B wagers; much higher variance than the safer Gautier-ML version."
+    }
+  },
+  "summary": {
+    "official_wager_count": 3,
+    "total_risk_units": 2,
+    "best_straight": "Ateba Gautier by KO/TKO +110",
+    "second_straight": "Imanol Rodriguez ML -148",
+    "best_timing_value": "Green vs Ribovics Over 2.5 +114",
+    "safest_anchor": "Ateba Gautier ML -245 (parlay-only alternative; official straight is KO/TKO +110)",
+    "best_plus_money_values": [
+      "Ateba Gautier KO/TKO +110",
+      "Green vs Ribovics Over 2.5 +114"
+    ],
+    "standalone_longshot": "None qualifies under the frozen gates",
+    "note": "This card is sparser than the raw EV table makes it look. Several enormous timing/method edges were intentionally rejected rather than treated as free money."
+  }
+}
