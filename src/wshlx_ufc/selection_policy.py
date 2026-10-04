@@ -99,14 +99,17 @@ def timing_bet_gate(
     model_probability: float,
     market_break_even_probability: float,
     research_conflict: bool = False,
+    fighter_a_prior_ufc_bouts: int | None = None,
+    fighter_b_prior_ufc_bouts: int | None = None,
     minimum_probability_edge: float = 0.12,
 ) -> GateDecision:
     """Promotion gate for O/U, GTD and round-start wagers.
 
-    UFC 331 timing leans went 5-7 and the promoted timing wagers were too
-    permissive. Small theoretical edges are no longer enough to promote a
-    timing bet, especially when current-form research conflicts with the
-    survival model.
+    UFC 331 showed that small timing edges were too permissive. UFC 332 then
+    produced several very large but false timing edges in matchups with a UFC
+    debutant or only one prior UFC bout. Keep the 12-point price edge, but block
+    official timing promotion when either fighter has fewer than two prior UFC
+    bouts. Timing can still be tracked and graded as a model-only lean.
     """
     reasons: list[str] = []
     edge = float(model_probability) - float(market_break_even_probability)
@@ -114,4 +117,34 @@ def timing_bet_gate(
         reasons.append("timing_probability_edge_below_gate")
     if research_conflict:
         reasons.append("research_conflicts_with_timing_model")
+
+    if (fighter_a_prior_ufc_bouts is None) != (fighter_b_prior_ufc_bouts is None):
+        reasons.append("timing_evidence_counts_must_be_supplied_together")
+    elif fighter_a_prior_ufc_bouts is not None:
+        minimum = min(int(fighter_a_prior_ufc_bouts), int(fighter_b_prior_ufc_bouts))
+        if minimum < 2:
+            reasons.append("sparse_ufc_sample_blocks_timing_promotion")
+
     return GateDecision(not reasons, tuple(reasons))
+
+
+def timing_stake_cap(
+    *,
+    requested_units: float,
+    graded_official_timing_bets: int,
+    timing_pnl_units: float,
+    probation_bets: int = 20,
+    probation_cap_units: float = 0.25,
+) -> float:
+    """Risk-control cap for official timing wagers while the layer is unproven.
+
+    The first four tracked official timing wagers across UFC 331 and UFC 332
+    went 0-4. That is not enough to rebuild the survival model around, but it
+    is enough to reduce exposure while prospective evidence accumulates.
+    During probation, or while cumulative tracked timing P/L is negative,
+    official timing wagers are capped at 0.25u.
+    """
+    requested = max(0.0, float(requested_units))
+    if int(graded_official_timing_bets) < int(probation_bets) or float(timing_pnl_units) < 0.0:
+        return float(min(requested, probation_cap_units))
+    return requested
