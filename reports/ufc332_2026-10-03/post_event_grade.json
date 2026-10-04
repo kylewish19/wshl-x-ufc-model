@@ -1,0 +1,112 @@
+{
+  "event": "UFC 332: Silva vs Wang",
+  "event_date": "2026-10-03",
+  "source_note": "Results verified after the event against UFC.com highlights/results and independent full-card result coverage.",
+  "stage_a": {
+    "winner_record": "13-1",
+    "winner_accuracy": 0.9285714285714286,
+    "displayed_method_class_record": "10-4",
+    "displayed_method_class_accuracy": 0.7142857142857143,
+    "exact_winner_plus_displayed_method_record": "9-5",
+    "exact_winner_plus_method_accuracy": 0.6428571428571429,
+    "official_method_promotions_record": "0-1",
+    "timing_lean_record": "8-6",
+    "timing_lean_accuracy": 0.5714285714285714,
+    "actual_method_distribution": {
+      "KO": 11,
+      "SUB": 0,
+      "DEC": 3
+    },
+    "displayed_method_distribution": {
+      "KO": 11,
+      "SUB": 0,
+      "DEC": 3
+    },
+    "strongest_robust_sides_record": "4-1",
+    "high_raw_sparse_sides_record": "3-0",
+    "low_confidence_pass_zone_record": "5-0",
+    "confidence_buckets": {
+      "7.0_plus": {
+        "record": "3-1",
+        "accuracy": 0.75
+      },
+      "6.0_to_6.9": {
+        "record": "5-0",
+        "accuracy": 1
+      },
+      "under_6.0": {
+        "record": "5-0",
+        "accuracy": 1
+      }
+    }
+  },
+  "prospective_model_metrics": {
+    "winner_reference": {
+      "accuracy": 0.9285714285714286,
+      "brier": 0.15393430403520889,
+      "log_loss": 0.48303065739043916
+    },
+    "winner_v032_shadow": {
+      "accuracy": 0.9285714285714286,
+      "brier": 0.15420643630318123,
+      "log_loss": 0.48417121940363295
+    },
+    "method_baseline_on_actual_winner": {
+      "accuracy": 0.42857142857142855,
+      "brier": 0.5496063664124303,
+      "log_loss": 0.8677779453084696
+    },
+    "method_calibrated_on_actual_winner": {
+      "accuracy": 0.7142857142857143,
+      "brier": 0.40861770718518403,
+      "log_loss": 0.6939197329390604
+    },
+    "method_residual_on_actual_winner": {
+      "accuracy": 0.42857142857142855,
+      "brier": 0.5963663234508184,
+      "log_loss": 0.9177631145356847
+    }
+  },
+  "stage_b": {
+    "record": "1-2",
+    "risked_units": 2,
+    "pnl_units": -0.7432432432432432,
+    "roi": -0.3716216216216216,
+    "bets": [
+      {
+        "market": "Imanol Rodriguez ML",
+        "odds": -148,
+        "stake": 0.75,
+        "result": "W",
+        "units": 0.5067567567567568
+      },
+      {
+        "market": "Ateba Gautier by KO/TKO",
+        "odds": 110,
+        "stake": 0.75,
+        "result": "L",
+        "units": -0.75
+      },
+      {
+        "market": "King Green vs Esteban Ribovics Over 2.5",
+        "odds": 114,
+        "stake": 0.5,
+        "result": "L",
+        "units": -0.5
+      }
+    ],
+    "favorite_2_leg_result": "L",
+    "favorite_3_leg_result": "L",
+    "value_3_leg_result": "L"
+  },
+  "lessons": [
+    "Winner layer was excellent at 13-1. The only miss was the high-confidence Gautier side; do not overhaul a 92.9% card because of one upset.",
+    "The displayed method distribution exactly matched the event distribution at 11 KO / 0 SUB / 3 DEC. Do not apply an anti-decision correction; localization, not aggregate class balance, remains the method issue.",
+    "The calibrated method layer clearly beat baseline and residual on this prospective card and should remain the leading method shadow.",
+    "The winner reference again edged v0.32 shadow on Brier and log loss despite identical 13-1 sides, so v0.32 winner is not promoted.",
+    "Timing leans were only 8-6 and the lone official timing wager lost. Keep the 12-point timing edge gate and do not relax timing promotion.",
+    "Sparse timing conflicts were correctly treated cautiously: several huge model-only timing edges in debutant/sparse fights would have lost. Codify sparse-evidence timing blocking rather than relying only on manual judgment.",
+    "Gautier-Kopylov was a winner-side failure, not a finish-class failure: the model correctly expected KO/TKO but assigned the winner incorrectly.",
+    "UFC 332 was an extreme finish environment with 11 KO/TKOs and nine first-round knockouts; record the event, but do not globally retrain toward first-round finishes from one outlier card."
+  ]
+}
