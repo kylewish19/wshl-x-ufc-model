@@ -3,6 +3,7 @@ from wshlx_ufc.selection_policy import (
     method_bet_gate,
     research_override_gate,
     timing_bet_gate,
+    timing_stake_cap,
 )
 
 
@@ -88,8 +89,49 @@ def test_timing_gate_rejects_ufc331_small_edges():
         market_break_even_probability=0.5098,
     ).eligible
 
-    # A materially larger edge can still qualify when there is no conflict.
+    # A materially larger edge can still qualify with adequate UFC evidence.
     assert timing_bet_gate(
         model_probability=0.70,
         market_break_even_probability=0.55,
+        fighter_a_prior_ufc_bouts=5,
+        fighter_b_prior_ufc_bouts=6,
     ).eligible
+
+
+def test_timing_gate_blocks_sparse_ufc332_false_edges():
+    # Wint/Armand O1.5 showed a huge mechanical edge but the matchup was
+    # one prior UFC bout versus a debutant. It remains model-only.
+    d = timing_bet_gate(
+        model_probability=0.7045,
+        market_break_even_probability=0.3571,
+        fighter_a_prior_ufc_bouts=1,
+        fighter_b_prior_ufc_bouts=0,
+    )
+    assert not d.eligible
+    assert "sparse_ufc_sample_blocks_timing_promotion" in d.reasons
+
+    # Normal evidence density can still pass the same 12-point gate.
+    d = timing_bet_gate(
+        model_probability=0.6380,
+        market_break_even_probability=0.4673,
+        fighter_a_prior_ufc_bouts=24,
+        fighter_b_prior_ufc_bouts=7,
+    )
+    assert d.eligible
+
+
+def test_timing_stake_probation_caps_exposure():
+    # Official timing wagers are 0-4 across UFC 331 and UFC 332.
+    assert timing_stake_cap(
+        requested_units=0.75,
+        graded_official_timing_bets=4,
+        timing_pnl_units=-2.75,
+    ) == 0.25
+
+    # Once the probation sample is reached and cumulative timing P/L is no
+    # longer negative, the requested stake is allowed.
+    assert timing_stake_cap(
+        requested_units=0.75,
+        graded_official_timing_bets=20,
+        timing_pnl_units=1.0,
+    ) == 0.75
