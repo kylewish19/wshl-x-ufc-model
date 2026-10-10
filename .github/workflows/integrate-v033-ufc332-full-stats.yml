@@ -1,0 +1,38 @@
+name: integrate-v033-ufc332-full-stats
+on:
+  push:
+    paths:
+      - "v033_full_stats_request.json"
+      - "tools/integrate_ufc332_full_stats.py"
+      - ".github/workflows/integrate-v033-ufc332-full-stats.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: integrate-v033-ufc332-full-stats
+  cancel-in-progress: true
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11", cache: "pip"}
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Integrate
+        run: PYTHONPATH=src python tools/integrate_ufc332_full_stats.py
+      - name: Test
+        run: pytest -q
+      - name: Save
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add artifacts/v033_ufc332_full_stats reports/v033_ufc332_full_stats
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "model: integrate UFC 332 full stats into v0.33 shadow"
+          git pull --rebase origin main
+          git push
