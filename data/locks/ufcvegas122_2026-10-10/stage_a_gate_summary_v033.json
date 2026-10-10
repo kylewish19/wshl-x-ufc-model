@@ -1,0 +1,799 @@
+{
+  "event": "UFC Vegas 122: Allen vs Duncan",
+  "event_date": "2026-10-10",
+  "raw_lock_sha256": "78b2a50901eb4b771bdc835ebbd7b5cfbe1520222c2886128258c2e9addd9b9b",
+  "odds_used": false,
+  "rows": [
+    {
+      "fight_no": 1,
+      "fight": "Ernesta Kareckaite vs Melissa Gatto",
+      "winner": "Ernesta Kareckaite",
+      "winner_probability": 0.5335424515769793,
+      "winner_v033_probability": 0.5333046607161501,
+      "winner_model_disagreement": false,
+      "confidence_10": 5.335424515769793,
+      "sparse": false,
+      "selected_side_method_baseline": {
+        "DEC": 0.6647592164517943,
+        "KO": 0.2118679359226463,
+        "SUB": 0.12337284762555946
+      },
+      "selected_side_method_calibrated": {
+        "DEC": 0.5005560165458246,
+        "KO": 0.3690433543102436,
+        "SUB": 0.13040062914393177
+      },
+      "selected_side_method_residual": {
+        "DEC": 0.6699167884777479,
+        "KO": 0.23356713064121082,
+        "SUB": 0.09651608088104133
+      },
+      "secondary_method": "DEC",
+      "conditional_method_probability": 0.5005560165458246,
+      "exact_joint_method_probability": 0.2670678842194663,
+      "method_gate_eligible": false,
+      "method_gate_reasons": [
+        "winner_probability_below_gate",
+        "exact_joint_method_probability_below_gate",
+        "conditional_method_probability_below_gate"
+      ],
+      "double_chance_calibrated": {
+        "A_KO_OR_DEC": 0.46396818021634545,
+        "A_KO_OR_SUB": 0.266474567357513,
+        "A_SUB_OR_DEC": 0.3366421555801002,
+        "B_KO_OR_DEC": 0.40679417850311506,
+        "B_KO_OR_SUB": 0.20358391944998183,
+        "B_SUB_OR_DEC": 0.3225369988929445
+      },
+      "timing": {
+        "GTD_NO": 0.3094262812721399,
+        "GTD_YES": 0.6905737187278601,
+        "OVER_0.5": 0.9291427309317496,
+        "OVER_1.5": 0.8143856317239894,
+        "OVER_2.5": 0.7267094509969895,
+        "ROUND_2_STARTS_NO": 0.13221625015647265,
+        "ROUND_2_STARTS_YES": 0.8677837498435274,
+        "ROUND_3_STARTS_NO": 0.2322993283626178,
+        "ROUND_3_STARTS_YES": 0.7677006716373822,
+        "UNDER_0.5": 0.0708572690682504,
+        "UNDER_1.5": 0.18561436827601063,
+        "UNDER_2.5": 0.27329054900301053
+      },
+      "evidence": {
+        "a_age": 28.266151940149353,
+        "a_days_since_last": 224.0,
+        "a_prior_ufc_bouts": 3,
+        "a_reach": 71.0,
+        "b_age": 30.440050103698226,
+        "b_days_since_last": 189.0,
+        "b_prior_ufc_bouts": 6,
+        "b_reach": 69.0
+      }
+    },
+    {
+      "fight_no": 2,
+      "fight": "Alice Pereira vs Daria Zhelezniakova",
+      "winner": "Alice Pereira",
+      "winner_probability": 0.7674688553902386,
+      "winner_v033_probability": 0.7685033304010725,
+      "winner_model_disagreement": false,
+      "confidence_10": 7.674688553902386,
+      "sparse": false,
+      "selected_side_method_baseline": {
+        "DEC": 0.5043946974471558,
+        "KO": 0.32101628362694745,
+        "SUB": 0.17458901892589668
+      },
+      "selected_side_method_calibrated": {
+        "DEC": 0.3396683396713076,
+        "KO": 0.4964832003063808,
+        "SUB": 0.16384846002231163
+      },
+      "selected_side_method_residual": {
+        "DEC": 0.5399379650169092,
+        "KO": 0.3306555080017738,
+        "SUB": 0.12940652698131702
+      },
+      "secondary_method": "KO",
+      "conditional_method_probability": 0.4964832003063808,
+      "exact_joint_method_probability": 0.3810353934596206,
+      "method_gate_eligible": false,
+      "method_gate_reasons": [
+        "conditional_method_probability_below_gate",
+        "baseline_shadow_method_disagreement"
+      ],
+      "double_chance_calibrated": {
+        "A_KO_OR_DEC": 0.6417202653194618,
+        "A_KO_OR_SUB": 0.5067839835303973,
+        "A_SUB_OR_DEC": 0.386433461930618,
+        "B_KO_OR_DEC": 0.20826544470208047,
+        "B_KO_OR_SUB": 0.09368874069003588,
+        "B_SUB_OR_DEC": 0.16310810382740648
+      },
+      "timing": {
+        "GTD_NO": 0.41588188491228006,
+        "GTD_YES": 0.5841181150877199,
+        "OVER_0.5": 0.8988182542730992,
+        "OVER_1.5": 0.7422368731655924,
+        "OVER_2.5": 0.6290496789251834,
+        "ROUND_2_STARTS_NO": 0.18605560698630896,
+        "ROUND_2_STARTS_YES": 0.813944393013691,
+        "ROUND_3_STARTS_NO": 0.3187529169553044,
+        "ROUND_3_STARTS_YES": 0.6812470830446956,
+        "UNDER_0.5": 0.10118174572690075,
+        "UNDER_1.5": 0.2577631268344076,
+        "UNDER_2.5": 0.3709503210748166
+      },
+      "evidence": {
+        "a_age": 20.80535534610567,
+        "a_days_since_last": 189.0,
+        "a_prior_ufc_bouts": 2,
+        "a_reach": 71.0,
+        "b_age": 30.713840804397076,
+        "b_days_since_last": 175.0,
+        "b_prior_ufc_bouts": 4,
+        "b_reach": 68.0
+      }
+    },
+    {
+      "fight_no": 3,
+      "fight": "Allen Frye Jr. vs RJ Harris",
+      "winner": "Allen Frye Jr.",
+      "winner_probability": 0.6502055722793714,
+      "winner_v033_probability": 0.6498320065557196,
+      "winner_model_disagreement": false,
+      "confidence_10": 6.502055722793713,
+      "sparse": true,
+      "selected_side_method_baseline": {
+        "DEC": 0.4122570893106008,
+        "KO": 0.44709897228934303,
+        "SUB": 0.1406439384000562
+      },
+      "selected_side_method_calibrated": {
+        "DEC": 0.2617303688129048,
+        "KO": 0.6199350945633999,
+        "SUB": 0.11833453662369536
+      },
+      "selected_side_method_residual": {
+        "DEC": 0.2230608455139597,
+        "KO": 0.6288120577455968,
+        "SUB": 0.1481270967404436
+      },
+      "secondary_method": "KO",
+      "conditional_method_probability": 0.6199350945633999,
+      "exact_joint_method_probability": 0.40308525293666164,
+      "method_gate_eligible": false,
+      "method_gate_reasons": [
+        "sparse_ufc_sample_requires_exceptional_exact_method_mass"
+      ],
+      "double_chance_calibrated": {
+        "A_KO_OR_DEC": 0.5732637971735474,
+        "A_KO_OR_SUB": 0.4800270280424857,
+        "A_SUB_OR_DEC": 0.24712031934270978,
+        "B_KO_OR_DEC": 0.34049435871786987,
+        "B_KO_OR_SUB": 0.30160297306606015,
+        "B_SUB_OR_DEC": 0.05749152365732723
+      },
+      "timing": {
+        "GTD_NO": 0.6308961857198391,
+        "GTD_YES": 0.3691038142801609,
+        "OVER_0.5": 0.8207913748434904,
+        "OVER_1.5": 0.5756975891777127,
+        "OVER_2.5": 0.4235414209795015,
+        "ROUND_2_STARTS_NO": 0.3169796217758061,
+        "ROUND_2_STARTS_YES": 0.6830203782241939,
+        "ROUND_3_STARTS_NO": 0.50894086709468,
+        "ROUND_3_STARTS_YES": 0.49105913290532,
+        "UNDER_0.5": 0.1792086251565096,
+        "UNDER_1.5": 0.42430241082228726,
+        "UNDER_2.5": 0.5764585790204986
+      },
+      "evidence": {
+        "a_age": 28.48792240771542,
+        "a_days_since_last": 301.0,
+        "a_prior_ufc_bouts": 1,
+        "a_reach": 80.5,
+        "b_age": 28.025216123534364,
+        "b_days_since_last": 84.0,
+        "b_prior_ufc_bouts": 1,
+        "b_reach": 78.0
+      }
+    },
+    {
+      "fight_no": 4,
+      "fight": "Felipe Franco vs Brendson Ribeiro",
+      "winner": "Felipe Franco",
+      "winner_probability": 0.7567001850430176,
+      "winner_v033_probability": 0.7578684651577139,
+      "winner_model_disagreement": false,
+      "confidence_10": 7.567001850430176,
+      "sparse": false,
+      "selected_side_method_baseline": {
+        "DEC": 0.3819349105874984,
+        "KO": 0.5298463961846961,
+        "SUB": 0.08821869322780555
+      },
+      "selected_side_method_calibrated": {
+        "DEC": 0.23799646601055102,
+        "KO": 0.6920812416142281,
+        "SUB": 0.06992229237522087
+      },
+      "selected_side_method_residual": {
+        "DEC": 0.34911189655575253,
+        "KO": 0.5575645118706277,
+        "SUB": 0.09332359157361984
+      },
+      "secondary_method": "KO",
+      "conditional_method_probability": 0.6920812416142281,
+      "exact_joint_method_probability": 0.5236980035942879,
+      "method_gate_eligible": true,
+      "method_gate_reasons": [],
+      "double_chance_calibrated": {
+        "A_KO_OR_DEC": 0.7037899734640561,
+        "A_KO_OR_SUB": 0.5766082151732494,
+        "A_SUB_OR_DEC": 0.23300218144872986,
+        "B_KO_OR_DEC": 0.19745050389519445,
+        "B_KO_OR_SUB": 0.1684449627010192,
+        "B_SUB_OR_DEC": 0.12070416331775122
+      },
+      "timing": {
+        "GTD_NO": 0.607588438600873,
+        "GTD_YES": 0.39241156139912703,
+        "OVER_0.5": 0.8307835827977547,
+        "OVER_1.5": 0.5955323093684662,
+        "OVER_2.5": 0.4464859173370757,
+        "ROUND_2_STARTS_NO": 0.30082722887427416,
+        "ROUND_2_STARTS_YES": 0.6991727711257258,
+        "ROUND_3_STARTS_NO": 0.4870306476488714,
+        "ROUND_3_STARTS_YES": 0.5129693523511286,
+        "UNDER_0.5": 0.16921641720224534,
+        "UNDER_1.5": 0.40446769063153376,
+        "UNDER_2.5": 0.5535140826629243
+      },
+      "evidence": {
+        "a_age": 25.714422609636063,
+        "a_days_since_last": 84.0,
+        "a_prior_ufc_bouts": 2,
+        "a_reach": 77.0,
+        "b_age": 30.08686009979671,
+        "b_days_since_last": 77.0,
+        "b_prior_ufc_bouts": 8,
+        "b_reach": 81.0
+      }
+    },
+    {
+      "fight_no": 5,
+      "fight": "Niko Price vs Leon Shahbazyan",
+      "winner": "Leon Shahbazyan",
+      "winner_probability": 0.5466258648202847,
+      "winner_v033_probability": 0.5384006062732348,
+      "winner_model_disagreement": false,
+      "confidence_10": 5.466258648202848,
+      "sparse": true,
+      "selected_side_method_baseline": {
+        "DEC": 0.4545959665602587,
+        "KO": 0.36189014226567096,
+        "SUB": 0.1835138911740704
+      },
+      "selected_side_method_calibrated": {
+        "DEC": 0.2964063598051002,
+        "KO": 0.5380353461909587,
+        "SUB": 0.16555829400394112
+      },
+      "selected_side_method_residual": {
+        "DEC": 0.4165417184387754,
+        "KO": 0.45925505816661544,
+        "SUB": 0.12420322339460914
+      },
+      "secondary_method": "KO",
+      "conditional_method_probability": 0.5380353461909587,
+      "exact_joint_method_probability": 0.2941040364155141,
+      "method_gate_eligible": false,
+      "method_gate_reasons": [
+        "winner_probability_below_gate",
+        "exact_joint_method_probability_below_gate",
+        "conditional_method_probability_below_gate",
+        "baseline_shadow_method_disagreement",
+        "sparse_ufc_sample_requires_exceptional_exact_method_mass"
+      ],
+      "double_chance_calibrated": {
+        "A_KO_OR_DEC": 0.4500130069487849,
+        "A_KO_OR_SUB": 0.3093860198717437,
+        "A_SUB_OR_DEC": 0.14734924353890197,
+        "B_KO_OR_DEC": 0.45612741918220945,
+        "B_KO_OR_SUB": 0.3846024820535894,
+        "B_SUB_OR_DEC": 0.25252182840477067
+      },
+      "timing": {
+        "GTD_NO": 0.5115595500794544,
+        "GTD_YES": 0.4884404499205456,
+        "OVER_0.5": 0.8675405877924314,
+        "OVER_1.5": 0.6722328733910355,
+        "OVER_2.5": 0.5391729985998412,
+        "ROUND_2_STARTS_NO": 0.23985616120257391,
+        "ROUND_2_STARTS_YES": 0.7601438387974261,
+        "ROUND_3_STARTS_NO": 0.4003696305020287,
+        "ROUND_3_STARTS_YES": 0.5996303694979713,
+        "UNDER_0.5": 0.13245941220756863,
+        "UNDER_1.5": 0.32776712660896445,
+        "UNDER_2.5": 0.46082700140015875
+      },
+      "evidence": {
+        "a_age": 37.03019226951957,
+        "a_days_since_last": 196.0,
+        "a_prior_ufc_bouts": 19,
+        "a_reach": 76.0,
+        "b_age": 30.89454266685832,
+        "b_days_since_last": 112.0,
+        "b_prior_ufc_bouts": 1,
+        "b_reach": 77.0
+      }
+    },
+    {
+      "fight_no": 6,
+      "fight": "Francisco Prado vs Ismael Bonfim",
+      "winner": "Francisco Prado",
+      "winner_probability": 0.6360311768646199,
+      "winner_v033_probability": 0.6400034297287992,
+      "winner_model_disagreement": false,
+      "confidence_10": 6.3603117686461985,
+      "sparse": false,
+      "selected_side_method_baseline": {
+        "DEC": 0.36575766249896524,
+        "KO": 0.26980614153922977,
+        "SUB": 0.364436195961805
+      },
+      "selected_side_method_calibrated": {
+        "DEC": 0.22568965216432968,
+        "KO": 0.4255318559532608,
+        "SUB": 0.34877849188240956
+      },
+      "selected_side_method_residual": {
+        "DEC": 0.2875120523645477,
+        "KO": 0.35820478911509923,
+        "SUB": 0.3542831585203531
+      },
+      "secondary_method": "KO",
+      "conditional_method_probability": 0.4255318559532608,
+      "exact_joint_method_probability": 0.27065152713533835,
+      "method_gate_eligible": false,
+      "method_gate_reasons": [
+        "exact_joint_method_probability_below_gate",
+        "conditional_method_probability_below_gate",
+        "baseline_shadow_method_disagreement"
+      ],
+      "double_chance_calibrated": {
+        "A_KO_OR_DEC": 0.41419718220758367,
+        "A_KO_OR_SUB": 0.4924855217923746,
+        "A_SUB_OR_DEC": 0.3653796497292815,
+        "B_KO_OR_DEC": 0.33947242199908434,
+        "B_KO_OR_SUB": 0.1751402006449567,
+        "B_SUB_OR_DEC": 0.21332502362671926
+      },
+      "timing": {
+        "GTD_NO": 0.4904650577051596,
+        "GTD_YES": 0.5095349422948404,
+        "OVER_0.5": 0.8748307373065223,
+        "OVER_1.5": 0.6881549700325218,
+        "OVER_2.5": 0.5591814663040131,
+        "ROUND_2_STARTS_NO": 0.22747382050756182,
+        "ROUND_2_STARTS_YES": 0.7725261794924382,
+        "ROUND_3_STARTS_NO": 0.3820107468020635,
+        "ROUND_3_STARTS_YES": 0.6179892531979365,
+        "UNDER_0.5": 0.12516926269347772,
+        "UNDER_1.5": 0.3118450299674782,
+        "UNDER_2.5": 0.4408185336959869
+      },
+      "evidence": {
+        "a_age": 24.318090036071926,
+        "a_days_since_last": 182.0,
+        "a_prior_ufc_bouts": 6,
+        "a_reach": 69.0,
+        "b_age": 30.785026386578778,
+        "b_days_since_last": 77.0,
+        "b_prior_ufc_bouts": 6,
+        "b_reach": 71.0
+      }
+    },
+    {
+      "fight_no": 7,
+      "fight": "Julius Walker vs Gerald Meerschaert",
+      "winner": "Julius Walker",
+      "winner_probability": 0.781054455873709,
+      "winner_v033_probability": 0.7822111835764592,
+      "winner_model_disagreement": false,
+      "confidence_10": 7.8105445587370905,
+      "sparse": false,
+      "selected_side_method_baseline": {
+        "DEC": 0.441250645188051,
+        "KO": 0.3883491494820418,
+        "SUB": 0.1704002053299072
+      },
+      "selected_side_method_calibrated": {
+        "DEC": 0.2852759192011154,
+        "KO": 0.5644398623840163,
+        "SUB": 0.15028421841486825
+      },
+      "selected_side_method_residual": {
+        "DEC": 0.30994592421324374,
+        "KO": 0.33929560769037953,
+        "SUB": 0.35075846809637673
+      },
+      "secondary_method": "KO",
+      "conditional_method_probability": 0.5644398623840163,
+      "exact_joint_method_probability": 0.4408582695877791,
+      "method_gate_eligible": false,
+      "method_gate_reasons": [
+        "baseline_shadow_method_disagreement"
+      ],
+      "double_chance_calibrated": {
+        "A_KO_OR_DEC": 0.6636742974332784,
+        "A_KO_OR_SUB": 0.5582384280282097,
+        "A_SUB_OR_DEC": 0.34019618628592996,
+        "B_KO_OR_DEC": 0.17019906320282258,
+        "B_KO_OR_SUB": 0.15113339137276377,
+        "B_SUB_OR_DEC": 0.1165586336769956
+      },
+      "timing": {
+        "GTD_NO": 0.5922346207730336,
+        "GTD_YES": 0.40776537922696643,
+        "OVER_0.5": 0.8371103899605737,
+        "OVER_1.5": 0.608313615317868,
+        "OVER_2.5": 0.461497708182614,
+        "ROUND_2_STARTS_NO": 0.2905065140452261,
+        "ROUND_2_STARTS_YES": 0.7094934859547739,
+        "ROUND_3_STARTS_NO": 0.4728002470675108,
+        "ROUND_3_STARTS_YES": 0.5271997529324892,
+        "UNDER_0.5": 0.16288961003942626,
+        "UNDER_1.5": 0.391686384682132,
+        "UNDER_2.5": 0.5385022918173861
+      },
+      "evidence": {
+        "a_age": 27.236698905521674,
+        "a_days_since_last": 105.0,
+        "a_prior_ufc_bouts": 4,
+        "a_reach": 78.0,
+        "b_age": 38.81256973106908,
+        "b_days_since_last": 161.0,
+        "b_prior_ufc_bouts": 26,
+        "b_reach": 77.0
+      }
+    },
+    {
+      "fight_no": 8,
+      "fight": "Malcolm Wellmaker vs Otari Tanzilovi",
+      "winner": "Otari Tanzilovi",
+      "winner_probability": 0.5614731048856684,
+      "winner_v033_probability": 0.5656064432389782,
+      "winner_model_disagreement": false,
+      "confidence_10": 5.614731048856684,
+      "sparse": true,
+      "selected_side_method_baseline": {
+        "DEC": 0.4538763249399981,
+        "KO": 0.3179582954644633,
+        "SUB": 0.22816537959553862
+      },
+      "selected_side_method_calibrated": {
+        "DEC": 0.2958013221368735,
+        "KO": 0.49058063453923845,
+        "SUB": 0.2136180433238881
+      },
+      "selected_side_method_residual": {
+        "DEC": 0.19778361557527357,
+        "KO": 0.4271229900903749,
+        "SUB": 0.3750933943343515
+      },
+      "secondary_method": "KO",
+      "conditional_method_probability": 0.49058063453923845,
+      "exact_joint_method_probability": 0.27544783207152757,
+      "method_gate_eligible": false,
+      "method_gate_reasons": [
+        "winner_probability_below_gate",
+        "exact_joint_method_probability_below_gate",
+        "conditional_method_probability_below_gate",
+        "baseline_shadow_method_disagreement",
+        "sparse_ufc_sample_requires_exceptional_exact_method_mass"
+      ],
+      "double_chance_calibrated": {
+        "A_KO_OR_DEC": 0.3857008971649689,
+        "A_KO_OR_SUB": 0.29971390841728984,
+        "A_SUB_OR_DEC": 0.19163898464640447,
+        "B_KO_OR_DEC": 0.44153231884100375,
+        "B_KO_OR_SUB": 0.39538861811619225,
+        "B_SUB_OR_DEC": 0.2860252728141408
+      },
+      "timing": {
+        "GTD_NO": 0.553180613580694,
+        "GTD_YES": 0.4468193864193059,
+        "OVER_0.5": 0.8523879774710983,
+        "OVER_1.5": 0.6398952411739933,
+        "OVER_2.5": 0.4993399317824967,
+        "ROUND_2_STARTS_NO": 0.26528631679743475,
+        "ROUND_2_STARTS_YES": 0.7347136832025652,
+        "ROUND_3_STARTS_NO": 0.4372722109863363,
+        "ROUND_3_STARTS_YES": 0.5627277890136637,
+        "UNDER_0.5": 0.1476120225289017,
+        "UNDER_1.5": 0.3601047588260067,
+        "UNDER_2.5": 0.5006600682175033
+      },
+      "evidence": {
+        "a_age": 32.3511091945762,
+        "a_days_since_last": 147.0,
+        "a_prior_ufc_bouts": 4,
+        "a_reach": 71.0,
+        "b_age": 28.504349849757354,
+        "b_days_since_last": 112.0,
+        "b_prior_ufc_bouts": 1,
+        "b_reach": 70.0
+      }
+    },
+    {
+      "fight_no": 9,
+      "fight": "Andre Fili vs Kai Kamaka III",
+      "winner": "Kai Kamaka III",
+      "winner_probability": 0.5913756034384119,
+      "winner_v033_probability": 0.5921535039747707,
+      "winner_model_disagreement": false,
+      "confidence_10": 5.913756034384119,
+      "sparse": false,
+      "selected_side_method_baseline": {
+        "DEC": 0.5503441093907636,
+        "KO": 0.32546711295674174,
+        "SUB": 0.12418877765249463
+      },
+      "selected_side_method_calibrated": {
+        "DEC": 0.38218349159340054,
+        "KO": 0.5016623649788794,
+        "SUB": 0.11615414342772018
+      },
+      "selected_side_method_residual": {
+        "DEC": 0.6869518033210444,
+        "KO": 0.23761544232038764,
+        "SUB": 0.07543275435856794
+      },
+      "secondary_method": "KO",
+      "conditional_method_probability": 0.5016623649788794,
+      "exact_joint_method_probability": 0.2966708838117256,
+      "method_gate_eligible": false,
+      "method_gate_reasons": [
+        "winner_probability_below_gate",
+        "exact_joint_method_probability_below_gate",
+        "conditional_method_probability_below_gate",
+        "baseline_shadow_method_disagreement"
+      ],
+      "double_chance_calibrated": {
+        "A_KO_OR_DEC": 0.3494073474952002,
+        "A_KO_OR_SUB": 0.2538767306520022,
+        "A_SUB_OR_DEC": 0.21396471497597397,
+        "B_KO_OR_DEC": 0.5226848767769721,
+        "B_KO_OR_SUB": 0.3653616104731655,
+        "B_SUB_OR_DEC": 0.2947047196266863
+      },
+      "timing": {
+        "GTD_NO": 0.41414649691153327,
+        "GTD_YES": 0.5858535030884667,
+        "OVER_0.5": 0.8993466195671108,
+        "OVER_1.5": 0.7434575945719294,
+        "OVER_2.5": 0.6306601989955184,
+        "ROUND_2_STARTS_NO": 0.18513165439663015,
+        "ROUND_2_STARTS_YES": 0.8148683456033698,
+        "ROUND_3_STARTS_NO": 0.3173094318077373,
+        "ROUND_3_STARTS_YES": 0.6826905681922627,
+        "UNDER_0.5": 0.10065338043288918,
+        "UNDER_1.5": 0.2565424054280706,
+        "UNDER_2.5": 0.3693398010044816
+      },
+      "evidence": {
+        "a_age": 36.293695284639654,
+        "a_days_since_last": 112.0,
+        "a_prior_ufc_bouts": 26,
+        "a_reach": 74.0,
+        "b_age": 31.0,
+        "b_days_since_last": 91.0,
+        "b_prior_ufc_bouts": 5,
+        "b_reach": 69.0
+      }
+    },
+    {
+      "fight_no": 10,
+      "fight": "Loopy Godinez vs Ketlen Souza",
+      "winner": "Loopy Godinez",
+      "winner_probability": 0.537893606317443,
+      "winner_v033_probability": 0.5379068551882339,
+      "winner_model_disagreement": false,
+      "confidence_10": 5.37893606317443,
+      "sparse": false,
+      "selected_side_method_baseline": {
+        "DEC": 0.8158639066543012,
+        "KO": 0.08033035221682655,
+        "SUB": 0.10380574112887225
+      },
+      "selected_side_method_calibrated": {
+        "DEC": 0.6913035616273104,
+        "KO": 0.17302323585589488,
+        "SUB": 0.13567320251679468
+      },
+      "selected_side_method_residual": {
+        "DEC": 0.7952311107725732,
+        "KO": 0.07763587223346335,
+        "SUB": 0.12713301699396337
+      },
+      "secondary_method": "DEC",
+      "conditional_method_probability": 0.6913035616273104,
+      "exact_joint_method_probability": 0.3718477658238067,
+      "method_gate_eligible": false,
+      "method_gate_reasons": [
+        "winner_probability_below_gate"
+      ],
+      "double_chance_calibrated": {
+        "A_KO_OR_DEC": 0.4649158581350475,
+        "A_KO_OR_SUB": 0.16604584049363627,
+        "A_SUB_OR_DEC": 0.4448255140062022,
+        "B_KO_OR_DEC": 0.3728780879586915,
+        "B_KO_OR_SUB": 0.22016781268010338,
+        "B_SUB_OR_DEC": 0.3311668867263191
+      },
+      "timing": {
+        "GTD_NO": 0.26227923125543495,
+        "GTD_YES": 0.737720768744565,
+        "OVER_0.5": 0.9413928132943034,
+        "OVER_1.5": 0.8447505962106184,
+        "OVER_2.5": 0.76928577542229,
+        "ROUND_2_STARTS_NO": 0.10999951152867182,
+        "ROUND_2_STARTS_YES": 0.8900004884713282,
+        "ROUND_3_STARTS_NO": 0.19524244000151247,
+        "ROUND_3_STARTS_YES": 0.8047575599984875,
+        "UNDER_0.5": 0.058607186705696646,
+        "UNDER_1.5": 0.15524940378938157,
+        "UNDER_2.5": 0.23071422457770996
+      },
+      "evidence": {
+        "a_age": 33.09308199347009,
+        "a_days_since_last": 182.0,
+        "a_prior_ufc_bouts": 15,
+        "a_reach": 61.0,
+        "b_age": 32.14576616905207,
+        "b_days_since_last": 126.0,
+        "b_prior_ufc_bouts": 7,
+        "b_reach": 63.0
+      }
+    },
+    {
+      "fight_no": 11,
+      "fight": "Matheus Camilo vs Jai Herbert",
+      "winner": "Matheus Camilo",
+      "winner_probability": 0.7715217924240149,
+      "winner_v033_probability": 0.7735549363697367,
+      "winner_model_disagreement": false,
+      "confidence_10": 7.715217924240148,
+      "sparse": false,
+      "selected_side_method_baseline": {
+        "DEC": 0.5240368325981831,
+        "KO": 0.34457626969471533,
+        "SUB": 0.13138689770710155
+      },
+      "selected_side_method_calibrated": {
+        "DEC": 0.3575232359049124,
+        "KO": 0.5217559743058244,
+        "SUB": 0.12072078978926322
+      },
+      "selected_side_method_residual": {
+        "DEC": 0.43270301047845827,
+        "KO": 0.4213909319316716,
+        "SUB": 0.14590605758987013
+      },
+      "secondary_method": "KO",
+      "conditional_method_probability": 0.5217559743058244,
+      "exact_joint_method_probability": 0.4025461045043679,
+      "method_gate_eligible": false,
+      "method_gate_reasons": [
+        "conditional_method_probability_below_gate",
+        "baseline_shadow_method_disagreement"
+      ],
+      "double_chance_calibrated": {
+        "A_KO_OR_DEC": 0.6783830723029598,
+        "A_KO_OR_SUB": 0.49568482462542296,
+        "A_SUB_OR_DEC": 0.368975687919647,
+        "B_KO_OR_DEC": 0.18454098485200393,
+        "B_KO_OR_SUB": 0.1481410128915825,
+        "B_SUB_OR_DEC": 0.12427441740838385
+      },
+      "timing": {
+        "GTD_NO": 0.5400131893960727,
+        "GTD_YES": 0.4599868106039274,
+        "OVER_0.5": 0.8572990680777528,
+        "OVER_1.5": 0.6502648297491608,
+        "OVER_2.5": 0.5119946728260737,
+        "ROUND_2_STARTS_NO": 0.2570895607195478,
+        "ROUND_2_STARTS_YES": 0.7429104392804522,
+        "ROUND_3_STARTS_NO": 0.42549564718143185,
+        "ROUND_3_STARTS_YES": 0.5745043528185682,
+        "UNDER_0.5": 0.1427009319222472,
+        "UNDER_1.5": 0.3497351702508392,
+        "UNDER_2.5": 0.4880053271739263
+      },
+      "evidence": {
+        "a_age": 25.769180749775835,
+        "a_days_since_last": 105.0,
+        "a_prior_ufc_bouts": 3,
+        "a_reach": 69.0,
+        "b_age": 38.410097401041774,
+        "b_days_since_last": 175.0,
+        "b_prior_ufc_bouts": 9,
+        "b_reach": 77.0
+      }
+    },
+    {
+      "fight_no": 12,
+      "fight": "Brendan Allen vs Christian Leroy Duncan",
+      "winner": "Christian Leroy Duncan",
+      "winner_probability": 0.5466769445477898,
+      "winner_v033_probability": 0.5454951518529998,
+      "winner_model_disagreement": false,
+      "confidence_10": 5.466769445477898,
+      "sparse": false,
+      "selected_side_method_baseline": {
+        "DEC": 0.3093634669180093,
+        "KO": 0.5883531729968573,
+        "SUB": 0.10228336008513345
+      },
+      "selected_side_method_calibrated": {
+        "DEC": 0.18460584657168444,
+        "KO": 0.7375856131356807,
+        "SUB": 0.07780854029263483
+      },
+      "selected_side_method_residual": {
+        "DEC": 0.4054436166415851,
+        "KO": 0.5221287723776826,
+        "SUB": 0.07242761098073228
+      },
+      "secondary_method": "KO",
+      "conditional_method_probability": 0.7375856131356807,
+      "exact_joint_method_probability": 0.40322104933142205,
+      "method_gate_eligible": false,
+      "method_gate_reasons": [
+        "winner_probability_below_gate"
+      ],
+      "double_chance_calibrated": {
+        "A_KO_OR_DEC": 0.34184700918207384,
+        "A_KO_OR_SUB": 0.3493646138066164,
+        "A_SUB_OR_DEC": 0.2154344879157302,
+        "B_KO_OR_DEC": 0.5041408094808886,
+        "B_KO_OR_SUB": 0.44575718439832324,
+        "B_SUB_OR_DEC": 0.14345589521636773
+      },
+      "timing": {
+        "GTD_NO": 0.6792290727860892,
+        "GTD_YES": 0.3207709272139107,
+        "OVER_0.5": 0.8649218712523215,
+        "OVER_1.5": 0.6625706661267418,
+        "OVER_2.5": 0.522391538823679,
+        "OVER_3.5": 0.4226016231385705,
+        "OVER_4.5": 0.3498161686915491,
+        "ROUND_2_STARTS_NO": 0.24586085132229063,
+        "ROUND_2_STARTS_YES": 0.7541391486777094,
+        "ROUND_3_STARTS_NO": 0.4136760346486742,
+        "ROUND_3_STARTS_YES": 0.5863239653513258,
+        "ROUND_4_STARTS_NO": 0.5315694509389833,
+        "ROUND_4_STARTS_YES": 0.46843054906101667,
+        "ROUND_5_STARTS_NO": 0.6165501539859157,
+        "ROUND_5_STARTS_YES": 0.3834498460140843,
+        "UNDER_0.5": 0.13507812874767855,
+        "UNDER_1.5": 0.33742933387325824,
+        "UNDER_2.5": 0.47760846117632105,
+        "UNDER_3.5": 0.5773983768614295,
+        "UNDER_4.5": 0.6501838313084509
+      },
+      "evidence": {
+        "a_age": 30.785026386578778,
+        "a_days_since_last": 126.0,
+        "a_prior_ufc_bouts": 19,
+        "a_reach": 75.0,
+        "b_age": 31.214877786675974,
+        "b_days_since_last": 84.0,
+        "b_prior_ufc_bouts": 10,
+        "b_reach": 79.0
+      }
+    }
+  ]
+}

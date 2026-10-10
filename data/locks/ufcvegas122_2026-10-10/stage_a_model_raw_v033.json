@@ -1496,8 +1496,8 @@
         "winner_v033_pick": "Christian Leroy Duncan"
       }
     ],
-    "generated_at_utc": "2026-10-10T17:59:09.620203+00:00",
-    "locked_at_utc": "2026-10-10T17:59:09.620229+00:00",
+    "generated_at_utc": "2026-10-10T18:00:21.756404+00:00",
+    "locked_at_utc": "2026-10-10T18:00:21.756420+00:00",
     "model_state": {
       "champion_winner": "v0.27 reconstruction reference",
       "clean_feedback_rows": 101,
@@ -1513,5 +1513,5 @@
     "odds_used": false,
     "stage": "A_ODDS_BLIND_MODEL_RAW_V033"
   },
-  "sha256": "b8e8bbf97efe6dfb9eeded4f8dca8230cbdd0f049877c76df95ebc81539aa468"
+  "sha256": "78b2a50901eb4b771bdc835ebbd7b5cfbe1520222c2886128258c2e9addd9b9b"
 }
