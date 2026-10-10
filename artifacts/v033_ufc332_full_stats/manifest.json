@@ -1,0 +1,277 @@
+{
+  "artifact_sha256": {
+    "method_baseline": "8eb3327927f55c055ec682168717824d93e5911019bdb13da96ae3cbd326fb17",
+    "method_residual": "5a5ccbcc52b47799ca76fb1cd642907a2213e4675d30d269c3604735859560c2",
+    "timing_30s": "81f4f2d01c8d6606bd4c43d7a88c7bcd3150ebfdd747cdfae70e5a59442654f3",
+    "winner": "3730e1cdbe8ab5571eb535e19ed7101fffb4253b736599a6fb488e00b49860b7"
+  },
+  "benchmarks": {
+    "method_intercept_calibration_clean101": {
+      "baseline": {
+        "accuracy": 0.4157303370786517,
+        "actual": {
+          "DEC": 27,
+          "KO": 50,
+          "SUB": 12
+        },
+        "brier": 0.6399355516013133,
+        "calls": {
+          "DEC": 59,
+          "KO": 29,
+          "SUB": 1
+        },
+        "log_loss": 1.0222291362854294,
+        "n": 89,
+        "recall": {
+          "DEC": 0.6666666666666666,
+          "KO": 0.36,
+          "SUB": 0.08333333333333333
+        }
+      },
+      "candidate": {
+        "accuracy": 0.47191011235955055,
+        "actual": {
+          "DEC": 27,
+          "KO": 50,
+          "SUB": 12
+        },
+        "brier": 0.594200651352852,
+        "calls": {
+          "DEC": 33,
+          "KO": 50,
+          "SUB": 6
+        },
+        "log_loss": 0.9665100753190194,
+        "n": 89,
+        "recall": {
+          "DEC": 0.3333333333333333,
+          "KO": 0.62,
+          "SUB": 0.16666666666666666
+        }
+      },
+      "folds": [
+        {
+          "finish_offset": 0.1585996867384736,
+          "sub_offset": 0.39963771987127317,
+          "test_date": "2026-08-15T00:00:00+00:00",
+          "test_n": 12,
+          "train_n": 12
+        },
+        {
+          "finish_offset": 0.38355381733442223,
+          "sub_offset": 0.3580984555150495,
+          "test_date": "2026-08-22T00:00:00+00:00",
+          "test_n": 13,
+          "train_n": 24
+        },
+        {
+          "finish_offset": 0.6025385870232328,
+          "sub_offset": 0.12489307087874847,
+          "test_date": "2026-08-29T00:00:00+00:00",
+          "test_n": 13,
+          "train_n": 37
+        },
+        {
+          "finish_offset": 0.7807612717007525,
+          "sub_offset": -0.10796388113313997,
+          "test_date": "2026-09-05T00:00:00+00:00",
+          "test_n": 14,
+          "train_n": 50
+        },
+        {
+          "finish_offset": 0.62819867099118,
+          "sub_offset": -0.12790917389059456,
+          "test_date": "2026-09-19T00:00:00+00:00",
+          "test_n": 12,
+          "train_n": 64
+        },
+        {
+          "finish_offset": 0.5324769584804935,
+          "sub_offset": -0.20847643944156388,
+          "test_date": "2026-09-26T00:00:00+00:00",
+          "test_n": 11,
+          "train_n": 76
+        },
+        {
+          "finish_offset": 0.6194545624259225,
+          "sub_offset": -0.29816911455205625,
+          "test_date": "2026-10-03T00:00:00+00:00",
+          "test_n": 14,
+          "train_n": 87
+        }
+      ],
+      "ridge": 0.5
+    },
+    "method_residual_clean101": {
+      "baseline_all_64": {
+        "accuracy": 0.4158415841584158,
+        "actual": {
+          "DEC": 32,
+          "KO": 54,
+          "SUB": 15
+        },
+        "calls": {
+          "DEC": 65,
+          "KO": 35,
+          "SUB": 1
+        },
+        "log_loss": 1.0165439967921417,
+        "multiclass_brier": 0.6396652496404885,
+        "n": 101,
+        "recall": {
+          "DEC": 0.65625,
+          "KO": 0.37037037037037035,
+          "SUB": 0.06666666666666667
+        }
+      },
+      "chronology_baseline": {
+        "accuracy": 0.4157303370786517,
+        "actual": {
+          "DEC": 27,
+          "KO": 50,
+          "SUB": 12
+        },
+        "calls": {
+          "DEC": 59,
+          "KO": 29,
+          "SUB": 1
+        },
+        "log_loss": 1.0222291362854294,
+        "multiclass_brier": 0.6399355516013133,
+        "n": 89,
+        "recall": {
+          "DEC": 0.6666666666666666,
+          "KO": 0.36,
+          "SUB": 0.08333333333333333
+        }
+      },
+      "chronology_candidate": {
+        "accuracy": 0.42696629213483145,
+        "actual": {
+          "DEC": 27,
+          "KO": 50,
+          "SUB": 12
+        },
+        "calls": {
+          "DEC": 57,
+          "KO": 26,
+          "SUB": 6
+        },
+        "log_loss": 1.0627350051873454,
+        "multiclass_brier": 0.6720491977464518,
+        "n": 89,
+        "recall": {
+          "DEC": 0.7407407407407407,
+          "KO": 0.34,
+          "SUB": 0.08333333333333333
+        }
+      },
+      "chronology_evaluation_fights": 89,
+      "folds": [
+        {
+          "test_date": "2026-08-15T00:00:00+00:00",
+          "test_fights": 12,
+          "train_clean_fights": 12
+        },
+        {
+          "test_date": "2026-08-22T00:00:00+00:00",
+          "test_fights": 13,
+          "train_clean_fights": 24
+        },
+        {
+          "test_date": "2026-08-29T00:00:00+00:00",
+          "test_fights": 13,
+          "train_clean_fights": 37
+        },
+        {
+          "test_date": "2026-09-05T00:00:00+00:00",
+          "test_fights": 14,
+          "train_clean_fights": 50
+        },
+        {
+          "test_date": "2026-09-19T00:00:00+00:00",
+          "test_fights": 12,
+          "train_clean_fights": 64
+        },
+        {
+          "test_date": "2026-09-26T00:00:00+00:00",
+          "test_fights": 11,
+          "train_clean_fights": 76
+        },
+        {
+          "test_date": "2026-10-03T00:00:00+00:00",
+          "test_fights": 14,
+          "train_clean_fights": 87
+        }
+      ],
+      "note": "Retrospective reconstruction only. Architecture and feature formulas were defined after historical results were known; this is not prospective proof."
+    },
+    "winner_clean101": {
+      "accuracy": 0.6633663366336634,
+      "brier": 0.22178669064724763,
+      "log_loss": 0.6380016111544384,
+      "n": 101,
+      "note": "New reconstruction benchmark, not the historical official v0.3.1 score."
+    }
+  },
+  "final_method_calibration": {
+    "finish_offset": 0.6823517969618079,
+    "ridge": 0.5,
+    "sub_given_finish_offset": -0.49955056930014835
+  },
+  "generated_at_utc": "2026-10-10T17:46:48.083403+00:00",
+  "identity_handling": {
+    "old_fight_fields_relabelled": 0,
+    "old_stat_rows_relabelled": 0,
+    "older_identity_label": "Anthony Romero (The Genius)",
+    "policy": "Never merge histories solely because normalized display names match when a verified same-name collision exists.",
+    "same_name": "Anthony Romero",
+    "ufc332_identity": "Anthony Romero 'The Bully' / UFCStats id 4419acb81e6f0ea4"
+  },
+  "population": {
+    "clean_feedback_rows": 101,
+    "latest_performance_event_date": "2026-10-03 00:00:00+00:00",
+    "training_rows": 8743
+  },
+  "promotion": {
+    "method_calibration": "LEADING_SHADOW_NOT_PROMOTED: calibrated method again beat baseline and residual prospectively, but governance still requires 300 newly locked prospective fights before champion promotion.",
+    "timing": "SHADOW_PROBATION: UFC 332 timing leans were 8-6, while official timing wagers are 0-4 through UFC 332. Retain model, sparse block and 0.25u probation cap.",
+    "v033_role": "current full-stat data backbone + shadow retrain for future cards",
+    "winner_v032": "NOT_PROMOTED: reference and v0.32 both went 13-1 on UFC 332, while reference retained slightly better prospective Brier/log loss."
+  },
+  "prospective_ufc332_pre_retrain": {
+    "method_baseline_on_actual_winner": {
+      "accuracy": 0.42857142857142855,
+      "brier": 0.5496063664124303,
+      "log_loss": 0.8677779453084696
+    },
+    "method_calibrated_on_actual_winner": {
+      "accuracy": 0.7142857142857143,
+      "brier": 0.40861770718518403,
+      "log_loss": 0.6939197329390604
+    },
+    "method_residual_on_actual_winner": {
+      "accuracy": 0.42857142857142855,
+      "brier": 0.5963663234508184,
+      "log_loss": 0.9177631145356847
+    },
+    "winner_reference": {
+      "accuracy": 0.9285714285714286,
+      "brier": 0.15393430403520889,
+      "log_loss": 0.48303065739043916
+    },
+    "winner_v032_shadow": {
+      "accuracy": 0.9285714285714286,
+      "brier": 0.15420643630318123,
+      "log_loss": 0.48417121940363295
+    }
+  },
+  "source": {
+    "fighter_round_stat_rows": 50,
+    "full_card_stats_available": true,
+    "unique_result_bouts": 14,
+    "unique_stat_bouts": 14,
+    "upstream_commit": "1ccacc5cd4f642bd2deb8b278405a0205791bfa3"
+  },
+  "status": "V0.33_UFC332_FULL_STATS_SHADOW"
+}
