@@ -1,0 +1,58 @@
+{
+  "checked_at_utc": "2026-10-10T17:42:58.756915+00:00",
+  "event": "UFC 332: Silva vs. Wang",
+  "event_rows": 1,
+  "expected_round_stat_rows": 50,
+  "fight_detail_rows": 14,
+  "fight_stat_rows": 50,
+  "full_card_stats_available": true,
+  "identity_audit": {
+    "anthony_romero_detail_rows": 2,
+    "anthony_romero_detail_urls": [
+      "http://ufcstats.com/fighter-details/4419acb81e6f0ea4",
+      "http://ufcstats.com/fighter-details/6f81399074fcdbba"
+    ],
+    "anthony_romero_expected_fighter_url": "http://ufcstats.com/fighter-details/4419acb81e6f0ea4",
+    "anthony_romero_tott_rows": 2,
+    "note": "Do not resolve same-name Anthony Romero identity by display name alone in future card state construction."
+  },
+  "missing_detail_bouts": [],
+  "missing_stat_bouts": [],
+  "receipt": {
+    "ufc_event_details.csv": {
+      "bytes": 102502,
+      "sha256": "7ff5ff0155d6a1dc55a39b4ec61ef569c6ce0f43b1f22edd730744759e7ee66a",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/1ccacc5cd4f642bd2deb8b278405a0205791bfa3/ufc_event_details.csv"
+    },
+    "ufc_fight_details.csv": {
+      "bytes": 1042165,
+      "sha256": "075cb7928c86891d998e9d6a2fda971850979a0ebbbdd2c56ce2baa43d96af86",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/1ccacc5cd4f642bd2deb8b278405a0205791bfa3/ufc_fight_details.csv"
+    },
+    "ufc_fight_results.csv": {
+      "bytes": 2101833,
+      "sha256": "e7253107447bf2eaab780776401b2543ac5283d0272771b67fde3d1983be139b",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/1ccacc5cd4f642bd2deb8b278405a0205791bfa3/ufc_fight_results.csv"
+    },
+    "ufc_fight_stats.csv": {
+      "bytes": 7653241,
+      "sha256": "58f6f0d7ac45f299c877e16135458c33cc3c50454c948abdeec5dc8ea54d2c09",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/1ccacc5cd4f642bd2deb8b278405a0205791bfa3/ufc_fight_stats.csv"
+    },
+    "ufc_fighter_details.csv": {
+      "bytes": 340441,
+      "sha256": "a1f6e4326217fab9734ac42f1958cd07b0b2b98f3caa5da08497ec7648eb6f70",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/1ccacc5cd4f642bd2deb8b278405a0205791bfa3/ufc_fighter_details.csv"
+    },
+    "ufc_fighter_tott.csv": {
+      "bytes": 508399,
+      "sha256": "3296e67941f984cd5484488226e5a5d94de3249c63fe289fbc66d98546311ea1",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/1ccacc5cd4f642bd2deb8b278405a0205791bfa3/ufc_fighter_tott.csv"
+    }
+  },
+  "result_rows": 14,
+  "unique_result_bouts": 14,
+  "unique_stat_bouts": 14,
+  "upstream_commit": "1ccacc5cd4f642bd2deb8b278405a0205791bfa3",
+  "upstream_repo": "Greco1899/scrape_ufc_stats"
+}
