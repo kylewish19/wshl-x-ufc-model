@@ -4,6 +4,7 @@ on:
     paths:
       - "tools/run_ufcvegas122_stage_a.py"
       - "tools/run_ufcvegas122_stage_a_audited.py"
+      - "tools/summarize_ufcvegas122_stage_a.py"
       - ".github/workflows/run-ufc-vegas122-stage-a.yml"
   workflow_dispatch:
 permissions:
@@ -22,6 +23,8 @@ jobs:
           pip install -e ".[dev]"
       - name: Run Stage A identity audit
         run: PYTHONPATH=src python tools/run_ufcvegas122_stage_a_audited.py
+      - name: Build Stage A gate summary
+        run: PYTHONPATH=src python tools/summarize_ufcvegas122_stage_a.py
       - name: Test
         run: pytest -q
       - name: Save
