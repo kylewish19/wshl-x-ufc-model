@@ -34,23 +34,51 @@ CLEAN = ROOT / "data/results/clean_ufc_101_2026-10-03.csv"
 OUT = ROOT / "reports/v034_winner_interactions"
 ART = ROOT / "artifacts/v034_winner_interactions"
 
-INTERACTION_FEATURES = [
+PACE_FEATURES = [
+    "a_sig_attempted_per_min",
+    "b_sig_attempted_per_min",
+    "diff_sig_attempted_per_min",
+]
+ACCESS_FEATURES = [
     "diff_td_access",
     "diff_submission_access",
     "diff_control_access",
+]
+DAMAGE_FEATURES = [
     "diff_damage_pressure",
     "diff_striking_vulnerability",
     "reach_damage_interaction",
-    "experience_gap_log",
 ]
+EXPERIENCE_FEATURES = ["experience_gap_log"]
+
+VARIANTS = {
+    "base": [],
+    "pace_only": PACE_FEATURES,
+    "access_only": ACCESS_FEATURES,
+    "damage_only": DAMAGE_FEATURES,
+    "experience_only": EXPERIENCE_FEATURES,
+    "access_plus_pace": ACCESS_FEATURES + PACE_FEATURES,
+    "full": PACE_FEATURES + ACCESS_FEATURES + DAMAGE_FEATURES + EXPERIENCE_FEATURES,
+}
 
 
 def safe_mul(a: pd.Series, b: pd.Series) -> pd.Series:
     return pd.to_numeric(a, errors="coerce") * pd.to_numeric(b, errors="coerce")
 
 
+def attempts_per_min(landed_per_min: pd.Series, accuracy: pd.Series) -> pd.Series:
+    landed = pd.to_numeric(landed_per_min, errors="coerce")
+    acc = pd.to_numeric(accuracy, errors="coerce")
+    out = landed / acc.where(acc > 1e-6)
+    return out.replace([np.inf, -np.inf], np.nan)
+
+
 def add_interactions(frame: pd.DataFrame) -> pd.DataFrame:
     out = frame.copy()
+
+    out["a_sig_attempted_per_min"] = attempts_per_min(out["a_sig_landed_per_min"], out["a_sig_accuracy"])
+    out["b_sig_attempted_per_min"] = attempts_per_min(out["b_sig_landed_per_min"], out["b_sig_accuracy"])
+    out["diff_sig_attempted_per_min"] = out["a_sig_attempted_per_min"] - out["b_sig_attempted_per_min"]
 
     a_td_weak = 1.0 - pd.to_numeric(out["b_td_defense"], errors="coerce")
     b_td_weak = 1.0 - pd.to_numeric(out["a_td_defense"], errors="coerce")
@@ -131,55 +159,60 @@ def main() -> None:
     winner_df = add_interactions(winner_df)
 
     clean = pd.read_csv(CLEAN)
-    sample = match_clean(clean, winner_df)
-    sample = add_interactions(sample)
-
+    sample = add_interactions(match_clean(clean, winner_df))
+    y = sample["winner_is_a"].to_numpy(int)
     base_features = list(rb.WINNER_FEATURES)
-    candidate_features = base_features + INTERACTION_FEATURES
-    p_base = np.full(len(sample), np.nan)
-    p_candidate = np.full(len(sample), np.nan)
+
+    probabilities: dict[str, np.ndarray] = {name: np.full(len(sample), np.nan) for name in VARIANTS}
 
     for cutoff in sorted(sample["event_date"].unique()):
         train = winner_df.loc[winner_df["event_date"] < cutoff].copy()
         mask = sample["event_date"] == cutoff
-        base = WinnerModel(c=0.25).fit(train[base_features], train["winner_is_a"])
-        cand = WinnerModel(c=0.25).fit(train[candidate_features], train["winner_is_a"])
-        p_base[mask] = base.predict_proba(sample.loc[mask, base_features])[:, 0]
-        p_candidate[mask] = cand.predict_proba(sample.loc[mask, candidate_features])[:, 0]
+        for name, extra in VARIANTS.items():
+            features = base_features + extra
+            model = WinnerModel(c=0.25).fit(train[features], train["winner_is_a"])
+            probabilities[name][mask] = model.predict_proba(sample.loc[mask, features])[:, 0]
 
-    y = sample["winner_is_a"].to_numpy(int)
-    m_base = metrics(y, p_base)
-    m_candidate = metrics(y, p_candidate)
+    variant_metrics = {name: metrics(y, p) for name, p in probabilities.items()}
+    base_m = variant_metrics["base"]
 
-    improved_brier = m_candidate["brier"] < m_base["brier"]
-    improved_log = m_candidate["log_loss"] < m_base["log_loss"]
-    nonworse_acc = m_candidate["accuracy"] >= m_base["accuracy"]
-    promotion_ready = bool(improved_brier and improved_log and nonworse_acc)
+    candidates = []
+    for name, m in variant_metrics.items():
+        if name == "base":
+            continue
+        candidates.append(
+            {
+                "name": name,
+                "features": VARIANTS[name],
+                "metrics": m,
+                "delta_accuracy": m["accuracy"] - base_m["accuracy"],
+                "delta_brier": m["brier"] - base_m["brier"],
+                "delta_log_loss": m["log_loss"] - base_m["log_loss"],
+                "passes_retrospective_metric_gate": bool(
+                    m["accuracy"] >= base_m["accuracy"]
+                    and m["brier"] < base_m["brier"]
+                    and m["log_loss"] < base_m["log_loss"]
+                ),
+            }
+        )
+
+    best = min(candidates, key=lambda x: (x["metrics"]["brier"], x["metrics"]["log_loss"]))
 
     comparison = sample[["event_date", "clean_fight", "fighter_a", "fighter_b", "winner"]].copy()
-    comparison["p_a_base"] = p_base
-    comparison["p_a_candidate"] = p_candidate
-    comparison["base_pick_a"] = (p_base >= 0.5).astype(int)
-    comparison["candidate_pick_a"] = (p_candidate >= 0.5).astype(int)
     comparison["winner_is_a"] = y
-    comparison["base_correct"] = (comparison["base_pick_a"] == y).astype(int)
-    comparison["candidate_correct"] = (comparison["candidate_pick_a"] == y).astype(int)
-    comparison["candidate_minus_base_p_a"] = p_candidate - p_base
+    for name, p in probabilities.items():
+        comparison[f"p_a_{name}"] = p
+        comparison[f"correct_{name}"] = ((p >= 0.5).astype(int) == y).astype(int)
 
     payload = {
-        "status": "V0.34_WINNER_INTERACTION_CHALLENGER_RETROSPECTIVE_BENCHMARK",
+        "status": "V0.34_WINNER_FEATURE_ABLATION_RETROSPECTIVE_BENCHMARK",
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "clean_sample": "clean_ufc_101_2026-10-03.csv",
-        "base": m_base,
-        "candidate": m_candidate,
-        "delta": {
-            "accuracy": m_candidate["accuracy"] - m_base["accuracy"],
-            "brier": m_candidate["brier"] - m_base["brier"],
-            "log_loss": m_candidate["log_loss"] - m_base["log_loss"],
-        },
-        "interaction_features": INTERACTION_FEATURES,
-        "promotion_ready_on_retrospective_metrics_only": promotion_ready,
-        "governance_note": "These interactions were designed after UFC Vegas 122. Historical OOF improvement is development evidence only, not prospective proof. Do not replace the official winner reference without future-card validation.",
+        "base": base_m,
+        "variants": candidates,
+        "best_retrospective_variant": best["name"],
+        "best_variant_passes_metric_gate": best["passes_retrospective_metric_gate"],
+        "governance_note": "All new features were designed after UFC Vegas 122. This ablation is retrospective development evidence only. No variant may replace the official winner reference without future frozen-card validation.",
     }
 
     OUT.mkdir(parents=True, exist_ok=True)
@@ -187,15 +220,16 @@ def main() -> None:
     (OUT / "benchmark.json").write_text(json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8")
     comparison.to_csv(OUT / "oof_comparison_101.csv", index=False)
 
-    final_candidate = WinnerModel(c=0.25).fit(winner_df[candidate_features], winner_df["winner_is_a"])
-    joblib.dump(final_candidate, ART / "winner_v034_interactions.joblib")
+    best_features = base_features + VARIANTS[best["name"]]
+    best_model = WinnerModel(c=0.25).fit(winner_df[best_features], winner_df["winner_is_a"])
+    joblib.dump(best_model, ART / "winner_v034_best_shadow.joblib")
     (ART / "manifest.json").write_text(
         json.dumps(
             {
-                "status": "SHADOW_ONLY",
+                "status": "SHADOW_ONLY_NOT_PROMOTED",
                 "trained_through": "2026-10-03",
-                "base_features": base_features,
-                "interaction_features": INTERACTION_FEATURES,
+                "selected_retrospective_variant": best["name"],
+                "selected_features": VARIANTS[best["name"]],
                 "benchmark": payload,
             },
             indent=2,
@@ -205,28 +239,27 @@ def main() -> None:
     )
 
     report = [
-        "# v0.34 winner interaction challenger",
+        "# v0.34 winner feature ablation",
         "",
-        "This challenger was created after the UFC Vegas 122 miss audit. It is **shadow-only** regardless of retrospective results.",
+        "Created after the UFC Vegas 122 miss audit. Every candidate remains **shadow-only**.",
         "",
-        f"- Base OOF: **{m_base['wins']}-{m_base['losses']} ({m_base['accuracy']:.1%})**, Brier {m_base['brier']:.4f}, log loss {m_base['log_loss']:.4f}",
-        f"- Candidate OOF: **{m_candidate['wins']}-{m_candidate['losses']} ({m_candidate['accuracy']:.1%})**, Brier {m_candidate['brier']:.4f}, log loss {m_candidate['log_loss']:.4f}",
-        f"- Candidate minus base Brier: **{payload['delta']['brier']:+.4f}** (lower is better)",
-        f"- Candidate minus base log loss: **{payload['delta']['log_loss']:+.4f}** (lower is better)",
+        f"Base: **{base_m['wins']}-{base_m['losses']} ({base_m['accuracy']:.1%})**, Brier {base_m['brier']:.4f}, log loss {base_m['log_loss']:.4f}",
         "",
-        "## Added matchup interactions",
+        "## Variants",
         "",
-        "- takedown access versus opponent takedown defense",
-        "- submission access versus opponent submission exposure",
-        "- control access versus opponent control conceded",
-        "- knockdown pressure versus opponent knockdown vulnerability",
-        "- striking output versus opponent absorption",
-        "- reach × damage-pressure interaction",
-        "- log UFC-experience gap",
+    ]
+    for c in sorted(candidates, key=lambda x: x["metrics"]["brier"]):
+        m = c["metrics"]
+        report.append(
+            f"- **{c['name']}**: {m['wins']}-{m['losses']} ({m['accuracy']:.1%}), Brier {m['brier']:.4f} ({c['delta_brier']:+.4f}), log loss {m['log_loss']:.4f} ({c['delta_log_loss']:+.4f}); retrospective gate={'PASS' if c['passes_retrospective_metric_gate'] else 'FAIL'}"
+        )
+    report += [
+        "",
+        f"Best retrospective Brier variant: **{best['name']}**.",
         "",
         "## Governance",
         "",
-        "These features were designed after UFC Vegas 122, so even a strong historical OOF result is not prospective proof. The current official winner reference stays unchanged until the challenger proves itself on future frozen cards.",
+        "This is multiple-hypothesis development work performed after UFC Vegas 122. Even a retrospective PASS is not enough for promotion. The official winner reference stays unchanged; the selected candidate is stored only as a future-card shadow.",
     ]
     (OUT / "BUILD_REPORT.md").write_text("\n".join(report) + "\n", encoding="utf-8")
     print(json.dumps(payload, indent=2, sort_keys=True))
