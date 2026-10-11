@@ -1,0 +1,61 @@
+{
+  "event": "UFC Vegas 122: Allen vs Duncan",
+  "event_date": "2026-10-10",
+  "results_source_note": "Post-event results verified against current UFC/MMA Fighting result coverage on 2026-10-11.",
+  "stage_a": {
+    "winner_record_including_draw": "6-5-1",
+    "winner_accuracy_decisive_only": 0.5454545454545454,
+    "decisive_fights": 11,
+    "draws": 1,
+    "winner_brier_decisive_only": 0.26162792323347567,
+    "winner_log_loss_decisive_only": 0.723540914455043,
+    "displayed_method_class_record_decisive_only": "8-3",
+    "displayed_method_class_accuracy_decisive_only": 0.7272727272727273,
+    "exact_winner_plus_displayed_method_record_decisive_only": "6-5",
+    "exact_winner_plus_method_accuracy_decisive_only": 0.5454545454545454,
+    "official_method_promotions_record": "0-1",
+    "timing_lean_record": "8-4",
+    "timing_lean_accuracy": 0.6666666666666666,
+    "strongest_robust_sides_record": "2-2",
+    "moderate_or_research_downgraded_sides_record": "2-0",
+    "low_confidence_or_sparse_pass_zone_record": "2-3-1"
+  },
+  "stage_b": {
+    "record": "1-4",
+    "risked_units": 3.75,
+    "pnl_units": -1.9807692307692308,
+    "roi": -0.5282051282051282,
+    "bets": [
+      {"market": "Alice Pereira ML", "odds": -130, "stake_units": 1.0, "result": "W", "pnl_units": 0.7692307692307693},
+      {"market": "Felipe Franco KO/TKO or Points", "odds": 110, "stake_units": 0.75, "result": "L", "pnl_units": -0.75},
+      {"market": "Matheus Camilo ML", "odds": -190, "stake_units": 1.0, "result": "L", "pnl_units": -1.0},
+      {"market": "Kai Kamaka III ML", "odds": 128, "stake_units": 0.75, "result": "L", "pnl_units": -0.75},
+      {"market": "Walker-Meerschaert starts Round 3 YES", "odds": 188, "stake_units": 0.25, "result": "L", "pnl_units": -0.25}
+    ],
+    "favorite_2_leg_result": "L",
+    "favorite_3_leg_result": "L",
+    "value_3_leg_result": "L"
+  },
+  "fight_results": [
+    {"fight":"Ernesta Kareckaite vs Melissa Gatto","locked_winner":"Ernesta Kareckaite","actual":"DRAW","actual_method":"DRAW","winner_grade":"PUSH/NO DECISION","displayed_method":"DEC","method_grade":"NO GRADE","timing_lean":"Over 2.5 rounds","timing_grade":"W"},
+    {"fight":"Alice Pereira vs Daria Zhelezniakova","locked_winner":"Alice Pereira","actual":"Alice Pereira","actual_method":"KO","winner_grade":"W","displayed_method":"KO","method_grade":"W","timing_lean":"Over 1.5 rounds","timing_grade":"L"},
+    {"fight":"Allen Frye Jr. vs RJ Harris","locked_winner":"Allen Frye Jr.","actual":"Allen Frye Jr.","actual_method":"KO","winner_grade":"W","displayed_method":"KO","method_grade":"W","timing_lean":"GTD No","timing_grade":"W"},
+    {"fight":"Felipe Franco vs Brendson Ribeiro","locked_winner":"Felipe Franco","actual":"Brendson Ribeiro","actual_method":"SUB","winner_grade":"L","displayed_method":"KO","method_grade":"L","timing_lean":"GTD No","timing_grade":"W"},
+    {"fight":"Niko Price vs Leon Shahbazyan","locked_winner":"Leon Shahbazyan","actual":"Niko Price","actual_method":"KO","winner_grade":"L","displayed_method":"KO","method_grade":"W","timing_lean":"Over 1.5 rounds","timing_grade":"L"},
+    {"fight":"Francisco Prado vs Ismael Bonfim","locked_winner":"Francisco Prado","actual":"Francisco Prado","actual_method":"KO","winner_grade":"W","displayed_method":"KO","method_grade":"W","timing_lean":"Over 1.5 rounds","timing_grade":"L"},
+    {"fight":"Julius Walker vs Gerald Meerschaert","locked_winner":"Julius Walker","actual":"Julius Walker","actual_method":"KO","winner_grade":"W","displayed_method":"KO","method_grade":"W","timing_lean":"Over 1.5 rounds","timing_grade":"W"},
+    {"fight":"Malcolm Wellmaker vs Otari Tanzilovi","locked_winner":"Otari Tanzilovi","actual":"Otari Tanzilovi","actual_method":"KO","winner_grade":"W","displayed_method":"KO","method_grade":"W","timing_lean":"Over 1.5 rounds","timing_grade":"W"},
+    {"fight":"Andre Fili vs Kai Kamaka III","locked_winner":"Kai Kamaka III","actual":"Andre Fili","actual_method":"KO","winner_grade":"L","displayed_method":"KO","method_grade":"W","timing_lean":"Over 1.5 rounds","timing_grade":"L"},
+    {"fight":"Loopy Godinez vs Ketlen Souza","locked_winner":"Loopy Godinez","actual":"Loopy Godinez","actual_method":"DEC","winner_grade":"W","displayed_method":"DEC","method_grade":"W","timing_lean":"Over 2.5 rounds","timing_grade":"W"},
+    {"fight":"Matheus Camilo vs Jai Herbert","locked_winner":"Matheus Camilo","actual":"Jai Herbert","actual_method":"DEC","winner_grade":"L","displayed_method":"KO","method_grade":"L","timing_lean":"Over 1.5 rounds","timing_grade":"W"},
+    {"fight":"Brendan Allen vs Christian Leroy Duncan","locked_winner":"Christian Leroy Duncan","actual":"Brendan Allen","actual_method":"SUB","winner_grade":"L","displayed_method":"KO","method_grade":"L","timing_lean":"GTD No","timing_grade":"W"}
+  ],
+  "lessons_preliminary": [
+    "Winner performance regressed sharply from UFC 332: the card went 6-5-1, with two of the four strongest pre-price sides losing (Franco and Camilo). Do not make winner-code changes until full UFC Vegas 122 stats are ingested and the misses are decomposed.",
+    "Method-class direction was much better than winner-side selection: 8-3 on decisive fights. The calibrated finish bias continues to look useful, but the only official method promotion (Franco KO/TKO) lost because the selected fighter lost by submission.",
+    "Timing leans improved to 8-4, but the only official timing wager (Walker-Meerschaert starts Round 3 YES) lost. The timing betting layer is now 0-5 prospectively, so the 0.25u probation cap remains justified and should not be relaxed.",
+    "Frye and Tanzilovi were large model-vs-market underdog disagreements that were passed because of sparse UFC evidence; both won. This is evidence to study whether the winner-price gate is over-penalizing sparse underdogs, but it is not enough to remove sparse protections after one card.",
+    "Kamaka lost despite the corrected identity history and a 59.1% model edge. Full round stats should be used to determine whether reach/power/defensive-wrestling matchup interactions need better representation rather than assuming the identity correction was wrong.",
+    "The Kareckaite-Gatto majority draw should be excluded from binary winner retraining and clean decisive-fight accuracy, while its timing outcome can still be graded."
+  ]
+}
