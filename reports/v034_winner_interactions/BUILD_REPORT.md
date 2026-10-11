@@ -1,22 +1,20 @@
-# v0.34 winner interaction challenger
+# v0.34 winner feature ablation
 
-This challenger was created after the UFC Vegas 122 miss audit. It is **shadow-only** regardless of retrospective results.
+Created after the UFC Vegas 122 miss audit. Every candidate remains **shadow-only**.
 
-- Base OOF: **67-34 (66.3%)**, Brier 0.2218, log loss 0.6380
-- Candidate OOF: **66-35 (65.3%)**, Brier 0.2240, log loss 0.6515
-- Candidate minus base Brier: **+0.0023** (lower is better)
-- Candidate minus base log loss: **+0.0135** (lower is better)
+Base: **67-34 (66.3%)**, Brier 0.2217, log loss 0.6379
 
-## Added matchup interactions
+## Variants
 
-- takedown access versus opponent takedown defense
-- submission access versus opponent submission exposure
-- control access versus opponent control conceded
-- knockdown pressure versus opponent knockdown vulnerability
-- striking output versus opponent absorption
-- reach × damage-pressure interaction
-- log UFC-experience gap
+- **experience_only**: 68-33 (67.3%), Brier 0.2217 (-0.0001), log loss 0.6380 (+0.0001); retrospective gate=FAIL
+- **access_only**: 68-33 (67.3%), Brier 0.2221 (+0.0003), log loss 0.6389 (+0.0009); retrospective gate=FAIL
+- **pace_only**: 68-33 (67.3%), Brier 0.2228 (+0.0010), log loss 0.6420 (+0.0040); retrospective gate=FAIL
+- **access_plus_pace**: 68-33 (67.3%), Brier 0.2230 (+0.0013), log loss 0.6427 (+0.0048); retrospective gate=FAIL
+- **full**: 70-31 (69.3%), Brier 0.2242 (+0.0024), log loss 0.6552 (+0.0173); retrospective gate=FAIL
+- **damage_only**: 66-35 (65.3%), Brier 0.2244 (+0.0026), log loss 0.6520 (+0.0141); retrospective gate=FAIL
+
+Best retrospective Brier variant: **experience_only**.
 
 ## Governance
 
-These features were designed after UFC Vegas 122, so even a strong historical OOF result is not prospective proof. The current official winner reference stays unchanged until the challenger proves itself on future frozen cards.
+This is multiple-hypothesis development work performed after UFC Vegas 122. Even a retrospective PASS is not enough for promotion. The official winner reference stays unchanged; the selected candidate is stored only as a future-card shadow.
