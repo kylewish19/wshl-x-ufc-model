@@ -1,0 +1,45 @@
+name: benchmark-v034-winner-interactions
+
+on:
+  push:
+    paths:
+      - "tools/benchmark_winner_interactions_v034.py"
+      - ".github/workflows/benchmark-v034-winner-interactions.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: benchmark-v034-winner-interactions
+  cancel-in-progress: true
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Benchmark winner interaction challenger
+        run: PYTHONPATH=src python tools/benchmark_winner_interactions_v034.py
+      - name: Test
+        run: pytest -q
+      - name: Save challenger artifacts and report
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git fetch origin main
+          git rebase origin/main
+          git add reports/v034_winner_interactions artifacts/v034_winner_interactions
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "model: benchmark v0.34 winner interactions"
+          git push
