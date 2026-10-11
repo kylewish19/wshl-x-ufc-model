@@ -1,0 +1,37 @@
+{
+  "base": {
+    "accuracy": 0.6633663366336634,
+    "brier": 0.22178669064724763,
+    "log_loss": 0.6380016111544384,
+    "losses": 34,
+    "n": 101,
+    "wins": 67
+  },
+  "candidate": {
+    "accuracy": 0.6534653465346535,
+    "brier": 0.22404454689127642,
+    "log_loss": 0.6515242630208892,
+    "losses": 35,
+    "n": 101,
+    "wins": 66
+  },
+  "clean_sample": "clean_ufc_101_2026-10-03.csv",
+  "delta": {
+    "accuracy": -0.00990099009900991,
+    "brier": 0.0022578562440287997,
+    "log_loss": 0.013522651866450741
+  },
+  "generated_at_utc": "2026-10-11T15:31:49.852949+00:00",
+  "governance_note": "These interactions were designed after UFC Vegas 122. Historical OOF improvement is development evidence only, not prospective proof. Do not replace the official winner reference without future-card validation.",
+  "interaction_features": [
+    "diff_td_access",
+    "diff_submission_access",
+    "diff_control_access",
+    "diff_damage_pressure",
+    "diff_striking_vulnerability",
+    "reach_damage_interaction",
+    "experience_gap_log"
+  ],
+  "promotion_ready_on_retrospective_metrics_only": false,
+  "status": "V0.34_WINNER_INTERACTION_CHALLENGER_RETROSPECTIVE_BENCHMARK"
+}
