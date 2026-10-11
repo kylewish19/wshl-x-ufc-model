@@ -1,0 +1,33 @@
+{
+  "purpose": "Prospective tracking bucket for sparse-UFC-sample fights where the frozen winner model strongly disagrees with the market. This is not an official betting card and does not override sparse-sample protections.",
+  "started_after_event": "UFC Vegas 122: Allen vs Duncan",
+  "started_after_date": "2026-10-10",
+  "qualification_draft": {
+    "sparse_definition": "Either fighter has fewer than 2 prior UFC bouts at the frozen Stage A cutoff.",
+    "minimum_model_market_probability_gap": 0.15,
+    "status": "tracking_only_no_staking_rule_change"
+  },
+  "retrospective_seed_examples_not_prospective_proof": [
+    {
+      "fight": "Allen Frye Jr. vs RJ Harris",
+      "model_pick": "Allen Frye Jr.",
+      "model_probability": 0.6502055722793714,
+      "fanduel_odds": 295,
+      "market_break_even": 0.25316455696202533,
+      "gap": 0.3970410153173461,
+      "result": "WIN",
+      "method": "KO/TKO"
+    },
+    {
+      "fight": "Malcolm Wellmaker vs Otari Tanzilovi",
+      "model_pick": "Otari Tanzilovi",
+      "model_probability": 0.5614731048856684,
+      "fanduel_odds": 176,
+      "market_break_even": 0.36231884057971014,
+      "gap": 0.19915426430595828,
+      "result": "WIN",
+      "method": "KO/TKO"
+    }
+  ],
+  "governance": "Do not backfit an official betting rule from these two wins. Accumulate future frozen examples first; review after at least 20 qualifying fights."
+}
