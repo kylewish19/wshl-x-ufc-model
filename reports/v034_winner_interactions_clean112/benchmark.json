@@ -1,0 +1,152 @@
+{
+  "base": {
+    "accuracy": 0.6517857142857143,
+    "brier": 0.22704873710067539,
+    "log_loss": 0.6501812162545779,
+    "losses": 39,
+    "n": 112,
+    "wins": 73
+  },
+  "best_retrospective_brier_variant": "experience_only",
+  "best_variant_passes_metric_gate": true,
+  "clean_sample": "clean_ufc_112_2026-10-10.csv",
+  "generated_at_utc": "2026-10-16T23:30:17.700740+00:00",
+  "governance": {
+    "promotion_allowed": false,
+    "reason": "All v0.34 features were designed after UFC Vegas 122, partly in response to that card's misses. Adding Vegas 122 to this retrospective benchmark is contaminated development evidence and cannot be counted as prospective validation or used to promote/reselect the official winner model.",
+    "selected_shadow_before_this_test": "experience_only",
+    "selected_shadow_change_from_this_test": "NONE"
+  },
+  "n": 112,
+  "status": "V0.34_CLEAN112_POST_VEGAS122_DIAGNOSTIC_ONLY",
+  "variants": [
+    {
+      "delta_accuracy": 0.008928571428571397,
+      "delta_brier": 0.002064735331331613,
+      "delta_log_loss": 0.0061791305252061335,
+      "features": [
+        "a_sig_attempted_per_min",
+        "b_sig_attempted_per_min",
+        "diff_sig_attempted_per_min"
+      ],
+      "metrics": {
+        "accuracy": 0.6607142857142857,
+        "brier": 0.229113472432007,
+        "log_loss": 0.656360346779784,
+        "losses": 38,
+        "n": 112,
+        "wins": 74
+      },
+      "name": "pace_only",
+      "passes_retrospective_metric_gate": false
+    },
+    {
+      "delta_accuracy": 0.008928571428571397,
+      "delta_brier": -2.4930334986350555e-05,
+      "delta_log_loss": 5.4469791156197545e-05,
+      "features": [
+        "diff_td_access",
+        "diff_submission_access",
+        "diff_control_access"
+      ],
+      "metrics": {
+        "accuracy": 0.6607142857142857,
+        "brier": 0.22702380676568903,
+        "log_loss": 0.6502356860457341,
+        "losses": 38,
+        "n": 112,
+        "wins": 74
+      },
+      "name": "access_only",
+      "passes_retrospective_metric_gate": false
+    },
+    {
+      "delta_accuracy": 0.0,
+      "delta_brier": 0.0011673141713683388,
+      "delta_log_loss": 0.010428149355482308,
+      "features": [
+        "diff_damage_pressure",
+        "diff_striking_vulnerability",
+        "reach_damage_interaction"
+      ],
+      "metrics": {
+        "accuracy": 0.6517857142857143,
+        "brier": 0.22821605127204372,
+        "log_loss": 0.6606093656100602,
+        "losses": 39,
+        "n": 112,
+        "wins": 73
+      },
+      "name": "damage_only",
+      "passes_retrospective_metric_gate": false
+    },
+    {
+      "delta_accuracy": 0.0,
+      "delta_brier": -0.0006516589305561593,
+      "delta_log_loss": -0.0014675711838958438,
+      "features": [
+        "experience_gap_log"
+      ],
+      "metrics": {
+        "accuracy": 0.6517857142857143,
+        "brier": 0.22639707817011923,
+        "log_loss": 0.6487136450706821,
+        "losses": 39,
+        "n": 112,
+        "wins": 73
+      },
+      "name": "experience_only",
+      "passes_retrospective_metric_gate": true
+    },
+    {
+      "delta_accuracy": 0.008928571428571397,
+      "delta_brier": 0.0021810638628106394,
+      "delta_log_loss": 0.006556740397407945,
+      "features": [
+        "diff_td_access",
+        "diff_submission_access",
+        "diff_control_access",
+        "a_sig_attempted_per_min",
+        "b_sig_attempted_per_min",
+        "diff_sig_attempted_per_min"
+      ],
+      "metrics": {
+        "accuracy": 0.6607142857142857,
+        "brier": 0.22922980096348602,
+        "log_loss": 0.6567379566519859,
+        "losses": 38,
+        "n": 112,
+        "wins": 74
+      },
+      "name": "access_plus_pace",
+      "passes_retrospective_metric_gate": false
+    },
+    {
+      "delta_accuracy": 0.0267857142857143,
+      "delta_brier": 0.0023239571997488717,
+      "delta_log_loss": 0.016455042800083475,
+      "features": [
+        "a_sig_attempted_per_min",
+        "b_sig_attempted_per_min",
+        "diff_sig_attempted_per_min",
+        "diff_td_access",
+        "diff_submission_access",
+        "diff_control_access",
+        "diff_damage_pressure",
+        "diff_striking_vulnerability",
+        "reach_damage_interaction",
+        "experience_gap_log"
+      ],
+      "metrics": {
+        "accuracy": 0.6785714285714286,
+        "brier": 0.22937269430042426,
+        "log_loss": 0.6666362590546614,
+        "losses": 36,
+        "n": 112,
+        "wins": 76
+      },
+      "name": "full",
+      "passes_retrospective_metric_gate": false
+    }
+  ]
+}
