@@ -1,0 +1,221 @@
+{
+  "method_intercept_calibration_clean112": {
+    "baseline": {
+      "accuracy": 0.38,
+      "actual": {
+        "DEC": 29,
+        "KO": 57,
+        "SUB": 14
+      },
+      "brier": 0.6392889342595809,
+      "calls": {
+        "DEC": 69,
+        "KO": 30,
+        "SUB": 1
+      },
+      "log_loss": 1.0221421448520018,
+      "n": 100,
+      "recall": {
+        "DEC": 0.6551724137931034,
+        "KO": 0.3157894736842105,
+        "SUB": 0.07142857142857142
+      }
+    },
+    "candidate": {
+      "accuracy": 0.49,
+      "actual": {
+        "DEC": 29,
+        "KO": 57,
+        "SUB": 14
+      },
+      "brier": 0.5823474054392266,
+      "calls": {
+        "DEC": 34,
+        "KO": 61,
+        "SUB": 5
+      },
+      "log_loss": 0.9523099984911056,
+      "n": 100,
+      "recall": {
+        "DEC": 0.3448275862068966,
+        "KO": 0.6666666666666666,
+        "SUB": 0.07142857142857142
+      }
+    },
+    "folds": [
+      {
+        "finish_offset": 0.17236885544509178,
+        "sub_offset": 0.40212377652479414,
+        "test_date": "2026-08-15T00:00:00+00:00",
+        "test_n": 12,
+        "train_n": 12
+      },
+      {
+        "finish_offset": 0.3911244355602422,
+        "sub_offset": 0.35999496879145343,
+        "test_date": "2026-08-22T00:00:00+00:00",
+        "test_n": 13,
+        "train_n": 24
+      },
+      {
+        "finish_offset": 0.6102686973501523,
+        "sub_offset": 0.12393347156820668,
+        "test_date": "2026-08-29T00:00:00+00:00",
+        "test_n": 13,
+        "train_n": 37
+      },
+      {
+        "finish_offset": 0.7854061681335498,
+        "sub_offset": -0.1110122830692433,
+        "test_date": "2026-09-05T00:00:00+00:00",
+        "test_n": 14,
+        "train_n": 50
+      },
+      {
+        "finish_offset": 0.6297671577482995,
+        "sub_offset": -0.12886808172780953,
+        "test_date": "2026-09-19T00:00:00+00:00",
+        "test_n": 12,
+        "train_n": 64
+      },
+      {
+        "finish_offset": 0.5322357893406439,
+        "sub_offset": -0.20905038715012256,
+        "test_date": "2026-09-26T00:00:00+00:00",
+        "test_n": 11,
+        "train_n": 76
+      },
+      {
+        "finish_offset": 0.620842677578577,
+        "sub_offset": -0.2984144047215629,
+        "test_date": "2026-10-03T00:00:00+00:00",
+        "test_n": 14,
+        "train_n": 87
+      },
+      {
+        "finish_offset": 0.6837863549949709,
+        "sub_offset": -0.4999473619105226,
+        "test_date": "2026-10-10T00:00:00+00:00",
+        "test_n": 11,
+        "train_n": 101
+      }
+    ],
+    "ridge": 0.5
+  },
+  "method_residual_clean112": {
+    "baseline_all_64": {
+      "accuracy": 0.38392857142857145,
+      "actual": {
+        "DEC": 34,
+        "KO": 61,
+        "SUB": 17
+      },
+      "calls": {
+        "DEC": 75,
+        "KO": 36,
+        "SUB": 1
+      },
+      "log_loss": 1.0169827387651116,
+      "multiclass_brier": 0.6390286026307971,
+      "n": 112,
+      "recall": {
+        "DEC": 0.6470588235294118,
+        "KO": 0.32786885245901637,
+        "SUB": 0.058823529411764705
+      }
+    },
+    "chronology_baseline": {
+      "accuracy": 0.38,
+      "actual": {
+        "DEC": 29,
+        "KO": 57,
+        "SUB": 14
+      },
+      "calls": {
+        "DEC": 69,
+        "KO": 30,
+        "SUB": 1
+      },
+      "log_loss": 1.0221421448520018,
+      "multiclass_brier": 0.6392889342595809,
+      "n": 100,
+      "recall": {
+        "DEC": 0.6551724137931034,
+        "KO": 0.3157894736842105,
+        "SUB": 0.07142857142857142
+      }
+    },
+    "chronology_candidate": {
+      "accuracy": 0.42,
+      "actual": {
+        "DEC": 29,
+        "KO": 57,
+        "SUB": 14
+      },
+      "calls": {
+        "DEC": 62,
+        "KO": 31,
+        "SUB": 7
+      },
+      "log_loss": 1.0547799815197516,
+      "multiclass_brier": 0.6644875486547518,
+      "n": 100,
+      "recall": {
+        "DEC": 0.7241379310344828,
+        "KO": 0.3508771929824561,
+        "SUB": 0.07142857142857142
+      }
+    },
+    "chronology_evaluation_fights": 100,
+    "folds": [
+      {
+        "test_date": "2026-08-15T00:00:00+00:00",
+        "test_fights": 12,
+        "train_clean_fights": 12
+      },
+      {
+        "test_date": "2026-08-22T00:00:00+00:00",
+        "test_fights": 13,
+        "train_clean_fights": 24
+      },
+      {
+        "test_date": "2026-08-29T00:00:00+00:00",
+        "test_fights": 13,
+        "train_clean_fights": 37
+      },
+      {
+        "test_date": "2026-09-05T00:00:00+00:00",
+        "test_fights": 14,
+        "train_clean_fights": 50
+      },
+      {
+        "test_date": "2026-09-19T00:00:00+00:00",
+        "test_fights": 12,
+        "train_clean_fights": 64
+      },
+      {
+        "test_date": "2026-09-26T00:00:00+00:00",
+        "test_fights": 11,
+        "train_clean_fights": 76
+      },
+      {
+        "test_date": "2026-10-03T00:00:00+00:00",
+        "test_fights": 14,
+        "train_clean_fights": 87
+      },
+      {
+        "test_date": "2026-10-10T00:00:00+00:00",
+        "test_fights": 11,
+        "train_clean_fights": 101
+      }
+    ],
+    "note": "Retrospective reconstruction only. Architecture and feature formulas were defined after historical results were known; this is not prospective proof."
+  },
+  "winner_clean112": {
+    "accuracy": 0.6517857142857143,
+    "brier": 0.22687987219640574,
+    "log_loss": 0.6498038627462775,
+    "n": 112,
+    "note": "New reconstruction benchmark, not the historical official v0.3.1 score."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "artifact_sha256": "1e36541e6b6cfed186691cf975b8137080a89593b88f11125b3f4220ed537b6a",
+  "evaluation_note": "Vegas 122 is not counted as prospective validation for v0.34 because these features were designed after that event.",
+  "selected_features": [
+    "experience_gap_log"
+  ],
+  "selected_variant": "experience_only",
+  "status": "SHADOW_ONLY_NOT_PROMOTED",
+  "trained_through": "2026-10-10"
+}

@@ -1,0 +1,284 @@
+{
+  "artifact_sha256": {
+    "method_baseline": "0abe7336e4da61ec67497d04c2516a4eb5661a077cf5456b6c23c2a4419a16de",
+    "method_residual": "034e3937304442891c8be93e77032b72af5479b76109f23caf980a91980c4c94",
+    "timing_30s": "f6d68dd270d57c8d4e3c20d2852ef88ed3071ec4493bcf41ee6f45c5639465d8",
+    "winner": "4557b0fa93a5ad6c313666589a60a15fe838ea04a09aaaca774aeef3058ab2e0"
+  },
+  "benchmarks": {
+    "method_intercept_calibration_clean112": {
+      "baseline": {
+        "accuracy": 0.38,
+        "actual": {
+          "DEC": 29,
+          "KO": 57,
+          "SUB": 14
+        },
+        "brier": 0.6392889342595809,
+        "calls": {
+          "DEC": 69,
+          "KO": 30,
+          "SUB": 1
+        },
+        "log_loss": 1.0221421448520018,
+        "n": 100,
+        "recall": {
+          "DEC": 0.6551724137931034,
+          "KO": 0.3157894736842105,
+          "SUB": 0.07142857142857142
+        }
+      },
+      "candidate": {
+        "accuracy": 0.49,
+        "actual": {
+          "DEC": 29,
+          "KO": 57,
+          "SUB": 14
+        },
+        "brier": 0.5823474054392266,
+        "calls": {
+          "DEC": 34,
+          "KO": 61,
+          "SUB": 5
+        },
+        "log_loss": 0.9523099984911056,
+        "n": 100,
+        "recall": {
+          "DEC": 0.3448275862068966,
+          "KO": 0.6666666666666666,
+          "SUB": 0.07142857142857142
+        }
+      },
+      "folds": [
+        {
+          "finish_offset": 0.17236885544509178,
+          "sub_offset": 0.40212377652479414,
+          "test_date": "2026-08-15T00:00:00+00:00",
+          "test_n": 12,
+          "train_n": 12
+        },
+        {
+          "finish_offset": 0.3911244355602422,
+          "sub_offset": 0.35999496879145343,
+          "test_date": "2026-08-22T00:00:00+00:00",
+          "test_n": 13,
+          "train_n": 24
+        },
+        {
+          "finish_offset": 0.6102686973501523,
+          "sub_offset": 0.12393347156820668,
+          "test_date": "2026-08-29T00:00:00+00:00",
+          "test_n": 13,
+          "train_n": 37
+        },
+        {
+          "finish_offset": 0.7854061681335498,
+          "sub_offset": -0.1110122830692433,
+          "test_date": "2026-09-05T00:00:00+00:00",
+          "test_n": 14,
+          "train_n": 50
+        },
+        {
+          "finish_offset": 0.6297671577482995,
+          "sub_offset": -0.12886808172780953,
+          "test_date": "2026-09-19T00:00:00+00:00",
+          "test_n": 12,
+          "train_n": 64
+        },
+        {
+          "finish_offset": 0.5322357893406439,
+          "sub_offset": -0.20905038715012256,
+          "test_date": "2026-09-26T00:00:00+00:00",
+          "test_n": 11,
+          "train_n": 76
+        },
+        {
+          "finish_offset": 0.620842677578577,
+          "sub_offset": -0.2984144047215629,
+          "test_date": "2026-10-03T00:00:00+00:00",
+          "test_n": 14,
+          "train_n": 87
+        },
+        {
+          "finish_offset": 0.6837863549949709,
+          "sub_offset": -0.4999473619105226,
+          "test_date": "2026-10-10T00:00:00+00:00",
+          "test_n": 11,
+          "train_n": 101
+        }
+      ],
+      "ridge": 0.5
+    },
+    "method_residual_clean112": {
+      "baseline_all_64": {
+        "accuracy": 0.38392857142857145,
+        "actual": {
+          "DEC": 34,
+          "KO": 61,
+          "SUB": 17
+        },
+        "calls": {
+          "DEC": 75,
+          "KO": 36,
+          "SUB": 1
+        },
+        "log_loss": 1.0169827387651116,
+        "multiclass_brier": 0.6390286026307971,
+        "n": 112,
+        "recall": {
+          "DEC": 0.6470588235294118,
+          "KO": 0.32786885245901637,
+          "SUB": 0.058823529411764705
+        }
+      },
+      "chronology_baseline": {
+        "accuracy": 0.38,
+        "actual": {
+          "DEC": 29,
+          "KO": 57,
+          "SUB": 14
+        },
+        "calls": {
+          "DEC": 69,
+          "KO": 30,
+          "SUB": 1
+        },
+        "log_loss": 1.0221421448520018,
+        "multiclass_brier": 0.6392889342595809,
+        "n": 100,
+        "recall": {
+          "DEC": 0.6551724137931034,
+          "KO": 0.3157894736842105,
+          "SUB": 0.07142857142857142
+        }
+      },
+      "chronology_candidate": {
+        "accuracy": 0.42,
+        "actual": {
+          "DEC": 29,
+          "KO": 57,
+          "SUB": 14
+        },
+        "calls": {
+          "DEC": 62,
+          "KO": 31,
+          "SUB": 7
+        },
+        "log_loss": 1.0547799815197516,
+        "multiclass_brier": 0.6644875486547518,
+        "n": 100,
+        "recall": {
+          "DEC": 0.7241379310344828,
+          "KO": 0.3508771929824561,
+          "SUB": 0.07142857142857142
+        }
+      },
+      "chronology_evaluation_fights": 100,
+      "folds": [
+        {
+          "test_date": "2026-08-15T00:00:00+00:00",
+          "test_fights": 12,
+          "train_clean_fights": 12
+        },
+        {
+          "test_date": "2026-08-22T00:00:00+00:00",
+          "test_fights": 13,
+          "train_clean_fights": 24
+        },
+        {
+          "test_date": "2026-08-29T00:00:00+00:00",
+          "test_fights": 13,
+          "train_clean_fights": 37
+        },
+        {
+          "test_date": "2026-09-05T00:00:00+00:00",
+          "test_fights": 14,
+          "train_clean_fights": 50
+        },
+        {
+          "test_date": "2026-09-19T00:00:00+00:00",
+          "test_fights": 12,
+          "train_clean_fights": 64
+        },
+        {
+          "test_date": "2026-09-26T00:00:00+00:00",
+          "test_fights": 11,
+          "train_clean_fights": 76
+        },
+        {
+          "test_date": "2026-10-03T00:00:00+00:00",
+          "test_fights": 14,
+          "train_clean_fights": 87
+        },
+        {
+          "test_date": "2026-10-10T00:00:00+00:00",
+          "test_fights": 11,
+          "train_clean_fights": 101
+        }
+      ],
+      "note": "Retrospective reconstruction only. Architecture and feature formulas were defined after historical results were known; this is not prospective proof."
+    },
+    "winner_clean112": {
+      "accuracy": 0.6517857142857143,
+      "brier": 0.22687987219640574,
+      "log_loss": 0.6498038627462775,
+      "n": 112,
+      "note": "New reconstruction benchmark, not the historical official v0.3.1 score."
+    }
+  },
+  "draw_handling": {
+    "binary_winner_target": "EXCLUDED",
+    "method_target": "EXCLUDED",
+    "neutral_history": "NOT ACTIVATED pending separate tested pipeline change",
+    "raw_round_stats": "PRESERVED",
+    "timing_training": "EXCLUDED under current decisive-fight loader"
+  },
+  "final_method_calibration": {
+    "finish_offset": 0.7564277275987308,
+    "ridge": 0.5,
+    "sub_given_finish_offset": -0.5186597161445304
+  },
+  "generated_at_utc": "2026-10-16T23:26:56.214818+00:00",
+  "identity_handling": {
+    "canonical_name": "Kai Kamaka III",
+    "older_display_name": "Kai Kamaka",
+    "policy": "Verified identity reconciliation; not a model-tuning change.",
+    "relabelled_fight_fields": 4,
+    "relabelled_stat_rows": 11
+  },
+  "population": {
+    "clean_feedback_rows": 112,
+    "latest_performance_event_date": "2026-10-10 00:00:00+00:00",
+    "training_rows": 8754
+  },
+  "promotion": {
+    "method_calibration": "LEADING_SHADOW_NOT_PROMOTED. Keep existing prospective promotion governance.",
+    "sparse_market_rule": "NO CHANGE. Continue prospective disagreement watchlist; do not remove sparse protections from two retrospective wins.",
+    "timing": "SHADOW_PROBATION. Official timing is 0-5, -3.00u through Vegas 122; retain 12-point edge gate, sparse block and 0.25u cap.",
+    "v033_role": "current full-stat data backbone refreshed through 2026-10-10",
+    "v034": "SHADOW_ONLY. Refreshed on newest causal history; Vegas 122 is not prospective evidence for a challenger designed after that event.",
+    "winner_reference": "UNCHANGED. Vegas 122 is one new frozen card and does not justify replacing the official reference."
+  },
+  "prospective_ufcvegas122": {
+    "displayed_method_record": "8-3",
+    "stage_b_pnl_units": -1.9807692307692308,
+    "stage_b_record": "1-4",
+    "timing_lean_record": "8-4",
+    "winner_accuracy_decisive_only": 0.5454545454545454,
+    "winner_record_including_draw": "6-5-1"
+  },
+  "source": {
+    "decisive_result_rows": 11,
+    "draw_bouts": [
+      "Ernesta Kareckaite vs. Melissa Gatto"
+    ],
+    "draw_result_rows": 1,
+    "event": "UFC Fight Night: Allen vs. Duncan",
+    "fighter_round_stat_rows": 50,
+    "full_card_stats_available": true,
+    "unique_result_bouts": 12,
+    "unique_stat_bouts": 12,
+    "upstream_commit": "5e38ebeb9bb854c9ab4359f8f6f5b444328c555c"
+  },
+  "status": "V0.33_UFCVEGAS122_FULL_STATS_BACKBONE_REFRESH"
+}
