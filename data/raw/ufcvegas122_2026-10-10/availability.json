@@ -1,0 +1,55 @@
+{
+  "checked_at_utc": "2026-10-16T23:22:46.147033+00:00",
+  "decisive_result_rows": 11,
+  "draw_bouts": [
+    "Ernesta Kareckaite vs. Melissa Gatto"
+  ],
+  "draw_policy": "Preserve raw draw stats, exclude the draw from the binary winner target. Neutral-history use requires a separately tested pipeline change.",
+  "draw_result_rows": 1,
+  "event": "UFC Fight Night: Allen vs. Duncan",
+  "event_rows": 1,
+  "expected_bouts": 12,
+  "expected_round_stat_rows": 50,
+  "fight_detail_rows": 12,
+  "fight_stat_rows": 50,
+  "full_card_stats_available": true,
+  "missing_detail_bouts": [],
+  "missing_stat_bouts": [],
+  "receipt": {
+    "ufc_event_details.csv": {
+      "bytes": 102631,
+      "sha256": "f8dc81682ed176b1a6bb32dfee19cdbe41eca704db57566d60f74ae43052cc40",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/5e38ebeb9bb854c9ab4359f8f6f5b444328c555c/ufc_event_details.csv"
+    },
+    "ufc_fight_details.csv": {
+      "bytes": 1043597,
+      "sha256": "fbdb258d163e9b336e53a5d5f2935c0fc30089366d406c78baa60a0804d86131",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/5e38ebeb9bb854c9ab4359f8f6f5b444328c555c/ufc_fight_details.csv"
+    },
+    "ufc_fight_results.csv": {
+      "bytes": 2104550,
+      "sha256": "e1616c4378d78771d4e308df67a9f1dcc41fa951a21783d1864eef2e94156974",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/5e38ebeb9bb854c9ab4359f8f6f5b444328c555c/ufc_fight_results.csv"
+    },
+    "ufc_fight_stats.csv": {
+      "bytes": 7662598,
+      "sha256": "758ca57cb4c11b9cfdd33c649c8938ddff920495339e5070014590eb17865c2f",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/5e38ebeb9bb854c9ab4359f8f6f5b444328c555c/ufc_fight_stats.csv"
+    },
+    "ufc_fighter_details.csv": {
+      "bytes": 340441,
+      "sha256": "a1f6e4326217fab9734ac42f1958cd07b0b2b98f3caa5da08497ec7648eb6f70",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/5e38ebeb9bb854c9ab4359f8f6f5b444328c555c/ufc_fighter_details.csv"
+    },
+    "ufc_fighter_tott.csv": {
+      "bytes": 508399,
+      "sha256": "3296e67941f984cd5484488226e5a5d94de3249c63fe289fbc66d98546311ea1",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/5e38ebeb9bb854c9ab4359f8f6f5b444328c555c/ufc_fighter_tott.csv"
+    }
+  },
+  "result_rows": 12,
+  "unique_result_bouts": 12,
+  "unique_stat_bouts": 12,
+  "upstream_commit": "5e38ebeb9bb854c9ab4359f8f6f5b444328c555c",
+  "upstream_repo": "Greco1899/scrape_ufc_stats"
+}
