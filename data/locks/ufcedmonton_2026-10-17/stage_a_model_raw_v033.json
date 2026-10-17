@@ -1,0 +1,1640 @@
+{
+  "payload": {
+    "event": "UFC Edmonton: Buckley vs Malott",
+    "event_date": "2026-10-17",
+    "fights": [
+      {
+        "a": "Cody Chovancek",
+        "b": "SuYoung You",
+        "double_chance_calibrated": {
+          "A_KO_OR_DEC": 0.40295110025967673,
+          "A_KO_OR_SUB": 0.3837588387997832,
+          "A_SUB_OR_DEC": 0.3891225013603288,
+          "B_KO_OR_DEC": 0.3446814071446199,
+          "B_KO_OR_SUB": 0.22598596753840272,
+          "B_SUB_OR_DEC": 0.2535001848971887
+        },
+        "evidence_adjusted_confidence_10": 5.879162202098943,
+        "evidence_density": {
+          "a_age": 28.23329705606549,
+          "a_days_since_last": null,
+          "a_prior_ufc_bouts": 0,
+          "a_reach": 67.0,
+          "b_age": 30.850736154746503,
+          "b_days_since_last": 217.0,
+          "b_prior_ufc_bouts": 4,
+          "b_reach": 65.0
+        },
+        "fight_no": 1,
+        "joint_baseline": {
+          "A_DEC": 0.3123511975347216,
+          "A_KO": 0.1075197229498886,
+          "A_SUB": 0.16804529972528406,
+          "B_DEC": 0.26248406616560094,
+          "B_KO": 0.08728357752085447,
+          "B_SUB": 0.06231613610365027
+        },
+        "joint_calibrated": {
+          "A_DEC": 0.20415738141011114,
+          "A_KO": 0.19879371884956556,
+          "A_SUB": 0.1849651199502176,
+          "B_DEC": 0.18609781225170294,
+          "B_KO": 0.158583594892917,
+          "B_SUB": 0.06740237264548572
+        },
+        "joint_calibrated_sim_10000": {
+          "A_DEC": 0.1998,
+          "A_KO": 0.2022,
+          "A_SUB": 0.1822,
+          "B_DEC": 0.1907,
+          "B_KO": 0.1611,
+          "B_SUB": 0.064
+        },
+        "joint_residual": {
+          "A_DEC": 0.3497400432228553,
+          "A_KO": 0.08934643429017376,
+          "A_SUB": 0.14882974269686527,
+          "B_DEC": 0.2552698051296486,
+          "B_KO": 0.07244805922123015,
+          "B_SUB": 0.08436591543922696
+        },
+        "method_if_a_wins_baseline": {
+          "DEC": 0.5312852185354027,
+          "KO": 0.18288272929687593,
+          "SUB": 0.28583205216772134
+        },
+        "method_if_a_wins_calibrated": {
+          "DEC": 0.3472559089069257,
+          "KO": 0.33813273390993265,
+          "SUB": 0.31461135718314165
+        },
+        "method_if_a_wins_residual": {
+          "DEC": 0.5948807520534017,
+          "KO": 0.15197137146220568,
+          "SUB": 0.2531478764843926
+        },
+        "method_if_b_wins_baseline": {
+          "DEC": 0.6369677212223612,
+          "KO": 0.211810272089118,
+          "SUB": 0.15122200668852073
+        },
+        "method_if_b_wins_calibrated": {
+          "DEC": 0.4516018862632536,
+          "KO": 0.3848333826041184,
+          "SUB": 0.163564731132628
+        },
+        "method_if_b_wins_residual": {
+          "DEC": 0.6194609388888588,
+          "KO": 0.17580905333893868,
+          "SUB": 0.2047300077722026
+        },
+        "raw_probability_confidence_10": 5.879162202098943,
+        "scheduled_seconds": 900,
+        "sparse_ufc_evidence": true,
+        "timing_v033_direct": {
+          "GTD_NO": 0.4188363960029503,
+          "GTD_YES": 0.5811636039970497,
+          "OVER_0.5": 0.8981458903486574,
+          "OVER_1.5": 0.7404649822797754,
+          "OVER_2.5": 0.6264387760364166,
+          "ROUND_2_STARTS_NO": 0.18731513404782685,
+          "ROUND_2_STARTS_YES": 0.8126848659521732,
+          "ROUND_3_STARTS_NO": 0.32097226735485196,
+          "ROUND_3_STARTS_YES": 0.679027732645148,
+          "UNDER_0.5": 0.10185410965134256,
+          "UNDER_1.5": 0.2595350177202246,
+          "UNDER_2.5": 0.3735612239635834
+        },
+        "timing_v033_sim_10000": {
+          "GTD_NO": 0.4242,
+          "GTD_YES": 0.5758,
+          "OVER_0.5": 0.8984,
+          "OVER_1.5": 0.7359,
+          "OVER_2.5": 0.6237,
+          "ROUND_2_STARTS_NO": 0.19030000000000002,
+          "ROUND_2_STARTS_YES": 0.8097,
+          "ROUND_3_STARTS_NO": 0.32530000000000003,
+          "ROUND_3_STARTS_YES": 0.6747,
+          "UNDER_0.5": 0.10160000000000002,
+          "UNDER_1.5": 0.2641,
+          "UNDER_2.5": 0.37629999999999997
+        },
+        "weight_class": "Bantamweight",
+        "winner_model_disagreement": false,
+        "winner_reference_p_a": 0.5879162202098943,
+        "winner_reference_pick": "Cody Chovancek",
+        "winner_v033_p_a": 0.5949781106448858,
+        "winner_v033_pick": "Cody Chovancek"
+      },
+      {
+        "a": "Melissa Croden",
+        "b": "Chelsea Chandler",
+        "double_chance_calibrated": {
+          "A_KO_OR_DEC": 0.4577841192190261,
+          "A_KO_OR_SUB": 0.3863808362635037,
+          "A_SUB_OR_DEC": 0.23216294549083288,
+          "B_KO_OR_DEC": 0.3991107752053016,
+          "B_KO_OR_SUB": 0.25922369581387733,
+          "B_SUB_OR_DEC": 0.26533762800745847
+        },
+        "evidence_adjusted_confidence_10": 5.381639504866813,
+        "evidence_density": {
+          "a_age": 35.51612969465492,
+          "a_days_since_last": 182.0,
+          "a_prior_ufc_bouts": 3,
+          "a_reach": null,
+          "b_age": 35.89943667563331,
+          "b_days_since_last": 133.0,
+          "b_prior_ufc_bouts": 6,
+          "b_reach": 68.0
+        },
+        "fight_no": 2,
+        "joint_baseline": {
+          "A_DEC": 0.24520429881545275,
+          "A_KO": 0.2032691058679394,
+          "A_SUB": 0.0896905458032892,
+          "B_DEC": 0.28856150077820397,
+          "B_KO": 0.11279356201935373,
+          "B_SUB": 0.06048098671576098
+        },
+        "joint_calibrated": {
+          "A_DEC": 0.15178311422317764,
+          "A_KO": 0.3060010049958485,
+          "A_SUB": 0.08037983126765524,
+          "B_DEC": 0.20261235369944136,
+          "B_KO": 0.1964984215058602,
+          "B_SUB": 0.06272527430801712
+        },
+        "joint_calibrated_sim_10000": {
+          "A_DEC": 0.1515,
+          "A_KO": 0.302,
+          "A_SUB": 0.0785,
+          "B_DEC": 0.2013,
+          "B_KO": 0.1991,
+          "B_SUB": 0.0676
+        },
+        "joint_residual": {
+          "A_DEC": 0.24096338992929245,
+          "A_KO": 0.21074385082234512,
+          "A_SUB": 0.08645670973504375,
+          "B_DEC": 0.27178766104551655,
+          "B_KO": 0.13106651692452584,
+          "B_SUB": 0.058981871543276346
+        },
+        "method_if_a_wins_baseline": {
+          "DEC": 0.4556312227783105,
+          "KO": 0.377708513705007,
+          "SUB": 0.16666026351668253
+        },
+        "method_if_a_wins_calibrated": {
+          "DEC": 0.2820387989309106,
+          "KO": 0.5686018261147381,
+          "SUB": 0.14935937495435142
+        },
+        "method_if_a_wins_residual": {
+          "DEC": 0.44775089396341106,
+          "KO": 0.3915978590386104,
+          "SUB": 0.1606512469979786
+        },
+        "method_if_b_wins_baseline": {
+          "DEC": 0.6248137214110703,
+          "KO": 0.2442285788175592,
+          "SUB": 0.13095769977137048
+        },
+        "method_if_b_wins_calibrated": {
+          "DEC": 0.4387105638742441,
+          "KO": 0.42547224651027044,
+          "SUB": 0.13581718961548545
+        },
+        "method_if_b_wins_residual": {
+          "DEC": 0.5884938201163064,
+          "KO": 0.2837944700562966,
+          "SUB": 0.12771170982739707
+        },
+        "raw_probability_confidence_10": 5.381639504866813,
+        "scheduled_seconds": 900,
+        "sparse_ufc_evidence": false,
+        "timing_v033_direct": {
+          "GTD_NO": 0.5272635000619761,
+          "GTD_YES": 0.4727364999380239,
+          "OVER_0.5": 0.8622524523734506,
+          "OVER_1.5": 0.6605613558287885,
+          "OVER_2.5": 0.5243533408052681,
+          "ROUND_2_STARTS_NO": 0.24888548692318457,
+          "ROUND_2_STARTS_YES": 0.7511145130768154,
+          "ROUND_3_STARTS_NO": 0.4138975765035132,
+          "ROUND_3_STARTS_YES": 0.5861024234964868,
+          "UNDER_0.5": 0.1377475476265494,
+          "UNDER_1.5": 0.3394386441712115,
+          "UNDER_2.5": 0.4756466591947319
+        },
+        "timing_v033_sim_10000": {
+          "GTD_NO": 0.5277000000000001,
+          "GTD_YES": 0.4723,
+          "OVER_0.5": 0.8601,
+          "OVER_1.5": 0.6589,
+          "OVER_2.5": 0.5249,
+          "ROUND_2_STARTS_NO": 0.2508,
+          "ROUND_2_STARTS_YES": 0.7492,
+          "ROUND_3_STARTS_NO": 0.41469999999999996,
+          "ROUND_3_STARTS_YES": 0.5853,
+          "UNDER_0.5": 0.13990000000000002,
+          "UNDER_1.5": 0.34109999999999996,
+          "UNDER_2.5": 0.47509999999999997
+        },
+        "weight_class": "Women's Bantamweight",
+        "winner_model_disagreement": false,
+        "winner_reference_p_a": 0.5381639504866813,
+        "winner_reference_pick": "Melissa Croden",
+        "winner_v033_p_a": 0.5928804179305471,
+        "winner_v033_pick": "Melissa Croden"
+      },
+      {
+        "a": "Chad Anheliger",
+        "b": "Steven Koslow",
+        "double_chance_calibrated": {
+          "A_KO_OR_DEC": 0.2628858779713311,
+          "A_KO_OR_SUB": 0.22829123895588516,
+          "A_SUB_OR_DEC": 0.11377127868589465,
+          "B_KO_OR_DEC": 0.3169122527646927,
+          "B_KO_OR_SUB": 0.5257388535721315,
+          "B_SUB_OR_DEC": 0.5524004980500649
+        },
+        "evidence_adjusted_confidence_10": 6.9752580219344456,
+        "evidence_density": {
+          "a_age": 39.87761555678761,
+          "a_days_since_last": 714.0,
+          "a_prior_ufc_bouts": 5,
+          "a_reach": 64.0,
+          "b_age": 29.733670095895192,
+          "b_days_since_last": 1407.0,
+          "b_prior_ufc_bouts": 1,
+          "b_reach": 69.0
+        },
+        "fight_no": 3,
+        "joint_baseline": {
+          "A_DEC": 0.12374418186012533,
+          "A_KO": 0.1321573716227124,
+          "A_SUB": 0.04657264432371777,
+          "B_DEC": 0.2862966919406918,
+          "B_KO": 0.07607648966473862,
+          "B_SUB": 0.33515262058801404
+        },
+        "joint_calibrated": {
+          "A_DEC": 0.07418295885067029,
+          "A_KO": 0.1887029191206608,
+          "A_SUB": 0.03958831983522436,
+          "B_DEC": 0.17178694862131305,
+          "B_KO": 0.14512530414337968,
+          "B_SUB": 0.3806135494287518
+        },
+        "joint_calibrated_sim_10000": {
+          "A_DEC": 0.0718,
+          "A_KO": 0.1896,
+          "A_SUB": 0.042,
+          "B_DEC": 0.1714,
+          "B_KO": 0.1476,
+          "B_SUB": 0.3776
+        },
+        "joint_residual": {
+          "A_DEC": 0.07694584362722225,
+          "A_KO": 0.18656844147104884,
+          "A_SUB": 0.03895991270828442,
+          "B_DEC": 0.11317251661376614,
+          "B_KO": 0.14874151955296389,
+          "B_SUB": 0.4356117660267145
+        },
+        "method_if_a_wins_baseline": {
+          "DEC": 0.40910657093225766,
+          "KO": 0.43692114098020485,
+          "SUB": 0.15397228808753752
+        },
+        "method_if_a_wins_calibrated": {
+          "DEC": 0.2452538411164357,
+          "KO": 0.6238645163424618,
+          "SUB": 0.13088164254110263
+        },
+        "method_if_a_wins_residual": {
+          "DEC": 0.2543881236323907,
+          "KO": 0.616807789966822,
+          "SUB": 0.12880408640078736
+        },
+        "method_if_b_wins_baseline": {
+          "DEC": 0.41044602370321104,
+          "KO": 0.10906620145879617,
+          "SUB": 0.48048777483799276
+        },
+        "method_if_b_wins_calibrated": {
+          "DEC": 0.24628042157166175,
+          "KO": 0.208057255641322,
+          "SUB": 0.5456623227870163
+        },
+        "method_if_b_wins_residual": {
+          "DEC": 0.16224850214555941,
+          "KO": 0.21324160208157214,
+          "SUB": 0.6245098957728684
+        },
+        "raw_probability_confidence_10": 6.9752580219344456,
+        "scheduled_seconds": 900,
+        "sparse_ufc_evidence": true,
+        "timing_v033_direct": {
+          "GTD_NO": 0.5376099834289327,
+          "GTD_YES": 0.46239001657106726,
+          "OVER_0.5": 0.8584944144626363,
+          "OVER_1.5": 0.6525300445964929,
+          "OVER_2.5": 0.5144531155667657,
+          "ROUND_2_STARTS_NO": 0.2551974600864566,
+          "ROUND_2_STARTS_YES": 0.7448025399135434,
+          "ROUND_3_STARTS_NO": 0.42306668261510727,
+          "ROUND_3_STARTS_YES": 0.5769333173848927,
+          "UNDER_0.5": 0.1415055855373637,
+          "UNDER_1.5": 0.3474699554035071,
+          "UNDER_2.5": 0.48554688443323435
+        },
+        "timing_v033_sim_10000": {
+          "GTD_NO": 0.5331,
+          "GTD_YES": 0.4669,
+          "OVER_0.5": 0.8632,
+          "OVER_1.5": 0.658,
+          "OVER_2.5": 0.5184,
+          "ROUND_2_STARTS_NO": 0.2529,
+          "ROUND_2_STARTS_YES": 0.7471,
+          "ROUND_3_STARTS_NO": 0.41779999999999995,
+          "ROUND_3_STARTS_YES": 0.5822,
+          "UNDER_0.5": 0.13680000000000003,
+          "UNDER_1.5": 0.34199999999999997,
+          "UNDER_2.5": 0.48160000000000003
+        },
+        "weight_class": "Bantamweight",
+        "winner_model_disagreement": false,
+        "winner_reference_p_a": 0.3024741978065555,
+        "winner_reference_pick": "Steven Koslow",
+        "winner_v033_p_a": 0.28796436624267835,
+        "winner_v033_pick": "Steven Koslow"
+      },
+      {
+        "a": "Katlyn Cerminara",
+        "b": "Mackenzie Stiller",
+        "double_chance_calibrated": {
+          "A_KO_OR_DEC": 0.24619771605812502,
+          "A_KO_OR_SUB": 0.15332888416605617,
+          "A_SUB_OR_DEC": 0.15379988600988567,
+          "B_KO_OR_DEC": 0.5940265704242575,
+          "B_KO_OR_SUB": 0.5878881012230571,
+          "B_SUB_OR_DEC": 0.26475884211861844
+        },
+        "evidence_adjusted_confidence_10": 7.2333675688296655,
+        "evidence_density": {
+          "a_age": 37.80228204549032,
+          "a_days_since_last": 952.0,
+          "a_prior_ufc_bouts": 17,
+          "a_reach": 68.0,
+          "b_age": 27.25860216157758,
+          "b_days_since_last": null,
+          "b_prior_ufc_bouts": 0,
+          "b_reach": null
+        },
+        "fight_no": 4,
+        "joint_baseline": {
+          "A_DEC": 0.17471826831225895,
+          "A_KO": 0.0719685359209943,
+          "A_SUB": 0.029976438883780192,
+          "B_DEC": 0.23816867431135685,
+          "B_KO": 0.32922564641817,
+          "B_SUB": 0.1559424361534397
+        },
+        "joint_calibrated": {
+          "A_DEC": 0.12333435895097727,
+          "A_KO": 0.12286335710714776,
+          "A_SUB": 0.0304655270589084,
+          "B_DEC": 0.13544865565990943,
+          "B_KO": 0.45857791476434817,
+          "B_SUB": 0.12931018645870898
+        },
+        "joint_calibrated_sim_10000": {
+          "A_DEC": 0.1287,
+          "A_KO": 0.1183,
+          "A_SUB": 0.027,
+          "B_DEC": 0.1346,
+          "B_KO": 0.465,
+          "B_SUB": 0.1264
+        },
+        "joint_residual": {
+          "A_DEC": 0.17677610284391923,
+          "A_KO": 0.05632208536356342,
+          "A_SUB": 0.04356505490955084,
+          "B_DEC": 0.3928919526006838,
+          "B_KO": 0.20883156797712119,
+          "B_SUB": 0.12161323630516155
+        },
+        "method_if_a_wins_baseline": {
+          "DEC": 0.6315196277748759,
+          "KO": 0.26013045719467087,
+          "SUB": 0.10834991503045321
+        },
+        "method_if_a_wins_calibrated": {
+          "DEC": 0.4457923559393998,
+          "KO": 0.44408991856997204,
+          "SUB": 0.11011772549062813
+        },
+        "method_if_a_wins_residual": {
+          "DEC": 0.6389576759538663,
+          "KO": 0.20357632162845057,
+          "SUB": 0.1574660024176831
+        },
+        "method_if_b_wins_baseline": {
+          "DEC": 0.32926388994482103,
+          "KO": 0.455148509024874,
+          "SUB": 0.21558760103030497
+        },
+        "method_if_b_wins_calibrated": {
+          "DEC": 0.18725531969865672,
+          "KO": 0.6339756833877371,
+          "SUB": 0.17876899691360623
+        },
+        "method_if_b_wins_residual": {
+          "DEC": 0.5431660272509177,
+          "KO": 0.2887058703846698,
+          "SUB": 0.16812810236441247
+        },
+        "raw_probability_confidence_10": 7.2333675688296655,
+        "scheduled_seconds": 900,
+        "sparse_ufc_evidence": true,
+        "timing_v033_direct": {
+          "GTD_NO": 0.43585678336278677,
+          "GTD_YES": 0.5641432166372132,
+          "OVER_0.5": 0.8928858817162434,
+          "OVER_1.5": 0.7283900579941932,
+          "OVER_2.5": 0.6106004491996282,
+          "ROUND_2_STARTS_NO": 0.19648316791301723,
+          "ROUND_2_STARTS_YES": 0.8035168320869828,
+          "ROUND_3_STARTS_NO": 0.3352082165197964,
+          "ROUND_3_STARTS_YES": 0.6647917834802036,
+          "UNDER_0.5": 0.10711411828375661,
+          "UNDER_1.5": 0.2716099420058068,
+          "UNDER_2.5": 0.3893995508003718
+        },
+        "timing_v033_sim_10000": {
+          "GTD_NO": 0.44489999999999996,
+          "GTD_YES": 0.5551,
+          "OVER_0.5": 0.893,
+          "OVER_1.5": 0.7242,
+          "OVER_2.5": 0.6006,
+          "ROUND_2_STARTS_NO": 0.20020000000000004,
+          "ROUND_2_STARTS_YES": 0.7998,
+          "ROUND_3_STARTS_NO": 0.34219999999999995,
+          "ROUND_3_STARTS_YES": 0.6578,
+          "UNDER_0.5": 0.10699999999999998,
+          "UNDER_1.5": 0.27580000000000005,
+          "UNDER_2.5": 0.3994
+        },
+        "weight_class": "Women's Flyweight",
+        "winner_model_disagreement": false,
+        "winner_reference_p_a": 0.27666324311703344,
+        "winner_reference_pick": "Mackenzie Stiller",
+        "winner_v033_p_a": 0.2916917879627053,
+        "winner_v033_pick": "Mackenzie Stiller"
+      },
+      {
+        "a": "Javad Mahjoub",
+        "b": "Joel Faglier",
+        "double_chance_calibrated": {
+          "A_KO_OR_DEC": 0.4917551638568918,
+          "A_KO_OR_SUB": 0.36490409150195174,
+          "A_SUB_OR_DEC": 0.21094481478944122,
+          "B_KO_OR_DEC": 0.430949625390349,
+          "B_KO_OR_SUB": 0.36109021682086284,
+          "B_SUB_OR_DEC": 0.14035608764050345
+        },
+        "evidence_adjusted_confidence_10": 5.338020350741424,
+        "evidence_density": {
+          "a_age": 34.39358782178963,
+          "a_days_since_last": null,
+          "a_prior_ufc_bouts": 0,
+          "a_reach": null,
+          "b_age": 25.744539586712936,
+          "b_days_since_last": null,
+          "b_prior_ufc_bouts": 0,
+          "b_reach": null
+        },
+        "fight_no": 5,
+        "joint_baseline": {
+          "A_DEC": 0.26504445996590725,
+          "A_KO": 0.2205166506602729,
+          "A_SUB": 0.048240924447962234,
+          "B_DEC": 0.1784568745508206,
+          "B_KO": 0.2434951756713717,
+          "B_SUB": 0.04424591470366538
+        },
+        "joint_calibrated": {
+          "A_DEC": 0.16889794357219065,
+          "A_KO": 0.32285722028470115,
+          "A_SUB": 0.04204687121725057,
+          "B_DEC": 0.10510774810499479,
+          "B_KO": 0.3258418772853542,
+          "B_SUB": 0.03524833953550866
+        },
+        "joint_calibrated_sim_10000": {
+          "A_DEC": 0.1637,
+          "A_KO": 0.3238,
+          "A_SUB": 0.0411,
+          "B_DEC": 0.1073,
+          "B_KO": 0.3294,
+          "B_SUB": 0.0347
+        },
+        "joint_residual": {
+          "A_DEC": 0.23716759418908898,
+          "A_KO": 0.22849096294815957,
+          "A_SUB": 0.06814347793689382,
+          "B_DEC": 0.15598123885769594,
+          "B_KO": 0.24862656043381992,
+          "B_SUB": 0.06159016563434181
+        },
+        "method_if_a_wins_baseline": {
+          "DEC": 0.49652201106557026,
+          "KO": 0.4131056762075556,
+          "SUB": 0.09037231272687414
+        },
+        "method_if_a_wins_calibrated": {
+          "DEC": 0.31640558198458646,
+          "KO": 0.6048257576235316,
+          "SUB": 0.07876866039188193
+        },
+        "method_if_a_wins_residual": {
+          "DEC": 0.4442987823306961,
+          "KO": 0.4280443833759895,
+          "SUB": 0.12765683429331445
+        },
+        "method_if_b_wins_baseline": {
+          "DEC": 0.3827920496804436,
+          "KO": 0.5222999540765826,
+          "SUB": 0.09490799624297391
+        },
+        "method_if_b_wins_calibrated": {
+          "DEC": 0.2254573293165506,
+          "KO": 0.6989345767246643,
+          "SUB": 0.07560809395878514
+        },
+        "method_if_b_wins_residual": {
+          "DEC": 0.3345815524580906,
+          "KO": 0.5333068334465179,
+          "SUB": 0.1321116140953916
+        },
+        "raw_probability_confidence_10": 5.338020350741424,
+        "scheduled_seconds": 900,
+        "sparse_ufc_evidence": true,
+        "timing_v033_direct": {
+          "GTD_NO": 0.5427623424641855,
+          "GTD_YES": 0.45723765753581447,
+          "OVER_0.5": 0.856597928049641,
+          "OVER_1.5": 0.6485008449115461,
+          "OVER_2.5": 0.5095116401036496,
+          "ROUND_2_STARTS_NO": 0.2583730964102473,
+          "ROUND_2_STARTS_YES": 0.7416269035897527,
+          "ROUND_3_STARTS_NO": 0.4276545391598995,
+          "ROUND_3_STARTS_YES": 0.5723454608401005,
+          "UNDER_0.5": 0.14340207195035903,
+          "UNDER_1.5": 0.35149915508845386,
+          "UNDER_2.5": 0.4904883598963504
+        },
+        "timing_v033_sim_10000": {
+          "GTD_NO": 0.5476,
+          "GTD_YES": 0.4524,
+          "OVER_0.5": 0.8459,
+          "OVER_1.5": 0.6401,
+          "OVER_2.5": 0.5035,
+          "ROUND_2_STARTS_NO": 0.2691,
+          "ROUND_2_STARTS_YES": 0.7309,
+          "ROUND_3_STARTS_NO": 0.4355,
+          "ROUND_3_STARTS_YES": 0.5645,
+          "UNDER_0.5": 0.15410000000000001,
+          "UNDER_1.5": 0.3599,
+          "UNDER_2.5": 0.49650000000000005
+        },
+        "weight_class": "Heavyweight",
+        "winner_model_disagreement": false,
+        "winner_reference_p_a": 0.5338020350741424,
+        "winner_reference_pick": "Javad Mahjoub",
+        "winner_v033_p_a": 0.5115887197401349,
+        "winner_v033_pick": "Javad Mahjoub"
+      },
+      {
+        "a": "Julien Leblanc",
+        "b": "Nick Galanti",
+        "double_chance_calibrated": {
+          "A_KO_OR_DEC": 0.6478452931102355,
+          "A_KO_OR_SUB": 0.6860513339232073,
+          "A_SUB_OR_DEC": 0.15701015768758783,
+          "B_KO_OR_DEC": 0.19798295661325568,
+          "B_KO_OR_SUB": 0.20440730863661818,
+          "B_SUB_OR_DEC": 0.10670295002909541
+        },
+        "evidence_adjusted_confidence_10": 7.454533923605153,
+        "evidence_density": {
+          "a_age": 34.73856410467018,
+          "a_days_since_last": 182.0,
+          "a_prior_ufc_bouts": 1,
+          "a_reach": null,
+          "b_age": null,
+          "b_days_since_last": null,
+          "b_prior_ufc_bouts": 0,
+          "b_reach": null
+        },
+        "fight_no": 6,
+        "joint_baseline": {
+          "A_DEC": 0.11610442987517439,
+          "A_KO": 0.49220458951545804,
+          "A_SUB": 0.1371443729698829,
+          "B_DEC": 0.08737097751034592,
+          "B_KO": 0.1017708774732191,
+          "B_SUB": 0.06540475265591968
+        },
+        "joint_calibrated": {
+          "A_DEC": 0.05940205843730805,
+          "A_KO": 0.5884432346729275,
+          "A_SUB": 0.09760809925027977,
+          "B_DEC": 0.05013929900286646,
+          "B_KO": 0.14784365761038923,
+          "B_SUB": 0.05656365102622895
+        },
+        "joint_calibrated_sim_10000": {
+          "A_DEC": 0.0559,
+          "A_KO": 0.5859,
+          "A_SUB": 0.0993,
+          "B_DEC": 0.0509,
+          "B_KO": 0.1503,
+          "B_SUB": 0.0577
+        },
+        "joint_residual": {
+          "A_DEC": 0.09725796848036007,
+          "A_KO": 0.46514574392578056,
+          "A_SUB": 0.18304967995437466,
+          "B_DEC": 0.08438015436032563,
+          "B_KO": 0.09319079364718286,
+          "B_SUB": 0.07697565963197618
+        },
+        "method_if_a_wins_baseline": {
+          "DEC": 0.15575008587394568,
+          "KO": 0.6602754706861923,
+          "SUB": 0.18397444343986202
+        },
+        "method_if_a_wins_calibrated": {
+          "DEC": 0.07968581140828734,
+          "KO": 0.7893762919363646,
+          "SUB": 0.13093789665534805
+        },
+        "method_if_a_wins_residual": {
+          "DEC": 0.13046820831063344,
+          "KO": 0.6239769631376596,
+          "SUB": 0.24555482855170693
+        },
+        "method_if_b_wins_baseline": {
+          "DEC": 0.34324157104497643,
+          "KO": 0.3998123503470829,
+          "SUB": 0.2569460786079407
+        },
+        "method_if_b_wins_calibrated": {
+          "DEC": 0.1969749252124348,
+          "KO": 0.580811738099377,
+          "SUB": 0.22221333668818827
+        },
+        "method_if_b_wins_residual": {
+          "DEC": 0.33149196189577024,
+          "KO": 0.36610503086793966,
+          "SUB": 0.3024030072362901
+        },
+        "raw_probability_confidence_10": 7.454533923605153,
+        "scheduled_seconds": 900,
+        "sparse_ufc_evidence": true,
+        "timing_v033_direct": {
+          "GTD_NO": 0.8519513267996054,
+          "GTD_YES": 0.14804867320039458,
+          "OVER_0.5": 0.6861644961628126,
+          "OVER_1.5": 0.3480852393858261,
+          "OVER_2.5": 0.1929989371227857,
+          "ROUND_2_STARTS_NO": 0.5170556148745091,
+          "ROUND_2_STARTS_YES": 0.4829443851254908,
+          "ROUND_3_STARTS_NO": 0.7434827024856823,
+          "ROUND_3_STARTS_YES": 0.2565172975143177,
+          "UNDER_0.5": 0.3138355038371874,
+          "UNDER_1.5": 0.651914760614174,
+          "UNDER_2.5": 0.8070010628772143
+        },
+        "timing_v033_sim_10000": {
+          "GTD_NO": 0.8502000000000001,
+          "GTD_YES": 0.1498,
+          "OVER_0.5": 0.677,
+          "OVER_1.5": 0.3434,
+          "OVER_2.5": 0.1867,
+          "ROUND_2_STARTS_NO": 0.5199,
+          "ROUND_2_STARTS_YES": 0.4801,
+          "ROUND_3_STARTS_NO": 0.7468,
+          "ROUND_3_STARTS_YES": 0.2532,
+          "UNDER_0.5": 0.32299999999999995,
+          "UNDER_1.5": 0.6566000000000001,
+          "UNDER_2.5": 0.8133
+        },
+        "weight_class": "Middleweight",
+        "winner_model_disagreement": false,
+        "winner_reference_p_a": 0.7454533923605153,
+        "winner_reference_pick": "Julien Leblanc",
+        "winner_v033_p_a": 0.7285241901290807,
+        "winner_v033_pick": "Julien Leblanc"
+      },
+      {
+        "a": "Tanner Boser",
+        "b": "Jhonata Diniz",
+        "double_chance_calibrated": {
+          "A_KO_OR_DEC": 0.5493202307682313,
+          "A_KO_OR_SUB": 0.4059455215379879,
+          "A_SUB_OR_DEC": 0.1948820648779172,
+          "B_KO_OR_DEC": 0.409812021194049,
+          "B_KO_OR_SUB": 0.2865758764446583,
+          "B_SUB_OR_DEC": 0.15346428517715624
+        },
+        "evidence_adjusted_confidence_10": 5.7507390859206815,
+        "evidence_density": {
+          "a_age": 35.20948410987221,
+          "a_days_since_last": 182.0,
+          "a_prior_ufc_bouts": 11,
+          "a_reach": 75.0,
+          "b_age": 35.31900039015175,
+          "b_days_since_last": 371.0,
+          "b_prior_ufc_bouts": 5,
+          "b_reach": 79.0
+        },
+        "fight_no": 7,
+        "joint_baseline": {
+          "A_DEC": 0.2704295946588223,
+          "A_KO": 0.27352149172615337,
+          "A_SUB": 0.031122822207092504,
+          "B_DEC": 0.21545991940720682,
+          "B_KO": 0.19155148303165645,
+          "B_SUB": 0.01791468896906854
+        },
+        "joint_calibrated": {
+          "A_DEC": 0.16912838705408031,
+          "A_KO": 0.380191843714151,
+          "A_SUB": 0.025753677823836904,
+          "B_DEC": 0.13835021496327346,
+          "B_KO": 0.27146180623077554,
+          "B_SUB": 0.015114070213882787
+        },
+        "joint_calibrated_sim_10000": {
+          "A_DEC": 0.161,
+          "A_KO": 0.3846,
+          "A_SUB": 0.0245,
+          "B_DEC": 0.1412,
+          "B_KO": 0.2754,
+          "B_SUB": 0.0133
+        },
+        "joint_residual": {
+          "A_DEC": 0.22264004611438692,
+          "A_KO": 0.33266010816249014,
+          "A_SUB": 0.0197737543151911,
+          "B_DEC": 0.2649029954837336,
+          "B_KO": 0.14803033194130358,
+          "B_SUB": 0.011992763982894655
+        },
+        "method_if_a_wins_baseline": {
+          "DEC": 0.4702518939190007,
+          "KO": 0.47562841512981474,
+          "SUB": 0.05411969095118459
+        },
+        "method_if_a_wins_calibrated": {
+          "DEC": 0.29409852286317595,
+          "KO": 0.6611182285159839,
+          "SUB": 0.04478324862084017
+        },
+        "method_if_a_wins_residual": {
+          "DEC": 0.38715031718178305,
+          "KO": 0.5784649645763436,
+          "SUB": 0.034384718241873356
+        },
+        "method_if_b_wins_baseline": {
+          "DEC": 0.5070526940186497,
+          "KO": 0.4507877649898551,
+          "SUB": 0.0421595409914952
+        },
+        "method_if_b_wins_calibrated": {
+          "DEC": 0.32558653789620173,
+          "KO": 0.6388447584645266,
+          "SUB": 0.035568703639271664
+        },
+        "method_if_b_wins_residual": {
+          "DEC": 0.6234095783716538,
+          "KO": 0.3483672453504238,
+          "SUB": 0.028223176277922465
+        },
+        "raw_probability_confidence_10": 5.7507390859206815,
+        "scheduled_seconds": 900,
+        "sparse_ufc_evidence": false,
+        "timing_v033_direct": {
+          "GTD_NO": 0.48121005427256336,
+          "GTD_YES": 0.5187899457274366,
+          "OVER_0.5": 0.8782249573240709,
+          "OVER_1.5": 0.6953997304627981,
+          "OVER_2.5": 0.5680689973911536,
+          "ROUND_2_STARTS_NO": 0.22177367401729564,
+          "ROUND_2_STARTS_YES": 0.7782263259827044,
+          "ROUND_3_STARTS_NO": 0.3737562296904551,
+          "ROUND_3_STARTS_YES": 0.6262437703095449,
+          "UNDER_0.5": 0.12177504267592909,
+          "UNDER_1.5": 0.3046002695372019,
+          "UNDER_2.5": 0.4319310026088464
+        },
+        "timing_v033_sim_10000": {
+          "GTD_NO": 0.4727,
+          "GTD_YES": 0.5273,
+          "OVER_0.5": 0.8791,
+          "OVER_1.5": 0.7012,
+          "OVER_2.5": 0.5771,
+          "ROUND_2_STARTS_NO": 0.21999999999999997,
+          "ROUND_2_STARTS_YES": 0.78,
+          "ROUND_3_STARTS_NO": 0.36550000000000005,
+          "ROUND_3_STARTS_YES": 0.6345,
+          "UNDER_0.5": 0.12090000000000001,
+          "UNDER_1.5": 0.29879999999999995,
+          "UNDER_2.5": 0.42290000000000005
+        },
+        "weight_class": "Heavyweight",
+        "winner_model_disagreement": false,
+        "winner_reference_p_a": 0.5750739085920682,
+        "winner_reference_pick": "Tanner Boser",
+        "winner_v033_p_a": 0.5670950822765619,
+        "winner_v033_pick": "Tanner Boser"
+      },
+      {
+        "a": "Mandel Nallo",
+        "b": "Nate Landwehr",
+        "double_chance_calibrated": {
+          "A_KO_OR_DEC": 0.41830804218658024,
+          "A_KO_OR_SUB": 0.26414952126981406,
+          "A_SUB_OR_DEC": 0.26027540816829065,
+          "B_KO_OR_DEC": 0.4942305679326638,
+          "B_KO_OR_SUB": 0.4042326285695545,
+          "B_SUB_OR_DEC": 0.15880383187309666
+        },
+        "evidence_adjusted_confidence_10": 5.286335141876575,
+        "evidence_density": {
+          "a_age": 37.22732157402274,
+          "a_days_since_last": 182.0,
+          "a_prior_ufc_bouts": 1,
+          "a_reach": 75.0,
+          "b_age": 38.36355298192297,
+          "b_days_since_last": 189.0,
+          "b_prior_ufc_bouts": 11,
+          "b_reach": 72.0
+        },
+        "fight_no": 8,
+        "joint_baseline": {
+          "A_DEC": 0.2949191498646322,
+          "A_KO": 0.12406499146673443,
+          "A_SUB": 0.052382344480975944,
+          "B_DEC": 0.20935233620010146,
+          "B_KO": 0.276132933412613,
+          "B_SUB": 0.043148244574943075
+        },
+        "joint_calibrated": {
+          "A_DEC": 0.20721696454252841,
+          "A_KO": 0.21109107764405186,
+          "A_SUB": 0.0530584436257622,
+          "B_DEC": 0.12440088561810297,
+          "B_KO": 0.3698296823145608,
+          "B_SUB": 0.03440294625499367
+        },
+        "joint_calibrated_sim_10000": {
+          "A_DEC": 0.2074,
+          "A_KO": 0.2094,
+          "A_SUB": 0.051,
+          "B_DEC": 0.1262,
+          "B_KO": 0.371,
+          "B_SUB": 0.035
+        },
+        "joint_residual": {
+          "A_DEC": 0.3336133057455584,
+          "A_KO": 0.10263829101898868,
+          "A_SUB": 0.03511488904779541,
+          "B_DEC": 0.1343368880473617,
+          "B_KO": 0.3663665583444085,
+          "B_SUB": 0.027930067795887283
+        },
+        "method_if_a_wins_baseline": {
+          "DEC": 0.6256684739823517,
+          "KO": 0.26320282667725853,
+          "SUB": 0.11112869934038984
+        },
+        "method_if_a_wins_calibrated": {
+          "DEC": 0.43960903199432033,
+          "KO": 0.4478279300664794,
+          "SUB": 0.11256303793920025
+        },
+        "method_if_a_wins_residual": {
+          "DEC": 0.7077577973551019,
+          "KO": 0.21774626348774911,
+          "SUB": 0.07449593915714901
+        },
+        "method_if_b_wins_baseline": {
+          "DEC": 0.39602547054136317,
+          "KO": 0.5223523026854284,
+          "SUB": 0.08162222677320842
+        },
+        "method_if_b_wins_calibrated": {
+          "DEC": 0.2353253856961146,
+          "KO": 0.699595603360245,
+          "SUB": 0.06507901094364045
+        },
+        "method_if_b_wins_residual": {
+          "DEC": 0.2541210204082407,
+          "KO": 0.6930445166863816,
+          "SUB": 0.05283446290537777
+        },
+        "raw_probability_confidence_10": 5.286335141876575,
+        "scheduled_seconds": 900,
+        "sparse_ufc_evidence": true,
+        "timing_v033_direct": {
+          "GTD_NO": 0.5136463773065163,
+          "GTD_YES": 0.4863536226934837,
+          "OVER_0.5": 0.8670998019038503,
+          "OVER_1.5": 0.6710134481695107,
+          "OVER_2.5": 0.5373378611789417,
+          "ROUND_2_STARTS_NO": 0.2407062412232751,
+          "ROUND_2_STARTS_YES": 0.7592937587767249,
+          "ROUND_3_STARTS_NO": 0.40191679340255493,
+          "ROUND_3_STARTS_YES": 0.5980832065974451,
+          "UNDER_0.5": 0.13290019809614972,
+          "UNDER_1.5": 0.3289865518304893,
+          "UNDER_2.5": 0.46266213882105833
+        },
+        "timing_v033_sim_10000": {
+          "GTD_NO": 0.51,
+          "GTD_YES": 0.49,
+          "OVER_0.5": 0.8695,
+          "OVER_1.5": 0.6782,
+          "OVER_2.5": 0.5406,
+          "ROUND_2_STARTS_NO": 0.238,
+          "ROUND_2_STARTS_YES": 0.762,
+          "ROUND_3_STARTS_NO": 0.3931,
+          "ROUND_3_STARTS_YES": 0.6069,
+          "UNDER_0.5": 0.13049999999999995,
+          "UNDER_1.5": 0.3218,
+          "UNDER_2.5": 0.45940000000000003
+        },
+        "weight_class": "Lightweight",
+        "winner_model_disagreement": false,
+        "winner_reference_p_a": 0.4713664858123425,
+        "winner_reference_pick": "Nate Landwehr",
+        "winner_v033_p_a": 0.4723400799472735,
+        "winner_v033_pick": "Nate Landwehr"
+      },
+      {
+        "a": "Louis Jourdain",
+        "b": "Timmy Cuamba",
+        "double_chance_calibrated": {
+          "A_KO_OR_DEC": 0.4930222799948494,
+          "A_KO_OR_SUB": 0.3558718507147985,
+          "A_SUB_OR_DEC": 0.3207853799206177,
+          "B_KO_OR_DEC": 0.33979806420904884,
+          "B_KO_OR_SUB": 0.2858635909908542,
+          "B_SUB_OR_DEC": 0.2046588341698315
+        },
+        "evidence_adjusted_confidence_10": 5.848397553151328,
+        "evidence_density": {
+          "a_age": 29.596774745545765,
+          "a_days_since_last": null,
+          "a_prior_ufc_bouts": 0,
+          "a_reach": 69.0,
+          "b_age": 27.688453561674777,
+          "b_days_since_last": 154.0,
+          "b_prior_ufc_bouts": 5,
+          "b_reach": 71.0
+        },
+        "fight_no": 9,
+        "joint_baseline": {
+          "A_DEC": 0.33816152225303747,
+          "A_KO": 0.15572192879850827,
+          "A_SUB": 0.09095630426358707,
+          "B_DEC": 0.20374265123277063,
+          "B_KO": 0.13202206777635384,
+          "B_SUB": 0.07939552567574276
+        },
+        "joint_calibrated": {
+          "A_DEC": 0.22896790460033428,
+          "A_KO": 0.2640543753945151,
+          "A_SUB": 0.0918174753202834,
+          "B_DEC": 0.12929665369401308,
+          "B_KO": 0.21050141051503576,
+          "B_SUB": 0.07536218047581841
+        },
+        "joint_calibrated_sim_10000": {
+          "A_DEC": 0.229,
+          "A_KO": 0.2595,
+          "A_SUB": 0.096,
+          "B_DEC": 0.1325,
+          "B_KO": 0.2081,
+          "B_SUB": 0.0749
+        },
+        "joint_residual": {
+          "A_DEC": 0.42747938958946163,
+          "A_KO": 0.08657117463446339,
+          "A_SUB": 0.07078919109120774,
+          "B_DEC": 0.20807065883831863,
+          "B_KO": 0.10024770168291683,
+          "B_SUB": 0.10684188416363177
+        },
+        "method_if_a_wins_baseline": {
+          "DEC": 0.5782122695657442,
+          "KO": 0.26626426706337647,
+          "SUB": 0.1555234633708793
+        },
+        "method_if_a_wins_calibrated": {
+          "DEC": 0.3915053696665305,
+          "KO": 0.45149867633781676,
+          "SUB": 0.15699595399565278
+        },
+        "method_if_a_wins_residual": {
+          "DEC": 0.7309342186546814,
+          "KO": 0.1480254614151798,
+          "SUB": 0.12104031993013877
+        },
+        "method_if_b_wins_baseline": {
+          "DEC": 0.49075665081425157,
+          "KO": 0.31800267358587503,
+          "SUB": 0.1912406755998734
+        },
+        "method_if_b_wins_calibrated": {
+          "DEC": 0.31143794558690796,
+          "KO": 0.5070365315802807,
+          "SUB": 0.18152552283281134
+        },
+        "method_if_b_wins_residual": {
+          "DEC": 0.5011815594151058,
+          "KO": 0.24146748867780235,
+          "SUB": 0.2573509519070919
+        },
+        "raw_probability_confidence_10": 5.848397553151328,
+        "scheduled_seconds": 900,
+        "sparse_ufc_evidence": true,
+        "timing_v033_direct": {
+          "GTD_NO": 0.4579188548385479,
+          "GTD_YES": 0.5420811451614521,
+          "OVER_0.5": 0.8858762530342894,
+          "OVER_1.5": 0.712495074383476,
+          "OVER_2.5": 0.5899722422043036,
+          "ROUND_2_STARTS_NO": 0.20862329714264494,
+          "ROUND_2_STARTS_YES": 0.7913767028573551,
+          "ROUND_3_STARTS_NO": 0.3538448644905404,
+          "ROUND_3_STARTS_YES": 0.6461551355094596,
+          "UNDER_0.5": 0.11412374696571059,
+          "UNDER_1.5": 0.28750492561652397,
+          "UNDER_2.5": 0.41002775779569645
+        },
+        "timing_v033_sim_10000": {
+          "GTD_NO": 0.46199999999999997,
+          "GTD_YES": 0.538,
+          "OVER_0.5": 0.8884,
+          "OVER_1.5": 0.71,
+          "OVER_2.5": 0.5858,
+          "ROUND_2_STARTS_NO": 0.20850000000000002,
+          "ROUND_2_STARTS_YES": 0.7915,
+          "ROUND_3_STARTS_NO": 0.35829999999999995,
+          "ROUND_3_STARTS_YES": 0.6417,
+          "UNDER_0.5": 0.11160000000000003,
+          "UNDER_1.5": 0.29000000000000004,
+          "UNDER_2.5": 0.4142
+        },
+        "weight_class": "Bantamweight",
+        "winner_model_disagreement": false,
+        "winner_reference_p_a": 0.5848397553151328,
+        "winner_reference_pick": "Louis Jourdain",
+        "winner_v033_p_a": 0.5880055594133183,
+        "winner_v033_pick": "Louis Jourdain"
+      },
+      {
+        "a": "Marc-Andre Barriault",
+        "b": "Kyle Daukaus",
+        "double_chance_calibrated": {
+          "A_KO_OR_DEC": 0.2974371641582767,
+          "A_KO_OR_SUB": 0.2532228098404273,
+          "A_SUB_OR_DEC": 0.08762822527273992,
+          "B_KO_OR_DEC": 0.5170115841491493,
+          "B_KO_OR_SUB": 0.4457744951299097,
+          "B_SUB_OR_DEC": 0.398925721449497
+        },
+        "evidence_adjusted_confidence_10": 6.80855900364278,
+        "evidence_density": {
+          "a_age": 36.66057482357612,
+          "a_days_since_last": 252.0,
+          "a_prior_ufc_bouts": 16,
+          "a_reach": 74.0,
+          "b_age": 33.63518758085382,
+          "b_days_since_last": 125.0,
+          "b_prior_ufc_bouts": 9,
+          "b_reach": 76.0
+        },
+        "fight_no": 10,
+        "joint_baseline": {
+          "A_DEC": 0.11386327046579028,
+          "A_KO": 0.1773491022308252,
+          "A_SUB": 0.027931726939106498,
+          "B_DEC": 0.3602433482613154,
+          "B_KO": 0.16223651447244827,
+          "B_SUB": 0.15837603763051444
+        },
+        "joint_calibrated": {
+          "A_DEC": 0.06592128979529469,
+          "A_KO": 0.23151587436298204,
+          "A_SUB": 0.021706935477445226,
+          "B_DEC": 0.2350814052343683,
+          "B_KO": 0.28193017891478095,
+          "B_SUB": 0.16384431621512874
+        },
+        "joint_calibrated_sim_10000": {
+          "A_DEC": 0.0665,
+          "A_KO": 0.2256,
+          "A_SUB": 0.0208,
+          "B_DEC": 0.237,
+          "B_KO": 0.282,
+          "B_SUB": 0.1681
+        },
+        "joint_residual": {
+          "A_DEC": 0.12168700285086241,
+          "A_KO": 0.1776583066854635,
+          "A_SUB": 0.01979879009939603,
+          "B_DEC": 0.3296421678937072,
+          "B_KO": 0.19021570160933893,
+          "B_SUB": 0.16099803086123188
+        },
+        "method_if_a_wins_baseline": {
+          "DEC": 0.35677698756065457,
+          "KO": 0.5557022750326743,
+          "SUB": 0.08752073740667109
+        },
+        "method_if_a_wins_calibrated": {
+          "DEC": 0.20655650494725952,
+          "KO": 0.7254273998085483,
+          "SUB": 0.06801609524419219
+        },
+        "method_if_a_wins_residual": {
+          "DEC": 0.3812917205417823,
+          "KO": 0.5566711303397011,
+          "SUB": 0.06203714911851669
+        },
+        "method_if_b_wins_baseline": {
+          "DEC": 0.5291036591862897,
+          "KO": 0.2382831879486495,
+          "SUB": 0.23261315286506082
+        },
+        "method_if_b_wins_calibrated": {
+          "DEC": 0.3452733612334017,
+          "KO": 0.41408200878326823,
+          "SUB": 0.24064462998333008
+        },
+        "method_if_b_wins_residual": {
+          "DEC": 0.48415849479653317,
+          "KO": 0.27937732713716357,
+          "SUB": 0.23646417806630327
+        },
+        "raw_probability_confidence_10": 6.80855900364278,
+        "scheduled_seconds": 900,
+        "sparse_ufc_evidence": false,
+        "timing_v033_direct": {
+          "GTD_NO": 0.5582320783409969,
+          "GTD_YES": 0.4417679216590032,
+          "OVER_0.5": 0.8507995824350735,
+          "OVER_1.5": 0.6362805357028072,
+          "OVER_2.5": 0.49462856734853045,
+          "ROUND_2_STARTS_NO": 0.2680420078288175,
+          "ROUND_2_STARTS_YES": 0.7319579921711825,
+          "ROUND_3_STARTS_NO": 0.44151908215059665,
+          "ROUND_3_STARTS_YES": 0.5584809178494033,
+          "UNDER_0.5": 0.14920041756492652,
+          "UNDER_1.5": 0.3637194642971928,
+          "UNDER_2.5": 0.5053714326514696
+        },
+        "timing_v033_sim_10000": {
+          "GTD_NO": 0.5583,
+          "GTD_YES": 0.4417,
+          "OVER_0.5": 0.847,
+          "OVER_1.5": 0.6301,
+          "OVER_2.5": 0.4932,
+          "ROUND_2_STARTS_NO": 0.2694,
+          "ROUND_2_STARTS_YES": 0.7306,
+          "ROUND_3_STARTS_NO": 0.44520000000000004,
+          "ROUND_3_STARTS_YES": 0.5548,
+          "UNDER_0.5": 0.15300000000000002,
+          "UNDER_1.5": 0.3699,
+          "UNDER_2.5": 0.5067999999999999
+        },
+        "weight_class": "Middleweight",
+        "winner_model_disagreement": false,
+        "winner_reference_p_a": 0.31914409963572193,
+        "winner_reference_pick": "Kyle Daukaus",
+        "winner_v033_p_a": 0.31530829597342463,
+        "winner_v033_pick": "Kyle Daukaus"
+      },
+      {
+        "a": "Kyle Nelson",
+        "b": "Cristian Perez",
+        "double_chance_calibrated": {
+          "A_KO_OR_DEC": 0.26618313066580984,
+          "A_KO_OR_SUB": 0.2412882752169283,
+          "A_SUB_OR_DEC": 0.1780862336640402,
+          "B_KO_OR_DEC": 0.5864576168447305,
+          "B_KO_OR_SUB": 0.5068608502409458,
+          "B_SUB_OR_DEC": 0.22112389336754484
+        },
+        "evidence_adjusted_confidence_10": 6.572211802266108,
+        "evidence_density": {
+          "a_age": 35.494226438599014,
+          "a_days_since_last": 203.0,
+          "a_prior_ufc_bouts": 11,
+          "a_reach": 71.0,
+          "b_age": 27.16825123034696,
+          "b_days_since_last": null,
+          "b_prior_ufc_bouts": 0,
+          "b_reach": 72.0
+        },
+        "fight_no": 11,
+        "joint_baseline": {
+          "A_DEC": 0.16200674461141973,
+          "A_KO": 0.1014869688640543,
+          "A_SUB": 0.07928510629791521,
+          "B_DEC": 0.2545264272202614,
+          "B_KO": 0.31644223142587047,
+          "B_SUB": 0.08625252158047896
+        },
+        "joint_calibrated": {
+          "A_DEC": 0.10149054455646088,
+          "A_KO": 0.16469258610934898,
+          "A_SUB": 0.07659568910757933,
+          "B_DEC": 0.15036032998566473,
+          "B_KO": 0.4360972868590658,
+          "B_SUB": 0.0707635633818801
+        },
+        "joint_calibrated_sim_10000": {
+          "A_DEC": 0.0964,
+          "A_KO": 0.1668,
+          "A_SUB": 0.079,
+          "B_DEC": 0.1512,
+          "B_KO": 0.4314,
+          "B_SUB": 0.0752
+        },
+        "joint_residual": {
+          "A_DEC": 0.1729798933308096,
+          "A_KO": 0.06758396376550983,
+          "A_SUB": 0.10221496267706984,
+          "B_DEC": 0.43301761852615195,
+          "B_KO": 0.15542017334340238,
+          "B_SUB": 0.06878338835705647
+        },
+        "method_if_a_wins_baseline": {
+          "DEC": 0.47262763994147083,
+          "KO": 0.2960712944024582,
+          "SUB": 0.23130106565607092
+        },
+        "method_if_a_wins_calibrated": {
+          "DEC": 0.2960817258883037,
+          "KO": 0.48046313426899334,
+          "SUB": 0.22345513984270288
+        },
+        "method_if_a_wins_residual": {
+          "DEC": 0.5046399700108847,
+          "KO": 0.19716493513277608,
+          "SUB": 0.29819509485633927
+        },
+        "method_if_b_wins_baseline": {
+          "DEC": 0.3872766655701819,
+          "KO": 0.48148513916846186,
+          "SUB": 0.13123819526135624
+        },
+        "method_if_b_wins_calibrated": {
+          "DEC": 0.22878192990344637,
+          "KO": 0.6635472196874406,
+          "SUB": 0.10767085040911302
+        },
+        "method_if_b_wins_residual": {
+          "DEC": 0.6588613263754629,
+          "KO": 0.23648077393034303,
+          "SUB": 0.10465789969419405
+        },
+        "raw_probability_confidence_10": 6.572211802266108,
+        "scheduled_seconds": 900,
+        "sparse_ufc_evidence": true,
+        "timing_v033_direct": {
+          "GTD_NO": 0.5488366592700671,
+          "GTD_YES": 0.45116334072993297,
+          "OVER_0.5": 0.8543400841548762,
+          "OVER_1.5": 0.6437246753244804,
+          "OVER_2.5": 0.5036760796853924,
+          "ROUND_2_STARTS_NO": 0.2621453434454024,
+          "ROUND_2_STARTS_YES": 0.7378546565545976,
+          "ROUND_3_STARTS_NO": 0.4330823454769708,
+          "ROUND_3_STARTS_YES": 0.5669176545230292,
+          "UNDER_0.5": 0.14565991584512383,
+          "UNDER_1.5": 0.3562753246755196,
+          "UNDER_2.5": 0.4963239203146076
+        },
+        "timing_v033_sim_10000": {
+          "GTD_NO": 0.5555,
+          "GTD_YES": 0.4445,
+          "OVER_0.5": 0.8533,
+          "OVER_1.5": 0.6362,
+          "OVER_2.5": 0.4952,
+          "ROUND_2_STARTS_NO": 0.26359999999999995,
+          "ROUND_2_STARTS_YES": 0.7364,
+          "ROUND_3_STARTS_NO": 0.4365,
+          "ROUND_3_STARTS_YES": 0.5635,
+          "UNDER_0.5": 0.14670000000000005,
+          "UNDER_1.5": 0.3638,
+          "UNDER_2.5": 0.5048
+        },
+        "weight_class": "Lightweight",
+        "winner_model_disagreement": false,
+        "winner_reference_p_a": 0.34277881977338925,
+        "winner_reference_pick": "Cristian Perez",
+        "winner_v033_p_a": 0.344426014295639,
+        "winner_v033_pick": "Cristian Perez"
+      },
+      {
+        "a": "Erin Blanchfield",
+        "b": "Jasmine Jasudavicius",
+        "double_chance_calibrated": {
+          "A_KO_OR_DEC": 0.6048406347060346,
+          "A_KO_OR_SUB": 0.3724311005071097,
+          "A_SUB_OR_DEC": 0.4829993796576647,
+          "B_KO_OR_DEC": 0.2188592373010374,
+          "B_KO_OR_SUB": 0.11539571499351217,
+          "B_SUB_OR_DEC": 0.20547393283464152
+        },
+        "evidence_adjusted_confidence_10": 7.301355574354044,
+        "evidence_density": {
+          "a_age": 27.455731466080753,
+          "a_days_since_last": 336.0,
+          "a_prior_ufc_bouts": 9,
+          "a_reach": 66.0,
+          "b_age": 37.62979390405005,
+          "b_days_since_last": 182.0,
+          "b_prior_ufc_bouts": 12,
+          "b_reach": 68.0
+        },
+        "fight_no": 12,
+        "joint_baseline": {
+          "A_DEC": 0.4904640598415546,
+          "A_KO": 0.1294384926276498,
+          "A_SUB": 0.11023300496620007,
+          "B_DEC": 0.19980781873210893,
+          "B_KO": 0.030059631230945745,
+          "B_SUB": 0.039996992601540875
+        },
+        "joint_calibrated": {
+          "A_DEC": 0.3577044569282948,
+          "A_KO": 0.24713617777773975,
+          "A_SUB": 0.12529492272936996,
+          "B_DEC": 0.15446872757108338,
+          "B_KO": 0.06439050972995401,
+          "B_SUB": 0.05100520526355815
+        },
+        "joint_calibrated_sim_10000": {
+          "A_DEC": 0.3492,
+          "A_KO": 0.2483,
+          "A_SUB": 0.1318,
+          "B_DEC": 0.1527,
+          "B_KO": 0.0666,
+          "B_SUB": 0.0514
+        },
+        "joint_residual": {
+          "A_DEC": 0.5154692445390208,
+          "A_KO": 0.11101511619987106,
+          "A_SUB": 0.10365119669651264,
+          "B_DEC": 0.211800765443245,
+          "B_KO": 0.02106276164178354,
+          "B_SUB": 0.03700091547956699
+        },
+        "method_if_a_wins_baseline": {
+          "DEC": 0.6717438355752812,
+          "KO": 0.17728008355366437,
+          "SUB": 0.1509760808710545
+        },
+        "method_if_a_wins_calibrated": {
+          "DEC": 0.4899151305337449,
+          "KO": 0.3384798552282588,
+          "SUB": 0.17160501423799632
+        },
+        "method_if_a_wins_residual": {
+          "DEC": 0.7059911536833003,
+          "KO": 0.1520472672085863,
+          "SUB": 0.14196157910811338
+        },
+        "method_if_b_wins_baseline": {
+          "DEC": 0.7404006872238544,
+          "KO": 0.1113878914364592,
+          "SUB": 0.14821142133968643
+        },
+        "method_if_b_wins_calibrated": {
+          "DEC": 0.5723937770501547,
+          "KO": 0.23860316356624608,
+          "SUB": 0.18900305938359924
+        },
+        "method_if_b_wins_residual": {
+          "DEC": 0.784841320443866,
+          "KO": 0.07804941414889031,
+          "SUB": 0.13710926540724366
+        },
+        "raw_probability_confidence_10": 7.301355574354044,
+        "scheduled_seconds": 900,
+        "sparse_ufc_evidence": false,
+        "timing_v033_direct": {
+          "GTD_NO": 0.30165641107233687,
+          "GTD_YES": 0.6983435889276631,
+          "OVER_0.5": 0.9313648617909426,
+          "OVER_1.5": 0.8196793059073351,
+          "OVER_2.5": 0.7338557386675734,
+          "ROUND_2_STARTS_NO": 0.12826631952697376,
+          "ROUND_2_STARTS_YES": 0.8717336804730262,
+          "ROUND_3_STARTS_NO": 0.22596176815878677,
+          "ROUND_3_STARTS_YES": 0.7740382318412132,
+          "UNDER_0.5": 0.06863513820905742,
+          "UNDER_1.5": 0.18032069409266493,
+          "UNDER_2.5": 0.26614426133242663
+        },
+        "timing_v033_sim_10000": {
+          "GTD_NO": 0.2914,
+          "GTD_YES": 0.7086,
+          "OVER_0.5": 0.9314,
+          "OVER_1.5": 0.8234,
+          "OVER_2.5": 0.7449,
+          "ROUND_2_STARTS_NO": 0.12380000000000002,
+          "ROUND_2_STARTS_YES": 0.8762,
+          "ROUND_3_STARTS_NO": 0.2198,
+          "ROUND_3_STARTS_YES": 0.7802,
+          "UNDER_0.5": 0.0686,
+          "UNDER_1.5": 0.17659999999999998,
+          "UNDER_2.5": 0.2551
+        },
+        "weight_class": "Women's Flyweight",
+        "winner_model_disagreement": false,
+        "winner_reference_p_a": 0.7301355574354045,
+        "winner_reference_pick": "Erin Blanchfield",
+        "winner_v033_p_a": 0.7324844001551286,
+        "winner_v033_pick": "Erin Blanchfield"
+      },
+      {
+        "a": "Joaquin Buckley",
+        "b": "Mike Malott",
+        "double_chance_calibrated": {
+          "A_KO_OR_DEC": 0.5808148353410437,
+          "A_KO_OR_SUB": 0.5049498033347045,
+          "A_SUB_OR_DEC": 0.16668935681667135,
+          "B_KO_OR_DEC": 0.3223149199565436,
+          "B_KO_OR_SUB": 0.2786924882818761,
+          "B_SUB_OR_DEC": 0.1465385962691611
+        },
+        "evidence_adjusted_confidence_10": 6.262269977462097,
+        "evidence_density": {
+          "a_age": 32.47431500989069,
+          "a_days_since_last": 161.0,
+          "a_prior_ufc_bouts": 17,
+          "a_reach": 76.0,
+          "b_age": 34.943907130194326,
+          "b_days_since_last": 182.0,
+          "b_prior_ufc_bouts": 8,
+          "b_reach": 73.0
+        },
+        "fight_no": 13,
+        "joint_baseline": {
+          "A_DEC": 0.21198251973709253,
+          "A_KO": 0.3552703988767995,
+          "A_SUB": 0.05897407913231766,
+          "B_DEC": 0.1573322346373463,
+          "B_KO": 0.15679667763459887,
+          "B_SUB": 0.059644089981845116
+        },
+        "joint_calibrated": {
+          "A_DEC": 0.12127719441150527,
+          "A_KO": 0.4595376409295384,
+          "A_SUB": 0.045412162405166094,
+          "B_DEC": 0.0950805139719143,
+          "B_KO": 0.22723440598462927,
+          "B_SUB": 0.0514580822972468
+        },
+        "joint_calibrated_sim_10000": {
+          "A_DEC": 0.1166,
+          "A_KO": 0.4586,
+          "A_SUB": 0.0445,
+          "B_DEC": 0.0983,
+          "B_KO": 0.2278,
+          "B_SUB": 0.0542
+        },
+        "joint_residual": {
+          "A_DEC": 0.24225622700010727,
+          "A_KO": 0.3367290798102218,
+          "A_SUB": 0.047241690935880605,
+          "B_DEC": 0.16030435708341964,
+          "B_KO": 0.17351509392733122,
+          "B_SUB": 0.03995355124303942
+        },
+        "method_if_a_wins_baseline": {
+          "DEC": 0.33850747492525457,
+          "KO": 0.5673188798237976,
+          "SUB": 0.09417364525094783
+        },
+        "method_if_a_wins_calibrated": {
+          "DEC": 0.19366331194276476,
+          "KO": 0.7338195935074883,
+          "SUB": 0.07251709454974699
+        },
+        "method_if_a_wins_residual": {
+          "DEC": 0.38685049969417984,
+          "KO": 0.5377108956051231,
+          "SUB": 0.07543860470069703
+        },
+        "method_if_b_wins_baseline": {
+          "DEC": 0.4209299058216045,
+          "KO": 0.4194970655695849,
+          "SUB": 0.15957302860881062
+        },
+        "method_if_b_wins_calibrated": {
+          "DEC": 0.25438036829464483,
+          "KO": 0.6079476169077028,
+          "SUB": 0.13767201479765243
+        },
+        "method_if_b_wins_residual": {
+          "DEC": 0.42888158351943695,
+          "KO": 0.4642258613678984,
+          "SUB": 0.10689255511266468
+        },
+        "raw_probability_confidence_10": 6.262269977462097,
+        "scheduled_seconds": 1500,
+        "sparse_ufc_evidence": false,
+        "timing_v033_direct": {
+          "GTD_NO": 0.6984012596340099,
+          "GTD_YES": 0.30159874036599016,
+          "OVER_0.5": 0.8588248530793231,
+          "OVER_1.5": 0.6490608490936713,
+          "OVER_2.5": 0.5052780423462028,
+          "OVER_3.5": 0.4039188693669808,
+          "OVER_4.5": 0.3306501765161737,
+          "ROUND_2_STARTS_NO": 0.25630113892108664,
+          "ROUND_2_STARTS_YES": 0.7436988610789134,
+          "ROUND_3_STARTS_NO": 0.4293269259717438,
+          "ROUND_3_STARTS_YES": 0.5706730740282562,
+          "ROUND_4_STARTS_NO": 0.549649139725626,
+          "ROUND_4_STARTS_YES": 0.450350860274374,
+          "ROUND_5_STARTS_NO": 0.6355708785220645,
+          "ROUND_5_STARTS_YES": 0.3644291214779355,
+          "UNDER_0.5": 0.1411751469206769,
+          "UNDER_1.5": 0.35093915090632866,
+          "UNDER_2.5": 0.49472195765379723,
+          "UNDER_3.5": 0.5960811306330192,
+          "UNDER_4.5": 0.6693498234838263
+        },
+        "timing_v033_sim_10000": {
+          "GTD_NO": 0.6947,
+          "GTD_YES": 0.3053,
+          "OVER_0.5": 0.8594,
+          "OVER_1.5": 0.6516,
+          "OVER_2.5": 0.5138,
+          "OVER_3.5": 0.4092,
+          "OVER_4.5": 0.3343,
+          "ROUND_2_STARTS_NO": 0.254,
+          "ROUND_2_STARTS_YES": 0.746,
+          "ROUND_3_STARTS_NO": 0.42079999999999995,
+          "ROUND_3_STARTS_YES": 0.5792,
+          "ROUND_4_STARTS_NO": 0.5428,
+          "ROUND_4_STARTS_YES": 0.4572,
+          "ROUND_5_STARTS_NO": 0.63,
+          "ROUND_5_STARTS_YES": 0.37,
+          "UNDER_0.5": 0.14059999999999995,
+          "UNDER_1.5": 0.34840000000000004,
+          "UNDER_2.5": 0.48619999999999997,
+          "UNDER_3.5": 0.5908,
+          "UNDER_4.5": 0.6657
+        },
+        "weight_class": "Welterweight",
+        "winner_model_disagreement": false,
+        "winner_reference_p_a": 0.6262269977462097,
+        "winner_reference_pick": "Joaquin Buckley",
+        "winner_v033_p_a": 0.6290872183182786,
+        "winner_v033_pick": "Joaquin Buckley"
+      }
+    ],
+    "generated_at_utc": "2026-10-17T00:04:43.742882+00:00",
+    "locked_at_utc": "2026-10-17T00:04:43.742905+00:00",
+    "model_state": {
+      "champion_winner": "v0.27 reconstruction reference",
+      "clean_feedback_rows": 112,
+      "fighter_history_through": "2026-10-10",
+      "joint_simulations_per_fight": 10000,
+      "method_baseline": "v0.33 baseline retrained through 2026-10-10",
+      "method_calibration": "v0.33 calibrated leading shadow retrained through 2026-10-10",
+      "method_residual": "v0.33 residual comparison retrained through 2026-10-10",
+      "shadow_winner": "v0.33 full-stat shadow retrained through 2026-10-10",
+      "timing": "v0.33 30-second hazard shadow retrained through 2026-10-10",
+      "timing_simulations_per_fight": 10000
+    },
+    "odds_used": false,
+    "stage": "A_ODDS_BLIND_MODEL_RAW_POST_VEGAS122"
+  },
+  "sha256": "fbe2f1f451e396d550b94ebcb8392a234666a97653aa346bd446c12a8ac97160"
+}
