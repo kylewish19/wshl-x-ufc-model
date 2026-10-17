@@ -1,0 +1,112 @@
+{
+  "event": "UFC Edmonton: Buckley vs Malott",
+  "event_date": "2026-10-17",
+  "stage": "B_OFFICIAL_FANDUEL_PRICE_GATE",
+  "locked_at_local": "2026-10-17T15:43:34-04:00",
+  "sportsbook": "FanDuel",
+  "price_source": "user-provided FanDuel screenshots",
+  "stage_a_sha256": "fbe2f1f451e396d550b94ebcb8392a234666a97653aa346bd446c12a8ac97160",
+  "odds_used_in_stage_a": false,
+  "odds_used_only_for_stage_b": true,
+  "max_one_official_wager_per_fight": true,
+  "governance": {
+    "winner_reference_unchanged": true,
+    "v034_shadow_only": true,
+    "sparse_data_protections_retained": true,
+    "method_gate_retained": true,
+    "timing_probation_retained": true,
+    "timing_stake_cap_units": 0.25,
+    "research_can_downgrade_or_pass": true,
+    "price_alone_cannot_flip_stage_a_side": true
+  },
+  "official_wagers": [
+    {
+      "fight": "Tanner Boser vs Jhonata Diniz",
+      "market": "Tanner Boser moneyline",
+      "odds": 184,
+      "model_probability": 0.5750739085920682,
+      "break_even_probability": 0.352112676056338,
+      "edge_probability_points": 0.2229612325357302,
+      "ev_per_1u_risk": 0.6332099004014737,
+      "model_fair_american_odds": -135.33504301574965,
+      "stake_units": 0.75,
+      "reason": "Established UFC samples on both sides (11 vs 5 prior UFC bouts), reference and v0.33 agree on Boser, very large price edge, and no sparse-data block. Method remains non-official because winner probability is below the method promotion floor."
+    },
+    {
+      "fight": "Joaquin Buckley vs Mike Malott",
+      "market": "Joaquin Buckley by KO/TKO",
+      "odds": 220,
+      "model_probability": 0.4595376409295384,
+      "break_even_probability": 0.3125,
+      "edge_probability_points": 0.14703764092953842,
+      "ev_per_1u_risk": 0.4705204509745231,
+      "model_fair_american_odds": 117.61003037253514,
+      "stake_units": 0.5,
+      "reason": "Buckley winner probability clears the winner floor; KO is the top method in baseline, calibrated and residual layers; calibrated conditional KO probability is 0.7338195935 and exact calibrated joint KO probability is 0.4595376409; no sparse-data block. Chosen over Buckley ML under the one-wager-per-fight rule because the exact method clears governance and offers stronger modeled value."
+    }
+  ],
+  "total_risk_units": 1.25,
+  "timing_official_wagers": [],
+  "passes_and_watchlist": [
+    {
+      "fight": "Cody Chovancek vs SuYoung You",
+      "status": "PASS",
+      "note": "Chovancek ML -134 has only about a 1.5 percentage-point edge and Chovancek is a UFC debutant."
+    },
+    {
+      "fight": "Melissa Croden vs Chelsea Chandler",
+      "status": "PASS",
+      "note": "Croden ML is materially overpriced versus the frozen 53.8% Stage A probability. Chandler +270 is reverse-side value from a near-coinflip model, but price alone is not enough to flip the frozen side and research did not establish a material omitted fact."
+    },
+    {
+      "fight": "Chad Anheliger vs Steven Koslow",
+      "status": "PASS_SPARSE",
+      "note": "Koslow ML -166 shows a positive model edge, but Koslow has one prior UFC bout and a 1407-day layoff; sparse and inactivity risk prevent an official wager."
+    },
+    {
+      "fight": "Katlyn Cerminara vs Mackenzie Stiller",
+      "status": "PASS_SPARSE_MARKET_DISAGREEMENT",
+      "note": "Stage A strongly favors Stiller while FanDuel strongly favors Cerminara. Stiller is making her UFC debut against a highly experienced former title challenger; the disagreement is tracked, not bet."
+    },
+    {
+      "fight": "Javad Mahjoub vs Joel Faglier",
+      "status": "PASS_SPARSE",
+      "note": "Mahjoub +112 has a modest positive edge, but both fighters are UFC debutants."
+    },
+    {
+      "fight": "Julien Leblanc vs Nick Galanti",
+      "status": "PASS_SPARSE_MARKET_DISAGREEMENT",
+      "note": "Leblanc +480 creates an extreme raw edge in the frozen model, but the matchup is one UFC bout versus a debutant and current research materially supports caution: Leblanc was stopped in his UFC debut while Galanti enters 8-1 after a 35-second DWCS knockout and a regional title run. No official wager."
+    },
+    {
+      "fight": "Mandel Nallo vs Nate Landwehr",
+      "status": "PASS_SPARSE_MARKET_DISAGREEMENT",
+      "note": "Landwehr +235 is large raw value, but Stage A is only a 52.9% lean, Nallo has one UFC bout, Landwehr is 38, moving to lightweight and enters after three straight stoppage losses. No official wager."
+    },
+    {
+      "fight": "Louis Jourdain vs Timmy Cuamba",
+      "status": "PASS",
+      "note": "Jourdain ML -166 is more expensive than the frozen 58.5% probability and Jourdain is a UFC debutant."
+    },
+    {
+      "fight": "Marc-Andre Barriault vs Kyle Daukaus",
+      "status": "PASS",
+      "note": "Daukaus ML -200 has only a thin edge. KO/TKO-or-points +125 is positive by the calibrated union, but method layers disagree and submission remains a meaningful Daukaus path, so the derivative is not promoted."
+    },
+    {
+      "fight": "Kyle Nelson vs Cristian Perez",
+      "status": "PASS_SPARSE",
+      "note": "Perez ML -340 is overpriced. Nelson +275 is reverse-side value, but Perez is a UFC debutant with strong regional/DWCS finishing credentials and the frozen Stage A side remains Perez."
+    },
+    {
+      "fight": "Erin Blanchfield vs Jasmine Jasudavicius",
+      "status": "PASS_PRICE",
+      "note": "Blanchfield is one of the stronger Stage A sides, but -330 is more expensive than the frozen 73.0% win probability and the method/timing derivatives are also priced beyond model value."
+    }
+  ],
+  "timing_review": {
+    "official_timing_record_entering_event": "0-5, -3.00u",
+    "decision": "NO_OFFICIAL_TIMING_WAGER",
+    "note": "No timing market cleared the full combination of edge threshold, research-coherence and sparse-data rules. Boser-Diniz GTD YES had a numerical edge but conflicted with finish-risk evidence; several larger timing discrepancies occurred in sparse/debutant fights and remain blocked."
+  }
+}
