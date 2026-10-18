@@ -11,7 +11,8 @@ dependencies = [
   "numpy>=1.26",
   "pandas>=2.2",
   "scikit-learn>=1.5",
-  "joblib>=1.4"
+  "joblib>=1.4",
+  "requests>=2.32"
 ]
 
 [project.optional-dependencies]
