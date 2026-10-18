@@ -2,8 +2,10 @@ import pandas as pd
 
 from wshlx_ufc.ensemble_eligibility import (
     filter_lock_payload,
+    merge_unsupported_pairs,
     pair_key,
     unsupported_pairs_by_date,
+    unsupported_result_pairs_by_date,
 )
 
 
@@ -41,3 +43,35 @@ def test_accented_and_ascii_fighter_names_share_identity():
     assert pair_key("Ernesta Kareckaitė", "Melissa Gatto") == pair_key(
         "Ernesta Kareckaite", "Melissa Gatto"
     )
+
+
+def test_draw_is_excluded_even_when_method_is_decision():
+    events = pd.DataFrame([
+        {"EVENT": "UFC Fight Night: Allen vs. Duncan", "DATE": "2026-10-10"},
+    ])
+    results = pd.DataFrame([
+        {
+            "EVENT": "UFC Fight Night: Allen vs. Duncan",
+            "BOUT": "Ernesta Kareckaite vs. Melissa Gatto",
+            "OUTCOME": "D/D",
+            "METHOD": "Decision - Majority",
+        },
+        {
+            "EVENT": "UFC Fight Night: Allen vs. Duncan",
+            "BOUT": "Alpha vs. Beta",
+            "OUTCOME": "W/L",
+            "METHOD": "Decision - Unanimous",
+        },
+    ])
+    blocked = unsupported_result_pairs_by_date(results, events)
+    assert pair_key("Ernesta Kareckaitė", "Melissa Gatto") in blocked["2026-10-10"]
+    assert pair_key("Alpha", "Beta") not in blocked["2026-10-10"]
+
+    combined = merge_unsupported_pairs({}, blocked)
+    payload = {"fights": [
+        {"a": "Ernesta Kareckaite", "b": "Melissa Gatto"},
+        {"a": "Alpha", "b": "Beta"},
+    ]}
+    filtered, excluded = filter_lock_payload(payload, card_date="2026-10-10", unsupported=combined)
+    assert filtered["fights"] == [{"a": "Alpha", "b": "Beta"}]
+    assert excluded == ["Ernesta Kareckaite vs Melissa Gatto"]
