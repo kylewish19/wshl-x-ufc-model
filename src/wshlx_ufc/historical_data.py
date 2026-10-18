@@ -27,12 +27,21 @@ def load_source_files(root):
 
 def txt(x): return "" if pd.isna(x) else re.sub(r"\s+"," ",str(x)).strip()
 def col(df,*names):
-    # UFCStats mirrors have used punctuation/spacing variants such as TIME FORMAT,
-    # TIME_FORMAT, SUB ATT, and SUB.ATT. Normalize labels before matching so a
-    # harmless header change cannot silently erase an input feature.
+    # Prefer an exact header first. Only use punctuation/spacing normalization when
+    # it maps to exactly one source column. This prevents collisions such as
+    # SIG.STR. vs SIG.STR. % and TD vs TD % while still accepting TIME_FORMAT vs
+    # TIME FORMAT and SUB ATT vs SUB.ATT variants.
+    exact={str(c).strip().upper():c for c in df.columns}
+    for n in names:
+        key=str(n).strip().upper()
+        if key in exact:return exact[key]
     norm=lambda x: re.sub(r"[^A-Z0-9]+","",str(x).upper())
-    m={norm(c):c for c in df.columns}
-    return next((m[norm(n)] for n in names if norm(n) in m),None)
+    by_norm=defaultdict(list)
+    for c in df.columns:by_norm[norm(c)].append(c)
+    for n in names:
+        matches=by_norm.get(norm(n),[])
+        if len(matches)==1:return matches[0]
+    return None
 def bout(x):
     s=txt(x)
     for t in (" vs. "," vs "," v. "," v "):
