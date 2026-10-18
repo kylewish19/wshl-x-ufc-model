@@ -2,8 +2,10 @@
 
 This module keeps a transparent logistic benchmark next to a nonlinear histogram
 gradient-boosting model. Evaluation is chronological; random train/test splits are not
-used for official metrics. After untouched validation/test scoring, the saved shadow
-bundle is refit on all completed history for future predictions.
+used for official metrics. Winner confidence is temperature-calibrated on validation
+history only, then evaluated once on the untouched test period. After evaluation, the
+saved shadow bundle is refit on all completed history while retaining the validation-
+learned calibration temperature.
 """
 from __future__ import annotations
 
@@ -21,6 +23,7 @@ from sklearn.metrics import accuracy_score, brier_score_loss, log_loss, roc_auc_
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
+from .calibration import TemperatureCalibrator, fit_temperature_calibrator
 from .historical_rates import PastOnlyRateEncoder, add_interaction_features
 
 
@@ -78,13 +81,17 @@ class HistoricalModelBundle:
     train_end: pd.Timestamp
     validation_end: pd.Timestamp
     history_end: pd.Timestamp
+    calibration_temperature: float = 1.0
 
     def predict_proba(self, frame: pd.DataFrame) -> np.ndarray:
         x = add_interaction_features(self.rate_encoder.transform(frame))
         x = x.reindex(columns=self.feature_columns)
         p1 = self.logistic.predict_proba(x)[:, 1]
         p2 = self.gradient_boosting.predict_proba(x)[:, 1]
-        return _pair_normalize(frame, 0.5 * p1 + 0.5 * p2)
+        raw = _pair_normalize(frame, 0.5 * p1 + 0.5 * p2)
+        # Positive temperature scaling is symmetric: f(1-p)=1-f(p). Mirrored
+        # two-fighter probabilities therefore remain coherent and sum to one.
+        return TemperatureCalibrator(self.calibration_temperature).transform(raw)
 
 
 def _feature_columns(frame: pd.DataFrame) -> tuple[list[str], list[str], list[str]]:
@@ -193,7 +200,13 @@ def evaluate_probabilities(y: Iterable[float], p: Iterable[float]) -> dict[str, 
 
 
 def fit_historical_winner_model(frame: pd.DataFrame) -> tuple[HistoricalModelBundle, dict[str, dict[str, float]]]:
-    """Evaluate chronologically, then refit the shadow winner model on full history."""
+    """Evaluate, calibrate chronologically, then refit the shadow model on full history.
+
+    Base estimators are fit on the training era. Temperature is selected exclusively on
+    the next validation era. Only after that choice is frozen do we score the final test
+    era. This keeps test metrics honest while guaranteeing that calibration cannot alter
+    ROC ordering or the 0.50 winner decision boundary.
+    """
     if "win" not in frame:
         raise KeyError("expected binary target column 'win'")
     train, val, test = chronological_split(frame)
@@ -215,16 +228,29 @@ def fit_historical_winner_model(frame: pd.DataFrame) -> tuple[HistoricalModelBun
         p2 = gb_eval.predict_proba(x[features_eval])[:, 1]
         return _pair_normalize(x, 0.5 * p1 + 0.5 * p2)
 
+    raw_val = ens(val_e)
+    calibrator, calibration_report = fit_temperature_calibrator(val_e["win"], raw_val)
+    calibrated_val = calibrator.transform(raw_val)
+
+    # The test era is not touched until the temperature has been selected and frozen.
+    raw_test = ens(test_e)
+    calibrated_test = calibrator.transform(raw_test)
+
     metrics = {
-        "validation": evaluate_probabilities(val_e["win"], ens(val_e)),
-        "test": evaluate_probabilities(test_e["win"], ens(test_e)),
+        "validation": evaluate_probabilities(val_e["win"], calibrated_val),
+        "test": evaluate_probabilities(test_e["win"], calibrated_test),
+        "raw_validation": evaluate_probabilities(val_e["win"], raw_val),
+        "raw_test": evaluate_probabilities(test_e["win"], raw_test),
+        "calibration": calibration_report,
     }
-    metrics["validation"]["n_fights"] = float(val_e["fight_id"].nunique())
-    metrics["test"]["n_fights"] = float(test_e["fight_id"].nunique())
+    for key, source in (("validation", val_e), ("raw_validation", val_e), ("test", test_e), ("raw_test", test_e)):
+        metrics[key]["n_fights"] = float(source["fight_id"].nunique())
     metrics["baseline"] = {"coinflip_log_loss": float(np.log(2.0)), "coinflip_brier": 0.25}
 
     # Evaluation remains untouched above. Now refit a deployment/shadow bundle on all
     # completed history, with each training row still encoded strictly from prior dates.
+    # The calibration temperature stays the one learned on the historical validation
+    # era; the held-out test outcomes never tune it.
     final_encoder = PastOnlyRateEncoder()
     full_e = add_interaction_features(final_encoder.fit_transform(frame))
     logistic, gb_wrapped, features, numeric, categorical = _fit_estimators(full_e)
@@ -239,5 +265,6 @@ def fit_historical_winner_model(frame: pd.DataFrame) -> tuple[HistoricalModelBun
         train_end=pd.to_datetime(train["date"]).max(),
         validation_end=pd.to_datetime(val["date"]).max(),
         history_end=pd.to_datetime(frame["date"]).max(),
+        calibration_temperature=calibrator.temperature,
     )
     return bundle, metrics
