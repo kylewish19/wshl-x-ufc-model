@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build UFC historical pre-fight features, split tables, and winner model."""
+"""Build UFC historical prefight features, conditional rates, and shadow models."""
 from __future__ import annotations
 
 import argparse
@@ -19,18 +19,14 @@ from wshlx_ufc.historical_data import (
     load_source_files,
     normalize_events,
 )
+from wshlx_ufc.historical_method_model import fit_historical_method_model, method_conditional_rate_tables
 from wshlx_ufc.historical_model import fit_historical_winner_model
 from wshlx_ufc.historical_rates import comprehensive_conditional_rate_tables
+from wshlx_ufc.historical_timing_model import fit_historical_timing_model, timing_conditional_rate_tables
 
 
 def apply_results_supplements(tables: dict[str, pd.DataFrame], supplement_dir: Path) -> tuple[dict[str, pd.DataFrame], int]:
-    """Append completed-event results that are newer than the public stats mirror.
-
-    Supplements are automatically ignored once the mirror contains an event on the same
-    date, preventing duplicate fights when the upstream scraper catches up. Detailed
-    fight statistics are intentionally left missing unless a verified stats source is
-    available; the feature builder tracks that missing coverage explicitly.
-    """
+    """Append completed-event results that are newer than the public stats mirror."""
     if not supplement_dir.exists():
         return tables, 0
 
@@ -58,6 +54,10 @@ def apply_results_supplements(tables: dict[str, pd.DataFrame], supplement_dir: P
     return out, added
 
 
+def _write_json(path: Path, payload: object) -> None:
+    path.write_text(json.dumps(payload, indent=2, default=str) + "\n")
+
+
 def main() -> int:
     p = argparse.ArgumentParser()
     p.add_argument("--source-dir", default="data/raw/ufcstats_mirror")
@@ -81,12 +81,23 @@ def main() -> int:
         raise SystemExit("No decided fights were reconstructed from source files")
     frame.to_csv(out / "prefight_perspective_rows.csv", index=False)
 
-    rates = comprehensive_conditional_rate_tables(frame, min_n=args.min_bin_n)
-    rates.to_csv(out / "conditional_win_rates.csv", index=False)
+    winner_rates = comprehensive_conditional_rate_tables(frame, min_n=args.min_bin_n)
+    winner_rates.to_csv(out / "conditional_win_rates.csv", index=False)
+    winner_bundle, winner_metrics = fit_historical_winner_model(frame)
+    joblib.dump(winner_bundle, out / "historical_winner_model.joblib")
+    _write_json(out / "historical_winner_metrics.json", winner_metrics)
 
-    bundle, metrics = fit_historical_winner_model(frame)
-    joblib.dump(bundle, out / "historical_winner_model.joblib")
-    (out / "historical_winner_metrics.json").write_text(json.dumps(metrics, indent=2, default=str) + "\n")
+    method_rates = method_conditional_rate_tables(frame, min_n=args.min_bin_n)
+    method_rates.to_csv(out / "conditional_method_rates.csv", index=False)
+    method_bundle, method_metrics = fit_historical_method_model(frame)
+    joblib.dump(method_bundle, out / "historical_method_model.joblib")
+    _write_json(out / "historical_method_metrics.json", method_metrics)
+
+    timing_rates = timing_conditional_rate_tables(frame, tables["results"], min_n=args.min_bin_n)
+    timing_rates.to_csv(out / "conditional_timing_rates.csv", index=False)
+    timing_bundle, timing_metrics = fit_historical_timing_model(frame, tables["results"])
+    joblib.dump(timing_bundle, out / "historical_timing_model.joblib")
+    _write_json(out / "historical_timing_metrics.json", timing_metrics)
 
     manifest = {
         "perspective_rows": int(len(frame)),
@@ -95,11 +106,17 @@ def main() -> int:
         "last_date": str(pd.to_datetime(frame["date"]).max().date()),
         "mirror_last_date": str(mirror_last_date.date()),
         "supplemental_result_rows": int(supplemental_rows),
-        "conditional_rate_rows": int(len(rates)),
-        "conditional_rate_families": int(rates["split"].nunique()) if len(rates) else 0,
-        "metrics": metrics,
+        "winner_conditional_rate_rows": int(len(winner_rates)),
+        "winner_conditional_rate_families": int(winner_rates["split"].nunique()) if len(winner_rates) else 0,
+        "method_conditional_rate_rows": int(len(method_rates)),
+        "method_conditional_rate_families": int(method_rates[["outcome", "split"]].drop_duplicates().shape[0]) if len(method_rates) else 0,
+        "timing_conditional_rate_rows": int(len(timing_rates)),
+        "timing_conditional_rate_families": int(timing_rates[["outcome", "split"]].drop_duplicates().shape[0]) if len(timing_rates) else 0,
+        "winner_metrics": winner_metrics,
+        "method_metrics": method_metrics,
+        "timing_metrics": timing_metrics,
     }
-    (out / "historical_build_manifest.json").write_text(json.dumps(manifest, indent=2, default=str) + "\n")
+    _write_json(out / "historical_build_manifest.json", manifest)
     print(json.dumps(manifest, indent=2, default=str))
     return 0
 
