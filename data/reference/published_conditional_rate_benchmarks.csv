@@ -1,0 +1,38 @@
+family,bucket,target,subject,rate,n,ci_low,ci_high,source_url,as_of,notes
+age_gap,2_to_3_years,win,younger_fighter,0.567,2209,0.546,0.587,https://fightiq.net/lab/age,2026-10-10,External validation benchmark
+age_gap,4_to_5_years,win,younger_fighter,0.562,1653,0.538,0.586,https://fightiq.net/lab/age,2026-10-10,External validation benchmark
+age_gap,6_to_7_years,win,younger_fighter,0.602,1058,0.572,0.631,https://fightiq.net/lab/age,2026-10-10,External validation benchmark
+age_gap,8_to_9_years,win,younger_fighter,0.651,634,0.614,0.687,https://fightiq.net/lab/age,2026-10-10,External validation benchmark
+age_gap,10_plus_years,win,younger_fighter,0.695,508,0.654,0.733,https://fightiq.net/lab/age,2026-10-10,External validation benchmark
+reach_gap,1_inch,win,longer_reach,0.502,1820,0.479,0.525,https://fightiq.net/lab/reach,2026-10-10,External validation benchmark
+reach_gap,2_inches,win,longer_reach,0.501,1588,0.476,0.525,https://fightiq.net/lab/reach,2026-10-10,External validation benchmark
+reach_gap,4_inches,win,longer_reach,0.549,802,0.514,0.583,https://fightiq.net/lab/reach,2026-10-10,External validation benchmark
+reach_gap,6_inches,win,longer_reach,0.586,350,0.533,0.636,https://fightiq.net/lab/reach,2026-10-10,External validation benchmark
+reach_gap,8_inches,win,longer_reach,0.641,92,0.539,0.732,https://fightiq.net/lab/reach,2026-10-10,External validation benchmark
+reach_gap,9_plus_inches,win,longer_reach,0.659,85,0.553,0.751,https://fightiq.net/lab/reach,2026-10-10,External validation benchmark
+height_gap,1_to_2_inches,win,taller_fighter,0.515,4536,0.501,0.530,https://fightiq.net/lab/height,2026-10-10,External validation benchmark
+height_gap,3_to_4_inches,win,taller_fighter,0.539,2009,0.517,0.560,https://fightiq.net/lab/height,2026-10-10,External validation benchmark
+height_gap,5_plus_inches,win,taller_fighter,0.533,657,0.494,0.571,https://fightiq.net/lab/height,2026-10-10,External validation benchmark
+ufc_debut,debutant_vs_veteran,win,debutant,0.418,1661,0.395,0.442,https://fightiq.net/lab/debut,2026-10-10,Only debutants facing opponent with prior UFC fight
+win_streak,3_wins,win,fighter_on_streak,0.563,773,0.528,0.597,https://fightiq.net/lab/streaks,2026-10-10,Longer winning run condition
+win_streak,4_to_5_wins,win,fighter_on_streak,0.574,639,0.536,0.612,https://fightiq.net/lab/streaks,2026-10-10,Longer winning run condition
+win_streak,6_plus_wins,win,fighter_on_streak,0.642,321,0.588,0.692,https://fightiq.net/lab/streaks,2026-10-10,Longer winning run condition
+losing_streak,2_losses,win,fighter_on_losing_streak,0.437,270,0.379,0.497,https://fightiq.net/lab/streaks,2026-10-10,Opponent came off a win
+losing_streak,3_plus_losses,win,fighter_on_losing_streak,0.404,114,0.318,0.495,https://fightiq.net/lab/streaks,2026-10-10,Opponent came off a win
+layoff,12_to_14_months,win,returning_fighter,0.442,489,0.398,0.486,https://fightiq.net/lab/layoff,2026-10-10,Opponent fought within previous year
+layoff,15_to_17_months,win,returning_fighter,0.361,241,0.303,0.423,https://fightiq.net/lab/layoff,2026-10-10,Opponent fought within previous year
+layoff,18_to_23_months,win,returning_fighter,0.372,199,0.308,0.441,https://fightiq.net/lab/layoff,2026-10-10,Opponent fought within previous year
+layoff,2_to_3_years,win,returning_fighter,0.385,130,0.305,0.470,https://fightiq.net/lab/layoff,2026-10-10,Opponent fought within previous year
+layoff,3_plus_years,win,returning_fighter,0.398,83,0.299,0.505,https://fightiq.net/lab/layoff,2026-10-10,Opponent fought within previous year
+rematch,previous_meeting_winner,win,previous_winner,0.598,194,0.528,0.664,https://fightiq.net/lab/rematch,2026-10-10,Most recent prior UFC meeting had a winner
+five_round_experience,first_timer_vs_veteran,win,first_time_five_round_fighter,0.403,298,0.349,0.459,https://fightiq.net/lab/five-rounds,2026-10-10,Exactly one fighter had prior UFC five-round experience
+title_experience,experienced_vs_first_timer,win,title_fight_veteran,0.651,209,0.584,0.712,https://fightiq.net/lab/title-fights,2026-10-10,UFC title fights only
+stance,southpaw_vs_orthodox,win,southpaw,0.534,2450,0.514,0.554,https://fightiq.net/lab/stance,2026-10-10,Current listed stance applied historically
+stance,switch_vs_orthodox,win,switch,0.520,715,0.484,0.557,https://fightiq.net/lab/stance,2026-10-10,Current listed stance applied historically
+ufc_experience_gap,1_to_2_more,win,more_experienced,0.528,2731,,,https://agentmma.com/mma-lab/ufc-experience-advantage-study,2026-05-31,Independent audit benchmark
+ufc_experience_gap,3_to_4_more,win,more_experienced,0.555,1559,,,https://agentmma.com/mma-lab/ufc-experience-advantage-study,2026-05-31,Independent audit benchmark
+ufc_experience_gap,5_to_9_more,win,more_experienced,0.514,1939,,,https://agentmma.com/mma-lab/ufc-experience-advantage-study,2026-05-31,Independent audit benchmark
+ufc_experience_gap,10_plus_more,win,more_experienced,0.448,1077,,,https://agentmma.com/mma-lab/ufc-experience-advantage-study,2026-05-31,Independent audit benchmark
+finish_profile,two_finishers,finish,bout,0.644,550,0.603,0.683,https://fightiq.net/lab/finish-rate,2026-10-10,Method/distance benchmark not winner target
+finish_profile,finisher_vs_decision_winner,finish,bout,0.488,443,0.441,0.534,https://fightiq.net/lab/finish-rate,2026-10-10,Method/distance benchmark not winner target
+finish_profile,two_decision_winners,finish,bout,0.307,238,0.252,0.368,https://fightiq.net/lab/finish-rate,2026-10-10,Method/distance benchmark not winner target

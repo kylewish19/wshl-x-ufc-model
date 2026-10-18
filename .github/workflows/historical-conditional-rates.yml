@@ -1,0 +1,31 @@
+name: Historical conditional rates
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install package
+        run: pip install -e .[dev]
+      - name: Run tests
+        run: pytest -q
+      - name: Build historical dataset, rate tables, and model
+        run: python scripts/build_historical_model.py --download --min-bin-n 30
+      - name: Upload historical artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: historical-conditional-rates
+          path: |
+            data/historical/conditional_win_rates.csv
+            data/historical/historical_winner_metrics.json
+            data/historical/historical_build_manifest.json
+          retention-days: 30
