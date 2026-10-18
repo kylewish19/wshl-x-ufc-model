@@ -1,6 +1,6 @@
 """Constrained ensemble utilities for the WSHL-X UFC unified shadow layer.
 
-The ensemble deliberately uses low-capacity convex pooling.  With only a modest clean
+The ensemble deliberately uses low-capacity convex pooling. With only a modest clean
 prospective ledger, learned weights must be interpretable and difficult to overfit.
 The component models remain independently inspectable; this module only combines their
 pre-fight probabilities.
@@ -92,7 +92,7 @@ def fit_binary_blend(y, current, historical, *, grid: Iterable[float] | None = N
     yy = np.asarray(y, dtype=int)
     pc = _clip(current)
     ph = _clip(historical)
-    if not (len(yy) == len(pc) == len(ph)) or len(yy) == 0:
+    if len(yy) == 0 or not (len(yy) == len(pc) == len(ph)):
         raise ValueError("y/current/historical lengths must match and be non-empty")
     current_loss = float(log_loss(yy, pc, labels=[0, 1]))
     historical_loss = float(log_loss(yy, ph, labels=[0, 1]))
@@ -102,6 +102,48 @@ def fit_binary_blend(y, current, historical, *, grid: Iterable[float] | None = N
         if loss < best_loss - 1e-12:
             best_w, best_loss = float(w), loss
     return BlendFit(best_w, best_loss, current_loss, historical_loss, int(len(yy)))
+
+
+def _group_mean_binary_log_loss(y, p, groups) -> float:
+    yy = np.asarray(y, dtype=int)
+    pp = _clip(p)
+    gg = np.asarray(groups)
+    if len(yy) == 0 or not (len(yy) == len(pp) == len(gg)):
+        raise ValueError("y/p/groups lengths must match and be non-empty")
+    losses = -(yy * np.log(pp) + (1 - yy) * np.log(1 - pp))
+    unique = list(dict.fromkeys(gg.tolist()))
+    return float(np.mean([losses[gg == g].mean() for g in unique]))
+
+
+def fit_grouped_binary_blend(
+    y,
+    current,
+    historical,
+    groups,
+    *,
+    grid: Iterable[float] | None = None,
+) -> BlendFit:
+    """Fit one binary blend while giving each fight/group equal objective weight.
+
+    Timing markets are correlated and five-round fights expose more markets than
+    three-round fights. Averaging loss within fight before averaging across fights stops
+    those extra markets from granting five-round bouts disproportionate influence.
+    """
+    yy = np.asarray(y, dtype=int)
+    pc = _clip(current)
+    ph = _clip(historical)
+    gg = np.asarray(groups)
+    if len(yy) == 0 or not (len(yy) == len(pc) == len(ph) == len(gg)):
+        raise ValueError("y/current/historical/groups lengths must match and be non-empty")
+    current_loss = _group_mean_binary_log_loss(yy, pc, gg)
+    historical_loss = _group_mean_binary_log_loss(yy, ph, gg)
+    best_w, best_loss = 1.0, np.inf
+    for w in _weight_grid(grid):
+        pooled = binary_logit_pool(pc, ph, float(w))
+        loss = _group_mean_binary_log_loss(yy, pooled, gg)
+        if loss < best_loss - 1e-12:
+            best_w, best_loss = float(w), loss
+    return BlendFit(best_w, best_loss, current_loss, historical_loss, int(len(np.unique(gg))))
 
 
 def fit_multiclass_blend(
