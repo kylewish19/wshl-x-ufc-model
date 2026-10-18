@@ -9,12 +9,15 @@ on:
       - 'pyproject.toml'
       - 'src/wshlx_ufc/historical_*.py'
       - 'src/wshlx_ufc/unified_ensemble.py'
+      - 'src/wshlx_ufc/ensemble_eligibility.py'
       - 'src/wshlx_ufc/calibration.py'
       - 'src/wshlx_ufc/timing.py'
       - 'scripts/build_historical_model.py'
       - 'scripts/build_unified_ensemble.py'
+      - 'scripts/build_unified_ensemble_safe.py'
       - 'tests/test_historical_*.py'
       - 'tests/test_unified_ensemble.py'
+      - 'tests/test_ensemble_eligibility.py'
       - 'tests/test_calibration.py'
       - 'data/reference/published_conditional_rate_benchmarks.csv'
       - 'data/supplemental/results/*.csv'
@@ -40,9 +43,10 @@ jobs:
       - name: Build historical dataset, rate tables, and shadow models
         run: python scripts/build_historical_model.py --download --min-bin-n 30
       # The unified layer is intentionally built only after leakage-safe historical
-      # predictions exist. It learns constrained weights from frozen pre-fight cards.
+      # predictions exist. Nonstandard outcomes are filtered in-memory and never
+      # relabeled as KO/SUB/DEC or ordinary timing finishes.
       - name: Build unified ensemble from frozen cards
-        run: python scripts/build_unified_ensemble.py
+        run: python scripts/build_unified_ensemble_safe.py
       - name: Upload historical and unified artifacts
         uses: actions/upload-artifact@v4
         with:
