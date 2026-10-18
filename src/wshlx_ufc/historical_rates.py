@@ -104,7 +104,7 @@ def comprehensive_conditional_rate_tables(frame,min_n=20):
     parts=[p for p in parts if len(p)]; return pd.concat(parts,ignore_index=True) if parts else pd.DataFrame()
 
 class PastOnlyRateEncoder:
-    """Smoothed bucket rates that never use the current fight's result."""
+    """Smoothed bucket rates using only history from earlier fight dates."""
     def __init__(self,specs=DEFAULT_SPLITS,alpha=10.,prior=.5): self.specs=tuple(specs);self.alpha=float(alpha);self.prior=float(prior);self._n={};self._w={}
     def _rate(self,name,b):
         if pd.isna(b):return self.prior,0.
@@ -114,7 +114,9 @@ class PastOnlyRateEncoder:
     def fit_transform(self,frame,date_col="date",fight_id_col="fight_id",target="win"):
         o=frame.copy();o[date_col]=pd.to_datetime(o[date_col],errors="coerce");o=o.sort_values([date_col,fight_id_col],kind="stable");bs=self._buckets(o)
         vals={f"hist_{n}_wr":pd.Series(index=o.index,dtype=float) for n in bs}; ns={f"hist_{n}_n":pd.Series(index=o.index,dtype=float) for n in bs}
-        for _,idx in o.groupby([date_col,fight_id_col],sort=False,dropna=False).groups.items():
+        # Score an entire event date before ingesting any outcomes from that date.
+        # This matches our pre-card lock workflow and prevents same-card leakage.
+        for _,idx in o.groupby(date_col,sort=False,dropna=False).groups.items():
             idx=list(idx)
             for n,s in bs.items():
                 for i in idx: vals[f"hist_{n}_wr"].loc[i],ns[f"hist_{n}_n"].loc[i]=self._rate(n,s.loc[i])
