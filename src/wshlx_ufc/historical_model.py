@@ -11,6 +11,7 @@ from typing import Iterable
 
 import numpy as np
 import pandas as pd
+from pandas.api.types import is_numeric_dtype
 from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import HistGradientBoostingClassifier
 from sklearn.impute import SimpleImputer
@@ -76,8 +77,8 @@ def _feature_columns(frame: pd.DataFrame) -> tuple[list[str], list[str], list[st
         ):
             continue
         cols.append(c)
-    categorical = [c for c in cols if str(frame[c].dtype) in {"object", "string", "category"}]
-    numeric = [c for c in cols if c not in categorical]
+    numeric = [c for c in cols if is_numeric_dtype(frame[c])]
+    categorical = [c for c in cols if c not in numeric]
     return cols, numeric, categorical
 
 
