@@ -38,6 +38,24 @@ def test_past_only_encoder_does_not_leak_mirrored_fight_result():
     assert f2.hist_age_gap_n.min() == 1
 
 
+def test_past_only_encoder_does_not_leak_other_fights_on_same_date():
+    df = pd.DataFrame({
+        "date": pd.to_datetime([
+            "2020-01-01", "2020-01-01", "2020-01-01", "2020-01-01",
+            "2020-02-01", "2020-02-01",
+        ]),
+        "fight_id": ["f1", "f1", "f2", "f2", "f3", "f3"],
+        "age_diff": [-6, 6, -6, 6, -6, 6],
+        "win": [1, 0, 1, 0, 0, 1],
+    })
+    enc = PastOnlyRateEncoder(specs=[next(s for s in DEFAULT_SPLITS if s.name == "age_gap")], alpha=0)
+    out = enc.fit_transform(df)
+    same_date = out[out.date == pd.Timestamp("2020-01-01")]
+    assert set(same_date.hist_age_gap_n) == {0.0}
+    next_date = out[out.fight_id == "f3"]
+    assert set(next_date.hist_age_gap_n) == {2.0}
+
+
 def test_comprehensive_tables_include_categorical_splits():
     df = pd.DataFrame({
         "age_diff": [-6, 6] * 20,
