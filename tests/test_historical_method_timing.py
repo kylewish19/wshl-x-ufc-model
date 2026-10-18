@@ -5,7 +5,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 import numpy as np
 import pandas as pd
 
-from wshlx_ufc.historical_method_model import _pair_cohere, _temperature_transform
+from wshlx_ufc.historical_method_model import (
+    _multiclass_nll,
+    _pair_cohere,
+    _temperature_transform,
+    evaluate_method_probabilities,
+)
 from wshlx_ufc.historical_outcomes import METHOD_STATES, add_method_targets, add_timing_targets
 from wshlx_ufc.historical_timing_model import _weight_context, symmetric_timing_frame
 
@@ -53,6 +58,33 @@ def test_pair_coherence_and_temperature_preserve_event_ordering():
     calibrated = _temperature_transform(coherent, 1.8)
     assert np.array_equal(np.argmax(coherent, axis=1), np.argmax(calibrated, axis=1))
     assert np.allclose(calibrated.sum(axis=1), 1.0)
+
+
+def test_multiclass_nll_uses_explicit_probability_column_order():
+    classes = list(METHOD_STATES)
+    p = np.full((2, len(classes)), 0.01)
+    p[0, classes.index("WIN_KO_TKO")] = 0.95
+    p[1, classes.index("LOSS_SUB")] = 0.95
+    p /= p.sum(axis=1, keepdims=True)
+    loss = _multiclass_nll(np.array(["WIN_KO_TKO", "LOSS_SUB"]), p, classes)
+    assert loss < 0.1
+
+
+def test_method_market_uses_marginal_not_largest_joint_cell():
+    classes = list(METHOD_STATES)
+    frame = _pair_frame()
+    # KO has the largest single joint cell, but SUB has the larger method marginal.
+    first = np.array([.26, .22, .10, .09, .23, .10])
+    second = np.array([.09, .23, .10, .26, .22, .10])
+    probs = np.vstack([first, second])
+    graded = frame.copy()
+    graded["fight_method"] = "SUB"
+    graded = add_method_targets(graded)
+    graded.loc[0, "method_target"] = "WIN_SUB"
+    graded.loc[1, "method_target"] = "LOSS_SUB"
+    metrics = evaluate_method_probabilities(graded, probs)
+    assert metrics["pred_sub_share"] == 1.0
+    assert metrics["method_accuracy"] == 1.0
 
 
 def test_timing_features_are_orientation_invariant_and_light_heavyweight_is_205():
