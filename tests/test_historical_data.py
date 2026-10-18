@@ -23,7 +23,10 @@ def synthetic_sources():
         "METHOD": ["Decision - Unanimous", "KO/TKO"],
         "ROUND": [3, 2],
         "TIME": ["5:00", "1:30"],
-        "TIME_FORMAT": ["3 Rnd (5-5)", "3 Rnd (5-5)"],
+        # Match the public mirror's real header spelling. Fight 1 is a non-title
+        # five-round main event, which must count as five-round experience but not
+        # as title-fight experience.
+        "TIME FORMAT": ["5 Rnd (5-5-5-5-5)", "3 Rnd (5-5-5)"],
     })
     stats = pd.DataFrame({
         "EVENT": ["UFC Test 1", "UFC Test 1", "UFC Test 2", "UFC Test 2"],
@@ -54,6 +57,7 @@ def test_prefight_reconstruction_is_as_of_and_mirrored():
     first = frame[frame.event == "UFC Test 1"]
     assert set(first.win) == {0, 1}
     assert set(first.ufc_fights) == {0.0}
+    assert set(first.scheduled_rounds) == {5}
 
     second_a = frame[(frame.event == "UFC Test 2") & (frame.fighter == "Alpha")].iloc[0]
     assert second_a.ufc_fights == 1
@@ -62,6 +66,8 @@ def test_prefight_reconstruction_is_as_of_and_mirrored():
     assert second_a.age_diff < 0
     assert second_a.rematch_number == 1
     assert second_a.previous_meeting_result == "win"
+    assert second_a.five_round_fights == 1
+    assert second_a.title_fights == 0
 
 
 def test_current_fight_stats_do_not_enter_current_prefight_row():
