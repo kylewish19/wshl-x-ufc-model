@@ -4,6 +4,7 @@ from wshlx_ufc.unified_ensemble import (
     binary_logit_pool,
     blend_hazards,
     fit_binary_blend,
+    fit_grouped_binary_blend,
     fit_multiclass_blend,
     markets_from_hazards,
     multiclass_log_pool,
@@ -27,6 +28,20 @@ def test_binary_weight_fit_prefers_better_component():
     fit = fit_binary_blend(y, current, historical)
     assert fit.weight_current >= 0.75
     assert fit.loss <= min(fit.current_loss, fit.historical_loss) + 1e-12
+
+
+def test_grouped_binary_fit_counts_fights_not_markets():
+    # Fight f1 has many duplicated current-friendly markets; f2 has one strong
+    # historical-friendly market. Group balancing prevents raw market count from
+    # letting f1 dominate simply because it exposes more props.
+    y = np.array([1, 1, 1, 1, 1, 0])
+    current = np.array([.8, .8, .8, .8, .8, .7])
+    historical = np.array([.6, .6, .6, .6, .6, .1])
+    groups = np.array(["f1", "f1", "f1", "f1", "f1", "f2"])
+    raw = fit_binary_blend(y, current, historical)
+    grouped = fit_grouped_binary_blend(y, current, historical, groups)
+    assert grouped.n == 2
+    assert grouped.weight_current < raw.weight_current
 
 
 def test_multiclass_pool_is_coherent_and_fit_can_choose_history():
