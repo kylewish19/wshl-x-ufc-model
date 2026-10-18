@@ -6,6 +6,7 @@ on:
     branches:
       - feature/historical-conditional-rates
     paths:
+      - 'pyproject.toml'
       - 'src/wshlx_ufc/historical_*.py'
       - 'scripts/build_historical_model.py'
       - 'tests/test_historical_*.py'
