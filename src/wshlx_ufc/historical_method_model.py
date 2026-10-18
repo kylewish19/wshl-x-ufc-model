@@ -50,9 +50,19 @@ def _fit_temperature(y: pd.Series, probabilities: np.ndarray, classes: list[str]
     return best_t, {"temperature": best_t, "raw_log_loss": raw, "calibrated_log_loss": best_loss}
 
 
+def _model_classes(model: object) -> list[str]:
+    if hasattr(model, "classes_"):
+        return list(model.classes_)
+    if hasattr(model, "named_steps"):
+        return list(model.named_steps["model"].classes_)
+    if hasattr(model, "model") and hasattr(model.model, "named_steps"):
+        return list(model.model.named_steps["model"].classes_)
+    raise AttributeError("Could not locate fitted class labels")
+
+
 def _aligned_probabilities(model: object, x: pd.DataFrame, classes: list[str]) -> np.ndarray:
     raw = model.predict_proba(x)
-    fitted = list(model.classes_) if hasattr(model, "classes_") else list(model.named_steps["model"].classes_)
+    fitted = _model_classes(model)
     out = np.zeros((len(x), len(classes)), dtype=float)
     for j, c in enumerate(classes):
         if c in fitted:
@@ -190,7 +200,6 @@ def evaluate_method_probabilities(frame: pd.DataFrame, probabilities: np.ndarray
     y = f["method_target"].astype(str).to_numpy()
     pred_i = np.argmax(p, axis=1)
     pred = np.asarray(classes, dtype=object)[pred_i]
-    exact_acc = float(np.mean(pred == y))
     winner_true = np.char.startswith(y.astype(str), "WIN_")
     win_cols = [classes.index(c) for c in classes if c.startswith("WIN_")]
     winner_pred = p[:, win_cols].sum(axis=1) >= 0.5
@@ -201,7 +210,7 @@ def evaluate_method_probabilities(frame: pd.DataFrame, probabilities: np.ndarray
         y_onehot[r, classes.index(label)] = 1.0
     out = {
         "n_fights": float(len(f)),
-        "joint_accuracy": exact_acc,
+        "joint_accuracy": float(np.mean(pred == y)),
         "winner_accuracy": float(accuracy_score(winner_true, winner_pred)),
         "method_accuracy": float(np.mean(method_true == method_pred)),
         "log_loss": float(log_loss(y, p, labels=classes)),
@@ -226,9 +235,12 @@ class HistoricalMethodBundle:
     calibration_temperature: float = 1.0
 
     def predict_joint_probabilities(self, frame: pd.DataFrame) -> pd.DataFrame:
-        x = add_method_targets(frame)
-        x = _method_rate_encode_transform(x, self.outcome_rate_encoders, self.winner_rate_encoder)
-        x = add_interaction_features(x).reindex(columns=list(dict.fromkeys(list(x.columns) + self.feature_columns)))
+        # Deployment input contains prefight features only. Never require win/method targets.
+        x = _method_rate_encode_transform(frame.copy(), self.outcome_rate_encoders, self.winner_rate_encoder)
+        x = add_interaction_features(x)
+        for c in self.feature_columns:
+            if c not in x:
+                x[c] = np.nan
         p = _ensemble(x, self.logistic, self.gradient_boosting, self.feature_columns)
         p = _temperature_transform(p, self.calibration_temperature)
         return pd.DataFrame(p, columns=list(METHOD_STATES), index=frame.index)
