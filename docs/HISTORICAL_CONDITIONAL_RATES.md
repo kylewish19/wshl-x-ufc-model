@@ -108,13 +108,41 @@ training labels or manual bonuses.
 6. nonlinear histogram gradient boosting model;
 7. equal-weight probability ensemble;
 8. mirrored fight probabilities normalized to a coherent two-outcome distribution;
-9. accuracy, log loss, Brier score, and ROC-AUC reporting;
-10. only after untouched validation/test scoring, refit the saved shadow model on all
-    completed history so the next card can use every available completed UFC fight.
+9. probability calibration selected on the validation era only;
+10. accuracy, log loss, Brier score, and ROC-AUC reporting for both raw and calibrated probabilities;
+11. only after untouched test scoring, refit the saved shadow model on all completed history so the next card can use every available completed UFC fight.
 
 The model is a **shadow/research model** until it proves itself prospectively against the
 current official winner model. Historical accuracy alone is not enough to promote it,
 and calibration metrics matter as much as raw pick percentage.
+
+## Calibration policy: improve confidence without sacrificing discrimination
+
+The first accepted calibration family is **positive logit-temperature scaling**. The
+base winner learner is fit on the chronological training era. A single positive
+temperature is selected by validation log loss on the next era. That temperature is then
+frozen before the final historical test era is scored.
+
+For raw probability `p`, calibration is:
+
+`p_cal = sigmoid(logit(p) / T)` with `T > 0`.
+
+This restriction is deliberate. A positive temperature is strictly monotonic and leaves
+`p = 0.50` fixed. Therefore it cannot change:
+
+- which fighter is picked to win at the 50% threshold;
+- prediction ordering;
+- ROC-AUC/discrimination, aside from floating-point noise.
+
+It is allowed to change only **confidence**. When `T > 1`, extreme probabilities are
+pulled toward 50%; when `0 < T < 1`, they become more confident. The validation period
+chooses the value. Regression tests explicitly verify that winner accuracy and ROC-AUC
+are unchanged by calibration. The untouched test period determines whether the improved
+validation calibration generalizes.
+
+More flexible methods such as Platt scaling or isotonic regression are not promoted just
+because they improve in-sample calibration; they would first need chronological evidence
+that they do not damage discrimination or matchup coherence.
 
 ## Current build snapshot — 2026-10-18
 
@@ -125,18 +153,19 @@ and calibration metrics matter as much as raw pick percentage.
 - 13 verified 2026-10-17 Edmonton results added as a results-only supplement
 - 57 conditional-rate families
 - 888 qualifying conditional-rate buckets at the current minimum sample gates
-- 37 repository tests passing on the clean Python 3.11 workflow
+- 37 repository tests passing before the calibration-specific regression tests were added
 
-Chronological shadow-model evaluation:
+Pre-calibration chronological shadow-model baseline:
 
 - validation: 60.22% accuracy, ROC-AUC 0.6523, Brier 0.2371, log loss 0.6727
 - test: 63.08% accuracy, ROC-AUC 0.6557, Brier 0.2452, log loss 0.7334
 
-The test accuracy and AUC show useful winner signal, but test log loss is worse than the
-0.6931 coin-flip log-loss baseline. That is evidence of overconfidence / calibration
-instability, so this model should remain a shadow input until calibration is improved and
-it proves itself prospectively. The build intentionally reports this rather than hiding
-it behind accuracy alone.
+The raw test accuracy and AUC show useful winner signal, but raw test log loss is worse
+than the 0.6931 coin-flip log-loss baseline. That is the overconfidence/calibration
+problem the temperature layer is designed to address. The calibrated build must preserve
+the same winner accuracy/AUC while being judged on out-of-sample Brier score and log
+loss. This model remains a shadow input regardless of the calibration result until it
+proves itself prospectively under the repository promotion rules.
 
 ## Current limitations / next enrichments
 
