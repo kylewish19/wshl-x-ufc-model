@@ -60,6 +60,13 @@ def test_model_fits_scores_refits_and_normalizes_matchup_probabilities():
     assert 0 <= metrics["test"]["brier"] <= 1
     assert metrics["test"]["n_fights"] > 0
     assert bundle.history_end == pd.to_datetime(df["date"]).max()
+    assert bundle.calibration_temperature > 0
+
+    # Positive temperature scaling must not change the selected winner or global
+    # ranking/discrimination. Calibration is allowed to change confidence only.
+    assert np.isclose(metrics["test"]["accuracy"], metrics["raw_test"]["accuracy"])
+    assert np.isclose(metrics["test"]["roc_auc"], metrics["raw_test"]["roc_auc"])
+    assert metrics["validation"]["log_loss"] <= metrics["raw_validation"]["log_loss"] + 1e-12
 
     future = df.tail(2).copy()
     future["fight_id"] = "future-fight"
