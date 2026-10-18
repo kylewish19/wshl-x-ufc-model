@@ -8,8 +8,10 @@ on:
     paths:
       - 'pyproject.toml'
       - 'src/wshlx_ufc/historical_*.py'
+      - 'src/wshlx_ufc/calibration.py'
       - 'scripts/build_historical_model.py'
       - 'tests/test_historical_*.py'
+      - 'tests/test_calibration.py'
       - 'data/reference/published_conditional_rate_benchmarks.csv'
       - 'data/supplemental/results/*.csv'
       - '.github/workflows/historical-conditional-rates.yml'
