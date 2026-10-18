@@ -16,7 +16,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import HistGradientBoostingClassifier
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, log_loss
+from sklearn.metrics import accuracy_score
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
@@ -30,6 +30,8 @@ from .historical_rates import (
     interaction_conditional_rate_tables,
 )
 
+METHOD_MARKETS = ("KO_TKO", "SUB", "DEC")
+
 
 def _temperature_transform(probabilities: np.ndarray, temperature: float) -> np.ndarray:
     p = np.clip(np.asarray(probabilities, dtype=float), 1e-9, 1.0)
@@ -37,14 +39,22 @@ def _temperature_transform(probabilities: np.ndarray, temperature: float) -> np.
     return q / q.sum(axis=1, keepdims=True)
 
 
+def _multiclass_nll(y: pd.Series | np.ndarray, probabilities: np.ndarray, classes: list[str]) -> float:
+    """Cross-entropy using the explicit probability-column order supplied by caller."""
+    yy = np.asarray(y, dtype=str)
+    p = np.clip(np.asarray(probabilities, dtype=float), 1e-12, 1.0)
+    lookup = {c: i for i, c in enumerate(classes)}
+    indices = np.asarray([lookup[v] for v in yy], dtype=int)
+    return float(-np.mean(np.log(p[np.arange(len(yy)), indices])))
+
+
 def _fit_temperature(y: pd.Series, probabilities: np.ndarray, classes: list[str]) -> tuple[float, dict[str, float]]:
-    labels = list(classes)
     yy = y.astype(str).to_numpy()
-    raw = float(log_loss(yy, probabilities, labels=labels))
+    raw = _multiclass_nll(yy, probabilities, classes)
     best_t, best_loss = 1.0, raw
     for t in np.geomspace(0.50, 4.0, 121):
         q = _temperature_transform(probabilities, float(t))
-        loss = float(log_loss(yy, q, labels=labels))
+        loss = _multiclass_nll(yy, q, classes)
         if loss < best_loss - 1e-12:
             best_t, best_loss = float(t), loss
     return best_t, {"temperature": best_t, "raw_log_loss": raw, "calibrated_log_loss": best_loss}
@@ -83,7 +93,7 @@ def _pair_cohere(frame: pd.DataFrame, probabilities: np.ndarray, classes: list[s
             continue
         i, j = int(pos[0]), int(pos[1])
         event = np.zeros(len(classes), dtype=float)
-        for meth in ("KO_TKO", "SUB", "DEC"):
+        for meth in METHOD_MARKETS:
             wi, li = idx[f"WIN_{meth}"], idx[f"LOSS_{meth}"]
             event[wi] = 0.5 * (p[i, wi] + p[j, li])
             event[li] = 0.5 * (p[i, li] + p[j, wi])
@@ -91,7 +101,7 @@ def _pair_cohere(frame: pd.DataFrame, probabilities: np.ndarray, classes: list[s
         event /= event.sum()
         out[i] = event
         swapped = event.copy()
-        for meth in ("KO_TKO", "SUB", "DEC"):
+        for meth in METHOD_MARKETS:
             wi, li = idx[f"WIN_{meth}"], idx[f"LOSS_{meth}"]
             swapped[wi], swapped[li] = event[li], event[wi]
         out[j] = swapped
@@ -105,14 +115,19 @@ def _method_rate_encode_fit(frame: pd.DataFrame) -> tuple[pd.DataFrame, dict[str
     extra = [c for c in wr.columns if c.startswith("hist_")]
     out[extra] = wr[extra]
     encoders: dict[str, PastOnlyRateEncoder] = {}
+    additions: list[pd.DataFrame] = []
     for state in METHOD_STATES:
         target = f"target_{state.lower()}"
         enc = PastOnlyRateEncoder(alpha=20.0, prior=float(pd.to_numeric(frame[target], errors="coerce").mean()))
         z = enc.fit_transform(frame, target=target)
-        for c in [c for c in z.columns if c.startswith("hist_") and c.endswith("_wr")]:
-            out[c.replace("_wr", f"_{state.lower()}_rate")] = z[c]
+        cols = [c for c in z.columns if c.startswith("hist_") and c.endswith("_wr")]
+        if cols:
+            rename = {c: c.replace("_wr", f"_{state.lower()}_rate") for c in cols}
+            additions.append(z[cols].rename(columns=rename))
         encoders[state] = enc
-    return out, encoders, winner_encoder
+    if additions:
+        out = pd.concat([out, *additions], axis=1)
+    return out.copy(), encoders, winner_encoder
 
 
 def _method_rate_encode_transform(frame: pd.DataFrame, encoders: dict[str, PastOnlyRateEncoder], winner_encoder: PastOnlyRateEncoder) -> pd.DataFrame:
@@ -120,11 +135,16 @@ def _method_rate_encode_transform(frame: pd.DataFrame, encoders: dict[str, PastO
     wr = winner_encoder.transform(frame)
     extra = [c for c in wr.columns if c.startswith("hist_")]
     out[extra] = wr[extra]
+    additions: list[pd.DataFrame] = []
     for state, enc in encoders.items():
         z = enc.transform(frame)
-        for c in [c for c in z.columns if c.startswith("hist_") and c.endswith("_wr")]:
-            out[c.replace("_wr", f"_{state.lower()}_rate")] = z[c]
-    return out
+        cols = [c for c in z.columns if c.startswith("hist_") and c.endswith("_wr")]
+        if cols:
+            rename = {c: c.replace("_wr", f"_{state.lower()}_rate") for c in cols}
+            additions.append(z[cols].rename(columns=rename))
+    if additions:
+        out = pd.concat([out, *additions], axis=1)
+    return out.copy()
 
 
 def _fit_rate_encoders(frame: pd.DataFrame) -> tuple[dict[str, PastOnlyRateEncoder], PastOnlyRateEncoder]:
@@ -192,35 +212,51 @@ def _canonical(frame: pd.DataFrame) -> np.ndarray:
     return ~frame["fight_id"].astype(str).duplicated(keep="first").to_numpy()
 
 
+def _method_marginals(p: np.ndarray, classes: list[str]) -> np.ndarray:
+    cols = []
+    for meth in METHOD_MARKETS:
+        cols.append(p[:, classes.index(f"WIN_{meth}")] + p[:, classes.index(f"LOSS_{meth}")])
+    return np.column_stack(cols)
+
+
 def evaluate_method_probabilities(frame: pd.DataFrame, probabilities: np.ndarray) -> dict[str, float]:
     classes = list(METHOD_STATES)
     mask = _canonical(frame)
     f = frame.loc[mask].copy()
     p = probabilities[mask]
     y = f["method_target"].astype(str).to_numpy()
-    pred_i = np.argmax(p, axis=1)
-    pred = np.asarray(classes, dtype=object)[pred_i]
+    pred = np.asarray(classes, dtype=object)[np.argmax(p, axis=1)]
+
     winner_true = np.char.startswith(y.astype(str), "WIN_")
     win_cols = [classes.index(c) for c in classes if c.startswith("WIN_")]
     winner_pred = p[:, win_cols].sum(axis=1) >= 0.5
+
     method_true = np.asarray([v.split("_", 1)[1] for v in y], dtype=object)
-    method_pred = np.asarray([v.split("_", 1)[1] for v in pred], dtype=object)
+    method_probs = _method_marginals(p, classes)
+    method_pred = np.asarray(METHOD_MARKETS, dtype=object)[np.argmax(method_probs, axis=1)]
+
     y_onehot = np.zeros_like(p)
+    method_onehot = np.zeros_like(method_probs)
     for r, label in enumerate(y):
         y_onehot[r, classes.index(label)] = 1.0
+        method_onehot[r, METHOD_MARKETS.index(method_true[r])] = 1.0
+
     out = {
         "n_fights": float(len(f)),
         "joint_accuracy": float(np.mean(pred == y)),
         "winner_accuracy": float(accuracy_score(winner_true, winner_pred)),
         "method_accuracy": float(np.mean(method_true == method_pred)),
-        "log_loss": float(log_loss(y, p, labels=classes)),
+        "log_loss": _multiclass_nll(y, p, classes),
         "multiclass_brier": float(np.mean(np.sum((p - y_onehot) ** 2, axis=1))),
+        "method_brier": float(np.mean(np.sum((method_probs - method_onehot) ** 2, axis=1))),
     }
-    for meth in ("KO_TKO", "SUB", "DEC"):
+    for j, meth in enumerate(METHOD_MARKETS):
         actual = method_true == meth
-        out[f"actual_{meth.lower()}_share"] = float(actual.mean())
-        out[f"pred_{meth.lower()}_share"] = float((method_pred == meth).mean())
-        out[f"recall_{meth.lower()}"] = float(np.mean(method_pred[actual] == meth)) if actual.any() else np.nan
+        key = meth.lower()
+        out[f"actual_{key}_share"] = float(actual.mean())
+        out[f"pred_{key}_share"] = float((method_pred == meth).mean())
+        out[f"mean_prob_{key}"] = float(method_probs[:, j].mean())
+        out[f"recall_{key}"] = float(np.mean(method_pred[actual] == meth)) if actual.any() else np.nan
     return out
 
 
@@ -235,7 +271,6 @@ class HistoricalMethodBundle:
     calibration_temperature: float = 1.0
 
     def predict_joint_probabilities(self, frame: pd.DataFrame) -> pd.DataFrame:
-        # Deployment input contains prefight features only. Never require win/method targets.
         x = _method_rate_encode_transform(frame.copy(), self.outcome_rate_encoders, self.winner_rate_encoder)
         x = add_interaction_features(x)
         for c in self.feature_columns:
@@ -250,7 +285,7 @@ class HistoricalMethodBundle:
         out = joint.copy()
         out["WIN"] = joint[[c for c in METHOD_STATES if c.startswith("WIN_")]].sum(axis=1)
         out["LOSS"] = 1.0 - out["WIN"]
-        for meth in ("KO_TKO", "SUB", "DEC"):
+        for meth in METHOD_MARKETS:
             out[f"FIGHT_{meth}"] = joint[f"WIN_{meth}"] + joint[f"LOSS_{meth}"]
         return out
 
@@ -280,6 +315,7 @@ def fit_historical_method_model(frame: pd.DataFrame) -> tuple[HistoricalMethodBu
         "raw_validation": evaluate_method_probabilities(val_e, raw_val),
         "raw_test": evaluate_method_probabilities(test_e, raw_test),
         "calibration": cal_report,
+        "uniform_six_state_log_loss": float(np.log(6.0)),
     }
 
     full_e, final_outcome_enc, final_winner_enc = _method_rate_encode_fit(work)
