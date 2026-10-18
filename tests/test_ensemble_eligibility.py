@@ -35,3 +35,9 @@ def test_supported_methods_do_not_create_exclusions():
         {"date": "2026-10-03", "fighter": "E", "opponent": "F", "fight_method": "DEC"},
     ])
     assert unsupported_pairs_by_date(frame) == {}
+
+
+def test_accented_and_ascii_fighter_names_share_identity():
+    assert pair_key("Ernesta Kareckaitė", "Melissa Gatto") == pair_key(
+        "Ernesta Kareckaite", "Melissa Gatto"
+    )
