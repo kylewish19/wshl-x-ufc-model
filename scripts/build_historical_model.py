@@ -35,7 +35,7 @@ def apply_results_supplements(tables: dict[str, pd.DataFrame], supplement_dir: P
         return tables, 0
 
     out = {k: v.copy() for k, v in tables.items()}
-    known_dates = set(pd.to_datetime(normalize_events(out["events"])["date"]).dt.normalize().dropna())
+    known_dates = {pd.Timestamp(d).normalize() for d in pd.to_datetime(normalize_events(out["events"])["date"]).dropna()}
     added = 0
 
     for path in sorted(supplement_dir.glob("*.csv")):
@@ -44,7 +44,8 @@ def apply_results_supplements(tables: dict[str, pd.DataFrame], supplement_dir: P
         if not required.issubset(sup.columns):
             raise ValueError(f"Supplement {path} missing required columns: {sorted(required - set(sup.columns))}")
         sup_dates = pd.to_datetime(sup["DATE"], errors="raise").dt.normalize()
-        for date in pd.unique(sup_dates):
+        for raw_date in pd.unique(sup_dates):
+            date = pd.Timestamp(raw_date).normalize()
             if date in known_dates:
                 continue
             rows = sup.loc[sup_dates == date].copy()
