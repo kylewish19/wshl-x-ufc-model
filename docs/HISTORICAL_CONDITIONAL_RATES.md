@@ -14,8 +14,9 @@ The current fight's result, method, strikes, takedowns, control, or later career
 cannot appear in its model features.
 
 Two mirrored perspective rows are emitted per decided fight. Historical-rate encodings
-for both rows are calculated before either row's outcome is added to the rate history.
-This prevents a subtle mirror-row leak.
+for the entire event date are calculated before **any** result from that date is added to
+the rate history. This prevents both mirrored-row leakage and same-card leakage and
+matches the pre-card lock workflow used by WSHL-X.
 
 ## Data source
 
@@ -30,6 +31,17 @@ The default downloader points at the maintained `Greco1899/scrape_ufc_stats` mir
 The raw source is cached separately; derived rows retain fight/date identifiers so any
 anomaly can be traced back to the source bout. Missing historical round-stat coverage is
 tracked explicitly so absent statistics are not treated as zero performance.
+
+Source-column matching prefers exact UFCStats headers and only uses punctuation/spacing
+normalization when the normalized match is unique. This is specifically tested so
+count columns such as `SIG.STR.` and `TD` can never be confused with percentage columns
+such as `SIG.STR. %` and `TD %`.
+
+When the public mirror is behind a completed UFC event, verified results-only supplements
+can be added under `data/supplemental/results/`. A supplement is automatically ignored
+once the upstream mirror contains an event on the same date, preventing duplicates. A
+results-only supplement updates result-derived state while leaving unavailable detailed
+round statistics missing until they are actually sourced.
 
 ## Split families
 
@@ -95,11 +107,36 @@ training labels or manual bonuses.
 5. regularized logistic regression benchmark;
 6. nonlinear histogram gradient boosting model;
 7. equal-weight probability ensemble;
-8. accuracy, log loss, Brier score, and ROC-AUC reporting.
+8. mirrored fight probabilities normalized to a coherent two-outcome distribution;
+9. accuracy, log loss, Brier score, and ROC-AUC reporting;
+10. only after untouched validation/test scoring, refit the saved shadow model on all
+    completed history so the next card can use every available completed UFC fight.
 
 The model is a **shadow/research model** until it proves itself prospectively against the
-current official winner model. A higher historical accuracy alone is not enough to
-promote it.
+current official winner model. Historical accuracy alone is not enough to promote it,
+and calibration metrics matter as much as raw pick percentage.
+
+## Current build snapshot — 2026-10-18
+
+- 8,792 decided UFC fights reconstructed
+- 17,584 mirrored pre-fight perspective rows
+- history from 1994-03-11 through 2026-10-17
+- public mirror current through 2026-10-10
+- 13 verified 2026-10-17 Edmonton results added as a results-only supplement
+- 57 conditional-rate families
+- 888 qualifying conditional-rate buckets at the current minimum sample gates
+- 37 repository tests passing on the clean Python 3.11 workflow
+
+Chronological shadow-model evaluation:
+
+- validation: 60.22% accuracy, ROC-AUC 0.6523, Brier 0.2371, log loss 0.6727
+- test: 63.08% accuracy, ROC-AUC 0.6557, Brier 0.2452, log loss 0.7334
+
+The test accuracy and AUC show useful winner signal, but test log loss is worse than the
+0.6931 coin-flip log-loss baseline. That is evidence of overconfidence / calibration
+instability, so this model should remain a shadow input until calibration is improved and
+it proves itself prospectively. The build intentionally reports this rather than hiding
+it behind accuracy alone.
 
 ## Current limitations / next enrichments
 
