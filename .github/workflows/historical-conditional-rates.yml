@@ -11,6 +11,7 @@ on:
       - 'scripts/build_historical_model.py'
       - 'tests/test_historical_*.py'
       - 'data/reference/published_conditional_rate_benchmarks.csv'
+      - 'data/supplemental/results/*.csv'
       - '.github/workflows/historical-conditional-rates.yml'
 
 jobs:
@@ -36,7 +37,9 @@ jobs:
         with:
           name: historical-conditional-rates
           path: |
+            data/historical/prefight_perspective_rows.csv
             data/historical/conditional_win_rates.csv
+            data/historical/historical_winner_model.joblib
             data/historical/historical_winner_metrics.json
             data/historical/historical_build_manifest.json
           retention-days: 30
