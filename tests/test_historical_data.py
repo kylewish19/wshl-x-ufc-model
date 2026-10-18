@@ -5,7 +5,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 import pandas as pd
 import pytest
 
-from wshlx_ufc.historical_data import build_prefight_perspective_rows
+from wshlx_ufc.historical_data import build_prefight_perspective_rows, col
 
 
 def synthetic_sources():
@@ -35,8 +35,10 @@ def synthetic_sources():
         "FIGHTER": ["Alpha", "Bravo", "Alpha", "Bravo"],
         "KD": [1, 0, 0, 1],
         "SIG.STR.": ["20 of 40", "10 of 30", "12 of 30", "18 of 35"],
+        "SIG.STR. %": ["50%", "33%", "40%", "51%"],
         "TOTAL STR.": ["25 of 45", "15 of 35", "15 of 35", "21 of 40"],
         "TD": ["1 of 2", "0 of 1", "0 of 2", "1 of 1"],
+        "TD %": ["50%", "0%", "0%", "100%"],
         "SUB ATT": [0, 0, 0, 0],
         "CTRL": ["1:00", "0:30", "0:20", "1:10"],
     })
@@ -49,6 +51,13 @@ def synthetic_sources():
         "DOB": ["January 01, 1990", "January 01, 1985"],
     })
     return events, results, stats, fighters
+
+
+def test_header_matching_does_not_confuse_counts_with_percentages():
+    df = pd.DataFrame(columns=["SIG.STR.", "SIG.STR. %", "TD", "TD %", "TIME FORMAT"])
+    assert col(df, "SIG.STR.") == "SIG.STR."
+    assert col(df, "TD") == "TD"
+    assert col(df, "TIME_FORMAT", "TIME FORMAT") == "TIME FORMAT"
 
 
 def test_prefight_reconstruction_is_as_of_and_mirrored():
