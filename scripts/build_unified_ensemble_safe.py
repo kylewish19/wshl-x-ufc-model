@@ -18,7 +18,11 @@ sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT / "src"))
 
 import build_unified_ensemble as base
-from wshlx_ufc.ensemble_eligibility import filter_lock_payload, unsupported_pairs_by_date
+from wshlx_ufc.ensemble_eligibility import (
+    filter_lock_payload,
+    norm_name,
+    unsupported_pairs_by_date,
+)
 
 
 def main() -> int:
@@ -27,6 +31,11 @@ def main() -> int:
         raise SystemExit("Run build_historical_model.py before the unified ensemble build")
     frame = pd.read_csv(frame_path, low_memory=False)
     unsupported = unsupported_pairs_by_date(frame)
+
+    # Keep the builder's pair matching on the same Unicode-safe normalization used by
+    # eligibility filtering. This avoids false misses when one source contains accented
+    # fighter names and another stores the ASCII transliteration.
+    base.norm_name = norm_name
 
     original_read_lock = base.read_lock
     date_by_path = {Path(path).resolve(): date for date, path in base.LOCKS.items()}
