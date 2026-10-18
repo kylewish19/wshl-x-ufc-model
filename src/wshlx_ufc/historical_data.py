@@ -27,8 +27,12 @@ def load_source_files(root):
 
 def txt(x): return "" if pd.isna(x) else re.sub(r"\s+"," ",str(x)).strip()
 def col(df,*names):
-    m={str(c).strip().upper():c for c in df.columns}
-    return next((m[n.upper()] for n in names if n.upper() in m),None)
+    # UFCStats mirrors have used punctuation/spacing variants such as TIME FORMAT,
+    # TIME_FORMAT, SUB ATT, and SUB.ATT. Normalize labels before matching so a
+    # harmless header change cannot silently erase an input feature.
+    norm=lambda x: re.sub(r"[^A-Z0-9]+","",str(x).upper())
+    m={norm(c):c for c in df.columns}
+    return next((m[norm(n)] for n in names if norm(n) in m),None)
 def bout(x):
     s=txt(x)
     for t in (" vs. "," vs "," v. "," v "):
@@ -119,7 +123,7 @@ def build_prefight_perspective_rows(events,results,stats,fighters):
     E=normalize_events(events).set_index("event");P=normalize_fighters(fighters).set_index("fighter").to_dict("index");FS=aggregate_fight_stats(stats)
     ec,bc,oc=col(results,"EVENT"),col(results,"BOUT"),col(results,"OUTCOME")
     if None in (ec,bc,oc):raise ValueError("results CSV needs EVENT BOUT OUTCOME")
-    wc,mc,rc,tc,tfc=col(results,"WEIGHTCLASS"),col(results,"METHOD"),col(results,"ROUND"),col(results,"TIME"),col(results,"TIME_FORMAT");F=[]
+    wc,mc,rc,tc,tfc=col(results,"WEIGHTCLASS"),col(results,"METHOD"),col(results,"ROUND"),col(results,"TIME"),col(results,"TIME_FORMAT","TIME FORMAT");F=[]
     for i,x in results.iterrows():
         ev,b=txt(x[ec]),txt(x[bc]);p,q=bout(b),outcome(x[oc])
         if p is None or q is None or ev not in E.index:continue
