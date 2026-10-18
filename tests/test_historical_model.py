@@ -2,6 +2,7 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
+import numpy as np
 import pandas as pd
 
 from wshlx_ufc.historical_model import chronological_split, fit_historical_winner_model
@@ -51,9 +52,18 @@ def test_chronological_split_keeps_fights_together():
     assert set(val.fight_id).isdisjoint(test.fight_id)
 
 
-def test_model_fits_and_scores_without_current_method():
+def test_model_fits_scores_refits_and_normalizes_matchup_probabilities():
     df = make_frame()
     bundle, metrics = fit_historical_winner_model(df)
     assert "fight_method" not in bundle.feature_columns
     assert 0 <= metrics["test"]["accuracy"] <= 1
     assert 0 <= metrics["test"]["brier"] <= 1
+    assert metrics["test"]["n_fights"] > 0
+    assert bundle.history_end == pd.to_datetime(df["date"]).max()
+
+    future = df.tail(2).copy()
+    future["fight_id"] = "future-fight"
+    future["date"] = bundle.history_end + pd.Timedelta(days=7)
+    probs = bundle.predict_proba(future)
+    assert np.isclose(probs.sum(), 1.0)
+    assert np.all((probs > 0) & (probs < 1))
