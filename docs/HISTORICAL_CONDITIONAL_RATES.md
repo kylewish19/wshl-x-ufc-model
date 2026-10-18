@@ -153,19 +153,29 @@ that they do not damage discrimination or matchup coherence.
 - 13 verified 2026-10-17 Edmonton results added as a results-only supplement
 - 57 conditional-rate families
 - 888 qualifying conditional-rate buckets at the current minimum sample gates
-- 37 repository tests passing before the calibration-specific regression tests were added
+- 41 repository tests passing in the calibrated historical build
 
-Pre-calibration chronological shadow-model baseline:
+Raw chronological shadow-model baseline:
 
 - validation: 60.22% accuracy, ROC-AUC 0.6523, Brier 0.2371, log loss 0.6727
 - test: 63.08% accuracy, ROC-AUC 0.6557, Brier 0.2452, log loss 0.7334
 
-The raw test accuracy and AUC show useful winner signal, but raw test log loss is worse
-than the 0.6931 coin-flip log-loss baseline. That is the overconfidence/calibration
-problem the temperature layer is designed to address. The calibrated build must preserve
-the same winner accuracy/AUC while being judged on out-of-sample Brier score and log
-loss. This model remains a shadow input regardless of the calibration result until it
-proves itself prospectively under the repository promotion rules.
+Validation-selected calibration:
+
+- temperature: **1.7375**
+- validation: 60.22% accuracy, ROC-AUC 0.6523, Brier **0.2321**, log loss **0.6571**
+- untouched test: 63.08% accuracy, ROC-AUC 0.6557, Brier **0.2382**, log loss **0.6805**
+
+The calibration result is successful on the historical holdout. Winner accuracy and
+ROC-AUC are unchanged, while test log loss improves from 0.7334 to 0.6805 and Brier
+improves from 0.2452 to 0.2382. The calibrated test log loss is also better than the
+0.6931 coin-flip baseline. A temperature above 1 confirms that the raw challenger was
+overconfident and benefits from shrinking extreme probabilities toward 50%.
+
+This is evidence that confidence quality improved without sacrificing discrimination.
+It does **not** promote the model. The calibrated model remains a shadow/challenger until
+it proves itself prospectively under the repository governance rules and is explicitly
+authorized for promotion.
 
 ## Current limitations / next enrichments
 
