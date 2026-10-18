@@ -8,19 +8,23 @@ on:
     paths:
       - 'pyproject.toml'
       - 'src/wshlx_ufc/historical_*.py'
+      - 'src/wshlx_ufc/unified_ensemble.py'
       - 'src/wshlx_ufc/calibration.py'
       - 'src/wshlx_ufc/timing.py'
       - 'scripts/build_historical_model.py'
+      - 'scripts/build_unified_ensemble.py'
       - 'tests/test_historical_*.py'
+      - 'tests/test_unified_ensemble.py'
       - 'tests/test_calibration.py'
       - 'data/reference/published_conditional_rate_benchmarks.csv'
       - 'data/supplemental/results/*.csv'
+      - 'data/locks/**/stage_a_model_raw*.json'
       - '.github/workflows/historical-conditional-rates.yml'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 50
     permissions:
       contents: read
     steps:
@@ -35,7 +39,9 @@ jobs:
         run: pytest -q
       - name: Build historical dataset, rate tables, and shadow models
         run: python scripts/build_historical_model.py --download --min-bin-n 30
-      - name: Upload historical artifacts
+      - name: Build unified ensemble from frozen cards
+        run: python scripts/build_unified_ensemble.py
+      - name: Upload historical and unified artifacts
         uses: actions/upload-artifact@v4
         with:
           name: historical-conditional-rates
@@ -51,4 +57,9 @@ jobs:
             data/historical/historical_timing_model.joblib
             data/historical/historical_timing_metrics.json
             data/historical/historical_build_manifest.json
+            data/unified/unified_ensemble_weights.json
+            data/unified/unified_ensemble_metrics.json
+            data/unified/unified_recent_predictions.csv
+            data/unified/unified_timing_predictions.csv
+            data/unified/unified_build_manifest.json
           retention-days: 30
