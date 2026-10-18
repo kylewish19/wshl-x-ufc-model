@@ -9,6 +9,7 @@ on:
       - 'pyproject.toml'
       - 'src/wshlx_ufc/historical_*.py'
       - 'src/wshlx_ufc/calibration.py'
+      - 'src/wshlx_ufc/timing.py'
       - 'scripts/build_historical_model.py'
       - 'tests/test_historical_*.py'
       - 'tests/test_calibration.py'
@@ -19,7 +20,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     permissions:
       contents: read
     steps:
@@ -32,7 +33,7 @@ jobs:
         run: pip install -e .[dev]
       - name: Run tests
         run: pytest -q
-      - name: Build historical dataset, rate tables, and model
+      - name: Build historical dataset, rate tables, and shadow models
         run: python scripts/build_historical_model.py --download --min-bin-n 30
       - name: Upload historical artifacts
         uses: actions/upload-artifact@v4
@@ -41,7 +42,13 @@ jobs:
           path: |
             data/historical/prefight_perspective_rows.csv
             data/historical/conditional_win_rates.csv
+            data/historical/conditional_method_rates.csv
+            data/historical/conditional_timing_rates.csv
             data/historical/historical_winner_model.joblib
             data/historical/historical_winner_metrics.json
+            data/historical/historical_method_model.joblib
+            data/historical/historical_method_metrics.json
+            data/historical/historical_timing_model.joblib
+            data/historical/historical_timing_metrics.json
             data/historical/historical_build_manifest.json
           retention-days: 30
