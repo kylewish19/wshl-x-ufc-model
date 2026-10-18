@@ -2,6 +2,15 @@ name: Historical conditional rates
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - feature/historical-conditional-rates
+    paths:
+      - 'src/wshlx_ufc/historical_*.py'
+      - 'scripts/build_historical_model.py'
+      - 'tests/test_historical_*.py'
+      - 'data/reference/published_conditional_rate_benchmarks.csv'
+      - '.github/workflows/historical-conditional-rates.yml'
 
 jobs:
   build:
