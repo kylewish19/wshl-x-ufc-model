@@ -1,7 +1,7 @@
 """Leakage-safe outcome targets derived from completed UFC results.
 
 Targets are kept outside the prefight feature builder so result/method/timing fields can
-never accidentally enter the predictor matrix.  Method labels are derived from the
+never accidentally enter the predictor matrix. Method labels are derived from the
 existing decided-fight perspective rows. Timing labels are attached from the raw result
 record only after prefight state reconstruction is complete.
 """
@@ -10,7 +10,7 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
-from .historical_data import bout, col, method, rounds, secs, txt
+from .historical_data import bout, col, method, num, rounds, secs, txt
 
 METHOD_STATES = (
     "WIN_KO_TKO",
@@ -60,7 +60,7 @@ def _result_timing_map(results: pd.DataFrame) -> dict[tuple[str, tuple[str, str]
             duration_seconds = float(scheduled_seconds)
             observed = 0.0
         elif meth in {"KO_TKO", "SUB"} and rc is not None and tc is not None:
-            rnd = int(max(1, float(row[rc])))
+            rnd = int(max(1, num(row[rc])))
             duration_seconds = float((rnd - 1) * 300 + secs(row[tc]))
             if not (0 < duration_seconds <= scheduled_seconds):
                 continue
