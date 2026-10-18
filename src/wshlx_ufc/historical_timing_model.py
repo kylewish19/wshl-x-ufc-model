@@ -2,7 +2,8 @@
 
 One orientation-invariant row is created per fight. Historical finish/survival rates are
 encoded strictly from earlier event dates, then fed into the existing 30-second discrete
-hazard model. All O/U, goes-distance, and round-start prices come from one survival curve.
+hazard model. All O/U, goes-distance, round-start, and exact finish-round prices come
+from one survival curve.
 """
 from __future__ import annotations
 
@@ -44,7 +45,6 @@ TIMING_TARGETS = ("finish_observed", "finish_r1", "survive_450", "survive_750", 
 def _weight_context(weight_class: pd.Series) -> tuple[pd.Series, pd.Series]:
     s = weight_class.astype(str).str.lower()
     pounds = pd.Series(np.nan, index=s.index, dtype=float)
-    # Broad heavyweight first; light-heavyweight is then corrected back to 205.
     mapping = [
         ("strawweight", 115), ("flyweight", 125), ("bantamweight", 135),
         ("featherweight", 145), ("lightweight", 155), ("welterweight", 170),
@@ -176,10 +176,20 @@ def evaluate_timing_markets(bundle: "HistoricalTimingBundle", encoded: pd.DataFr
     for market, y in definitions.items():
         if market in pred:
             out[market] = _binary_metrics(y, pred[market].to_numpy())
+    for round_no in (1, 2, 3):
+        key = f"FINISH_ROUND_{round_no}"
+        if key in pred:
+            actual_finish = ((actual["finish_observed"] == 1) & (np.ceil(actual["finish_seconds"] / 300.0) == round_no)).astype(int).to_numpy()
+            out[key] = _binary_metrics(actual_finish, pred[key].to_numpy())
     five = actual["scheduled_seconds"].eq(1500)
     for market, seconds in (("ROUND_4_STARTS_YES", 900), ("ROUND_5_STARTS_YES", 1200)):
         if market in pred and five.any():
             out[market] = _binary_metrics((actual.loc[five, "finish_seconds"] > seconds).astype(int).to_numpy(), pred.loc[five, market].to_numpy())
+    for round_no in (4, 5):
+        key = f"FINISH_ROUND_{round_no}"
+        if key in pred and five.any():
+            actual_finish = ((actual.loc[five, "finish_observed"] == 1) & (np.ceil(actual.loc[five, "finish_seconds"] / 300.0) == round_no)).astype(int).to_numpy()
+            out[key] = _binary_metrics(actual_finish, pred.loc[five, key].to_numpy())
     return out
 
 
@@ -217,6 +227,12 @@ class HistoricalTimingBundle:
             out[f"UNDER_{r}"] = 1.0 - p
         gtd = survive(scheduled_seconds)
         out["GTD_YES"], out["GTD_NO"] = gtd, 1.0 - gtd
+        previous_survival = 1.0
+        for r in range(1, rounds + 1):
+            end_survival = survive(r * 300)
+            out[f"FINISH_ROUND_{r}"] = max(0.0, previous_survival - end_survival)
+            out[f"FINISH_ROUND_{r}_NO"] = 1.0 - out[f"FINISH_ROUND_{r}"]
+            previous_survival = end_survival
         for r in range(2, rounds + 1):
             p = survive((r - 1) * 300)
             out[f"ROUND_{r}_STARTS_YES"] = p
