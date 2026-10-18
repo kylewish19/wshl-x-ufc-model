@@ -39,6 +39,8 @@ jobs:
         run: pytest -q
       - name: Build historical dataset, rate tables, and shadow models
         run: python scripts/build_historical_model.py --download --min-bin-n 30
+      # The unified layer is intentionally built only after leakage-safe historical
+      # predictions exist. It learns constrained weights from frozen pre-fight cards.
       - name: Build unified ensemble from frozen cards
         run: python scripts/build_unified_ensemble.py
       - name: Upload historical and unified artifacts
