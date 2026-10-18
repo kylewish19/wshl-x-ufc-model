@@ -1,0 +1,82 @@
+{
+  "event": "UFC Edmonton: Buckley vs Malott",
+  "event_date": "2026-10-17",
+  "graded_on": "2026-10-18",
+  "official_stage_a_sha256": "fbe2f1f451e396d550b94ebcb8392a234666a97653aa346bd446c12a8ac97160",
+  "official_stage_b_path": "data/locks/ufcedmonton_2026-10-17/stage_b_official_card.json",
+  "results": [
+    {"fight_no":1,"fight":"Cody Chovancek vs SuYoung You","winner":"SuYoung You","method":"SUB","round":3,"time":"4:19","stage_a_pick":"Cody Chovancek","stage_a_pick_correct":false,"stage_a_top_method":"DEC","method_class_correct":false},
+    {"fight_no":2,"fight":"Melissa Croden vs Chelsea Chandler","winner":"Chelsea Chandler","method":"SUB","round":1,"time":"4:52","stage_a_pick":"Melissa Croden","stage_a_pick_correct":false,"stage_a_top_method":"KO/TKO","method_class_correct":false},
+    {"fight_no":3,"fight":"Chad Anheliger vs Steven Koslow","winner":"Steven Koslow","method":"SUB","round":3,"time":"4:31","stage_a_pick":"Steven Koslow","stage_a_pick_correct":true,"stage_a_top_method":"SUB","method_class_correct":true},
+    {"fight_no":4,"fight":"Katlyn Cerminara vs Mackenzie Stiller","winner":"Katlyn Cerminara","method":"KO/TKO","round":1,"time":"4:46","stage_a_pick":"Mackenzie Stiller","stage_a_pick_correct":false,"stage_a_top_method":"KO/TKO","method_class_correct":true},
+    {"fight_no":5,"fight":"Javad Mahjoub vs Joel Faglier","winner":"Joel Faglier","method":"KO/TKO","round":2,"time":"2:11","stage_a_pick":"Javad Mahjoub","stage_a_pick_correct":false,"stage_a_top_method":"KO/TKO","method_class_correct":true},
+    {"fight_no":6,"fight":"Julien Leblanc vs Nick Galanti","winner":"Nick Galanti","method":"SUB","round":1,"time":"1:26","stage_a_pick":"Julien Leblanc","stage_a_pick_correct":false,"stage_a_top_method":"KO/TKO","method_class_correct":false},
+    {"fight_no":7,"fight":"Tanner Boser vs Jhonata Diniz","winner":"Tanner Boser","method":"KO/TKO","round":3,"time":"4:26","stage_a_pick":"Tanner Boser","stage_a_pick_correct":true,"stage_a_top_method":"KO/TKO","method_class_correct":true},
+    {"fight_no":8,"fight":"Mandel Nallo vs Nate Landwehr","winner":"Mandel Nallo","method":"KO/TKO","round":2,"time":"0:47","stage_a_pick":"Nate Landwehr","stage_a_pick_correct":false,"stage_a_top_method":"KO/TKO","method_class_correct":true},
+    {"fight_no":9,"fight":"Louis Jourdain vs Timmy Cuamba","winner":"Timmy Cuamba","method":"SUB","round":2,"time":"2:48","stage_a_pick":"Louis Jourdain","stage_a_pick_correct":false,"stage_a_top_method":"KO/TKO","method_class_correct":false},
+    {"fight_no":10,"fight":"Marc-Andre Barriault vs Kyle Daukaus","winner":"Marc-Andre Barriault","method":"KO/TKO","round":1,"time":"4:28","stage_a_pick":"Kyle Daukaus","stage_a_pick_correct":false,"stage_a_top_method":"KO/TKO","method_class_correct":true},
+    {"fight_no":11,"fight":"Kyle Nelson vs Cristian Perez","winner":"Cristian Perez","method":"KO/TKO","round":1,"time":"0:27","stage_a_pick":"Cristian Perez","stage_a_pick_correct":true,"stage_a_top_method":"KO/TKO","method_class_correct":true},
+    {"fight_no":12,"fight":"Erin Blanchfield vs Jasmine Jasudavicius","winner":"Jasmine Jasudavicius","method":"DEC","round":3,"time":"5:00","stage_a_pick":"Erin Blanchfield","stage_a_pick_correct":false,"stage_a_top_method":"DEC","method_class_correct":true},
+    {"fight_no":13,"fight":"Joaquin Buckley vs Mike Malott","winner":"Mike Malott","method":"KO/TKO","round":2,"time":"2:32","stage_a_pick":"Joaquin Buckley","stage_a_pick_correct":false,"stage_a_top_method":"KO/TKO","method_class_correct":true}
+  ],
+  "stage_a_grade": {
+    "winner_record":"3-10",
+    "winner_accuracy":0.2307692308,
+    "winner_brier":0.3383839518,
+    "winner_log_loss":0.8827627940,
+    "displayed_method_class_record":"9-4",
+    "displayed_method_class_accuracy":0.6923076923,
+    "exact_winner_plus_method_record":"3-10",
+    "official_exact_method_promotion_record":"0-1",
+    "top_double_chance_for_selected_fighter_record":"3-10",
+    "sparse_winner_record":"2-6",
+    "non_sparse_winner_record":"1-4"
+  },
+  "method_distribution": {
+    "stage_a_top_method_classes":{"KO_TKO":10,"SUB":1,"DEC":2},
+    "actual_method_classes":{"KO_TKO":7,"SUB":5,"DEC":1},
+    "actual_finish_rate":0.9230769231,
+    "submission_recall_by_class":0.2,
+    "ko_tko_recall_by_class":1.0,
+    "decision_recall_by_class":1.0,
+    "diagnostic_note":"Method-class accuracy was good overall, but the card exposed strong submission underprediction: 5 actual submissions versus only 1 top-method submission call."
+  },
+  "timing_directional_grade": {
+    "official_timing_wagers_on_event":0,
+    "gtd_direction_record":"9-4",
+    "over_under_0_5_direction_record":"11-2",
+    "over_under_1_5_direction_record":"7-6",
+    "over_under_2_5_direction_record":"6-7",
+    "round_2_starts_direction_record":"9-4",
+    "round_3_starts_direction_record":"5-8",
+    "main_event_round_4_starts_no":"WIN",
+    "main_event_round_5_starts_no":"WIN",
+    "main_event_under_3_5":"WIN",
+    "main_event_under_4_5":"WIN",
+    "official_timing_record_after_event":"0-5, -3.00u",
+    "note":"No official timing wager was placed, so the probationary timing betting record does not change."
+  },
+  "stage_b_grade": {
+    "record":"1-1",
+    "total_risk_units":1.25,
+    "profit_loss_units":0.88,
+    "roi":0.704,
+    "bets":[
+      {"bet":"Tanner Boser ML","odds":184,"stake_units":0.75,"result":"WIN","profit_loss_units":1.38},
+      {"bet":"Joaquin Buckley by KO/TKO","odds":220,"stake_units":0.5,"result":"LOSS","profit_loss_units":-0.5}
+    ]
+  },
+  "manual_audit_rerun": {
+    "winner_record":"3-10",
+    "note":"The manual screenshot/research rerun reproduced all 13 official Stage A winner sides; it therefore grades identically on winner selection and did not replace the official odds-blind lock."
+  },
+  "lessons": [
+    "Winner layer had a severe card-level miss: 3-10 with poor Brier/log-loss quality. This is not a one-fight anomaly and should trigger a serious challenger diagnostic after full stats are integrated, but not an immediate hindsight production rewrite.",
+    "The largest sparse/model-market disagreements mostly lost: Stiller, Leblanc and Landwehr all lost; Boser was the major disagreement that won. Sparse protections prevented these raw-edge disagreements from becoming official wagers and should remain.",
+    "Research downgrades were directionally useful on Leblanc-Galanti and Landwehr-Nallo. The research layer should continue to be allowed to pass/downgrade without freely flipping a frozen side.",
+    "Submission access remains under-modeled relative to KO outcomes. Five fights ended by submission, but only Koslow was the top-method SUB call. Test access-before-weapon/submission-entry features; do not simply boost submissions globally.",
+    "Early survival timing was much stronger than later survival timing: O0.5 11-2 and R2-start 9-4 versus O2.5 6-7 and R3-start 5-8. Keep timing probation and investigate late-hazard calibration.",
+    "Stage B discipline worked financially despite poor winner accuracy: Boser ML hit at +184 and Buckley KO lost, netting +0.88u on 1.25u risk. Do not expand wager count just because raw model-market gaps are large."
+  ],
+  "next_step":"Wait for complete canonical round-by-round UFC Edmonton stats, integrate causally, then rerun winner/method/timing diagnostics and v0.34 challengers before considering any code or promotion change."
+}
