@@ -104,39 +104,64 @@ def comprehensive_conditional_rate_tables(frame,min_n=20):
     parts=[p for p in parts if len(p)]; return pd.concat(parts,ignore_index=True) if parts else pd.DataFrame()
 
 class PastOnlyRateEncoder:
-    """Smoothed bucket rates using only history from earlier fight dates."""
-    def __init__(self,specs=DEFAULT_SPLITS,alpha=10.,prior=.5): self.specs=tuple(specs);self.alpha=float(alpha);self.prior=float(prior);self._n={};self._w={}
+    """Smoothed bucket rates using only history from earlier fight dates.
+
+    Scoring still happens for an entire event date before any outcomes from that date are
+    ingested. The implementation batches unique buckets and date-level aggregates instead
+    of updating every row individually; this is mathematically equivalent to the original
+    encoder but much faster when multiple method/timing targets reuse the same history.
+    """
+    def __init__(self,specs=DEFAULT_SPLITS,alpha=10.,prior=.5):
+        self.specs=tuple(specs);self.alpha=float(alpha);self.prior=float(prior);self._n={};self._w={}
+
     def _rate(self,name,b):
         if pd.isna(b):return self.prior,0.
         k=(name,str(b));n=self._n.get(k,0.);w=self._w.get(k,0.);d=n+self.alpha
         return (self.prior if d<=0 else (w+self.alpha*self.prior)/d),n
-    def _buckets(self,f): return {s.name:s.bucket(f[s.column]) for s in self.specs if s.column in f}
+    def _buckets(self,f):
+        return {s.name:s.bucket(f[s.column]) for s in self.specs if s.column in f}
+
     def fit_transform(self,frame,date_col="date",fight_id_col="fight_id",target="win"):
         o=frame.copy();o[date_col]=pd.to_datetime(o[date_col],errors="coerce");o=o.sort_values([date_col,fight_id_col],kind="stable");bs=self._buckets(o)
-        vals={f"hist_{n}_wr":pd.Series(index=o.index,dtype=float) for n in bs}; ns={f"hist_{n}_n":pd.Series(index=o.index,dtype=float) for n in bs}
-        # Score an entire event date before ingesting any outcomes from that date.
-        # This matches our pre-card lock workflow and prevents same-card leakage.
+        vals={f"hist_{n}_wr":pd.Series(index=o.index,dtype=float) for n in bs};ns={f"hist_{n}_n":pd.Series(index=o.index,dtype=float) for n in bs}
+        y_all=pd.to_numeric(o[target],errors="coerce")
+        # Score a complete event date from earlier history, then ingest that date in bulk.
         for _,idx in o.groupby(date_col,sort=False,dropna=False).groups.items():
-            idx=list(idx)
+            idx=pd.Index(idx)
             for n,s in bs.items():
-                for i in idx: vals[f"hist_{n}_wr"].loc[i],ns[f"hist_{n}_n"].loc[i]=self._rate(n,s.loc[i])
+                current=s.loc[idx]
+                unique=[b for b in current.dropna().unique()]
+                lookup={str(b):self._rate(n,b) for b in unique}
+                rates=current.map(lambda b:self.prior if pd.isna(b) else lookup[str(b)][0]).astype(float)
+                counts=current.map(lambda b:0. if pd.isna(b) else lookup[str(b)][1]).astype(float)
+                vals[f"hist_{n}_wr"].loc[idx]=rates.to_numpy()
+                ns[f"hist_{n}_n"].loc[idx]=counts.to_numpy()
             for n,s in bs.items():
-                for i in idx:
-                    b,y=s.loc[i],o.at[i,target]
-                    if pd.isna(b) or pd.isna(y):continue
-                    k=(n,str(b));self._n[k]=self._n.get(k,0)+1;self._w[k]=self._w.get(k,0)+float(y)
+                current=pd.DataFrame({"bucket":s.loc[idx],"target":y_all.loc[idx]}).dropna()
+                if current.empty:continue
+                agg=current.groupby("bucket",observed=True).target.agg(["count","sum"])
+                for b,row in agg.iterrows():
+                    k=(n,str(b));self._n[k]=self._n.get(k,0.)+float(row["count"]);self._w[k]=self._w.get(k,0.)+float(row["sum"])
         for k,v in {**vals,**ns}.items():o[k]=v
         return o
+
     def fit(self,frame,target="win"):
+        y=pd.to_numeric(frame[target],errors="coerce")
         for n,s in self._buckets(frame).items():
-            for b,y in zip(s,pd.to_numeric(frame[target],errors="coerce")):
-                if pd.isna(b) or pd.isna(y):continue
-                k=(n,str(b));self._n[k]=self._n.get(k,0)+1;self._w[k]=self._w.get(k,0)+float(y)
+            current=pd.DataFrame({"bucket":s,"target":y}).dropna()
+            if current.empty:continue
+            agg=current.groupby("bucket",observed=True).target.agg(["count","sum"])
+            for b,row in agg.iterrows():
+                k=(n,str(b));self._n[k]=self._n.get(k,0.)+float(row["count"]);self._w[k]=self._w.get(k,0.)+float(row["sum"])
         return self
+
     def transform(self,frame):
         o=frame.copy()
         for n,s in self._buckets(o).items():
-            x=[self._rate(n,b) for b in s];o[f"hist_{n}_wr"]=[v[0] for v in x];o[f"hist_{n}_n"]=[v[1] for v in x]
+            unique=[b for b in s.dropna().unique()]
+            lookup={str(b):self._rate(n,b) for b in unique}
+            o[f"hist_{n}_wr"]=s.map(lambda b:self.prior if pd.isna(b) else lookup[str(b)][0]).astype(float)
+            o[f"hist_{n}_n"]=s.map(lambda b:0. if pd.isna(b) else lookup[str(b)][1]).astype(float)
         return o
 
 def add_interaction_features(frame):
