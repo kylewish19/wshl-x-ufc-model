@@ -19,6 +19,7 @@ from .historical_outcomes import add_timing_targets
 from .historical_rates import PastOnlyRateEncoder, SplitSpec
 from .timing import DiscreteTimeHazardModel
 
+MODEL_START_DATE = pd.Timestamp("2001-01-01")
 I = np.inf
 TIMING_SPLITS = (
     SplitSpec("pair_age_mean", "pair_mean_age", (-I, 27, 30, 33, 36, I), ("u27", "27_29", "30_32", "33_35", "36+")),
@@ -43,11 +44,11 @@ TIMING_TARGETS = ("finish_observed", "finish_r1", "survive_450", "survive_750", 
 def _weight_context(weight_class: pd.Series) -> tuple[pd.Series, pd.Series]:
     s = weight_class.astype(str).str.lower()
     pounds = pd.Series(np.nan, index=s.index, dtype=float)
-    # Order matters: light heavyweight must be assigned before heavyweight.
+    # Broad heavyweight first; light-heavyweight is then corrected back to 205.
     mapping = [
         ("strawweight", 115), ("flyweight", 125), ("bantamweight", 135),
         ("featherweight", 145), ("lightweight", 155), ("welterweight", 170),
-        ("middleweight", 185), ("light heavyweight", 205), ("heavyweight", 265),
+        ("middleweight", 185), ("heavyweight", 265), ("light heavyweight", 205),
     ]
     for name, value in mapping:
         mask = s.str.contains(name, regex=False)
@@ -74,9 +75,10 @@ def symmetric_timing_frame(frame: pd.DataFrame) -> pd.DataFrame:
             continue
         a = pd.to_numeric(base[metric], errors="coerce")
         b = pd.to_numeric(base[opp], errors="coerce")
-        out[f"pair_mean_{metric}"] = pd.concat([a, b], axis=1).mean(axis=1)
-        out[f"pair_min_{metric}"] = pd.concat([a, b], axis=1).min(axis=1)
-        out[f"pair_max_{metric}"] = pd.concat([a, b], axis=1).max(axis=1)
+        pair = pd.concat([a, b], axis=1)
+        out[f"pair_mean_{metric}"] = pair.mean(axis=1)
+        out[f"pair_min_{metric}"] = pair.min(axis=1)
+        out[f"pair_max_{metric}"] = pair.max(axis=1)
         out[f"gap_abs_{metric}"] = (a - b).abs()
     if "ufc_fights" in base and "opp_ufc_fights" in base:
         out["pair_total_ufc_fights"] = pd.to_numeric(base["ufc_fights"], errors="coerce") + pd.to_numeric(base["opp_ufc_fights"], errors="coerce")
@@ -163,15 +165,15 @@ def _market_predictions(bundle: "HistoricalTimingBundle", encoded: pd.DataFrame)
 def evaluate_timing_markets(bundle: "HistoricalTimingBundle", encoded: pd.DataFrame) -> dict[str, dict[str, float]]:
     pred = _market_predictions(bundle, encoded)
     actual = encoded.set_index("fight_id")
-    definitions: dict[str, tuple[str, np.ndarray]] = {
-        "GTD_YES": ("goes_distance", actual["goes_distance"].to_numpy()),
-        "OVER_1.5": ("survive_450", actual["survive_450"].to_numpy()),
-        "OVER_2.5": ("survive_750", actual["survive_750"].to_numpy()),
-        "ROUND_2_STARTS_YES": ("r2", (actual["finish_seconds"] > 300).astype(int).to_numpy()),
-        "ROUND_3_STARTS_YES": ("r3", (actual["finish_seconds"] > 600).astype(int).to_numpy()),
+    definitions: dict[str, np.ndarray] = {
+        "GTD_YES": actual["goes_distance"].to_numpy(),
+        "OVER_1.5": actual["survive_450"].to_numpy(),
+        "OVER_2.5": actual["survive_750"].to_numpy(),
+        "ROUND_2_STARTS_YES": (actual["finish_seconds"] > 300).astype(int).to_numpy(),
+        "ROUND_3_STARTS_YES": (actual["finish_seconds"] > 600).astype(int).to_numpy(),
     }
     out: dict[str, dict[str, float]] = {}
-    for market, (_, y) in definitions.items():
+    for market, y in definitions.items():
         if market in pred:
             out[market] = _binary_metrics(y, pred[market].to_numpy())
     five = actual["scheduled_seconds"].eq(1500)
@@ -197,6 +199,7 @@ class HistoricalTimingBundle:
         hazards = np.clip(self._hazards(row, scheduled_seconds), 1e-9, 1 - 1e-9)
         survival = np.cumprod(1.0 - hazards)
         endpoints = np.arange(1, len(survival) + 1) * self.hazard_model.bin_seconds
+
         def survive(seconds: int) -> float:
             if seconds <= 0:
                 return 1.0
@@ -204,12 +207,12 @@ class HistoricalTimingBundle:
                 return 0.0
             eligible = np.flatnonzero(endpoints <= seconds)
             return 1.0 if not len(eligible) else float(survival[eligible[-1]])
+
         rounds = scheduled_seconds // 300
         out: dict[str, float] = {}
         thresholds = [0.5, 1.5, 2.5] + ([3.5, 4.5] if rounds == 5 else [])
         for r in thresholds:
-            sec = int(round(r * 300))
-            p = survive(sec)
+            p = survive(int(round(r * 300)))
             out[f"OVER_{r}"] = p
             out[f"UNDER_{r}"] = 1.0 - p
         gtd = survive(scheduled_seconds)
@@ -221,8 +224,7 @@ class HistoricalTimingBundle:
         return out
 
     def market_probabilities(self, perspective_frame: pd.DataFrame) -> pd.DataFrame:
-        x = symmetric_timing_frame(perspective_frame)
-        x = _encode_transform(x, self.rate_encoders)
+        x = _encode_transform(symmetric_timing_frame(perspective_frame), self.rate_encoders)
         rows = []
         for _, row in x.iterrows():
             scheduled = int(pd.to_numeric(row.get("scheduled_rounds"), errors="coerce") * 300)
@@ -242,6 +244,8 @@ def _fit_hazard(frame: pd.DataFrame) -> tuple[DiscreteTimeHazardModel, list[str]
 def fit_historical_timing_model(perspective_frame: pd.DataFrame, results: pd.DataFrame) -> tuple[HistoricalTimingBundle, dict[str, object]]:
     targeted = add_timing_targets(perspective_frame, results)
     work = symmetric_timing_frame(targeted)
+    work["date"] = pd.to_datetime(work["date"], errors="coerce")
+    work = work[work["date"] >= MODEL_START_DATE].copy()
     work = work.dropna(subset=["finish_seconds", "scheduled_seconds", "finish_observed"]).copy()
     work = work[work["scheduled_seconds"].isin([900.0, 1500.0])].copy()
     train, val, test = chronological_split(work)
@@ -250,8 +254,6 @@ def fit_historical_timing_model(perspective_frame: pd.DataFrame, results: pd.Dat
     val_e = _encode_transform(val, train_enc)
     hazard_eval, features = _fit_hazard(train_e)
 
-    # Calibrate interval hazards on validation only. Positive temperature preserves the
-    # ordering of interval hazards while the survival construction keeps all props coherent.
     expanded_val, y_val = hazard_eval._expanded_rows(
         val_e[features], val_e["finish_seconds"].to_numpy(), val_e["scheduled_seconds"].to_numpy(), val_e["finish_observed"].to_numpy()
     )
@@ -263,8 +265,6 @@ def fit_historical_timing_model(perspective_frame: pd.DataFrame, results: pd.Dat
 
     test_enc = _fit_encoders(pd.concat([train, val], ignore_index=True))
     test_e = _encode_transform(test, test_enc)
-    # Evaluation model remains the train-era hazard learner; only historical rate state is
-    # allowed to advance for the final test era, matching the winner-model protocol.
     raw_test_bundle = HistoricalTimingBundle(hazard_eval, test_enc, features, pd.to_datetime(test["date"]).max(), 1.0)
     cal_test_bundle = HistoricalTimingBundle(hazard_eval, test_enc, features, pd.to_datetime(test["date"]).max(), calibrator.temperature)
 
@@ -274,6 +274,7 @@ def fit_historical_timing_model(perspective_frame: pd.DataFrame, results: pd.Dat
         "raw_validation": evaluate_timing_markets(raw_bundle, val_e),
         "raw_test": evaluate_timing_markets(raw_test_bundle, test_e),
         "hazard_calibration": cal_report,
+        "model_start_date": str(MODEL_START_DATE.date()),
         "n_train_fights": int(len(train)),
         "n_validation_fights": int(len(val)),
         "n_test_fights": int(len(test)),
@@ -294,7 +295,9 @@ def fit_historical_timing_model(perspective_frame: pd.DataFrame, results: pd.Dat
 def timing_conditional_rate_tables(perspective_frame: pd.DataFrame, results: pd.DataFrame, min_n: int = 30) -> pd.DataFrame:
     from .historical_rates import all_conditional_rate_tables
     targeted = add_timing_targets(perspective_frame, results)
-    work = symmetric_timing_frame(targeted).dropna(subset=["finish_observed"])
+    work = symmetric_timing_frame(targeted)
+    work["date"] = pd.to_datetime(work["date"], errors="coerce")
+    work = work[(work["date"] >= MODEL_START_DATE) & work["finish_observed"].notna()].copy()
     parts = []
     for target in TIMING_TARGETS:
         t = all_conditional_rate_tables(work, specs=TIMING_SPLITS, target=target, min_n=min_n)
