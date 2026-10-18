@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from collections import defaultdict
 import re
+import unicodedata
 from typing import Mapping
 
 import pandas as pd
@@ -24,7 +25,9 @@ NAME_ALIASES = {
 
 
 def norm_name(value: object) -> str:
-    s = str(value or "").lower().replace("’", "'")
+    raw = unicodedata.normalize("NFKD", str(value or ""))
+    raw = "".join(ch for ch in raw if not unicodedata.combining(ch))
+    s = raw.lower().replace("’", "'")
     s = re.sub(r"[^a-z0-9]+", "", s)
     return NAME_ALIASES.get(s, s)
 
