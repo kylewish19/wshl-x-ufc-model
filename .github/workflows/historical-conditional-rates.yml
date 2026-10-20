@@ -1,5 +1,6 @@
 name: Historical conditional rates
 
+# Holdout-preservation rerun requested 2026-10-20 before Edmonton is admitted to training.
 on:
   workflow_dispatch:
   push:
