@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
-"""Run the historical current-style OOF study with a symmetric winner orientation.
+"""Run the historical current-style OOF study with symmetric winner orientation.
 
 UFCStats result exports normally place the winner first in BOUT, so the raw reconstructed
-winner rows can have winner_is_a=1 for every fight.  The production winner architecture
-expects matchup A/B orientation, not "winner first" orientation.  For this historical
+winner rows can have winner_is_a=1 for every fight. The production winner architecture
+expects matchup A/B orientation, not "winner first" orientation. For this historical
 OOF diagnostic we therefore mirror every training matchup, assign the inverse target to
 the mirrored row, and pair-normalize original/mirrored predictions at inference.
+
+The large OOF builder normalizes source dates to UTC. Historical timing's normal
+production path uses tz-naive dates, so this wrapper also makes its fixed model-start
+cutoff UTC-aware for this diagnostic only. This changes no outcome information and is
+strictly a datetime compatibility fix.
 """
 from __future__ import annotations
 
@@ -22,6 +27,7 @@ if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
 from wshlx_ufc.models import WinnerModel as CoreWinnerModel
+import wshlx_ufc.historical_timing_model as historical_timing_model
 
 
 def _load_base():
@@ -35,6 +41,9 @@ def _load_base():
 
 
 base = _load_base()
+# OOF source dates are UTC-aware; keep the timing model's fixed 2001 start cutoff
+# compatible with that representation without changing the cutoff date itself.
+historical_timing_model.MODEL_START_DATE = pd.Timestamp("2001-01-01", tz="UTC")
 
 
 def _swap_winner_features(x: pd.DataFrame) -> pd.DataFrame:
