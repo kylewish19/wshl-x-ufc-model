@@ -1,0 +1,25 @@
+event_date,event,a,b,p_a_win,p_b_win,provenance_status,display_precision,source_artifact
+2026-08-08,UFC Fight Night: Gamrot vs. Salkilld,Mateusz Gamrot,Quillan Salkilld,0.36,0.64,fight_day_final,0.1pp,WSHL_X_UFC_Vegas_120_Fight_Day_Card_2026-08-08.md
+2026-08-08,UFC Fight Night: Gamrot vs. Salkilld,Diego Ferreira,Billy Quarantillo,0.489,0.511,fight_day_final,0.1pp,WSHL_X_UFC_Vegas_120_Fight_Day_Card_2026-08-08.md
+2026-08-08,UFC Fight Night: Gamrot vs. Salkilld,Darren Elkins,Yadier del Valle,0.292,0.708,fight_day_final,0.1pp,WSHL_X_UFC_Vegas_120_Fight_Day_Card_2026-08-08.md
+2026-08-08,UFC Fight Night: Gamrot vs. Salkilld,Amanda Lemos,Alexia Thainara,0.218,0.782,fight_day_final,0.1pp,WSHL_X_UFC_Vegas_120_Fight_Day_Card_2026-08-08.md
+2026-08-08,UFC Fight Night: Gamrot vs. Salkilld,Ty Miller,Billy Ray Goff,0.54,0.46,fight_day_final,0.1pp,WSHL_X_UFC_Vegas_120_Fight_Day_Card_2026-08-08.md
+2026-08-08,UFC Fight Night: Gamrot vs. Salkilld,Steven Asplund,Guilherme Pat,0.582,0.418,fight_day_final,0.1pp,WSHL_X_UFC_Vegas_120_Fight_Day_Card_2026-08-08.md
+2026-08-08,UFC Fight Night: Gamrot vs. Salkilld,Diyar Nurgozhay,Bruno Lopes,0.598,0.402,fight_day_final,0.1pp,WSHL_X_UFC_Vegas_120_Fight_Day_Card_2026-08-08.md
+2026-08-08,UFC Fight Night: Gamrot vs. Salkilld,Louie Sutherland,Jose Montanha,0.565,0.435,fight_day_final,0.1pp,WSHL_X_UFC_Vegas_120_Fight_Day_Card_2026-08-08.md
+2026-08-08,UFC Fight Night: Gamrot vs. Salkilld,Manoel Sousa,Richie Miranda,0.583,0.417,fight_day_final,0.1pp,WSHL_X_UFC_Vegas_120_Fight_Day_Card_2026-08-08.md
+2026-08-08,UFC Fight Night: Gamrot vs. Salkilld,Miles Johns,Gianni Vazquez,0.671,0.329,fight_day_final,0.1pp,WSHL_X_UFC_Vegas_120_Fight_Day_Card_2026-08-08.md
+2026-08-08,UFC Fight Night: Gamrot vs. Salkilld,Juliana Miller,Ravena Oliveira,0.574,0.426,fight_day_final,0.1pp,WSHL_X_UFC_Vegas_120_Fight_Day_Card_2026-08-08.md
+2026-08-08,UFC Fight Night: Gamrot vs. Salkilld,Gigi Canuto,Carol Foro,0.562,0.438,fight_day_final,0.1pp,WSHL_X_UFC_Vegas_120_Fight_Day_Card_2026-08-08.md
+2026-08-15,UFC 330: Makhachev vs Machado Garry,Jeremiah Wells,Myktybek Orolbai,0.159,0.841,fight_day_final_reissued_post_event,0.1pp,POST_EVENT_GRADE_REPORT(1).md
+2026-08-15,UFC 330: Makhachev vs Machado Garry,Neil Magny,Ramiz Brahimaj,0.605,0.395,fight_day_final_reissued_post_event,0.1pp,POST_EVENT_GRADE_REPORT(1).md
+2026-08-15,UFC 330: Makhachev vs Machado Garry,Rafael Tobias,Lucas Fernando,0.431,0.569,fight_day_final_reissued_post_event,0.1pp,POST_EVENT_GRADE_REPORT(1).md
+2026-08-15,UFC 330: Makhachev vs Machado Garry,Vicente Luque,Tresean Gore,0.727,0.273,fight_day_final_reissued_post_event,0.1pp,POST_EVENT_GRADE_REPORT(1).md
+2026-08-15,UFC 330: Makhachev vs Machado Garry,Donte Johnson,Eric McConico,0.739,0.261,fight_day_final_reissued_post_event,0.1pp,POST_EVENT_GRADE_REPORT(1).md
+2026-08-15,UFC 330: Makhachev vs Machado Garry,Jalin Turner,Kaue Fernandes,0.444,0.556,fight_day_final_reissued_post_event,0.1pp,POST_EVENT_GRADE_REPORT(1).md
+2026-08-15,UFC 330: Makhachev vs Machado Garry,Charles Johnson,Eduardo Chapolin,0.581,0.419,fight_day_final_reissued_post_event,0.1pp,POST_EVENT_GRADE_REPORT(1).md
+2026-08-15,UFC 330: Makhachev vs Machado Garry,Chidi Njokuani,Joel Alvarez,0.383,0.617,fight_day_final_reissued_post_event,0.1pp,POST_EVENT_GRADE_REPORT(1).md
+2026-08-15,UFC 330: Makhachev vs Machado Garry,Edson Barboza,Esteban Ribovics,0.278,0.722,fight_day_final_reissued_post_event,0.1pp,POST_EVENT_GRADE_REPORT(1).md
+2026-08-15,UFC 330: Makhachev vs Machado Garry,Mansur Abdul-Malik,Dustin Stoltzfus,0.65,0.35,fight_day_final_reissued_post_event,0.1pp,POST_EVENT_GRADE_REPORT(1).md
+2026-08-15,UFC 330: Makhachev vs Machado Garry,Mackenzie Dern,Gillian Robertson,0.379,0.621,fight_day_final_reissued_post_event,0.1pp,POST_EVENT_GRADE_REPORT(1).md
+2026-08-15,UFC 330: Makhachev vs Machado Garry,Islam Makhachev,Ian Machado Garry,0.613,0.387,fight_day_final_reissued_post_event,0.1pp,POST_EVENT_GRADE_REPORT(1).md
