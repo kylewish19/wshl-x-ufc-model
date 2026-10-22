@@ -108,6 +108,42 @@ an internal walk-forward check when at least 20 prior frozen fights are availabl
 practice this gives genuinely prior-only meta predictions on later cards in the training
 window rather than reporting only an in-sample fitted score.
 
+## Historical current-style OOF reconstruction update
+
+The initial frozen-card ensemble weights were useful as a starting point but were learned
+from a very small recent sample. A larger causal reconstruction was therefore built to
+compare a historical reconstruction of the current/reference architecture against the
+historical conditional challengers across UFC history.
+
+The OOF reconstruction uses **7,935 aligned fights from 2008 through 2026**. Each calendar
+year is predicted from models fit only on fights dated before that fold year. The global
+ensemble weights are fit on OOF predictions through 2021, while 2022-2026 is held out as
+a later-era evaluation block. The full procedure remains odds-blind.
+
+The preferred global weights for **future shadow-only prospective testing** are:
+
+- Winner: 30.0% current/reference, 70.0% historical
+- Method: 37.5% current/reference, 62.5% historical
+- Timing: 75.0% current/reference, 25.0% historical
+
+These weights are stored in `data/unified/oof_global_unified_shadow.json`.
+
+On the 2022-2026 evaluation block, the winner blend reached 62.44% accuracy versus 61.92%
+for current/reference and 62.32% for historical. The exact winner+method blend reached
+33.48% versus 31.99% for current/reference and 32.76% for historical. Timing accuracy was
+64.29% for the blend versus 63.92% for current/reference and 63.75% for historical.
+
+The historical component by itself retained better winner and method log loss than the
+global blend on the later-era evaluation block, so these results do not justify claiming
+that the blend dominates every probability-quality metric. The global blend is preferred
+as the simple prospective shadow baseline because it improves pick accuracy while keeping
+both model families represented and avoiding the unsupported complexity of a dynamic
+context gate.
+
+This OOF reconstruction is a development study, not a production promotion. The feature
+families and architecture were designed with knowledge of later UFC history, so future
+frozen prospective cards are still required before any official-model change.
+
 ## Promotion policy
 
 The unified ensemble begins as **SHADOW ONLY**.
