@@ -1,0 +1,341 @@
+{
+  "status": "HISTORICAL_CURRENT_STYLE_OOF_CONTEXT_DIAGNOSTIC_ONLY",
+  "winner": {
+    "train_through_year": 2021,
+    "test_years": [
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "global_fit": {
+      "weight_current": 0.30000000000000004,
+      "loss": 0.634977897999939,
+      "current_loss": 0.6857988017134861,
+      "historical_loss": 0.6503819924218636,
+      "n": 5456,
+      "weight_historical": 0.7,
+      "improvement_vs_best_base": 0.015404094421924586
+    },
+    "context_gate": {
+      "feature_names": [
+        "model_disagreement",
+        "historical_confidence",
+        "min_ufc_fights_log",
+        "experience_gap_log",
+        "age_gap_abs",
+        "reach_gap_abs",
+        "max_layoff_log",
+        "is_heavyweight",
+        "five_round"
+      ],
+      "medians": [
+        0.12829227572953264,
+        0.19028100262482434,
+        1.0986122886681096,
+        1.3862943611198906,
+        3.434704340267084,
+        2.0,
+        5.351858133476067,
+        0.0,
+        0.0
+      ],
+      "scales": [
+        0.11009305095561189,
+        0.16180046407814672,
+        0.8304298904750264,
+        0.8310452114573194,
+        3.1065196024250565,
+        1.9478010707984041,
+        0.5753918951683115,
+        0.2731343703320242,
+        0.28084627839328286
+      ],
+      "intercept": -0.8473718263936998,
+      "coefficients": [
+        0.0029988407988951193,
+        -0.0001788852951649357,
+        -0.002506702942771088,
+        -0.0017901491719056444,
+        -0.0003905051763466778,
+        -0.0005466791734150399,
+        -0.000542308457878745,
+        9.011504188854882e-05,
+        -0.0010082635243219705
+      ],
+      "prior_weight_current": 0.30000000000000004,
+      "l2": 8.0,
+      "intercept_l2": 2.0,
+      "n": 5456,
+      "objective": 0.634959468872917,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "mean_abs_coefficient": 0.0011169388425097521
+    },
+    "test": {
+      "current": {
+        "n": 2479,
+        "accuracy": 0.6192012908430818,
+        "brier": 0.24581457513661537,
+        "log_loss": 0.746484200541815,
+        "roc_auc": 0.648165440801508
+      },
+      "historical": {
+        "n": 2479,
+        "accuracy": 0.6232351754739814,
+        "brier": 0.23043096755011586,
+        "log_loss": 0.6541279671172608,
+        "roc_auc": 0.6655454404571264
+      },
+      "global": {
+        "n": 2479,
+        "accuracy": 0.6244453408632513,
+        "brier": 0.2329101357786866,
+        "log_loss": 0.6679479400524686,
+        "roc_auc": 0.6621354028003503
+      },
+      "contextual": {
+        "n": 2479,
+        "accuracy": 0.6244453408632513,
+        "brier": 0.2329218832754929,
+        "log_loss": 0.6680110237301485,
+        "roc_auc": 0.6620996401214871
+      },
+      "mean_context_current_weight": 0.2995385302024944
+    }
+  },
+  "method": {
+    "train_through_year": 2021,
+    "test_years": [
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "global_fit": {
+      "weight_current": 0.375,
+      "loss": 1.6128457624499482,
+      "current_loss": 1.684058713432361,
+      "historical_loss": 1.6566915629884875,
+      "n": 5456,
+      "weight_historical": 0.625,
+      "improvement_vs_best_base": 0.04384580053853937
+    },
+    "context_gate": {
+      "feature_names": [
+        "method_js",
+        "historical_method_confidence",
+        "min_ufc_fights_log",
+        "experience_gap_log",
+        "grappling_access_log",
+        "combined_finish_rate",
+        "combined_sub_rate",
+        "is_heavyweight",
+        "five_round"
+      ],
+      "medians": [
+        0.030541464738046385,
+        0.1020076058448407,
+        1.0986122886681096,
+        1.3862943611198906,
+        1.5706900636916687,
+        0.3333333333333333,
+        0.07142857142857142,
+        0.0,
+        0.0
+      ],
+      "scales": [
+        0.04762961435648626,
+        0.055357258269480944,
+        0.8304298904750264,
+        0.8310452114573194,
+        0.7547736654112049,
+        0.22613578320460503,
+        0.16083492146455894,
+        0.2731343703320242,
+        0.28084627839328286
+      ],
+      "intercept": -0.5106226454092552,
+      "coefficients": [
+        -0.00019524543114836737,
+        -0.001800229722257716,
+        -0.0008164616694607743,
+        -0.0012941124736357088,
+        -0.004188194710544381,
+        -0.0042568134620241775,
+        -0.0022825218647562796,
+        0.0017940965936192196,
+        -0.0004149786491305858
+      ],
+      "prior_weight_current": 0.375,
+      "l2": 8.0,
+      "intercept_l2": 2.0,
+      "n": 5456,
+      "objective": 1.6127998797562495,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "mean_abs_coefficient": 0.0018936282862863567
+    },
+    "test": {
+      "current": {
+        "n": 2479,
+        "joint_accuracy": 0.31988705123033484,
+        "winner_accuracy": 0.6192012908430818,
+        "method_accuracy": 0.509076240419524,
+        "log_loss": 1.7233125456170566,
+        "multiclass_brier": 0.7923193181992079,
+        "ko_recall": 0.38331318016928656,
+        "sub_recall": 0.035164835164835165,
+        "dec_recall": 0.7761069340016709
+      },
+      "historical": {
+        "n": 2479,
+        "joint_accuracy": 0.32755143202904397,
+        "winner_accuracy": 0.6288826139572409,
+        "method_accuracy": 0.5195643404598629,
+        "log_loss": 1.6184724390236864,
+        "multiclass_brier": 0.7748632966754351,
+        "ko_recall": 0.4449818621523579,
+        "sub_recall": 0.15384615384615385,
+        "dec_recall": 0.7101086048454469
+      },
+      "global": {
+        "n": 2479,
+        "joint_accuracy": 0.3348124243646632,
+        "winner_accuracy": 0.6212182331585316,
+        "method_accuracy": 0.5151270673658733,
+        "log_loss": 1.6272254824744712,
+        "multiclass_brier": 0.7745401440414647,
+        "ko_recall": 0.42321644498186217,
+        "sub_recall": 0.06153846153846154,
+        "dec_recall": 0.7510442773600668
+      },
+      "contextual": {
+        "n": 2479,
+        "joint_accuracy": 0.3348124243646632,
+        "winner_accuracy": 0.6208148446954417,
+        "method_accuracy": 0.5159338442920532,
+        "log_loss": 1.6272996958937869,
+        "multiclass_brier": 0.774557295744738,
+        "ko_recall": 0.42563482466747277,
+        "sub_recall": 0.06153846153846154,
+        "dec_recall": 0.7510442773600668
+      },
+      "mean_context_current_weight": 0.37497882402746513
+    }
+  },
+  "timing": {
+    "train_through_year": 2021,
+    "test_years": [
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "global_fit": {
+      "weight_current": 0.75,
+      "loss": 0.6499123949098848,
+      "current_loss": 0.6538031688241722,
+      "historical_loss": 0.6817504464475382,
+      "n": 5456,
+      "weight_historical": 0.25,
+      "improvement_vs_best_base": 0.003890773914287382
+    },
+    "context_gate": {
+      "feature_names": [
+        "prob_disagreement",
+        "historical_timing_confidence",
+        "min_ufc_fights_log",
+        "max_layoff_log",
+        "combined_finish_rate",
+        "horizon_fraction",
+        "is_heavyweight",
+        "five_round"
+      ],
+      "medians": [
+        0.08587246482074051,
+        0.3615156431336215,
+        1.0986122886681096,
+        5.351858133476067,
+        0.3333333333333333,
+        0.6666666666666666,
+        0.0,
+        0.0
+      ],
+      "scales": [
+        0.10058932015660767,
+        0.23780611979861468,
+        0.8381114838481265,
+        0.5751809222926542,
+        0.2255550047949865,
+        0.24209502078326597,
+        0.2765544810196638,
+        0.32121015690374444
+      ],
+      "intercept": 1.0986003787405483,
+      "coefficients": [
+        -0.0032445048764074293,
+        0.002551772349091053,
+        0.00011652894218278286,
+        0.0003552589118893302,
+        0.00038722350823354907,
+        0.00027421715950389224,
+        0.0008557769453190843,
+        -3.55650862622509e-05
+      ],
+      "prior_weight_current": 0.75,
+      "l2": 8.0,
+      "intercept_l2": 2.0,
+      "n": 28222,
+      "objective": 0.6498942768521856,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "mean_abs_coefficient": 0.0009776059723611715
+    },
+    "test": {
+      "current": {
+        "n": 12881,
+        "accuracy": 0.6392360841549569,
+        "brier": 0.22256850174330275,
+        "log_loss": 0.6386938724252212,
+        "roc_auc": 0.6656185482167807
+      },
+      "historical": {
+        "n": 12881,
+        "accuracy": 0.6374505085008928,
+        "brier": 0.22411271717353423,
+        "log_loss": 0.6641354587215813,
+        "roc_auc": 0.6625388281325745
+      },
+      "global": {
+        "n": 12881,
+        "accuracy": 0.6428848691871749,
+        "brier": 0.22232538862638862,
+        "log_loss": 0.6392405905205036,
+        "roc_auc": 0.6668375492812584
+      },
+      "contextual": {
+        "n": 12881,
+        "accuracy": 0.6428072354630852,
+        "brier": 0.22232109109506726,
+        "log_loss": 0.6392251036171666,
+        "roc_auc": 0.6668471193089338
+      },
+      "grouped_log_loss": {
+        "current": 0.6409021021472878,
+        "historical": 0.6679254773732956,
+        "global": 0.6417860023746237,
+        "contextual": 0.6417700823118136
+      },
+      "mean_context_current_weight": 0.7500904643195301
+    }
+  },
+  "governance": {
+    "production_change": false,
+    "promotion_allowed_from_this_report": false,
+    "reason": "This is a reconstructed historical OOF development study. Context families and architecture were designed with knowledge of later UFC history; future frozen prospective cards are still required for promotion."
+  }
+}
