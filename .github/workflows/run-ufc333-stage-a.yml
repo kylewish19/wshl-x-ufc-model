@@ -1,0 +1,55 @@
+name: UFC 333 Stage A model raw
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature/historical-conditional-rates
+    paths:
+      - "tools/run_ufc333_stage_a.py"
+      - ".github/workflows/run-ufc333-stage-a.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: run-ufc333-stage-a-model-raw
+  cancel-in-progress: true
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Run UFC 333 three-view Stage A model raw
+        run: PYTHONPATH=src python tools/run_ufc333_stage_a.py
+
+      - name: Test
+        run: pytest -q
+
+      - name: Record model-raw artifacts on research branch
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json
+          git add data/locks/ufc333_2026-10-24/stage_a_model_raw_audit.json
+          git add data/locks/ufc333_2026-10-24/stage_a_model_raw_summary.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "model: record UFC 333 Stage A three-view raw"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
