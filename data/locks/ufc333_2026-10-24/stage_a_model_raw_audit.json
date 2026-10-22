@@ -1,0 +1,13 @@
+{
+  "card_fights": 14,
+  "current_joint_simulations_per_fight": 10000,
+  "current_timing_simulations_per_fight": 10000,
+  "event": "UFC 333: Volkanovski vs Evloev",
+  "event_date": "2026-10-24",
+  "odds_used": false,
+  "post_event_history_through": "2026-10-17",
+  "required_next_step": "complete tape/research verification, attach provenance, then freeze final Stage A before Stage B prices",
+  "stage_a_frozen": false,
+  "unified_joint_simulations_per_fight": 10000,
+  "unified_timing_simulations_per_fight": 10000
+}

@@ -1,0 +1,10 @@
+{
+  "artifact_sha256": "4821b3013f9187159a2dcadf771f72507aaee2a631828f052c843871ff354a5f",
+  "evaluation_note": "Edmonton is admitted to training only after its frozen prospective grade. This refresh is not retroactive Edmonton validation and does not promote v0.34.",
+  "selected_features": [
+    "experience_gap_log"
+  ],
+  "selected_variant": "experience_only",
+  "status": "SHADOW_ONLY_NOT_PROMOTED",
+  "trained_through": "2026-10-17"
+}
