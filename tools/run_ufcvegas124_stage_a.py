@@ -241,6 +241,9 @@ def current_payload_and_hazards():
     payload["stage"] = "A_ODDS_BLIND_MODEL_RAW_THREE_VIEW_NOT_FROZEN"
     payload["odds_used"] = False
     payload["model_state"]["fighter_history_through"] = "2026-10-31"
+    payload["model_state"]["clean_feedback_rows"] = 139
+    payload["model_state"]["reference_artifact_fit_through"] = "2026-09-12 (v0.27 preserved reconstructed champion coefficients; as-of fighter features refreshed through 2026-10-31)"
+    payload["model_state"]["reference_artifact_retrained_after_ufc333"] = False
     payload["model_state"]["shadow_winner"] = "future-only shadow fit through 2026-10-31"
     payload["model_state"]["method_baseline"] = "baseline fit through 2026-10-31"
     payload["model_state"]["method_calibration"] = "calibrated method shadow fit through 2026-10-31"
