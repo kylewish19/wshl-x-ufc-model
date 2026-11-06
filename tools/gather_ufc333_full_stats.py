@@ -95,7 +95,7 @@ def main() -> None:
     observed_result_pairs = set()
     for _, r in results.iterrows():
         text = str(r["BOUT"])
-        fighters = re.split(r"\\s+vs\\.?\\s+", text, maxsplit=1, flags=re.I)
+        fighters = re.split(r"\s+vs\.?\s+", text, maxsplit=1, flags=re.I)
         if len(fighters) != 2:
             unexpected_pairs.append({"bout": text, "reason": "unrecognized BOUT separator"})
             continue
