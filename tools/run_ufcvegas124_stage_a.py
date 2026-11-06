@@ -423,7 +423,7 @@ def add_historical_and_unified(payload: dict, current_hazards: list[np.ndarray])
             "joint_method": hist_joint,
             "double_chance": double_chance(hist_joint),
             "timing_direct": hist_timing_direct,
-            "history_end": "2026-10-31",
+            "history_end": "2026-10-17",
         }
         row["oof_unified_shadow"] = {
             "status": "PREFERRED_PROSPECTIVE_SHADOW_NOT_PROMOTED",
