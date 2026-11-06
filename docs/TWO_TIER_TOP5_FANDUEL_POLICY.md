@@ -31,6 +31,7 @@
 - Selection engine: `src/wshlx_ufc/two_tier_card.py`
 - Freeze CLI: `tools/build_ufc_two_tier_stage_b.py`
 - Independent grading CLI: `tools/grade_ufc_two_tier_stage_b.py`
+- Cumulative independent W-L/units/ROI: `tools/summarize_ufc_two_tier_results.py`
 - Unit/regression tests: `tests/test_two_tier_card.py`
 
 The freeze CLI requires a real, exact Stage A SHA256 and a quotes JSON file. Each candidate must contain:
