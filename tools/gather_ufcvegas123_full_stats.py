@@ -61,6 +61,8 @@ def norm(s: object) -> str:
     # UFCStats may list the same fighter as Joseph or Joe.
     if s == "josephkropschot":
         return "joekropschot"
+    if s == "zachreese":
+        return "zacharyreese"
     return s
 
 
