@@ -1,0 +1,27 @@
+{
+  "fights": 14,
+  "frozen_source_sha256": "70fefe546831de93d06a09b8347411fd387d7d09f98ca03bc56adfd921e3c68b",
+  "impossible_cases": [
+    {
+      "fight_no": 5,
+      "impossible_exact_method_keys": [
+        "B_SUB"
+      ]
+    },
+    {
+      "fight_no": 10,
+      "impossible_exact_method_keys": [
+        "B_KO"
+      ]
+    }
+  ],
+  "impossible_exact_fighter_finish_count": 2,
+  "link_to_shadow": "data/locks/ufcvegas124_2026-11-07/stage_a_coherence_shadow.json",
+  "max_absolute_gap_pp": 40.53660642280552,
+  "new_official_method_bets": 0,
+  "note": "Original Stage A is immutable. This flags cross-family probability inconsistency and preserves an unvalidated math-only coherence shadow.",
+  "odds_used": false,
+  "severe_gap_count": 10,
+  "shadow_not_promoted": true,
+  "status": "SHADOW_ONLY_METHOD_TIMING_COHERENCE_RECONCILIATION_BEFORE_PRICING"
+}
