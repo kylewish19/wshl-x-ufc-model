@@ -2,6 +2,11 @@
 from __future__ import annotations
 
 from copy import deepcopy
+from pathlib import Path
+import sys
+
+# The repository's command-line tools live outside the installable src package.
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 import pytest
 
