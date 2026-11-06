@@ -116,7 +116,7 @@ def test_both_categories_may_have_fewer_than_five_or_zero():
 def test_no_qualifying_edge_means_pass_not_forced_pick():
     weak = candidate(0, 200, conservative=.20, prob=.51)
     gap = candidate(1, 195, conservative=.80, prob=.90)
-    gates = candidate(2, -110, conservative=.80, gates={
+    gates = candidate(2, -110, conservative=.70, gates={
         "stage_a_supported": True, "research": True, "price": True,
         "calibration": True, "market_family": False,
     })
