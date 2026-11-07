@@ -5,7 +5,10 @@ policy gates, infer sportsbook prices, or treat a fight PASS as bettable.
 It uses explicit, reviewed FanDuel quotes and a conservative probability
 estimate to rank *already eligible* candidate straights.
 
-One (unordered fighter-pair, event) can appear AT MOST ONCE across both tiers.
+A fight may appear once in EACH category only if the two *typed* market outcomes
+can both win. Conflicting fight outcomes cannot be paired across tiers.
+No betting-pick minimum is imposed. Up to five research-only display candidates
+can be shown per tier, clearly marked PASS, without faking official bets.
 An unsuccessful 3-leg parlay cannot be disguised as three straight results.
 """
 from __future__ import annotations
@@ -17,6 +20,8 @@ import re
 import unicodedata
 from datetime import datetime, timezone
 from typing import Any, Mapping, Sequence
+
+from wshlx_ufc.market_compatibility import can_both_win, validate_market_spec
 
 LONGSHOTS = "top_5_longshots"
 BEST_BETS = "top_5_best_bets"
@@ -104,9 +109,9 @@ def _timestamp(value: Any, label: str) -> datetime:
 def _score_key(c: Mapping[str, Any]):
     """Prioritize conservative estimated EV, then edge, certainty, quality.
 
-    Across tiers a single fight's highest *eligible* conservative-EV pick
-    claims the fight. This avoids allocating to a category arbitrarily;
-    qualification gates always take precedence over ranking.
+    Compatible bets can share a fight across tiers; any competing selection
+    within the SAME tier or conflicting outcome is excluded, regardless of EV.
+    Qualification gates always take precedence over rankings.
     """
     return (
         -float(c["conservative_ev_per_unit"]),
@@ -130,6 +135,7 @@ def select_two_tier(
 
     Candidate fields:
        candidate_id, fighter_a, fighter_b, market, market_family,
+       market_spec (mandatory structured typed contract),
        american_odds, model_probability, conservative_probability,
        evidence_quality, stake_units, sportsbook, quoted_at_utc,
        gates (five explicit booleans), and researched_before_start.
@@ -149,13 +155,17 @@ def select_two_tier(
     if len(verified_stage_a_fights) == 0:
         raise ValueError("Cannot validate selections without frozen Stage A fight identities")
     allowed = {
-        fight_key(f["a"], f["b"]) for f in verified_stage_a_fights
+        fight_key(f["a"], f["b"]): f.get("scheduled_rounds")
+        for f in verified_stage_a_fights
     }
+    if any(v not in (3, 5) or type(v) is not int for v in allowed.values()):
+        raise ValueError("Frozen fights must carry scheduled_rounds 3 or 5 to validate market compatibility")
     if len(allowed) != len(verified_stage_a_fights):
         raise ValueError("Frozen card contains duplicated matchups")
 
     qualifying: list[dict[str, Any]] = []
     rejected: list[dict[str, Any]] = []
+    reviewed: list[dict[str, Any]] = []
     ids = set()
     for source in candidates:
         c = dict(source)
@@ -176,6 +186,10 @@ def select_two_tier(
         stake = _stake(c.get("stake_units"))
         if c.get("market_family") not in MARKET_FAMILIES:
             raise ValueError(f"{cid}: unsupported market family")
+        market_spec = validate_market_spec(
+            c.get("market_spec"), market_family=c["market_family"],
+            scheduled_rounds=allowed[key],
+        )
         if not isinstance(c.get("market"), str) or not c["market"].strip():
             raise ValueError(f"{cid}: market name required")
         if c.get("sportsbook") != "FanDuel":
@@ -204,7 +218,9 @@ def select_two_tier(
             reasons.append("no_positive_conservative_value")
         row = {
             "candidate_id": cid, "fighter_a": c["fighter_a"], "fighter_b": c["fighter_b"],
-            "fight_key": key, "market": c["market"], "market_family": c["market_family"],
+            "fight_key": key, "scheduled_rounds": allowed[key],
+            "market": c["market"], "market_family": c["market_family"],
+            "market_spec": market_spec,
             "sportsbook": "FanDuel", "quoted_at_utc": quote_time.isoformat(),
             "american_odds": odds, "model_probability": model_p,
             "conservative_probability": conservative_p,
@@ -214,17 +230,29 @@ def select_two_tier(
             "evidence_quality": quality, "stake_units": stake,
             "gates": gates, "tier": tier, "status": "STAGE_B_CANDIDATE",
         }
+        row["preselection_gate_reasons"] = list(reasons)
+        reviewed.append(row)
         if reasons:
             rejected.append({"candidate_id": cid, "fight_key": key, "tier": tier, "reasons": reasons})
         else:
             qualifying.append(row)
     selected = {LONGSHOTS: [], BEST_BETS: []}
-    used_fights = set()
+    selected_by_fight: dict[str, list[dict[str, Any]]] = {}
     for c in sorted(qualifying, key=_score_key):
         tier = c["tier"]
-        if c["fight_key"] in used_fights:
+        prior = selected_by_fight.get(c["fight_key"], [])
+        if any(other["tier"] == tier for other in prior):
             rejected.append({"candidate_id": c["candidate_id"], "fight_key": c["fight_key"],
-                             "tier": tier, "reasons": ["fight_already_selected_in_a_top5_tier"]})
+                             "tier": tier, "reasons": ["fight_already_selected_within_tier"]})
+            continue
+        if any(
+            other["market_spec"] == c["market_spec"] or not can_both_win(
+                other["market_spec"], c["market_spec"],
+                scheduled_rounds=c["scheduled_rounds"],
+            ) for other in prior
+        ):
+            rejected.append({"candidate_id": c["candidate_id"], "fight_key": c["fight_key"],
+                             "tier": tier, "reasons": ["duplicate_or_mutually_exclusive_same_fight_market"]})
             continue
         if len(selected[tier]) == 5:
             rejected.append({"candidate_id": c["candidate_id"], "fight_key": c["fight_key"],
@@ -232,11 +260,53 @@ def select_two_tier(
             continue
         c["status"] = "OFFICIAL_TWO_TIER_STRAIGHT"
         selected[tier].append(c)
-        used_fights.add(c["fight_key"])
-    assert len(used_fights) == sum(len(v) for v in selected.values())
+        selected_by_fight.setdefault(c["fight_key"], []).append(c)
+
+    # User-facing top-five research review: the approved picks come first.
+    # Fill remaining display slots ONLY from markets actually quoted/reviewed
+    # in the specified odds band. Every non-approved entry is visibly PASS,
+    # with its reasons. We never invent markets or promote PASS to wagers.
+    ranked_display = {tier: [dict(row) for row in selected[tier]] for tier in TIERS}
+    visible: dict[str, list[dict[str, Any]]] = {}
+    for tier in TIERS:
+        for row in ranked_display[tier]:
+            visible.setdefault(row["fight_key"], []).append(row)
+    rejected_reasons = {x["candidate_id"]: x["reasons"] for x in rejected}
+    for c in sorted(reviewed, key=_score_key):
+        tier = c["tier"]
+        if tier is None or len(ranked_display[tier]) >= 5:
+            continue
+        if any(x["candidate_id"] == c["candidate_id"] for x in ranked_display[tier]):
+            continue
+        already = visible.get(c["fight_key"], [])
+        if any(x["tier"] == tier for x in already):
+            continue
+        if any(
+            x["market_spec"] == c["market_spec"] or not can_both_win(
+                x["market_spec"], c["market_spec"], scheduled_rounds=c["scheduled_rounds"]
+            )
+            for x in already
+        ):
+            continue
+        view = dict(c)
+        view["status"] = "PASS_RESEARCH_ONLY_NOT_APPROVED_OR_BETTABLE"
+        view["nonapproval_reasons"] = rejected_reasons.get(c["candidate_id"], [
+            "not_selected_under_five_selection_limit",
+        ])
+        ranked_display[tier].append(view)
+        visible.setdefault(c["fight_key"], []).append(view)
+
+    same_fight_pairs = [
+        (key, picks) for key, picks in selected_by_fight.items() if len(picks) == 2
+    ]
+    if any(len(picks) > 2 or picks[0]["tier"] == picks[1]["tier"] or not can_both_win(
+        picks[0]["market_spec"], picks[1]["market_spec"],
+        scheduled_rounds=picks[0]["scheduled_rounds"]
+    ) for _, picks in same_fight_pairs):
+        raise RuntimeError("Unsafe same-fight allocation in official categories")
     payload = {
-        "schema_version": "1.0",
-        "policy_version": "WSHL_X_UFC_TOP5_TWO_TIERS_EFFECTIVE_2026-11-07",
+        "schema_version": "2.0",
+        "policy_version": "WSHL_X_UFC_TOP5_COMPATIBLE_SAME_FIGHT_EFFECTIVE_2026-11-07",
         "event": event, "event_date": event_date,
         "stage": "B_FANDUEL_ONLY_TWO_INDEPENDENT_TOP5_STRAIGHT_CARDS",
         "stage_a_sha256": stage_a_sha256,
@@ -246,15 +316,20 @@ def select_two_tier(
             LONGSHOTS: "FanDuel +200 and longer, max 5; no forced picks",
             BEST_BETS: "FanDuel -150 through +190 inclusive, max 5; no forced picks",
         },
-        "allocation_policy": "Globally sort gate-approved candidates by conservative EV, then conservative edge/probability, evidence, stable ID. Only one selection per fighter pair across both tiers.",
+        "allocation_policy": "Globally sort gate-approved candidates by conservative EV, edge, reliability; max one pick per fight within each tier. Cross-tier same-fight picks permitted ONLY when independently typed market outcomes can both settle WIN; conflicting or identical outcomes blocked.",
         "gates_required": list(GATES),
         "selected": selected,
+        "ranked_display": ranked_display,
         "rejected": rejected,
         "counts": {k: len(selected[k]) for k in TIERS},
-        "selected_total": len(used_fights),
-        "no_overlap": True,
+        "display_counts": {k: len(ranked_display[k]) for k in TIERS},
+        "selected_total": sum(len(selected[tier]) for tier in TIERS),
+        "distinct_fights_selected": len(selected_by_fight),
+        "same_fight_compatible_pairs": len(same_fight_pairs),
+        "no_duplicate_or_conflicting_selections": True,
+        "same_fight_correlation_warning": True,
         "bets_placed_not_asserted": True,
-        "note": "Price-ranked straight selections only. Not proof of actual wager placement or profitability. No required three-leg parlay.",
+        "note": "Display can contain PASS research candidates up to five per tier even when there are ZERO approved bets. Same-fight compatible wagers remain correlated. No proof of actual wager placement or profitability.",
     }
     return payload
 
@@ -274,9 +349,26 @@ def grade_two_tier(
     selected = card["selected"]
     all_rows = [r for tier in TIERS for r in selected[tier]]
     ids = [r["candidate_id"] for r in all_rows]
-    keys = [r["fight_key"] for r in all_rows]
-    if len(ids) != len(set(ids)) or len(keys) != len(set(keys)):
-        raise ValueError("Duplicate candidate or fight across frozen categories")
+    if len(ids) != len(set(ids)):
+        raise ValueError("Duplicate candidate across frozen categories")
+    per_fight: dict[str, list[dict[str, Any]]] = {}
+    for tier in TIERS:
+        for r in selected[tier]:
+            if tier_for_odds(r["american_odds"]) != tier:
+                raise ValueError("Selected market in wrong odds category")
+            spec = validate_market_spec(r.get("market_spec"),
+                                        market_family=r["market_family"],
+                                        scheduled_rounds=r.get("scheduled_rounds"))
+            if spec != r["market_spec"]:
+                raise ValueError("Tampered market_spec")
+            prior = per_fight.get(r["fight_key"], [])
+            if any(x["tier"] == tier for x in prior):
+                raise ValueError("Two bets in same tier from same fight")
+            if any(x["market_spec"] == spec or not can_both_win(
+                x["market_spec"], spec, scheduled_rounds=r["scheduled_rounds"]
+            ) for x in prior):
+                raise ValueError("Same-fight Top5 picks are duplicated or conflicting")
+            per_fight.setdefault(r["fight_key"], []).append({"tier": tier, "market_spec": spec})
     if len(selected[LONGSHOTS]) > 5 or len(selected[BEST_BETS]) > 5:
         raise ValueError("Category exceeded 5 selections")
     unknown = set(results_by_candidate_id) - set(ids)
@@ -315,11 +407,13 @@ def grade_two_tier(
     risk = sum(groups[k]["settled_risk_units"] for k in TIERS)
     pnl = sum(groups[k]["pnl_units"] for k in TIERS)
     return {
-        "schema_version": "1.0", "event": card["event"],
+        "schema_version": "2.0", "event": card["event"],
         "event_date": card["event_date"], "stage_a_sha256": card["stage_a_sha256"],
         "categories": groups,
         "combined": {
             "graded_selections": len(all_graded),
+            "distinct_fights": len(per_fight),
+            "compatible_same_fight_pairs": sum(len(x) == 2 for x in per_fight.values()),
             "W": sum(groups[k]["record"]["W"] for k in TIERS),
             "L": sum(groups[k]["record"]["L"] for k in TIERS),
             "PUSH": sum(groups[k]["record"]["PUSH"] for k in TIERS),
