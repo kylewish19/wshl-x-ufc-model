@@ -85,6 +85,18 @@ Candidates in between price bands, with non-positive conservative EV, or failing
 
 The typed support explicitly checks whether *some supported fight outcome* satisfies both contracts. It does **not** infer that both outcomes will often occur, nor that the joint payout has positive EV. Same-fight bets can double losses, so report correlated exposure.
 
+### Permanent odds / +/- units tracking for both Top 5 categories (2026-11-07)
+
+Each Top 5 Longshots (+200 or longer) and Top 5 Best Bets (−150 through +190) candidate includes the **exact original FanDuel screenshot odds**. Both groups must have their own W/L, settlement, win rate, net units and ROI; never report only the combined card.
+
+There are **TWO separate ledgers**, not one:
+1. **Official approved selections** (`src/wshlx_ufc/two_tier_card.py`): only bets that passed ALL research, method/timing, calibrated-edge and FanDuel-price gates. Record original odds, **declared official stake in units**, net +/− units and ROI after verification. This still does **not** assert that the user actually placed the wager; personal wagers are a third category if explicitly reported.
+2. **Top 5 RESEARCH candidates** (including PASS) (`src/wshlx_ufc/research_top5_ledger.py`): we still independently grade all pre-event posted market outcomes, but use **exactly 1.00 VIRTUAL / hypothetical unit each** as a consistent comparison. A +240 W earns **+2.40 hypothetical units**; a +240 L loses **−1.00**. A −110 W earns **+0.9091**, and a −110 L loses **−1.00**. Push/void contributes 0; pending is never presumed a loss. These figures are **not winnings, money placed, or endorsed wagers**, and can never enter the official approved-bet P&L.
+   
+**One-unit virtual staking is the permanent research-comparison baseline**, not a recommendation about personal bankroll sizing. Show original price, result (W/L/PUSH/VOID/PENDING), virtual units and cumulative ROI for each candidate, each category, and combined. Report correlated same-fight exposure; compatible does not mean independent.
+
+**Nov 7:** `data/locks/ufcvegas124_2026-11-07/stage_b_top5_ranked_research_review_compatible_cross_tier.json` supplies five picks per category (all **PASS / research-only**) with locked original odds and zero approved bets. Before results, freeze the independent pending virtual stake ledger at `data/locks/ufcvegas124_2026-11-07/stage_b_top5_research_units_pending.json`. **Do not fabricate W/L or retrospective wagers.** After fight results and market settlement are independently verified, use `tools/track_ufc_top5_research_units.py --settlements ...` to create a new versioned verified result ledger keyed to the original card SHA256. Compare cumulative research W/L, net virtual units, and virtual ROI via `tools/summarize_ufc_top5_research_units.py`.
+
 ### Independent grading and accounting
 
 - At American **+200**, a 0.25u W earns **+0.50u** and an L loses **−0.25u**.
