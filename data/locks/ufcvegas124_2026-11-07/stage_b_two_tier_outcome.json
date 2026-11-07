@@ -21,7 +21,7 @@
   "event": "UFC Fight Night: Cortes Acosta vs Walker",
   "event_date": "2026-11-07",
   "fanduel_only": true,
-  "frozen_at_utc": "2026-11-07T16:26:59.754544+00:00",
+  "frozen_at_utc": "2026-11-07T16:28:15.322827+00:00",
   "full_market_comparison_file": "data/locks/ufcvegas124_2026-11-07/stage_b_fanduel_full_price_audit.json",
   "model_or_fight_side_flips": 0,
   "no_forced_bets": true,

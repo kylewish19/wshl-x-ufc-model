@@ -9267,7 +9267,7 @@
   "sportsbook": "FanDuel",
   "stage": "B_FANDUEL_SCREENSHOT_PRICE_COMPARISON",
   "stage_a_sha256": "70fefe546831de93d06a09b8347411fd387d7d09f98ca03bc56adfd921e3c68b",
-  "status": "FULL_364_MARKET_PRICE_AUDIT_ZERO_QUALIFIED_TWO_TIER_BETS",
+  "status": "FULL_378_MARKET_PRICE_AUDIT_ZERO_QUALIFIED_TWO_TIER_BETS",
   "warnings": [
     "Raw model edge is NOT sufficient for a recommendation; the market-family, Stage A and sparse-data guards apply.",
     "Method, double-chance and fight-ending prices are blocked by 14-bout Stage A method-vs-timing coherence findings.",
