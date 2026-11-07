@@ -20,11 +20,15 @@ def fake_grade(date="2026-11-07", event="UFC Example"):
         "selected": {
             LONGSHOTS: [{
                 "candidate_id": "long", "fight_key": "alice|bob",
-                "market": "Alice ML", "american_odds": 200, "stake_units": 0.5
+                "market": "Alice ML", "american_odds": 200, "stake_units": 0.5,
+                "market_family": "moneyline", "market_spec":{"kind":"moneyline","side":"a"},
+                "scheduled_rounds":3
             }],
             BEST_BETS: [{
                 "candidate_id": "best", "fight_key": "charlie|denise",
-                "market": "Charlie ML", "american_odds": -125, "stake_units": 1.0
+                "market": "Charlie ML", "american_odds": -125, "stake_units": 1.0,
+                "market_family": "moneyline", "market_spec":{"kind":"moneyline","side":"a"},
+                "scheduled_rounds":3
             }],
         }
     }
