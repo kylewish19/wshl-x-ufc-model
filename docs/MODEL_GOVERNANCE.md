@@ -48,6 +48,20 @@ After the card, grade W-L, units risked, net P/L and ROI for **each category sep
 
 See the executable specification and schema in [TWO_TIER_TOP5_FANDUEL_POLICY.md](TWO_TIER_TOP5_FANDUEL_POLICY.md), `src/wshlx_ufc/two_tier_card.py`, and `tests/test_two_tier_card.py`.
 
+## One primary timing prediction per fight — new WSHL_X workflow (effective Nov 7, 2026)
+
+Each UFC matchup must have **exactly ONE clearly named primary timing forecast** for post-card grading (rather than presenting GTD, O/U, and rounds-to-start as if all are simultaneously official picks). This is a **prediction-track slot**, NOT a requirement to gamble on that slot.
+
+- From the **pre-fight odds-blind timing probabilities**, consider GTD Yes/No, relevant fight O/U thresholds, and Round 3 Starts Yes/No; choose the most reliable prediction based on a documented deterministic rule, using the **minimum** of the current and unified timing-model probability as an uncalibrated agreement/stress check. Both full probability vectors stay in the archive. Do not optimize based on FanDuel prices.
+- Avoid automatically assigning **Round 2 Starts Yes** to every fight just because it is mechanically likely and heavily priced; keep R2 probabilities in the full data but omit the routine R2-Yes market from the *primary-pick competition* unless a different documented model design earns promotion. Other timing markets may be selected instead. Round 4/5 starts for main events remain available for full reporting but are not silently inserted into the previously fixed timing-selection menu.
+- **Future cards:** predeclare and freeze a single timing market per fight in **Stage A before looking at any sportsbook odds**. The bookmaker may not offer that threshold; in that case mark PRICE UNAVAILABLE or PASS, **never retroactively substitute another timing prop** without a versioned, explicitly identified research alternative.
+- **November 7 transition exception:** the Stage A file was already frozen *without one designated timing market* before the user requested this policy. A separately timestamped **pre-event Stage B research tracking file** was generated from the original frozen current/unified timing probabilities and the markets visible in the FanDuel screenshots. **It is not retrospectively claimed to be the original pre-price Stage A pick**, despite the probabilities being unmodified.
+- **Stage B:** attach the screenshot's timestamped FanDuel price, then check conservative expected value, 12-percentage-point timing edge, sufficient UFC evidence, timing-vs-method family coherence and all other existing timing rules. If any gate fails, mark **MODEL FORECAST ONLY / NO APPROVED BET**. An attractive odds quote does not override this.
+- **Post-fight grading:** grade exactly one selected timing event per fight independently of moneyline, method, all other forecast markets, and officially wagered timing bets. Report 14-slate accuracy, separate type breakdown, and prospective calibration / ROI only when an actual pre-event price-qualified official timing bet was recorded.
+- Keep the historical raw timing probabilities for later diagnostic grading but **do not inflate the primary timing pick win count by evaluating several correlated markets and choosing the best outcome after the fact**.
+
+For Nov 7 the audit selector is `tools/select_ufcvegas124_single_timing_picks.py` and the separately frozen tracking file is `data/locks/ufcvegas124_2026-11-07/stage_b_one_timing_forecast_per_fight.json`.
+
 ## Tape
 
 Tape is a separately logged evidence layer. Each source must be classified honestly as one of:
