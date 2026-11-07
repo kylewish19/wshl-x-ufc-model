@@ -331,7 +331,7 @@ def test_unknown_or_ambiguous_market_spec_fails_closed(spec,family):
 def test_ranked_display_can_show_rejected_watch_only_without_approving_bets():
     list_ = [
         candidate(i, (200+i*50) if i%2==0 else (110+i*5),
-                  conservative=.20,prob=.70) for i in range(14)
+                  conservative=.05,prob=.70) for i in range(14)
     ]
     card = select(list_)
     assert card["selected_total"]==0
