@@ -1,0 +1,45 @@
+{
+  "event": "UFC 333: Volkanovski vs Evloev",
+  "event_date": "2026-10-24",
+  "fights": 14,
+  "freeze_type": "PRE_WEIGH_IN_STAGE_A_ODDS_BLIND",
+  "governance": {
+    "challenger_promoted": false,
+    "historical_shadow_only": true,
+    "odds_influenced_stage_a": false,
+    "official_reference_model_unchanged": true,
+    "oof_unified_shadow_only": true,
+    "oof_weights": {
+      "method_current": 0.375,
+      "timing_current": 0.75,
+      "winner_current": 0.3
+    },
+    "pr_1_merged": false,
+    "research_side_flips": 0
+  },
+  "odds_used": false,
+  "official_methods": [
+    {
+      "fight_no": 8,
+      "method": "SUB"
+    }
+  ],
+  "passes": [
+    3,
+    5,
+    6,
+    7,
+    9,
+    13
+  ],
+  "raw_model_sha256": "e479d72cd670bc9b14ed36a652dcb341de6acb8c41610b88a210218c95a81556",
+  "shadow_side_disagreements": [
+    3,
+    6,
+    7,
+    9,
+    13
+  ],
+  "side_flips_from_reference": 0,
+  "stage_a_frozen": true
+}

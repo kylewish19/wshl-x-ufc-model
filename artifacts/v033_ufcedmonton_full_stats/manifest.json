@@ -1,0 +1,337 @@
+{
+  "artifacts": {
+    "method_baseline": {
+      "path": "artifacts/v033_ufcedmonton_full_stats/method_baseline_v033_through_2026-10-17.joblib",
+      "sha256": "1f6e76ccc15b56138e0d73fbbce64eab90e961f110c49843333969db88f85b6b"
+    },
+    "method_calibrator": {
+      "path": "artifacts/v033_ufcedmonton_full_stats/method_calibrator_v033_through_2026-10-17.joblib",
+      "sha256": "6eb366c4a32c2e2176f03240f53d0038bf7c2eeb0f8def9f74adc650778f0f2f"
+    },
+    "method_residual": {
+      "path": "artifacts/v033_ufcedmonton_full_stats/method_residual_v033_through_2026-10-17.joblib",
+      "sha256": "8f83ceb306bbc189d097f9980d75f20fcd7487892d239292b2b63fb6977c98f9"
+    },
+    "timing_30s": {
+      "path": "artifacts/v033_ufcedmonton_full_stats/timing_v033_30s_through_2026-10-17.joblib",
+      "sha256": "51072fa91fb1d145447b6e9e92c6a486a8c97f1ba58765a47b872208eb51e1bb"
+    },
+    "winner": {
+      "path": "artifacts/v033_ufcedmonton_full_stats/winner_v033_through_2026-10-17.joblib",
+      "sha256": "1d80e7727d0299c2bab97599a2e94f4453040c2be8e702113620cc2ab6b93aaa"
+    }
+  },
+  "benchmarks": {
+    "method_intercept_calibration_chronology": {
+      "baseline": {
+        "accuracy": 0.3893805309734513,
+        "actual": {
+          "DEC": 30,
+          "KO": 64,
+          "SUB": 19
+        },
+        "brier": 0.6440508975264172,
+        "calls": {
+          "DEC": 76,
+          "KO": 35,
+          "SUB": 2
+        },
+        "log_loss": 1.0304668672672284,
+        "n": 113,
+        "recall": {
+          "DEC": 0.6666666666666666,
+          "KO": 0.34375,
+          "SUB": 0.10526315789473684
+        }
+      },
+      "candidate": {
+        "accuracy": 0.504424778761062,
+        "actual": {
+          "DEC": 30,
+          "KO": 64,
+          "SUB": 19
+        },
+        "brier": 0.5745281880026714,
+        "calls": {
+          "DEC": 38,
+          "KO": 69,
+          "SUB": 6
+        },
+        "log_loss": 0.9472004816832773,
+        "n": 113,
+        "recall": {
+          "DEC": 0.36666666666666664,
+          "KO": 0.6875,
+          "SUB": 0.10526315789473684
+        }
+      },
+      "folds": [
+        {
+          "finish_offset": 0.17019113558011142,
+          "sub_offset": 0.40212377295504054,
+          "test_date": "2026-08-15T00:00:00+00:00",
+          "test_n": 12,
+          "train_n": 12
+        },
+        {
+          "finish_offset": 0.38998385975441674,
+          "sub_offset": 0.35999496683971355,
+          "test_date": "2026-08-22T00:00:00+00:00",
+          "test_n": 13,
+          "train_n": 24
+        },
+        {
+          "finish_offset": 0.6094748249943815,
+          "sub_offset": 0.12427699503197655,
+          "test_date": "2026-08-29T00:00:00+00:00",
+          "test_n": 13,
+          "train_n": 37
+        },
+        {
+          "finish_offset": 0.784645084900569,
+          "sub_offset": -0.1107671247088508,
+          "test_date": "2026-09-05T00:00:00+00:00",
+          "test_n": 14,
+          "train_n": 50
+        },
+        {
+          "finish_offset": 0.6291824108456925,
+          "sub_offset": -0.12866330381152352,
+          "test_date": "2026-09-19T00:00:00+00:00",
+          "test_n": 12,
+          "train_n": 64
+        },
+        {
+          "finish_offset": 0.5317442661493524,
+          "sub_offset": -0.20887237405377165,
+          "test_date": "2026-09-26T00:00:00+00:00",
+          "test_n": 11,
+          "train_n": 76
+        },
+        {
+          "finish_offset": 0.6204109170997336,
+          "sub_offset": -0.298264001279731,
+          "test_date": "2026-10-03T00:00:00+00:00",
+          "test_n": 14,
+          "train_n": 87
+        },
+        {
+          "finish_offset": 0.6834075237018215,
+          "sub_offset": -0.49981873850005704,
+          "test_date": "2026-10-10T00:00:00+00:00",
+          "test_n": 11,
+          "train_n": 101
+        },
+        {
+          "finish_offset": 0.7561628727493466,
+          "sub_offset": -0.5185469918410331,
+          "test_date": "2026-10-17T00:00:00+00:00",
+          "test_n": 13,
+          "train_n": 112
+        }
+      ],
+      "ridge": 0.5
+    },
+    "method_residual_chronology": {
+      "baseline_all_64": {
+        "accuracy": 0.392,
+        "actual": {
+          "DEC": 35,
+          "KO": 68,
+          "SUB": 22
+        },
+        "calls": {
+          "DEC": 82,
+          "KO": 41,
+          "SUB": 2
+        },
+        "log_loss": 1.0250024426004019,
+        "multiclass_brier": 0.6433314566008833,
+        "n": 125,
+        "recall": {
+          "DEC": 0.6571428571428571,
+          "KO": 0.35294117647058826,
+          "SUB": 0.09090909090909091
+        }
+      },
+      "chronology_baseline": {
+        "accuracy": 0.3893805309734513,
+        "actual": {
+          "DEC": 30,
+          "KO": 64,
+          "SUB": 19
+        },
+        "calls": {
+          "DEC": 76,
+          "KO": 35,
+          "SUB": 2
+        },
+        "log_loss": 1.0304668672672284,
+        "multiclass_brier": 0.6440508975264172,
+        "n": 113,
+        "recall": {
+          "DEC": 0.6666666666666666,
+          "KO": 0.34375,
+          "SUB": 0.10526315789473684
+        }
+      },
+      "chronology_candidate": {
+        "accuracy": 0.4247787610619469,
+        "actual": {
+          "DEC": 30,
+          "KO": 64,
+          "SUB": 19
+        },
+        "calls": {
+          "DEC": 69,
+          "KO": 36,
+          "SUB": 8
+        },
+        "log_loss": 1.0573215650842687,
+        "multiclass_brier": 0.6661828226351705,
+        "n": 113,
+        "recall": {
+          "DEC": 0.7333333333333333,
+          "KO": 0.375,
+          "SUB": 0.10526315789473684
+        }
+      },
+      "chronology_evaluation_fights": 113,
+      "folds": [
+        {
+          "test_date": "2026-08-15T00:00:00+00:00",
+          "test_fights": 12,
+          "train_clean_fights": 12
+        },
+        {
+          "test_date": "2026-08-22T00:00:00+00:00",
+          "test_fights": 13,
+          "train_clean_fights": 24
+        },
+        {
+          "test_date": "2026-08-29T00:00:00+00:00",
+          "test_fights": 13,
+          "train_clean_fights": 37
+        },
+        {
+          "test_date": "2026-09-05T00:00:00+00:00",
+          "test_fights": 14,
+          "train_clean_fights": 50
+        },
+        {
+          "test_date": "2026-09-19T00:00:00+00:00",
+          "test_fights": 12,
+          "train_clean_fights": 64
+        },
+        {
+          "test_date": "2026-09-26T00:00:00+00:00",
+          "test_fights": 11,
+          "train_clean_fights": 76
+        },
+        {
+          "test_date": "2026-10-03T00:00:00+00:00",
+          "test_fights": 14,
+          "train_clean_fights": 87
+        },
+        {
+          "test_date": "2026-10-10T00:00:00+00:00",
+          "test_fights": 11,
+          "train_clean_fights": 101
+        },
+        {
+          "test_date": "2026-10-17T00:00:00+00:00",
+          "test_fights": 13,
+          "train_clean_fights": 112
+        }
+      ],
+      "note": "Retrospective reconstruction only. Architecture and feature formulas were defined after historical results were known; this is not prospective proof."
+    },
+    "winner_clean125": {
+      "accuracy": 0.608,
+      "brier": 0.2388104682950693,
+      "log_loss": 0.6745818006031752,
+      "n": 125,
+      "note": "New reconstruction benchmark, not the historical official v0.3.1 score."
+    }
+  },
+  "edmonton_diagnostics": {
+    "actual_method_classes": {
+      "DEC": 1,
+      "KO_TKO": 7,
+      "SUB": 5
+    },
+    "governance_note": "Edmonton diagnostics motivate challenger testing only; no production architecture/promotion is inferred from hindsight.",
+    "stage_a_top_method_classes": {
+      "DEC": 2,
+      "KO_TKO": 10,
+      "SUB": 1
+    },
+    "submission_recall_by_class": 0.2,
+    "timing_directional_grade": {
+      "gtd_direction_record": "9-4",
+      "main_event_round_4_starts_no": "WIN",
+      "main_event_round_5_starts_no": "WIN",
+      "main_event_under_3_5": "WIN",
+      "main_event_under_4_5": "WIN",
+      "note": "No official timing wager was placed, so the probationary timing betting record does not change.",
+      "official_timing_record_after_event": "0-5, -3.00u",
+      "official_timing_wagers_on_event": 0,
+      "over_under_0_5_direction_record": "11-2",
+      "over_under_1_5_direction_record": "7-6",
+      "over_under_2_5_direction_record": "6-7",
+      "round_2_starts_direction_record": "9-4",
+      "round_3_starts_direction_record": "5-8"
+    }
+  },
+  "generated_at_utc": "2026-10-20T21:22:00.628874+00:00",
+  "governance": {
+    "method_global_promotion": false,
+    "note": "This is a causal data/backbone refresh through 2026-10-17, not a hindsight promotion decision.",
+    "reference_champion_changed": false,
+    "timing_global_promotion": false,
+    "v034_promoted": false
+  },
+  "identity_handling": {
+    "canonical_name": "Kai Kamaka III",
+    "older_display_name": "Kai Kamaka",
+    "policy": "Verified identity reconciliation carried forward from the pre-Vegas-122 audit.",
+    "relabelled_fight_fields": 4,
+    "relabelled_stat_rows": 11
+  },
+  "population": {
+    "clean_feedback_rows": 125,
+    "latest_performance_event_date": "2026-10-17 00:00:00+00:00",
+    "training_rows": 8767
+  },
+  "prospective_edmonton_frozen_grade": {
+    "displayed_method_class_record": "9-4",
+    "stage_b_pnl_units": 0.88,
+    "stage_b_record": "1-1",
+    "timing_official_record_after_event": "0-5, -3.00u",
+    "winner_accuracy": 0.2307692308,
+    "winner_brier": 0.3383839518,
+    "winner_log_loss": 0.882762794,
+    "winner_record": "3-10"
+  },
+  "source": {
+    "decisive_result_rows": 13,
+    "draw_result_rows": 0,
+    "event": "UFC Fight Night: Buckley vs. Malott",
+    "fighter_round_stat_rows": 50,
+    "full_card_stats_available": true,
+    "unique_result_bouts": 13,
+    "unique_stat_bouts": 13,
+    "upstream_commit": "3e2f3db5751c14b5d4ea52e41921982ca23b9b23"
+  },
+  "status": "V0.33_UFCEDMONTON_FULL_STATS_BACKBONE_REFRESH",
+  "v034_shadow": {
+    "artifact_sha256": "4821b3013f9187159a2dcadf771f72507aaee2a631828f052c843871ff354a5f",
+    "evaluation_note": "Edmonton is admitted to training only after its frozen prospective grade. This refresh is not retroactive Edmonton validation and does not promote v0.34.",
+    "selected_features": [
+      "experience_gap_log"
+    ],
+    "selected_variant": "experience_only",
+    "status": "SHADOW_ONLY_NOT_PROMOTED",
+    "trained_through": "2026-10-17"
+  }
+}

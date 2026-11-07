@@ -1,0 +1,46 @@
+name: contextual-unified-diagnostics
+on:
+  push:
+    branches:
+      - feature/historical-conditional-rates
+    paths:
+      - "tools/diagnose_contextual_unified.py"
+      - "src/wshlx_ufc/contextual_ensemble.py"
+      - "tests/test_contextual_ensemble.py"
+      - "data/unified/expanded_unified_winner_predictions.csv"
+      - "data/unified/expanded_unified_method_predictions.csv"
+      - "data/unified/expanded_unified_timing_predictions.csv"
+      - "data/raw/ufcedmonton_2026-10-17/**"
+      - ".github/workflows/contextual-unified-diagnostics.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: contextual-unified-diagnostics
+  cancel-in-progress: true
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11", cache: "pip"}
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Run context-aware winner method timing diagnostics
+        run: python tools/diagnose_contextual_unified.py
+      - name: Test full repository
+        run: pytest -q
+      - name: Save shadow diagnostic outputs
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add reports/contextual_unified_through_2026-10-17 data/unified/contextual_unified_shadow.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "diagnostic: save context-aware unified analysis"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin HEAD:"${GITHUB_REF_NAME}"

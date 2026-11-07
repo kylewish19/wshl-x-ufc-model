@@ -1,0 +1,204 @@
+{
+  "base_clean125": {
+    "accuracy": 0.6,
+    "brier": 0.23815057768520825,
+    "log_loss": 0.6726722087580224,
+    "losses": 50,
+    "n": 125,
+    "wins": 75
+  },
+  "base_edmonton_fold": {
+    "accuracy": 0.23076923076923078,
+    "brier": 0.3459368974529141,
+    "log_loss": 0.899887458476216,
+    "losses": 10,
+    "n": 13,
+    "wins": 3
+  },
+  "clean_sample": "clean_ufc_125_2026-10-17.csv",
+  "generated_at_utc": "2026-10-20T21:38:39.188805+00:00",
+  "governance": {
+    "production_change": false,
+    "promotion_allowed_from_this_report": false,
+    "reason": "These features were designed after prior outcomes were known. Edmonton is included only to diagnose stability, not to create retrospective promotion proof."
+  },
+  "status": "POST_EDMONTON_V034_RETROSPECTIVE_DIAGNOSTIC_ONLY",
+  "variants": [
+    {
+      "delta_accuracy": 0.016000000000000014,
+      "delta_brier": 0.0019330964719208032,
+      "delta_log_loss": 0.0055250769731813865,
+      "edmonton_fold": {
+        "accuracy": 0.23076923076923078,
+        "brier": 0.3429889824760722,
+        "log_loss": 0.8929254234280877,
+        "losses": 10,
+        "n": 13,
+        "wins": 3
+      },
+      "features": [
+        "a_sig_attempted_per_min",
+        "b_sig_attempted_per_min",
+        "diff_sig_attempted_per_min"
+      ],
+      "metrics_clean125": {
+        "accuracy": 0.616,
+        "brier": 0.24008367415712906,
+        "log_loss": 0.6781972857312037,
+        "losses": 48,
+        "n": 125,
+        "wins": 77
+      },
+      "name": "pace_only",
+      "passes_retrospective_metric_gate": false
+    },
+    {
+      "delta_accuracy": 0.008000000000000007,
+      "delta_brier": 0.0003232025276483086,
+      "delta_log_loss": 0.0008787600279784868,
+      "edmonton_fold": {
+        "accuracy": 0.23076923076923078,
+        "brier": 0.3461650593911403,
+        "log_loss": 0.9004247722873434,
+        "losses": 10,
+        "n": 13,
+        "wins": 3
+      },
+      "features": [
+        "diff_td_access",
+        "diff_submission_access",
+        "diff_control_access"
+      ],
+      "metrics_clean125": {
+        "accuracy": 0.608,
+        "brier": 0.23847378021285656,
+        "log_loss": 0.6735509687860008,
+        "losses": 49,
+        "n": 125,
+        "wins": 76
+      },
+      "name": "access_only",
+      "passes_retrospective_metric_gate": false
+    },
+    {
+      "delta_accuracy": 0.016000000000000014,
+      "delta_brier": 0.0020236247248169303,
+      "delta_log_loss": 0.011074966789841656,
+      "edmonton_fold": {
+        "accuracy": 0.23076923076923078,
+        "brier": 0.35158033439318814,
+        "log_loss": 0.910773227955182,
+        "losses": 10,
+        "n": 13,
+        "wins": 3
+      },
+      "features": [
+        "diff_damage_pressure",
+        "diff_striking_vulnerability",
+        "reach_damage_interaction"
+      ],
+      "metrics_clean125": {
+        "accuracy": 0.616,
+        "brier": 0.24017420241002518,
+        "log_loss": 0.683747175547864,
+        "losses": 48,
+        "n": 125,
+        "wins": 77
+      },
+      "name": "damage_only",
+      "passes_retrospective_metric_gate": false
+    },
+    {
+      "delta_accuracy": 0.016000000000000014,
+      "delta_brier": -2.637171567279606e-05,
+      "delta_log_loss": 0.00018659156070677252,
+      "edmonton_fold": {
+        "accuracy": 0.23076923076923078,
+        "brier": 0.34750524491856016,
+        "log_loss": 0.9039362523736851,
+        "losses": 10,
+        "n": 13,
+        "wins": 3
+      },
+      "features": [
+        "experience_gap_log"
+      ],
+      "metrics_clean125": {
+        "accuracy": 0.616,
+        "brier": 0.23812420596953546,
+        "log_loss": 0.6728588003187291,
+        "losses": 48,
+        "n": 125,
+        "wins": 77
+      },
+      "name": "experience_only",
+      "passes_retrospective_metric_gate": false
+    },
+    {
+      "delta_accuracy": 0.016000000000000014,
+      "delta_brier": 0.002232813819519286,
+      "delta_log_loss": 0.0063551245109506604,
+      "edmonton_fold": {
+        "accuracy": 0.23076923076923078,
+        "brier": 0.34320936747076797,
+        "log_loss": 0.8935078680874474,
+        "losses": 10,
+        "n": 13,
+        "wins": 3
+      },
+      "features": [
+        "diff_td_access",
+        "diff_submission_access",
+        "diff_control_access",
+        "a_sig_attempted_per_min",
+        "b_sig_attempted_per_min",
+        "diff_sig_attempted_per_min"
+      ],
+      "metrics_clean125": {
+        "accuracy": 0.616,
+        "brier": 0.24038339150472754,
+        "log_loss": 0.679027333268973,
+        "losses": 48,
+        "n": 125,
+        "wins": 77
+      },
+      "name": "access_plus_pace",
+      "passes_retrospective_metric_gate": false
+    },
+    {
+      "delta_accuracy": 0.040000000000000036,
+      "delta_brier": 0.0029127114124270492,
+      "delta_log_loss": 0.015836608054200285,
+      "edmonton_fold": {
+        "accuracy": 0.23076923076923078,
+        "brier": 0.3501801502331316,
+        "log_loss": 0.908162887040988,
+        "losses": 10,
+        "n": 13,
+        "wins": 3
+      },
+      "features": [
+        "a_sig_attempted_per_min",
+        "b_sig_attempted_per_min",
+        "diff_sig_attempted_per_min",
+        "diff_td_access",
+        "diff_submission_access",
+        "diff_control_access",
+        "diff_damage_pressure",
+        "diff_striking_vulnerability",
+        "reach_damage_interaction",
+        "experience_gap_log"
+      ],
+      "metrics_clean125": {
+        "accuracy": 0.64,
+        "brier": 0.2410632890976353,
+        "log_loss": 0.6885088168122226,
+        "losses": 45,
+        "n": 125,
+        "wins": 80
+      },
+      "name": "full",
+      "passes_retrospective_metric_gate": false
+    }
+  ]
+}

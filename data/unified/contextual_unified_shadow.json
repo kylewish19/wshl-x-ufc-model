@@ -1,0 +1,221 @@
+{
+  "status": "SHADOW_ONLY_NOT_PROMOTED",
+  "trained_through": "2026-10-17",
+  "winner": {
+    "features": [
+      "model_disagreement",
+      "historical_confidence",
+      "min_ufc_fights_log",
+      "experience_gap_log",
+      "age_gap_abs",
+      "reach_gap_abs",
+      "max_layoff_log"
+    ],
+    "global_fit": {
+      "weight_current": 1.0,
+      "loss": 0.6569951637587409,
+      "current_loss": 0.6569951637587409,
+      "historical_loss": 0.7854164305180683,
+      "n": 112,
+      "weight_historical": 0.0,
+      "improvement_vs_best_base": 0.0
+    },
+    "context_gate": {
+      "feature_names": [
+        "model_disagreement",
+        "historical_confidence",
+        "min_ufc_fights_log",
+        "experience_gap_log",
+        "age_gap_abs",
+        "reach_gap_abs",
+        "max_layoff_log"
+      ],
+      "medians": [
+        0.08070836349766974,
+        0.28090682007040385,
+        1.3862943611198906,
+        1.791759469228055,
+        4.135608534056139,
+        2.0,
+        5.265113900449237
+      ],
+      "scales": [
+        0.13601978326492642,
+        0.23644533933741863,
+        0.8897961920979849,
+        0.9067800275650693,
+        3.7246748563286065,
+        1.9330099387921902,
+        0.623919966159269
+      ],
+      "intercept": 3.6637537950225583,
+      "coefficients": [
+        0.0007872788413943644,
+        0.0015502340068577047,
+        -0.0008441888641916109,
+        -0.00027033223582565173,
+        -0.0007591819166160093,
+        0.0002933436784762306,
+        -0.00029116522375419033
+      ],
+      "prior_weight_current": 1.0,
+      "l2": 8.0,
+      "intercept_l2": 2.0,
+      "n": 112,
+      "objective": 0.657721929261774,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "mean_abs_coefficient": 0.0006851035381593946
+    }
+  },
+  "method": {
+    "features": [
+      "method_js",
+      "historical_method_confidence",
+      "min_ufc_fights_log",
+      "experience_gap_log",
+      "grappling_access_log",
+      "combined_finish_rate",
+      "combined_sub_rate",
+      "upper_weight_class"
+    ],
+    "global_fit": {
+      "weight_current": 0.9500000000000001,
+      "loss": 1.5597143554503632,
+      "current_loss": 1.5601122516380812,
+      "historical_loss": 1.6704920395115495,
+      "n": 88,
+      "weight_historical": 0.04999999999999993,
+      "improvement_vs_best_base": 0.0003978961877180165
+    },
+    "context_gate": {
+      "feature_names": [
+        "method_js",
+        "historical_method_confidence",
+        "min_ufc_fights_log",
+        "experience_gap_log",
+        "grappling_access_log",
+        "combined_finish_rate",
+        "combined_sub_rate",
+        "upper_weight_class"
+      ],
+      "medians": [
+        0.023659029618795242,
+        0.08749703636018147,
+        1.3862943611198906,
+        1.791759469228055,
+        2.079099736132986,
+        0.5729166666666666,
+        0.08957219251336898,
+        0.0
+      ],
+      "scales": [
+        0.026574526377320364,
+        0.04974294578092548,
+        0.8868476127882271,
+        0.8613968650657267,
+        0.8697569490349645,
+        0.2550417360653119,
+        0.15433318363029233,
+        0.37603163881305224
+      ],
+      "intercept": 2.9444079654681117,
+      "coefficients": [
+        -0.00029843185646110694,
+        0.0014313021734688484,
+        0.00038427630998519086,
+        -0.001260382058604544,
+        0.000397974061527997,
+        0.0027876112495185444,
+        -0.00038126870582939014,
+        0.0004236958296149864
+      ],
+      "prior_weight_current": 0.9500000000000001,
+      "l2": 8.0,
+      "intercept_l2": 2.0,
+      "n": 88,
+      "objective": 1.5597022081011378,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "mean_abs_coefficient": 0.000920617780626326
+    }
+  },
+  "timing": {
+    "features": [
+      "prob_disagreement",
+      "historical_confidence",
+      "min_ufc_fights_log",
+      "max_layoff_log",
+      "combined_finish_rate",
+      "horizon_fraction",
+      "upper_weight_class",
+      "five_round"
+    ],
+    "global_fit": {
+      "weight_current": 0.65,
+      "loss": 0.6795080497191398,
+      "current_loss": 0.7115442501872679,
+      "historical_loss": 0.7471946318895444,
+      "n": 88,
+      "weight_historical": 0.35,
+      "improvement_vs_best_base": 0.03203620046812805
+    },
+    "context_gate": {
+      "feature_names": [
+        "prob_disagreement",
+        "historical_confidence",
+        "min_ufc_fights_log",
+        "max_layoff_log",
+        "combined_finish_rate",
+        "horizon_fraction",
+        "upper_weight_class",
+        "five_round"
+      ],
+      "medians": [
+        0.09272291407378652,
+        0.44248636436052735,
+        1.3862943611198906,
+        5.2832037287379885,
+        0.5729166666666666,
+        0.6666666666666666,
+        0.0,
+        0.0
+      ],
+      "scales": [
+        0.17397165856781785,
+        0.27865856708495684,
+        0.8928387781345449,
+        0.6349311670282531,
+        0.2521575722525928,
+        0.24239466275419344,
+        0.37070485755212645,
+        0.3282155602433282
+      ],
+      "intercept": 0.6189234156190279,
+      "coefficients": [
+        -0.0007506353971104494,
+        0.0041065345810435755,
+        0.00739963589340469,
+        0.0042520014129600985,
+        0.0044806114137853235,
+        0.004884738447974454,
+        -0.007360207756359608,
+        -0.003506185454184439
+      ],
+      "prior_weight_current": 0.65,
+      "l2": 8.0,
+      "intercept_l2": 2.0,
+      "n": 456,
+      "objective": 0.6793049454042847,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "mean_abs_coefficient": 0.00459256879460283
+    }
+  },
+  "governance": {
+    "production_change": false,
+    "promotion_allowed_from_this_report": false,
+    "reason": "Context families were selected after reviewing prior cards. They require future frozen prospective validation even if retrospective/walk-forward metrics improve.",
+    "global_unified_remains_baseline": true
+  }
+}
