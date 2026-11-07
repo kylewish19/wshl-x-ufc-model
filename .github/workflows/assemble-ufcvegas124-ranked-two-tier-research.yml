@@ -1,0 +1,39 @@
+name: Assemble Nov7 Top5 and Top5 ranked research review
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/historical-conditional-rates]
+    paths:
+      - "tools/assemble_ufcvegas124_ranked_top5_research_review.py"
+      - ".github/workflows/assemble-ufcvegas124-ranked-two-tier-research.yml"
+permissions:
+  contents: write
+concurrency:
+  group: assemble-ufcvegas124-two-tier-research
+  cancel-in-progress: true
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11", cache: "pip"}
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Assemble five honest research-only candidates in each FanDuel tier
+        run: PYTHONPATH=src:tools python tools/assemble_ufcvegas124_ranked_top5_research_review.py
+      - name: Run all model regressions
+        run: pytest -q
+      - name: Commit versioned pre-fight research view without modifying original betting locks
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/locks/ufcvegas124_2026-11-07/stage_b_top5_ranked_research_review_compatible_cross_tier.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "research: snapshot 5 longshot + 5 best FanDuel candidates with 3 compatible same-fight pairs and zero qualified bets"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
