@@ -189,10 +189,11 @@ def compute():
         raise RuntimeError(f"{len(eligible)} qualifying market(s) found. Require timestamped, \
 independently justified conservative-probability Stage B selection before freeze: "+
             repr([(r["fight_no"],r["market"],r["american_odds"]) for r in eligible]))
+    if len(rows)!=378: raise RuntimeError(f'Expected 378 full-card quoted prices including 28 unmodeled draw quotes, found {len(rows)}')
     modeled=sum(x["raw_model_probability"] is not None for x in rows)
     full={
         "event":freeze["event"],"event_date":freeze["event_date"],
-        "status":"FULL_364_MARKET_PRICE_AUDIT_ZERO_QUALIFIED_TWO_TIER_BETS",
+        "status":"FULL_378_MARKET_PRICE_AUDIT_ZERO_QUALIFIED_TWO_TIER_BETS",
         "stage":"B_FANDUEL_SCREENSHOT_PRICE_COMPARISON",
         "stage_a_sha256":sha(FREEZE),"raw_model_sha256":sha(RAW),
         "source_quotes_sha256":sha(QUOTES),
