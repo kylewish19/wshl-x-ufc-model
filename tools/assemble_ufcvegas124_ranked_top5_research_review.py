@@ -90,7 +90,7 @@ def build():
         raise RuntimeError("Initial immutable official Stage B source mismatch")
     if not (stage_b["top_5_longshots"]["number_selected"]==0 and stage_b["top_5_best_bets"]["number_selected"]==0):
         raise RuntimeError("Source Stage B contains bets. Review cannot silently override those bets")
-    if len(stage_a["fights"])!=len(quotes["quoted_markets"])!=14:
+    if len(stage_a["fights"])!=14 or len(quotes["quoted_markets"])!=14:
         raise RuntimeError("Expected 14 snapshot fights")
     if len(audit["all_market_comparisons"])!=378:
         raise RuntimeError("Expected all 378 snapshot market prices")
