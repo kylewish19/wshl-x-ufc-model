@@ -1,0 +1,1382 @@
+{
+  "all_fights": 14,
+  "event": "UFC Fight Night: Cortes Acosta vs Walker",
+  "event_date": "2026-11-07",
+  "evidence_sources": [
+    "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "https://www.fightful.com/mma/ufc-fight-night-cortes-acosta-vs-walker-results-11-7/",
+    "https://www.mmafighting.com/fight-results/ufc",
+    "https://jp.ufc.com/news/ufc-fight-night-cortes-acosta-vs-walker-results"
+  ],
+  "fights": [
+    {
+      "actual_details": "KO punch",
+      "fight": "Jonny Parsons vs Jose Souza",
+      "fight_no": 1,
+      "method": "KO",
+      "model_views": {
+        "historical": {
+          "joint_method_6class_brier": 0.8043111415773319,
+          "joint_method_6class_logloss": 1.6053417963370828,
+          "method_correct_given_own_fighter_won": null,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.36142915942763143,
+            "KO": 0.5098463702573345,
+            "SUB": 0.12872447031503415
+          },
+          "pick": "Jonny Parsons",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.5979093486392045,
+          "winner_correct": false,
+          "winner_logloss": 0.9110777148871205,
+          "winner_multiclass_brier": 0.7149911783803157
+        },
+        "reference": {
+          "joint_method_6class_brier": 0.8785786699093994,
+          "joint_method_6class_logloss": 1.4239554687385414,
+          "method_correct_given_own_fighter_won": null,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.15793181307153148,
+            "KO": 0.80637531309025,
+            "SUB": 0.03569287383821861
+          },
+          "pick": "Jonny Parsons",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.661525640744948,
+          "winner_correct": false,
+          "winner_logloss": 1.0833069376375368,
+          "winner_multiclass_brier": 0.875232346726028
+        },
+        "unified": {
+          "joint_method_6class_brier": 0.7929386923027475,
+          "joint_method_6class_logloss": 1.4871293426564418,
+          "method_correct_given_own_fighter_won": null,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.2789062116738828,
+            "KO": 0.6373362603096557,
+            "SUB": 0.08375752801646143
+          },
+          "pick": "Jonny Parsons",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.6174557875446999,
+          "winner_correct": false,
+          "winner_logloss": 0.9609110442769067,
+          "winner_multiclass_brier": 0.7625032991448911
+        }
+      },
+      "round": 1,
+      "seconds_elapsed": 256,
+      "stage_a_reference_posture": "PASS",
+      "time": "4:16",
+      "timing_research": {
+        "betting_gate_failures": [
+          "outside_requested_price_bands",
+          "stage_a_research_pass",
+          "sparse_ufc_history_blocks_timing",
+          "current_timing_edge_below_12pp",
+          "unified_timing_shadow_edge_below_12pp",
+          "no_positive_two_view_robustness_check"
+        ],
+        "correct": true,
+        "current_simulated_probability": 0.6758,
+        "fanduel_snapshot_american_odds": -186,
+        "market": "Fight goes distance NO",
+        "metric": "GTD_NO",
+        "result": "W",
+        "status": "RESEARCH_TIMING_FORECAST_NO_APPROVED_STAKE",
+        "unified_shadow_probability": 0.6314
+      },
+      "winner": "Jose Souza"
+    },
+    {
+      "actual_details": "UD (30-27 x3)",
+      "fight": "Seokhyeon Ko vs Wellington Turman",
+      "fight_no": 2,
+      "method": "DEC",
+      "model_views": {
+        "historical": {
+          "joint_method_6class_brier": 0.5355615178112195,
+          "joint_method_6class_logloss": 1.0830292606625709,
+          "method_correct_given_own_fighter_won": true,
+          "own_fighter_and_method_correct": true,
+          "own_selected_fighter_conditional_method": "DEC",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.5452852086634691,
+            "KO": 0.18322109634299347,
+            "SUB": 0.2714936949935375
+          },
+          "pick": "Seokhyeon Ko",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "DEC",
+          "win_probability_at_prediction": 0.6724239600830939,
+          "winner_correct": true,
+          "winner_logloss": 0.3968662444075053,
+          "winner_multiclass_brier": 0.21461212385528491
+        },
+        "reference": {
+          "joint_method_6class_brier": 0.5731245554918275,
+          "joint_method_6class_logloss": 1.1221577839015653,
+          "method_correct_given_own_fighter_won": true,
+          "own_fighter_and_method_correct": true,
+          "own_selected_fighter_conditional_method": "DEC",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.45878347819883303,
+            "KO": 0.3951810491514546,
+            "SUB": 0.14603547264971237
+          },
+          "pick": "Seokhyeon Ko",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "DEC",
+          "win_probability_at_prediction": 0.7096517809478035,
+          "winner_correct": true,
+          "winner_logloss": 0.3429808786256976,
+          "winner_multiclass_brier": 0.1686041766135646
+        },
+        "unified": {
+          "joint_method_6class_brier": 0.5230961883898012,
+          "joint_method_6class_logloss": 1.0684600028435176,
+          "method_correct_given_own_fighter_won": true,
+          "own_fighter_and_method_correct": true,
+          "own_selected_fighter_conditional_method": "DEC",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.5265212568919183,
+            "KO": 0.2518148786645146,
+            "SUB": 0.22166386444356706
+          },
+          "pick": "Seokhyeon Ko",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "DEC",
+          "win_probability_at_prediction": 0.6838509509148233,
+          "winner_correct": true,
+          "winner_logloss": 0.3800152931242528,
+          "winner_multiclass_brier": 0.19990044247492295
+        }
+      },
+      "round": 3,
+      "seconds_elapsed": 900,
+      "stage_a_reference_posture": "SIDE",
+      "time": "5:00",
+      "timing_research": {
+        "betting_gate_failures": [
+          "timing_and_method_finish_models_disagree_gt_15pp",
+          "current_timing_edge_below_12pp",
+          "unified_timing_shadow_edge_below_12pp"
+        ],
+        "correct": true,
+        "current_simulated_probability": 0.6677,
+        "fanduel_snapshot_american_odds": -140,
+        "market": "Round 3 starts YES",
+        "metric": "ROUND_3_STARTS_YES",
+        "result": "W",
+        "status": "RESEARCH_TIMING_FORECAST_NO_APPROVED_STAKE",
+        "unified_shadow_probability": 0.6486
+      },
+      "winner": "Seokhyeon Ko"
+    },
+    {
+      "actual_details": "TKO punches",
+      "fight": "Mantas Kondratavicius vs Andre Petroski",
+      "fight_no": 3,
+      "method": "KO",
+      "model_views": {
+        "historical": {
+          "joint_method_6class_brier": 1.142597036097267,
+          "joint_method_6class_logloss": 2.88992205091445,
+          "method_correct_given_own_fighter_won": null,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.24516730928407723,
+            "KO": 0.5683506081318385,
+            "SUB": 0.18648208258408433
+          },
+          "pick": "Mantas Kondratavicius",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.7884492716221979,
+          "winner_correct": false,
+          "winner_logloss": 1.5532904587692717,
+          "winner_multiclass_brier": 1.2433045078431488
+        },
+        "reference": {
+          "joint_method_6class_brier": 1.1623479975402105,
+          "joint_method_6class_logloss": 2.3961653109844803,
+          "method_correct_given_own_fighter_won": null,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.24436870249067708,
+            "KO": 0.6874988482701402,
+            "SUB": 0.0681324492391827
+          },
+          "pick": "Mantas Kondratavicius",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.781144785267791,
+          "winner_correct": false,
+          "winner_logloss": 1.519344887746046,
+          "winner_multiclass_brier": 1.2203743511021266
+        },
+        "unified": {
+          "joint_method_6class_brier": 1.1507390376460822,
+          "joint_method_6class_logloss": 2.683966494991952,
+          "method_correct_given_own_fighter_won": null,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.24907665551442115,
+            "KO": 0.6208890887726292,
+            "SUB": 0.13003425571294977
+          },
+          "pick": "Mantas Kondratavicius",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.7862768232745152,
+          "winner_correct": false,
+          "winner_logloss": 1.543073668043251,
+          "winner_multiclass_brier": 1.2364624856373265
+        }
+      },
+      "round": 2,
+      "seconds_elapsed": 579,
+      "stage_a_reference_posture": "LEAN",
+      "time": "4:39",
+      "timing_research": {
+        "betting_gate_failures": [
+          "outside_requested_price_bands",
+          "sparse_ufc_history_blocks_timing",
+          "timing_and_method_finish_models_disagree_gt_15pp",
+          "current_timing_edge_below_12pp",
+          "unified_timing_shadow_edge_below_12pp",
+          "no_positive_raw_EV",
+          "no_positive_two_view_robustness_check"
+        ],
+        "correct": true,
+        "current_simulated_probability": 0.5724,
+        "fanduel_snapshot_american_odds": -590,
+        "market": "Fight goes distance NO",
+        "metric": "GTD_NO",
+        "result": "W",
+        "status": "RESEARCH_TIMING_FORECAST_NO_APPROVED_STAKE",
+        "unified_shadow_probability": 0.5825
+      },
+      "winner": "Andre Petroski"
+    },
+    {
+      "actual_details": "RNC",
+      "fight": "Austin Bashi vs Carlos Calderon",
+      "fight_no": 4,
+      "method": "SUB",
+      "model_views": {
+        "historical": {
+          "joint_method_6class_brier": 0.5974338426759377,
+          "joint_method_6class_logloss": 1.1997037502086338,
+          "method_correct_given_own_fighter_won": true,
+          "own_fighter_and_method_correct": true,
+          "own_selected_fighter_conditional_method": "SUB",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.31665559588286285,
+            "KO": 0.2182674124482182,
+            "SUB": 0.4650769916689189
+          },
+          "pick": "Austin Bashi",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "SUB",
+          "win_probability_at_prediction": 0.6038112872064767,
+          "winner_correct": true,
+          "winner_logloss": 0.5044935682662409,
+          "winner_multiclass_brier": 0.3139309922899778
+        },
+        "reference": {
+          "joint_method_6class_brier": 0.7189395124923205,
+          "joint_method_6class_logloss": 1.427315267887466,
+          "method_correct_given_own_fighter_won": false,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.29423937687871815,
+            "KO": 0.3640587610636776,
+            "SUB": 0.3417018620576042
+          },
+          "pick": "Austin Bashi",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": false,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.702226977527582,
+          "winner_correct": true,
+          "winner_logloss": 0.3534985974047745,
+          "winner_multiclass_brier": 0.1773375458247183
+        },
+        "unified": {
+          "joint_method_6class_brier": 0.6338826160643345,
+          "joint_method_6class_logloss": 1.2709649634063036,
+          "method_correct_given_own_fighter_won": true,
+          "own_fighter_and_method_correct": true,
+          "own_selected_fighter_conditional_method": "SUB",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.31218009271170255,
+            "KO": 0.26796791597295516,
+            "SUB": 0.41985199131534223
+          },
+          "pick": "Austin Bashi",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "SUB",
+          "win_probability_at_prediction": 0.6346776904896176,
+          "winner_correct": true,
+          "winner_logloss": 0.45463798298084823,
+          "winner_multiclass_brier": 0.26692077965199923
+        }
+      },
+      "round": 1,
+      "seconds_elapsed": 67,
+      "stage_a_reference_posture": "PASS",
+      "time": "1:07",
+      "timing_research": {
+        "betting_gate_failures": [
+          "stage_a_research_pass",
+          "sparse_ufc_history_blocks_timing",
+          "timing_and_method_finish_models_disagree_gt_15pp"
+        ],
+        "correct": false,
+        "current_simulated_probability": 0.6722,
+        "fanduel_snapshot_american_odds": -110,
+        "market": "OVER 1.5 rounds",
+        "metric": "OVER_1.5",
+        "result": "L",
+        "status": "RESEARCH_TIMING_FORECAST_NO_APPROVED_STAKE",
+        "unified_shadow_probability": 0.6718
+      },
+      "winner": "Austin Bashi"
+    },
+    {
+      "actual_details": "UD (29-28 x3)",
+      "fight": "Jose Delano vs Murtazali Magomedov",
+      "fight_no": 5,
+      "method": "DEC",
+      "model_views": {
+        "historical": {
+          "joint_method_6class_brier": 0.6775365234207351,
+          "joint_method_6class_logloss": 1.290054349607995,
+          "method_correct_given_own_fighter_won": false,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "SUB",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.3941150916032573,
+            "KO": 0.14399186201006847,
+            "SUB": 0.4618930463866742
+          },
+          "pick": "Murtazali Magomedov",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": false,
+          "reference_fighter_method_class_only": "SUB",
+          "win_probability_at_prediction": 0.6893403188582432,
+          "winner_correct": true,
+          "winner_logloss": 0.3720201983330749,
+          "winner_multiclass_brier": 0.193018874974196
+        },
+        "reference": {
+          "joint_method_6class_brier": 1.0457441857685825,
+          "joint_method_6class_logloss": 1.9944995224903854,
+          "method_correct_given_own_fighter_won": false,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "SUB",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.19035158916997072,
+            "KO": 0.10664753721865926,
+            "SUB": 0.7030008736113699
+          },
+          "pick": "Murtazali Magomedov",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": false,
+          "reference_fighter_method_class_only": "SUB",
+          "win_probability_at_prediction": 0.7148968052863847,
+          "winner_correct": true,
+          "winner_logloss": 0.33561707497524723,
+          "winner_multiclass_brier": 0.16256766327181932
+        },
+        "unified": {
+          "joint_method_6class_brier": 0.8115387489472681,
+          "joint_method_6class_logloss": 1.5212859845008744,
+          "method_correct_given_own_fighter_won": false,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "SUB",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.3094750152038458,
+            "KO": 0.13273035804815989,
+            "SUB": 0.5577946267479943
+          },
+          "pick": "Murtazali Magomedov",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": false,
+          "reference_fighter_method_class_only": "SUB",
+          "win_probability_at_prediction": 0.6971392462888888,
+          "winner_correct": true,
+          "winner_logloss": 0.3607701087073143,
+          "winner_multiclass_brier": 0.18344927227692473
+        }
+      },
+      "round": 3,
+      "seconds_elapsed": 900,
+      "stage_a_reference_posture": "PASS",
+      "time": "5:00",
+      "timing_research": {
+        "betting_gate_failures": [
+          "stage_a_research_pass",
+          "sparse_ufc_history_blocks_timing",
+          "timing_and_method_finish_models_disagree_gt_15pp",
+          "current_timing_edge_below_12pp",
+          "unified_timing_shadow_edge_below_12pp"
+        ],
+        "correct": true,
+        "current_simulated_probability": 0.6513,
+        "fanduel_snapshot_american_odds": -128,
+        "market": "Round 3 starts YES",
+        "metric": "ROUND_3_STARTS_YES",
+        "result": "W",
+        "status": "RESEARCH_TIMING_FORECAST_NO_APPROVED_STAKE",
+        "unified_shadow_probability": 0.6811
+      },
+      "winner": "Murtazali Magomedov"
+    },
+    {
+      "actual_details": "UD (29-28 x3)",
+      "fight": "Karine Silva vs Gabriella Fernandes",
+      "fight_no": 6,
+      "method": "DEC",
+      "model_views": {
+        "historical": {
+          "joint_method_6class_brier": 0.5614023774034026,
+          "joint_method_6class_logloss": 1.1025639509424265,
+          "method_correct_given_own_fighter_won": true,
+          "own_fighter_and_method_correct": true,
+          "own_selected_fighter_conditional_method": "DEC",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.573698697537957,
+            "KO": 0.15738405749559192,
+            "SUB": 0.26891724496645103
+          },
+          "pick": "Karine Silva",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "DEC",
+          "win_probability_at_prediction": 0.571377171957904,
+          "winner_correct": true,
+          "winner_logloss": 0.5597057410547511,
+          "winner_multiclass_brier": 0.3674350574376083
+        },
+        "reference": {
+          "joint_method_6class_brier": 0.5912586263813436,
+          "joint_method_6class_logloss": 1.200014662741218,
+          "method_correct_given_own_fighter_won": true,
+          "own_fighter_and_method_correct": true,
+          "own_selected_fighter_conditional_method": "DEC",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.5239379245038378,
+            "KO": 0.20029369310901501,
+            "SUB": 0.2757683823871472
+          },
+          "pick": "Karine Silva",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "DEC",
+          "win_probability_at_prediction": 0.5748577866300034,
+          "winner_correct": true,
+          "winner_logloss": 0.5536325963752955,
+          "winner_multiclass_brier": 0.3614918031782794
+        },
+        "unified": {
+          "joint_method_6class_brier": 0.5641779764202013,
+          "joint_method_6class_logloss": 1.1287092653861484,
+          "method_correct_given_own_fighter_won": true,
+          "own_fighter_and_method_correct": true,
+          "own_selected_fighter_conditional_method": "DEC",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.5554794900494862,
+            "KO": 0.17257837041224608,
+            "SUB": 0.27194213953826774
+          },
+          "pick": "Karine Silva",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "DEC",
+          "win_probability_at_prediction": 0.572422114387603,
+          "winner_correct": true,
+          "winner_logloss": 0.5578785975464784,
+          "winner_multiclass_brier": 0.36564569652953605
+        }
+      },
+      "round": 3,
+      "seconds_elapsed": 900,
+      "stage_a_reference_posture": "LEAN",
+      "time": "5:00",
+      "timing_research": {
+        "betting_gate_failures": [
+          "outside_requested_price_bands",
+          "timing_and_method_finish_models_disagree_gt_15pp",
+          "current_timing_edge_below_12pp",
+          "unified_timing_shadow_edge_below_12pp"
+        ],
+        "correct": true,
+        "current_simulated_probability": 0.7325,
+        "fanduel_snapshot_american_odds": -260,
+        "market": "Round 3 starts YES",
+        "metric": "ROUND_3_STARTS_YES",
+        "result": "W",
+        "status": "RESEARCH_TIMING_FORECAST_NO_APPROVED_STAKE",
+        "unified_shadow_probability": 0.7361
+      },
+      "winner": "Karine Silva"
+    },
+    {
+      "actual_details": "TKO punches",
+      "fight": "Gabriel Lorenco vs Thomas Petersen",
+      "fight_no": 7,
+      "method": "KO",
+      "model_views": {
+        "historical": {
+          "joint_method_6class_brier": 0.7980049921116181,
+          "joint_method_6class_logloss": 1.6566352711092305,
+          "method_correct_given_own_fighter_won": false,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "DEC",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.36927183744922176,
+            "KO": 0.32424603796956697,
+            "SUB": 0.3064821245812113
+          },
+          "pick": "Thomas Petersen",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.6242724065168509,
+          "winner_correct": true,
+          "winner_logloss": 0.47116845696725024,
+          "winner_multiclass_brier": 0.2823424490092771
+        },
+        "reference": {
+          "joint_method_6class_brier": 0.7489282868560604,
+          "joint_method_6class_logloss": 1.3603408628947908,
+          "method_correct_given_own_fighter_won": null,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.1543594034444391,
+            "KO": 0.718895026120959,
+            "SUB": 0.1267455704346019
+          },
+          "pick": "Gabriel Lorenco",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.5582930504220359,
+          "winner_correct": false,
+          "winner_logloss": 0.8171086267973756,
+          "winner_multiclass_brier": 0.6233822602990838
+        },
+        "unified": {
+          "joint_method_6class_brier": 0.7481671352301862,
+          "joint_method_6class_logloss": 1.4965940009018215,
+          "method_correct_given_own_fighter_won": true,
+          "own_fighter_and_method_correct": true,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.3720689668450662,
+            "KO": 0.42441262177335,
+            "SUB": 0.2035184113815839
+          },
+          "pick": "Thomas Petersen",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.5708045611902512,
+          "winner_correct": true,
+          "winner_logloss": 0.5607084025384826,
+          "winner_multiclass_brier": 0.36841744939018556
+        }
+      },
+      "round": 3,
+      "seconds_elapsed": 887,
+      "stage_a_reference_posture": "PASS",
+      "time": "4:47",
+      "timing_research": {
+        "betting_gate_failures": [
+          "outside_requested_price_bands",
+          "stage_a_research_pass",
+          "sparse_ufc_history_blocks_timing",
+          "current_timing_edge_below_12pp",
+          "unified_timing_shadow_edge_below_12pp"
+        ],
+        "correct": true,
+        "current_simulated_probability": 0.6820999999999999,
+        "fanduel_snapshot_american_odds": -205,
+        "market": "Fight goes distance NO",
+        "metric": "GTD_NO",
+        "result": "W",
+        "status": "RESEARCH_TIMING_FORECAST_NO_APPROVED_STAKE",
+        "unified_shadow_probability": 0.6985
+      },
+      "winner": "Thomas Petersen"
+    },
+    {
+      "actual_details": "UD (29-28 x3)",
+      "fight": "Keiichiro Nakamura vs Ollie Schmid",
+      "fight_no": 8,
+      "method": "DEC",
+      "model_views": {
+        "historical": {
+          "joint_method_6class_brier": 1.0895423221281522,
+          "joint_method_6class_logloss": 2.426296081337228,
+          "method_correct_given_own_fighter_won": null,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.28553049619384707,
+            "KO": 0.6203486411214088,
+            "SUB": 0.0941208626847442
+          },
+          "pick": "Keiichiro Nakamura",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": false,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.7385393343114893,
+          "winner_correct": false,
+          "winner_logloss": 1.3414714248082515,
+          "winner_multiclass_brier": 1.0908806966505156
+        },
+        "reference": {
+          "joint_method_6class_brier": 1.1654848902319939,
+          "joint_method_6class_logloss": 2.5362884902083946,
+          "method_correct_given_own_fighter_won": null,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.17634047243840012,
+            "KO": 0.8108808910898114,
+            "SUB": 0.012778636471788434
+          },
+          "pick": "Keiichiro Nakamura",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": false,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.6243574543582888,
+          "winner_correct": false,
+          "winner_logloss": 0.9791172642565497,
+          "winner_multiclass_brier": 0.7796444616255254
+        },
+        "unified": {
+          "joint_method_6class_brier": 1.1183745584297686,
+          "joint_method_6class_logloss": 2.441433485674303,
+          "method_correct_given_own_fighter_won": null,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.24601575107893756,
+            "KO": 0.7080344641712,
+            "SUB": 0.0459497847498624
+          },
+          "pick": "Keiichiro Nakamura",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": false,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.7066769078615044,
+          "winner_correct": false,
+          "winner_logloss": 1.2264805739516929,
+          "winner_multiclass_brier": 0.9987845042093944
+        }
+      },
+      "round": 3,
+      "seconds_elapsed": 900,
+      "stage_a_reference_posture": "PASS",
+      "time": "5:00",
+      "timing_research": {
+        "betting_gate_failures": [
+          "outside_requested_price_bands",
+          "stage_a_research_pass",
+          "sparse_ufc_history_blocks_timing",
+          "timing_and_method_finish_models_disagree_gt_15pp",
+          "current_timing_edge_below_12pp",
+          "unified_timing_shadow_edge_below_12pp",
+          "no_positive_raw_EV",
+          "no_positive_two_view_robustness_check"
+        ],
+        "correct": false,
+        "current_simulated_probability": 0.6437999999999999,
+        "fanduel_snapshot_american_odds": -320,
+        "market": "Fight goes distance NO",
+        "metric": "GTD_NO",
+        "result": "L",
+        "status": "RESEARCH_TIMING_FORECAST_NO_APPROVED_STAKE",
+        "unified_shadow_probability": 0.6485000000000001
+      },
+      "winner": "Ollie Schmid"
+    },
+    {
+      "actual_details": "UD (29-28 x3)",
+      "fight": "Mitch Raposo vs Marcos Degli",
+      "fight_no": 9,
+      "method": "DEC",
+      "model_views": {
+        "historical": {
+          "joint_method_6class_brier": 0.6156509807710375,
+          "joint_method_6class_logloss": 1.2538951643921914,
+          "method_correct_given_own_fighter_won": true,
+          "own_fighter_and_method_correct": true,
+          "own_selected_fighter_conditional_method": "DEC",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.48227916154455086,
+            "KO": 0.21061554881675965,
+            "SUB": 0.3071052896386896
+          },
+          "pick": "Mitch Raposo",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "DEC",
+          "win_probability_at_prediction": 0.661000089820539,
+          "winner_correct": true,
+          "winner_logloss": 0.4140013032446218,
+          "winner_multiclass_brier": 0.2298418782033652
+        },
+        "reference": {
+          "joint_method_6class_brier": 0.6894476510454344,
+          "joint_method_6class_logloss": 1.341527386731724,
+          "method_correct_given_own_fighter_won": false,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.4298606312329975,
+            "KO": 0.45101326802192354,
+            "SUB": 0.11912610074507893
+          },
+          "pick": "Mitch Raposo",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": false,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.6082111625487285,
+          "winner_correct": true,
+          "winner_logloss": 0.4972331504894576,
+          "winner_multiclass_brier": 0.3069969863028376
+        },
+        "unified": {
+          "joint_method_6class_brier": 0.6177890840021054,
+          "joint_method_6class_logloss": 1.2544003362053306,
+          "method_correct_given_own_fighter_won": true,
+          "own_fighter_and_method_correct": true,
+          "own_selected_fighter_conditional_method": "DEC",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.48244461509233816,
+            "KO": 0.292678310004758,
+            "SUB": 0.22487707490290385
+          },
+          "pick": "Mitch Raposo",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "DEC",
+          "win_probability_at_prediction": 0.6455116160330533,
+          "winner_correct": true,
+          "winner_logloss": 0.4377120734537095,
+          "winner_multiclass_brier": 0.2513240287349949
+        }
+      },
+      "round": 3,
+      "seconds_elapsed": 900,
+      "stage_a_reference_posture": "PASS",
+      "time": "5:00",
+      "timing_research": {
+        "betting_gate_failures": [
+          "outside_requested_price_bands",
+          "stage_a_research_pass",
+          "sparse_ufc_history_blocks_timing",
+          "timing_and_method_finish_models_disagree_gt_15pp",
+          "current_timing_edge_below_12pp",
+          "unified_timing_shadow_edge_below_12pp",
+          "no_positive_raw_EV",
+          "no_positive_two_view_robustness_check"
+        ],
+        "correct": true,
+        "current_simulated_probability": 0.6266,
+        "fanduel_snapshot_american_odds": -168,
+        "market": "Round 3 starts YES",
+        "metric": "ROUND_3_STARTS_YES",
+        "result": "W",
+        "status": "RESEARCH_TIMING_FORECAST_NO_APPROVED_STAKE",
+        "unified_shadow_probability": 0.6052
+      },
+      "winner": "Mitch Raposo"
+    },
+    {
+      "actual_details": "TKO punches",
+      "fight": "Priscila Cachoeira vs Nina Milosevic",
+      "fight_no": 10,
+      "method": "KO",
+      "model_views": {
+        "historical": {
+          "joint_method_6class_brier": 0.17883123973852244,
+          "joint_method_6class_logloss": 0.4743546335862967,
+          "method_correct_given_own_fighter_won": true,
+          "own_fighter_and_method_correct": true,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.17887055796854354,
+            "KO": 0.7559541255591187,
+            "SUB": 0.06517531647233768
+          },
+          "pick": "Nina Milosevic",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.7921496340480743,
+          "winner_correct": true,
+          "winner_logloss": 0.23300497313420931,
+          "winner_multiclass_brier": 0.0864035492526989
+        },
+        "reference": {
+          "joint_method_6class_brier": 0.11874958403379288,
+          "joint_method_6class_logloss": 0.368214879429065,
+          "method_correct_given_own_fighter_won": true,
+          "own_fighter_and_method_correct": true,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.12527000982598113,
+            "KO": 0.8074566127110127,
+            "SUB": 0.06727337746300621
+          },
+          "pick": "Nina Milosevic",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.8569729506556345,
+          "winner_correct": true,
+          "winner_logloss": 0.15434892371137174,
+          "winner_multiclass_brier": 0.04091347368831113
+        },
+        "unified": {
+          "joint_method_6class_brier": 0.1520324327150915,
+          "joint_method_6class_logloss": 0.4284699336378437,
+          "method_correct_given_own_fighter_won": true,
+          "own_fighter_and_method_correct": true,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.15692433192233424,
+            "KO": 0.7769448320782132,
+            "SUB": 0.06613083599945255
+          },
+          "pick": "Nina Milosevic",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.8136136711876965,
+          "winner_correct": true,
+          "winner_logloss": 0.20626963106091736,
+          "winner_multiclass_brier": 0.06947972713625628
+        }
+      },
+      "round": 2,
+      "seconds_elapsed": 520,
+      "stage_a_reference_posture": "LEAN",
+      "time": "3:40",
+      "timing_research": {
+        "betting_gate_failures": [
+          "sparse_ufc_history_blocks_timing",
+          "timing_and_method_finish_models_disagree_gt_15pp"
+        ],
+        "correct": true,
+        "current_simulated_probability": 0.7265,
+        "fanduel_snapshot_american_odds": 102,
+        "market": "OVER 1.5 rounds",
+        "metric": "OVER_1.5",
+        "result": "W",
+        "status": "RESEARCH_TIMING_FORECAST_NO_APPROVED_STAKE",
+        "unified_shadow_probability": 0.7028
+      },
+      "winner": "Nina Milosevic"
+    },
+    {
+      "actual_details": "UD (29-28 x3)",
+      "fight": "Billy Elekana vs Lucas Fernando",
+      "fight_no": 11,
+      "method": "DEC",
+      "model_views": {
+        "historical": {
+          "joint_method_6class_brier": 1.0346189282743627,
+          "joint_method_6class_logloss": 2.212916639841229,
+          "method_correct_given_own_fighter_won": false,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.21793416201972524,
+            "KO": 0.6872000637066499,
+            "SUB": 0.09486577427362491
+          },
+          "pick": "Lucas Fernando",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": false,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.5900486208822291,
+          "winner_correct": true,
+          "winner_logloss": 0.5275503372027827,
+          "winner_multiclass_brier": 0.33612026648112464
+        },
+        "reference": {
+          "joint_method_6class_brier": 0.9828736412261513,
+          "joint_method_6class_logloss": 1.9973272562503308,
+          "method_correct_given_own_fighter_won": false,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.2589140207315946,
+            "KO": 0.7234942948479987,
+            "SUB": 0.01759168442040688
+          },
+          "pick": "Lucas Fernando",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": false,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.5241024924193298,
+          "winner_correct": true,
+          "winner_logloss": 0.6460680175674465,
+          "winner_multiclass_brier": 0.45295687544298807
+        },
+        "unified": {
+          "joint_method_6class_brier": 1.0155784915555053,
+          "joint_method_6class_logloss": 2.120795043967887,
+          "method_correct_given_own_fighter_won": false,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.23638038565825664,
+            "KO": 0.712344275994392,
+            "SUB": 0.05127533834735141
+          },
+          "pick": "Lucas Fernando",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": false,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.5704927620356227,
+          "winner_correct": true,
+          "winner_logloss": 0.5612547968146113,
+          "winner_multiclass_brier": 0.3689529349275764
+        }
+      },
+      "round": 3,
+      "seconds_elapsed": 900,
+      "stage_a_reference_posture": "PASS",
+      "time": "5:00",
+      "timing_research": {
+        "betting_gate_failures": [
+          "outside_requested_price_bands",
+          "stage_a_research_pass",
+          "sparse_ufc_history_blocks_timing",
+          "timing_and_method_finish_models_disagree_gt_15pp",
+          "current_timing_edge_below_12pp",
+          "unified_timing_shadow_edge_below_12pp",
+          "no_positive_raw_EV",
+          "no_positive_two_view_robustness_check"
+        ],
+        "correct": false,
+        "current_simulated_probability": 0.5908,
+        "fanduel_snapshot_american_odds": -174,
+        "market": "Fight goes distance NO",
+        "metric": "GTD_NO",
+        "result": "L",
+        "status": "RESEARCH_TIMING_FORECAST_NO_APPROVED_STAKE",
+        "unified_shadow_probability": 0.6482
+      },
+      "winner": "Lucas Fernando"
+    },
+    {
+      "actual_details": "KO punch",
+      "fight": "Davey Grant vs Elijah Smith",
+      "fight_no": 12,
+      "method": "KO",
+      "model_views": {
+        "historical": {
+          "joint_method_6class_brier": 0.8734913927179956,
+          "joint_method_6class_logloss": 1.673003853210718,
+          "method_correct_given_own_fighter_won": false,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "SUB",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.28268525687102075,
+            "KO": 0.23683390834395768,
+            "SUB": 0.4804808347850216
+          },
+          "pick": "Elijah Smith",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": false,
+          "reference_fighter_method_class_only": "SUB",
+          "win_probability_at_prediction": 0.8317866330338153,
+          "winner_correct": true,
+          "winner_logloss": 0.18417932173053778,
+          "winner_multiclass_brier": 0.05659147365220065
+        },
+        "reference": {
+          "joint_method_6class_brier": 0.6158230365528605,
+          "joint_method_6class_logloss": 1.2263623654887144,
+          "method_correct_given_own_fighter_won": true,
+          "own_fighter_and_method_correct": true,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.21736349107750008,
+            "KO": 0.49266039125468636,
+            "SUB": 0.28997611766781356
+          },
+          "pick": "Elijah Smith",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.5954563684583618,
+          "winner_correct": true,
+          "winner_logloss": 0.5184271616227698,
+          "winner_multiclass_brier": 0.32731109964179345
+        },
+        "unified": {
+          "joint_method_6class_brier": 0.7464985840565047,
+          "joint_method_6class_logloss": 1.4571318472858568,
+          "method_correct_given_own_fighter_won": false,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "SUB",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.26532752456766456,
+            "KO": 0.3228536120558518,
+            "SUB": 0.4118188633764837
+          },
+          "pick": "Elijah Smith",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": false,
+          "reference_fighter_method_class_only": "SUB",
+          "win_probability_at_prediction": 0.7746594108978646,
+          "winner_correct": true,
+          "winner_logloss": 0.2553318160331551,
+          "winner_multiclass_brier": 0.10155676219379484
+        }
+      },
+      "round": 1,
+      "seconds_elapsed": 60,
+      "stage_a_reference_posture": "LEAN",
+      "time": "1:00",
+      "timing_research": {
+        "betting_gate_failures": [
+          "timing_and_method_finish_models_disagree_gt_15pp",
+          "unified_timing_shadow_edge_below_12pp"
+        ],
+        "correct": false,
+        "current_simulated_probability": 0.7135,
+        "fanduel_snapshot_american_odds": -134,
+        "market": "Round 3 starts YES",
+        "metric": "ROUND_3_STARTS_YES",
+        "result": "L",
+        "status": "RESEARCH_TIMING_FORECAST_NO_APPROVED_STAKE",
+        "unified_shadow_probability": 0.6787
+      },
+      "winner": "Elijah Smith"
+    },
+    {
+      "actual_details": "UD (30-27 x2, 29-28)",
+      "fight": "Tatiana Suarez vs Virna Jandiroba",
+      "fight_no": 13,
+      "method": "DEC",
+      "model_views": {
+        "historical": {
+          "joint_method_6class_brier": 0.3618908387498782,
+          "joint_method_6class_logloss": 0.775534621888382,
+          "method_correct_given_own_fighter_won": true,
+          "own_fighter_and_method_correct": true,
+          "own_selected_fighter_conditional_method": "DEC",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.6902511130659609,
+            "KO": 0.10914518120793408,
+            "SUB": 0.200603705726105
+          },
+          "pick": "Tatiana Suarez",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "DEC",
+          "win_probability_at_prediction": 0.7253340134781193,
+          "winner_correct": true,
+          "winner_logloss": 0.3211230219752401,
+          "winner_multiclass_brier": 0.15088280830407588
+        },
+        "reference": {
+          "joint_method_6class_brier": 0.4460998813190042,
+          "joint_method_6class_logloss": 0.899453610322846,
+          "method_correct_given_own_fighter_won": true,
+          "own_fighter_and_method_correct": true,
+          "own_selected_fighter_conditional_method": "DEC",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.5366919048013314,
+            "KO": 0.1395436850334218,
+            "SUB": 0.3237644101652467
+          },
+          "pick": "Tatiana Suarez",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "DEC",
+          "win_probability_at_prediction": 0.7579616205620947,
+          "winner_correct": true,
+          "winner_logloss": 0.2771225271254667,
+          "winner_multiclass_brier": 0.11716515424185484
+        },
+        "unified": {
+          "joint_method_6class_brier": 0.379823965974706,
+          "joint_method_6class_logloss": 0.8071975839817431,
+          "method_correct_given_own_fighter_won": true,
+          "own_fighter_and_method_correct": true,
+          "own_selected_fighter_conditional_method": "DEC",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.6358386740356399,
+            "KO": 0.12115456286442122,
+            "SUB": 0.24300676309993882
+          },
+          "pick": "Tatiana Suarez",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "DEC",
+          "win_probability_at_prediction": 0.7354037284416138,
+          "winner_correct": true,
+          "winner_logloss": 0.30733564017729564,
+          "winner_multiclass_brier": 0.14002237384519847
+        }
+      },
+      "round": 3,
+      "seconds_elapsed": 900,
+      "stage_a_reference_posture": "SIDE",
+      "time": "5:00",
+      "timing_research": {
+        "betting_gate_failures": [
+          "outside_requested_price_bands",
+          "current_timing_edge_below_12pp",
+          "unified_timing_shadow_edge_below_12pp",
+          "no_positive_raw_EV",
+          "no_positive_two_view_robustness_check"
+        ],
+        "correct": true,
+        "current_simulated_probability": 0.71,
+        "fanduel_snapshot_american_odds": -460,
+        "market": "Round 3 starts YES",
+        "metric": "ROUND_3_STARTS_YES",
+        "result": "W",
+        "status": "RESEARCH_TIMING_FORECAST_NO_APPROVED_STAKE",
+        "unified_shadow_probability": 0.7367
+      },
+      "winner": "Tatiana Suarez"
+    },
+    {
+      "actual_details": "TKO punches after head kick",
+      "fight": "Waldo Cortes Acosta vs Johnny Walker",
+      "fight_no": 14,
+      "method": "KO",
+      "model_views": {
+        "historical": {
+          "joint_method_6class_brier": 0.44521553655832585,
+          "joint_method_6class_logloss": 0.9018268677173648,
+          "method_correct_given_own_fighter_won": true,
+          "own_fighter_and_method_correct": true,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.14144210646126512,
+            "KO": 0.6425174152915475,
+            "SUB": 0.2160404782471875
+          },
+          "pick": "Johnny Walker",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.6650608628383439,
+          "winner_correct": true,
+          "winner_logloss": 0.4078767194490844,
+          "winner_multiclass_brier": 0.2243684512051894
+        },
+        "reference": {
+          "joint_method_6class_brier": 0.7807959192039288,
+          "joint_method_6class_logloss": 1.2364307077151089,
+          "method_correct_given_own_fighter_won": null,
+          "own_fighter_and_method_correct": false,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.16551937332973277,
+            "KO": 0.8036123596347307,
+            "SUB": 0.030868267035536585
+          },
+          "pick": "Waldo Cortes Acosta",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.6378336295410217,
+          "winner_correct": false,
+          "winner_logloss": 1.015651585830825,
+          "winner_multiclass_brier": 0.8136634779469467
+        },
+        "unified": {
+          "joint_method_6class_brier": 0.518515835994726,
+          "joint_method_6class_logloss": 0.9643924730173857,
+          "method_correct_given_own_fighter_won": true,
+          "own_fighter_and_method_correct": true,
+          "own_selected_fighter_conditional_method": "KO",
+          "own_selected_fighter_conditional_method_probabilities": {
+            "DEC": 0.14539798102257995,
+            "KO": 0.7191908976702582,
+            "SUB": 0.13541112130716185
+          },
+          "pick": "Johnny Walker",
+          "reference_fighter_method_class_matches_actual_ignoring_winner": true,
+          "reference_fighter_method_class_only": "KO",
+          "win_probability_at_prediction": 0.5769728061899106,
+          "winner_correct": true,
+          "winner_logloss": 0.549960143238209,
+          "winner_multiclass_brier": 0.3579040134056778
+        }
+      },
+      "round": 3,
+      "seconds_elapsed": 747,
+      "stage_a_reference_posture": "PASS",
+      "time": "2:27",
+      "timing_research": {
+        "betting_gate_failures": [
+          "outside_requested_price_bands",
+          "stage_a_research_pass",
+          "current_timing_edge_below_12pp",
+          "unified_timing_shadow_edge_below_12pp",
+          "no_positive_raw_EV",
+          "no_positive_two_view_robustness_check"
+        ],
+        "correct": true,
+        "current_simulated_probability": 0.775,
+        "fanduel_snapshot_american_odds": -430,
+        "market": "Fight goes distance NO",
+        "metric": "GTD_NO",
+        "result": "W",
+        "status": "RESEARCH_TIMING_FORECAST_NO_APPROVED_STAKE",
+        "unified_shadow_probability": 0.8358
+      },
+      "winner": "Johnny Walker"
+    }
+  ],
+  "graded_at_utc": "2026-11-08T15:00:18.209278+00:00",
+  "important_distinctions": [
+    "Winner+method score is graded against each challenger's OWN chosen fighter and its own-side conditional method, not against reference fighter's conditional method when pick differs.",
+    "Displayed method class match ignoring wrong fighter is a diagnostic, NOT a won exact fighter+method wager.",
+    "The timing-one-per-fight selection was saved pre-event after screenshot prices had been seen, and is graded as pre-fight research, not original odds-blind Stage A.",
+    "The Top 5 lists consisted only of PASS/research candidates. Hypothetical 1u units and ROI are not approved bets, not money staked and not evidence any bet was placed.",
+    "Per-fight UFCStats rounds/knockdowns/takedowns/sig strikes are not silently invented and have not been imported into the ML training rows.",
+    "No automatic re-training, challenger promotion, or betting gate relaxation based on 14 fights."
+  ],
+  "observed_finish_distribution": {
+    "DEC": 7,
+    "KO": 6,
+    "SUB": 1
+  },
+  "official_approved_betting_record": {
+    "best_bets": {
+      "bets": 0,
+      "pnl_units": 0,
+      "staked_units": 0
+    },
+    "longshots": {
+      "bets": 0,
+      "pnl_units": 0,
+      "staked_units": 0
+    },
+    "pnl_units": 0,
+    "roi": null,
+    "staked_units": 0,
+    "total_bets": 0
+  },
+  "original_stage_a_sha256": "70fefe546831de93d06a09b8347411fd387d7d09f98ca03bc56adfd921e3c68b",
+  "original_stage_b_sha256": "df31642ce1465b3a9f26adf910ef465739452670ad59c199507549d5295f0599",
+  "raw_model_sha256": "6b9c19acaab0b6fd2be2b43df72d5a0f516e92b9ebfb4dafa4260d3ed095aed2",
+  "reference_cumulative_153": {
+    "count": 153,
+    "displayed_method_class_match_W": 79,
+    "joint_W": 48,
+    "winner_W": 92
+  },
+  "reference_prior_history_139": {
+    "count": 139,
+    "displayed_method_class_match_W": 70,
+    "joint_W": 43,
+    "winner_W": 83
+  },
+  "schema_version": "1.0",
+  "scoreboards": {
+    "historical": {
+      "actual_submission_method_recall_class_only": 1,
+      "exact_winner_method_rate": 0.5,
+      "mean_joint_method_six_class_brier": 0.6940063335739847,
+      "mean_joint_method_six_class_logloss": 1.4675055922682716,
+      "mean_winner_logloss": 0.5855592488735674,
+      "mean_winner_multiclass_brier": 0.39319459339564145,
+      "method_given_correct_winner_L": 4,
+      "method_given_correct_winner_W": 7,
+      "method_given_correct_winner_rate": 0.6363636363636364,
+      "own_fighter_and_method_L": 7,
+      "own_fighter_and_method_W": 7,
+      "reference_side_method_class_only_matches": 10,
+      "reference_side_method_class_only_total": 14,
+      "winner_L": 3,
+      "winner_W": 11,
+      "winner_rate": 0.7857142857142857
+    },
+    "reference": {
+      "actual_submission_method_recall_class_only": 0,
+      "exact_winner_method_rate": 0.35714285714285715,
+      "mean_joint_method_six_class_brier": 0.7512997455752078,
+      "mean_joint_method_six_class_logloss": 1.466432398270331,
+      "mean_winner_logloss": 0.649532730726133,
+      "mean_winner_multiclass_brier": 0.45911726256470553,
+      "method_given_correct_winner_L": 4,
+      "method_given_correct_winner_W": 5,
+      "method_given_correct_winner_rate": 0.5555555555555556,
+      "own_fighter_and_method_L": 9,
+      "own_fighter_and_method_W": 5,
+      "reference_side_method_class_only_matches": 9,
+      "reference_side_method_class_only_total": 14,
+      "winner_L": 5,
+      "winner_W": 9,
+      "winner_rate": 0.6428571428571429
+    },
+    "unified": {
+      "actual_submission_method_recall_class_only": 1,
+      "exact_winner_method_rate": 0.5714285714285714,
+      "mean_joint_method_six_class_brier": 0.6980823819806451,
+      "mean_joint_method_six_class_logloss": 1.4379236256041008,
+      "mean_winner_logloss": 0.5973099837105088,
+      "mean_winner_multiclass_brier": 0.4050945549684771,
+      "method_given_correct_winner_L": 3,
+      "method_given_correct_winner_W": 8,
+      "method_given_correct_winner_rate": 0.7272727272727273,
+      "own_fighter_and_method_L": 6,
+      "own_fighter_and_method_W": 8,
+      "reference_side_method_class_only_matches": 10,
+      "reference_side_method_class_only_total": 14,
+      "winner_L": 3,
+      "winner_W": 11,
+      "winner_rate": 0.7857142857142857
+    }
+  },
+  "single_primary_timing_research": {
+    "L": 4,
+    "W": 10,
+    "accuracy": 0.7142857142857143,
+    "status": "POST_PRICE_PRE_FIGHT_RESEARCH_NOT_ORIGINAL_STAGE_A"
+  },
+  "status": "POST_EVENT_GRADED_ALL_14_IMMUTABLE_STAGE_A_WINNERS_METHODS_AND_PRE_EVENT_TIMING",
+  "timing_research_sha256": "8d11ae57eb502c34a94ed35a4f5c9d4d7d61a840c2aef2bb2dbd95575aa2eac0",
+  "top5_hypothetical_research_1u": {
+    "best_bets": {
+      "hypothetical_net_units": -0.12,
+      "hypothetical_roi": -0.02400000000000002,
+      "record": {
+        "L": 3,
+        "PENDING": 0,
+        "PUSH": 0,
+        "VOID": 0,
+        "W": 2
+      }
+    },
+    "combined": {
+      "displayed_candidates": 10,
+      "hypothetical_net_units": -5.12,
+      "hypothetical_roi": -0.512,
+      "hypothetical_settled_risk_units": 10.0,
+      "record": {
+        "L": 8,
+        "PENDING": 0,
+        "PUSH": 0,
+        "VOID": 0,
+        "W": 2
+      }
+    },
+    "longshots": {
+      "hypothetical_net_units": -5.0,
+      "hypothetical_roi": -1.0,
+      "record": {
+        "L": 5,
+        "PENDING": 0,
+        "PUSH": 0,
+        "VOID": 0,
+        "W": 0
+      }
+    }
+  },
+  "top5_research_sha256": "40d612e22c0b3c0fa40ce3cd1bc08348538dc44a31b3372ce2e3064a9de3743c",
+  "verified_outcomes_sha256": "3df64810c129f54dcac10245641a92d6d1756c39eee0e34f1570500413390ccd"
+}
