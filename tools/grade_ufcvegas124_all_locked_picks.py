@@ -93,8 +93,9 @@ def _top(p):
 
 
 def _method_dist(joint,side):
-    keys={k:METHOD_KEYS[(side,k)] for k in METHODS}
-    values={k:_validate_prob(joint[keys[k]]) for k in METHODS}
+    # The 6-way scorer standardizes frozen A_KO/B_KO source keys into
+    # lower-case side outcome labels a_KO/b_KO. Read that normalized object.
+    values={k:_validate_prob(joint[f"{side}_{k}"]) for k in METHODS}
     total=sum(values.values())
     if not total or total>1.00001:
         raise RuntimeError("Invalid frozen 6-way method model")
@@ -159,7 +160,7 @@ def _date_source_integrity(f,r,t,w,prior,pending,outcomes,stage_b):
     if not (f["event_date"]==r["event_date"]==t["event_date"]==w["event_date"]==
             outcomes["event_date"]==stage_b["event_date"]=="2026-11-07"):
         raise RuntimeError("Event identity mismatch")
-    if len(f["fights"])!=len(r["fights"])!=len(t["fights"])!=len(outcomes["fights"])!=14:
+    if any(len(seq)!=14 for seq in (f["fights"],r["fights"],t["fights"],outcomes["fights"])):
         raise RuntimeError("Exactly 14 fights required")
     if prior[0]!=["event_date","fight","locked_pick","actual_winner","displayed_method",
                   "actual_method","winner_correct","method_correct","joint_correct"] or len(prior)!=140:
