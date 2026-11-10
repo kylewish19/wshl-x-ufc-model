@@ -115,8 +115,14 @@ def validate_inputs():
     for file,info in avail["source_csv_files"].items():
         if sha(RAW/file)!=info["sha256"]:
             raise RuntimeError("Pinned full UFCStats source hash mismatch")
-    if raw["stage_a_frozen"] is not True or raw["odds_used"] is not False:
-        raise RuntimeError("Original 3-view models no longer frozen")
+    # The RAW artifact intentionally has stage_a_frozen=False. Its bytes are
+    # bound by SHA256 into the separately frozen Stage A final_selection file.
+    if raw["stage_a_frozen"] is not False or raw["odds_used"] is not False:
+        raise RuntimeError("Original raw three-view snapshot odds-blind status changed")
+    if lock["stage_a_frozen"] is not True or lock["odds_used"] is not False:
+        raise RuntimeError("Authoritative Stage A final lock no longer frozen")
+    if lock["raw_model_sha256"] != sha(RAW_MODEL):
+        raise RuntimeError("Authoritative frozen Stage A hash no longer matches raw three-view predictions")
     if not grades["all_fights"]==14 or grades["scoreboards"]["unified"]["winner_W"]!=11:
         raise RuntimeError("Grading audit missing")
     clean=pd.read_csv(CLEAN)
