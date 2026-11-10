@@ -1,0 +1,39 @@
+name: Audit Nov7 UFC challenger generalization and no-promotion gate
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/historical-conditional-rates]
+    paths:
+      - "tools/audit_ufcvegas124_challenger_generalization.py"
+      - ".github/workflows/audit-ufcvegas124-challenger-generalization.yml"
+permissions:
+  contents: write
+concurrency:
+  group: audit-ufcvegas124-challenger
+  cancel-in-progress: true
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11", cache: "pip"}
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Compare frozen Nov7 with older chronological and held-out model diagnostics
+        run: PYTHONPATH=src:tools python tools/audit_ufcvegas124_challenger_generalization.py
+      - name: Run regression tests
+        run: pytest -q
+      - name: Commit diagnostic without refitting or auto-promoting the champion
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add reports/ufcvegas124_2026-11-07/challenger_generalization_audit.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "audit: Nov7 winner/method challenger lift not proven on older 112/88/115 heldouts, champion remains unchanged"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
