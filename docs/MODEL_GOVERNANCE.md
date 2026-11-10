@@ -62,6 +62,18 @@ Each UFC matchup must have **exactly ONE clearly named primary timing forecast**
 
 For Nov 7 the audit selector is `tools/select_ufcvegas124_single_timing_picks.py` and the separately frozen tracking file is `data/locks/ufcvegas124_2026-11-07/stage_b_one_timing_forecast_per_fight.json`.
 
+## Post-event UFC full-stat ML update — November 7, 2026
+
+**Data verified and integrated on November 9:** All 14 Nov 7 fights and 68 UFCStats fighter-round statistical rows were archived from a pinned **November 8 third-party UFCStats scrape** (`Greco1899/scrape_ufc_stats@c742842f29466758fedc3906dbad28d6d320a8da`). Raw source receipts and exact per-fight validation are in `data/raw/ufcvegas124_2026-11-07/availability.json`.
+
+**Future-only learning:** `tools/integrate_ufcvegas124_full_stats.py` includes 28 fighter-level aggregates in the 8,807-fight performance backbone and refits five future-only shadow components (winner, conditional method baseline, intercept calibrator, residual challenger, 30s timing). The 139 earlier frozen causal method-feedback rows remain unchanged, with 14 additional Nov7 locked pre-event baseline conditional-method forecasts appended post-event to form 153 legal training observations. **A fighter's Nov7 post-fight statistics cannot enter that same Nov7 pre-fight evaluation.** The separate historical-conditional research shadow was also refit through Nov7 on its own 8,832-fight source population; inclusion rules differ from the performance backbone.
+
+**Generalization gate:** Compared the genuinely frozen Nov7 reference/historical/unified results with earlier 112-fight winner and 88-fight fighter+method historical OOF and 61-fight walk-forward, plus the full chronological 153-row method-calibration feedback benchmark (116 test observations, 102 predating Nov7). The Nov7 Unified exact 8/14 result is promising, but earlier OOF did not consistently favor shadows; v0.27 feature residual and v0.35 finish-access were not consistently better than the low-capacity intercept calibrator on held-out probability metrics. **NO champion or fighter-method market-family promotion**, and the **300 newly locked prospective-fight** test gate remains.
+
+For the five-step post-card workflow, exact artifact hashes, calibration metrics, limitations and code changes see [November 7 full-stat model update](../reports/ufcvegas124_2026-11-07/POST_STATS_MODEL_UPDATE_2026-11-09.md).
+
+**Next Stage A:** Do not assume event-specific runners automatically load the new post-Nov7 models. Explicitly version and load the future-only research artifacts, freeze those predictions before any bookmaker prices, and keep the current reference champion and method/timing coherence safeguards untouched until documented authorization and prospective validation.
+
 ## Tape
 
 Tape is a separately logged evidence layer. Each source must be classified honestly as one of:
