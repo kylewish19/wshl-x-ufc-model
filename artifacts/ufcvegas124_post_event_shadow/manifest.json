@@ -1,0 +1,69 @@
+{
+  "causal_method_clean_feedback_rows": 153,
+  "clean139_oof_untouched": true,
+  "clean_153_sha256": "13cd39f1c53dcbef676c453bc2bdbaf70d460fc10535bd4b0348c0255987899f",
+  "event_date": "2026-11-07",
+  "frozen_raw_model_sha256": "6b9c19acaab0b6fd2be2b43df72d5a0f516e92b9ebfb4dafa4260d3ed095aed2",
+  "frozen_stage_a_sha256": "70fefe546831de93d06a09b8347411fd387d7d09f98ca03bc56adfd921e3c68b",
+  "generated_at_utc": "2026-11-10T00:49:54.007019+00:00",
+  "governance": {
+    "data_stats_for_Nov7_are_postfight_only": true,
+    "future_chronological_backtesting_required": true,
+    "historical_conditional_stale_model_not_automatically_promoted": true,
+    "legacy_153_winner_method_grade_ledger_unmodified": true,
+    "method_recalibration_refit_after_event_only": true,
+    "model_promotion": false,
+    "model_role": "FUTURE_ONLY_CHALLENGER_SHADOW",
+    "new_model_predictions_not_back_scored_as_Nov7_frozen_picks": true,
+    "official_champion_v027_unmodified": true,
+    "original_14_predictions_unmodified": true,
+    "pricing_gates_not_relaxed": true
+  },
+  "graded_14_sha256": "1eaf658d8797e14c177212d22a60ce1ba2940489621c4ccbf4c65d66d0609cd6",
+  "method_training_class_counts": {
+    "DEC": 4098,
+    "KO": 2972,
+    "SUB": 1737
+  },
+  "model_paths": {
+    "method_baseline": {
+      "path": "artifacts/ufcvegas124_post_event_shadow/method_baseline_shadow_through_2026-11-07.joblib",
+      "sha256": "596da2687b5723b24cc83789ae75dd4d4ec058a43050ae73de7c367771a9d32a"
+    },
+    "method_calibrator": {
+      "path": "artifacts/ufcvegas124_post_event_shadow/method_calibrator_shadow_through_2026-11-07.joblib",
+      "sha256": "c48e8915eadc464eab17d0db14bbebac2226a5b3bfb9635d52ba931488533724"
+    },
+    "method_residual": {
+      "path": "artifacts/ufcvegas124_post_event_shadow/method_residual_shadow_through_2026-11-07.joblib",
+      "sha256": "765e64d437bdd327bb24e3120bb0c3213b7bd1a3f0dc80cd41108c691ca6dcf1"
+    },
+    "timing_30s": {
+      "path": "artifacts/ufcvegas124_post_event_shadow/timing_30s_shadow_through_2026-11-07.joblib",
+      "sha256": "86305c055cf0352233a67aa3c36ed93fcded8a7edc824de63aff031bc731c40d"
+    },
+    "winner": {
+      "path": "artifacts/ufcvegas124_post_event_shadow/winner_shadow_through_2026-11-07.joblib",
+      "sha256": "3b6c2b4ae2f242ee52fd01a02ca5e59b746421419bbf6f267892fee2ee8cbbc9"
+    }
+  },
+  "new_causal_frozen_pred_rows": 14,
+  "new_full_stat_fighter_rows": 28,
+  "new_full_stat_round_rows": 68,
+  "original_clean_139_oof_sha256": "e1e9a049895cabb070bd92b87d577af0177733f5c51d81eb8e4c50e3444ebda3",
+  "post_event_actual_method_counts": {
+    "DEC": 7,
+    "KO": 6,
+    "SUB": 1
+  },
+  "post_event_last_date": "2026-11-07 00:00:00+00:00",
+  "post_event_training_bouts": 8807,
+  "source_availability_sha256": "b0e7a00631469d388499436b43911fd9c4def6e019bc3e785bfc851a8ca32904",
+  "source_kind": "third_party_pinned_ufcstats_scrape",
+  "status": "NOV7_FULL_STATS_INTEGRATED_FOR_POST_EVENT_FUTURE_ONLY_SHADOW_TRAINING",
+  "training_dates": "All historical completed UFC bouts with event_date < 2026-11-08",
+  "training_method_rows": 8807,
+  "training_timing_rows": 8807,
+  "training_winner_rows": 8807,
+  "upstream_commit": "c742842f29466758fedc3906dbad28d6d320a8da"
+}
