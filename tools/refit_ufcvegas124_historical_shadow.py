@@ -119,8 +119,6 @@ def main():
                x.lower().startswith(("fight_","target_","post_")) or "method" in x.lower()}
     if forbidden:
         raise RuntimeError(f"Post-fight information in model predictors: {sorted(forbidden)}")
-    if pd.Timestamp(bundle.history_end).tz_localize("UTC") if False else False:
-        raise AssertionError("unreachable")
     if str(pd.Timestamp(bundle.history_end).date())!="2026-11-07":
         raise RuntimeError("Historical shadow not fitted through Nov7")
     ARTDIR.mkdir(parents=True,exist_ok=True)
