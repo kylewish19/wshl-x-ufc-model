@@ -1,0 +1,78 @@
+{
+  "event": "UFC 334: Gane vs Hokit",
+  "event_date": "2026-11-14",
+  "sportsbook": "FanDuel",
+  "status": "FULL_DISPLAYED_FIGHT_MARKETS_TRANSCRIBED_PENDING_OTHER_FIGHTS",
+  "fight_no": 8,
+  "a": "Stephen Thompson",
+  "b": "Charles Radtke",
+  "stage_a_locked": true,
+  "stage_a_final_selection_github_blob_sha": "564b8dbf2147f7a1cc839917ca3a4eb2d42ed63e",
+  "price_source": "User-supplied FanDuel screenshots, November 11, 2026 (4 images)",
+  "exact_quote_capture_timestamp_utc": null,
+  "collected_before_event_start": true,
+  "odds_used_in_stage_a": false,
+  "moneyline": {
+    "a": -162,
+    "b": 126
+  },
+  "method_of_victory": {
+    "a": {
+      "KO_TKO": 420,
+      "SUB": 2700,
+      "DEC": 135
+    },
+    "b": {
+      "KO_TKO": 480,
+      "SUB": 650,
+      "DEC": 420
+    },
+    "DRAW": 5000
+  },
+  "double_chance": {
+    "a": {
+      "KO_OR_SUB": 370,
+      "KO_OR_DEC": -155,
+      "SUB_OR_DEC": 120
+    },
+    "b": {
+      "KO_OR_SUB": 250,
+      "KO_OR_DEC": 185,
+      "SUB_OR_DEC": 230
+    },
+    "DRAW": 5000
+  },
+  "goes_distance": {
+    "YES": -148,
+    "NO": 116
+  },
+  "total_rounds": {
+    "threshold": 2.5,
+    "OVER": -178,
+    "UNDER": 146
+  },
+  "how_fight_ends": {
+    "KO_TKO": 190,
+    "SUB": 600,
+    "DEC": -160
+  },
+  "round_to_start": {
+    "2": {
+      "YES": -600,
+      "NO": 370
+    },
+    "3": {
+      "YES": -235,
+      "NO": 178
+    }
+  },
+  "market_count": 27,
+  "missing_markets": [
+    "Only Over/Under 2.5 displayed; no alternate 1.5 line supplied",
+    "No exact finish-round market shown"
+  ],
+  "full_fight_pricing_complete": true,
+  "full_event_pricing_complete": false,
+  "used_for_price_comparison_yet": false,
+  "odds_freshness_note": "User supplied screenshot prices, not independently verified live market quotes. Prices can change and no bet placement is implied."
+}
