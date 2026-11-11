@@ -1,0 +1,76 @@
+{
+  "event": "UFC 334: Gane vs Hokit",
+  "event_date": "2026-11-14",
+  "sportsbook": "FanDuel",
+  "status": "PARTIAL_STAGE_B_QUOTES_ONLY_DO_NOT_FINALIZE_FULL_CARD",
+  "fight_no": 1,
+  "a": "Evan Elder",
+  "b": "Samuel Sanches",
+  "stage_a_locked": true,
+  "stage_a_final_selection_github_blob_sha": "564b8dbf2147f7a1cc839917ca3a4eb2d42ed63e",
+  "price_source": "User-provided FanDuel screenshots in current conversation (4 images) on 2026-11-11",
+  "exact_quote_capture_timestamp_utc": null,
+  "collected_before_event_start": true,
+  "odds_used_in_stage_a": false,
+  "moneyline": {
+    "a": 102,
+    "b": -130
+  },
+  "method_of_victory": {
+    "a": {
+      "KO_TKO": 600,
+      "SUB": 700,
+      "DEC": 260
+    },
+    "b": {
+      "KO_TKO": 180,
+      "SUB": 1600,
+      "DEC": 430
+    },
+    "DRAW": 5000
+  },
+  "double_chance": {
+    "a": {
+      "KO_OR_SUB": 310,
+      "KO_OR_DEC": 145,
+      "SUB_OR_DEC": 165
+    },
+    "b": {
+      "KO_OR_SUB": 145,
+      "KO_OR_DEC": -120,
+      "SUB_OR_DEC": 330
+    },
+    "DRAW": 5000
+  },
+  "goes_distance": {
+    "YES": 126,
+    "NO": -162
+  },
+  "total_rounds": {
+    "threshold": 2.5,
+    "OVER": -106,
+    "UNDER": -116
+  },
+  "how_fight_ends": {
+    "KO_TKO": 105,
+    "SUB": 550,
+    "DEC": 115
+  },
+  "round_to_start": {
+    "2": {
+      "YES": -380,
+      "NO": 270
+    },
+    "3": {
+      "YES": -144,
+      "NO": 112
+    }
+  },
+  "missing_markets": [
+    "No O/U 1.5 line shown; only O/U 2.5 visible",
+    "No exact finish-round market shown"
+  ],
+  "used_for_price_comparison_yet": false,
+  "full_event_pricing_complete": false,
+  "odds_freshness_note": "Snapshot prices may change. Not a live market quote and not proof of a bet. Full 13-fight Stage B is pending remaining screenshots."
+}
