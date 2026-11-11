@@ -1,0 +1,78 @@
+{
+  "event": "UFC 334: Gane vs Hokit",
+  "event_date": "2026-11-14",
+  "sportsbook": "FanDuel",
+  "status": "FULL_DISPLAYED_FIGHT_MARKETS_TRANSCRIBED_PENDING_OTHER_FIGHTS",
+  "fight_no": 5,
+  "a": "Donte Johnson",
+  "b": "Cesar Almeida",
+  "stage_a_locked": true,
+  "stage_a_final_selection_github_blob_sha": "564b8dbf2147f7a1cc839917ca3a4eb2d42ed63e",
+  "price_source": "User-provided FanDuel screenshots, November 11, 2026 (4 images)",
+  "exact_quote_capture_timestamp_utc": null,
+  "collected_before_event_start": true,
+  "odds_used_in_stage_a": false,
+  "moneyline": {
+    "a": -174,
+    "b": 136
+  },
+  "method_of_victory": {
+    "a": {
+      "KO_TKO": 155,
+      "SUB": 1100,
+      "DEC": 390
+    },
+    "b": {
+      "KO_TKO": 240,
+      "SUB": 1800,
+      "DEC": 750
+    },
+    "DRAW": 5000
+  },
+  "double_chance": {
+    "a": {
+      "KO_OR_SUB": 116,
+      "KO_OR_DEC": -145,
+      "SUB_OR_DEC": 270
+    },
+    "b": {
+      "KO_OR_SUB": 200,
+      "KO_OR_DEC": 150,
+      "SUB_OR_DEC": 550
+    },
+    "DRAW": 5000
+  },
+  "goes_distance": {
+    "YES": 230,
+    "NO": -310
+  },
+  "total_rounds": {
+    "threshold": 1.5,
+    "OVER": -134,
+    "UNDER": 110
+  },
+  "how_fight_ends": {
+    "KO_TKO": -200,
+    "SUB": 800,
+    "DEC": 220
+  },
+  "round_to_start": {
+    "2": {
+      "YES": -235,
+      "NO": 180
+    },
+    "3": {
+      "YES": 124,
+      "NO": -156
+    }
+  },
+  "market_count": 27,
+  "missing_markets": [
+    "Only Over/Under 1.5 shown; 2.5 alternative not supplied",
+    "No exact finish-round market shown"
+  ],
+  "full_fight_pricing_complete": true,
+  "full_event_pricing_complete": false,
+  "used_for_price_comparison_yet": false,
+  "odds_freshness_note": "These are supplied FanDuel screenshot prices, not independently verified live quotes or placed wagers."
+}
