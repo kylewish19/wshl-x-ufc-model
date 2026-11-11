@@ -1,0 +1,88 @@
+{
+  "event": "UFC 334: Gane vs Hokit",
+  "event_date": "2026-11-14",
+  "sportsbook": "FanDuel",
+  "status": "FULL_DISPLAYED_FIGHT_MARKETS_TRANSCRIBED_PENDING_OTHER_FIGHTS",
+  "fight_no": 12,
+  "a": "Kayla Harrison",
+  "b": "Amanda Nunes",
+  "scheduled_rounds": 5,
+  "stage_a_locked": true,
+  "stage_a_final_selection_github_blob_sha": "564b8dbf2147f7a1cc839917ca3a4eb2d42ed63e",
+  "price_source": "Four user-provided FanDuel screenshots in this conversation, November 11, 2026",
+  "exact_quote_capture_timestamp_utc": null,
+  "collected_before_event_start": true,
+  "odds_used_in_stage_a": false,
+  "moneyline": {
+    "a": -196,
+    "b": 152
+  },
+  "method_of_victory": {
+    "a": {
+      "KO_TKO": 800,
+      "SUB": 200,
+      "DEC": 280
+    },
+    "b": {
+      "KO_TKO": 300,
+      "SUB": 2500,
+      "DEC": 550
+    },
+    "DRAW": 5000
+  },
+  "double_chance": {
+    "a": {
+      "KO_OR_SUB": 130,
+      "KO_OR_DEC": 185,
+      "SUB_OR_DEC": -145
+    },
+    "b": {
+      "KO_OR_SUB": 260,
+      "KO_OR_DEC": 160,
+      "SUB_OR_DEC": 490
+    },
+    "DRAW": 5000
+  },
+  "goes_distance": {
+    "YES": 158,
+    "NO": -205
+  },
+  "total_rounds": {
+    "threshold": 3.5,
+    "OVER": 104,
+    "UNDER": -126
+  },
+  "how_fight_ends": {
+    "KO_TKO": 195,
+    "SUB": 175,
+    "DEC": 145
+  },
+  "round_to_start": {
+    "2": {
+      "YES": -550,
+      "NO": 340
+    },
+    "3": {
+      "YES": -192,
+      "NO": 150
+    },
+    "4": {
+      "YES": -118,
+      "NO": -108
+    },
+    "5": {
+      "YES": 120,
+      "NO": -154
+    }
+  },
+  "market_count": 31,
+  "missing_markets": [
+    "Round Betting (5 Rounds) section is collapsed, so exact round betting prices not visible",
+    "Only Over/Under 3.5 shown, no other total lines"
+  ],
+  "full_displayed_markets_transcribed": true,
+  "full_fight_pricing_complete": false,
+  "full_event_pricing_complete": false,
+  "used_for_price_comparison_yet": false,
+  "odds_freshness_note": "User provided screenshot prices, not independently reverified as live FanDuel quotes; may change and do not imply a placed bet."
+}
