@@ -66,3 +66,28 @@ No returns, stakes, entries, official bet count >0, or settled wager outcomes sh
 - If original files are located, verify their actual SHA, timestamp, model versions, full 13-bout match, and any discrepancies. Preserve both records append-only.
 - Preserve PR #1 and all challengers as SHADOW unless user explicitly authorizes promotion or merge.
 - Prior conversation reported **no approved Stage B wagers**. Price review may be repeated prospectively only as a separately timestamped review, without modifying the previously displayed Stage A predictions.
+
+---
+
+## UPDATE — ORIGINAL ARTIFACTS LOCATED (2026-11-12)
+
+**Correction to the initial recovery search above:** The ORIGINAL November 11 UFC 334 Stage A model outputs and Stage B audit **do exist in GitHub**. They were found on the existing `feature/historical-conditional-rates` research branch. This addendum supersedes the earlier "unrecovered" conclusion but preserves the original retrieval audit as historical context. **Original artifacts were left untouched.**
+
+Verified original files:
+- [Original Stage A odds-blind frozen selection](https://github.com/kylewish19/wshl-x-ufc-model/blob/feature/historical-conditional-rates/data/locks/ufc334_2026-11-14/stage_a_final_selection.json) — 13 fights, full views, method/timing probabilities, freeze time 2026-11-11 23:09:16 UTC.
+- [Original full raw Reference/Historical/Unified Stage A model output](https://github.com/kylewish19/wshl-x-ufc-model/blob/feature/historical-conditional-rates/data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json), with fitted-model context, joint distributions and 10,000-simulation summaries.
+- [Stage A independent audit](https://github.com/kylewish19/wshl-x-ufc-model/blob/feature/historical-conditional-rates/data/locks/ufc334_2026-11-14/stage_a_final_audit.json) — Stage A frozen, odds_used=false, 2 SIDE/3 LEAN/8 PASS, six method/timing coherence warnings.
+- [Full 334-quote FanDuel Stage B audit](https://github.com/kylewish19/wshl-x-ufc-model/blob/feature/historical-conditional-rates/data/locks/ufc334_2026-11-14/stage_b_all_334_fanduel_prices_audit.json) — 334 user-supplied quotes, 310 modeled, 24 unsupported draws, zero approved wagers.
+- [Stage B 5+5 research watchlist](https://github.com/kylewish19/wshl-x-ufc-model/blob/feature/historical-conditional-rates/data/locks/ufc334_2026-11-14/stage_b_top5_ranked_research_review_compatible_cross_tier.json).
+- [Unified exact fighter + method prospective shadow picks](https://github.com/kylewish19/wshl-x-ufc-model/blob/feature/historical-conditional-rates/data/locks/ufc334_2026-11-14/unified_exact_method_13_picks_12_fanduel_quotes_pending.json), separately tracked for research grading.
+- [Original Stage A handoff report](https://github.com/kylewish19/wshl-x-ufc-model/blob/feature/historical-conditional-rates/reports/ufc334_2026-11-14/STAGE_A_LOCK_HANDOFF.md).
+- [Original Stage B handoff report](https://github.com/kylewish19/wshl-x-ufc-model/blob/feature/historical-conditional-rates/reports/ufc334_2026-11-14/STAGE_B_FANDUEL_334_FULL_REVIEW.md).
+
+Key preserved provenance references:
+- Stage A raw model SHA-256 recorded in lock: `13aeb532c5fddd5ec3cdc003ac7500a231addc45e34b45b7aebc38c5c241270d`.
+- Stage A final frozen lock SHA-256 recorded in Stage B: `fda4e7d5636174eb14114a1cabd55c804aae1c3e7de41bb0b12791b46920740a`.
+- The latest `feature/historical-conditional-rates` pytest GitHub Actions run (`43139993389`, Nov 12 02:14 UTC) completed **successfully**; Stage B full-audit workflow (`43138533544`) and two research freeze workflows (`43139032530`, `43139539477`) also completed **successfully**.
+- Model weights are NOT all refitted to Nov 7: champion/reference coefficients remain older, historical winner is through Nov 7, historical method/timing still through Oct 17, Unified ensemble blend was fit through Oct 17. No challenger promotion.
+- This addendum is a **documentation correction**, not a retrospective lock overwrite, new simulation/retraining, approval to wager, or merge of branches.
+
+**Continue future UFC 334 grading from the ORIGINAL files on the feature branch, not from the abbreviated conversation-recovery table.**
