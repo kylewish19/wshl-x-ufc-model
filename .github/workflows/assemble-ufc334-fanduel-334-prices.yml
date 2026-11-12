@@ -1,0 +1,39 @@
+name: Assemble UFC334 Nov14 334 FanDuel screenshot prices
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/historical-conditional-rates]
+    paths:
+      - "tools/assemble_ufc334_fanduel_quotes.py"
+      - ".github/workflows/assemble-ufc334-fanduel-334-prices.yml"
+permissions:
+  contents: write
+concurrency:
+  group: assemble-ufc334-fanduel-prices
+  cancel-in-progress: true
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11", cache: "pip"}
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Validate and combine 13 screenshots into 334 price snapshot
+        run: PYTHONPATH=src:tools python tools/assemble_ufc334_fanduel_quotes.py
+      - name: Run regressions
+        run: pytest -q
+      - name: Commit evidence-linked FanDuel snapshot without touching Stage A
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/quotes/ufc334_2026-11-14_fanduel_user_screenshots.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "quotes: freeze UFC334 FanDuel 334 price snapshot linked to 13 original screenshot sources"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
