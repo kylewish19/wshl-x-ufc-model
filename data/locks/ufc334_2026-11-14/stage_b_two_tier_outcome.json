@@ -1,0 +1,31 @@
+{
+  "event": "UFC 334: Gane vs Hokit",
+  "event_date": "2026-11-14",
+  "full_audit_sha256": "de50106f116d1931413c51518cfeafb0e4c8f2a51f0e54ff83edb682aef0d4d2",
+  "notes": [
+    "Research displays five candidates in each FanDuel price tier, not five approved stakes.",
+    "Pre-event no bookmaker verified conservative calibration bound; method families all fail market validation and timings can fail 12pp and >15pp coherence safeguards.",
+    "Radtke ML is numerically promising but no independent source, calibration, physical tape or official weigh-in verification clears final authorization.",
+    "Miller-McKinney +640 R3 starts and extreme +900 GTD share model calibration warnings; ONLY +640 is on research watch, neither is approved.",
+    "Original Stage A timing selections are graded separately from later odds-priced research timing markets."
+  ],
+  "official_betting_net_units": 0,
+  "official_betting_roi": null,
+  "official_betting_stakes_units": 0,
+  "original_stage_a_mutated": false,
+  "quotes_sha256": "ce57c3a0e1d79154e164c7d3e1223adb15c03c0eefef3dbc5c76ccd55206aa2a",
+  "research_watchlist_path": "data/locks/ufc334_2026-11-14/stage_b_top5_ranked_research_review_compatible_cross_tier.json",
+  "snapshot_odds_not_live": true,
+  "stage_a_sha256": "fda4e7d5636174eb14114a1cabd55c804aae1c3e7de41bb0b12791b46920740a",
+  "status": "FANDUEL_STAGE_B_RESEARCH_WATCHLIST_FROZEN_PRE_EVENT_NO_OFFICIAL_BETS",
+  "top_5_best_bets": {
+    "approved_number": 0,
+    "approved_selected": [],
+    "research_presented": 5
+  },
+  "top_5_longshots": {
+    "approved_number": 0,
+    "approved_selected": [],
+    "research_presented": 5
+  }
+}
