@@ -112,3 +112,15 @@ def test_real_ufc334_archived_inputs_are_unchanged_and_explain_all_fights():
     assert all(not f["tactical_research_complete"] for f in x["fights"])
     assert all("not an approved wager" in f["video_script_roughly_one_minute"]
                for f in x["fights"])
+
+
+def test_unreconciled_historical_joint_is_flagged_not_silently_normalized():
+    lock, raw, _ = fixture()
+    hist_joint = raw["fights"][0]["historical_shadow"]["joint_method"]
+    hist_joint["B_KO"] -= .15
+    hist_joint["A_KO"] += .15
+    out = explain_fight(lock["fights"][0], raw["fights"][0])
+    assert "historical_shadow" in out["models_with_unreconciled_joint_outcomes"]
+    assert out["model_views"]["historical_shadow"]["method"]["six_way_joint_reconciled"] is False
+    assert out["model_views"]["historical_shadow"]["method"]["raw_exact_probability_is_bettable"] is False
+    assert any("do not use" in x.lower() for x in out["reasoning_from_archived_probabilities"])
