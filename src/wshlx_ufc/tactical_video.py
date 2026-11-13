@@ -161,7 +161,7 @@ def to_markdown(card: dict) -> str:
         "**How to use:** Read the tactical matchup section, then announce the",
         "automatically populated WSHL_X consensus winner, method, and timing.",
         "The tactical narration does not recite model names or probabilities.",
-        "The selection block is 2/3 or 3/3 model agreement, not a betting approval.",
+        "The public pick reveal omits vote counts; internal vote records remain available.",
         "",
         "**Fact-check status:** Written-source research drafts. These are NOT",
         "claims that complete fight tape was watched. The producer should verify",
@@ -172,8 +172,6 @@ def to_markdown(card: dict) -> str:
         names = " vs. ".join(f["fighters"])
         revealed = f["host_selection_fields"]
         votes = f["host_reveal_vote_details"]
-        vote_label = (lambda key: f" ({votes[key]}/3 agreement)"
-                      if votes[key] is not None else "")
         notes = []
         if votes["method_coherence_warning"]:
             notes.append("Method/timing coherence warning — method NOT bet-approved")
@@ -189,10 +187,10 @@ def to_markdown(card: dict) -> str:
             "**Spoken fight breakdown:**", "",
             f["spoken_matchup_breakdown"], "",
             f"**Transition:** {f['host_transition']}", "",
-            "**WSHL_X three-model consensus picks (host reveal):**", "",
-            f"- **Winner:** {revealed['winner']}" + vote_label("winner_votes"),
-            f"- **Method:** {revealed['method']}" + vote_label("fighter_method_votes"),
-            f"- **Timing:** {revealed['timing']}" + vote_label("timing_votes"),
+            "**WSHL_X UFC Picks (host reveal):**", "",
+            f"- **Winner:** {revealed['winner']}",
+            f"- **Method:** {revealed['method']}",
+            f"- **Timing:** {revealed['timing']}",
             "",
             "**Research-only notes:** " + ("; ".join(notes) if notes else
                                         "Consensus does not automatically approve a wager"),
