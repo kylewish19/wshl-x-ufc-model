@@ -153,52 +153,28 @@ def validate_and_build(lock: dict, research: dict, raw_sha: str | None = None,
 
 
 def to_markdown(card: dict) -> str:
+    """Clean, public-facing script; sourcing and warnings remain in the JSON audit."""
     lines = [
         "# WSHL_X — UFC tactical breakdown video scripts",
         "",
         f"## {card['event']} — {card['event_date']}",
         "",
-        "**How to use:** Read the tactical matchup section, then announce the",
-        "automatically populated WSHL_X consensus winner, method, and timing.",
-        "The tactical narration does not recite model names or probabilities.",
-        "The public pick reveal omits vote counts; internal vote records remain available.",
-        "",
-        "**Fact-check status:** Written-source research drafts. These are NOT",
-        "claims that complete fight tape was watched. The producer should verify",
-        "technical assertions and late fight-week changes before publication.",
-        "",
     ]
     for f in card["fights"]:
         names = " vs. ".join(f["fighters"])
         revealed = f["host_selection_fields"]
-        votes = f["host_reveal_vote_details"]
-        notes = []
-        if votes["method_coherence_warning"]:
-            notes.append("Method/timing coherence warning — method NOT bet-approved")
-        if votes["original_stage_a_pass"]:
-            notes.append("Original Stage A PASS remains PASS")
-        if votes["different_from_original_timing"]:
-            notes.append(
-                f"Editorial timing vote differs from original frozen timing: "
-                f"{votes['original_frozen_timing']} remains unchanged and graded separately"
-            )
         lines.extend([
             f"### {f['fight_no']}. {names}", "",
-            "**Spoken fight breakdown:**", "",
+            "**Fight breakdown:**", "",
             f["spoken_matchup_breakdown"], "",
-            f"**Transition:** {f['host_transition']}", "",
-            "**WSHL_X UFC Picks (host reveal):**", "",
+            f"**{f['host_transition']}**", "",
+            "**WSHL_X UFC Picks:**", "",
             f"- **Winner:** {revealed['winner']}",
             f"- **Method:** {revealed['method']}",
             f"- **Timing:** {revealed['timing']}",
             "",
-            "**Research-only notes:** " + ("; ".join(notes) if notes else
-                                        "Consensus does not automatically approve a wager"),
-            "",
-            "**Evidence / research sources:**",
+            "---", "",
         ])
-        lines.extend([f"- {url}" for url in f["research_sources"]])
-        lines.extend(["", f"*Research note: {f['source_evidence_note']}*", "", "---", ""])
     return "\n".join(lines) + "\n"
 
 
