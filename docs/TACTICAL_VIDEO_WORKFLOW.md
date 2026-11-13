@@ -76,3 +76,75 @@ unsourced scouting observations for future cards.
 - Original Stage A frozen file and model branch are unchanged.
 - Winner, method, timing and any FanDuel value picks must come from the
   separate frozen models/price gate, not from persuasive-sounding narration.
+
+---
+
+## 2026-11-12 policy — three-model consensus is the ON-CAMERA pick reveal, not a model change
+
+The creator wants a viewer-friendly, fight-specific argument followed by his **winner,
+method, and timing** choices, not a narration of model names. The newly added
+`src/wshlx_ufc/consensus_video.py` produces a **separate** presentation card
+from all three originally archived model views, WITHOUT promoting the shadows,
+altering champion or shadow coefficients, changing any original frozen prediction,
+mutating Stage B, or altering the official post-event grading reference.
+
+**Majority rule.** Exact 3/3 = "unanimous"; 2/3 = "majority"; 1/1/1 =
+"no consensus." Winner uses the fighter side. Fighter+method uses a combined
+(fighter, KO/TKO/SUB/DEC) pair for each model's OWN selected winner; never count
+"KO" on opposite fighters as method agreement. Timing uses the SAME predeclared
+comparable set of GTD yes/no, over/under 1.5 and 2.5, and Round 3 starts yes/no,
+without FanDuel odds. Historical timing uses its archived direct probabilities,
+while Current and Unified timing use their saved 10k simulation distributions.
+
+**Important scientific limitation.** The Unified view blends other components;
+these three are not three statistically independent votes. A 2/3 or 3/3 consensus
+is not a calibrated likelihood, an official approved wager, or a license to
+ignore uncertainty. The previous original reference Stage A winner,
+SIDE/LEAN/PASS classification, main timing prediction, and frozen grade stay
+immutable. An on-camera consensus may differ from the original Reference pick
+or timing forecast; report and grade both separately. In particular, the
+posture of an existing PASS remains PASS even with three-way agreement.
+
+### Aligning scripts honestly, while preventing feedback into the models
+
+1. Freeze and hash all three raw model views BEFORE any script is composed.
+2. Derive the separately labeled creator-consensus display. **Do not select
+   a pick based on the strength of a verbal explanation.**
+3. Independently research the skills and history that make the chosen path
+   *plausible*: range/footwork, striking levels, defensive entries, grappling
+   access, takedown control, get-ups, pace, durability and round survival.
+4. A reviewer compares the drafted script against the consensus winner,
+   full fighter+method pair, timing market, and model disagreement, one fight
+   at a time. This is a **human editorial integrity check**; software cannot
+   genuinely validate that a tactical narrative fits the fight. Flag
+   `auto_tactical_alignment_verified = false` until reviewed.
+5. If there isn't convincing evidence for the majority KO/SUB/decision
+   route, explain the uncertainty transparently. Do NOT invent a striking
+   advantage, a claimed weakness, or fictitious footage to justify it.
+6. Opponent-quality research is welcome and should be integrated only when
+   supported. Record the named recent opponents, official result and finish
+   method, opponent quality *at the time* (ranking, verified record, UFC/
+   regional level, notable wins), and style similarity to the next opponent.
+   Note when winning against a good opponent says little about a different
+   stylistic threat; account for the opponent's age, injuries, short notice
+   and fight phase. Never claim "fighter A beat a good fighter therefore
+   fighter B cannot win." If sourcing is unavailable, omit the claim.
+7. On camera, deliver only **tactical breakdown + counter-scenario**.
+   The host then announces the consensus pick, method and timing. Technical
+   predictions that fail model-family coherence are *forecasts*, NOT approved
+   bets, even with unanimous model agreement.
+8. Keep a clean provenance trail and score the old frozen original, new
+   consensus shadow card, and approved betting card as different ledgers.
+   Do not conflate a compelling video with measured predictive accuracy.
+
+### UFC 334 example of separate timing records
+
+For Johnson vs Almeida the **original** Stage A primary timing forecast was
+`GTD_NO`; the newer three-model editorial timing-vote winner is
+`OVER_1.5` (Historical + Unified). The two can even both occur, but they
+are different markets and must not be misrepresented as the same historical pick.
+
+Generate the new overlay with `tools/generate_consensus_video_card.py`.
+The resulting `reports/ufc334_2026-11-14/CONSENSUS_VIDEO_REVEAL.md` is for
+pick-reveal preparation; `TACTICAL_VIDEO_SCRIPTS.md` is for spoken matchup
+analysis. The script must never rewrite the model outcomes.
