@@ -36,7 +36,7 @@ def test_actual_card_all_13_tactical_scripts_sources_and_silent_picks():
         assert "[HOST REVEALS WINNER]" == fight["host_selection_fields"]["winner"]
         assert fight["review_status"] == "EDITORIAL_DRAFT_NEEDS_FINAL_FACT_AND_TAPE_CHECK"
     md = to_markdown(out)
-    assert md.count("**Spoken fight breakdown:**") == 13
+    assert md.count("**Fight breakdown:**") == 13
     assert md.count("**Winner:** [HOST REVEALS WINNER]") == 13
     assert md.count("**Method:** [HOST REVEALS METHOD]") == 13
     assert md.count("**Timing:** [HOST REVEALS TIMING PROP]") == 13
@@ -104,8 +104,17 @@ def test_public_video_report_autofills_three_consensus_picks_without_rewriting_m
     assert video["fights"][0]["host_reveal_vote_details"]["original_stage_a_pass"]
     assert video["fights"][0]["host_reveal_vote_details"]["method_coherence_warning"]
     assert "[YOU REVEAL]" not in md_path.read_text()
-    assert md_path.read_text().count("**WSHL_X UFC Picks (host reveal):**") == 13
+    assert md_path.read_text().count("**WSHL_X UFC Picks:**") == 13
     assert "3/3 agreement" not in md_path.read_text()
     assert "2/3 agreement" not in md_path.read_text()
+    assert "**Evidence / research sources:**" not in md_path.read_text()
+    assert "**Research-only notes:**" not in md_path.read_text()
+    assert "*Research note:" not in md_path.read_text()
+    assert "https://" not in md_path.read_text()
+    assert "Fact-check status:" not in md_path.read_text()
+    assert "Research-only" not in md_path.read_text()
+    assert all(f["research_sources"] for f in video["fights"])
+    assert all(f["source_evidence_note"] for f in video["fights"])
+    assert all(f["host_reveal_vote_details"]["editorial_only_not_an_approved_bet"] for f in video["fights"])
     assert video["fights"][5]["host_reveal_vote_details"]["winner_votes"] == 3
     assert originals_before == (LOCK.read_bytes(), RAW.read_bytes(), RESEARCH.read_bytes())
