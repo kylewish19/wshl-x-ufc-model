@@ -68,3 +68,42 @@ def test_frozen_sha_and_odds_guard():
     lock["odds_used"] = True
     with pytest.raises(ValueError, match="odds-blind"):
         validate_and_build(lock, research)
+
+
+
+def test_public_video_report_autofills_three_consensus_picks_without_rewriting_models(tmp_path):
+    from wshlx_ufc.tactical_video import create_reports
+    originals_before = (LOCK.read_bytes(), RAW.read_bytes(), RESEARCH.read_bytes())
+    md_path = tmp_path / "video.md"
+    json_path = tmp_path / "video.json"
+    video = create_reports(LOCK, RESEARCH, md_path, json_path, RAW)
+    assert video["fight_count"] == 13
+    assert video["automatically_filled_consensus_reveal"] is True
+    assert video["original_model_picks_changed"] is False
+    assert video["model_retrained"] is False
+    assert video["official_bets_authorized"] is False
+    assert all(f["host_reveal_vote_details"]["winner_votes"] in (2, 3)
+               for f in video["fights"])
+    assert all(f["host_reveal_vote_details"]["fighter_method_votes"] in (2, 3)
+               for f in video["fights"])
+    assert all(f["host_reveal_vote_details"]["timing_votes"] in (2, 3)
+               for f in video["fights"])
+    assert all(not f["host_selection_fields"]["winner"].startswith("[")
+               for f in video["fights"])
+    miller = video["fights"][5]
+    assert miller["host_selection_fields"] == {
+        "winner": "Terrance McKinney",
+        "method": "Terrance McKinney by KO/TKO",
+        "timing": "Fight goes distance NO",
+    }
+    assert miller["host_reveal_vote_details"]["winner_votes"] == 3
+    assert miller["host_reveal_vote_details"]["fighter_method_votes"] == 3
+    assert miller["host_reveal_vote_details"]["timing_votes"] == 3
+    assert video["fights"][4]["host_selection_fields"]["timing"] == "Over 1.5 rounds"
+    assert video["fights"][4]["host_reveal_vote_details"]["different_from_original_timing"]
+    assert video["fights"][0]["host_reveal_vote_details"]["original_stage_a_pass"]
+    assert video["fights"][0]["host_reveal_vote_details"]["method_coherence_warning"]
+    assert "[YOU REVEAL]" not in md_path.read_text()
+    assert md_path.read_text().count("**WSHL_X three-model consensus picks") == 13
+    assert "3/3 agreement" in md_path.read_text()
+    assert originals_before == (LOCK.read_bytes(), RAW.read_bytes(), RESEARCH.read_bytes())
