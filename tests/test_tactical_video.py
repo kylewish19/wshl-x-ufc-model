@@ -37,9 +37,9 @@ def test_actual_card_all_13_tactical_scripts_sources_and_silent_picks():
         assert fight["review_status"] == "EDITORIAL_DRAFT_NEEDS_FINAL_FACT_AND_TAPE_CHECK"
     md = to_markdown(out)
     assert md.count("**Spoken fight breakdown:**") == 13
-    assert md.count("Winner: [YOU REVEAL]") == 13
-    assert md.count("Method: [YOU REVEAL]") == 13
-    assert md.count("Timing prop: [YOU REVEAL]") == 13
+    assert md.count("**Winner:** [HOST REVEALS WINNER]") == 13
+    assert md.count("**Method:** [HOST REVEALS METHOD]") == 13
+    assert md.count("**Timing:** [HOST REVEALS TIMING PROP]") == 13
 
 
 def test_no_fake_research_and_no_partial_card_or_identity_change():
