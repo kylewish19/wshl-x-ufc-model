@@ -76,8 +76,15 @@ def explain_fight(f, r, notes=None):
     for model in VIEWS:
         locked = f["winner_views"][model]
         method = own_method(r, model, locked["pick"])
-        if abs(method["win_mass"] - float(locked["probability"])) > 0.001:
-            raise ValueError("Winner/joint method probability incoherence: " + model)
+        mass_delta_pp = 100 * (method["win_mass"] - float(locked["probability"]))
+        if model == "reference" and abs(mass_delta_pp) > 0.1:
+            raise ValueError("Reference winner/joint method probability incoherence")
+        # Historical/Unified method and winner layers may not reconcile.
+        # Keep original raw numbers, but prohibit presenting their joint mass
+        # as a validated unconditional fighter+method forecast.
+        method["raw_joint_vs_winner_gap_pp"] = mass_delta_pp
+        method["six_way_joint_reconciled"] = abs(mass_delta_pp) <= 1.0
+        method["raw_exact_probability_is_bettable"] = False
         views[model] = {"pick": locked["pick"], "p": float(locked["probability"]),
                         "method": method}
     reference = views["reference"]
@@ -92,6 +99,10 @@ def explain_fight(f, r, notes=None):
         "method_vs_current_timing_finish_discrepancy_pp", 0))
     flagged = gap > 15
     notes_used, notes_skipped = _sourced_notes(f["fight_no"], notes)
+    mismatched_joint_views = [
+        model for model, value in views.items()
+        if not value["method"]["six_way_joint_reconciled"]
+    ]
     model_agreement = ("All three views agree on the winner."
                        if consensus else "The models disagree on the winner; this is a key uncertainty.")
     top_method = reference["method"]
@@ -114,6 +125,13 @@ def explain_fight(f, r, notes=None):
         explanation.append(
             f"WARNING: Method-versus-timing finish estimates differ by {gap:.1f} "
             "percentage points, so the method family is blocked from approval."
+        )
+    if mismatched_joint_views:
+        explanation.append(
+            "WARNING: Archived six-way winner+method masses do not reconcile with "
+            "the corresponding winner model for: " + ", ".join(mismatched_joint_views)
+            + ". Keep their CONDITIONAL method ranking but do not use their "
+            "raw joint probabilities as validated bets or causal explanations."
         )
     short_script = (
         f"WSHL_X UFC breakdown: {a} versus {b}. Our frozen Reference model "
@@ -150,6 +168,7 @@ def explain_fight(f, r, notes=None):
                             "unified_p": timing["unified_shadow_probability"]},
         "method_timing_coherence_gap_pp": gap,
         "method_timing_flag": flagged,
+        "models_with_unreconciled_joint_outcomes": mismatched_joint_views,
         "tape_classification": f.get("tape_provenance", {}).get("classification", "UNKNOWN"),
         "reviewed_scouting_notes": notes_used, "rejected_scouting_notes": notes_skipped,
         "per_fight_feature_attribution_available": False,
@@ -160,6 +179,7 @@ def explain_fight(f, r, notes=None):
             "Do not claim age, reach, or UFC experience CAUSED the model selection.",
             "No verified full-fight video review is recorded; no invented tactical observations.",
             "Conditional method probability is NOT unconditional fighter-plus-method probability.",
+            "Historical and Unified six-way joint masses may disagree with their winner probabilities; unreconciled raw joint figures are NOT validated betting probabilities.",
             "These are original odds-blind forecasts; a model PASS is not a bet.",
             "A 3–5 minute technical breakdown requires added sourced, reviewed scouting footage.",
         ],
@@ -212,6 +232,17 @@ def as_markdown(card):
             "**Archived model explanations:**",
         ])
         lines.extend(["- " + x for x in f["reasoning_from_archived_probabilities"]])
+        lines.extend(["", "**Own-winner method forecast by model (conditional only):**"])
+        for model, detail in f["model_views"].items():
+            m = detail["method"]
+            review = ("RECONCILED" if m["six_way_joint_reconciled"]
+                      else "JOINT/WINNER GAP: UNVALIDATED FOR EXACT METHOD")
+            lines.append(
+                "- " + model + ": " + detail["pick"] + " " + pct(detail["p"])
+                + "; if fighter wins, " + NAMES[m["top"]] + " "
+                + pct(m["top_conditional_p"]) + "; "
+                + review + " (" + f'{m["raw_joint_vs_winner_gap_pp"]:+.1f}' + " pp)."
+            )
         lines.extend(["", "**Descriptive fighter comparisons (not model causal effects):**"])
         lines.extend(["- " + x for x in f["descriptive_context_not_feature_attribution"]]
                      or ["- No archived attributes supplied."])
