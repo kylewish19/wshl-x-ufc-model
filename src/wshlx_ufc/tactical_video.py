@@ -11,6 +11,8 @@ import json
 import re
 from pathlib import Path
 
+from wshlx_ufc.consensus_video import consensus_card
+
 FORBIDDEN = re.compile(
     r"\b(reference model|unified model|historical model|the models?|model predicts|"
     r"our pick is|we pick|the winner is|fight ends by|odds are|"
@@ -21,7 +23,8 @@ FORBIDDEN = re.compile(
 HOST_CUE = "Now here are our WSHL_X winner, method, and timing picks."
 
 
-def validate_and_build(lock: dict, research: dict, raw_sha: str | None = None) -> dict:
+def validate_and_build(lock: dict, research: dict, raw_sha: str | None = None,
+                       consensus: dict | None = None) -> dict:
     """Validate documentary integrity, source coverage, and host-pick separation."""
     if not lock.get("stage_a_frozen") or lock.get("odds_used") is not False:
         raise ValueError("Only a frozen, odds-blind Stage A may be linked")
@@ -41,6 +44,21 @@ def validate_and_build(lock: dict, research: dict, raw_sha: str | None = None) -
     originals = {f["fight_no"]: (f["a"], f["b"]) for f in lock_fights}
     if len(originals) != len(lock_fights):
         raise ValueError("Duplicate original fights")
+    # Optional for direct validation/backward compatibility. The production
+    # create_reports() path always computes consensus from the verified raw lock.
+    votes_by_fight = {}
+    if consensus is not None:
+        if (consensus.get("event"), consensus.get("event_date")) != (
+                lock["event"], lock["event_date"]):
+            raise ValueError("Consensus belongs to a different event")
+        if consensus.get("original_raw_sha256") != lock.get("raw_model_sha256"):
+            raise ValueError("Consensus uses a different original model SHA")
+        if consensus.get("bets_approved_by_this_overlay") != 0:
+            raise ValueError("Editorial consensus must not approve bets")
+        c_fights = consensus.get("fights", [])
+        votes_by_fight = {f["fight_no"]: f for f in c_fights}
+        if len(votes_by_fight) != len(c_fights) or set(votes_by_fight) != set(originals):
+            raise ValueError("Consensus fighter count/identities mismatch")
     done = set()
     result = []
     for row in rows:
@@ -64,15 +82,52 @@ def validate_and_build(lock: dict, research: dict, raw_sha: str | None = None) -
             raise ValueError(f"Fight {number} has an unsupported footage-research claim")
         if not row.get("evidence_summary", "").strip():
             raise ValueError("Missing evidence limitations and provenance")
+        # A reader sees matchup analysis first; the host's pick reveal follows.
+        # Consensus never changes the narrative text, frozen model, or bet status.
+        vote = votes_by_fight.get(number)
+        revealed = {
+            "winner": "[HOST REVEALS WINNER]",
+            "method": "[HOST REVEALS METHOD]",
+            "timing": "[HOST REVEALS TIMING PROP]",
+        }
+        reveal_metadata = {
+            "winner_votes": None, "fighter_method_votes": None,
+            "timing_votes": None, "method_coherence_warning": False,
+            "original_stage_a_pass": False, "different_from_original_timing": False,
+            "editorial_only_not_an_approved_bet": True,
+        }
+        if vote is not None:
+            if vote.get("bout") != f"{originals[number][0]} vs {originals[number][1]}":
+                raise ValueError(f"Consensus identity mismatch for fight {number}")
+            w, m, t = vote["winner"], vote["winner_plus_method"], vote["timing"]
+            if any(part.get("votes", 0) not in (2, 3) or part.get("selection") is None
+                   for part in (w, m, t)):
+                raise ValueError(f"No 2-of-3 consensus on all three outcomes for fight {number}")
+            if (len(m["selection"]) != 2 or m["selection"][0] != w["selection"]):
+                raise ValueError(f"Fighter+method consensus conflicts with winner for fight {number}")
+            if t.get("approved_bet") is not False or m.get("approved_bet") is not False:
+                raise ValueError("Video consensus cannot approve method/timing bets")
+            revealed = {
+                "winner": w["selection"],
+                "method": f"{m['selection'][0]} by {m['selection'][1]}",
+                "timing": t["display_market"],
+            }
+            reveal_metadata = {
+                "winner_votes": w["votes"],
+                "fighter_method_votes": m["votes"],
+                "timing_votes": t["votes"],
+                "method_coherence_warning": m["coherence_blocked"],
+                "original_stage_a_pass": vote["original_stage_a_posture"] == "PASS",
+                "different_from_original_timing": not t["same_as_original_frozen_timing"],
+                "original_frozen_timing": vote["original_stage_a_primary_timing"],
+                "editorial_only_not_an_approved_bet": True,
+            }
         result.append({
             "fight_no": number, "fighters": list(originals[number]),
             "spoken_matchup_breakdown": body,
             "host_transition": HOST_CUE,
-            "host_selection_fields": {
-                "winner": "[HOST REVEALS WINNER]",
-                "method": "[HOST REVEALS METHOD]",
-                "timing": "[HOST REVEALS TIMING PROP]",
-            },
+            "host_selection_fields": revealed,
+            "host_reveal_vote_details": reveal_metadata,
             "research_sources": citations,
             "source_evidence_note": row["evidence_summary"],
             "review_status": "EDITORIAL_DRAFT_NEEDS_FINAL_FACT_AND_TAPE_CHECK",
@@ -82,7 +137,7 @@ def validate_and_build(lock: dict, research: dict, raw_sha: str | None = None) -
     if done != set(originals):
         raise ValueError("Unresearched fights remain")
     return {
-        "schema": "WSHL_X_TACTICAL_SCRIPTS_V1",
+        "schema": "WSHL_X_TACTICAL_SCRIPTS_V2" if consensus else "WSHL_X_TACTICAL_SCRIPTS_V1",
         "event": lock["event"], "event_date": lock["event_date"],
         "original_frozen_at_utc": lock.get("frozen_at_utc"),
         "stage_a_sha256": raw_sha or lock.get("raw_model_sha256"),
@@ -90,6 +145,7 @@ def validate_and_build(lock: dict, research: dict, raw_sha: str | None = None) -
         "script_voice": "MATCHUP_TECHNIQUE_AND_TACTICAL_PATHS_NOT_MODEL_NUMBER_RECITATION",
         "status": "EDITORIAL_DRAFT_TO_BE_FACT_CHECKED_BEFORE_PUBLISHING",
         "original_model_picks_changed": False, "model_retrained": False,
+        "automatically_filled_consensus_reveal": consensus is not None,
         "official_bets_authorized": False,
         "fight_count": len(result),
         "fights": sorted(result, key=lambda x: x["fight_no"]),
@@ -102,10 +158,10 @@ def to_markdown(card: dict) -> str:
         "",
         f"## {card['event']} — {card['event_date']}",
         "",
-        "**How to use:** Read only each spoken script on camera. THEN reveal your",
-        "WSHL_X winner, method and timing picks in the blank host fields.",
-        "The video script deliberately does not list model names, percentages,",
-        "sportsbook prices, or the final selections.",
+        "**How to use:** Read the tactical matchup section, then announce the",
+        "automatically populated WSHL_X consensus winner, method, and timing.",
+        "The tactical narration does not recite model names or probabilities.",
+        "The selection block is 2/3 or 3/3 model agreement, not a betting approval.",
         "",
         "**Fact-check status:** Written-source research drafts. These are NOT",
         "claims that complete fight tape was watched. The producer should verify",
@@ -114,14 +170,32 @@ def to_markdown(card: dict) -> str:
     ]
     for f in card["fights"]:
         names = " vs. ".join(f["fighters"])
+        revealed = f["host_selection_fields"]
+        votes = f["host_reveal_vote_details"]
+        vote_label = (lambda key: f" ({votes[key]}/3 agreement)"
+                      if votes[key] is not None else "")
+        notes = []
+        if votes["method_coherence_warning"]:
+            notes.append("Method/timing coherence warning — method NOT bet-approved")
+        if votes["original_stage_a_pass"]:
+            notes.append("Original Stage A PASS remains PASS")
+        if votes["different_from_original_timing"]:
+            notes.append(
+                f"Editorial timing vote differs from original frozen timing: "
+                f"{votes['original_frozen_timing']} remains unchanged and graded separately"
+            )
         lines.extend([
             f"### {f['fight_no']}. {names}", "",
             "**Spoken fight breakdown:**", "",
             f["spoken_matchup_breakdown"], "",
             f"**Transition:** {f['host_transition']}", "",
-            "- Winner: [YOU REVEAL]",
-            "- Method: [YOU REVEAL]",
-            "- Timing prop: [YOU REVEAL]",
+            "**WSHL_X three-model consensus picks (host reveal):**", "",
+            f"- **Winner:** {revealed['winner']}" + vote_label("winner_votes"),
+            f"- **Method:** {revealed['method']}" + vote_label("fighter_method_votes"),
+            f"- **Timing:** {revealed['timing']}" + vote_label("timing_votes"),
+            "",
+            "**Research-only notes:** " + ("; ".join(notes) if notes else
+                                        "Consensus does not automatically approve a wager"),
             "",
             "**Evidence / research sources:**",
         ])
@@ -134,8 +208,14 @@ def create_reports(lock_path: Path, research_path: Path, markdown_out: Path,
                    json_out: Path, raw_path: Path | None = None) -> dict:
     lock = json.loads(lock_path.read_text(encoding="utf-8"))
     packet = json.loads(research_path.read_text(encoding="utf-8"))
-    digest = hashlib.sha256(raw_path.read_bytes()).hexdigest() if raw_path else None
-    card = validate_and_build(lock, packet, raw_sha=digest)
+    if raw_path is None:
+        raise ValueError("Original raw prediction file is required for consensus reveal")
+    raw_bytes = raw_path.read_bytes()
+    digest = hashlib.sha256(raw_bytes).hexdigest()
+    raw = json.loads(raw_bytes)
+    verified_consensus = consensus_card(lock, raw, raw_bytes)
+    card = validate_and_build(lock, packet, raw_sha=digest,
+                              consensus=verified_consensus)
     for p in (markdown_out, json_out):
         p.parent.mkdir(parents=True, exist_ok=True)
     markdown_out.write_text(to_markdown(card), encoding="utf-8")
