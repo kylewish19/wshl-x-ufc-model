@@ -1,0 +1,257 @@
+{
+  "approved_bets_coincidence": false,
+  "approved_betting_stakes_not_conflated": true,
+  "basis": "Original screenshot FanDuel prices; separate from approved bets and real money",
+  "categories": {
+    "top_5_best_bets": {
+      "displayed_candidates": 5,
+      "hypothetical_net_units": 0.0,
+      "hypothetical_roi": null,
+      "hypothetical_settled_risk_units": 0.0,
+      "record": {
+        "L": 0,
+        "PENDING": 5,
+        "PUSH": 0,
+        "VOID": 0,
+        "W": 0
+      },
+      "selections": [
+        {
+          "american_odds": 126,
+          "candidate_id": "top_5_best_bets:1:8",
+          "fight": "Stephen Thompson vs Charles Radtke",
+          "fight_key": "charlesradtke|stephenthompson",
+          "fight_no": 8,
+          "hypothetical_profit_units": 0.0,
+          "hypothetical_stake_units": 1.0,
+          "is_actual_bet": false,
+          "market": "Charles Radtke ML",
+          "market_spec": {
+            "kind": "moneyline",
+            "side": "b"
+          },
+          "rank": 1,
+          "result": "PENDING",
+          "status": "RESEARCH_ONLY_NOT_AN_APPROVED_BET"
+        },
+        {
+          "american_odds": -122,
+          "candidate_id": "top_5_best_bets:2:7",
+          "fight": "Drew Dober vs Chris Duncan",
+          "fight_key": "chrisduncan|drewdober",
+          "fight_no": 7,
+          "hypothetical_profit_units": 0.0,
+          "hypothetical_stake_units": 1.0,
+          "is_actual_bet": false,
+          "market": "OVER 1.5 rounds",
+          "market_spec": {
+            "direction": "OVER",
+            "kind": "total_rounds",
+            "threshold": 1.5
+          },
+          "rank": 2,
+          "result": "PENDING",
+          "status": "RESEARCH_ONLY_NOT_AN_APPROVED_BET"
+        },
+        {
+          "american_odds": 125,
+          "candidate_id": "top_5_best_bets:3:6",
+          "fight": "Jim Miller vs Terrance McKinney",
+          "fight_key": "jimmiller|terrancemckinney",
+          "fight_no": 6,
+          "hypothetical_profit_units": 0.0,
+          "hypothetical_stake_units": 1.0,
+          "is_actual_bet": false,
+          "market": "Terrance McKinney KO_OR_DEC",
+          "market_spec": {
+            "kind": "double_chance",
+            "methods": [
+              "DEC",
+              "KO_TKO"
+            ],
+            "side": "b"
+          },
+          "rank": 3,
+          "result": "PENDING",
+          "status": "RESEARCH_ONLY_NOT_AN_APPROVED_BET"
+        },
+        {
+          "american_odds": 116,
+          "candidate_id": "top_5_best_bets:4:5",
+          "fight": "Donte Johnson vs Cesar Almeida",
+          "fight_key": "cesaralmeida|dontejohnson",
+          "fight_no": 5,
+          "hypothetical_profit_units": 0.0,
+          "hypothetical_stake_units": 1.0,
+          "is_actual_bet": false,
+          "market": "Donte Johnson KO_OR_SUB",
+          "market_spec": {
+            "kind": "double_chance",
+            "methods": [
+              "KO_TKO",
+              "SUB"
+            ],
+            "side": "a"
+          },
+          "rank": 4,
+          "result": "PENDING",
+          "status": "RESEARCH_ONLY_NOT_AN_APPROVED_BET"
+        },
+        {
+          "american_odds": 138,
+          "candidate_id": "top_5_best_bets:5:9",
+          "fight": "Bilal Hasan vs Luis Gurule",
+          "fight_key": "bilalhasan|luisgurule",
+          "fight_no": 9,
+          "hypothetical_profit_units": 0.0,
+          "hypothetical_stake_units": 1.0,
+          "is_actual_bet": false,
+          "market": "OVER 1.5 rounds",
+          "market_spec": {
+            "direction": "OVER",
+            "kind": "total_rounds",
+            "threshold": 1.5
+          },
+          "rank": 5,
+          "result": "PENDING",
+          "status": "RESEARCH_ONLY_NOT_AN_APPROVED_BET"
+        }
+      ]
+    },
+    "top_5_longshots": {
+      "displayed_candidates": 5,
+      "hypothetical_net_units": 0.0,
+      "hypothetical_roi": null,
+      "hypothetical_settled_risk_units": 0.0,
+      "record": {
+        "L": 0,
+        "PENDING": 5,
+        "PUSH": 0,
+        "VOID": 0,
+        "W": 0
+      },
+      "selections": [
+        {
+          "american_odds": 480,
+          "candidate_id": "top_5_longshots:1:8",
+          "fight": "Stephen Thompson vs Charles Radtke",
+          "fight_key": "charlesradtke|stephenthompson",
+          "fight_no": 8,
+          "hypothetical_profit_units": 0.0,
+          "hypothetical_stake_units": 1.0,
+          "is_actual_bet": false,
+          "market": "Charles Radtke by KO_TKO",
+          "market_spec": {
+            "kind": "method",
+            "method": "KO_TKO",
+            "side": "b"
+          },
+          "rank": 1,
+          "result": "PENDING",
+          "status": "RESEARCH_ONLY_NOT_AN_APPROVED_BET"
+        },
+        {
+          "american_odds": 285,
+          "candidate_id": "top_5_longshots:2:7",
+          "fight": "Drew Dober vs Chris Duncan",
+          "fight_key": "chrisduncan|drewdober",
+          "fight_no": 7,
+          "hypothetical_profit_units": 0.0,
+          "hypothetical_stake_units": 1.0,
+          "is_actual_bet": false,
+          "market": "Fight goes distance YES",
+          "market_spec": {
+            "kind": "goes_distance",
+            "outcome": "YES"
+          },
+          "rank": 2,
+          "result": "PENDING",
+          "status": "RESEARCH_ONLY_NOT_AN_APPROVED_BET"
+        },
+        {
+          "american_odds": 640,
+          "candidate_id": "top_5_longshots:3:6",
+          "fight": "Jim Miller vs Terrance McKinney",
+          "fight_key": "jimmiller|terrancemckinney",
+          "fight_no": 6,
+          "hypothetical_profit_units": 0.0,
+          "hypothetical_stake_units": 1.0,
+          "is_actual_bet": false,
+          "market": "Round 3 starts YES",
+          "market_spec": {
+            "kind": "round_to_start",
+            "outcome": "YES",
+            "round": 3
+          },
+          "rank": 3,
+          "result": "PENDING",
+          "status": "RESEARCH_ONLY_NOT_AN_APPROVED_BET"
+        },
+        {
+          "american_odds": 200,
+          "candidate_id": "top_5_longshots:4:3",
+          "fight": "Macy Chiasson vs Bia Mesquita",
+          "fight_key": "biamesquita|macychiasson",
+          "fight_no": 3,
+          "hypothetical_profit_units": 0.0,
+          "hypothetical_stake_units": 1.0,
+          "is_actual_bet": false,
+          "market": "Fight goes distance YES",
+          "market_spec": {
+            "kind": "goes_distance",
+            "outcome": "YES"
+          },
+          "rank": 4,
+          "result": "PENDING",
+          "status": "RESEARCH_ONLY_NOT_AN_APPROVED_BET"
+        },
+        {
+          "american_odds": 470,
+          "candidate_id": "top_5_longshots:5:11",
+          "fight": "Caio Borralho vs Yousri Belgaroui",
+          "fight_key": "caioborralho|yousribelgaroui",
+          "fight_no": 11,
+          "hypothetical_profit_units": 0.0,
+          "hypothetical_stake_units": 1.0,
+          "is_actual_bet": false,
+          "market": "Yousri Belgaroui by KO_TKO",
+          "market_spec": {
+            "kind": "method",
+            "method": "KO_TKO",
+            "side": "b"
+          },
+          "rank": 5,
+          "result": "PENDING",
+          "status": "RESEARCH_ONLY_NOT_AN_APPROVED_BET"
+        }
+      ]
+    }
+  },
+  "combined": {
+    "displayed_candidates": 10,
+    "hypothetical_net_units": 0.0,
+    "hypothetical_roi": null,
+    "hypothetical_settled_risk_units": 0.0,
+    "record": {
+      "L": 0,
+      "PENDING": 10,
+      "PUSH": 0,
+      "VOID": 0,
+      "W": 0
+    }
+  },
+  "default_hypothetical_stake_units": 1.0,
+  "event": "UFC 334: Gane vs Hokit",
+  "event_date": "2026-11-14",
+  "event_not_yet_started": true,
+  "fanduel_screenshot_sha256": "ce57c3a0e1d79154e164c7d3e1223adb15c03c0eefef3dbc5c76ccd55206aa2a",
+  "frozen_research_watchlist_sha256": "0bd97214a1da9877a9000001593fd4dba4334509b5809f8453e3dae3f707f0be",
+  "ledger_type": "TWO_TIER_RESEARCH_ONLY_HYPOTHETICAL_ONE_UNIT_PER_PICK",
+  "no_results_graded": true,
+  "produced_at_utc": "2026-11-12T02:06:26.573889+00:00",
+  "quoted_market_prices_may_change": true,
+  "same_fight_selections_can_be_correlated": true,
+  "schema_version": "1.0",
+  "source_price_timestamp_utc": null,
+  "status": "PRE_EVENT_PENDING_ONLY_NO_RESULTS"
+}

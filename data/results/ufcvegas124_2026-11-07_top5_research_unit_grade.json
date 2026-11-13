@@ -1,0 +1,251 @@
+{
+  "approved_betting_stakes_not_conflated": true,
+  "basis": "Original screenshot FanDuel prices; separate from approved bets and real money",
+  "categories": {
+    "top_5_best_bets": {
+      "displayed_candidates": 5,
+      "hypothetical_net_units": -0.12,
+      "hypothetical_roi": -0.02400000000000002,
+      "hypothetical_settled_risk_units": 5.0,
+      "record": {
+        "L": 3,
+        "PENDING": 0,
+        "PUSH": 0,
+        "VOID": 0,
+        "W": 2
+      },
+      "selections": [
+        {
+          "american_odds": 100,
+          "candidate_id": "top_5_best_bets:1:5",
+          "fight": "Jose Delano vs Murtazali Magomedov",
+          "fight_key": "josedelano|murtazalimagomedov",
+          "fight_no": 5,
+          "hypothetical_profit_units": 1.0,
+          "hypothetical_stake_units": 1.0,
+          "is_actual_bet": false,
+          "market": "Murtazali Magomedov ML",
+          "market_spec": {
+            "kind": "moneyline",
+            "side": "b"
+          },
+          "rank": 1,
+          "result": "W",
+          "status": "RESEARCH_ONLY_NOT_AN_APPROVED_BET"
+        },
+        {
+          "american_odds": 188,
+          "candidate_id": "top_5_best_bets:2:1",
+          "fight": "Jonny Parsons vs Jose Souza",
+          "fight_key": "jonnyparsons|josesouza",
+          "fight_no": 1,
+          "hypothetical_profit_units": -1.0,
+          "hypothetical_stake_units": 1.0,
+          "is_actual_bet": false,
+          "market": "Jonny Parsons ML",
+          "market_spec": {
+            "kind": "moneyline",
+            "side": "a"
+          },
+          "rank": 2,
+          "result": "L",
+          "status": "RESEARCH_ONLY_NOT_AN_APPROVED_BET"
+        },
+        {
+          "american_odds": 188,
+          "candidate_id": "top_5_best_bets:3:9",
+          "fight": "Mitch Raposo vs Marcos Degli",
+          "fight_key": "marcosdegli|mitchraposo",
+          "fight_no": 9,
+          "hypothetical_profit_units": 1.88,
+          "hypothetical_stake_units": 1.0,
+          "is_actual_bet": false,
+          "market": "Mitch Raposo ML",
+          "market_spec": {
+            "kind": "moneyline",
+            "side": "a"
+          },
+          "rank": 3,
+          "result": "W",
+          "status": "RESEARCH_ONLY_NOT_AN_APPROVED_BET"
+        },
+        {
+          "american_odds": -110,
+          "candidate_id": "top_5_best_bets:4:4",
+          "fight": "Austin Bashi vs Carlos Calderon",
+          "fight_key": "austinbashi|carloscalderon",
+          "fight_no": 4,
+          "hypothetical_profit_units": -1.0,
+          "hypothetical_stake_units": 1.0,
+          "is_actual_bet": false,
+          "market": "OVER 1.5 rounds",
+          "market_spec": {
+            "direction": "OVER",
+            "kind": "total_rounds",
+            "threshold": 1.5
+          },
+          "rank": 4,
+          "result": "L",
+          "status": "RESEARCH_ONLY_NOT_AN_APPROVED_BET"
+        },
+        {
+          "american_odds": 132,
+          "candidate_id": "top_5_best_bets:5:12",
+          "fight": "Davey Grant vs Elijah Smith",
+          "fight_key": "daveygrant|elijahsmith",
+          "fight_no": 12,
+          "hypothetical_profit_units": -1.0,
+          "hypothetical_stake_units": 1.0,
+          "is_actual_bet": false,
+          "market": "Fight goes distance YES",
+          "market_spec": {
+            "kind": "goes_distance",
+            "outcome": "YES"
+          },
+          "rank": 5,
+          "result": "L",
+          "status": "RESEARCH_ONLY_NOT_AN_APPROVED_BET"
+        }
+      ]
+    },
+    "top_5_longshots": {
+      "displayed_candidates": 5,
+      "hypothetical_net_units": -5.0,
+      "hypothetical_roi": -1.0,
+      "hypothetical_settled_risk_units": 5.0,
+      "record": {
+        "L": 5,
+        "PENDING": 0,
+        "PUSH": 0,
+        "VOID": 0,
+        "W": 0
+      },
+      "selections": [
+        {
+          "american_odds": 240,
+          "candidate_id": "top_5_longshots:1:13",
+          "fight": "Tatiana Suarez vs Virna Jandiroba",
+          "fight_key": "tatianasuarez|virnajandiroba",
+          "fight_no": 13,
+          "hypothetical_profit_units": -1.0,
+          "hypothetical_stake_units": 1.0,
+          "is_actual_bet": false,
+          "market": "Fight goes distance NO",
+          "market_spec": {
+            "kind": "goes_distance",
+            "outcome": "NO"
+          },
+          "rank": 1,
+          "result": "L",
+          "status": "RESEARCH_ONLY_NOT_AN_APPROVED_BET"
+        },
+        {
+          "american_odds": 230,
+          "candidate_id": "top_5_longshots:2:4",
+          "fight": "Austin Bashi vs Carlos Calderon",
+          "fight_key": "austinbashi|carloscalderon",
+          "fight_no": 4,
+          "hypothetical_profit_units": -1.0,
+          "hypothetical_stake_units": 1.0,
+          "is_actual_bet": false,
+          "market": "Fight goes distance YES",
+          "market_spec": {
+            "kind": "goes_distance",
+            "outcome": "YES"
+          },
+          "rank": 2,
+          "result": "L",
+          "status": "RESEARCH_ONLY_NOT_AN_APPROVED_BET"
+        },
+        {
+          "american_odds": 400,
+          "candidate_id": "top_5_longshots:3:3",
+          "fight": "Mantas Kondratavicius vs Andre Petroski",
+          "fight_key": "andrepetroski|mantaskondratavicius",
+          "fight_no": 3,
+          "hypothetical_profit_units": -1.0,
+          "hypothetical_stake_units": 1.0,
+          "is_actual_bet": false,
+          "market": "Fight goes distance YES",
+          "market_spec": {
+            "kind": "goes_distance",
+            "outcome": "YES"
+          },
+          "rank": 3,
+          "result": "L",
+          "status": "RESEARCH_ONLY_NOT_AN_APPROVED_BET"
+        },
+        {
+          "american_odds": 360,
+          "candidate_id": "top_5_longshots:4:5",
+          "fight": "Jose Delano vs Murtazali Magomedov",
+          "fight_key": "josedelano|murtazalimagomedov",
+          "fight_no": 5,
+          "hypothetical_profit_units": -1.0,
+          "hypothetical_stake_units": 1.0,
+          "is_actual_bet": false,
+          "market": "Murtazali Magomedov by SUB",
+          "market_spec": {
+            "kind": "method",
+            "method": "SUB",
+            "side": "b"
+          },
+          "rank": 4,
+          "result": "L",
+          "status": "RESEARCH_ONLY_NOT_AN_APPROVED_BET"
+        },
+        {
+          "american_odds": 460,
+          "candidate_id": "top_5_longshots:5:1",
+          "fight": "Jonny Parsons vs Jose Souza",
+          "fight_key": "jonnyparsons|josesouza",
+          "fight_no": 1,
+          "hypothetical_profit_units": -1.0,
+          "hypothetical_stake_units": 1.0,
+          "is_actual_bet": false,
+          "market": "Jonny Parsons by KO_TKO",
+          "market_spec": {
+            "kind": "method",
+            "method": "KO_TKO",
+            "side": "a"
+          },
+          "rank": 5,
+          "result": "L",
+          "status": "RESEARCH_ONLY_NOT_AN_APPROVED_BET"
+        }
+      ]
+    }
+  },
+  "combined": {
+    "displayed_candidates": 10,
+    "hypothetical_net_units": -5.12,
+    "hypothetical_roi": -0.512,
+    "hypothetical_settled_risk_units": 10.0,
+    "record": {
+      "L": 8,
+      "PENDING": 0,
+      "PUSH": 0,
+      "VOID": 0,
+      "W": 2
+    }
+  },
+  "default_hypothetical_stake_units": 1.0,
+  "event": "UFC Fight Night: Cortes Acosta vs Walker",
+  "event_date": "2026-11-07",
+  "frozen_research_watchlist_sha256": "40d612e22c0b3c0fa40ce3cd1bc08348538dc44a31b3372ce2e3064a9de3743c",
+  "graded_at_utc": "2026-11-08T15:00:18.209260+00:00",
+  "ledger_type": "TWO_TIER_RESEARCH_ONLY_HYPOTHETICAL_ONE_UNIT_PER_PICK",
+  "original_fanduel_snapshot_sha256": "0da94c150da2708a3062cd071d676fa42835e58eff8bec8ea976cd18520be44d",
+  "quoted_market_prices_may_change": true,
+  "result_verification_provenance": [
+    "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "https://www.fightful.com/mma/ufc-fight-night-cortes-acosta-vs-walker-results-11-7/",
+    "https://www.mmafighting.com/fight-results/ufc",
+    "https://jp.ufc.com/news/ufc-fight-night-cortes-acosta-vs-walker-results"
+  ],
+  "same_fight_selections_can_be_correlated": true,
+  "schema_version": "1.0",
+  "settlement_evidence": "Official UFC event https://www.ufc.com/event/ufc-fight-night-november-07-2026 ; Fightful https://www.fightful.com/mma/ufc-fight-night-cortes-acosta-vs-walker-results-11-7/ ; MMA Fighting https://www.mmafighting.com/fight-results/ufc ; time/round and market settlement derived from quoted typed FanDuel market contracts",
+  "settlement_input_sha256": "f291868e6bf9c3923a43df6287c4ecd90ee4c40cfd1ab88b5bb9129ce4d50d5b",
+  "status": "VERIFIED_EVENT_RESEARCH_RESULTS"
+}

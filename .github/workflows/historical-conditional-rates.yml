@@ -1,0 +1,72 @@
+name: Historical conditional rates
+
+# Holdout-preservation rerun requested 2026-10-20 before Edmonton is admitted to training.
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature/historical-conditional-rates
+    paths:
+      - 'pyproject.toml'
+      - 'src/wshlx_ufc/historical_*.py'
+      - 'src/wshlx_ufc/unified_ensemble.py'
+      - 'src/wshlx_ufc/ensemble_eligibility.py'
+      - 'src/wshlx_ufc/calibration.py'
+      - 'src/wshlx_ufc/timing.py'
+      - 'scripts/build_historical_model.py'
+      - 'scripts/build_unified_ensemble.py'
+      - 'scripts/build_unified_ensemble_safe.py'
+      - 'tests/test_historical_*.py'
+      - 'tests/test_unified_ensemble.py'
+      - 'tests/test_ensemble_eligibility.py'
+      - 'tests/test_calibration.py'
+      - 'data/reference/published_conditional_rate_benchmarks.csv'
+      - 'data/supplemental/results/*.csv'
+      - 'data/locks/**/stage_a_model_raw*.json'
+      - '.github/workflows/historical-conditional-rates.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install package
+        run: pip install -e .[dev]
+      - name: Run tests
+        run: pytest -q
+      - name: Build historical dataset, rate tables, and shadow models
+        run: python scripts/build_historical_model.py --download --min-bin-n 30
+      # The unified layer is intentionally built only after leakage-safe historical
+      # predictions exist. Nonstandard outcomes are filtered in-memory and never
+      # relabeled as KO/SUB/DEC or ordinary timing finishes.
+      - name: Build unified ensemble from frozen cards
+        run: python scripts/build_unified_ensemble_safe.py
+      - name: Upload historical and unified artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: historical-conditional-rates
+          path: |
+            data/historical/prefight_perspective_rows.csv
+            data/historical/conditional_win_rates.csv
+            data/historical/conditional_method_rates.csv
+            data/historical/conditional_timing_rates.csv
+            data/historical/historical_winner_model.joblib
+            data/historical/historical_winner_metrics.json
+            data/historical/historical_method_model.joblib
+            data/historical/historical_method_metrics.json
+            data/historical/historical_timing_model.joblib
+            data/historical/historical_timing_metrics.json
+            data/historical/historical_build_manifest.json
+            data/unified/unified_ensemble_weights.json
+            data/unified/unified_ensemble_metrics.json
+            data/unified/unified_recent_predictions.csv
+            data/unified/unified_timing_predictions.csv
+            data/unified/unified_build_manifest.json
+          retention-days: 30

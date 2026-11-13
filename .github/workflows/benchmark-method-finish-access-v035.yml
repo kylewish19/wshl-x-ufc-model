@@ -1,0 +1,39 @@
+name: benchmark-method-finish-access-v035
+on:
+  push:
+    branches: [feature/historical-conditional-rates]
+    paths:
+      - "tools/benchmark_method_finish_access_v035.py"
+      - ".github/workflows/benchmark-method-finish-access-v035.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: benchmark-method-finish-access-v035
+  cancel-in-progress: true
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11", cache: "pip"}
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Evaluate finish-versus-decision shadow
+        run: PYTHONPATH=src python tools/benchmark_method_finish_access_v035.py
+      - name: Test
+        run: pytest -q
+      - name: Save
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add reports/post_ufc333_method_finish_access
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "research: benchmark contextual method finish head"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin HEAD:"${GITHUB_REF_NAME}"

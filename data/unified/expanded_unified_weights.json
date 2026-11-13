@@ -1,0 +1,98 @@
+{
+  "status": "EXPANDED_UNIFIED_ENSEMBLE_SHADOW_NOT_PROMOTED",
+  "trained_through": "2026-10-17",
+  "odds_used": false,
+  "weight_meaning": "weight_current; historical weight = 1 - weight_current",
+  "grid_step": 0.025,
+  "head_specific_eligibility": true,
+  "winner": {
+    "weight_current": 1.0,
+    "loss": 0.6569951637587409,
+    "current_loss": 0.6569951637587409,
+    "historical_loss": 0.7854164305180685,
+    "n": 112,
+    "weight_historical": 0.0,
+    "improvement_vs_best_base": 0.0
+  },
+  "method": {
+    "weight_current": 0.9500000000000001,
+    "loss": 1.5597143554503632,
+    "current_loss": 1.5601122516380812,
+    "historical_loss": 1.6704920395115495,
+    "n": 88,
+    "weight_historical": 0.04999999999999993,
+    "improvement_vs_best_base": 0.0003978961877180165
+  },
+  "timing": {
+    "weight_current": 0.65,
+    "loss": 0.6795080497191397,
+    "current_loss": 0.7115442501872679,
+    "historical_loss": 0.7471946318895442,
+    "n": 88,
+    "weight_historical": 0.35,
+    "improvement_vs_best_base": 0.03203620046812816
+  },
+  "training_population": {
+    "winner_fights": 112,
+    "winner_dates": [
+      "2026-08-08",
+      "2026-08-15",
+      "2026-08-29",
+      "2026-09-05",
+      "2026-09-19",
+      "2026-09-26",
+      "2026-10-03",
+      "2026-10-10",
+      "2026-10-17"
+    ],
+    "method_fights": 88,
+    "method_dates": [
+      "2026-08-29",
+      "2026-09-05",
+      "2026-09-19",
+      "2026-09-26",
+      "2026-10-03",
+      "2026-10-10",
+      "2026-10-17"
+    ],
+    "timing_fights": 88,
+    "timing_market_rows": 456,
+    "timing_dates": [
+      "2026-08-29",
+      "2026-09-05",
+      "2026-09-19",
+      "2026-09-26",
+      "2026-10-03",
+      "2026-10-10",
+      "2026-10-17"
+    ]
+  },
+  "provenance": {
+    "winner_only_recovered": [
+      "2026-08-08",
+      "2026-08-15"
+    ],
+    "full_head_recovered": [
+      "2026-08-29",
+      "2026-09-05"
+    ],
+    "normal_frozen_locks": [
+      "2026-09-19",
+      "2026-09-26",
+      "2026-10-03",
+      "2026-10-10",
+      "2026-10-17"
+    ],
+    "excluded_unsupported": [
+      "2026-09-26: Mahammadali Osmanli vs Ilimbek Akylbek",
+      "2026-10-10: Ernesta Kareckaite vs Melissa Gatto"
+    ]
+  },
+  "governance": {
+    "edmonton_now_training_data": true,
+    "edmonton_holdout_must_be_preserved_separately": true,
+    "august_22_not_admitted": "Final fight-day probabilities have not yet been recovered at sufficient precision; pre-weigh-in values are not silently substituted.",
+    "older_legacy_cards_not_admitted": "Odds-influenced, conflicting, aggregate-only, or result-era reconstructions remain excluded.",
+    "promotion": false
+  }
+}

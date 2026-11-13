@@ -1,0 +1,54 @@
+{
+  "all_28_made_weight": true,
+  "best_overall_outside_two_tiers": {
+    "candidate": "Tatiana Suarez moneyline",
+    "fanduel_snapshot_american_odds": -200,
+    "historical_shadow_win_probability": 0.7253340134781193,
+    "market_implied_break_even": 0.6666666666666666,
+    "outside_top5_ranges": true,
+    "reason": "High-quality three-model side with raw positive price edge, but -200 is outside the agreed Top5 Best Bets -150..+190 range. Three-model minima are not independently calibrated betting guarantees.",
+    "reference_model_win_probability": 0.7579616205620947,
+    "status": "RESEARCH_WATCH_ONLY_NOT_PROMOTED_OR_INCLUDED_IN_TWO_TIER_TOP5",
+    "unified_shadow_win_probability": 0.7354037284416138
+  },
+  "biggest_timing_discrepancy_to_protect": {
+    "fight": "Davey Grant vs Elijah Smith",
+    "market": "Fight goes distance YES +132",
+    "reason_rejected": "Timing-vs-method finish marginal discrepancy over 15pp, no validated joint family calibration; avoid post-hoc choosing whichever model yields a value edge.",
+    "simulated_probability": 0.6222,
+    "unified_shadow_probability": 0.5828
+  },
+  "event": "UFC Fight Night: Cortes Acosta vs Walker",
+  "event_date": "2026-11-07",
+  "fanduel_only": true,
+  "frozen_at_utc": "2026-11-07T16:28:15.322827+00:00",
+  "full_market_comparison_file": "data/locks/ufcvegas124_2026-11-07/stage_b_fanduel_full_price_audit.json",
+  "model_or_fight_side_flips": 0,
+  "no_forced_bets": true,
+  "no_overlap": true,
+  "notes": [
+    "No apparent price-only edges were used to reverse any Stage A PASS or winner.",
+    "All exact fighter+method and double-chance bets are barred for this event by frozen model coherence governance.",
+    "0 bets in both categories is a valid, preferred outcome to forcing up to 10 underqualified wagers."
+  ],
+  "official_straight_bets_within_top5_tiers": [],
+  "optional_favorite_2leg": null,
+  "optional_favorite_3leg": null,
+  "quotes_count": 378,
+  "quotes_sha256": "0da94c150da2708a3062cd071d676fa42835e58eff8bec8ea976cd18520be44d",
+  "stage_a_odds_blind_preserved": true,
+  "stage_a_sha256": "70fefe546831de93d06a09b8347411fd387d7d09f98ca03bc56adfd921e3c68b",
+  "status": "STAGE_B_SCREENSHOT_AUDITED_NO_TWO_TIER_WAGERS_APPROVED",
+  "top_5_best_bets": {
+    "number_selected": 0,
+    "price_range": "-150 through +190 inclusive",
+    "selected": []
+  },
+  "top_5_longshots": {
+    "number_selected": 0,
+    "price_range": "+200 and longer",
+    "selected": []
+  },
+  "total_fights": 14,
+  "weigh_in_source": "https://www.ufc.com/news/official-weigh-in-results-ufc-fight-night-cortes-acosta-vs-walker"
+}

@@ -1,0 +1,41 @@
+name: Freeze UFC334 FanDuel Top5 Best and Top5 Longshot research cards
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/historical-conditional-rates]
+    paths:
+      - "tools/finalize_ufc334_stage_b_two_tier.py"
+      - ".github/workflows/freeze-ufc334-fanduel-top5-two-tier-research.yml"
+permissions:
+  contents: write
+concurrency:
+  group: ufc334-fanduel-two-tier-research
+  cancel-in-progress: true
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11", cache: "pip"}
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Freeze 5 best and 5 longshot RESEARCH only, no actual bets
+        run: PYTHONPATH=src:tools python tools/finalize_ufc334_stage_b_two_tier.py
+      - name: Regressions
+        run: pytest -q
+      - name: Commit pre-fight priced Top5 research and independent hypothetical unit baseline
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/locks/ufc334_2026-11-14/stage_b_two_tier_outcome.json
+          git add data/locks/ufc334_2026-11-14/stage_b_top5_ranked_research_review_compatible_cross_tier.json
+          git add data/locks/ufc334_2026-11-14/stage_b_top5_research_units_pending.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "price: freeze 5+5 researched UFC334 FanDuel candidates, 3 compatible same-fight pairs, 10 pending 1u hypothetical, 0 approved bets"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

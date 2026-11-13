@@ -1,0 +1,1183 @@
+{
+  "candidate_gates": {
+    "v027_residual": {
+      "brier_better": false,
+      "class_accuracy_better": false,
+      "historical_n": 102,
+      "logloss_better": false,
+      "minimum_300_prospective_fight_validation_met": false,
+      "promoted": false,
+      "sub_recall_not_worse": true
+    },
+    "v035_finish_access": {
+      "brier_better": false,
+      "class_accuracy_better": true,
+      "historical_n": 102,
+      "logloss_better": false,
+      "minimum_300_prospective_fight_validation_met": false,
+      "promoted": false,
+      "sub_recall_not_worse": true
+    }
+  },
+  "data_scope": "139 older causal method feedback rows plus 14 pre-event baseline probabilities for Nov7, evaluated with known winning fighter",
+  "folds": [
+    {
+      "date": "2026-08-29",
+      "metrics": {
+        "base": {
+          "accuracy": 0.3076923076923077,
+          "actual_counts": {
+            "DEC": 3,
+            "KO": 8,
+            "SUB": 2
+          },
+          "brier": 0.7525353228994877,
+          "class_recall": {
+            "DEC": 0.3333333333333333,
+            "KO": 0.375,
+            "SUB": 0.0
+          },
+          "correct": 4,
+          "log_loss": 1.158253394571361,
+          "n": 13,
+          "predicted_calls": {
+            "DEC": 8,
+            "KO": 5,
+            "SUB": 0
+          }
+        },
+        "cal": {
+          "accuracy": 0.38461538461538464,
+          "actual_counts": {
+            "DEC": 3,
+            "KO": 8,
+            "SUB": 2
+          },
+          "brier": 0.6570678782649673,
+          "class_recall": {
+            "DEC": 0.0,
+            "KO": 0.625,
+            "SUB": 0.0
+          },
+          "correct": 5,
+          "log_loss": 1.0470024524270334,
+          "n": 13,
+          "predicted_calls": {
+            "DEC": 5,
+            "KO": 8,
+            "SUB": 0
+          }
+        },
+        "v027_residual": {
+          "accuracy": 0.23076923076923078,
+          "actual_counts": {
+            "DEC": 3,
+            "KO": 8,
+            "SUB": 2
+          },
+          "brier": 0.8515161193340608,
+          "class_recall": {
+            "DEC": 0.6666666666666666,
+            "KO": 0.125,
+            "SUB": 0.0
+          },
+          "correct": 3,
+          "log_loss": 1.2699666778748742,
+          "n": 13,
+          "predicted_calls": {
+            "DEC": 10,
+            "KO": 2,
+            "SUB": 1
+          }
+        },
+        "v035_finish_access": {
+          "accuracy": 0.3076923076923077,
+          "actual_counts": {
+            "DEC": 3,
+            "KO": 8,
+            "SUB": 2
+          },
+          "brier": 0.6628285908788267,
+          "class_recall": {
+            "DEC": 0.0,
+            "KO": 0.5,
+            "SUB": 0.0
+          },
+          "correct": 4,
+          "log_loss": 1.0559465068927711,
+          "n": 13,
+          "predicted_calls": {
+            "DEC": 6,
+            "KO": 7,
+            "SUB": 0
+          }
+        }
+      },
+      "test_rows": 13,
+      "train_max_date": "2026-08-22",
+      "train_rows": 37
+    },
+    {
+      "date": "2026-09-05",
+      "metrics": {
+        "base": {
+          "accuracy": 0.6428571428571429,
+          "actual_counts": {
+            "DEC": 6,
+            "KO": 6,
+            "SUB": 2
+          },
+          "brier": 0.48251086717202396,
+          "class_recall": {
+            "DEC": 0.8333333333333334,
+            "KO": 0.5,
+            "SUB": 0.5
+          },
+          "correct": 9,
+          "log_loss": 0.80188716657045,
+          "n": 14,
+          "predicted_calls": {
+            "DEC": 9,
+            "KO": 4,
+            "SUB": 1
+          }
+        },
+        "cal": {
+          "accuracy": 0.5714285714285714,
+          "actual_counts": {
+            "DEC": 6,
+            "KO": 6,
+            "SUB": 2
+          },
+          "brier": 0.5114675662756091,
+          "class_recall": {
+            "DEC": 0.3333333333333333,
+            "KO": 1.0,
+            "SUB": 0.0
+          },
+          "correct": 8,
+          "log_loss": 0.8504901812469853,
+          "n": 14,
+          "predicted_calls": {
+            "DEC": 3,
+            "KO": 11,
+            "SUB": 0
+          }
+        },
+        "v027_residual": {
+          "accuracy": 0.7142857142857143,
+          "actual_counts": {
+            "DEC": 6,
+            "KO": 6,
+            "SUB": 2
+          },
+          "brier": 0.477332488253346,
+          "class_recall": {
+            "DEC": 1.0,
+            "KO": 0.5,
+            "SUB": 0.5
+          },
+          "correct": 10,
+          "log_loss": 0.7745617817095843,
+          "n": 14,
+          "predicted_calls": {
+            "DEC": 10,
+            "KO": 3,
+            "SUB": 1
+          }
+        },
+        "v035_finish_access": {
+          "accuracy": 0.5,
+          "actual_counts": {
+            "DEC": 6,
+            "KO": 6,
+            "SUB": 2
+          },
+          "brier": 0.5365855842210433,
+          "class_recall": {
+            "DEC": 0.16666666666666666,
+            "KO": 1.0,
+            "SUB": 0.0
+          },
+          "correct": 7,
+          "log_loss": 0.8838332175167782,
+          "n": 14,
+          "predicted_calls": {
+            "DEC": 2,
+            "KO": 12,
+            "SUB": 0
+          }
+        }
+      },
+      "test_rows": 14,
+      "train_max_date": "2026-08-29",
+      "train_rows": 50
+    },
+    {
+      "date": "2026-09-19",
+      "metrics": {
+        "base": {
+          "accuracy": 0.4166666666666667,
+          "actual_counts": {
+            "DEC": 5,
+            "KO": 6,
+            "SUB": 1
+          },
+          "brier": 0.6392708325415924,
+          "class_recall": {
+            "DEC": 0.4,
+            "KO": 0.5,
+            "SUB": 0.0
+          },
+          "correct": 5,
+          "log_loss": 1.0321877414983447,
+          "n": 12,
+          "predicted_calls": {
+            "DEC": 6,
+            "KO": 6,
+            "SUB": 0
+          }
+        },
+        "cal": {
+          "accuracy": 0.4166666666666667,
+          "actual_counts": {
+            "DEC": 5,
+            "KO": 6,
+            "SUB": 1
+          },
+          "brier": 0.6595081126776305,
+          "class_recall": {
+            "DEC": 0.0,
+            "KO": 0.8333333333333334,
+            "SUB": 0.0
+          },
+          "correct": 5,
+          "log_loss": 1.0652419382643852,
+          "n": 12,
+          "predicted_calls": {
+            "DEC": 2,
+            "KO": 10,
+            "SUB": 0
+          }
+        },
+        "v027_residual": {
+          "accuracy": 0.5,
+          "actual_counts": {
+            "DEC": 5,
+            "KO": 6,
+            "SUB": 1
+          },
+          "brier": 0.6325372784859997,
+          "class_recall": {
+            "DEC": 0.4,
+            "KO": 0.6666666666666666,
+            "SUB": 0.0
+          },
+          "correct": 6,
+          "log_loss": 1.026115654803979,
+          "n": 12,
+          "predicted_calls": {
+            "DEC": 5,
+            "KO": 7,
+            "SUB": 0
+          }
+        },
+        "v035_finish_access": {
+          "accuracy": 0.4166666666666667,
+          "actual_counts": {
+            "DEC": 5,
+            "KO": 6,
+            "SUB": 1
+          },
+          "brier": 0.7021668879981188,
+          "class_recall": {
+            "DEC": 0.0,
+            "KO": 0.8333333333333334,
+            "SUB": 0.0
+          },
+          "correct": 5,
+          "log_loss": 1.1687592229880546,
+          "n": 12,
+          "predicted_calls": {
+            "DEC": 2,
+            "KO": 10,
+            "SUB": 0
+          }
+        }
+      },
+      "test_rows": 12,
+      "train_max_date": "2026-09-05",
+      "train_rows": 64
+    },
+    {
+      "date": "2026-09-26",
+      "metrics": {
+        "base": {
+          "accuracy": 0.36363636363636365,
+          "actual_counts": {
+            "DEC": 3,
+            "KO": 6,
+            "SUB": 2
+          },
+          "brier": 0.673768220966916,
+          "class_recall": {
+            "DEC": 1.0,
+            "KO": 0.16666666666666666,
+            "SUB": 0.0
+          },
+          "correct": 4,
+          "log_loss": 1.0731367283341018,
+          "n": 11,
+          "predicted_calls": {
+            "DEC": 9,
+            "KO": 2,
+            "SUB": 0
+          }
+        },
+        "cal": {
+          "accuracy": 0.5454545454545454,
+          "actual_counts": {
+            "DEC": 3,
+            "KO": 6,
+            "SUB": 2
+          },
+          "brier": 0.5782524283221885,
+          "class_recall": {
+            "DEC": 1.0,
+            "KO": 0.3333333333333333,
+            "SUB": 0.5
+          },
+          "correct": 6,
+          "log_loss": 0.9394247641376355,
+          "n": 11,
+          "predicted_calls": {
+            "DEC": 6,
+            "KO": 3,
+            "SUB": 2
+          }
+        },
+        "v027_residual": {
+          "accuracy": 0.45454545454545453,
+          "actual_counts": {
+            "DEC": 3,
+            "KO": 6,
+            "SUB": 2
+          },
+          "brier": 0.695498844371532,
+          "class_recall": {
+            "DEC": 1.0,
+            "KO": 0.3333333333333333,
+            "SUB": 0.0
+          },
+          "correct": 5,
+          "log_loss": 1.1197241319920492,
+          "n": 11,
+          "predicted_calls": {
+            "DEC": 8,
+            "KO": 2,
+            "SUB": 1
+          }
+        },
+        "v035_finish_access": {
+          "accuracy": 0.6363636363636364,
+          "actual_counts": {
+            "DEC": 3,
+            "KO": 6,
+            "SUB": 2
+          },
+          "brier": 0.5797177378686663,
+          "class_recall": {
+            "DEC": 1.0,
+            "KO": 0.5,
+            "SUB": 0.5
+          },
+          "correct": 7,
+          "log_loss": 0.9545408001885076,
+          "n": 11,
+          "predicted_calls": {
+            "DEC": 6,
+            "KO": 4,
+            "SUB": 1
+          }
+        }
+      },
+      "test_rows": 11,
+      "train_max_date": "2026-09-19",
+      "train_rows": 76
+    },
+    {
+      "date": "2026-10-03",
+      "metrics": {
+        "base": {
+          "accuracy": 0.42857142857142855,
+          "actual_counts": {
+            "DEC": 3,
+            "KO": 11,
+            "SUB": 0
+          },
+          "brier": 0.5294568795818421,
+          "class_recall": {
+            "DEC": 0.6666666666666666,
+            "KO": 0.36363636363636365,
+            "SUB": null
+          },
+          "correct": 6,
+          "log_loss": 0.8516608180747502,
+          "n": 14,
+          "predicted_calls": {
+            "DEC": 9,
+            "KO": 5,
+            "SUB": 0
+          }
+        },
+        "cal": {
+          "accuracy": 0.7142857142857143,
+          "actual_counts": {
+            "DEC": 3,
+            "KO": 11,
+            "SUB": 0
+          },
+          "brier": 0.40229817295559295,
+          "class_recall": {
+            "DEC": 0.3333333333333333,
+            "KO": 0.8181818181818182,
+            "SUB": null
+          },
+          "correct": 10,
+          "log_loss": 0.6952944774465616,
+          "n": 14,
+          "predicted_calls": {
+            "DEC": 2,
+            "KO": 11,
+            "SUB": 1
+          }
+        },
+        "v027_residual": {
+          "accuracy": 0.5,
+          "actual_counts": {
+            "DEC": 3,
+            "KO": 11,
+            "SUB": 0
+          },
+          "brier": 0.5783282942735601,
+          "class_recall": {
+            "DEC": 1.0,
+            "KO": 0.36363636363636365,
+            "SUB": null
+          },
+          "correct": 7,
+          "log_loss": 0.9027087418855332,
+          "n": 14,
+          "predicted_calls": {
+            "DEC": 8,
+            "KO": 4,
+            "SUB": 2
+          }
+        },
+        "v035_finish_access": {
+          "accuracy": 0.7857142857142857,
+          "actual_counts": {
+            "DEC": 3,
+            "KO": 11,
+            "SUB": 0
+          },
+          "brier": 0.3798143138195239,
+          "class_recall": {
+            "DEC": 0.3333333333333333,
+            "KO": 0.9090909090909091,
+            "SUB": null
+          },
+          "correct": 11,
+          "log_loss": 0.6658990035499676,
+          "n": 14,
+          "predicted_calls": {
+            "DEC": 1,
+            "KO": 12,
+            "SUB": 1
+          }
+        }
+      },
+      "test_rows": 14,
+      "train_max_date": "2026-09-26",
+      "train_rows": 87
+    },
+    {
+      "date": "2026-10-10",
+      "metrics": {
+        "base": {
+          "accuracy": 0.36363636363636365,
+          "actual_counts": {
+            "DEC": 2,
+            "KO": 7,
+            "SUB": 2
+          },
+          "brier": 0.6144736921461408,
+          "class_recall": {
+            "DEC": 1.0,
+            "KO": 0.2857142857142857,
+            "SUB": 0.0
+          },
+          "correct": 4,
+          "log_loss": 0.9930311463731449,
+          "n": 11,
+          "predicted_calls": {
+            "DEC": 9,
+            "KO": 2,
+            "SUB": 0
+          }
+        },
+        "cal": {
+          "accuracy": 0.7272727272727273,
+          "actual_counts": {
+            "DEC": 2,
+            "KO": 7,
+            "SUB": 2
+          },
+          "brier": 0.4671981786848241,
+          "class_recall": {
+            "DEC": 0.5,
+            "KO": 1.0,
+            "SUB": 0.0
+          },
+          "correct": 8,
+          "log_loss": 0.808836065050688,
+          "n": 11,
+          "predicted_calls": {
+            "DEC": 1,
+            "KO": 10,
+            "SUB": 0
+          }
+        },
+        "v027_residual": {
+          "accuracy": 0.45454545454545453,
+          "actual_counts": {
+            "DEC": 2,
+            "KO": 7,
+            "SUB": 2
+          },
+          "brier": 0.5864262540513729,
+          "class_recall": {
+            "DEC": 0.5,
+            "KO": 0.5714285714285714,
+            "SUB": 0.0
+          },
+          "correct": 5,
+          "log_loss": 0.9669754080364473,
+          "n": 11,
+          "predicted_calls": {
+            "DEC": 4,
+            "KO": 6,
+            "SUB": 1
+          }
+        },
+        "v035_finish_access": {
+          "accuracy": 0.7272727272727273,
+          "actual_counts": {
+            "DEC": 2,
+            "KO": 7,
+            "SUB": 2
+          },
+          "brier": 0.4862716705953533,
+          "class_recall": {
+            "DEC": 0.5,
+            "KO": 1.0,
+            "SUB": 0.0
+          },
+          "correct": 8,
+          "log_loss": 0.8357703317167353,
+          "n": 11,
+          "predicted_calls": {
+            "DEC": 1,
+            "KO": 10,
+            "SUB": 0
+          }
+        }
+      },
+      "test_rows": 11,
+      "train_max_date": "2026-10-03",
+      "train_rows": 101
+    },
+    {
+      "date": "2026-10-17",
+      "metrics": {
+        "base": {
+          "accuracy": 0.46153846153846156,
+          "actual_counts": {
+            "DEC": 1,
+            "KO": 7,
+            "SUB": 5
+          },
+          "brier": 0.680739782860591,
+          "class_recall": {
+            "DEC": 1.0,
+            "KO": 0.5714285714285714,
+            "SUB": 0.2
+          },
+          "correct": 6,
+          "log_loss": 1.0945885587688269,
+          "n": 13,
+          "predicted_calls": {
+            "DEC": 7,
+            "KO": 5,
+            "SUB": 1
+          }
+        },
+        "cal": {
+          "accuracy": 0.6153846153846154,
+          "actual_counts": {
+            "DEC": 1,
+            "KO": 7,
+            "SUB": 5
+          },
+          "brier": 0.5139488889116383,
+          "class_recall": {
+            "DEC": 1.0,
+            "KO": 0.8571428571428571,
+            "SUB": 0.2
+          },
+          "correct": 8,
+          "log_loss": 0.9074663576162227,
+          "n": 13,
+          "predicted_calls": {
+            "DEC": 4,
+            "KO": 8,
+            "SUB": 1
+          }
+        },
+        "v027_residual": {
+          "accuracy": 0.46153846153846156,
+          "actual_counts": {
+            "DEC": 1,
+            "KO": 7,
+            "SUB": 5
+          },
+          "brier": 0.679100613453586,
+          "class_recall": {
+            "DEC": 1.0,
+            "KO": 0.5714285714285714,
+            "SUB": 0.2
+          },
+          "correct": 6,
+          "log_loss": 1.076741688370724,
+          "n": 13,
+          "predicted_calls": {
+            "DEC": 7,
+            "KO": 5,
+            "SUB": 1
+          }
+        },
+        "v035_finish_access": {
+          "accuracy": 0.6923076923076923,
+          "actual_counts": {
+            "DEC": 1,
+            "KO": 7,
+            "SUB": 5
+          },
+          "brier": 0.49273253663249583,
+          "class_recall": {
+            "DEC": 1.0,
+            "KO": 1.0,
+            "SUB": 0.2
+          },
+          "correct": 9,
+          "log_loss": 0.8687973927846403,
+          "n": 13,
+          "predicted_calls": {
+            "DEC": 1,
+            "KO": 11,
+            "SUB": 1
+          }
+        }
+      },
+      "test_rows": 13,
+      "train_max_date": "2026-10-10",
+      "train_rows": 112
+    },
+    {
+      "date": "2026-10-24",
+      "metrics": {
+        "base": {
+          "accuracy": 0.42857142857142855,
+          "actual_counts": {
+            "DEC": 7,
+            "KO": 6,
+            "SUB": 1
+          },
+          "brier": 0.6607097400877647,
+          "class_recall": {
+            "DEC": 0.7142857142857143,
+            "KO": 0.16666666666666666,
+            "SUB": 0.0
+          },
+          "correct": 6,
+          "log_loss": 1.0585464271306186,
+          "n": 14,
+          "predicted_calls": {
+            "DEC": 9,
+            "KO": 4,
+            "SUB": 1
+          }
+        },
+        "cal": {
+          "accuracy": 0.42857142857142855,
+          "actual_counts": {
+            "DEC": 7,
+            "KO": 6,
+            "SUB": 1
+          },
+          "brier": 0.7286178027198984,
+          "class_recall": {
+            "DEC": 0.2857142857142857,
+            "KO": 0.6666666666666666,
+            "SUB": 0.0
+          },
+          "correct": 6,
+          "log_loss": 1.1117675445722184,
+          "n": 14,
+          "predicted_calls": {
+            "DEC": 3,
+            "KO": 10,
+            "SUB": 1
+          }
+        },
+        "v027_residual": {
+          "accuracy": 0.5714285714285714,
+          "actual_counts": {
+            "DEC": 7,
+            "KO": 6,
+            "SUB": 1
+          },
+          "brier": 0.5945642346481577,
+          "class_recall": {
+            "DEC": 1.0,
+            "KO": 0.16666666666666666,
+            "SUB": 0.0
+          },
+          "correct": 8,
+          "log_loss": 0.9619609477599891,
+          "n": 14,
+          "predicted_calls": {
+            "DEC": 11,
+            "KO": 2,
+            "SUB": 1
+          }
+        },
+        "v035_finish_access": {
+          "accuracy": 0.42857142857142855,
+          "actual_counts": {
+            "DEC": 7,
+            "KO": 6,
+            "SUB": 1
+          },
+          "brier": 0.7660417546255353,
+          "class_recall": {
+            "DEC": 0.2857142857142857,
+            "KO": 0.6666666666666666,
+            "SUB": 0.0
+          },
+          "correct": 6,
+          "log_loss": 1.1718125883600077,
+          "n": 14,
+          "predicted_calls": {
+            "DEC": 3,
+            "KO": 10,
+            "SUB": 1
+          }
+        }
+      },
+      "test_rows": 14,
+      "train_max_date": "2026-10-17",
+      "train_rows": 125
+    },
+    {
+      "date": "2026-11-07",
+      "metrics": {
+        "base": {
+          "accuracy": 0.5714285714285714,
+          "actual_counts": {
+            "DEC": 7,
+            "KO": 6,
+            "SUB": 1
+          },
+          "brier": 0.45871784748396777,
+          "class_recall": {
+            "DEC": 0.7142857142857143,
+            "KO": 0.5,
+            "SUB": 0.0
+          },
+          "correct": 8,
+          "log_loss": 0.7543415609691361,
+          "n": 14,
+          "predicted_calls": {
+            "DEC": 9,
+            "KO": 4,
+            "SUB": 1
+          }
+        },
+        "cal": {
+          "accuracy": 0.6428571428571429,
+          "actual_counts": {
+            "DEC": 7,
+            "KO": 6,
+            "SUB": 1
+          },
+          "brier": 0.5005380646266424,
+          "class_recall": {
+            "DEC": 0.42857142857142855,
+            "KO": 1.0,
+            "SUB": 0.0
+          },
+          "correct": 9,
+          "log_loss": 0.8168996675441981,
+          "n": 14,
+          "predicted_calls": {
+            "DEC": 3,
+            "KO": 10,
+            "SUB": 1
+          }
+        },
+        "v027_residual": {
+          "accuracy": 0.6428571428571429,
+          "actual_counts": {
+            "DEC": 7,
+            "KO": 6,
+            "SUB": 1
+          },
+          "brier": 0.45754237391891756,
+          "class_recall": {
+            "DEC": 0.5714285714285714,
+            "KO": 0.6666666666666666,
+            "SUB": 1.0
+          },
+          "correct": 9,
+          "log_loss": 0.7605099971263958,
+          "n": 14,
+          "predicted_calls": {
+            "DEC": 6,
+            "KO": 6,
+            "SUB": 2
+          }
+        },
+        "v035_finish_access": {
+          "accuracy": 0.6428571428571429,
+          "actual_counts": {
+            "DEC": 7,
+            "KO": 6,
+            "SUB": 1
+          },
+          "brier": 0.5077468079290083,
+          "class_recall": {
+            "DEC": 0.42857142857142855,
+            "KO": 1.0,
+            "SUB": 0.0
+          },
+          "correct": 9,
+          "log_loss": 0.8252523752021806,
+          "n": 14,
+          "predicted_calls": {
+            "DEC": 3,
+            "KO": 10,
+            "SUB": 1
+          }
+        }
+      },
+      "test_rows": 14,
+      "train_max_date": "2026-10-24",
+      "train_rows": 139
+    }
+  ],
+  "generated_at_utc": "2026-11-10T00:57:17.798832+00:00",
+  "governance": {
+    "betting_method_coherence_gate_preserved": true,
+    "future_refit_calibrator_from_153_exists_separately": true,
+    "no_current_event_training_in_its_own_fold": true,
+    "no_model_promotion": true,
+    "nov7_is_not_an_official_new_method_bet_projection": true,
+    "original_champion_method_coefficients_unchanged": true,
+    "original_frozen_nov7_unified_8of14_unchanged": true,
+    "requires_genuinely_prospective_external_validation": true
+  },
+  "method_feedback_rows": 153,
+  "metrics": {
+    "all_chronological_crossfit": {
+      "base": {
+        "accuracy": 0.4482758620689655,
+        "actual_counts": {
+          "DEC": 37,
+          "KO": 63,
+          "SUB": 16
+        },
+        "brier": 0.6061553628463977,
+        "class_recall": {
+          "DEC": 0.7027027027027027,
+          "KO": 0.38095238095238093,
+          "SUB": 0.125
+        },
+        "correct": 52,
+        "log_loss": 0.973544383893204,
+        "n": 116,
+        "predicted_calls": {
+          "DEC": 75,
+          "KO": 37,
+          "SUB": 4
+        }
+      },
+      "cal": {
+        "accuracy": 0.5603448275862069,
+        "actual_counts": {
+          "DEC": 37,
+          "KO": 63,
+          "SUB": 16
+        },
+        "brier": 0.557225642194767,
+        "class_recall": {
+          "DEC": 0.35135135135135137,
+          "KO": 0.7936507936507936,
+          "SUB": 0.125
+        },
+        "correct": 65,
+        "log_loss": 0.9143464922598793,
+        "n": 116,
+        "predicted_calls": {
+          "DEC": 29,
+          "KO": 81,
+          "SUB": 6
+        }
+      },
+      "v027_residual": {
+        "accuracy": 0.5086206896551724,
+        "actual_counts": {
+          "DEC": 37,
+          "KO": 63,
+          "SUB": 16
+        },
+        "brier": 0.6129171071210268,
+        "class_recall": {
+          "DEC": 0.7837837837837838,
+          "KO": 0.42857142857142855,
+          "SUB": 0.1875
+        },
+        "correct": 59,
+        "log_loss": 0.9773333803266812,
+        "n": 116,
+        "predicted_calls": {
+          "DEC": 69,
+          "KO": 37,
+          "SUB": 10
+        }
+      },
+      "v035_finish_access": {
+        "accuracy": 0.5689655172413793,
+        "actual_counts": {
+          "DEC": 37,
+          "KO": 63,
+          "SUB": 16
+        },
+        "brier": 0.5675587866815551,
+        "class_recall": {
+          "DEC": 0.32432432432432434,
+          "KO": 0.8253968253968254,
+          "SUB": 0.125
+        },
+        "correct": 66,
+        "log_loss": 0.9344427966157391,
+        "n": 116,
+        "predicted_calls": {
+          "DEC": 25,
+          "KO": 86,
+          "SUB": 5
+        }
+      }
+    },
+    "historical_development_pre_nov7": {
+      "base": {
+        "accuracy": 0.43137254901960786,
+        "actual_counts": {
+          "DEC": 30,
+          "KO": 57,
+          "SUB": 15
+        },
+        "brier": 0.6263918845628096,
+        "class_recall": {
+          "DEC": 0.7,
+          "KO": 0.3684210526315789,
+          "SUB": 0.13333333333333333
+        },
+        "correct": 44,
+        "log_loss": 1.003631045863174,
+        "n": 102,
+        "predicted_calls": {
+          "DEC": 66,
+          "KO": 33,
+          "SUB": 3
+        }
+      },
+      "cal": {
+        "accuracy": 0.5490196078431373,
+        "actual_counts": {
+          "DEC": 30,
+          "KO": 57,
+          "SUB": 15
+        },
+        "brier": 0.5650062900962743,
+        "class_recall": {
+          "DEC": 0.3333333333333333,
+          "KO": 0.7719298245614035,
+          "SUB": 0.13333333333333333
+        },
+        "correct": 56,
+        "log_loss": 0.92772154663262,
+        "n": 102,
+        "predicted_calls": {
+          "DEC": 26,
+          "KO": 71,
+          "SUB": 5
+        }
+      },
+      "v027_residual": {
+        "accuracy": 0.49019607843137253,
+        "actual_counts": {
+          "DEC": 30,
+          "KO": 57,
+          "SUB": 15
+        },
+        "brier": 0.6342430508938652,
+        "class_recall": {
+          "DEC": 0.8333333333333334,
+          "KO": 0.40350877192982454,
+          "SUB": 0.13333333333333333
+        },
+        "correct": 50,
+        "log_loss": 1.007093452530642,
+        "n": 102,
+        "predicted_calls": {
+          "DEC": 63,
+          "KO": 31,
+          "SUB": 8
+        }
+      },
+      "v035_finish_access": {
+        "accuracy": 0.5588235294117647,
+        "actual_counts": {
+          "DEC": 30,
+          "KO": 57,
+          "SUB": 15
+        },
+        "brier": 0.5757682739613164,
+        "class_recall": {
+          "DEC": 0.3,
+          "KO": 0.8070175438596491,
+          "SUB": 0.13333333333333333
+        },
+        "correct": 57,
+        "log_loss": 0.9494297172019137,
+        "n": 102,
+        "predicted_calls": {
+          "DEC": 22,
+          "KO": 76,
+          "SUB": 4
+        }
+      }
+    },
+    "nov7_chronological_reconstruction_not_official_frozen_picks": {
+      "base": {
+        "accuracy": 0.5714285714285714,
+        "actual_counts": {
+          "DEC": 7,
+          "KO": 6,
+          "SUB": 1
+        },
+        "brier": 0.45871784748396777,
+        "class_recall": {
+          "DEC": 0.7142857142857143,
+          "KO": 0.5,
+          "SUB": 0.0
+        },
+        "correct": 8,
+        "log_loss": 0.7543415609691361,
+        "n": 14,
+        "predicted_calls": {
+          "DEC": 9,
+          "KO": 4,
+          "SUB": 1
+        }
+      },
+      "cal": {
+        "accuracy": 0.6428571428571429,
+        "actual_counts": {
+          "DEC": 7,
+          "KO": 6,
+          "SUB": 1
+        },
+        "brier": 0.5005380646266424,
+        "class_recall": {
+          "DEC": 0.42857142857142855,
+          "KO": 1.0,
+          "SUB": 0.0
+        },
+        "correct": 9,
+        "log_loss": 0.8168996675441981,
+        "n": 14,
+        "predicted_calls": {
+          "DEC": 3,
+          "KO": 10,
+          "SUB": 1
+        }
+      },
+      "v027_residual": {
+        "accuracy": 0.6428571428571429,
+        "actual_counts": {
+          "DEC": 7,
+          "KO": 6,
+          "SUB": 1
+        },
+        "brier": 0.45754237391891756,
+        "class_recall": {
+          "DEC": 0.5714285714285714,
+          "KO": 0.6666666666666666,
+          "SUB": 1.0
+        },
+        "correct": 9,
+        "log_loss": 0.7605099971263958,
+        "n": 14,
+        "predicted_calls": {
+          "DEC": 6,
+          "KO": 6,
+          "SUB": 2
+        }
+      },
+      "v035_finish_access": {
+        "accuracy": 0.6428571428571429,
+        "actual_counts": {
+          "DEC": 7,
+          "KO": 6,
+          "SUB": 1
+        },
+        "brier": 0.5077468079290083,
+        "class_recall": {
+          "DEC": 0.42857142857142855,
+          "KO": 1.0,
+          "SUB": 0.0
+        },
+        "correct": 9,
+        "log_loss": 0.8252523752021806,
+        "n": 14,
+        "predicted_calls": {
+          "DEC": 3,
+          "KO": 10,
+          "SUB": 1
+        }
+      }
+    }
+  },
+  "minimum_train_rows": 36,
+  "source_method_feedback": "reports/ufcvegas124_2026-11-07/full_stats/clean153_causal_method_inputs.csv",
+  "status": "NOV7_FUTURE_ONLY_METHOD_CALIBRATION_CHRONOLOGICAL_BENCHMARK_NOT_PROMOTED",
+  "tested_methods": [
+    "raw_base",
+    "intercept_cal",
+    "v027_residual",
+    "v035_finish_access"
+  ],
+  "total_chronologically_scored_bouts": 116
+}

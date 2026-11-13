@@ -1,0 +1,558 @@
+{
+  "algorithm": "iterative proportional fitting of fighter\u00d7finish vs fighter\u00d7DEC to preserve reference winner P, timing GTD_NO P and within-winner KO/SUB relative mix; no new training and no hidden event outcomes",
+  "event": "UFC Fight Night: Cortes Acosta vs Walker",
+  "event_date": "2026-11-07",
+  "fights": [
+    {
+      "candidate_double_chance_reconciled_shadow": {
+        "A_KO_OR_DEC": 0.6417581429480667,
+        "A_KO_OR_SUB": 0.4663558643335853,
+        "A_SUB_OR_DEC": 0.21493727420691316,
+        "B_KO_OR_DEC": 0.3203328568501981,
+        "B_KO_OR_SUB": 0.20748281348285488,
+        "B_SUB_OR_DEC": 0.14913304817838183
+      },
+      "candidate_joint_reconciled_shadow": {
+        "A_DEC": 0.19516977641069724,
+        "A_KO": 0.4465883665373694,
+        "A_SUB": 0.019767497796215908,
+        "B_DEC": 0.1309915457728625,
+        "B_KO": 0.18934131107733557,
+        "B_SUB": 0.018141502405519313
+      },
+      "candidate_not_an_official_stage_a_or_stage_b_pick": true,
+      "current_joint_original_frozen_unchanged": {
+        "A_DEC": 0.10447594383615622,
+        "A_KO": 0.5334379456729357,
+        "A_SUB": 0.02361175123585616,
+        "B_DEC": 0.0746464439196544,
+        "B_KO": 0.24075981306534736,
+        "B_SUB": 0.023068102270050246
+      },
+      "fight": "Jonny Parsons vs Jose Souza",
+      "fight_no": 1,
+      "finish_probability_gap_pp": 14.703893442774918,
+      "large_gap_over_15pp": false,
+      "method_props_price_gate": "BLOCKED_UNTIL_PROSPECTIVE_COHERENCE_CALIBRATION",
+      "raw_exact_fighter_finish_exceeds_GTD_NO": [],
+      "reference_pick": "Jonny Parsons",
+      "reference_win_probability": 0.661525640744948,
+      "timing_hazard_finish_probability": 0.6738386778164402,
+      "timing_props_price_gate": "INDEPENDENT_TIMING_MODEL_ONLY_NOT_PRICE_ACCEPTED",
+      "unreconciled_method_finish_probability": 0.8208776122441894
+    },
+    {
+      "candidate_double_chance_reconciled_shadow": {
+        "A_KO_OR_DEC": 0.6375503205301583,
+        "A_KO_OR_SUB": 0.26721248554261107,
+        "A_SUB_OR_DEC": 0.5145407558231967,
+        "B_KO_OR_DEC": 0.19897563092576126,
+        "B_KO_OR_SUB": 0.1728282001639986,
+        "B_SUB_OR_DEC": 0.20889260701427426
+      },
+      "candidate_joint_reconciled_shadow": {
+        "A_DEC": 0.4424392954053719,
+        "A_KO": 0.1951110251247863,
+        "A_SUB": 0.07210146041782475,
+        "B_DEC": 0.11752001888801845,
+        "B_KO": 0.0814556120377428,
+        "B_SUB": 0.0913725881262558
+      },
+      "candidate_not_an_official_stage_a_or_stage_b_pick": true,
+      "current_joint_original_frozen_unchanged": {
+        "A_DEC": 0.32557651237322965,
+        "A_KO": 0.28044093532715125,
+        "A_SUB": 0.10363433324742263,
+        "B_DEC": 0.07497656853431821,
+        "B_KO": 0.10150675405903471,
+        "B_SUB": 0.11386489645884366
+      },
+      "fight": "Seokhyeon Ko vs Wellington Turman",
+      "fight_no": 2,
+      "finish_probability_gap_pp": 15.940623338584247,
+      "large_gap_over_15pp": true,
+      "method_props_price_gate": "BLOCKED_UNTIL_PROSPECTIVE_COHERENCE_CALIBRATION",
+      "raw_exact_fighter_finish_exceeds_GTD_NO": [],
+      "reference_pick": "Seokhyeon Ko",
+      "reference_win_probability": 0.7096517809478035,
+      "timing_hazard_finish_probability": 0.4400406857066097,
+      "timing_props_price_gate": "BLOCKED_PENDING_FAMILY_RECONCILIATION",
+      "unreconciled_method_finish_probability": 0.5994469190924522
+    },
+    {
+      "candidate_double_chance_reconciled_shadow": {
+        "A_KO_OR_DEC": 0.7388261732883374,
+        "A_KO_OR_SUB": 0.46933976447176035,
+        "A_SUB_OR_DEC": 0.3541236327754158,
+        "B_KO_OR_DEC": 0.18182614039985884,
+        "B_KO_OR_SUB": 0.1034510780289119,
+        "B_SUB_OR_DEC": 0.15243321103571555
+      },
+      "candidate_joint_reconciled_shadow": {
+        "A_DEC": 0.3118050207959965,
+        "A_KO": 0.427021152492341,
+        "A_SUB": 0.04231861197941934,
+        "B_DEC": 0.11540413670333126,
+        "B_KO": 0.06642200369652759,
+        "B_SUB": 0.0370290743323843
+      },
+      "candidate_not_an_official_stage_a_or_stage_b_pick": true,
+      "current_joint_original_frozen_unchanged": {
+        "A_DEC": 0.1908873376332486,
+        "A_KO": 0.5370361402038322,
+        "A_SUB": 0.053221307430710026,
+        "B_DEC": 0.07702078204410517,
+        "B_KO": 0.09106649627828163,
+        "B_SUB": 0.050767936409822204
+      },
+      "fight": "Mantas Kondratavicius vs Andre Petroski",
+      "fight_no": 3,
+      "finish_probability_gap_pp": 15.930103782197392,
+      "large_gap_over_15pp": true,
+      "method_props_price_gate": "BLOCKED_UNTIL_PROSPECTIVE_COHERENCE_CALIBRATION",
+      "raw_exact_fighter_finish_exceeds_GTD_NO": [],
+      "reference_pick": "Mantas Kondratavicius",
+      "reference_win_probability": 0.781144785267791,
+      "timing_hazard_finish_probability": 0.5727908425006722,
+      "timing_props_price_gate": "BLOCKED_PENDING_FAMILY_RECONCILIATION",
+      "unreconciled_method_finish_probability": 0.7320918803226462
+    },
+    {
+      "candidate_double_chance_reconciled_shadow": {
+        "A_KO_OR_DEC": 0.5204046295883309,
+        "A_KO_OR_SUB": 0.37554098419674226,
+        "A_SUB_OR_DEC": 0.5085083412700675,
+        "B_KO_OR_DEC": 0.26223056377490533,
+        "B_KO_OR_SUB": 0.12753678185261894,
+        "B_SUB_OR_DEC": 0.20577869931733492
+      },
+      "candidate_joint_reconciled_shadow": {
+        "A_DEC": 0.32668599333082804,
+        "A_KO": 0.19371863625750282,
+        "A_SUB": 0.18182234793923943,
+        "B_DEC": 0.17023624061981066,
+        "B_KO": 0.09199432315509468,
+        "B_SUB": 0.03554245869752425
+      },
+      "candidate_not_an_official_stage_a_or_stage_b_pick": true,
+      "current_joint_original_frozen_unchanged": {
+        "A_DEC": 0.20662282829514134,
+        "A_KO": 0.2556518834241825,
+        "A_SUB": 0.23995226580825818,
+        "B_DEC": 0.11617258452106295,
+        "B_KO": 0.13099130408754797,
+        "B_SUB": 0.050609133863807075
+      },
+      "fight": "Austin Bashi vs Carlos Calderon",
+      "fight_no": 4,
+      "finish_probability_gap_pp": 17.412682113443445,
+      "large_gap_over_15pp": true,
+      "method_props_price_gate": "BLOCKED_UNTIL_PROSPECTIVE_COHERENCE_CALIBRATION",
+      "raw_exact_fighter_finish_exceeds_GTD_NO": [],
+      "reference_pick": "Austin Bashi",
+      "reference_win_probability": 0.702226977527582,
+      "timing_hazard_finish_probability": 0.5030777660493613,
+      "timing_props_price_gate": "BLOCKED_PENDING_FAMILY_RECONCILIATION",
+      "unreconciled_method_finish_probability": 0.6772045871837957
+    },
+    {
+      "candidate_double_chance_reconciled_shadow": {
+        "A_KO_OR_DEC": 0.27867986071625284,
+        "A_KO_OR_SUB": 0.09437877627710738,
+        "A_SUB_OR_DEC": 0.197147752434307,
+        "B_KO_OR_DEC": 0.40368218546046747,
+        "B_KO_OR_SUB": 0.35842689792764654,
+        "B_SUB_OR_DEC": 0.6676845271842188
+      },
+      "candidate_joint_reconciled_shadow": {
+        "A_DEC": 0.19072441843672622,
+        "A_KO": 0.08795544227952662,
+        "A_SUB": 0.006423333997580759,
+        "B_DEC": 0.35646990735851986,
+        "B_KO": 0.047212278101947606,
+        "B_SUB": 0.3112146198256989
+      },
+      "candidate_not_an_official_stage_a_or_stage_b_pick": true,
+      "current_joint_original_frozen_unchanged": {
+        "A_DEC": 0.09216814517897394,
+        "A_KO": 0.17980406488018802,
+        "A_SUB": 0.013130984654453422,
+        "B_DEC": 0.13608174297879846,
+        "B_KO": 0.07624198364928032,
+        "B_SUB": 0.5025730786583059
+      },
+      "fight": "Jose Delano vs Murtazali Magomedov",
+      "fight_no": 5,
+      "finish_probability_gap_pp": 31.894443763747372,
+      "large_gap_over_15pp": true,
+      "method_props_price_gate": "BLOCKED_UNTIL_PROSPECTIVE_COHERENCE_CALIBRATION",
+      "raw_exact_fighter_finish_exceeds_GTD_NO": [
+        "B_SUB"
+      ],
+      "reference_pick": "Murtazali Magomedov",
+      "reference_win_probability": 0.7148968052863847,
+      "timing_hazard_finish_probability": 0.4528056742047539,
+      "timing_props_price_gate": "BLOCKED_PENDING_FAMILY_RECONCILIATION",
+      "unreconciled_method_finish_probability": 0.7717501118422276
+    },
+    {
+      "candidate_double_chance_reconciled_shadow": {
+        "A_KO_OR_DEC": 0.47323952168452954,
+        "A_KO_OR_SUB": 0.17542475935608254,
+        "A_SUB_OR_DEC": 0.5010512922194799,
+        "B_KO_OR_DEC": 0.36343623930605273,
+        "B_KO_OR_SUB": 0.1735411172975853,
+        "B_SUB_OR_DEC": 0.31330707013626996
+      },
+      "candidate_joint_reconciled_shadow": {
+        "A_DEC": 0.3994330272739634,
+        "A_KO": 0.07380649441056615,
+        "A_SUB": 0.1016182649455164,
+        "B_DEC": 0.2516010960723687,
+        "B_KO": 0.11183514323368401,
+        "B_SUB": 0.06170597406390129
+      },
+      "candidate_not_an_official_stage_a_or_stage_b_pick": true,
+      "current_joint_original_frozen_unchanged": {
+        "A_DEC": 0.30118979561179404,
+        "A_KO": 0.11514038909659755,
+        "A_SUB": 0.15852760192161186,
+        "B_DEC": 0.1751712598977494,
+        "B_KO": 0.16108884062266152,
+        "B_SUB": 0.08888211284958568
+      },
+      "fight": "Karine Silva vs Gabriella Fernandes",
+      "fight_no": 6,
+      "finish_probability_gap_pp": 17.467306783678872,
+      "large_gap_over_15pp": true,
+      "method_props_price_gate": "BLOCKED_UNTIL_PROSPECTIVE_COHERENCE_CALIBRATION",
+      "raw_exact_fighter_finish_exceeds_GTD_NO": [],
+      "reference_pick": "Karine Silva",
+      "reference_win_probability": 0.5748577866300034,
+      "timing_hazard_finish_probability": 0.34896587665366785,
+      "timing_props_price_gate": "BLOCKED_PENDING_FAMILY_RECONCILIATION",
+      "unreconciled_method_finish_probability": 0.5236389444904566
+    },
+    {
+      "candidate_double_chance_reconciled_shadow": {
+        "A_KO_OR_DEC": 0.493418425924326,
+        "A_KO_OR_SUB": 0.4328405006455186,
+        "A_SUB_OR_DEC": 0.19032717427411722,
+        "B_KO_OR_DEC": 0.40844114144210686,
+        "B_KO_OR_SUB": 0.24823411200576054,
+        "B_SUB_OR_DEC": 0.2267386457081707
+      },
+      "candidate_joint_reconciled_shadow": {
+        "A_DEC": 0.1254525497764623,
+        "A_KO": 0.3679658761478637,
+        "A_SUB": 0.06487462449765492,
+        "B_DEC": 0.1934728375722585,
+        "B_KO": 0.21496830386984833,
+        "B_SUB": 0.033265808135912206
+      },
+      "candidate_not_an_official_stage_a_or_stage_b_pick": true,
+      "current_joint_original_frozen_unchanged": {
+        "A_DEC": 0.08617778221032163,
+        "A_KO": 0.4013540970662994,
+        "A_SUB": 0.07076117114541491,
+        "B_DEC": 0.14542956558722767,
+        "B_KO": 0.2565733057268389,
+        "B_SUB": 0.039704078263897546
+      },
+      "fight": "Gabriel Lorenco vs Thomas Petersen",
+      "fight_no": 7,
+      "finish_probability_gap_pp": 8.731803955117146,
+      "large_gap_over_15pp": false,
+      "method_props_price_gate": "BLOCKED_UNTIL_PROSPECTIVE_COHERENCE_CALIBRATION",
+      "raw_exact_fighter_finish_exceeds_GTD_NO": [],
+      "reference_pick": "Gabriel Lorenco",
+      "reference_win_probability": 0.5582930504220359,
+      "timing_hazard_finish_probability": 0.6810746126512792,
+      "timing_props_price_gate": "INDEPENDENT_TIMING_MODEL_ONLY_NOT_PRICE_ACCEPTED",
+      "unreconciled_method_finish_probability": 0.7683926522024507
+    },
+    {
+      "candidate_double_chance_reconciled_shadow": {
+        "A_KO_OR_DEC": 0.6179536073772987,
+        "A_KO_OR_SUB": 0.41276622824483666,
+        "A_SUB_OR_DEC": 0.21799507309355087,
+        "B_KO_OR_DEC": 0.3000292067895989,
+        "B_KO_OR_SUB": 0.22915044623891506,
+        "B_SUB_OR_DEC": 0.22210543825579998
+      },
+      "candidate_joint_reconciled_shadow": {
+        "A_DEC": 0.2115912261130064,
+        "A_KO": 0.4063623812642922,
+        "A_SUB": 0.0064038469805444646,
+        "B_DEC": 0.1464920994032419,
+        "B_KO": 0.15353710738635698,
+        "B_SUB": 0.07561333885255808
+      },
+      "candidate_not_an_official_stage_a_or_stage_b_pick": true,
+      "current_joint_original_frozen_unchanged": {
+        "A_DEC": 0.1100994884719775,
+        "A_KO": 0.5062795289486155,
+        "A_SUB": 0.007978436937695812,
+        "B_DEC": 0.07915965708273986,
+        "B_KO": 0.1986516973719318,
+        "B_SUB": 0.09783119118703953
+      },
+      "fight": "Keiichiro Nakamura vs Ollie Schmid",
+      "fight_no": 8,
+      "finish_probability_gap_pp": 16.882417996153098,
+      "large_gap_over_15pp": true,
+      "method_props_price_gate": "BLOCKED_UNTIL_PROSPECTIVE_COHERENCE_CALIBRATION",
+      "raw_exact_fighter_finish_exceeds_GTD_NO": [],
+      "reference_pick": "Keiichiro Nakamura",
+      "reference_win_probability": 0.6243574543582888,
+      "timing_hazard_finish_probability": 0.6419166744837517,
+      "timing_props_price_gate": "BLOCKED_PENDING_FAMILY_RECONCILIATION",
+      "unreconciled_method_finish_probability": 0.8107408544452827
+    },
+    {
+      "candidate_double_chance_reconciled_shadow": {
+        "A_KO_OR_DEC": 0.5570237083357008,
+        "A_KO_OR_SUB": 0.24498395105179366,
+        "A_SUB_OR_DEC": 0.41441466571037655,
+        "B_KO_OR_DEC": 0.3314294567735009,
+        "B_KO_OR_SUB": 0.23827194849977873,
+        "B_SUB_OR_DEC": 0.21387626962884942
+      },
+      "candidate_joint_reconciled_shadow": {
+        "A_DEC": 0.3632272114971419,
+        "A_KO": 0.19379649683855896,
+        "A_SUB": 0.05118745421323469,
+        "B_DEC": 0.15351688895128582,
+        "B_KO": 0.1779125678222151,
+        "B_SUB": 0.06035938067756362
+      },
+      "candidate_not_an_official_stage_a_or_stage_b_pick": true,
+      "current_joint_original_frozen_unchanged": {
+        "A_DEC": 0.26144603425615176,
+        "A_KO": 0.27431130406851545,
+        "A_SUB": 0.07245382422406142,
+        "B_DEC": 0.09668582155135434,
+        "B_KO": 0.2203471103560602,
+        "B_SUB": 0.07475590554385697
+      },
+      "fight": "Mitch Raposo vs Marcos Degli",
+      "fight_no": 9,
+      "finish_probability_gap_pp": 15.861224464092171,
+      "large_gap_over_15pp": true,
+      "method_props_price_gate": "BLOCKED_UNTIL_PROSPECTIVE_COHERENCE_CALIBRATION",
+      "raw_exact_fighter_finish_exceeds_GTD_NO": [],
+      "reference_pick": "Mitch Raposo",
+      "reference_win_probability": 0.6082111625487285,
+      "timing_hazard_finish_probability": 0.48325589955157233,
+      "timing_props_price_gate": "BLOCKED_PENDING_FAMILY_RECONCILIATION",
+      "unreconciled_method_finish_probability": 0.641868144192494
+    },
+    {
+      "candidate_double_chance_reconciled_shadow": {
+        "A_KO_OR_DEC": 0.13960788063606253,
+        "A_KO_OR_SUB": 0.025556579789188467,
+        "A_SUB_OR_DEC": 0.12088963826360648,
+        "B_KO_OR_DEC": 0.8255819904781216,
+        "B_KO_OR_SUB": 0.4081646458537479,
+        "B_SUB_OR_DEC": 0.48019926497927284
+      },
+      "candidate_joint_reconciled_shadow": {
+        "A_DEC": 0.11747046955524026,
+        "A_KO": 0.02213741108082225,
+        "A_SUB": 0.0034191687083662153,
+        "B_DEC": 0.4488083048018233,
+        "B_KO": 0.3767736856762984,
+        "B_SUB": 0.03139096017744952
+      },
+      "candidate_not_an_official_stage_a_or_stage_b_pick": true,
+      "current_joint_original_frozen_unchanged": {
+        "A_DEC": 0.05355970017977709,
+        "A_KO": 0.07749767391041198,
+        "A_SUB": 0.011969675254176443,
+        "B_DEC": 0.10735300994923137,
+        "B_KO": 0.6919684759213605,
+        "B_SUB": 0.0576514647850427
+      },
+      "fight": "Priscila Cachoeira vs Nina Milosevic",
+      "fight_no": 10,
+      "finish_probability_gap_pp": 40.53660642280552,
+      "large_gap_over_15pp": true,
+      "method_props_price_gate": "BLOCKED_UNTIL_PROSPECTIVE_COHERENCE_CALIBRATION",
+      "raw_exact_fighter_finish_exceeds_GTD_NO": [
+        "B_KO"
+      ],
+      "reference_pick": "Nina Milosevic",
+      "reference_win_probability": 0.8569729506556345,
+      "timing_hazard_finish_probability": 0.43372122564293636,
+      "timing_props_price_gate": "BLOCKED_PENDING_FAMILY_RECONCILIATION",
+      "unreconciled_method_finish_probability": 0.8390872898709916
+    },
+    {
+      "candidate_double_chance_reconciled_shadow": {
+        "A_KO_OR_DEC": 0.27074758796338594,
+        "A_KO_OR_SUB": 0.30143379848828916,
+        "A_SUB_OR_DEC": 0.3796136287096451,
+        "B_KO_OR_DEC": 0.5173921722572091,
+        "B_KO_OR_SUB": 0.2826860731305735,
+        "B_SUB_OR_DEC": 0.24812673945089694
+      },
+      "candidate_joint_reconciled_shadow": {
+        "A_DEC": 0.17446370909237097,
+        "A_KO": 0.096283878871015,
+        "A_SUB": 0.20514991961727416,
+        "B_DEC": 0.2414164192887663,
+        "B_KO": 0.27597575296844284,
+        "B_SUB": 0.006710320162130644
+      },
+      "candidate_not_an_official_stage_a_or_stage_b_pick": true,
+      "current_joint_original_frozen_unchanged": {
+        "A_DEC": 0.091108753821554,
+        "A_KO": 0.12290908963651245,
+        "A_SUB": 0.26187966412260383,
+        "B_DEC": 0.13569748358773875,
+        "B_KO": 0.3791851631810016,
+        "B_SUB": 0.00921984565058954
+      },
+      "fight": "Billy Elekana vs Lucas Fernando",
+      "fight_no": 11,
+      "finish_probability_gap_pp": 18.907389097184467,
+      "large_gap_over_15pp": true,
+      "method_props_price_gate": "BLOCKED_UNTIL_PROSPECTIVE_COHERENCE_CALIBRATION",
+      "raw_exact_fighter_finish_exceeds_GTD_NO": [],
+      "reference_pick": "Lucas Fernando",
+      "reference_win_probability": 0.5241024924193298,
+      "timing_hazard_finish_probability": 0.5841198716188627,
+      "timing_props_price_gate": "BLOCKED_PENDING_FAMILY_RECONCILIATION",
+      "unreconciled_method_finish_probability": 0.7731937625907074
+    },
+    {
+      "candidate_double_chance_reconciled_shadow": {
+        "A_KO_OR_DEC": 0.3872139572965896,
+        "A_KO_OR_SUB": 0.07936848619774828,
+        "A_SUB_OR_DEC": 0.3425048195899857,
+        "B_KO_OR_DEC": 0.4852430592731484,
+        "B_KO_OR_SUB": 0.29746228838029554,
+        "B_SUB_OR_DEC": 0.4082073892622324
+      },
+      "candidate_joint_reconciled_shadow": {
+        "A_DEC": 0.3251751453444135,
+        "A_KO": 0.062038811952176115,
+        "A_SUB": 0.017329674245572163,
+        "B_DEC": 0.29799408007754263,
+        "B_KO": 0.1872489791956058,
+        "B_SUB": 0.11021330918468975
+      },
+      "candidate_not_an_official_stage_a_or_stage_b_pick": true,
+      "current_joint_original_frozen_unchanged": {
+        "A_DEC": 0.2151370217526571,
+        "A_KO": 0.14805071395617939,
+        "A_SUB": 0.04135589583280177,
+        "B_DEC": 0.12943047503243973,
+        "B_KO": 0.2933577674597912,
+        "B_SUB": 0.17266812596613088
+      },
+      "fight": "Davey Grant vs Elijah Smith",
+      "fight_no": 12,
+      "finish_probability_gap_pp": 27.86017286368594,
+      "large_gap_over_15pp": true,
+      "method_props_price_gate": "BLOCKED_UNTIL_PROSPECTIVE_COHERENCE_CALIBRATION",
+      "raw_exact_fighter_finish_exceeds_GTD_NO": [],
+      "reference_pick": "Elijah Smith",
+      "reference_win_probability": 0.5954563684583618,
+      "timing_hazard_finish_probability": 0.3768307745780438,
+      "timing_props_price_gate": "BLOCKED_PENDING_FAMILY_RECONCILIATION",
+      "unreconciled_method_finish_probability": 0.6554325032149032
+    },
+    {
+      "candidate_double_chance_reconciled_shadow": {
+        "A_KO_OR_DEC": 0.5634339984585788,
+        "A_KO_OR_SUB": 0.2783697627985432,
+        "A_SUB_OR_DEC": 0.6741194798670831,
+        "B_KO_OR_DEC": 0.20366485156435146,
+        "B_KO_OR_SUB": 0.09263948460690133,
+        "B_SUB_OR_DEC": 0.18777242270454214
+      },
+      "candidate_joint_reconciled_shadow": {
+        "A_DEC": 0.47959185776355934,
+        "A_KO": 0.0838421406950195,
+        "A_SUB": 0.1945276221035237,
+        "B_DEC": 0.14939889483099614,
+        "B_KO": 0.05426595673335532,
+        "B_SUB": 0.03837352787354601
+      },
+      "candidate_not_an_official_stage_a_or_stage_b_pick": true,
+      "current_joint_original_frozen_unchanged": {
+        "A_DEC": 0.40679186590577465,
+        "A_KO": 0.1057687576471389,
+        "A_SUB": 0.2454009970091811,
+        "B_DEC": 0.12591484215440374,
+        "B_KO": 0.06802234356862154,
+        "B_SUB": 0.048101193714880024
+      },
+      "fight": "Tatiana Suarez vs Virna Jandiroba",
+      "fight_no": 13,
+      "finish_probability_gap_pp": 9.628404453437705,
+      "large_gap_over_15pp": false,
+      "method_props_price_gate": "BLOCKED_UNTIL_PROSPECTIVE_COHERENCE_CALIBRATION",
+      "raw_exact_fighter_finish_exceeds_GTD_NO": [],
+      "reference_pick": "Tatiana Suarez",
+      "reference_win_probability": 0.7579616205620947,
+      "timing_hazard_finish_probability": 0.3710092474054445,
+      "timing_props_price_gate": "INDEPENDENT_TIMING_MODEL_ONLY_NOT_PRICE_ACCEPTED",
+      "unreconciled_method_finish_probability": 0.46729329193982155
+    },
+    {
+      "candidate_double_chance_reconciled_shadow": {
+        "A_KO_OR_DEC": 0.6198595856483146,
+        "A_KO_OR_SUB": 0.4859032544369528,
+        "A_SUB_OR_DEC": 0.16990441899680234,
+        "B_KO_OR_DEC": 0.34292464353840924,
+        "B_KO_OR_SUB": 0.28787966881702204,
+        "B_SUB_OR_DEC": 0.0935284285624989
+      },
+      "candidate_joint_reconciled_shadow": {
+        "A_DEC": 0.15193037510408205,
+        "A_KO": 0.46792921054423253,
+        "A_SUB": 0.017974043892720292,
+        "B_DEC": 0.07428670164194305,
+        "B_KO": 0.26863794189646617,
+        "B_SUB": 0.01924172692055586
+      },
+      "candidate_not_an_official_stage_a_or_stage_b_pick": true,
+      "current_joint_original_frozen_unchanged": {
+        "A_DEC": 0.10557382265025884,
+        "A_KO": 0.5125709880898451,
+        "A_SUB": 0.019688818800917777,
+        "B_DEC": 0.050945574422590394,
+        "B_KO": 0.2904189603460166,
+        "B_SUB": 0.020801835690371258
+      },
+      "fight": "Waldo Cortes Acosta vs Johnny Walker",
+      "fight_no": 14,
+      "finish_probability_gap_pp": 6.969767967317586,
+      "large_gap_over_15pp": false,
+      "method_props_price_gate": "BLOCKED_UNTIL_PROSPECTIVE_COHERENCE_CALIBRATION",
+      "raw_exact_fighter_finish_exceeds_GTD_NO": [],
+      "reference_pick": "Waldo Cortes Acosta",
+      "reference_win_probability": 0.6378336295410217,
+      "timing_hazard_finish_probability": 0.7737829232539749,
+      "timing_props_price_gate": "INDEPENDENT_TIMING_MODEL_ONLY_NOT_PRICE_ACCEPTED",
+      "unreconciled_method_finish_probability": 0.8434806029271508
+    }
+  ],
+  "generated_at_utc": "2026-11-06T17:29:30.943576+00:00",
+  "odds_used": false,
+  "policy": {
+    "all_exact_method_market_prices_blocked": true,
+    "independent_timing_market_family_requires_own_prospective_checks": true,
+    "new_official_method_picks": 0,
+    "promoted_model": false,
+    "reason": "Probability coherence fixes mathematical compatibility only. It is NOT evidence of predictive calibration or EV.",
+    "reconciled_shadow_prices_playable": false,
+    "severe_gap_threshold_pp": 15
+  },
+  "source_frozen_stage_a_sha256": "70fefe546831de93d06a09b8347411fd387d7d09f98ca03bc56adfd921e3c68b",
+  "source_raw_model_sha256": "6b9c19acaab0b6fd2be2b43df72d5a0f516e92b9ebfb4dafa4260d3ed095aed2",
+  "stage_a_winner_and_props_untouched": true,
+  "status": "SHADOW_ONLY_METHOD_TIMING_COHERENCE_RECONCILIATION_BEFORE_PRICING"
+}

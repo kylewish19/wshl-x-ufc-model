@@ -1,0 +1,59 @@
+name: Publish sourced tactical UFC video scripts (no model narration)
+on:
+  workflow_dispatch:
+    inputs:
+      event_slug:
+        description: 'Research filename prefix, e.g. ufc334_2026-11-14'
+        required: false
+        type: string
+  push:
+    branches: [feature/historical-conditional-rates]
+    paths:
+      - 'research/*_tactical_video_research.json'
+      - 'src/wshlx_ufc/tactical_video.py'
+      - 'tools/generate_tactical_video_scripts.py'
+      - 'tests/test_tactical_video.py'
+      - '.github/workflows/publish-ufc-tactical-scripts.yml'
+permissions:
+  contents: write
+concurrency:
+  group: ufc-tactical-video-scripts
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11', cache: pip}
+      - name: Install
+        run: pip install -e '.[dev]'
+      - name: Regressions including locked 13 fight card
+        run: pytest -q
+      - name: Render researched event previews, no prediction changes
+        env:
+          SELECTED_SLUG: ${{ inputs.event_slug }}
+        run: |
+          set -euo pipefail
+          mapfile -t RESEARCH_FILES < <(find research -maxdepth 1 -type f -name '*_tactical_video_research.json' | sort)
+          for RESEARCH_FILE in "${RESEARCH_FILES[@]}"; do
+            SLUG="$(basename "${RESEARCH_FILE%_tactical_video_research.json}")"
+            if [ -n "$SELECTED_SLUG" ] && [ "$SLUG" != "$SELECTED_SLUG" ]; then continue; fi
+            [[ "$SLUG" =~ ^[a-z0-9]+_[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]] || { echo "Invalid slug $SLUG"; exit 1; }
+            LOCK="data/locks/$SLUG/stage_a_final_selection.json"
+            RAW="data/locks/$SLUG/stage_a_model_raw_three_view.json"
+            [ -f "$LOCK" ] && [ -f "$RAW" ] || { echo "Missing pre-price lock/raw: $SLUG"; exit 1; }
+            python tools/generate_tactical_video_scripts.py \
+              --stage-a "$LOCK" --raw "$RAW" --research "$RESEARCH_FILE" \
+              --markdown-out "reports/$SLUG/TACTICAL_VIDEO_SCRIPTS.md" \
+              --json-out "reports/$SLUG/TACTICAL_VIDEO_SCRIPTS.json"
+            git add "reports/$SLUG/TACTICAL_VIDEO_SCRIPTS.md" "reports/$SLUG/TACTICAL_VIDEO_SCRIPTS.json"
+          done
+          if git diff --cached --quiet; then echo 'No changes'; exit 0; fi
+          git config user.name 'WSHL_X model bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git commit -m 'reports: sourced UFC tactical videos; host reveals picks; stage A intact'
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

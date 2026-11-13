@@ -1,0 +1,39 @@
+name: Audit UFC334 Nov14 all 334 FanDuel snapshot market probabilities
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/historical-conditional-rates]
+    paths:
+      - "tools/audit_ufc334_fanduel_stage_b.py"
+      - ".github/workflows/audit-ufc334-all-334-fanduel-prices.yml"
+permissions:
+  contents: write
+concurrency:
+  group: audit-ufc334-all-334-prices
+  cancel-in-progress: true
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11", cache: "pip"}
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Audit all 334 original prices vs model and strict approval gates
+        run: PYTHONPATH=src:tools python tools/audit_ufc334_fanduel_stage_b.py
+      - name: Run regression tests
+        run: pytest -q
+      - name: Commit complete per-market price, breakeven, rawEV and approval audit
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/locks/ufc334_2026-11-14/stage_b_all_334_fanduel_prices_audit.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "audit: lock UFC334 all 334 FanDuel markets priced pre-fight, 310 modeled, no unsound approval"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

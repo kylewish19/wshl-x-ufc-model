@@ -1,0 +1,78 @@
+{
+  "event": "UFC 334: Gane vs Hokit",
+  "event_date": "2026-11-14",
+  "sportsbook": "FanDuel",
+  "status": "FULL_DISPLAYED_FIGHT_MARKETS_TRANSCRIBED_PENDING_OTHER_FIGHTS",
+  "fight_no": 4,
+  "a": "Jared Gordon",
+  "b": "Melquizael Costa",
+  "stage_a_locked": true,
+  "stage_a_final_selection_github_blob_sha": "564b8dbf2147f7a1cc839917ca3a4eb2d42ed63e",
+  "price_source": "User-supplied FanDuel screenshots in conversation, November 11, 2026 (4 images)",
+  "exact_quote_capture_timestamp_utc": null,
+  "collected_before_event_start": true,
+  "odds_used_in_stage_a": false,
+  "moneyline": {
+    "a": 285,
+    "b": -400
+  },
+  "method_of_victory": {
+    "a": {
+      "KO_TKO": 900,
+      "SUB": 2000,
+      "DEC": 550
+    },
+    "b": {
+      "KO_TKO": 160,
+      "SUB": 430,
+      "DEC": 270
+    },
+    "DRAW": 5000
+  },
+  "double_chance": {
+    "a": {
+      "KO_OR_SUB": 700,
+      "KO_OR_DEC": 330,
+      "SUB_OR_DEC": 450
+    },
+    "b": {
+      "KO_OR_SUB": -130,
+      "KO_OR_DEC": -180,
+      "SUB_OR_DEC": 120
+    },
+    "DRAW": 5000
+  },
+  "goes_distance": {
+    "YES": 146,
+    "NO": -188
+  },
+  "total_rounds": {
+    "threshold": 2.5,
+    "OVER": 116,
+    "UNDER": -142
+  },
+  "how_fight_ends": {
+    "KO_TKO": 115,
+    "SUB": 350,
+    "DEC": 135
+  },
+  "round_to_start": {
+    "2": {
+      "YES": -280,
+      "NO": 205
+    },
+    "3": {
+      "YES": -112,
+      "NO": -112
+    }
+  },
+  "market_count": 27,
+  "missing_markets": [
+    "Only Over/Under 2.5 displayed; no 1.5 alternate line",
+    "No exact finish-round market shown"
+  ],
+  "full_fight_pricing_complete": true,
+  "full_event_pricing_complete": false,
+  "used_for_price_comparison_yet": false,
+  "odds_freshness_note": "Screenshot prices may change; not a live re-verified quote or proof of a bet."
+}

@@ -1,0 +1,25 @@
+event_date,fight,fighter,opponent,actual_winner,actual_method,finish_round,duration_seconds,official_stats_fight_url,sig_landed,sig_attempted,kd_for,ground_landed,ground_attempted,td_landed,td_attempted,sub_att,ctrl_seconds
+2026-10-31,Francis Marshall vs. Dakota Hope,Francis Marshall,Dakota Hope,Dakota Hope,DEC,3,900.0,http://ufcstats.com/fight-details/b7f8e619c7d9a7de,25.0,61.0,0.0,0.0,1.0,1.0,5.0,0.0,94.0
+2026-10-31,Francis Marshall vs. Dakota Hope,Dakota Hope,Francis Marshall,Dakota Hope,DEC,3,900.0,http://ufcstats.com/fight-details/b7f8e619c7d9a7de,44.0,111.0,0.0,6.0,7.0,0.0,3.0,0.0,281.0
+2026-10-31,Jean-Paul Lebosnoyani vs. Farman Hasanov,Jean-Paul Lebosnoyani,Farman Hasanov,Jean-Paul Lebosnoyani,KO,3,731.0,http://ufcstats.com/fight-details/a7b3c1386172d083,104.0,186.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-31,Jean-Paul Lebosnoyani vs. Farman Hasanov,Farman Hasanov,Jean-Paul Lebosnoyani,Jean-Paul Lebosnoyani,KO,3,731.0,http://ufcstats.com/fight-details/a7b3c1386172d083,53.0,156.0,0.0,0.0,0.0,2.0,6.0,0.0,36.0
+2026-10-31,Julian Erosa vs. JeongYeong Lee,Julian Erosa,JeongYeong Lee,Julian Erosa,KO,1,91.0,http://ufcstats.com/fight-details/52d61656f77f6650,16.0,27.0,1.0,3.0,3.0,0.0,2.0,0.0,36.0
+2026-10-31,Julian Erosa vs. JeongYeong Lee,JeongYeong Lee,Julian Erosa,Julian Erosa,KO,1,91.0,http://ufcstats.com/fight-details/52d61656f77f6650,9.0,24.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0
+2026-10-31,Lucia Szabova vs. Tainara Lisboa,Lucia Szabova,Tainara Lisboa,Lucia Szabova,KO,3,800.0,http://ufcstats.com/fight-details/1bf2edb30de4c976,70.0,96.0,0.0,43.0,48.0,5.0,8.0,1.0,543.0
+2026-10-31,Lucia Szabova vs. Tainara Lisboa,Tainara Lisboa,Lucia Szabova,Lucia Szabova,KO,3,800.0,http://ufcstats.com/fight-details/1bf2edb30de4c976,14.0,26.0,0.0,0.0,0.0,1.0,9.0,1.0,133.0
+2026-10-31,Nick Klein vs. Joe Kropschot,Nick Klein,Joe Kropschot,Joe Kropschot,SUB,2,385.0,http://ufcstats.com/fight-details/f9bda28454d49c78,13.0,34.0,0.0,0.0,0.0,2.0,2.0,0.0,181.0
+2026-10-31,Nick Klein vs. Joe Kropschot,Joe Kropschot,Nick Klein,Joe Kropschot,SUB,2,385.0,http://ufcstats.com/fight-details/f9bda28454d49c78,17.0,24.0,0.0,0.0,0.0,1.0,1.0,3.0,107.0
+2026-10-31,Ode Osbourne vs. Cody Durden,Ode Osbourne,Cody Durden,Cody Durden,DEC,3,900.0,http://ufcstats.com/fight-details/b74a628c5fa4ce55,15.0,36.0,0.0,0.0,0.0,0.0,0.0,1.0,250.0
+2026-10-31,Ode Osbourne vs. Cody Durden,Cody Durden,Ode Osbourne,Cody Durden,DEC,3,900.0,http://ufcstats.com/fight-details/b74a628c5fa4ce55,35.0,47.0,0.0,27.0,32.0,6.0,8.0,1.0,411.0
+2026-10-31,Randy Brown vs. Jacobe Smith,Randy Brown,Jacobe Smith,Jacobe Smith,DEC,3,900.0,http://ufcstats.com/fight-details/d37d3af2529c3fd5,16.0,37.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-31,Randy Brown vs. Jacobe Smith,Jacobe Smith,Randy Brown,Jacobe Smith,DEC,3,900.0,http://ufcstats.com/fight-details/d37d3af2529c3fd5,40.0,66.0,0.0,22.0,29.0,3.0,3.0,0.0,533.0
+2026-10-31,Renato Moicano vs. Tom Nolan,Renato Moicano,Tom Nolan,Tom Nolan,KO,3,688.0,http://ufcstats.com/fight-details/6d7244be5589953c,9.0,12.0,0.0,0.0,0.0,3.0,5.0,1.0,437.0
+2026-10-31,Renato Moicano vs. Tom Nolan,Tom Nolan,Renato Moicano,Tom Nolan,KO,3,688.0,http://ufcstats.com/fight-details/6d7244be5589953c,69.0,92.0,1.0,38.0,44.0,1.0,1.0,0.0,70.0
+2026-10-31,Rodrigo Sezinando vs. Theodor Berggren,Rodrigo Sezinando,Theodor Berggren,Rodrigo Sezinando,KO,2,600.0,http://ufcstats.com/fight-details/8b2fcf7f83bf72b6,29.0,58.0,0.0,13.0,18.0,3.0,11.0,0.0,340.0
+2026-10-31,Rodrigo Sezinando vs. Theodor Berggren,Theodor Berggren,Rodrigo Sezinando,Rodrigo Sezinando,KO,2,600.0,http://ufcstats.com/fight-details/8b2fcf7f83bf72b6,18.0,37.0,0.0,1.0,1.0,0.0,0.0,0.0,120.0
+2026-10-31,Talita Alencar vs. Piera Rodriguez,Talita Alencar,Piera Rodriguez,Piera Rodriguez,DEC,3,900.0,http://ufcstats.com/fight-details/78b166a244a2b534,44.0,104.0,0.0,8.0,9.0,3.0,8.0,0.0,245.0
+2026-10-31,Talita Alencar vs. Piera Rodriguez,Piera Rodriguez,Talita Alencar,Piera Rodriguez,DEC,3,900.0,http://ufcstats.com/fight-details/78b166a244a2b534,89.0,190.0,0.0,0.0,0.0,0.0,2.0,0.0,76.0
+2026-10-31,Yana Santos vs. Luana Santos,Yana Santos,Luana Santos,Luana Santos,DEC,3,900.0,http://ufcstats.com/fight-details/d08ad0f685b82b5b,17.0,54.0,0.0,0.0,0.0,0.0,0.0,0.0,241.0
+2026-10-31,Yana Santos vs. Luana Santos,Luana Santos,Yana Santos,Luana Santos,DEC,3,900.0,http://ufcstats.com/fight-details/d08ad0f685b82b5b,15.0,34.0,0.0,0.0,0.0,5.0,16.0,0.0,455.0
+2026-10-31,Zach Reese vs. Mickey Gall,Zachary Reese,Mickey Gall,Zachary Reese,DEC,3,900.0,http://ufcstats.com/fight-details/b6cee8bf625cc566,110.0,201.0,0.0,0.0,0.0,0.0,1.0,0.0,10.0
+2026-10-31,Zach Reese vs. Mickey Gall,Mickey Gall,Zachary Reese,Zachary Reese,DEC,3,900.0,http://ufcstats.com/fight-details/b6cee8bf625cc566,67.0,138.0,0.0,0.0,0.0,0.0,2.0,0.0,1.0

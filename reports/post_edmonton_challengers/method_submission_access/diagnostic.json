@@ -1,0 +1,237 @@
+{
+  "chronological_evaluation": {
+    "calibrated_reference": {
+      "accuracy": 0.5247524752475248,
+      "actual": {
+        "DEC": 26,
+        "KO": 59,
+        "SUB": 16
+      },
+      "brier": 0.5619381166274783,
+      "calls": {
+        "DEC": 28,
+        "KO": 68,
+        "SUB": 5
+      },
+      "log_loss": 0.9290020537526033,
+      "n": 101,
+      "recall": {
+        "DEC": 0.3076923076923077,
+        "KO": 0.7288135593220338,
+        "SUB": 0.125
+      }
+    },
+    "delta_accuracy": -0.01980198019801982,
+    "delta_brier": 0.011280367584480588,
+    "delta_log_loss": 0.012071575794911693,
+    "delta_sub_recall": 0.0625,
+    "submission_access_candidate": {
+      "accuracy": 0.504950495049505,
+      "actual": {
+        "DEC": 26,
+        "KO": 59,
+        "SUB": 16
+      },
+      "brier": 0.5732184842119589,
+      "calls": {
+        "DEC": 24,
+        "KO": 64,
+        "SUB": 13
+      },
+      "log_loss": 0.941073629547515,
+      "n": 101,
+      "recall": {
+        "DEC": 0.3076923076923077,
+        "KO": 0.6779661016949152,
+        "SUB": 0.1875
+      }
+    }
+  },
+  "design": {
+    "access_features": [
+      "submission_attempt_interaction",
+      "td_access_interaction",
+      "control_interaction",
+      "offensive_wrestling_exposure_interaction"
+    ],
+    "calibration_ridge": 0.5,
+    "finish_head": "chronological MethodInterceptCalibrator; unchanged between comparison arms",
+    "odds_used": false,
+    "ridge": 10.0,
+    "sub_vs_ko_head": "strong-ridge offset logistic correction around calibrated SUB-vs-KO probability"
+  },
+  "edmonton_fold": {
+    "calibrated_reference": {
+      "accuracy": 0.6153846153846154,
+      "actual": {
+        "DEC": 1,
+        "KO": 7,
+        "SUB": 5
+      },
+      "brier": 0.5139836594256941,
+      "calls": {
+        "DEC": 4,
+        "KO": 8,
+        "SUB": 1
+      },
+      "log_loss": 0.9075145610276407,
+      "n": 13,
+      "recall": {
+        "DEC": 1.0,
+        "KO": 0.8571428571428571,
+        "SUB": 0.2
+      }
+    },
+    "submission_access_candidate": {
+      "accuracy": 0.6153846153846154,
+      "actual": {
+        "DEC": 1,
+        "KO": 7,
+        "SUB": 5
+      },
+      "brier": 0.48242467946681356,
+      "calls": {
+        "DEC": 3,
+        "KO": 9,
+        "SUB": 1
+      },
+      "log_loss": 0.8581526730342331,
+      "n": 13,
+      "recall": {
+        "DEC": 1.0,
+        "KO": 0.8571428571428571,
+        "SUB": 0.2
+      }
+    }
+  },
+  "folds": [
+    {
+      "access_coefficients_scaled": {
+        "control_interaction": 0.1749852957629765,
+        "offensive_wrestling_exposure_interaction": 0.21213127341374494,
+        "submission_attempt_interaction": -0.09128501651073374,
+        "td_access_interaction": 0.1198879235152779
+      },
+      "finish_offset": 0.38998385975441663,
+      "sub_offset": 0.3599949668397139,
+      "test_date": "2026-08-22T00:00:00+00:00",
+      "test_fights": 13,
+      "train_fights": 24,
+      "train_finishes": 15,
+      "train_submissions": 6
+    },
+    {
+      "access_coefficients_scaled": {
+        "control_interaction": 0.09502777675202186,
+        "offensive_wrestling_exposure_interaction": 0.14617746745469132,
+        "submission_attempt_interaction": -0.07817664759446502,
+        "td_access_interaction": 0.06678418175964744
+      },
+      "finish_offset": 0.6094748249943815,
+      "sub_offset": 0.12427699503197688,
+      "test_date": "2026-08-29T00:00:00+00:00",
+      "test_fights": 13,
+      "train_fights": 37,
+      "train_finishes": 25,
+      "train_submissions": 8
+    },
+    {
+      "access_coefficients_scaled": {
+        "control_interaction": 0.11840307812129708,
+        "offensive_wrestling_exposure_interaction": 0.2093418488829982,
+        "submission_attempt_interaction": -0.08106906917955295,
+        "td_access_interaction": 0.0821932697015229
+      },
+      "finish_offset": 0.7846450849005688,
+      "sub_offset": -0.11076712470885057,
+      "test_date": "2026-09-05T00:00:00+00:00",
+      "test_fights": 14,
+      "train_fights": 50,
+      "train_finishes": 35,
+      "train_submissions": 10
+    },
+    {
+      "access_coefficients_scaled": {
+        "control_interaction": 0.14340786016507354,
+        "offensive_wrestling_exposure_interaction": 0.1836446994708159,
+        "submission_attempt_interaction": -0.09972891763525957,
+        "td_access_interaction": 0.16560323334397176
+      },
+      "finish_offset": 0.6291824108456925,
+      "sub_offset": -0.1286633038115233,
+      "test_date": "2026-09-19T00:00:00+00:00",
+      "test_fights": 12,
+      "train_fights": 64,
+      "train_finishes": 43,
+      "train_submissions": 12
+    },
+    {
+      "access_coefficients_scaled": {
+        "control_interaction": 0.1321505635449075,
+        "offensive_wrestling_exposure_interaction": 0.19201146187215817,
+        "submission_attempt_interaction": -0.05694217074765641,
+        "td_access_interaction": 0.14750692750487912
+      },
+      "finish_offset": 0.5317442661493524,
+      "sub_offset": -0.2088723740537713,
+      "test_date": "2026-09-26T00:00:00+00:00",
+      "test_fights": 11,
+      "train_fights": 76,
+      "train_finishes": 50,
+      "train_submissions": 13
+    },
+    {
+      "access_coefficients_scaled": {
+        "control_interaction": 0.09407657952006322,
+        "offensive_wrestling_exposure_interaction": 0.21796247190824503,
+        "submission_attempt_interaction": 0.0033232187367900007,
+        "td_access_interaction": 0.14052708780120143
+      },
+      "finish_offset": 0.6204109170997335,
+      "sub_offset": -0.2982640012797309,
+      "test_date": "2026-10-03T00:00:00+00:00",
+      "test_fights": 14,
+      "train_fights": 87,
+      "train_finishes": 58,
+      "train_submissions": 15
+    },
+    {
+      "access_coefficients_scaled": {
+        "control_interaction": 0.07890976192937976,
+        "offensive_wrestling_exposure_interaction": 0.22806474224380027,
+        "submission_attempt_interaction": 0.04474301407958888,
+        "td_access_interaction": 0.15263234144286386
+      },
+      "finish_offset": 0.6834075237018213,
+      "sub_offset": -0.4998187385000567,
+      "test_date": "2026-10-10T00:00:00+00:00",
+      "test_fights": 11,
+      "train_fights": 101,
+      "train_finishes": 69,
+      "train_submissions": 15
+    },
+    {
+      "access_coefficients_scaled": {
+        "control_interaction": 0.050176461948756836,
+        "offensive_wrestling_exposure_interaction": 0.17587917469247605,
+        "submission_attempt_interaction": 0.08770707672095482,
+        "td_access_interaction": 0.03964191448157411
+      },
+      "finish_offset": 0.7561628727493466,
+      "sub_offset": -0.5185469918410329,
+      "test_date": "2026-10-17T00:00:00+00:00",
+      "test_fights": 13,
+      "train_fights": 112,
+      "train_finishes": 78,
+      "train_submissions": 17
+    }
+  ],
+  "generated_at_utc": "2026-10-20T21:38:40.666150+00:00",
+  "governance": {
+    "production_change": false,
+    "promotion_allowed_from_this_report": false,
+    "reason": "Access architecture was specified after Edmonton exposed a submission-recall weakness. This is retrospective development evidence only and must remain shadow until future frozen cards test it."
+  },
+  "source": "reports/v033_ufcedmonton_full_stats/clean125_oof_method_inputs_fullstats.csv",
+  "status": "POST_EDMONTON_SUBMISSION_ACCESS_SHADOW_DIAGNOSTIC"
+}

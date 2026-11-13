@@ -1,0 +1,325 @@
+{
+  "categories": {
+    "top_5_best_bets": [
+      {
+        "break_even_probability": 0.5,
+        "fight": "Jose Delano vs Murtazali Magomedov",
+        "fight_key": "josedelano|murtazalimagomedov",
+        "fight_no": 5,
+        "market": "Murtazali Magomedov ML",
+        "market_spec": {
+          "kind": "moneyline",
+          "side": "b"
+        },
+        "not_in_official_betting_grade": true,
+        "not_previously_frozen_official_stage_b_bet": true,
+        "original_stage_a_posture": "PASS",
+        "rank": 1,
+        "raw_current_probability": 0.7148968052863847,
+        "raw_current_probability_edge_pp": 21.489680528638466,
+        "raw_unadjusted_ev_per_unit": 0.4297936105727693,
+        "reasons_not_approved": [
+          "stage_a_research_pass"
+        ],
+        "research_notes": "All winner model views favor Magomedov, but the fight remains a research PASS due to tiny UFC samples.",
+        "screenshot_american_odds": 100,
+        "sportsbook": "FanDuel",
+        "status": "PASS_RESEARCH_ONLY_NOT_APPROVED_OR_BETTABLE",
+        "unified_shadow_probability": 0.6971392462888888
+      },
+      {
+        "break_even_probability": 0.3472222222222222,
+        "fight": "Jonny Parsons vs Jose Souza",
+        "fight_key": "jonnyparsons|josesouza",
+        "fight_no": 1,
+        "market": "Jonny Parsons ML",
+        "market_spec": {
+          "kind": "moneyline",
+          "side": "a"
+        },
+        "not_in_official_betting_grade": true,
+        "not_previously_frozen_official_stage_b_bet": true,
+        "original_stage_a_posture": "PASS",
+        "rank": 2,
+        "raw_current_probability": 0.661525640744948,
+        "raw_current_probability_edge_pp": 31.43034185227258,
+        "raw_unadjusted_ev_per_unit": 0.9051938453454503,
+        "reasons_not_approved": [
+          "stage_a_research_pass"
+        ],
+        "research_notes": "Three winner model views agree on Parsons, but the fighter's multiyear UFC absence and sparse opponent data bar promotion.",
+        "screenshot_american_odds": 188,
+        "sportsbook": "FanDuel",
+        "status": "PASS_RESEARCH_ONLY_NOT_APPROVED_OR_BETTABLE",
+        "unified_shadow_probability": 0.6174557875446999
+      },
+      {
+        "break_even_probability": 0.3472222222222222,
+        "fight": "Mitch Raposo vs Marcos Degli",
+        "fight_key": "marcosdegli|mitchraposo",
+        "fight_no": 9,
+        "market": "Mitch Raposo ML",
+        "market_spec": {
+          "kind": "moneyline",
+          "side": "a"
+        },
+        "not_in_official_betting_grade": true,
+        "not_previously_frozen_official_stage_b_bet": true,
+        "original_stage_a_posture": "PASS",
+        "rank": 3,
+        "raw_current_probability": 0.6082111625487285,
+        "raw_current_probability_edge_pp": 26.098894032650634,
+        "raw_unadjusted_ev_per_unit": 0.7516481481403381,
+        "reasons_not_approved": [
+          "stage_a_research_pass"
+        ],
+        "research_notes": "Three winner views favor Raposo; cannot promote because Degli has zero UFC fights in the frozen training set.",
+        "screenshot_american_odds": 188,
+        "sportsbook": "FanDuel",
+        "status": "PASS_RESEARCH_ONLY_NOT_APPROVED_OR_BETTABLE",
+        "unified_shadow_probability": 0.6455116160330533
+      },
+      {
+        "break_even_probability": 0.5238095238095238,
+        "fight": "Austin Bashi vs Carlos Calderon",
+        "fight_key": "austinbashi|carloscalderon",
+        "fight_no": 4,
+        "market": "OVER 1.5 rounds",
+        "market_spec": {
+          "direction": "OVER",
+          "kind": "total_rounds",
+          "threshold": 1.5
+        },
+        "not_in_official_betting_grade": true,
+        "not_previously_frozen_official_stage_b_bet": true,
+        "original_stage_a_posture": "PASS",
+        "rank": 4,
+        "raw_current_probability": 0.6722,
+        "raw_current_probability_edge_pp": 14.83904761904762,
+        "raw_unadjusted_ev_per_unit": 0.28329090909090915,
+        "reasons_not_approved": [
+          "stage_a_research_pass",
+          "sparse_ufc_history_blocks_timing",
+          "timing_and_method_finish_models_disagree_gt_15pp"
+        ],
+        "research_notes": "Both timing models estimate ~67%, but short-notice debutant opponent, sparse matchup data and finish-family disagreement block.",
+        "screenshot_american_odds": -110,
+        "sportsbook": "FanDuel",
+        "status": "PASS_RESEARCH_ONLY_NOT_APPROVED_OR_BETTABLE",
+        "unified_shadow_probability": 0.6718
+      },
+      {
+        "break_even_probability": 0.43103448275862066,
+        "fight": "Davey Grant vs Elijah Smith",
+        "fight_key": "daveygrant|elijahsmith",
+        "fight_no": 12,
+        "market": "Fight goes distance YES",
+        "market_spec": {
+          "kind": "goes_distance",
+          "outcome": "YES"
+        },
+        "not_in_official_betting_grade": true,
+        "not_previously_frozen_official_stage_b_bet": true,
+        "original_stage_a_posture": "LEAN",
+        "rank": 5,
+        "raw_current_probability": 0.6222,
+        "raw_current_probability_edge_pp": 19.11655172413793,
+        "raw_unadjusted_ev_per_unit": 0.443504,
+        "reasons_not_approved": [
+          "timing_and_method_finish_models_disagree_gt_15pp"
+        ],
+        "research_notes": "Timing current+unified view show an apparent edge, but the method-joint model contradicts finish timing by over 15pp; PASS.",
+        "screenshot_american_odds": 132,
+        "sportsbook": "FanDuel",
+        "status": "PASS_RESEARCH_ONLY_NOT_APPROVED_OR_BETTABLE",
+        "unified_shadow_probability": 0.5828
+      }
+    ],
+    "top_5_longshots": [
+      {
+        "break_even_probability": 0.29411764705882354,
+        "fight": "Tatiana Suarez vs Virna Jandiroba",
+        "fight_key": "tatianasuarez|virnajandiroba",
+        "fight_no": 13,
+        "market": "Fight goes distance NO",
+        "market_spec": {
+          "kind": "goes_distance",
+          "outcome": "NO"
+        },
+        "not_in_official_betting_grade": true,
+        "not_previously_frozen_official_stage_b_bet": true,
+        "original_stage_a_posture": "SIDE",
+        "rank": 1,
+        "raw_current_probability": 0.37749999999999995,
+        "raw_current_probability_edge_pp": 8.338235294117641,
+        "raw_unadjusted_ev_per_unit": 0.28349999999999975,
+        "reasons_not_approved": [
+          "current_timing_edge_below_12pp",
+          "unified_timing_shadow_edge_below_12pp"
+        ],
+        "research_notes": "Most established grappling matchup among longshot timing options. Current-model edge 8.3pp is BELOW the 12pp timing gate: PASS, not an approved bet.",
+        "screenshot_american_odds": 240,
+        "sportsbook": "FanDuel",
+        "status": "PASS_RESEARCH_ONLY_NOT_APPROVED_OR_BETTABLE",
+        "unified_shadow_probability": 0.35229999999999995
+      },
+      {
+        "break_even_probability": 0.30303030303030304,
+        "fight": "Austin Bashi vs Carlos Calderon",
+        "fight_key": "austinbashi|carloscalderon",
+        "fight_no": 4,
+        "market": "Fight goes distance YES",
+        "market_spec": {
+          "kind": "goes_distance",
+          "outcome": "YES"
+        },
+        "not_in_official_betting_grade": true,
+        "not_previously_frozen_official_stage_b_bet": true,
+        "original_stage_a_posture": "PASS",
+        "rank": 2,
+        "raw_current_probability": 0.4941,
+        "raw_current_probability_edge_pp": 19.106969696969696,
+        "raw_unadjusted_ev_per_unit": 0.6305299999999998,
+        "reasons_not_approved": [
+          "stage_a_research_pass",
+          "sparse_ufc_history_blocks_timing",
+          "timing_and_method_finish_models_disagree_gt_15pp"
+        ],
+        "research_notes": "Both timing views near 49%, but a short-notice UFC debutant and method/timing incoherence create high uncertainty: PASS.",
+        "screenshot_american_odds": 230,
+        "sportsbook": "FanDuel",
+        "status": "PASS_RESEARCH_ONLY_NOT_APPROVED_OR_BETTABLE",
+        "unified_shadow_probability": 0.4886
+      },
+      {
+        "break_even_probability": 0.2,
+        "fight": "Mantas Kondratavicius vs Andre Petroski",
+        "fight_key": "andrepetroski|mantaskondratavicius",
+        "fight_no": 3,
+        "market": "Fight goes distance YES",
+        "market_spec": {
+          "kind": "goes_distance",
+          "outcome": "YES"
+        },
+        "not_in_official_betting_grade": true,
+        "not_previously_frozen_official_stage_b_bet": true,
+        "original_stage_a_posture": "LEAN",
+        "rank": 3,
+        "raw_current_probability": 0.4276,
+        "raw_current_probability_edge_pp": 22.759999999999998,
+        "raw_unadjusted_ev_per_unit": 1.138,
+        "reasons_not_approved": [
+          "sparse_ufc_history_blocks_timing",
+          "timing_and_method_finish_models_disagree_gt_15pp"
+        ],
+        "research_notes": "Current and unified timing models agree on roughly 42%; one UFC bout for Kondratavicius and a severe finish mismatch: PASS.",
+        "screenshot_american_odds": 400,
+        "sportsbook": "FanDuel",
+        "status": "PASS_RESEARCH_ONLY_NOT_APPROVED_OR_BETTABLE",
+        "unified_shadow_probability": 0.4175
+      },
+      {
+        "break_even_probability": 0.21739130434782608,
+        "fight": "Jose Delano vs Murtazali Magomedov",
+        "fight_key": "josedelano|murtazalimagomedov",
+        "fight_no": 5,
+        "market": "Murtazali Magomedov by SUB",
+        "market_spec": {
+          "kind": "method",
+          "method": "SUB",
+          "side": "b"
+        },
+        "not_in_official_betting_grade": true,
+        "not_previously_frozen_official_stage_b_bet": true,
+        "original_stage_a_posture": "PASS",
+        "rank": 4,
+        "raw_current_probability": 0.5025730786583059,
+        "raw_current_probability_edge_pp": 28.518177431047988,
+        "raw_unadjusted_ev_per_unit": 1.3118361618282073,
+        "reasons_not_approved": [
+          "stage_a_research_pass",
+          "official_method_doublechance_family_blocked_by_stage_a_coherence"
+        ],
+        "research_notes": "All three conditional method views favor Magomedov submission, but each differs substantially; original fight PASS and exact-method family remains blocked.",
+        "screenshot_american_odds": 360,
+        "sportsbook": "FanDuel",
+        "status": "PASS_RESEARCH_ONLY_NOT_APPROVED_OR_BETTABLE",
+        "unified_shadow_probability": 0.3936974709565979
+      },
+      {
+        "break_even_probability": 0.17857142857142858,
+        "fight": "Jonny Parsons vs Jose Souza",
+        "fight_key": "jonnyparsons|josesouza",
+        "fight_no": 1,
+        "market": "Jonny Parsons by KO_TKO",
+        "market_spec": {
+          "kind": "method",
+          "method": "KO_TKO",
+          "side": "a"
+        },
+        "not_in_official_betting_grade": true,
+        "not_previously_frozen_official_stage_b_bet": true,
+        "original_stage_a_posture": "PASS",
+        "rank": 5,
+        "raw_current_probability": 0.5334379456729357,
+        "raw_current_probability_edge_pp": 35.48665171015071,
+        "raw_unadjusted_ev_per_unit": 1.9872524957684394,
+        "reasons_not_approved": [
+          "stage_a_research_pass",
+          "official_method_doublechance_family_blocked_by_stage_a_coherence"
+        ],
+        "research_notes": "All three conditional method views favor KO/TKO, but one UFC bout/long inactivity makes model's huge raw edge unreliable: PASS.",
+        "screenshot_american_odds": 460,
+        "sportsbook": "FanDuel",
+        "status": "PASS_RESEARCH_ONLY_NOT_APPROVED_OR_BETTABLE",
+        "unified_shadow_probability": 0.3770954224868017
+      }
+    ]
+  },
+  "compatible_same_fight_pairs": [
+    {
+      "best_bet": "OVER 1.5 rounds",
+      "can_both_win": true,
+      "correlated": true,
+      "fight_key": "austinbashi|carloscalderon",
+      "longshot": "Fight goes distance YES"
+    },
+    {
+      "best_bet": "Murtazali Magomedov ML",
+      "can_both_win": true,
+      "correlated": true,
+      "fight_key": "josedelano|murtazalimagomedov",
+      "longshot": "Murtazali Magomedov by SUB"
+    },
+    {
+      "best_bet": "Jonny Parsons ML",
+      "can_both_win": true,
+      "correlated": true,
+      "fight_key": "jonnyparsons|josesouza",
+      "longshot": "Jonny Parsons by KO_TKO"
+    }
+  ],
+  "distinct_fights_reviewed": 7,
+  "event": "UFC Fight Night: Cortes Acosta vs Walker",
+  "event_date": "2026-11-07",
+  "exact_fanduel_quote_timestamp_utc": null,
+  "fanduel_screenshot_sha256": "0da94c150da2708a3062cd071d676fa42835e58eff8bec8ea976cd18520be44d",
+  "full_price_audit_sha256": "96ed1cd3cda80054cf2f5ae6fdc82566b7fd4acb7fd82ab32645eafbe2f674c7",
+  "generated_at_utc": "2026-11-07T19:19:13.473515+00:00",
+  "input_price_freshness": "Previously shared FanDuel screenshots; not live/re-verified quotes",
+  "note": "All 10 options are explicitly PASS/research-only, none is an official wager. Actual placed bets not asserted. Freeze is prospective to results, not backdated before the initial FanDuel screens.",
+  "one_per_fight_within_each_tier": true,
+  "presented_research_candidates": {
+    "top_5_best_bets": 5,
+    "top_5_longshots": 5
+  },
+  "qualified_bets_in_either_category": 0,
+  "report_type": "POST_PRICE_RANKED_FANDUEL_TWO_TIER_RESEARCH_WATCHLIST",
+  "same_fight_cross_tier_allowed_only_if_outcomes_can_coexist": true,
+  "same_fight_exposure_warning": "Compatible is not independent; a loss can wipe out both. Do not parlay or force bets from PASS statuses.",
+  "selection_rule": "Analyst-triaged ranked research opportunities among 378 screenshot prices using frozen raw current+unified probabilities, source risk, method incoherence and line range; NOT an independently validated calibrated EV ranking and NOT an automatic model-learned preference.",
+  "source_quotes_count": 378,
+  "stage_a_or_original_stage_b_mutated": false,
+  "stage_a_original_sha256": "70fefe546831de93d06a09b8347411fd387d7d09f98ca03bc56adfd921e3c68b",
+  "stage_b_original_sha256": "df31642ce1465b3a9f26adf910ef465739452670ad59c199507549d5295f0599"
+}

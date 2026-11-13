@@ -1,0 +1,183 @@
+{
+  "status": "CAUSAL_CURRENT_STYLE_VS_HISTORICAL_OOF_RECONSTRUCTION",
+  "odds_used": false,
+  "source_cutoff": "2026-10-17",
+  "fold_unit": "calendar_year",
+  "training_rule": "strictly dates before fold year",
+  "min_train_fights": 800,
+  "folds": [
+    {
+      "year": 2008,
+      "current_train_fights": 832,
+      "current_test_fights": 201,
+      "historical_train_fights": 836,
+      "historical_test_fights": 201,
+      "aligned_winner_fights": 201
+    },
+    {
+      "year": 2009,
+      "current_train_fights": 1033,
+      "current_test_fights": 212,
+      "historical_train_fights": 1037,
+      "historical_test_fights": 213,
+      "aligned_winner_fights": 212
+    },
+    {
+      "year": 2010,
+      "current_train_fights": 1245,
+      "current_test_fights": 249,
+      "historical_train_fights": 1250,
+      "historical_test_fights": 250,
+      "aligned_winner_fights": 249
+    },
+    {
+      "year": 2011,
+      "current_train_fights": 1494,
+      "current_test_fights": 295,
+      "historical_train_fights": 1500,
+      "historical_test_fights": 295,
+      "aligned_winner_fights": 295
+    },
+    {
+      "year": 2012,
+      "current_train_fights": 1789,
+      "current_test_fights": 331,
+      "historical_train_fights": 1795,
+      "historical_test_fights": 333,
+      "aligned_winner_fights": 331
+    },
+    {
+      "year": 2013,
+      "current_train_fights": 2120,
+      "current_test_fights": 375,
+      "historical_train_fights": 2128,
+      "historical_test_fights": 376,
+      "aligned_winner_fights": 375
+    },
+    {
+      "year": 2014,
+      "current_train_fights": 2495,
+      "current_test_fights": 493,
+      "historical_train_fights": 2504,
+      "historical_test_fights": 494,
+      "aligned_winner_fights": 493
+    },
+    {
+      "year": 2015,
+      "current_train_fights": 2988,
+      "current_test_fights": 462,
+      "historical_train_fights": 2998,
+      "historical_test_fights": 464,
+      "aligned_winner_fights": 462
+    },
+    {
+      "year": 2016,
+      "current_train_fights": 3450,
+      "current_test_fights": 483,
+      "historical_train_fights": 3462,
+      "historical_test_fights": 483,
+      "aligned_winner_fights": 483
+    },
+    {
+      "year": 2017,
+      "current_train_fights": 3933,
+      "current_test_fights": 445,
+      "historical_train_fights": 3945,
+      "historical_test_fights": 446,
+      "aligned_winner_fights": 445
+    },
+    {
+      "year": 2018,
+      "current_train_fights": 4378,
+      "current_test_fights": 468,
+      "historical_train_fights": 4391,
+      "historical_test_fights": 469,
+      "aligned_winner_fights": 468
+    },
+    {
+      "year": 2019,
+      "current_train_fights": 4846,
+      "current_test_fights": 505,
+      "historical_train_fights": 4860,
+      "historical_test_fights": 506,
+      "aligned_winner_fights": 505
+    },
+    {
+      "year": 2020,
+      "current_train_fights": 5351,
+      "current_test_fights": 442,
+      "historical_train_fights": 5366,
+      "historical_test_fights": 444,
+      "aligned_winner_fights": 442
+    },
+    {
+      "year": 2021,
+      "current_train_fights": 5793,
+      "current_test_fights": 495,
+      "historical_train_fights": 5810,
+      "historical_test_fights": 497,
+      "aligned_winner_fights": 495
+    },
+    {
+      "year": 2022,
+      "current_train_fights": 6288,
+      "current_test_fights": 505,
+      "historical_train_fights": 6307,
+      "historical_test_fights": 506,
+      "aligned_winner_fights": 505
+    },
+    {
+      "year": 2023,
+      "current_train_fights": 6793,
+      "current_test_fights": 503,
+      "historical_train_fights": 6813,
+      "historical_test_fights": 504,
+      "aligned_winner_fights": 503
+    },
+    {
+      "year": 2024,
+      "current_train_fights": 7296,
+      "current_test_fights": 511,
+      "historical_train_fights": 7317,
+      "historical_test_fights": 513,
+      "aligned_winner_fights": 511
+    },
+    {
+      "year": 2025,
+      "current_train_fights": 7807,
+      "current_test_fights": 512,
+      "historical_train_fights": 7830,
+      "historical_test_fights": 513,
+      "aligned_winner_fights": 512
+    },
+    {
+      "year": 2026,
+      "current_train_fights": 8319,
+      "current_test_fights": 448,
+      "historical_train_fights": 8343,
+      "historical_test_fights": 449,
+      "aligned_winner_fights": 448
+    }
+  ],
+  "population": {
+    "winner_fights": 7935,
+    "method_fights": 7935,
+    "timing_fights": 7935,
+    "timing_market_rows": 41103,
+    "first_oof_year": 2008,
+    "last_oof_year": 2026,
+    "full_current_feature_fights": 8767,
+    "historical_backbone_fights": 8792
+  },
+  "architecture": {
+    "winner": "WinnerModel C=.25 on v0.27/v0.33 full-stat prefight features",
+    "method": "ConditionalMethodModel finish-vs-decision then sub-vs-KO; historical reconstruction intentionally excludes 2026-only intercept/residual calibration",
+    "timing": "DiscreteTimeHazardModel 30-second bins C=.10",
+    "historical": "conditional-rate historical winner/method/timing challengers refit inside each causal fold"
+  },
+  "governance": {
+    "production_change": false,
+    "promotion_allowed_from_this_report": false,
+    "reason": "This is a reconstructed historical OOF development study. Context families and architecture were designed with knowledge of later UFC history; future frozen prospective cards are still required for promotion."
+  }
+}

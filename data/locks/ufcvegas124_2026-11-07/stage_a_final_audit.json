@@ -1,0 +1,46 @@
+{
+  "event": "UFC Fight Night: Cortes Acosta vs Walker",
+  "event_date": "2026-11-07",
+  "fights": 14,
+  "freeze_type": "STAGE_A_ODDS_BLIND_WEIGH_IN_VERIFICATION_PENDING",
+  "governance": {
+    "challenger_promoted": false,
+    "current_retrained_shadows_fit_through": "2026-10-31",
+    "historical_shadow_only": true,
+    "material_late_change_audited": "Calderon for injured Brennan; short-notice heavyweight headliner",
+    "model_reference_weights_fit_through": "2026-09-12",
+    "odds_influenced_stage_a": false,
+    "official_reference_model_unchanged": true,
+    "oof_unified_shadow_only": true,
+    "oof_weights": {
+      "method_current": 0.375,
+      "timing_current": 0.75,
+      "winner_current": 0.3
+    },
+    "pr_1_merged": false,
+    "research_side_flips": 0
+  },
+  "historical_artifact_fitted_through": "2026-10-17",
+  "method_official_gate_policy": "NO EXACT METHOD OFFICIAL; keep descriptive class and props candidate only",
+  "odds_used": false,
+  "official_methods": [],
+  "passes": [
+    1,
+    4,
+    5,
+    7,
+    8,
+    9,
+    11,
+    14
+  ],
+  "raw_model_sha256": "6b9c19acaab0b6fd2be2b43df72d5a0f516e92b9ebfb4dafa4260d3ed095aed2",
+  "ref_frozen_vs_historical_not_retrained": true,
+  "shadow_side_disagreements": [
+    7,
+    14
+  ],
+  "side_flips_from_reference": 0,
+  "source_fighter_features_through": "2026-10-31",
+  "stage_a_frozen": true
+}
