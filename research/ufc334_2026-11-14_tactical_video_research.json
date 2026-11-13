@@ -110,9 +110,11 @@
       "source_urls": [
         "https://www.ufc.com/news/fight-fight-preview-polymarket-ufc-334-gane-vs-hokit",
         "https://www.ufc.com/athlete/chris-duncan?language_content_entity=en&page=1",
-        "https://www.ufc.com/athlete/drew-dober"
+        "https://www.ufc.com/athlete/drew-dober",
+        "https://drewdober.com/blog/how-to-fight-a-southpaw-in-mma/",
+        "https://ufcstats.com/fighter-details/519e4fe37ce9ff75"
       ],
-      "evidence_summary": "UFC profiles document Dober stoppages and Duncan chokes. 'Left hand' from widely known Dober southpaw stance but not in attached sourced material—requires extra confirmation before publishing.",
+      "evidence_summary": "UFC profiles document Dober knockouts, Duncan submission finishes and takedown attack. Dober's own published southpaw technique article and UFCStats confirm his left-hand power and stance.",
       "review_level": "PUBLIC_WRITTEN_SOURCE_RESEARCH_NOT_CONTINUOUS_FIGHT_VIDEO",
       "host_cue": "Now here are our WSHL_X winner, method, and timing picks."
     },
