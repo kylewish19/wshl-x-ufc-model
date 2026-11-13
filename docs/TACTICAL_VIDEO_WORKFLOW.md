@@ -148,3 +148,19 @@ Generate the new overlay with `tools/generate_consensus_video_card.py`.
 The resulting `reports/ufc334_2026-11-14/CONSENSUS_VIDEO_REVEAL.md` is for
 pick-reveal preparation; `TACTICAL_VIDEO_SCRIPTS.md` is for spoken matchup
 analysis. The script must never rewrite the model outcomes.
+
+
+## Public-facing script formatting (November 12, 2026)
+
+The **published spoken Markdown** `reports/<event>/TACTICAL_VIDEO_SCRIPTS.md`
+contains **only** the fight heading, tactical breakdown, pick-reveal transition
+and automatically populated winner, method and timing picks. Do not show
+`2/3 agreement`, `3/3 agreement`, sources, research notes, coherence/price
+warnings or internal grading metadata in the script.
+
+**Internal integrity is not discarded.** `research/<event>_tactical_video_research.json`
+retains source URLs, research notes and provenance; `TACTICAL_VIDEO_SCRIPTS.json`
+retains those plus 2-of-3/3-of-3 vote records and method/timing warnings.
+The presentation format is not permission to ignore those warnings or to
+claim sourced research was verified by full fight-tape review. Neither
+the original Stage A lock nor Stage B betting gates are changed.
