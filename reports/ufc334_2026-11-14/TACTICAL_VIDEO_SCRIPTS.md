@@ -5,7 +5,7 @@
 **How to use:** Read the tactical matchup section, then announce the
 automatically populated WSHL_X consensus winner, method, and timing.
 The tactical narration does not recite model names or probabilities.
-The selection block is 2/3 or 3/3 model agreement, not a betting approval.
+The public pick reveal omits vote counts; internal vote records remain available.
 
 **Fact-check status:** Written-source research drafts. These are NOT
 claims that complete fight tape was watched. The producer should verify
@@ -19,11 +19,11 @@ Samuel Sanches arrives with genuine stopping power: eight knockouts in eleven wi
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-**WSHL_X three-model consensus picks (host reveal):**
+**WSHL_X UFC Picks (host reveal):**
 
-- **Winner:** Samuel Sanches (2/3 agreement)
-- **Method:** Samuel Sanches by KO/TKO (2/3 agreement)
-- **Timing:** Over 1.5 rounds (3/3 agreement)
+- **Winner:** Samuel Sanches
+- **Method:** Samuel Sanches by KO/TKO
+- **Timing:** Over 1.5 rounds
 
 **Research-only notes:** Method/timing coherence warning — method NOT bet-approved; Original Stage A PASS remains PASS
 
@@ -44,11 +44,11 @@ Juan Diaz has shown he can finish in more than one way. He earned his contract w
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-**WSHL_X three-model consensus picks (host reveal):**
+**WSHL_X UFC Picks (host reveal):**
 
-- **Winner:** Juan Diaz (3/3 agreement)
-- **Method:** Juan Diaz by SUB (3/3 agreement)
-- **Timing:** Over 1.5 rounds (3/3 agreement)
+- **Winner:** Juan Diaz
+- **Method:** Juan Diaz by SUB
+- **Timing:** Over 1.5 rounds
 
 **Research-only notes:** Method/timing coherence warning — method NOT bet-approved; Original Stage A PASS remains PASS
 
@@ -69,11 +69,11 @@ Bia Mesquita's Brazilian jiu-jitsu résumé is exceptional, with ten world champ
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-**WSHL_X three-model consensus picks (host reveal):**
+**WSHL_X UFC Picks (host reveal):**
 
-- **Winner:** Bia Mesquita (2/3 agreement)
-- **Method:** Bia Mesquita by SUB (2/3 agreement)
-- **Timing:** Over 1.5 rounds (3/3 agreement)
+- **Winner:** Bia Mesquita
+- **Method:** Bia Mesquita by SUB
+- **Timing:** Over 1.5 rounds
 
 **Research-only notes:** Method/timing coherence warning — method NOT bet-approved; Original Stage A PASS remains PASS
 
@@ -93,11 +93,11 @@ Melquizael Costa has already shown his striking can hurt established UFC feather
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-**WSHL_X three-model consensus picks (host reveal):**
+**WSHL_X UFC Picks (host reveal):**
 
-- **Winner:** Melquizael Costa (3/3 agreement)
-- **Method:** Melquizael Costa by KO/TKO (2/3 agreement)
-- **Timing:** Over 1.5 rounds (3/3 agreement)
+- **Winner:** Melquizael Costa
+- **Method:** Melquizael Costa by KO/TKO
+- **Timing:** Over 1.5 rounds
 
 **Research-only notes:** Method/timing coherence warning — method NOT bet-approved
 
@@ -117,11 +117,11 @@ Donte Johnson's finishing power is real: he has seven knockout wins and recently
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-**WSHL_X three-model consensus picks (host reveal):**
+**WSHL_X UFC Picks (host reveal):**
 
-- **Winner:** Donte Johnson (3/3 agreement)
-- **Method:** Donte Johnson by KO/TKO (3/3 agreement)
-- **Timing:** Over 1.5 rounds (2/3 agreement)
+- **Winner:** Donte Johnson
+- **Method:** Donte Johnson by KO/TKO
+- **Timing:** Over 1.5 rounds
 
 **Research-only notes:** Editorial timing vote differs from original frozen timing: GTD_NO remains unchanged and graded separately
 
@@ -142,11 +142,11 @@ Terrance McKinney fights like someone who wants the finish immediately. He owns 
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-**WSHL_X three-model consensus picks (host reveal):**
+**WSHL_X UFC Picks (host reveal):**
 
-- **Winner:** Terrance McKinney (3/3 agreement)
-- **Method:** Terrance McKinney by KO/TKO (3/3 agreement)
-- **Timing:** Fight goes distance NO (3/3 agreement)
+- **Winner:** Terrance McKinney
+- **Method:** Terrance McKinney by KO/TKO
+- **Timing:** Fight goes distance NO
 
 **Research-only notes:** Consensus does not automatically approve a wager
 
@@ -167,11 +167,11 @@ Drew Dober's left hand is a real threat, as Michael Johnson found out when Dober
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-**WSHL_X three-model consensus picks (host reveal):**
+**WSHL_X UFC Picks (host reveal):**
 
-- **Winner:** Chris Duncan (3/3 agreement)
-- **Method:** Chris Duncan by SUB (2/3 agreement)
-- **Timing:** Over 1.5 rounds (3/3 agreement)
+- **Winner:** Chris Duncan
+- **Method:** Chris Duncan by SUB
+- **Timing:** Over 1.5 rounds
 
 **Research-only notes:** Method/timing coherence warning — method NOT bet-approved
 
@@ -192,11 +192,11 @@ Stephen Thompson can still be difficult to touch cleanly when he has room to use
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-**WSHL_X three-model consensus picks (host reveal):**
+**WSHL_X UFC Picks (host reveal):**
 
-- **Winner:** Charles Radtke (3/3 agreement)
-- **Method:** Charles Radtke by KO/TKO (2/3 agreement)
-- **Timing:** Over 1.5 rounds (3/3 agreement)
+- **Winner:** Charles Radtke
+- **Method:** Charles Radtke by KO/TKO
+- **Timing:** Over 1.5 rounds
 
 **Research-only notes:** Consensus does not automatically approve a wager
 
@@ -216,11 +216,11 @@ Bilal Hasan has built momentum by ending fights emphatically. He knocked out Mri
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-**WSHL_X three-model consensus picks (host reveal):**
+**WSHL_X UFC Picks (host reveal):**
 
-- **Winner:** Bilal Hasan (3/3 agreement)
-- **Method:** Bilal Hasan by KO/TKO (3/3 agreement)
-- **Timing:** Fight goes distance NO (3/3 agreement)
+- **Winner:** Bilal Hasan
+- **Method:** Bilal Hasan by KO/TKO
+- **Timing:** Fight goes distance NO
 
 **Research-only notes:** Original Stage A PASS remains PASS
 
@@ -240,11 +240,11 @@ Uroš Medić is coming into this fight with four straight first-round knockouts,
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-**WSHL_X three-model consensus picks (host reveal):**
+**WSHL_X UFC Picks (host reveal):**
 
-- **Winner:** Uros Medic (3/3 agreement)
-- **Method:** Uros Medic by KO/TKO (3/3 agreement)
-- **Timing:** Fight goes distance NO (3/3 agreement)
+- **Winner:** Uros Medic
+- **Method:** Uros Medic by KO/TKO
+- **Timing:** Fight goes distance NO
 
 **Research-only notes:** Original Stage A PASS remains PASS
 
@@ -264,11 +264,11 @@ Yousri Belgaroui is more than just a tall kickboxer. He's brought his range cont
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-**WSHL_X three-model consensus picks (host reveal):**
+**WSHL_X UFC Picks (host reveal):**
 
-- **Winner:** Yousri Belgaroui (2/3 agreement)
-- **Method:** Yousri Belgaroui by KO/TKO (2/3 agreement)
-- **Timing:** Over 1.5 rounds (2/3 agreement)
+- **Winner:** Yousri Belgaroui
+- **Method:** Yousri Belgaroui by KO/TKO
+- **Timing:** Over 1.5 rounds
 
 **Research-only notes:** Method/timing coherence warning — method NOT bet-approved; Original Stage A PASS remains PASS
 
@@ -289,11 +289,11 @@ Kayla Harrison's path starts with the clinch. A two-time Olympic judo champion, 
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-**WSHL_X three-model consensus picks (host reveal):**
+**WSHL_X UFC Picks (host reveal):**
 
-- **Winner:** Kayla Harrison (3/3 agreement)
-- **Method:** Kayla Harrison by SUB (2/3 agreement)
-- **Timing:** Over 1.5 rounds (2/3 agreement)
+- **Winner:** Kayla Harrison
+- **Method:** Kayla Harrison by SUB
+- **Timing:** Over 1.5 rounds
 
 **Research-only notes:** Original Stage A PASS remains PASS
 
@@ -314,11 +314,11 @@ Ciryl Gane has proved his striking works against elite heavyweights, most recent
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-**WSHL_X three-model consensus picks (host reveal):**
+**WSHL_X UFC Picks (host reveal):**
 
-- **Winner:** Ciryl Gane (2/3 agreement)
-- **Method:** Ciryl Gane by KO/TKO (2/3 agreement)
-- **Timing:** Fight goes distance NO (3/3 agreement)
+- **Winner:** Ciryl Gane
+- **Method:** Ciryl Gane by KO/TKO
+- **Timing:** Fight goes distance NO
 
 **Research-only notes:** Original Stage A PASS remains PASS
 
