@@ -14,7 +14,7 @@ def main():
     a = p.parse_args()
     card = create_reports(a.stage_a, a.research, a.markdown_out, a.json_out, a.raw)
     print(f"{card['fight_count']} sourced tactical previews written. No locked pick changed.")
-    print("Host, not auto-narration, reveals winner/method/timing selections.")
+    print("Winner, fighter+method and timing picks automatically populated from frozen 2-of-3 consensus; host reads them after the tactical analysis.")
 
 
 if __name__ == "__main__":
