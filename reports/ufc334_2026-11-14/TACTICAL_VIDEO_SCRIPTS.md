@@ -1,0 +1,277 @@
+# WSHL_X — UFC tactical breakdown video scripts
+
+## UFC 334: Gane vs Hokit — 2026-11-14
+
+**How to use:** Read only each spoken script on camera. THEN reveal your
+WSHL_X winner, method and timing picks in the blank host fields.
+The video script deliberately does not list model names, percentages,
+sportsbook prices, or the final selections.
+
+**Fact-check status:** Written-source research drafts. These are NOT
+claims that complete fight tape was watched. The producer should verify
+technical assertions and late fight-week changes before publication.
+
+### 1. Evan Elder vs. Samuel Sanches
+
+**Spoken fight breakdown:**
+
+Elder's strongest case is making this an experienced, composed UFC fight rather than letting the newcomer dictate a fast start. Sanches showed legitimate power on Contender Series, but what caught my attention was that he had to deal with an opponent on his back before finding the finish. That's important: this isn't just a guy swinging for a knockout. For Elder, the key is staying defensively sound, extending exchanges, and finding out whether Sanches can maintain the same patience under sustained UFC pressure. For Sanches, it's about getting clean opportunities early without giving Elder free entries. The opening stretch tells us a lot about who gets to set the terms.
+
+**Transition:** Now here are our WSHL_X winner, method, and timing picks.
+
+- Winner: [YOU REVEAL]
+- Method: [YOU REVEAL]
+- Timing prop: [YOU REVEAL]
+
+**Evidence / research sources:**
+- https://www.ufc.com/news/fight-fight-preview-polymarket-ufc-334-gane-vs-hokit
+- https://us.ufcespanol.com/news/fight-fight-preview-polymarket-ufc-334-gane-vs-hokit
+
+*Research note: UFC preview describes Elder's three straight wins and Sanches' DWCS back-defense-to-KO sequence. Claims about strategic keys are conditional analysis, not direct tape charting.*
+
+---
+
+### 2. Alatengheili vs. Juan Diaz
+
+**Spoken fight breakdown:**
+
+This fight changed late, and that's part of the story. Alatengheili stepped in for Adrian Yanez, so Diaz is dealing with a different look than the one he originally trained for. Alatengheili has a long UFC résumé, a wrestling background, and recent wins that went the distance; he knows how to survive awkward rounds and keep competing. Diaz, meanwhile, submitted Malcolm Wellmaker in his UFC debut and has been talking about taking opponents into deeper waters. The key here is whether Diaz can create the grappling connections he needs against a veteran who has spent years managing UFC-level exchanges. Alatengheili wants to break that rhythm and make Diaz earn every transition.
+
+**Transition:** Now here are our WSHL_X winner, method, and timing picks.
+
+- Winner: [YOU REVEAL]
+- Method: [YOU REVEAL]
+- Timing prop: [YOU REVEAL]
+
+**Evidence / research sources:**
+- https://www.ufc.com/news/updates-polymarket-ufc-334-gane-vs-hokit
+- https://www.ufc.com/news/juan-diaz-is-getting-a-first-year-push-polymarket-ufc-334
+- https://www.ufc.com/athlete/heili-alateng
+
+*Research note: UFC confirms late replacement, Diaz submission, Alatengheili record and wrestling background.*
+
+---
+
+### 3. Macy Chiasson vs. Bia Mesquita
+
+**Spoken fight breakdown:**
+
+This is one of the clearest style questions on the card. Macy Chiasson is the taller, experienced UFC striker, and she wants this fight happening where she can use her length and make Mesquita enter from too far away. Bia Mesquita is a world-class Brazilian jiu-jitsu champion who has already shown she can translate that skill into MMA finishes. One clean clinch or takedown can completely change the fight. For Chiasson, the job is to keep her feet moving, stop Mesquita from connecting her hands, and get right back up if the fight hits the canvas. For Mesquita, getting past the first layer of striking defense is everything. Range control versus grappling access is the battle.
+
+**Transition:** Now here are our WSHL_X winner, method, and timing picks.
+
+- Winner: [YOU REVEAL]
+- Method: [YOU REVEAL]
+- Timing prop: [YOU REVEAL]
+
+**Evidence / research sources:**
+- https://www.ufc.com/news/fight-fight-preview-polymarket-ufc-334-gane-vs-hokit
+- https://www.ufc.com/news/bia-mesquita-chasing-her-final-goal-for-2026-polymarket-ufc-334
+
+*Research note: UFC identifies 10 world BJJ championships, three UFC finishes; Mesquita recognizes Chiasson's length.*
+
+---
+
+### 4. Jared Gordon vs. Melquizael Costa
+
+**Spoken fight breakdown:**
+
+Jared Gordon is most comfortable when he can turn a fight into hard work: pressing forward, punching in combination, and mixing in physical exchanges instead of giving somebody a clean kickboxing match. Costa brings a dangerous finishing game and enters lightweight after competing up at featherweight. He recently finished Dan Ige in the first round, so Gordon can't just walk through the pocket without thinking about what's coming back. Costa has the longer reach on the recorded measurements, and his opportunity is to keep Gordon on the end of his offense. Gordon's opportunity is to close that space, crowd the strikes, and make every minute a grind. Whoever wins that distance battle changes the whole matchup.
+
+**Transition:** Now here are our WSHL_X winner, method, and timing picks.
+
+- Winner: [YOU REVEAL]
+- Method: [YOU REVEAL]
+- Timing prop: [YOU REVEAL]
+
+**Evidence / research sources:**
+- https://www.ufc.com/news/fight-fight-preview-polymarket-ufc-334-gane-vs-hokit
+- https://www.ufc.com/news/significant-stats-ufc-282-blachowicz-vs-ankalaev-paddy-pimblett-jared-gordon
+
+*Research note: UFC profiling describes Gordon as methodical/gritty and Costa's Ige finish / weight-class move; reach comes from frozen fighter record.*
+
+---
+
+### 5. Donte Johnson vs. Cesar Almeida
+
+**Spoken fight breakdown:**
+
+This one is about explosive MMA offense versus a proven striking specialist. Donte Johnson has been a rapid starter and has finished most of his wins with his hands, but Cesar Almeida has years of high-level kickboxing experience. Standing in front of Almeida at a predictable distance is a dangerous proposition, even for somebody with Johnson's power. The interesting adjustment for Johnson is mixing threats: punching to close distance, then making Almeida respect the clinch or a level change instead of settling for a pure kickboxing contest. Almeida's side is about keeping the range clean, reading the entries, and countering when Johnson commits. The winner of those first few exchanges could establish a huge psychological edge.
+
+**Transition:** Now here are our WSHL_X winner, method, and timing picks.
+
+- Winner: [YOU REVEAL]
+- Method: [YOU REVEAL]
+- Timing prop: [YOU REVEAL]
+
+**Evidence / research sources:**
+- https://www.ufc.com/athlete/donte-johnson
+- https://www.ufc.com/athlete/cesar-almeida
+- https://www.ufc.com/news/fight-fight-preview-polymarket-ufc-334-gane-vs-hokit
+
+*Research note: Johnson UFC profile lists 7 KO wins and takedown success; UFC profile and preview document Almeida kickboxing pedigree and past KOs.*
+
+---
+
+### 6. Jim Miller vs. Terrance McKinney
+
+**Spoken fight breakdown:**
+
+This matchup has a very clear early-fight danger zone. Terrance McKinney is explosive, aggressive, and has not needed the scorecards in his UFC career. His last eight fights didn't even get beyond the opening round. But Jim Miller is exactly the type of veteran who can punish somebody for rushing. Miller recently grabbed a guillotine against Jared Gordon, so a careless takedown, exposed neck, or sloppy scramble can turn an attack into a submission threat. McKinney needs to get his offense going without giving Miller those grappling opportunities. Miller needs to weather the initial burst, make McKinney work through positions, and keep his own submission game alive. The first round is where this matchup can swing fast.
+
+**Transition:** Now here are our WSHL_X winner, method, and timing picks.
+
+- Winner: [YOU REVEAL]
+- Method: [YOU REVEAL]
+- Timing prop: [YOU REVEAL]
+
+**Evidence / research sources:**
+- https://www.ufc.com/news/fight-fight-preview-polymarket-ufc-334-gane-vs-hokit
+
+*Research note: UFC preview explicitly documents McKinney first-round streak and Miller guillotine of Gordon. Tactical stakes are scenario analysis.*
+
+---
+
+### 7. Drew Dober vs. Chris Duncan
+
+**Spoken fight breakdown:**
+
+Drew Dober can change a fight with one clean left hand, and he's coming off two straight stoppage wins. He's dangerous when opponents get drawn into a pocket exchange and trade shots on his terms. Chris Duncan has plenty of finishing ability himself, but his submission wins are an important part of this matchup. He's finished opponents with guillotines and an anaconda choke, which gives him a way to punish reckless entries instead of just boxing with Dober. Dober wants Duncan committed to striking exchanges where the power becomes a factor. Duncan's path is to vary the looks, make Dober defend more than punches, and avoid giving him a stationary target. It's not simply a question of who hits harder.
+
+**Transition:** Now here are our WSHL_X winner, method, and timing picks.
+
+- Winner: [YOU REVEAL]
+- Method: [YOU REVEAL]
+- Timing prop: [YOU REVEAL]
+
+**Evidence / research sources:**
+- https://www.ufc.com/news/fight-fight-preview-polymarket-ufc-334-gane-vs-hokit
+- https://www.ufc.com/athlete/chris-duncan?language_content_entity=en&page=1
+- https://www.ufc.com/athlete/drew-dober
+- https://drewdober.com/blog/how-to-fight-a-southpaw-in-mma/
+- https://ufcstats.com/fighter-details/519e4fe37ce9ff75
+
+*Research note: UFC profiles document Dober knockouts, Duncan submission finishes and takedown attack. Dober's own published southpaw technique article and UFCStats confirm his left-hand power and stance.*
+
+---
+
+### 8. Stephen Thompson vs. Charles Radtke
+
+**Spoken fight breakdown:**
+
+Stephen Thompson has made a career of controlling distance with that karate stance, quick entries, and awkward counterpunching angles. If you let him work freely at long range, he can make your offense look slow. Charles Radtke has a more direct, physical route: pressure Thompson, reduce the amount of open space, and make him fight in the clinch or on the mat. Radtke has leaned heavily on his grappling in recent wins, so this isn't just a puncher's fight. The question is whether Radtke can close the cage without running onto Thompson's counters. And for Thompson, it comes down to how often he can reset to the center before Radtke gets his hands on him.
+
+**Transition:** Now here are our WSHL_X winner, method, and timing picks.
+
+- Winner: [YOU REVEAL]
+- Method: [YOU REVEAL]
+- Timing prop: [YOU REVEAL]
+
+**Evidence / research sources:**
+- https://www.ufc.com/news/fight-fight-preview-polymarket-ufc-334-gane-vs-hokit
+- https://www.ufc.com/news/ufc-327-results-prochazka-vs-ulberg-prelims-highlights-winners-interviews
+
+*Research note: UFC describes Radtke's grappling with Prado and Thompson's retirement; Thompson's karate-counter striking is well documented generally, but not derived from watched tape here.*
+
+---
+
+### 9. Bilal Hasan vs. Luis Gurule
+
+**Spoken fight breakdown:**
+
+Bilal Hasan is bringing serious finishing momentum into this fight. He's quick, varied, and has shown the ability to switch attacks instead of relying on one big punch. Luis Gurule is a willing striker who puts up real volume, and that's what makes the matchup interesting. He won't necessarily give Hasan the slow, cautious fight that a finisher sometimes wants. But throwing that much also means there are moments when defensive positioning matters. Hasan needs to pick his counters without getting pulled into unnecessary exchanges; Gurule needs to keep a disciplined pace and avoid giving Hasan clean openings. This looks like a fight where shot selection and defensive responsibility could matter as much as raw aggression.
+
+**Transition:** Now here are our WSHL_X winner, method, and timing picks.
+
+- Winner: [YOU REVEAL]
+- Method: [YOU REVEAL]
+- Timing prop: [YOU REVEAL]
+
+**Evidence / research sources:**
+- https://www.ufc.com/news/fighters-rise-polymarket-ufc-334-gane-vs-hokit
+- https://www.ufc.com/athlete/luis-gurule
+- https://www.ufc.com/news/fight-fight-preview-polymarket-ufc-334-gane-vs-hokit
+
+*Research note: UFC documents Hasan KO streak/blended attacks and Gurule UFC striking output, 5.44 sig strikes/min.*
+
+---
+
+### 10. Uros Medic vs. Kevin Holland
+
+**Spoken fight breakdown:**
+
+Uroš Medić has been knocking people out early, and he's entering this matchup with four straight first-round finishes. But Kevin Holland presents a very different problem because of his reach and ability to strike from the outside. The UFC preview puts Holland's reach advantage at ten inches, and that's a lot of distance for Medić to cross safely. Medić's best chance to establish his offense is to cut the cage and force exchanges before Holland can set up long counters. Holland wants him reaching and overcommitting while he picks shots from space. The danger for both guys is obvious: Medić has serious finishing power, but a reckless entry against Holland's length could get expensive quickly.
+
+**Transition:** Now here are our WSHL_X winner, method, and timing picks.
+
+- Winner: [YOU REVEAL]
+- Method: [YOU REVEAL]
+- Timing prop: [YOU REVEAL]
+
+**Evidence / research sources:**
+- https://www.ufc.com/news/fight-fight-preview-polymarket-ufc-334-gane-vs-hokit
+
+*Research note: UFC preview documents 4 first-round Medic stoppages, Holland's long reach, no recorded KO defeat at publication.*
+
+---
+
+### 11. Caio Borralho vs. Yousri Belgaroui
+
+**Spoken fight breakdown:**
+
+This is a classic range-versus-MMA-pressure matchup. Yousri Belgaroui is a six-foot-five kickboxing specialist who understands how to make his length do the work. He wants Borralho at the end of his punches and kicks, with enough space to keep changing angles. Caio Borralho's big opportunity is to make Belgaroui defend more than striking. That could mean feinting level changes, crowding the clinch, and turning clean kickboxing exchanges into mixed martial arts exchanges. Borralho has dealt with tough UFC competition, while Belgaroui has looked extremely sharp in a shorter UFC run. If Borralho cannot disrupt that long-range rhythm, he could spend rounds chasing a target who is comfortable at distance.
+
+**Transition:** Now here are our WSHL_X winner, method, and timing picks.
+
+- Winner: [YOU REVEAL]
+- Method: [YOU REVEAL]
+- Timing prop: [YOU REVEAL]
+
+**Evidence / research sources:**
+- https://www.ufc.com/news/fight-fight-preview-polymarket-ufc-334-gane-vs-hokit
+- https://www.ufc.com/news/fighters-rise-polymarket-ufc-334-gane-vs-hokit
+
+*Research note: UFC preview documents Belgaroui height, kickboxing, 3 finishes, and Borralho veteran high-tier wins. Borralho tactical route framed hypothetically.*
+
+---
+
+### 12. Kayla Harrison vs. Amanda Nunes
+
+**Spoken fight breakdown:**
+
+This is about who gets to decide where the fight happens. Kayla Harrison is a two-time Olympic judo champion whose strength is getting in close, controlling the body, and doing damage or attacking submissions on the floor. Amanda Nunes has a very different weapon: serious knockout power and a deep history of high-level championship striking. Harrison needs to make the clinch entry safe—she cannot afford to stand at kicking range and trade punches for too long. Nunes needs to protect her hips, frame off the clinch, and create space where she can get her hands going. Harrison is also returning after neck surgery, so how she handles resistance and prolonged grappling is a legitimate unanswered question.
+
+**Transition:** Now here are our WSHL_X winner, method, and timing picks.
+
+- Winner: [YOU REVEAL]
+- Method: [YOU REVEAL]
+- Timing prop: [YOU REVEAL]
+
+**Evidence / research sources:**
+- https://www.ufc.com/news/fight-fight-preview-polymarket-ufc-334-gane-vs-hokit
+- https://www.ufc.com/news/coach-conversation-polymarket-ufc-334-kayla-harrison-vs-amanda-nunes
+
+*Research note: UFC coach conversation confirms Nunes power and Harrison physical grappling, UFC preview confirms prior neck injury/surgery.*
+
+---
+
+### 13. Ciryl Gane vs. Josh Hokit
+
+**Spoken fight breakdown:**
+
+Ciryl Gane is the cleaner, more technical striker here. His movement and distance management can make heavyweights miss badly, and he owns a clear reach advantage. Josh Hokit is a different kind of problem: an aggressive, strong former Division I wrestler who wants to turn this into a much more physical fight. Gane needs to keep the action in open space, touch Hokit with long strikes, and reset before Hokit can tie him up. Hokit needs to cut the cage, connect his hands, and make Gane fight off the fence instead of at his preferred distance. So the key is whether Hokit can close space repeatedly without walking into clean counters.
+
+**Transition:** Now here are our WSHL_X winner, method, and timing picks.
+
+- Winner: [YOU REVEAL]
+- Method: [YOU REVEAL]
+- Timing prop: [YOU REVEAL]
+
+**Evidence / research sources:**
+- https://www.ufc.com/news/fight-fight-preview-polymarket-ufc-334-gane-vs-hokit
+- https://www.sherdog.com/videos/sherdogradio/UFC-334-preview-Gane-vs-Hokit-Harrison-vs-Nunes-breakdown-23940
+
+*Research note: UFC preview and Sherdog identify Gane skill/footwork/distance vs Hokit wrestling pressure. Frozen stats verify reach gap.*
+
+---
+
