@@ -41,7 +41,7 @@ jobs:
           for RESEARCH_FILE in "${RESEARCH_FILES[@]}"; do
             SLUG="$(basename "${RESEARCH_FILE%_tactical_video_research.json}")"
             if [ -n "$SELECTED_SLUG" ] && [ "$SLUG" != "$SELECTED_SLUG" ]; then continue; fi
-            [[ "$SLUG" =~ ^[a-z0-9_]+-[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]] || { echo "Invalid slug $SLUG"; exit 1; }
+            [[ "$SLUG" =~ ^[a-z0-9]+_[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]] || { echo "Invalid slug $SLUG"; exit 1; }
             LOCK="data/locks/$SLUG/stage_a_final_selection.json"
             RAW="data/locks/$SLUG/stage_a_model_raw_three_view.json"
             [ -f "$LOCK" ] && [ -f "$RAW" ] || { echo "Missing pre-price lock/raw: $SLUG"; exit 1; }
