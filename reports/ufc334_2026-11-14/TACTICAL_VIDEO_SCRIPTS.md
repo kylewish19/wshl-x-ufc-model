@@ -2,10 +2,10 @@
 
 ## UFC 334: Gane vs Hokit — 2026-11-14
 
-**How to use:** Read only each spoken script on camera. THEN reveal your
-WSHL_X winner, method and timing picks in the blank host fields.
-The video script deliberately does not list model names, percentages,
-sportsbook prices, or the final selections.
+**How to use:** Read the tactical matchup section, then announce the
+automatically populated WSHL_X consensus winner, method, and timing.
+The tactical narration does not recite model names or probabilities.
+The selection block is 2/3 or 3/3 model agreement, not a betting approval.
 
 **Fact-check status:** Written-source research drafts. These are NOT
 claims that complete fight tape was watched. The producer should verify
@@ -19,9 +19,13 @@ Samuel Sanches arrives with genuine stopping power: eight knockouts in eleven wi
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-- Winner: [YOU REVEAL]
-- Method: [YOU REVEAL]
-- Timing prop: [YOU REVEAL]
+**WSHL_X three-model consensus picks (host reveal):**
+
+- **Winner:** Samuel Sanches (2/3 agreement)
+- **Method:** Samuel Sanches by KO/TKO (2/3 agreement)
+- **Timing:** Over 1.5 rounds (3/3 agreement)
+
+**Research-only notes:** Method/timing coherence warning — method NOT bet-approved; Original Stage A PASS remains PASS
 
 **Evidence / research sources:**
 - https://www.ufc.com/athlete/samuel-sanches
@@ -40,9 +44,13 @@ Juan Diaz has shown he can finish in more than one way. He earned his contract w
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-- Winner: [YOU REVEAL]
-- Method: [YOU REVEAL]
-- Timing prop: [YOU REVEAL]
+**WSHL_X three-model consensus picks (host reveal):**
+
+- **Winner:** Juan Diaz (3/3 agreement)
+- **Method:** Juan Diaz by SUB (3/3 agreement)
+- **Timing:** Over 1.5 rounds (3/3 agreement)
+
+**Research-only notes:** Method/timing coherence warning — method NOT bet-approved; Original Stage A PASS remains PASS
 
 **Evidence / research sources:**
 - https://www.ufc.com/athlete/juan-diaz
@@ -61,9 +69,13 @@ Bia Mesquita's Brazilian jiu-jitsu résumé is exceptional, with ten world champ
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-- Winner: [YOU REVEAL]
-- Method: [YOU REVEAL]
-- Timing prop: [YOU REVEAL]
+**WSHL_X three-model consensus picks (host reveal):**
+
+- **Winner:** Bia Mesquita (2/3 agreement)
+- **Method:** Bia Mesquita by SUB (2/3 agreement)
+- **Timing:** Over 1.5 rounds (3/3 agreement)
+
+**Research-only notes:** Method/timing coherence warning — method NOT bet-approved; Original Stage A PASS remains PASS
 
 **Evidence / research sources:**
 - https://www.ufc.com/index.php/news/fight-fight-preview-polymarket-ufc-334-gane-vs-hokit
@@ -81,9 +93,13 @@ Melquizael Costa has already shown his striking can hurt established UFC feather
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-- Winner: [YOU REVEAL]
-- Method: [YOU REVEAL]
-- Timing prop: [YOU REVEAL]
+**WSHL_X three-model consensus picks (host reveal):**
+
+- **Winner:** Melquizael Costa (3/3 agreement)
+- **Method:** Melquizael Costa by KO/TKO (2/3 agreement)
+- **Timing:** Over 1.5 rounds (3/3 agreement)
+
+**Research-only notes:** Method/timing coherence warning — method NOT bet-approved
 
 **Evidence / research sources:**
 - https://www.ufc.com/index.php/news/fight-fight-preview-polymarket-ufc-334-gane-vs-hokit
@@ -101,9 +117,13 @@ Donte Johnson's finishing power is real: he has seven knockout wins and recently
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-- Winner: [YOU REVEAL]
-- Method: [YOU REVEAL]
-- Timing prop: [YOU REVEAL]
+**WSHL_X three-model consensus picks (host reveal):**
+
+- **Winner:** Donte Johnson (3/3 agreement)
+- **Method:** Donte Johnson by KO/TKO (3/3 agreement)
+- **Timing:** Over 1.5 rounds (2/3 agreement)
+
+**Research-only notes:** Editorial timing vote differs from original frozen timing: GTD_NO remains unchanged and graded separately
 
 **Evidence / research sources:**
 - https://www.ufc.com/athlete/donte-johnson
@@ -122,9 +142,13 @@ Terrance McKinney fights like someone who wants the finish immediately. He owns 
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-- Winner: [YOU REVEAL]
-- Method: [YOU REVEAL]
-- Timing prop: [YOU REVEAL]
+**WSHL_X three-model consensus picks (host reveal):**
+
+- **Winner:** Terrance McKinney (3/3 agreement)
+- **Method:** Terrance McKinney by KO/TKO (3/3 agreement)
+- **Timing:** Fight goes distance NO (3/3 agreement)
+
+**Research-only notes:** Consensus does not automatically approve a wager
 
 **Evidence / research sources:**
 - https://www.ufc.com/athlete/terrance-mckinney
@@ -143,9 +167,13 @@ Drew Dober's left hand is a real threat, as Michael Johnson found out when Dober
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-- Winner: [YOU REVEAL]
-- Method: [YOU REVEAL]
-- Timing prop: [YOU REVEAL]
+**WSHL_X three-model consensus picks (host reveal):**
+
+- **Winner:** Chris Duncan (3/3 agreement)
+- **Method:** Chris Duncan by SUB (2/3 agreement)
+- **Timing:** Over 1.5 rounds (3/3 agreement)
+
+**Research-only notes:** Method/timing coherence warning — method NOT bet-approved
 
 **Evidence / research sources:**
 - https://www.ufc.com/athlete/chris-duncan?language_content_entity=en&page=1
@@ -164,9 +192,13 @@ Stephen Thompson can still be difficult to touch cleanly when he has room to use
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-- Winner: [YOU REVEAL]
-- Method: [YOU REVEAL]
-- Timing prop: [YOU REVEAL]
+**WSHL_X three-model consensus picks (host reveal):**
+
+- **Winner:** Charles Radtke (3/3 agreement)
+- **Method:** Charles Radtke by KO/TKO (2/3 agreement)
+- **Timing:** Over 1.5 rounds (3/3 agreement)
+
+**Research-only notes:** Consensus does not automatically approve a wager
 
 **Evidence / research sources:**
 - https://www.sherdog.com/news/articles/1/UFC-334-prelims-preview-Stephen-Thompsons-farewell-fight-picks-203572
@@ -184,9 +216,13 @@ Bilal Hasan has built momentum by ending fights emphatically. He knocked out Mri
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-- Winner: [YOU REVEAL]
-- Method: [YOU REVEAL]
-- Timing prop: [YOU REVEAL]
+**WSHL_X three-model consensus picks (host reveal):**
+
+- **Winner:** Bilal Hasan (3/3 agreement)
+- **Method:** Bilal Hasan by KO/TKO (3/3 agreement)
+- **Timing:** Fight goes distance NO (3/3 agreement)
+
+**Research-only notes:** Original Stage A PASS remains PASS
 
 **Evidence / research sources:**
 - https://www.mmafighting.com/ufc/509680/undefeated-prospect-bilal-hasan-vs-luis-gurule-set-for-ufc-334
@@ -204,9 +240,13 @@ Uroš Medić is coming into this fight with four straight first-round knockouts,
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-- Winner: [YOU REVEAL]
-- Method: [YOU REVEAL]
-- Timing prop: [YOU REVEAL]
+**WSHL_X three-model consensus picks (host reveal):**
+
+- **Winner:** Uros Medic (3/3 agreement)
+- **Method:** Uros Medic by KO/TKO (3/3 agreement)
+- **Timing:** Fight goes distance NO (3/3 agreement)
+
+**Research-only notes:** Original Stage A PASS remains PASS
 
 **Evidence / research sources:**
 - https://www.sherdog.com/news/articles/4/UFC-334-preview-predictions-Gane-vs-Hokit-Harrison-vs-Nunes-203573
@@ -224,9 +264,13 @@ Yousri Belgaroui is more than just a tall kickboxer. He's brought his range cont
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-- Winner: [YOU REVEAL]
-- Method: [YOU REVEAL]
-- Timing prop: [YOU REVEAL]
+**WSHL_X three-model consensus picks (host reveal):**
+
+- **Winner:** Yousri Belgaroui (2/3 agreement)
+- **Method:** Yousri Belgaroui by KO/TKO (2/3 agreement)
+- **Timing:** Over 1.5 rounds (2/3 agreement)
+
+**Research-only notes:** Method/timing coherence warning — method NOT bet-approved; Original Stage A PASS remains PASS
 
 **Evidence / research sources:**
 - https://www.sherdog.com/news/articles/3/UFC-334-preview-predictions-Gane-vs-Hokit-Harrison-vs-Nunes-203573
@@ -245,9 +289,13 @@ Kayla Harrison's path starts with the clinch. A two-time Olympic judo champion, 
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-- Winner: [YOU REVEAL]
-- Method: [YOU REVEAL]
-- Timing prop: [YOU REVEAL]
+**WSHL_X three-model consensus picks (host reveal):**
+
+- **Winner:** Kayla Harrison (3/3 agreement)
+- **Method:** Kayla Harrison by SUB (2/3 agreement)
+- **Timing:** Over 1.5 rounds (2/3 agreement)
+
+**Research-only notes:** Original Stage A PASS remains PASS
 
 **Evidence / research sources:**
 - https://www.ufc.com/news/gane-hokit-harrison-nunes-headline-ufc-334-new-york-city
@@ -266,9 +314,13 @@ Ciryl Gane has proved his striking works against elite heavyweights, most recent
 
 **Transition:** Now here are our WSHL_X winner, method, and timing picks.
 
-- Winner: [YOU REVEAL]
-- Method: [YOU REVEAL]
-- Timing prop: [YOU REVEAL]
+**WSHL_X three-model consensus picks (host reveal):**
+
+- **Winner:** Ciryl Gane (2/3 agreement)
+- **Method:** Ciryl Gane by KO/TKO (2/3 agreement)
+- **Timing:** Fight goes distance NO (3/3 agreement)
+
+**Research-only notes:** Original Stage A PASS remains PASS
 
 **Evidence / research sources:**
 - https://www.ufc.com/news/gane-hokit-harrison-nunes-headline-ufc-334-new-york-city
