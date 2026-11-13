@@ -104,6 +104,8 @@ def test_public_video_report_autofills_three_consensus_picks_without_rewriting_m
     assert video["fights"][0]["host_reveal_vote_details"]["original_stage_a_pass"]
     assert video["fights"][0]["host_reveal_vote_details"]["method_coherence_warning"]
     assert "[YOU REVEAL]" not in md_path.read_text()
-    assert md_path.read_text().count("**WSHL_X three-model consensus picks") == 13
-    assert "3/3 agreement" in md_path.read_text()
+    assert md_path.read_text().count("**WSHL_X UFC Picks (host reveal):**") == 13
+    assert "3/3 agreement" not in md_path.read_text()
+    assert "2/3 agreement" not in md_path.read_text()
+    assert video["fights"][5]["host_reveal_vote_details"]["winner_votes"] == 3
     assert originals_before == (LOCK.read_bytes(), RAW.read_bytes(), RESEARCH.read_bytes())
