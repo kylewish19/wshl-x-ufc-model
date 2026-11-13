@@ -130,7 +130,7 @@ posture of an existing PASS remains PASS even with three-way agreement.
    and fight phase. Never claim "fighter A beat a good fighter therefore
    fighter B cannot win." If sourcing is unavailable, omit the claim.
 7. On camera, deliver only **tactical breakdown + counter-scenario**.
-   The host then announces the consensus pick, method and timing. Technical
+   The video report automatically fills the consensus winner, fighter+method, and timing from the original 2-of-3 or 3-of-3 predictions. The host reads those after the tactical explanation; no handwritten or improvised pick selection is needed. Technical
    predictions that fail model-family coherence are *forecasts*, NOT approved
    bets, even with unanimous model agreement.
 8. Keep a clean provenance trail and score the old frozen original, new
