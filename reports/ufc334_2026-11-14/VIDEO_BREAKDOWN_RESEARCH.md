@@ -1,5 +1,8 @@
 # WSHL_X UFC model-grounded breakdowns: UFC 334: Gane vs Hokit
 
+> **For public videos, use [TACTICAL_VIDEO_SCRIPTS.md](./TACTICAL_VIDEO_SCRIPTS.md), not this file.**  
+> This document is a historical/internal **model forecast briefing** (with percentages and model names). It was never the intended on-camera tactical narration. The new 13-fight scripts discuss striking/grappling scenarios and leave winner, method, and timing picks for the host to reveal. This document remains unchanged below for research traceability.
+
 ORIGINAL Stage A selections preserved; scripts are research previews, not betting approvals.
 Raw input SHA-256: 13aeb532c5fddd5ec3cdc003ac7500a231addc45e34b45b7aebc38c5c241270d
 
