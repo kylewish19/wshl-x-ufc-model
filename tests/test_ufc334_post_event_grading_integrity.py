@@ -105,3 +105,25 @@ def test_two_cards_expose_repeated_top_method_label_finish_bias():
     assert both["repeat_KO_leading_method_excess"]
     assert both["repeat_decision_leading_method_shortfall"]
     assert both["model_version_changed"] is False
+
+
+
+def test_full_334_quote_shadow_audit_never_counts_unmodeled_draw_or_placed_bets():
+    all_quotes = data(ROOT / "data/results/ufc334_2026-11-14_all_334_fanduel_markets_settlement_diagnostic.json")
+    assert all_quotes["quotes"] == 334
+    assert all_quotes["original_modeled_quotes"] == 310
+    assert all_quotes["original_unmodeled_draw_quotes"] == 24
+    assert all_quotes["settlements"] == {
+        "W": 108, "L": 185, "UNMODELED_DRAW_QUOTE": 24,
+        "UNRESOLVED_DRAW_BOOK_RULE": 17,
+    }
+    assert sum(all_quotes["settlements"].values()) == 334
+    assert sum(x["settled"] for x in all_quotes["family_diagnostics"].values()) == 293
+    assert all_quotes["governance"]["all_334_markets_were_unapproved"] is True
+    assert all_quotes["governance"]["real_money_staked"] == 0
+    assert all_quotes["governance"]["official_roi"] is None
+    assert len(all_quotes["per_quote_diagnostic"]) == 334
+    assert all(not row["approved_official"] for row in all_quotes["per_quote_diagnostic"])
+    positive_ev = all_quotes["raw_positive_EV_candidate_summaries"]
+    assert (positive_ev["n"], positive_ev["W"], positive_ev["L"]) == (127, 43, 84)
+    assert abs(positive_ev["mean_model_p"] - 0.443782) < 1e-6
