@@ -81,3 +81,27 @@ The 4-6 research-only 10-pick slate with +0.30u hypothetical net is too small/co
 https://www.cbssports.com/ufc/news/ufc-334-fight-card-ciryl-gane-josh-hokit-results-winners/
 https://www.sherdog.com/news/news/UFC-334-Gane-vs-Hokit-playbyplay-results-round-scoring-203625
 https://www.ufc.com/news/official-weigh-results-polymarket-ufc-334-gane-vs-hokit
+
+
+## November 15 additional Stage B audit — all 334 archived quotes
+
+Saved `data/results/ufc334_2026-11-14_all_334_fanduel_markets_settlement_diagnostic.json`
+after the complete Stage A and Top5+Top5 grading. All originally displayed
+FanDuel prices and betting-block decisions remain frozen. The retrospective
+research scoring covers 293 supported quote outcomes (108 W/185 L),
+excludes 24 unmodeled draw quotes, and leaves 17 draw-affected special
+markets unresolved until the actual FanDuel settlement terms are verified.
+This includes multiple complementary and correlated markets per fight,
+**so the 108/185 count is NOT a pick-card hit rate or an actual-bet record**.
+
+In 127 settled quotes with positive uncalibrated raw model EV, 43 settled W
+and 84 L. Mean raw selected-outcome probability was 44.38% versus a
+33.86% observed event frequency in this highly correlated sample. This is
+an exploratory warning that non-calibrated raw EV selection can mislead,
+not proof of a calibrated 10.5 percentage-point population bias.
+Only chronological, matchup-clustered, market-specific probability
+calibration and return simulations may support adjusting Stage B gates.
+
+**Code changes this event remain recording/diagnostic/testing only.
+There is still no champion, shadow weight, market gate, or original prediction
+change.**
