@@ -111,3 +111,33 @@ Combined 4-6, 0.2997u, 3.0% hypothetical ROI. Do not equate research ROI with pr
 - https://sports.yahoo.com/mma/live/ufc-334-live-results-gane-vs-hokit-updates-round-by-round-scoring-for-tonights-title-doubleheader-191500505.html
 - https://www.mmafighting.com/ufc/521306/ufc-334-video-stephen-wonderboy-thompson-retires-with-spinning-wheel-kick-knockout-over-charles-radtke
 - https://www.ufc.com/news/official-weigh-results-polymarket-ufc-334-gane-vs-hokit
+
+
+## Full 334-price Stage B research diagnostic (added November 15)
+
+The frozen FanDuel audit has additionally been graded quote by quote in
+[`data/results/ufc334_2026-11-14_all_334_fanduel_markets_settlement_diagnostic.json`](../../data/results/ufc334_2026-11-14_all_334_fanduel_markets_settlement_diagnostic.json).
+Of 334 quotes, 293 supported non-draw affected markets could be descriptively
+scored (**108 W / 185 L**), 24 quoted draw-market prices were unmodeled, and
+17 method/moneyline markets involving the Medić–Holland draw are explicitly
+**unresolved pending verification of FanDuel's precise settlement rules**.
+Those 293 markets include many mutually exclusive and complementary bets
+on the same fight: the 108/185 count is **NOT** a strategy win rate, and none
+of the 334 quotes is represented as an approved or placed wager.
+
+A research diagnostic found **127 original raw positive-EV candidates** among
+the settled prices, with 43 wins / 84 losses. Their mean original raw
+model-estimated event probability was **44.38%** versus an observed hit
+fraction of **33.86%**. This is a warning about possible raw-probability
+optimism/market-selection bias, not a statistically independent calibration
+test—markets share fights and are highly correlated. No retrospective
+re-ranking, revised odds, or post-event approvals are permitted.
+
+Per-market family binary Brier/log-loss is recorded in the same file for
+future *clustered, time-ordered* probability-calibration analysis. Family
+win proportions based on both sides of complementary markets (e.g. GTD YES
+and NO) are structurally misleading and must not be reported as a single
+betting hit rate.
+
+These diagnostics strengthen, rather than relax, Stage B's original
+**zero-official-wager gate**.
