@@ -1,0 +1,86 @@
+{
+  "schema": "WSHL_X_UFC334_POST_EVENT_MIRROR_STATS_MANIFEST_V1",
+  "event": "UFC 334: Gane vs Hokit",
+  "event_date": "2026-11-14",
+  "retrieved_as_of_date": "2026-11-16",
+  "source_classification": "UFCSTATS_DERIVED_SECONDARY_MIRRORS_NOT_DIRECT_PRIMARY",
+  "data_grade": "PROVISIONAL_MIRROR_CROSSCHECKED",
+  "original_frozen_stage_a_unchanged": true,
+  "original_stage_b_unchanged": true,
+  "post_event_only": true,
+  "is_pre_fight_feature_snapshot": false,
+  "allow_training": false,
+  "allow_model_promotion": false,
+  "direct_primary_ufcstats_attempt": {
+    "url": "https://ufcstats.com/statistics/events/completed?page=all",
+    "result": "502 Bad Gateway in public search runtime; do not claim fetched official UFCStats fight pages"
+  },
+  "sources": [
+    {
+      "url": "https://fightingdata.com/events/ufc-334-gane-vs-hokit/",
+      "type": "FightingData UFCStats-derived mirror",
+      "role": "13 bouts, 72 fighter-round detailed significant strike/TD/control/KD entries; independently summed to published bout totals"
+    },
+    {
+      "url": "https://cagealmanac.com",
+      "type": "Cage Almanac UFCStats-derived mirror",
+      "role": "13 individual fight total pages /fights/9001 to /fights/8989; all 26 fighters full totals and strike target/position breakdown"
+    },
+    {
+      "url": "https://www.mmaindex.com/events/ufc-334-2026-11-14",
+      "type": "MMA Index UFCStats-derived mirror",
+      "role": "Cross-check fight totals and result methods"
+    },
+    {
+      "url": "https://www.ufc.com/news/polymarket-ufc-334-gane-vs-hokit-official-scorecards",
+      "type": "Official UFC results and scorecards",
+      "role": "Outcomes independently verified"
+    },
+    {
+      "url": "https://ufc.propbetedge.ai/events/ufc-334-2026-11-14",
+      "type": "Third-party conflicting aggregate",
+      "role": "Not selected as primary statistics: Gane/Hokit 252/136 strikes vs consensus 237/146"
+    }
+  ],
+  "files": [
+    {
+      "path": "data/raw/ufc334_2026-11-14/ufc334_complete_26_fighter_mirror_totals_PROVISIONAL.csv",
+      "rows": 26,
+      "fields": 32,
+      "source": "FightingData + Cage Almanac"
+    },
+    {
+      "path": "data/raw/ufc334_2026-11-14/ufc334_fighter_mirror_per_round_PROVISIONAL.csv",
+      "rows": 72,
+      "fields": 12,
+      "source": "FightingData, reconciled to each fighter total"
+    },
+    {
+      "path": "data/raw/ufc334_2026-11-14/ufc334_fighter_mirror_totals_PROVISIONAL.csv",
+      "rows": 26,
+      "fields": 15,
+      "source": "FightingData base fields; retained for provenance"
+    }
+  ],
+  "quality_checks": {
+    "unique_fights": 13,
+    "fighter_total_rows": 26,
+    "round_fighter_rows": 72,
+    "round_sig_strikes_sum_to_fight_totals": true,
+    "round_takedown_sum_to_fight_totals": true,
+    "round_control_sum_to_fight_totals": true,
+    "round_knockdowns_sum_to_fight_totals": true,
+    "head_body_leg_breakdown_sums_to_significant_strikes": true,
+    "distance_clinch_ground_breakdown_sums_to_significant_strikes": true,
+    "significant_strikes_leq_total_strikes": true,
+    "original_fight_identity_lock_verified": true,
+    "source_warnings": [
+      "Direct UFCStats primary source unavailable via current web fetch, despite secondary sites saying data is UFCStats-derived.",
+      "Third-party totals for Gane and Hokit differ; some feeds are NOT equivalent to official strike accounting.",
+      "No post-event data or newly observed fighter stats should be used to score or retrain the November 11 frozen UFC334 predictions."
+    ]
+  },
+  "training_gate_policy": "Must first verify against original UFCStats fighter pages / identifiers or formally document an approved mirrored-data fallback, add provenance hashes and event-date-only lagging features; future event training may use only verified post-event stats from earlier completed fights, NEVER for predictions on this event prior to event date.",
+  "validation_code_path": "src/wshlx_ufc/post_event_stats_audit.py",
+  "status": "SAVED_PROVISIONAL_PENDING_PRIMARY_VALIDATION"
+}
