@@ -132,7 +132,10 @@ def outcomes_for_event(slug: str, grade: dict) -> dict:
 def compute() -> dict:
     scored = {model: {
         "original": [], "winner_aligned": [], "winner_timing_aligned": [],
-        "events": {}, "n": 0
+        "events": {}, "n": 0,
+        "picks": {k: {"winner_correct": 0, "exact": 0, "method_counts": {"KO":0,"SUB":0,"DEC":0}}
+                  for k in ("original","winner_aligned","winner_timing_aligned")},
+        "event_picks": {},
     } for model in ("historical", "unified")}
     for slug, raw_path, grade_path in EVENTS:
         raw = json.loads((ROOT / raw_path).read_text())
@@ -147,6 +150,10 @@ def compute() -> dict:
         for model in scored:
             scored[model]["events"][slug] = {
                 "original": [], "winner_aligned": [], "winner_timing_aligned": []
+            }
+            scored[model]["event_picks"][slug] = {
+                k: {"winner_correct": 0, "exact": 0}
+                for k in ("original","winner_aligned","winner_timing_aligned")
             }
         for f in raw["fights"]:
             n = f["fight_no"]
@@ -169,10 +176,20 @@ def compute() -> dict:
                     # A six-outcome classification must NOT invent a winner on draws.
                     continue
                 actual_side = "A" if winner == f["a"] else "B"
+                selected_side = "A" if a >= 0.5 else "B"
                 for candidate, joint in projections.items():
                     s = six_way_scores(joint, fighter_side=actual_side, method=method)
                     scored[model][candidate].append(s)
                     scored[model]["events"][slug][candidate].append(s)
+                    chosen_method = max(METHODS, key=lambda m: joint[f"{selected_side}_{m}"])
+                    pick = scored[model]["picks"][candidate]
+                    pick["winner_correct"] += int(selected_side == actual_side)
+                    pick["exact"] += int(selected_side == actual_side and chosen_method == method)
+                    pick["method_counts"][chosen_method] += 1
+                    scored[model]["event_picks"][slug][candidate]["winner_correct"] += int(
+                        selected_side == actual_side)
+                    scored[model]["event_picks"][slug][candidate]["exact"] += int(
+                        selected_side == actual_side and chosen_method == method)
 
     def means(rows):
         if not rows:
@@ -192,6 +209,8 @@ def compute() -> dict:
                        ("original", "winner_aligned", "winner_timing_aligned")}
                 for slug, values in value["events"].items()},
             "fight_count": value["n"],
+            "retrospective_exact_winner_method": value["picks"],
+            "event_retrospective_exact": value["event_picks"],
         }
         for model, value in scored.items()
     }
