@@ -67,7 +67,7 @@ def audit_mirrored_ufc334_stats(
         raise ValueError("Cannot claim primary UFCStats provenance")
     if not locked.get("stage_a_frozen") or locked.get("odds_used"):
         raise ValueError("Original Stage A no longer frozen/odds-blind")
-    if manifest["event_date"] != locked["event_date"] != results["event_date"]:
+    if not (manifest["event_date"] == locked["event_date"] == results["event_date"]):
         raise ValueError("Mismatched events")
     if results["status"] != "VERIFIED_POST_EVENT_OUTCOMES":
         raise ValueError("Outcomes not verified")
