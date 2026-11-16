@@ -30,7 +30,8 @@
     "A draw is not among the six modeled methods; excluded from six-way Brier/logloss and reported separately",
     "Winner marginal synchronization is mathematically coherent but can worsen predictive six-way Brier/logloss",
     "Winner plus timing synchronization is an experimental research-only joint; it is not an official new future outcome model",
-    "Frozen champion, historical/unified originals, Stage A/B, prices and bet approval unchanged"
+    "Frozen champion, historical/unified originals, Stage A/B, prices and bet approval unchanged",
+    "Retrospective exact winner+method differences are post-event research, not out-of-time prior-selected challenger track records; the projection was designed after inspecting method/timing failures."
   ],
   "summary": {
     "historical": {
@@ -107,7 +108,80 @@
       "max_original_winner_gap_pp": 17.569410577296004,
       "max_original_timing_gap_pp": 26.02975513162409,
       "max_projection_residual": 9.843237336326638e-13,
-      "max_winner_only_finish_gap": 0.25911205810822013
+      "max_winner_only_finish_gap": 0.25911205810822013,
+      "retrospective_exact_winner_method": {
+        "original": {
+          "winner_correct": 26,
+          "exact": 13,
+          "method_counts": {
+            "KO": 15,
+            "SUB": 11,
+            "DEC": 14
+          }
+        },
+        "winner_aligned": {
+          "winner_correct": 26,
+          "exact": 13,
+          "method_counts": {
+            "KO": 15,
+            "SUB": 11,
+            "DEC": 14
+          }
+        },
+        "winner_timing_aligned": {
+          "winner_correct": 26,
+          "exact": 20,
+          "method_counts": {
+            "KO": 12,
+            "SUB": 4,
+            "DEC": 24
+          }
+        }
+      },
+      "event_retrospective_exact": {
+        "ufc333_2026-10-24": {
+          "original": {
+            "winner_correct": null,
+            "exact": 3
+          },
+          "winner_aligned": {
+            "winner_correct": null,
+            "exact": 3
+          },
+          "winner_timing_aligned": {
+            "winner_correct": null,
+            "exact": 6
+          }
+        },
+        "ufcvegas124_2026-11-07": {
+          "original": {
+            "winner_correct": null,
+            "exact": 7
+          },
+          "winner_aligned": {
+            "winner_correct": null,
+            "exact": 7
+          },
+          "winner_timing_aligned": {
+            "winner_correct": null,
+            "exact": 9
+          }
+        },
+        "ufc334_2026-11-14": {
+          "original": {
+            "winner_correct": null,
+            "exact": 3
+          },
+          "winner_aligned": {
+            "winner_correct": null,
+            "exact": 3
+          },
+          "winner_timing_aligned": {
+            "winner_correct": null,
+            "exact": 5
+          }
+        }
+      }
     },
     "unified": {
       "all": {
@@ -183,7 +257,80 @@
       "max_original_winner_gap_pp": 10.227708822518355,
       "max_original_timing_gap_pp": 32.32790939485527,
       "max_projection_residual": 9.736655925962623e-13,
-      "max_winner_only_finish_gap": 0.31660320918482754
+      "max_winner_only_finish_gap": 0.31660320918482754,
+      "retrospective_exact_winner_method": {
+        "original": {
+          "winner_correct": 26,
+          "exact": 14,
+          "method_counts": {
+            "KO": 20,
+            "SUB": 9,
+            "DEC": 11
+          }
+        },
+        "winner_aligned": {
+          "winner_correct": 26,
+          "exact": 14,
+          "method_counts": {
+            "KO": 20,
+            "SUB": 9,
+            "DEC": 11
+          }
+        },
+        "winner_timing_aligned": {
+          "winner_correct": 26,
+          "exact": 16,
+          "method_counts": {
+            "KO": 14,
+            "SUB": 3,
+            "DEC": 23
+          }
+        }
+      },
+      "event_retrospective_exact": {
+        "ufc333_2026-10-24": {
+          "original": {
+            "winner_correct": null,
+            "exact": 3
+          },
+          "winner_aligned": {
+            "winner_correct": null,
+            "exact": 3
+          },
+          "winner_timing_aligned": {
+            "winner_correct": null,
+            "exact": 3
+          }
+        },
+        "ufcvegas124_2026-11-07": {
+          "original": {
+            "winner_correct": null,
+            "exact": 8
+          },
+          "winner_aligned": {
+            "winner_correct": null,
+            "exact": 8
+          },
+          "winner_timing_aligned": {
+            "winner_correct": null,
+            "exact": 8
+          }
+        },
+        "ufc334_2026-11-14": {
+          "original": {
+            "winner_correct": null,
+            "exact": 3
+          },
+          "winner_aligned": {
+            "winner_correct": null,
+            "exact": 3
+          },
+          "winner_timing_aligned": {
+            "winner_correct": null,
+            "exact": 5
+          }
+        }
+      }
     }
   },
   "rows": {
@@ -4269,5 +4416,6 @@
     ]
   },
   "status": "POST_EVENT_CHALLENGER_NOT_PROMOTED",
-  "corrected_note": "max_projection_residual is now the actual winner-and-timing IPF marginal residual; prior research report incorrectly aggregated winner-only timing mismatch under this name."
+  "corrected_note": "max_projection_residual is now the actual winner-and-timing IPF marginal residual; prior research report incorrectly aggregated winner-only timing mismatch under this name.",
+  "postevent_method_check": "The winner+timing six-way projection adds internal coherence and improved historical retrospective exact counts, but is NOT promoted without a pre-registered prospective sample and confidence calibration."
 }
