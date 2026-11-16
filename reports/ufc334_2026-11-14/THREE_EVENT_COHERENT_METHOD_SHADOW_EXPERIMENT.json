@@ -106,7 +106,8 @@
       },
       "max_original_winner_gap_pp": 17.569410577296004,
       "max_original_timing_gap_pp": 26.02975513162409,
-      "max_projection_residual": 0.25911205810822013
+      "max_projection_residual": 9.843237336326638e-13,
+      "max_winner_only_finish_gap": 0.25911205810822013
     },
     "unified": {
       "all": {
@@ -181,7 +182,8 @@
       },
       "max_original_winner_gap_pp": 10.227708822518355,
       "max_original_timing_gap_pp": 32.32790939485527,
-      "max_projection_residual": 0.31660320918482754
+      "max_projection_residual": 9.736655925962623e-13,
+      "max_winner_only_finish_gap": 0.31660320918482754
     }
   },
   "rows": {
@@ -4266,5 +4268,6 @@
       }
     ]
   },
-  "status": "POST_EVENT_CHALLENGER_NOT_PROMOTED"
+  "status": "POST_EVENT_CHALLENGER_NOT_PROMOTED",
+  "corrected_note": "max_projection_residual is now the actual winner-and-timing IPF marginal residual; prior research report incorrectly aggregated winner-only timing mismatch under this name."
 }
