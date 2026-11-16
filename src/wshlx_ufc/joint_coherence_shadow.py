@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import json
 import math
+import hashlib
 from pathlib import Path
 
 JOINT_KEYS = ("A_KO", "A_SUB", "A_DEC", "B_KO", "B_SUB", "B_DEC")
@@ -138,11 +139,23 @@ def compute() -> dict:
         "event_picks": {},
     } for model in ("historical", "unified")}
     for slug, raw_path, grade_path in EVENTS:
-        raw = json.loads((ROOT / raw_path).read_text())
+        raw_bytes = (ROOT / raw_path).read_bytes()
+        raw = json.loads(raw_bytes)
         grade = json.loads((ROOT / grade_path).read_text())
-        if raw.get("odds_used") is not False or raw.get("stage_a_frozen") is not True:
-            raise ValueError("Original event Stage A is not frozen odds-blind")
-        if raw["event_date"] != grade["event_date"] or not raw["fights"]:
+        # Archived raw files are explicitly pre-freeze. The FINAL file is
+        # frozen, and its hash binds the exact raw pre-event predictions.
+        lock = json.loads(
+            (ROOT / raw_path).with_name("stage_a_final_selection.json").read_text()
+        )
+        expected_sha = lock.get("raw_model_sha256",
+                                lock.get("original_stage_a_raw_sha256"))
+        if (raw.get("odds_used") is not False or
+                lock.get("stage_a_frozen") is not True or
+                lock.get("odds_used") is not False or
+                hashlib.sha256(raw_bytes).hexdigest() != expected_sha):
+            raise ValueError("Raw/final frozen Stage A integrity check failed")
+        if (not (raw["event_date"] == grade["event_date"] == lock["event_date"])
+                or not raw["fights"] or len(raw["fights"]) != len(lock["fights"])):
             raise ValueError("Event identity mismatch")
         results = outcomes_for_event(slug, grade)
         if len(results) != len(raw["fights"]):
