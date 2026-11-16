@@ -105,3 +105,44 @@ calibration and return simulations may support adjusting Stage B gates.
 **Code changes this event remain recording/diagnostic/testing only.
 There is still no champion, shadow weight, market gate, or original prediction
 change.**
+
+
+## November 16 additional data and method challenger follow-up
+
+**UFC334 performance stats acquired and validated — PROVISIONAL secondary mirrors.**
+We now have **13/13 fights, 26 fighter totals (32 columns) and 72 fighter-round
+records**, sourced from UFCStats-derived FightingData and Cage Almanac mirrors.
+Round sig-strike, takedown, knockdown and control sums agree with fighter totals;
+strike target/position aggregates also reconcile. Direct first-party UFCStats
+still returns 502 and a third-party feed differs on Gane/Hokit strike totals.
+The manifest enforces `allow_training=false` until approved source
+reconciliation. See
+`data/raw/ufc334_2026-11-14/INGESTION_MANIFEST_PROVISIONAL.json`,
+`src/wshlx_ufc/post_event_stats_audit.py` and the accompanying regression tests.
+
+**Actual prior-only method correction experiment was run, and rejected.**
+The existing `MethodInterceptCalibrator` was fitted on exactly **153 earlier
+causal graded fights through November 7**, with the Nov14 UFC334 predictions
+and results held completely out of fitting. Its prospective-style shadow
+retained only **1/12** correct Reference fighter+method combinations;
+on the eight correctly predicted Reference winners, method probability
+Brier **worsened 0.7754 → 0.9948** and method log loss **worsened
+1.2247 → 1.6049**. No improvement in top-label method accuracy. It was
+**NOT promoted**; no champion coefficients, predictions, or previously
+frozen outputs changed. The clean holdout study and reproducer live at
+`reports/ufc334_2026-11-14/PRE_NOV14_METHOD_OFFSET_SHADOW_HOLDOUT.json`
+and `tools/benchmark_ufc334_pre_nov14_method_offset_shadow.py`.
+The linked tests pass.
+
+**Before the Nov21 UFC card:** prioritize validating primary UFCStats (or
+formal mirror approval), training only on previous-event stats, designing a
+coherent six-way method/winner *shadow* (currently max discrepancies 17.569pp
+Historical, 10.228pp Unified), adding opponent-quality/defensive
+wrestling/decision-survival features from PRIOR fights, and testing 3- versus
+5-round timing hazard out of time. Do not blindly force extra decisions or
+relax Stage B FanDuel edge/quote/coherence gates. Full checklist:
+`reports/ufc334_2026-11-14/PRE_NEXT_UFC_CARD_READINESS_2026-11-16.md`.
+
+**Code status:** diagnostic/testing and held-out experiment code added,
+but no predictive model promoted, original locks untouched and Stage B
+unchanged.
