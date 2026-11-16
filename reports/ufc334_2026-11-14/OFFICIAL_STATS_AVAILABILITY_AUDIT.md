@@ -29,3 +29,40 @@ Several provisional public totals have useful diagnostic hypotheses to check: MM
 5. Run an out-of-time method/finish calibration comparison across multiple cards before changing champion/shadow predictive weights.
 
 **Current ingestion status: official UFCStats full post-event stats NOT ingested. Official outcome grade verified.**
+
+
+---
+
+## November 16 UPDATE — 13/13 UFCStats-derived mirrored fight summaries acquired
+
+**Status change:** The November 15 statement that full performance stats were
+not ingested was accurate at that time. On November 16, all **13 fights / 26
+fighters** were transcribed from the two independently displayed UFCStats-derived
+mirrors `FightingData` and `Cage Almanac`, with 72 fighter-round entries for
+significant strikes, takedowns, control seconds and knockdowns.
+
+- Full 26-fighter / 32-column data: `data/raw/ufc334_2026-11-14/ufc334_complete_26_fighter_mirror_totals_PROVISIONAL.csv`
+- Round-level 72-row data: `data/raw/ufc334_2026-11-14/ufc334_fighter_mirror_per_round_PROVISIONAL.csv`
+- Individual source links / validation restrictions: `data/raw/ufc334_2026-11-14/INGESTION_MANIFEST_PROVISIONAL.json`
+- Source-audit code: `src/wshlx_ufc/post_event_stats_audit.py`
+- Test coverage: `tests/test_ufc334_post_event_mirror_stats_integrity.py`
+
+**What is now verified internally:** Every fighter's 72 fighter-round source
+observations sum to the published 26 fight totals for each recorded round-level
+core feature; per-fighter totals match the corresponding Cage Almanac UFCStats-
+derived fight pages. Additional total strikes, submission attempts, reversals,
+and strike placement/target totals were cross-checked and their component
+sums validated. The original UFC 334 frozen matchup identities and official
+fight results still agree.
+
+**What is NOT established:** direct first-party UFCStats access; a complete
+official first-party round-by-round export for all detailed strike locations;
+independent reconciliation of other aggregators that disagree (notably
+PropBetEdge's Gane-Hokit significant-strike counts). This remains a marked
+**PROVISIONAL MIRROR-CROSSCHECKED** dataset, `allow_training = false`,
+not automatically merged into champion model training.
+
+Once the direct source or an explicitly approved mirror-data fallback is
+validated, the stats can be added as *historical outcomes after Nov14* for
+the Nov21 and later UFC cards. They **cannot** be backdated into the Nov11
+prediction inputs or used to refit the champion without chronological tests.
