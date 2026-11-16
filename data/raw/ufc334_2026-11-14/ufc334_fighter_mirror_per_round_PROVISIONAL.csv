@@ -1,0 +1,73 @@
+fight_no,fighter,opponent,corner,round,sig_str_landed,sig_str_attempted,takedowns_landed,takedowns_attempted,control_seconds,knockdowns,source_url
+1,Evan Elder,Samuel Sanches,a,1,40,59,1,2,106,1,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+1,Evan Elder,Samuel Sanches,a,2,45,67,1,3,106,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+1,Evan Elder,Samuel Sanches,a,3,20,43,4,5,151,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+1,Samuel Sanches,Evan Elder,b,1,35,66,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+1,Samuel Sanches,Evan Elder,b,2,21,61,0,0,8,1,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+1,Samuel Sanches,Evan Elder,b,3,17,47,0,0,5,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+2,Alatengheili,Juan Diaz,a,1,14,39,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+2,Alatengheili,Juan Diaz,a,2,16,58,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+2,Alatengheili,Juan Diaz,a,3,18,63,0,2,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+2,Juan Diaz,Alatengheili,b,1,26,51,0,0,24,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+2,Juan Diaz,Alatengheili,b,2,35,80,0,0,33,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+2,Juan Diaz,Alatengheili,b,3,47,109,0,1,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+3,Macy Chiasson,Bia Mesquita,a,1,1,9,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+3,Bia Mesquita,Macy Chiasson,b,1,18,25,1,2,119,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+4,Jared Gordon,Melquizael Costa,a,1,7,17,0,0,36,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+4,Jared Gordon,Melquizael Costa,a,2,3,6,2,3,263,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+4,Jared Gordon,Melquizael Costa,a,3,10,25,2,9,146,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+4,Melquizael Costa,Jared Gordon,b,1,20,65,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+4,Melquizael Costa,Jared Gordon,b,2,9,14,0,0,9,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+4,Melquizael Costa,Jared Gordon,b,3,25,48,0,0,12,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+5,Donte Johnson,Cesar Almeida,a,1,16,42,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+5,Cesar Almeida,Donte Johnson,b,1,28,47,1,1,22,2,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+6,Jim Miller,Terrance McKinney,a,1,16,26,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+6,Terrance McKinney,Jim Miller,b,1,19,44,0,0,5,1,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+7,Drew Dober,Chris Duncan,a,1,14,27,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+7,Drew Dober,Chris Duncan,a,2,18,47,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+7,Drew Dober,Chris Duncan,a,3,17,51,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+7,Chris Duncan,Drew Dober,b,1,20,36,0,1,10,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+7,Chris Duncan,Drew Dober,b,2,23,44,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+7,Chris Duncan,Drew Dober,b,3,18,42,1,5,50,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+8,Stephen Thompson,Charles Radtke,a,1,17,30,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+8,Stephen Thompson,Charles Radtke,a,2,25,49,0,0,30,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+8,Stephen Thompson,Charles Radtke,a,3,25,43,0,0,2,1,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+8,Charles Radtke,Stephen Thompson,b,1,7,16,1,2,166,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+8,Charles Radtke,Stephen Thompson,b,2,3,12,1,4,70,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+8,Charles Radtke,Stephen Thompson,b,3,1,12,0,1,51,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+9,Bilal Hasan,Luis Gurule,a,1,30,65,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+9,Bilal Hasan,Luis Gurule,a,2,21,39,0,1,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+9,Bilal Hasan,Luis Gurule,a,3,1,5,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+9,Luis Gurule,Bilal Hasan,b,1,16,45,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+9,Luis Gurule,Bilal Hasan,b,2,13,36,1,3,110,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+9,Luis Gurule,Bilal Hasan,b,3,10,15,1,2,269,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+10,Uros Medic,Kevin Holland,a,1,9,17,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+10,Uros Medic,Kevin Holland,a,2,7,13,0,0,7,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+10,Uros Medic,Kevin Holland,a,3,19,30,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+10,Kevin Holland,Uros Medic,b,1,19,35,1,3,58,1,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+10,Kevin Holland,Uros Medic,b,2,20,40,1,2,34,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+10,Kevin Holland,Uros Medic,b,3,14,30,0,4,64,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+11,Caio Borralho,Yousri Belgaroui,a,1,6,9,1,2,185,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+11,Caio Borralho,Yousri Belgaroui,a,2,5,11,2,7,146,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+11,Caio Borralho,Yousri Belgaroui,a,3,9,17,2,4,136,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+11,Yousri Belgaroui,Caio Borralho,b,1,4,11,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+11,Yousri Belgaroui,Caio Borralho,b,2,11,16,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+11,Yousri Belgaroui,Caio Borralho,b,3,13,23,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+12,Kayla Harrison,Amanda Nunes,a,1,5,12,1,4,119,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+12,Kayla Harrison,Amanda Nunes,a,2,8,9,1,1,132,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+12,Kayla Harrison,Amanda Nunes,a,3,11,13,0,3,85,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+12,Kayla Harrison,Amanda Nunes,a,4,1,7,1,1,5,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+12,Amanda Nunes,Kayla Harrison,b,1,15,31,0,0,8,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+12,Amanda Nunes,Kayla Harrison,b,2,5,7,1,5,134,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+12,Amanda Nunes,Kayla Harrison,b,3,8,13,1,2,126,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+12,Amanda Nunes,Kayla Harrison,b,4,3,11,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+13,Ciryl Gane,Josh Hokit,a,1,41,65,0,0,3,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+13,Ciryl Gane,Josh Hokit,a,2,56,86,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+13,Ciryl Gane,Josh Hokit,a,3,30,43,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+13,Ciryl Gane,Josh Hokit,a,4,40,51,0,0,1,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+13,Ciryl Gane,Josh Hokit,a,5,70,98,0,0,0,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+13,Josh Hokit,Ciryl Gane,b,1,29,62,2,7,57,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+13,Josh Hokit,Ciryl Gane,b,2,39,72,0,7,20,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+13,Josh Hokit,Ciryl Gane,b,3,24,37,1,5,74,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+13,Josh Hokit,Ciryl Gane,b,4,21,38,0,4,114,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
+13,Josh Hokit,Ciryl Gane,b,5,33,74,0,7,12,0,https://fightingdata.com/events/ufc-334-gane-vs-hokit/
