@@ -238,3 +238,42 @@ JSON:
 `reports/ufc334_2026-11-14/SELECTED_FIGHTER_EXACT_METHOD_3CARD_RETROSPECTIVE.json`.
 Reproduced from read-only GitHub research run:
 https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/43987572406
+
+
+## November 16 — full pre-fight finishing-resistance investigation
+
+**Historical data:** A pinned UFCStats-compatible secondary source archive
+through Nov7 reconstructed **8,871 completed UFC fights** (8,850 with both
+fighters' recorded stat rows), **2,773 fighter histories**, and precisely
+date-lagged KO/sub loss, knockdowns absorbed, survival after a knockdown,
+opponent submission threats, takedowns faced, and control conceded. Reversals
+are **NOT** equivalent to direct get-ups and no such count was invented.
+The historical ingest recorded **27 legacy round-format discrepancies** and
+42 individual missing fighter-stat records (not zero-filled).
+
+**UFC334 pre-Nov14 feature availability:** 13/13 original matchups queried,
+25/26 fighters had prior UFC statistics, 20/26 had prior exposure to an
+already established UFC finisher. These retrospective data queries do NOT
+alter any of our November 11 original Stage A inputs.
+
+**Genuine original-selected-fighter methodological result:** A prior-only
+125/139/153 labeled-method fit on the three original Oct24, Nov7 and Nov14
+frozen cards **failed to improve** exact winner+method: Reference baseline
+**9/40** vs resistance **6/40**, Historical **13/40** vs **12/40**, Unified
+**14/40** vs **13/40**. Six-class Brier/log-loss worsened for all three
+families. Original model-selected winners all unchanged.
+
+**Status: REJECT method adjustment, retain historical features.** No
+predictive coefficients/trained model, Stage A/B, FanDuel gates, 10k sims or
+original betting cards changed. A historical resistance indicator is not
+evidence of a predictive lift until out-of-time proper scores and
+frozen selected-fighter exact-method accuracy improve.
+
+New code:
+`src/wshlx_ufc/prefight_finish_resistance.py` and
+`src/wshlx_ufc/resistance_method_shadow.py`.
+Docs/grade:
+`reports/ufc334_2026-11-14/FINISH_RESISTANCE_2026-11-16_RESULTS_AND_DECISION.md`,
+`reports/ufc334_2026-11-14/FINISH_RESISTANCE_SELECTED_FIGHTER_3CARD_RESEARCH.json`.
+CI runs: https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/43988964181
+and https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/43989338994 .
