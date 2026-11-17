@@ -124,6 +124,10 @@ def main():
     features, labels, manifest = load_matrix()
     original = _clean153()
     matched, missing = align_rows(features, labels, original)
+    # The current source archive is expected to align all 153 clean fights.
+    # Future naming changes or silent source drift must fail loudly.
+    if missing or len(matched) != 153:
+        raise ValueError("Reference/source identity regression; review unmatched bouts: " + str(missing))
     audited = read_json(AUDIT)
     provenance = audited["original_stage_a_artifact_identity_verification"]
     all_later = {x["date"] for x in provenance}
