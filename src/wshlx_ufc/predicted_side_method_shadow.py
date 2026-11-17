@@ -240,10 +240,14 @@ def evaluate() -> dict:
         if earlier.empty or any(earlier.event_date.str[:10]>=date):
             raise ValueError("Same-event outcome leaked into fitted calibrator")
         candidate_params={}
-        for kind in ("intercept","quality_only"):
-            candidate_params[kind]={
-                "finish":fit(earlier,"finish",kind),
-                "sub":fit(earlier,"sub",kind),
+        for variant,fit_kind in (
+            ("intercept_only","intercept"),
+            ("quality_only","quality_only"),
+        ):
+            candidate_params[variant]={
+                "finish":fit(earlier,"finish",fit_kind),
+                "sub":fit(earlier,"sub",fit_kind),
+                "underlying_fit_kind":fit_kind,
             }
         snaps=_quality_lookup(date,raw["fights"])
         for f,original in zip(raw["fights"],frozen["fights"]):
@@ -270,7 +274,8 @@ def evaluate() -> dict:
                 projected={}
                 for kind,par in candidate_params.items():
                     calibrated=predict(
-                        frame,par["finish"],par["sub"],kind
+                        frame,par["finish"],par["sub"],
+                        par["underlying_fit_kind"],
                     )
                     projected[kind]={
                         key:float(calibrated[0 if key[0]=="A" else 1,
