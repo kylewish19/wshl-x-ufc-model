@@ -1,0 +1,635 @@
+{
+  "all_years": {
+    "1994": {
+      "both_current_fight_stat_rows_available": 29,
+      "bouts": 31,
+      "decisive": 31,
+      "draws": 0,
+      "either_current_stat_missing": 2,
+      "event_count": 3,
+      "methods": {
+        "KO_TKO": 11,
+        "SUB": 20
+      },
+      "prior_evidence_any_debutant": 30,
+      "prior_evidence_any_under_five_ufc_bouts": 31,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "1995": {
+      "both_current_fight_stat_rows_available": 32,
+      "bouts": 38,
+      "decisive": 38,
+      "draws": 0,
+      "either_current_stat_missing": 6,
+      "event_count": 4,
+      "methods": {
+        "DEC": 3,
+        "KO_TKO": 15,
+        "SUB": 20
+      },
+      "prior_evidence_any_debutant": 26,
+      "prior_evidence_any_under_five_ufc_bouts": 36,
+      "prior_fighter_stat_history_missing_or_partial": 3,
+      "round_format_anomalies": 1
+    },
+    "1996": {
+      "both_current_fight_stat_rows_available": 36,
+      "bouts": 43,
+      "decisive": 43,
+      "draws": 0,
+      "either_current_stat_missing": 7,
+      "event_count": 5,
+      "methods": {
+        "DEC": 5,
+        "KO_TKO": 27,
+        "SUB": 11
+      },
+      "prior_evidence_any_debutant": 27,
+      "prior_evidence_any_under_five_ufc_bouts": 40,
+      "prior_fighter_stat_history_missing_or_partial": 8,
+      "round_format_anomalies": 3
+    },
+    "1997": {
+      "both_current_fight_stat_rows_available": 38,
+      "bouts": 40,
+      "decisive": 40,
+      "draws": 0,
+      "either_current_stat_missing": 2,
+      "event_count": 5,
+      "methods": {
+        "DEC": 8,
+        "KO_TKO": 13,
+        "SUB": 19
+      },
+      "prior_evidence_any_debutant": 33,
+      "prior_evidence_any_under_five_ufc_bouts": 39,
+      "prior_fighter_stat_history_missing_or_partial": 5,
+      "round_format_anomalies": 7
+    },
+    "1998": {
+      "both_current_fight_stat_rows_available": 21,
+      "bouts": 25,
+      "decisive": 25,
+      "draws": 0,
+      "either_current_stat_missing": 4,
+      "event_count": 3,
+      "methods": {
+        "DEC": 8,
+        "KO_TKO": 9,
+        "SUB": 8
+      },
+      "prior_evidence_any_debutant": 22,
+      "prior_evidence_any_under_five_ufc_bouts": 25,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 9
+    },
+    "1999": {
+      "both_current_fight_stat_rows_available": 44,
+      "bouts": 44,
+      "decisive": 42,
+      "draws": 2,
+      "either_current_stat_missing": 0,
+      "event_count": 6,
+      "methods": {
+        "DEC": 9,
+        "DRAW": 2,
+        "KO_TKO": 26,
+        "SUB": 7
+      },
+      "prior_evidence_any_debutant": 28,
+      "prior_evidence_any_under_five_ufc_bouts": 44,
+      "prior_fighter_stat_history_missing_or_partial": 4,
+      "round_format_anomalies": 7
+    },
+    "2000": {
+      "both_current_fight_stat_rows_available": 42,
+      "bouts": 42,
+      "decisive": 41,
+      "draws": 1,
+      "either_current_stat_missing": 0,
+      "event_count": 6,
+      "methods": {
+        "DEC": 16,
+        "DRAW": 1,
+        "KO_TKO": 14,
+        "SUB": 11
+      },
+      "prior_evidence_any_debutant": 29,
+      "prior_evidence_any_under_five_ufc_bouts": 41,
+      "prior_fighter_stat_history_missing_or_partial": 2,
+      "round_format_anomalies": 0
+    },
+    "2001": {
+      "both_current_fight_stat_rows_available": 38,
+      "bouts": 38,
+      "decisive": 38,
+      "draws": 0,
+      "either_current_stat_missing": 0,
+      "event_count": 5,
+      "methods": {
+        "DEC": 12,
+        "KO_TKO": 17,
+        "SUB": 9
+      },
+      "prior_evidence_any_debutant": 19,
+      "prior_evidence_any_under_five_ufc_bouts": 36,
+      "prior_fighter_stat_history_missing_or_partial": 1,
+      "round_format_anomalies": 0
+    },
+    "2002": {
+      "both_current_fight_stat_rows_available": 52,
+      "bouts": 52,
+      "decisive": 52,
+      "draws": 0,
+      "either_current_stat_missing": 0,
+      "event_count": 7,
+      "methods": {
+        "DEC": 15,
+        "KO_TKO": 29,
+        "SUB": 8
+      },
+      "prior_evidence_any_debutant": 18,
+      "prior_evidence_any_under_five_ufc_bouts": 50,
+      "prior_fighter_stat_history_missing_or_partial": 1,
+      "round_format_anomalies": 0
+    },
+    "2003": {
+      "both_current_fight_stat_rows_available": 40,
+      "bouts": 40,
+      "decisive": 38,
+      "draws": 2,
+      "either_current_stat_missing": 0,
+      "event_count": 5,
+      "methods": {
+        "DEC": 12,
+        "DRAW": 2,
+        "KO_TKO": 18,
+        "SUB": 8
+      },
+      "prior_evidence_any_debutant": 19,
+      "prior_evidence_any_under_five_ufc_bouts": 35,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2004": {
+      "both_current_fight_stat_rows_available": 39,
+      "bouts": 39,
+      "decisive": 39,
+      "draws": 0,
+      "either_current_stat_missing": 0,
+      "event_count": 5,
+      "methods": {
+        "DEC": 10,
+        "KO_TKO": 18,
+        "SUB": 11
+      },
+      "prior_evidence_any_debutant": 17,
+      "prior_evidence_any_under_five_ufc_bouts": 32,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2005": {
+      "both_current_fight_stat_rows_available": 79,
+      "bouts": 79,
+      "decisive": 79,
+      "draws": 0,
+      "either_current_stat_missing": 0,
+      "event_count": 10,
+      "methods": {
+        "DEC": 19,
+        "KO_TKO": 39,
+        "SUB": 21
+      },
+      "prior_evidence_any_debutant": 39,
+      "prior_evidence_any_under_five_ufc_bouts": 76,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2006": {
+      "both_current_fight_stat_rows_available": 158,
+      "bouts": 158,
+      "decisive": 158,
+      "draws": 0,
+      "either_current_stat_missing": 0,
+      "event_count": 18,
+      "methods": {
+        "DEC": 52,
+        "KO_TKO": 59,
+        "SUB": 47
+      },
+      "prior_evidence_any_debutant": 69,
+      "prior_evidence_any_under_five_ufc_bouts": 141,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2007": {
+      "both_current_fight_stat_rows_available": 169,
+      "bouts": 169,
+      "decisive": 168,
+      "draws": 1,
+      "either_current_stat_missing": 0,
+      "event_count": 19,
+      "methods": {
+        "DEC": 61,
+        "DRAW": 1,
+        "KO_TKO": 53,
+        "SUB": 54
+      },
+      "prior_evidence_any_debutant": 65,
+      "prior_evidence_any_under_five_ufc_bouts": 153,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2008": {
+      "both_current_fight_stat_rows_available": 201,
+      "bouts": 201,
+      "decisive": 201,
+      "draws": 0,
+      "either_current_stat_missing": 0,
+      "event_count": 20,
+      "methods": {
+        "DEC": 64,
+        "KO_TKO": 86,
+        "SUB": 51
+      },
+      "prior_evidence_any_debutant": 64,
+      "prior_evidence_any_under_five_ufc_bouts": 162,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2009": {
+      "both_current_fight_stat_rows_available": 213,
+      "bouts": 213,
+      "decisive": 212,
+      "draws": 1,
+      "either_current_stat_missing": 0,
+      "event_count": 20,
+      "methods": {
+        "DEC": 91,
+        "DRAW": 1,
+        "KO_TKO": 75,
+        "SUB": 46
+      },
+      "prior_evidence_any_debutant": 63,
+      "prior_evidence_any_under_five_ufc_bouts": 164,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2010": {
+      "both_current_fight_stat_rows_available": 252,
+      "bouts": 252,
+      "decisive": 249,
+      "draws": 3,
+      "either_current_stat_missing": 0,
+      "event_count": 24,
+      "methods": {
+        "DEC": 121,
+        "DRAW": 3,
+        "KO_TKO": 69,
+        "SUB": 59
+      },
+      "prior_evidence_any_debutant": 60,
+      "prior_evidence_any_under_five_ufc_bouts": 194,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2011": {
+      "both_current_fight_stat_rows_available": 297,
+      "bouts": 297,
+      "decisive": 295,
+      "draws": 2,
+      "either_current_stat_missing": 0,
+      "event_count": 27,
+      "methods": {
+        "DEC": 145,
+        "DRAW": 2,
+        "KO_TKO": 95,
+        "SUB": 55
+      },
+      "prior_evidence_any_debutant": 94,
+      "prior_evidence_any_under_five_ufc_bouts": 227,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2012": {
+      "both_current_fight_stat_rows_available": 333,
+      "bouts": 333,
+      "decisive": 331,
+      "draws": 2,
+      "either_current_stat_missing": 0,
+      "event_count": 31,
+      "methods": {
+        "DEC": 156,
+        "DRAW": 2,
+        "KO_TKO": 105,
+        "SUB": 70
+      },
+      "prior_evidence_any_debutant": 86,
+      "prior_evidence_any_under_five_ufc_bouts": 261,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2013": {
+      "both_current_fight_stat_rows_available": 376,
+      "bouts": 376,
+      "decisive": 375,
+      "draws": 1,
+      "either_current_stat_missing": 0,
+      "event_count": 33,
+      "methods": {
+        "DEC": 178,
+        "DRAW": 1,
+        "KO_TKO": 130,
+        "SUB": 67
+      },
+      "prior_evidence_any_debutant": 108,
+      "prior_evidence_any_under_five_ufc_bouts": 295,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2014": {
+      "both_current_fight_stat_rows_available": 494,
+      "bouts": 494,
+      "decisive": 493,
+      "draws": 1,
+      "either_current_stat_missing": 0,
+      "event_count": 46,
+      "methods": {
+        "DEC": 246,
+        "DRAW": 1,
+        "KO_TKO": 152,
+        "SUB": 95
+      },
+      "prior_evidence_any_debutant": 165,
+      "prior_evidence_any_under_five_ufc_bouts": 410,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2015": {
+      "both_current_fight_stat_rows_available": 464,
+      "bouts": 464,
+      "decisive": 462,
+      "draws": 2,
+      "either_current_stat_missing": 0,
+      "event_count": 41,
+      "methods": {
+        "DEC": 219,
+        "DRAW": 2,
+        "KO_TKO": 155,
+        "SUB": 88
+      },
+      "prior_evidence_any_debutant": 84,
+      "prior_evidence_any_under_five_ufc_bouts": 339,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2016": {
+      "both_current_fight_stat_rows_available": 490,
+      "bouts": 490,
+      "decisive": 483,
+      "draws": 7,
+      "either_current_stat_missing": 0,
+      "event_count": 41,
+      "methods": {
+        "DEC": 241,
+        "DRAW": 7,
+        "KO_TKO": 153,
+        "SUB": 89
+      },
+      "prior_evidence_any_debutant": 105,
+      "prior_evidence_any_under_five_ufc_bouts": 337,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2017": {
+      "both_current_fight_stat_rows_available": 450,
+      "bouts": 450,
+      "decisive": 445,
+      "draws": 5,
+      "either_current_stat_missing": 0,
+      "event_count": 39,
+      "methods": {
+        "DEC": 219,
+        "DRAW": 5,
+        "KO_TKO": 146,
+        "SUB": 80
+      },
+      "prior_evidence_any_debutant": 104,
+      "prior_evidence_any_under_five_ufc_bouts": 306,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2018": {
+      "both_current_fight_stat_rows_available": 470,
+      "bouts": 470,
+      "decisive": 468,
+      "draws": 2,
+      "either_current_stat_missing": 0,
+      "event_count": 39,
+      "methods": {
+        "DEC": 227,
+        "DRAW": 2,
+        "KO_TKO": 151,
+        "SUB": 90
+      },
+      "prior_evidence_any_debutant": 102,
+      "prior_evidence_any_under_five_ufc_bouts": 316,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2019": {
+      "both_current_fight_stat_rows_available": 510,
+      "bouts": 510,
+      "decisive": 505,
+      "draws": 5,
+      "either_current_stat_missing": 0,
+      "event_count": 42,
+      "methods": {
+        "DEC": 272,
+        "DRAW": 5,
+        "KO_TKO": 153,
+        "SUB": 80
+      },
+      "prior_evidence_any_debutant": 122,
+      "prior_evidence_any_under_five_ufc_bouts": 360,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2020": {
+      "both_current_fight_stat_rows_available": 447,
+      "bouts": 447,
+      "decisive": 442,
+      "draws": 5,
+      "either_current_stat_missing": 0,
+      "event_count": 41,
+      "methods": {
+        "DEC": 221,
+        "DRAW": 5,
+        "KO_TKO": 139,
+        "SUB": 82
+      },
+      "prior_evidence_any_debutant": 104,
+      "prior_evidence_any_under_five_ufc_bouts": 310,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2021": {
+      "both_current_fight_stat_rows_available": 500,
+      "bouts": 500,
+      "decisive": 495,
+      "draws": 5,
+      "either_current_stat_missing": 0,
+      "event_count": 43,
+      "methods": {
+        "DEC": 251,
+        "DRAW": 5,
+        "KO_TKO": 171,
+        "SUB": 73
+      },
+      "prior_evidence_any_debutant": 84,
+      "prior_evidence_any_under_five_ufc_bouts": 324,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2022": {
+      "both_current_fight_stat_rows_available": 508,
+      "bouts": 508,
+      "decisive": 505,
+      "draws": 3,
+      "either_current_stat_missing": 0,
+      "event_count": 42,
+      "methods": {
+        "DEC": 236,
+        "DRAW": 3,
+        "KO_TKO": 171,
+        "SUB": 98
+      },
+      "prior_evidence_any_debutant": 87,
+      "prior_evidence_any_under_five_ufc_bouts": 314,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2023": {
+      "both_current_fight_stat_rows_available": 509,
+      "bouts": 509,
+      "decisive": 503,
+      "draws": 6,
+      "either_current_stat_missing": 0,
+      "event_count": 43,
+      "methods": {
+        "DEC": 242,
+        "DRAW": 6,
+        "KO_TKO": 159,
+        "SUB": 102
+      },
+      "prior_evidence_any_debutant": 115,
+      "prior_evidence_any_under_five_ufc_bouts": 316,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2024": {
+      "both_current_fight_stat_rows_available": 511,
+      "bouts": 511,
+      "decisive": 511,
+      "draws": 0,
+      "either_current_stat_missing": 0,
+      "event_count": 42,
+      "methods": {
+        "DEC": 281,
+        "KO_TKO": 147,
+        "SUB": 83
+      },
+      "prior_evidence_any_debutant": 83,
+      "prior_evidence_any_under_five_ufc_bouts": 294,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2025": {
+      "both_current_fight_stat_rows_available": 516,
+      "bouts": 516,
+      "decisive": 513,
+      "draws": 3,
+      "either_current_stat_missing": 0,
+      "event_count": 42,
+      "methods": {
+        "DEC": 253,
+        "DRAW": 3,
+        "KO_TKO": 169,
+        "SUB": 91
+      },
+      "prior_evidence_any_debutant": 89,
+      "prior_evidence_any_under_five_ufc_bouts": 315,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    },
+    "2026": {
+      "both_current_fight_stat_rows_available": 492,
+      "bouts": 492,
+      "decisive": 488,
+      "draws": 4,
+      "either_current_stat_missing": 0,
+      "event_count": 39,
+      "methods": {
+        "DEC": 205,
+        "DRAW": 4,
+        "KO_TKO": 199,
+        "SUB": 84
+      },
+      "prior_evidence_any_debutant": 110,
+      "prior_evidence_any_under_five_ufc_bouts": 310,
+      "prior_fighter_stat_history_missing_or_partial": 0,
+      "round_format_anomalies": 0
+    }
+  },
+  "as_of_exclusive": "2026-11-14",
+  "direct_getups_not_observed": true,
+  "earlier_pre2021_fights_used_only_as_prior_context_not_recent_target_training": true,
+  "full_archive_before_cutoff_bouts": 8871,
+  "full_archive_quality": {
+    "as_of_exclusive": "2026-11-14",
+    "complete_stat_bouts": 8850,
+    "direct_getups_available": false,
+    "fighters": 2772,
+    "fights": 8871,
+    "getups_directly_measured": false,
+    "historical_round_format_mismatches": 27,
+    "knockdown_nonko_survival_bouts": 1268,
+    "missing_fighter_stats": 42,
+    "model_or_bet_promotion": false,
+    "not_official_stats_site_direct": true,
+    "prior_threat_submission_bouts": 4266,
+    "query_bouts": 0,
+    "snapshot_rows": 8871,
+    "source_classification": "PINNED_SECONDARY_UFCSTATS_COMPATIBLE",
+    "source_sha256": "f5b316d5e745bd89da921b2c9711ec9209c2fa39dcbcd80bcb063b62d9175bcb"
+  },
+  "historical_split_does_not_replace_true_prospective_shadow_evaluation": true,
+  "labels_are_postfight_and_features_are_pre_event": true,
+  "modern_2021_2026": {
+    "any_fighter_prior_ufc_bouts_under_five": 1873,
+    "any_partial_pre_event_stat_history": 0,
+    "any_ufc_debutant": 568,
+    "both_fighter_stat_rows": 3036,
+    "decisive_bouts": 3015,
+    "draws": 21,
+    "missing_either_stat_row": 0,
+    "retrospective_2026_evaluation_window": "2026-01-01 through 2026-11-13",
+    "retrospective_test_bouts_2026": 492,
+    "round_format_anomalies": 0,
+    "total_bouts": 3036,
+    "training_bouts_2021_2025": 2544,
+    "training_window": "2021-01-01 through 2025-12-31"
+  },
+  "new_model_trained_or_promoted": false,
+  "no_future_opponent_rating_or_result_features": true,
+  "no_stage_a_b_or_fanduel_quotations_modified": true,
+  "retrospective_2026_already_seen_during_research_not_pristine": true,
+  "schema": "WSHL_X_2021_2026_HISTORICAL_TRAINING_ELIGIBILITY_V1",
+  "source": "data/raw/ufcvegas124_2026-11-07/availability.json",
+  "source_grade": "PINNED_THIRD_PARTY_UFCSTATS_COMPATIBLE_NOT_DIRECT_PRIMARY",
+  "source_stats_missing_not_zero_filled": true,
+  "status": "DATA_INVENTORY_NOT_NEW_MODEL",
+  "source_verified_ci_url": "https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/44190616841",
+  "audited_on": "2026-11-17"
+}
