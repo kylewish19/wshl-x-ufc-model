@@ -99,3 +99,16 @@ locks, 10k sims, consensus/editorial artifacts and FanDuel gates remain
 **unchanged**. The next development action is a timestamped 2021–2025
 pre-event feature matrix and rigorous baselines, **not another
 post-card-picked correction**.
+
+
+## November 17, 2026 — executed time-safe feature matrix and retrospective baselines
+
+**START FROM LATEST VERIFIED RESEARCH RESULTS:** `reports/model_health/2026-11-17_EXECUTED_HISTORICAL_BASELINES.md` (GitHub Actions PASS: https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/44193866672).
+
+- A full **8,871**-bout as-of-date fighter/opponent matrix and strictly separate post-event label table were generated, keyed and SHA-verified; historical data source remains pinned SECONDARY UFCStats-compatible, not first-party validated.
+- **2021–2025:** 2,544 bouts (2,527 decisive, 17 draws), 212 events. **2026 retrospective:** 492 (488 decisive, 4 draws), 39 events. All 21 modern draws are excluded from binary labels.
+- First non-trained 2026 winner benchmarks: 50/50 Brier **0.250000**, UFC-only pre-event Elo **0.246109** (56.76% correct), smoothed past-UFC win rate **0.242448** (60.25% correct). Six-class exact fighter+method: **23.57% / 23.36% / 25.61%**, respectively.
+- DEC class moved from **49.98% of decisive training finishes** (2021–25) to **42.01% of 2026 decisive finishes**. KO/TKO rose from **32.33% to 40.78%**; submissions **17.69% to 17.21%**. Not sufficient to force method changes.
+- 2026 outcomes have been inspected in prior research. This is **NOT** an unseen independent holdout. Reference/Historical/Unified have not yet been paired against these same 488 historical fights. Do not claim new-model gain, FanDuel edge or profitability.
+- No production champion, Stage A/B original predictions, FanDuel approvals, sim weights or grading ledgers modified. Existing >=300 genuinely prospective observation guard remains.
+- **Next exact work item:** join original time-frozen Reference/Historical/Unified picks by event date and stable fighter ID to the corresponding as-of baseline probabilities on the **same** bouts; keep reconstructed-only rows separate. Report paired event-cluster proper scores and finish-class recall; preregister prospective challengers only after that.
