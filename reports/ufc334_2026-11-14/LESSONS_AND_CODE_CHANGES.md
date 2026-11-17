@@ -199,3 +199,42 @@ Report and link:
 `reports/ufc334_2026-11-14/OPPONENT_QUALITY_SHADOW_DEVELOPMENT_2026-11-16.md`,
 `reports/ufc334_2026-11-14/QUALITY_AWARE_METHOD_153_7FOLD_RESEARCH_RESULTS.json`.
 CI benchmark: https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/43986253261
+
+
+## November 16 final fighter-selected method benchmark — decisive negative result
+
+Completed a **genuine selected-side retrospective grade** using three
+SHA-verified archived odds-blind Stage A cards (UFC333 Oct24, Vegas124 Nov7,
+UFC334 Nov14). We use each **original model-selected fighter**, rather than
+the actual winning fighter. Historical method calibrators trained only on
+**125 / 139 / 153** previous causal method cases respectively; opponent
+quality features also built strictly from earlier completed UFC fights.
+40 decisive bouts plus one draw.
+
+| Model | Baseline exact fighter+method | Intercept-only exact | Quality-only exact | Baseline 6-state Brier | Quality 6-state Brier |
+|---|---|---|---|---|---|
+| Reference | 9/40 | 6/40 | 6/40 | 0.82084 | 0.88940 |
+| Historical | 13/40 | 13/40 | 12/40 | 0.75924 | 0.80232 |
+| Unified | 14/40 | 13/40 | 11/40 | 0.76488 | 0.81733 |
+
+Thus the apparent prior *actual-winner conditional method* improvement
+was not a real fighter+method improvement. Both models also lost
+six-state log-loss calibration. **REJECT both modifications**, and keep the
+intercept/quality source and test code as a documented failure. Do not
+tune performance from the already-known results. Winner side, original
+Stage A odds-blind locks, 10k simulations, Stage B FanDuel gates and
+original historical predictions all remain unchanged.
+
+Original Historical/Unified source joint arrays have known marginal
+winner-probability inconsistencies. This benchmark compares each
+model's *already-saved conditional method proportions recombined with its
+own saved winner marginal* so the original coherent comparator and
+adjustments share identical winner probabilities. It does not modify
+the raw original six-way arrays.
+
+Complete report:
+`reports/ufc334_2026-11-14/TRUE_SELECTED_FIGHTER_METHOD_BENCHMARK_2026-11-16.md`.
+JSON:
+`reports/ufc334_2026-11-14/SELECTED_FIGHTER_EXACT_METHOD_3CARD_RETROSPECTIVE.json`.
+Reproduced from read-only GitHub research run:
+https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/43987572406
