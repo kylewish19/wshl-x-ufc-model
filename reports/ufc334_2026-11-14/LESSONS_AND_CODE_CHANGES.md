@@ -310,3 +310,55 @@ independent timing/odds guards:
 See `reports/ufcqatar_2026-11-21/PROSPECTIVE_COHERENCE_READINESS.md`.
 All work remains on `feature/historical-conditional-rates`; no model
 coefficient, official pick, betting wager or original freeze changed.
+
+## November 17 — full-history model audit and training-data reset
+
+After months of iterative code development, no newer model has yet
+demonstrated sustained improvement in actual selected-fighter+method
+or FanDuel-ROI outcomes. We therefore stopped adding reactive KO/DEC
+and grappling weights and performed the first complete repository-backed
+longitudinal audit.
+
+**Source-verified baseline:** 153 clean reference fights / 12 dated
+events Aug8–Nov7, with 8 identical-prefix cumulative snapshots;
+92/153 winners, 79/153 method-class, 48/153 exact fighter+method.
+Seven original separate Stage A selection artifacts matched the 89
+later cleaned fighter choices; the earliest 64 rows have historical
+grade snapshots but no independently source-matched Stage A card in
+the present repo. UFC334 separate: 12 decisive, 8 winners, 3 method
+classes, **1 exact**. Mixed-vintage combined totals: 100/165
+winners, **49/165 exact**; do not treat as a homogeneous
+fully prospective performance sample.
+
+**Specific repeatable method failure:** 24 actual submissions versus
+only 10 model SUB class calls, **2/24** correct class and 2/24 exact
+fighter+method. The fixed KO-on-the-same-model-fighter baseline chosen
+from the first 64 achieved **30/89** later exact predictions versus
+the model's **33/89** — not persuasive proof of incremental complexity.
+
+**Original Stage B recommended strategy ledger:** post-Sep19-recheck
+scenario 9–10, 14u risked, -0.1661u; initial frozen-Sep19
+alternative 10–10, 14.5u risked, +0.6739u. These are alternative
+documented selection-accounting outcomes, **not actual placed bet
+receipts or FanDuel edge proof**. Research virtual odds/units excluded.
+
+**2021–2026 pinned full fight archive:** 3,036 complete fighter-stat
+bouts (2,544 in 2021–2025 plus 492 in 2026), of which **21 are
+DRAW results** that must not be mislabeled as decision victories
+even when the result-method text says DEC. 3,015 decisive win/loss
+labels. 568 UFC-debutant bouts and 1,873 with an under-five-bout
+participant. These are possible larger historical training records,
+not validated firsthand UFCStats or unseen prospective trials.
+
+**Governance:** retain existing reference/historical/unified champion
+outputs and full Stage A/B locks. Do not promote more model versions
+or target submission weights until a preregistered, date-heldout
+proper-score and real selected-fighter+method test beats the
+unchanged baseline. No production model or FanDuel price gate updated.
+
+Main audit:
+`reports/model_health/2026-11-17_EVIDENCE_FIRST_MODEL_RESET.md`.
+Machine source audit:
+`reports/model_health/2026-11-17_FULL_HISTORY_BASELINE_AUDIT.json`.
+Modern source eligibility:
+`reports/model_health/2026-11-17_2021_2026_TRAINING_ELIGIBILITY.json`.
