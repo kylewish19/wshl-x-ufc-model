@@ -103,3 +103,29 @@ the reconciled provisional mirror, then build *pre-bout-only* strength-of-
 competition, takedown defense/get-up, damage absorption and duration-survival
 candidate features. Run date-separated evaluation; do not train on Nov14 stats
 for Nov14 outcomes, and do not override FanDuel Stage B price gates.
+
+
+## November 16 further checkpoint — opponent-strength feature implementation
+
+New source-only code now computes history-safe UFC Elo / past defeated-
+opponent strength at **time of each fight** (no future-success lookahead).
+All **153/153** prior method cases matched their pre-bout snapshots.
+Unit tests verify historical results cutoff, same-date grouping, no
+outcome field used in the predictor and no fabricated missing identity.
+
+A genuinely event-ordered **89-fight retrospective conditional-method
+comparison** found no substantive opponent-specific incremental benefit:
+baseline 39/89; intercept 49/89; basic defense 49/89; quality-only
+49/89; quality plus defense 48/89. Slight quality-only Brier improvement
+from 0.558746 to 0.558435 is not adequate for promotion. The previous
+Nov14 held-out intercept failure also remains decisive.
+
+**Next technical gate:** build a true **pre-fight predicted-fighter-oriented**
+feature/prediction pipeline and benchmark exact winner+method plus
+fight-duration proper scores, with opponent quality, defensive grappling,
+damage resistance and submission skill against verified-strength opposition.
+Do not report this conditional-actual-winner oracle as 49 winning
+fighter+method bets. No model or Stage A/B changes.
+
+Full source/tests/CI:
+`reports/ufc334_2026-11-14/OPPONENT_QUALITY_SHADOW_DEVELOPMENT_2026-11-16.md`.
