@@ -27,7 +27,7 @@ METHODS={"KO_TKO","SUB","DEC"}
 def audit_eligibility()->dict:
     snapshots,provenance=load_and_build(as_of_exclusive=CUTOFF)
     originals=_load_records(ARCHIVE,date.fromisoformat(CUTOFF))
-    if (len(originals)!=len(snapshots)!=False):
+    if len(originals)!=len(snapshots):
         # Avoid a silent many-to-one change of bout identity.
         raise ValueError("Historical source/feature row count mismatch")
     if len(snapshots)!=provenance["fights"]:
