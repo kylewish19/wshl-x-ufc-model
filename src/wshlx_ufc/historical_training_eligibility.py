@@ -64,13 +64,19 @@ def audit_eligibility()->dict:
         row=by_year[y]
         row["events"].add((key[0],key[1]))
         row["bouts"]+=1
-        row["methods"][actual["method"]]+=1
-        if actual["method"] in METHODS:
-            row["decisive"]+=1
-        elif actual["method"] in DRAWS:
+        # UFCStats-style results can record majority DRAW as a DEC
+        # *technical method*. That is NOT a fighter's decision victory.
+        # Use the explicit W/L vs D/D status as the label authority.
+        result_status=tuple(actual["result"])
+        if result_status==("D","D"):
+            label="DRAW"
             row["draws"]+=1
+        elif result_status in (("W","L"),("L","W")) and actual["method"] in METHODS:
+            label=actual["method"]
+            row["decisive"]+=1
         else:
-            raise ValueError("Unknown normalized outcome method")
+            raise ValueError("Winner/result and method labels contradictory")
+        row["methods"][label]+=1
         both=actual["stats_a"] is not None and actual["stats_b"] is not None
         row["both_current_fight_stat_rows_available"]+=int(both)
         row["either_current_stat_missing"]+=int(not both)
