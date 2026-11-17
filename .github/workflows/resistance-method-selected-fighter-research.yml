@@ -1,0 +1,25 @@
+name: resistance-method-selected-fighter-research
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths:
+      - "src/wshlx_ufc/resistance_method_shadow.py"
+      - "tools/benchmark_resistance_method_selected_fighter.py"
+      - ".github/workflows/resistance-method-selected-fighter-research.yml"
+  workflow_dispatch:
+jobs:
+  research:
+    name: Three-card durability/method shadow, never promoted
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Evaluate real historical selected fighter + exact method
+        run: python tools/benchmark_resistance_method_selected_fighter.py
