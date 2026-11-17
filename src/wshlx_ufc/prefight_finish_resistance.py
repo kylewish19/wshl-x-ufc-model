@@ -69,7 +69,8 @@ def build_from_records(records,*,as_of_exclusive:str,query_bouts=None):
     records=sorted(records,key=lambda r:(r["date"],r["event"],r["a"],r["b"]))
     state=defaultdict(_fresh);seen=set();snapshots=[]
     counts={"fights":0,"missing_fighter_stats":0,"complete_stat_bouts":0,
-            "knockdown_nonko_survival_bouts":0,"prior_threat_submission_bouts":0}
+            "knockdown_nonko_survival_bouts":0,"prior_threat_submission_bouts":0,
+            "historical_round_format_mismatches":0}
     i=0
     while i<len(records):
         day=records[i]["date"]
@@ -151,6 +152,8 @@ def build_from_records(records,*,as_of_exclusive:str,query_bouts=None):
                 counts["knockdown_nonko_survival_bouts"]+=int(kd>0 and not loss_ko)
                 counts["prior_threat_submission_bouts"]+=int(sub>0)
             counts["fights"]+=1
+            counts["historical_round_format_mismatches"]+=int(
+                x.get("round_format_mismatch",False))
             counts["complete_stat_bouts"]+=int(
                 x.get("stats_a") is not None and x.get("stats_b") is not None)
     if query_bouts:
@@ -194,9 +197,10 @@ def _load_records(root:Path,cutoff:date):
         if not pair or res not in (("W","L"),("L","W"),("D","D")) or meth not in ("KO_TKO","SUB","DEC","DRAW"):continue
         n=rounds(x[tf] if tf else None,x[cols["WEIGHTCLASS"]] if cols["WEIGHTCLASS"] else None)
         r=int(num(x[cols["ROUND"]]));elapsed=(r-1)*300+secs(x[cols["TIME"]])
-        if r<1 or r>n or elapsed<0:raise ValueError("Invalid source duration")
+        if r<1 or elapsed<0:raise ValueError("Invalid source duration")
         out.append({"date":day,"event":event,"a":pair[0],"b":pair[1],"result":res,
                     "method":meth,"elapsed_seconds":elapsed,
+                    "round_format_mismatch":r>n,
                     "stats_a":sums.get((event,b,pair[0])),"stats_b":sums.get((event,b,pair[1]))})
     return out
 
