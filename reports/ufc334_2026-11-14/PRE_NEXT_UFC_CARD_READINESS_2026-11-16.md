@@ -59,3 +59,47 @@ Original Stage B researched 334 FanDuel screenshot quotes but approved zero bets
 - tests/test_ufc334_method_prior_only_shadow_holdout.py
 
 **Current predictive model status: UNCHANGED. All post-event data, diagnostics and benchmark experiments live on the feature branch; not automatically merged into main.**
+
+
+## November 16 continuation — 3-event coherent winner/method/timing research
+
+**Completed:** a frozen-data-only, reversible six-outcome method projection
+using archived UFC333 (Oct24), UFC Vegas124 (Nov7), and UFC334 (Nov14)
+Reference/Historical/Unified views. 41 fights total, 40 decisive scored
+(majority draw held out of six-way method scoring).
+
+- The **winner-only** probability reconciliation made proper historical and
+  unified six-class scores slightly **worse** in the aggregate.
+- Constraining **both** standalone winner and direct finish-vs-decision
+  timing improved retrospective aggregate six-class Brier (Historical
+  0.75678 -> 0.74242; Unified 0.76418 -> 0.73977) and mean log loss
+  (Historical 1.57129 -> 1.56474; Unified 1.56110 -> 1.52524).
+- Retrospective exact fighter+method went Historical **13/40 -> 20/40**
+  and Unified **14/40 -> 16/40**. These are new post-event
+  challenger calculations, NOT what the original models picked, NOT
+  prospective results, and NOT an approved betting card.
+- Historical's UFC334-specific Brier actually worsened 0.75093 -> 0.75321.
+  Combined mathematical coherence is not guaranteed predictive improvement.
+- The new IPF projection reconciles saved winner/finish margins to within
+  ~1e-12 without retraining or changing original probabilities.
+- **No promotion.** Development used knowledge of the three outcomes, so
+  the next honest assessment must be prospective under a pre-event lock.
+  Our existing independent 300-prospective-bout promotion gate remains.
+- A new CLI now creates a **sidecar-only research artifact** from a
+  separately frozen odds-blind Stage A card, verifying the raw SHA-256;
+  source: `tools/generate_coherent_joint_method_sidecar.py`. Neither
+  Stage A nor Stage B reads this candidate until a future, documented
+  promotion after passing tests. Nothing is priced automatically.
+- Research reports and full provenance:
+  `reports/ufc334_2026-11-14/THREE_EVENT_COHERENT_METHOD_SHADOW_EXPERIMENT.md`,
+  `reports/ufc334_2026-11-14/THREE_EVENT_COHERENT_METHOD_SHADOW_EXPERIMENT.json`.
+  Code/tests:
+  `src/wshlx_ufc/joint_coherence_shadow.py`,
+  `tests/test_ufc_three_event_joint_coherence_shadow.py`,
+  `tests/test_generate_coherent_joint_method_sidecar.py`.
+
+**Next actual work still pending:** verify first-party UFCStats or formally approve
+the reconciled provisional mirror, then build *pre-bout-only* strength-of-
+competition, takedown defense/get-up, damage absorption and duration-survival
+candidate features. Run date-separated evaluation; do not train on Nov14 stats
+for Nov14 outcomes, and do not override FanDuel Stage B price gates.
