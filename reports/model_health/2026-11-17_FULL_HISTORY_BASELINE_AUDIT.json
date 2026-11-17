@@ -76,6 +76,43 @@
     "fights": 64,
     "method_class_correct": 28,
     "method_class_pct": 0.4375,
+    "method_confusion_predicted_by_actual": {
+      "DEC": {
+        "DEC": 13,
+        "KO": 16,
+        "SUB": 8
+      },
+      "KO": {
+        "DEC": 6,
+        "KO": 15,
+        "SUB": 4
+      },
+      "SUB": {
+        "DEC": 2,
+        "KO": 0,
+        "SUB": 0
+      }
+    },
+    "method_recall": {
+      "DEC": {
+        "actual": 21,
+        "class_true_positive": 13,
+        "exact_selected_fighter_true_positive": 6,
+        "predicted": 37
+      },
+      "KO": {
+        "actual": 31,
+        "class_true_positive": 15,
+        "exact_selected_fighter_true_positive": 9,
+        "predicted": 25
+      },
+      "SUB": {
+        "actual": 12,
+        "class_true_positive": 0,
+        "exact_selected_fighter_true_positive": 0,
+        "predicted": 2
+      }
+    },
     "winner_correct": 36,
     "winner_pct": 0.5625
   },
@@ -200,6 +237,43 @@
       "fights": 12,
       "method_class_correct": 4,
       "method_class_pct": 0.3333333333333333,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 2,
+          "KO": 2,
+          "SUB": 1
+        },
+        "KO": {
+          "DEC": 3,
+          "KO": 2,
+          "SUB": 2
+        },
+        "SUB": {
+          "DEC": 0,
+          "KO": 0,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 5,
+          "class_true_positive": 2,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 5
+        },
+        "KO": {
+          "actual": 4,
+          "class_true_positive": 2,
+          "exact_selected_fighter_true_positive": 2,
+          "predicted": 7
+        },
+        "SUB": {
+          "actual": 3,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 0
+        }
+      },
       "winner_correct": 9,
       "winner_pct": 0.75
     },
@@ -223,6 +297,43 @@
       "fights": 12,
       "method_class_correct": 3,
       "method_class_pct": 0.25,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 2,
+          "KO": 4,
+          "SUB": 2
+        },
+        "KO": {
+          "DEC": 1,
+          "KO": 1,
+          "SUB": 1
+        },
+        "SUB": {
+          "DEC": 1,
+          "KO": 0,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 4,
+          "class_true_positive": 2,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 8
+        },
+        "KO": {
+          "actual": 5,
+          "class_true_positive": 1,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 3
+        },
+        "SUB": {
+          "actual": 3,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 1
+        }
+      },
       "winner_correct": 6,
       "winner_pct": 0.5
     },
@@ -246,6 +357,43 @@
       "fights": 13,
       "method_class_correct": 6,
       "method_class_pct": 0.46153846153846156,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 1,
+          "KO": 3,
+          "SUB": 1
+        },
+        "KO": {
+          "DEC": 1,
+          "KO": 5,
+          "SUB": 1
+        },
+        "SUB": {
+          "DEC": 1,
+          "KO": 0,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 3,
+          "class_true_positive": 1,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 5
+        },
+        "KO": {
+          "actual": 8,
+          "class_true_positive": 5,
+          "exact_selected_fighter_true_positive": 3,
+          "predicted": 7
+        },
+        "SUB": {
+          "actual": 2,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 1
+        }
+      },
       "winner_correct": 6,
       "winner_pct": 0.46153846153846156
     },
@@ -268,6 +416,43 @@
       "fights": 13,
       "method_class_correct": 6,
       "method_class_pct": 0.46153846153846156,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 3,
+          "KO": 5,
+          "SUB": 2
+        },
+        "KO": {
+          "DEC": 0,
+          "KO": 3,
+          "SUB": 0
+        },
+        "SUB": {
+          "DEC": 0,
+          "KO": 0,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 3,
+          "class_true_positive": 3,
+          "exact_selected_fighter_true_positive": 2,
+          "predicted": 10
+        },
+        "KO": {
+          "actual": 8,
+          "class_true_positive": 3,
+          "exact_selected_fighter_true_positive": 3,
+          "predicted": 3
+        },
+        "SUB": {
+          "actual": 2,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 0
+        }
+      },
       "winner_correct": 9,
       "winner_pct": 0.6923076923076923
     },
@@ -290,6 +475,43 @@
       "fights": 14,
       "method_class_correct": 9,
       "method_class_pct": 0.6428571428571429,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 5,
+          "KO": 2,
+          "SUB": 2
+        },
+        "KO": {
+          "DEC": 1,
+          "KO": 4,
+          "SUB": 0
+        },
+        "SUB": {
+          "DEC": 0,
+          "KO": 0,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 6,
+          "class_true_positive": 5,
+          "exact_selected_fighter_true_positive": 2,
+          "predicted": 9
+        },
+        "KO": {
+          "actual": 6,
+          "class_true_positive": 4,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 5
+        },
+        "SUB": {
+          "actual": 2,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 0
+        }
+      },
       "winner_correct": 6,
       "winner_pct": 0.42857142857142855
     },
@@ -313,6 +535,43 @@
       "fights": 12,
       "method_class_correct": 4,
       "method_class_pct": 0.3333333333333333,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 2,
+          "KO": 3,
+          "SUB": 1
+        },
+        "KO": {
+          "DEC": 3,
+          "KO": 2,
+          "SUB": 0
+        },
+        "SUB": {
+          "DEC": 0,
+          "KO": 1,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 5,
+          "class_true_positive": 2,
+          "exact_selected_fighter_true_positive": 2,
+          "predicted": 6
+        },
+        "KO": {
+          "actual": 6,
+          "class_true_positive": 2,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 5
+        },
+        "SUB": {
+          "actual": 1,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 1
+        }
+      },
       "winner_correct": 8,
       "winner_pct": 0.6666666666666666
     },
@@ -336,6 +595,43 @@
       "fights": 11,
       "method_class_correct": 5,
       "method_class_pct": 0.45454545454545453,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 2,
+          "KO": 3,
+          "SUB": 0
+        },
+        "KO": {
+          "DEC": 0,
+          "KO": 2,
+          "SUB": 1
+        },
+        "SUB": {
+          "DEC": 1,
+          "KO": 1,
+          "SUB": 1
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 3,
+          "class_true_positive": 2,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 5
+        },
+        "KO": {
+          "actual": 6,
+          "class_true_positive": 2,
+          "exact_selected_fighter_true_positive": 2,
+          "predicted": 3
+        },
+        "SUB": {
+          "actual": 2,
+          "class_true_positive": 1,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 3
+        }
+      },
       "winner_correct": 9,
       "winner_pct": 0.8181818181818182
     },
@@ -357,6 +653,43 @@
       "fights": 14,
       "method_class_correct": 10,
       "method_class_pct": 0.7142857142857143,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 1,
+          "KO": 2,
+          "SUB": 0
+        },
+        "KO": {
+          "DEC": 2,
+          "KO": 9,
+          "SUB": 0
+        },
+        "SUB": {
+          "DEC": 0,
+          "KO": 0,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 3,
+          "class_true_positive": 1,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 3
+        },
+        "KO": {
+          "actual": 11,
+          "class_true_positive": 9,
+          "exact_selected_fighter_true_positive": 8,
+          "predicted": 11
+        },
+        "SUB": {
+          "actual": 0,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 0
+        }
+      },
       "winner_correct": 13,
       "winner_pct": 0.9285714285714286
     },
@@ -379,6 +712,43 @@
       "fights": 11,
       "method_class_correct": 8,
       "method_class_pct": 0.7272727272727273,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 1,
+          "KO": 0,
+          "SUB": 0
+        },
+        "KO": {
+          "DEC": 1,
+          "KO": 7,
+          "SUB": 2
+        },
+        "SUB": {
+          "DEC": 0,
+          "KO": 0,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 2,
+          "class_true_positive": 1,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 1
+        },
+        "KO": {
+          "actual": 7,
+          "class_true_positive": 7,
+          "exact_selected_fighter_true_positive": 5,
+          "predicted": 10
+        },
+        "SUB": {
+          "actual": 2,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 0
+        }
+      },
       "winner_correct": 6,
       "winner_pct": 0.5454545454545454
     },
@@ -402,6 +772,43 @@
       "fights": 13,
       "method_class_correct": 9,
       "method_class_pct": 0.6923076923076923,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 1,
+          "KO": 0,
+          "SUB": 1
+        },
+        "KO": {
+          "DEC": 0,
+          "KO": 7,
+          "SUB": 3
+        },
+        "SUB": {
+          "DEC": 0,
+          "KO": 0,
+          "SUB": 1
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 1,
+          "class_true_positive": 1,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 2
+        },
+        "KO": {
+          "actual": 7,
+          "class_true_positive": 7,
+          "exact_selected_fighter_true_positive": 2,
+          "predicted": 10
+        },
+        "SUB": {
+          "actual": 5,
+          "class_true_positive": 1,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 1
+        }
+      },
       "winner_correct": 3,
       "winner_pct": 0.23076923076923078
     },
@@ -425,6 +832,43 @@
       "fights": 14,
       "method_class_correct": 6,
       "method_class_pct": 0.42857142857142855,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 3,
+          "KO": 1,
+          "SUB": 0
+        },
+        "KO": {
+          "DEC": 4,
+          "KO": 3,
+          "SUB": 1
+        },
+        "SUB": {
+          "DEC": 0,
+          "KO": 2,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 7,
+          "class_true_positive": 3,
+          "exact_selected_fighter_true_positive": 2,
+          "predicted": 4
+        },
+        "KO": {
+          "actual": 6,
+          "class_true_positive": 3,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 8
+        },
+        "SUB": {
+          "actual": 1,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 2
+        }
+      },
       "winner_correct": 8,
       "winner_pct": 0.5714285714285714
     },
@@ -448,6 +892,43 @@
       "fights": 14,
       "method_class_correct": 9,
       "method_class_pct": 0.6428571428571429,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 3,
+          "KO": 0,
+          "SUB": 0
+        },
+        "KO": {
+          "DEC": 3,
+          "KO": 6,
+          "SUB": 1
+        },
+        "SUB": {
+          "DEC": 1,
+          "KO": 0,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 7,
+          "class_true_positive": 3,
+          "exact_selected_fighter_true_positive": 3,
+          "predicted": 3
+        },
+        "KO": {
+          "actual": 6,
+          "class_true_positive": 6,
+          "exact_selected_fighter_true_positive": 2,
+          "predicted": 10
+        },
+        "SUB": {
+          "actual": 1,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 1
+        }
+      },
       "winner_correct": 9,
       "winner_pct": 0.6428571428571429
     }
@@ -471,6 +952,43 @@
     "fights": 153,
     "method_class_correct": 79,
     "method_class_pct": 0.5163398692810458,
+    "method_confusion_predicted_by_actual": {
+      "DEC": {
+        "DEC": 26,
+        "KO": 25,
+        "SUB": 10
+      },
+      "KO": {
+        "DEC": 19,
+        "KO": 51,
+        "SUB": 12
+      },
+      "SUB": {
+        "DEC": 4,
+        "KO": 4,
+        "SUB": 2
+      }
+    },
+    "method_recall": {
+      "DEC": {
+        "actual": 49,
+        "class_true_positive": 26,
+        "exact_selected_fighter_true_positive": 16,
+        "predicted": 61
+      },
+      "KO": {
+        "actual": 80,
+        "class_true_positive": 51,
+        "exact_selected_fighter_true_positive": 30,
+        "predicted": 82
+      },
+      "SUB": {
+        "actual": 24,
+        "class_true_positive": 2,
+        "exact_selected_fighter_true_positive": 2,
+        "predicted": 10
+      }
+    },
     "winner_correct": 92,
     "winner_pct": 0.6013071895424836
   },
@@ -614,6 +1132,43 @@
     "fights": 89,
     "method_class_correct": 51,
     "method_class_pct": 0.5730337078651685,
+    "method_confusion_predicted_by_actual": {
+      "DEC": {
+        "DEC": 13,
+        "KO": 9,
+        "SUB": 2
+      },
+      "KO": {
+        "DEC": 13,
+        "KO": 36,
+        "SUB": 8
+      },
+      "SUB": {
+        "DEC": 2,
+        "KO": 4,
+        "SUB": 2
+      }
+    },
+    "method_recall": {
+      "DEC": {
+        "actual": 28,
+        "class_true_positive": 13,
+        "exact_selected_fighter_true_positive": 10,
+        "predicted": 24
+      },
+      "KO": {
+        "actual": 49,
+        "class_true_positive": 36,
+        "exact_selected_fighter_true_positive": 21,
+        "predicted": 57
+      },
+      "SUB": {
+        "actual": 12,
+        "class_true_positive": 2,
+        "exact_selected_fighter_true_positive": 2,
+        "predicted": 8
+      }
+    },
     "winner_correct": 56,
     "winner_pct": 0.6292134831460674
   },
@@ -644,6 +1199,43 @@
       "fights": 12,
       "method_class_correct": 3,
       "method_class_pct": 0.25,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 0,
+          "KO": 0,
+          "SUB": 0
+        },
+        "KO": {
+          "DEC": 6,
+          "KO": 3,
+          "SUB": 2
+        },
+        "SUB": {
+          "DEC": 1,
+          "KO": 0,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 7,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 0
+        },
+        "KO": {
+          "actual": 3,
+          "class_true_positive": 3,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 11
+        },
+        "SUB": {
+          "actual": 2,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 1
+        }
+      },
       "winner_correct": 8,
       "winner_pct": 0.6666666666666666
     },
@@ -651,6 +1243,6 @@
     "source_lock": "data/locks/ufc334_2026-11-14/stage_a_final_selection.json",
     "source_lock_verified_sha": true
   },
-  "ci_source_url": "https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/44188633295",
+  "ci_source_url": "https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/44189206559",
   "created_from_verified_ci_at_utc": "2026-11-17"
 }
