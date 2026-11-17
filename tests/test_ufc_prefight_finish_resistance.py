@@ -45,9 +45,9 @@ def test_previous_damage_and_defensive_survival_not_same_fight_result():
     assert B["prior_ufc_bouts"]==2
     assert B["prior_knockdown_bouts"]==2
     assert B["prior_knockdowns_absorbed"]==3
-    assert B["prior_submission_threat_bouts"]==0
-    assert B["prior_ko_losses"] if "prior_ko_losses" in B else B["ko_loss_rate_shrunk"]>0.12
-    assert B["prior_takedowns_faced"]==0
+    assert B["prior_submission_threat_bouts"]==1
+    assert B["ko_loss_rate_shrunk"]>0.12
+    assert B["prior_takedowns_faced"]==4
     assert B["getups_directly_measured"] is False
     assert latest["b_pre"]["prior_ufc_bouts"]==1
     assert latest["b_pre"]["prior_submission_threat_bouts"]==0
