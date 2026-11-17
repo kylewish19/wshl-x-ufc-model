@@ -23,6 +23,8 @@ FIELDS=("prior_bouts","prior_stats_bouts","prior_ko_losses","prior_sub_losses",
         "control_60s_bouts","control_60s_nonsub",
         "dangerous_opponent_bouts","dangerous_opponent_avoided_finish",
         "takedowns_faced","takedowns_allowed","control_absorbed_sec",
+        "knockdowns_delivered","submission_attempts_made",
+        "takedowns_landed","control_generated_sec",
         "prior_fight_minutes")
 def _fresh():
     return {k:0 for k in FIELDS}|{"wins":0,"finish_wins":0}
@@ -40,6 +42,10 @@ def snap(record):
       "ko_loss_rate_shrunk":_smooth(x["prior_ko_losses"],n,.12),
       "sub_loss_rate_shrunk":_smooth(x["prior_sub_losses"],n,.09),
       "prior_knockdowns_absorbed":x["knockdowns_absorbed"],
+      "own_knockdowns_per15":15*x["knockdowns_delivered"]/x["prior_fight_minutes"] if x["prior_fight_minutes"] else None,
+      "own_sub_attempts_per15":15*x["submission_attempts_made"]/x["prior_fight_minutes"] if x["prior_fight_minutes"] else None,
+      "own_takedowns_landed_per15":15*x["takedowns_landed"]/x["prior_fight_minutes"] if x["prior_fight_minutes"] else None,
+      "own_control_generated_sec_per15":15*x["control_generated_sec"]/x["prior_fight_minutes"] if x["prior_fight_minutes"] else None,
       "knockdowns_absorbed_per15":15*x["knockdowns_absorbed"]/x["prior_fight_minutes"] if x["prior_fight_minutes"] else None,
       "prior_knockdown_bouts":x["knockdown_bouts"],
       "knockdown_nonko_survival_rate":_smooth(x["knockdown_nonko_survivals"],x["knockdown_bouts"],.5),
@@ -121,6 +127,10 @@ def build_from_records(records,*,as_of_exclusive:str,query_bouts=None):
                     continue
                 own["prior_stats_bouts"]+=1
                 own["prior_fight_minutes"]+=x["elapsed_seconds"]/60.
+                own["knockdowns_delivered"]+=int(round(me.get("kd",0)))
+                own["submission_attempts_made"]+=int(round(me.get("sub_att",0)))
+                own["takedowns_landed"]+=int(round(me.get("td_landed",0)))
+                own["control_generated_sec"]+=int(round(me.get("ctrl_sec",0)))
                 kd=int(round(op.get("kd",0)))
                 att=int(round(op.get("td_attempted",0)))
                 made=int(round(op.get("td_landed",0)))
