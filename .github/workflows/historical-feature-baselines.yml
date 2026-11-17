@@ -26,6 +26,8 @@ jobs:
         run: pytest -q tests/test_ufc_historical_feature_baselines.py
       - name: Export source-pinned matrix and transparent retrospective baselines
         run: python tools/build_historical_feature_baselines.py > historical_feature_baselines_run.log
+      - name: Run strict same-bout reference comparison
+        run: python tools/audit_matched_reference_baselines.py > reference_baselines_match_run.log
       - name: Preserve outputs without changing champion models
         if: always()
         uses: actions/upload-artifact@v4
@@ -34,4 +36,6 @@ jobs:
           path: |
             reports/model_health/2026-11-17_historical_feature_baselines/
             historical_feature_baselines_run.log
+            reports/model_health/2026-11-17_MATCHED_REFERENCE_BASELINES.json
+            reference_baselines_match_run.log
           if-no-files-found: warn
