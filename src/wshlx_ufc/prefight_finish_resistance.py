@@ -57,7 +57,7 @@ def snap(record):
       "prior_stats_missing_not_zero_filled":x["prior_stats_bouts"]<n,
     }
 
-def build_from_records(records,*,as_of_exclusive:str):
+def build_from_records(records,*,as_of_exclusive:str,query_bouts=None):
     """All bouts on a calendar date get features from PREVIOUS dates only."""
     cutoff=date.fromisoformat(as_of_exclusive)
     records=sorted(records,key=lambda r:(r["date"],r["event"],r["a"],r["b"]))
@@ -143,8 +143,25 @@ def build_from_records(records,*,as_of_exclusive:str):
             counts["fights"]+=1
             counts["complete_stat_bouts"]+=int(
                 x.get("stats_a") is not None and x.get("stats_b") is not None)
+    if query_bouts:
+        # The upcoming card reads PREVIOUS results only. No invented
+        # placeholder outcomes or synthetic fights enter the history.
+        unique=[]
+        for a,b in query_bouts:
+            if not a or not b or a==b or a in unique or b in unique:
+                raise ValueError("Current card has ambiguous fighter identities")
+            unique.extend((a,b))
+            snapshots.append({
+                "event_date":cutoff.isoformat(),
+                "event":"__PREFIGHT_QUERY_NO_RESULTS__",
+                "a":a,"b":b,
+                "a_pre":snap(state[a]),"b_pre":snap(state[b]),
+                "current_fight_result_not_a_feature":True,
+                "query_only":True,
+            })
     return snapshots,{**counts,"snapshot_rows":len(snapshots),
-                     "fighters":len(state),"direct_getups_available":False}
+                     "fighters":len(state),"direct_getups_available":False,
+                     "query_bouts":len(query_bouts or [])}
 
 def _load_records(root:Path,cutoff:date):
     events=pd.read_csv(root/"ufc_event_details.csv",low_memory=False)
@@ -173,7 +190,8 @@ def _load_records(root:Path,cutoff:date):
                     "stats_a":sums.get((event,b,pair[0])),"stats_b":sums.get((event,b,pair[1]))})
     return out
 
-def load_and_build(*,as_of_exclusive:str="2026-11-14",root:Path=ARCHIVE):
+def load_and_build(*,as_of_exclusive:str="2026-11-14",
+                   root:Path=ARCHIVE,query_bouts=None):
     cutoff=date.fromisoformat(as_of_exclusive)
     manifest=json.loads((root/"availability.json").read_text())
     for name in ("ufc_event_details.csv","ufc_fight_results.csv","ufc_fight_stats.csv"):
@@ -185,7 +203,8 @@ def load_and_build(*,as_of_exclusive:str="2026-11-14",root:Path=ARCHIVE):
         if sha!=original["sha256"]:
             raise ValueError("Pinned secondary archive SHA mismatch "+name)
     snapshots,counts=build_from_records(_load_records(root,cutoff),
-                                        as_of_exclusive=as_of_exclusive)
+                                        as_of_exclusive=as_of_exclusive,
+                                        query_bouts=query_bouts)
     return snapshots,{**counts,"as_of_exclusive":as_of_exclusive,
                       "source_classification":"PINNED_SECONDARY_UFCSTATS_COMPATIBLE",
                       "source_sha256":manifest["source_csv_files"]["ufc_fight_stats.csv"]["sha256"],
