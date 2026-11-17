@@ -168,3 +168,34 @@ Next run this as an isolated, frozen shadow on the future UFC card. Source
 checks and 300-prospective-observation promotion requirements still apply.
 Full reproducible report:
 `reports/ufc334_2026-11-14/THREE_EVENT_COHERENT_METHOD_SHADOW_EXPERIMENT.md`.
+
+
+## November 16 additional opponent-quality development and ablation
+
+**Code added:** `prefight_opponent_quality.py` creates historical UFC-only
+Elo and opponent-strength-of-schedule snapshots strictly before each event;
+`opponent_quality_join.py` matched **all 153/153** causally dated method
+examples to those pre-bout snapshots; opponent-style and Elo feature
+challengers were compared on seven later event dates (89 actual-winner
+conditional method labels). Same-day results are forbidden from entering
+same-day feature snapshots, unknown UFC debutants receive neutral/uncertain
+strength, and past opponents' ratings are held at the date of the past fight.
+
+**Measured result:** causal conditional-method baseline **39/89**
+(Brier 0.604224), intercept-only **49/89** (0.558746),
+opponent-defense-only **49/89** (0.558784),
+opponent-quality-only **49/89** (0.558435),
+quality+defense **48/89** (0.558617). The quality-only improvement over
+intercept was extremely small (Brier 0.000311; logloss 0.000972),
+and combining features lost one hit. These are *given-known-winner*
+oracle metrics, NOT exact winner+method predictions, and the prior-only
+intercept model separately failed on Nov14 UFC334.
+
+**Promotion: REJECTED/PENDING.** No training artifact, champion/reference
+weights, Stage A, Stage B, simulations, or FanDuel approval path changed.
+Model source and new official data provenance gates still apply.
+
+Report and link:
+`reports/ufc334_2026-11-14/OPPONENT_QUALITY_SHADOW_DEVELOPMENT_2026-11-16.md`,
+`reports/ufc334_2026-11-14/QUALITY_AWARE_METHOD_153_7FOLD_RESEARCH_RESULTS.json`.
+CI benchmark: https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/43986253261
