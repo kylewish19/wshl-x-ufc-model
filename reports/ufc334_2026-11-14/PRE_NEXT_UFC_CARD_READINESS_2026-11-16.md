@@ -129,3 +129,26 @@ fighter+method bets. No model or Stage A/B changes.
 
 Full source/tests/CI:
 `reports/ufc334_2026-11-14/OPPONENT_QUALITY_SHADOW_DEVELOPMENT_2026-11-16.md`.
+
+
+## November 16 final quality/model selection gate: **NOT PROMOTED**
+
+We now **graded the fighter each frozen Stage A model actually chose**,
+instead of retrospectively conditioning on the actual winner. Three events
+(UFC333 Oct24, Vegas124 Nov7, UFC334 Nov14), 40 decisive fights, 1 draw.
+Using separately saved winner marginals with original within-side method
+proportions, exact winner+method fell for quality-only candidate:
+Reference **9/40 -> 6/40**, Historical **13/40 -> 12/40**, Unified
+**14/40 -> 11/40**. Six-way Brier and log-loss also got worse.
+Even intercept-only fit worsened probability scoring for all three
+model families. Source:
+`reports/ufc334_2026-11-14/TRUE_SELECTED_FIGHTER_METHOD_BENCHMARK_2026-11-16.md`.
+
+Development action: **REJECT method intercept/quality adjustments**.
+Keep strength-of-opposition features as *unpromoted research*.
+The next meaningful challenger should address opponent-specific
+finishing resistance, defensive grappling, get-ups and high-quality
+opponent exposure using only prior fights, and it must be scored against
+*originally selected fighters* across prospective locks. Maintain
+no-odds Stage A / FanDuel Stage B separation, original 10k sims and
+no-model-promotion governance.
