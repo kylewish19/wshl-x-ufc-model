@@ -146,3 +146,25 @@ relax Stage B FanDuel edge/quote/coherence gates. Full checklist:
 **Code status:** diagnostic/testing and held-out experiment code added,
 but no predictive model promoted, original locks untouched and Stage B
 unchanged.
+
+
+## November 16 continuation — coherent six-method shadow prototype added
+
+Built `src/wshlx_ufc/joint_coherence_shadow.py` and regression tests to
+repair **probability arithmetic** in a *parallel, non-promoted candidate*
+using iterative proportional fitting. Original Stage A odds-blind files
+are hash verified, not rewritten. A standalone pre-fight sidecar generator
+is in `tools/generate_coherent_joint_method_sidecar.py`.
+
+Across 40 decisive fights from Oct24/Nov7/Nov14, combined winner+timing
+constraints improved retrospective six-way Brier/log loss for both Historical
+and Unified, and exact fighter+method research counts Historical 13/40->20/40,
+Unified 14/40->16/40. By contrast winner-only projection worsened scores.
+Historical's Nov14 subset also worsened, and the idea was devised after
+looking at these dates: **no honest prospective success has yet been
+demonstrated, no model promoted, no official wagers authorized.**
+
+Next run this as an isolated, frozen shadow on the future UFC card. Source
+checks and 300-prospective-observation promotion requirements still apply.
+Full reproducible report:
+`reports/ufc334_2026-11-14/THREE_EVENT_COHERENT_METHOD_SHADOW_EXPERIMENT.md`.
