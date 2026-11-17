@@ -1,0 +1,25 @@
+name: prefight-finish-resistance-data-audit
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths:
+      - "src/wshlx_ufc/prefight_finish_resistance.py"
+      - "tools/audit_ufc334_prefight_resistance.py"
+      - ".github/workflows/prefight-finish-resistance-data-audit.yml"
+  workflow_dispatch:
+jobs:
+  research:
+    name: Frozen UFC334 prior-only resilience, 13 bouts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Validate pinned UFC history and query research features
+        run: python tools/audit_ufc334_prefight_resistance.py
