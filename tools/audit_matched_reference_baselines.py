@@ -22,7 +22,12 @@ OUT = ROOT / "reports/model_health/2026-11-17_MATCHED_REFERENCE_BASELINES.json"
 def normalize_name(name: str) -> str:
     value = unicodedata.normalize("NFKD", str(name))
     ascii_name = value.encode("ascii", errors="ignore").decode("ascii").casefold()
-    return re.sub("[^a-z0-9]", "", ascii_name)
+    normalized = re.sub("[^a-z0-9]", "", ascii_name)
+    # Explicit audited one-name identity, not fuzzy matching:
+    # Aug 22 Gauge Young bout: archived Source 'Stan Dorsainvil' vs
+    # post-event clean ledger 'Stanley Dorsainvil', same date/opponent,
+    # winner and DEC method. All other names are compared unchanged.
+    return {"standorsainvil": "stanleydorsainvil"}.get(normalized, normalized)
 
 
 def matchup_key(when: str, a: str, b: str):
@@ -130,7 +135,10 @@ def main():
         "source_ledger": "data/results/clean_ufc_153_2026-11-07.csv",
         "source_baseline": manifest["schema"],
         "source_stats_sha256": manifest["source_stats_sha256"],
-        "identity_policy": "EXACT_DATE_AND_PUNCTUATION_NORMALIZED_UNORDERED_FIGHTER_PAIR_NO_FUZZY_MATCH",
+        "identity_policy": "EXACT_DATE_AND_NORMALIZED_PAIR_ONE_EXPLICIT_AUDITED_STAN_STANLEY_ALIAS_NO_FUZZY_MATCH",
+        "explicit_alias": {"event_date": "2026-08-22", "paired_opponent": "Gauge Young",
+                           "source_name": "Stan Dorsainvil", "grade_name": "Stanley Dorsainvil",
+                           "evidence": "same event date, opponent, DEC winner in both archived sources"},
         "reference_grade_total": len(original), "matched_count": len(matched),
         "missing_count": len(missing), "missing": missing,
         "all_matched_reconstructed_grade": summarize(matched),
