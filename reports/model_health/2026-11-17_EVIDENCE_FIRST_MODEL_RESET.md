@@ -142,3 +142,18 @@ Promote **nothing** from in-sample or repeated tiny post-card tests. Require pre
 - **UFC334 separate grade:** `data/results/ufc334_2026-11-14_all_models_grading.json`
 
 **Confirmed:** No Reference/Historical/Unified production predictions, frozen Stage A/B data, wager approvals, FanDuel quote locks, training weights or 10,000-simulation models have been changed by this audit.
+
+## November 17 training-data rebuild: first source eligibility gate completed
+
+**Pinned historical UFC archive, 2021–November 7, 2026:**
+- **3,036 UFC bouts** with both fighters' fight-stat rows present (all 3,036 in the modern window).
+- **2,544 dated fights 2021–2025** available as a proposed retrospective training-label window; **492 dated fights 2026** available as research evaluation only (already inspected during model-development; NOT pristine out-of-time).
+- **3,015 decisive fighter win/loss labels** and **21 draws** in the 3,036 total. The source's *method* string can be `DEC` on a DRAW; our eligibility validator now uses W/L/D *result status* instead of mistaking such a draw for a decision victory. The breakdown includes 17 draws in 2021–2025 and 4 in 2026.
+- **568 bouts** have at least one fighter making a UFC debut; **1,873** have at least one fighter with under five previous UFC fights. Distinguish scarce evidence from bad performance; record uncertainty masks.
+- **Zero current-bout fighter-stat rows missing in 2021–2026** in this pinned secondary source (the full historical archive includes 21 older incomplete-both-fighter bouts). Modern data availability is not equivalent to verified first-party provenance, successful pre-fight feature quality or an unseen profitable model.
+
+**Important source limitation:** This is a UFCStats-compatible *third-party pinned archive*, not independently validated direct UFCStats primary ingestion. Knockdown, control, submission-attempt stats are not directly observed "get-up" counts. Nonstandard NC/DQ outcomes are outside the label population and must retain separate status tracking when the complete event universe is reconstructed. Historical pre-2021 results may provide dated prior fighter context, but training-label vintage begins in 2021.
+
+**Completed now:** `src/wshlx_ufc/historical_training_eligibility.py`, automated tests and CI, full-year eligibility JSON at `reports/model_health/2026-11-17_2021_2026_TRAINING_ELIGIBILITY.json`. Source CI: https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/44190616841 .
+
+**Next (not yet complete):** build fighter-side, as-of-date feature matrix with auditable train-target IDs, decide which data fields belong in the first baseline, and actually run frozen-date simple baselines vs unchanged Reference before fitting/promoting any new challenger.
