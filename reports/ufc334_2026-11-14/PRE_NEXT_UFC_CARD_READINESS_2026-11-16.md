@@ -179,3 +179,43 @@ and the original >=300 observation promotion guard.
 
 See:
 `reports/ufc334_2026-11-14/FINISH_RESISTANCE_2026-11-16_RESULTS_AND_DECISION.md`.
+
+
+## November 16 — READY pre-event coherence lock pathway
+
+**Verified upcoming event:** UFC Fight Night: Procházka vs Stirling,
+November 21, 2026, Doha, Qatar. UFC's advertised prelims begin
+**10:00am EST / 15:00 UTC**. Official event:
+https://www.ufc.com/event/ufc-fight-night-november-21-2026
+
+There is **no original frozen three-view Nov21 Stage A** in this research
+branch as of this audit. No original or coherent-shadow Nov21 picks have
+been generated. A new timestamp-gated locking protocol, unit tests,
+manual-only workflow, and post-event separate research grading code are
+ready **but will not run before normal Stage A**.
+
+Source and protocol:
+`reports/ufcqatar_2026-11-21/PROSPECTIVE_COHERENCE_READINESS.md`.
+Source event manifest:
+`research/events/ufcqatar_2026-11-21.json`.
+Live lock:
+`tools/lock_prospective_coherence_shadow.py`.
+Safe source:
+`src/wshlx_ufc/prospective_coherence.py`.
+Post-event scorer:
+`src/wshlx_ufc/prospective_coherence_grade.py`.
+
+The pre-event sidecar independently includes **all three frozen views**
+(Reference, Historical, Unified), with the untouched raw six-way method
+probability, a winner-only-marginal projection, and a winner+direct
+GTD_NO-marginal coherence projection. All original winner selections
+and other timing prop markets stay unchanged. The script verifies
+official event start, original frozen Stage A SHA, fighter identities
+and all three original winner probabilities, refuses to write after
+the 15:00 UTC earliest-start deadline and NEVER overwrites a shadow lock.
+The grader verifies the frozen source and recalculates all probabilities
+before independently scoring exact fighter+method and six-way Brier/log loss.
+
+**Status: preparation only, research sidecar not locked yet.** Normal
+Stage A/B, all FanDuel gates, reference champion, Historical/Unified
+shadows, 10k simulations and official bets completely unchanged.
