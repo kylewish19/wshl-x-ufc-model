@@ -11,7 +11,8 @@ def test_modern_historical_bouts_are_coherent_and_have_pre_event_features():
     assert m["total_bouts"]==m["decisive_bouts"]+m["draws"]
     assert 1000<m["training_bouts_2021_2025"]<5000
     assert 100<m["retrospective_test_bouts_2026"]<1000
-    assert 0<m["missing_either_stat_row"]<=r["full_archive_before_cutoff_bouts"]-8850
+    assert 0<=m["missing_either_stat_row"]<=r["full_archive_before_cutoff_bouts"]-8850
+    assert m["draws"]>=1  # Oct10, 2026 majority draw, if present in source archive
     assert m["any_ufc_debutant"]>0
     assert m["any_fighter_prior_ufc_bouts_under_five"]>m["any_ufc_debutant"]
     assert r["source_grade"].startswith("PINNED_THIRD_PARTY")
