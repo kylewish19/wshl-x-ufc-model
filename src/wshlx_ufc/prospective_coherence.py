@@ -236,3 +236,18 @@ def check_lock_against_source(payload:dict,raw_bytes:bytes,frozen_bytes:bytes,
         raise ValueError("Research timestamp is after event or before Stage A freeze")
     if len(payload["fights"])!=len(json.loads(frozen_bytes)["fights"]):
         raise ValueError("Research lock fight count mutated")
+    # Recalculate EVERY probability and source selection deterministically
+    # from the original SHA-verified frozen card. A later edit to the saved
+    # shadow forecasts must be rejected even if the three source SHAs match.
+    # This timestamp is used ONLY for replay verification; the live locking
+    # CLI never accepts a user-provided timestamp.
+    expected = create_lock(
+        raw_bytes=raw_bytes, frozen_bytes=frozen_bytes,
+        schedule_bytes=schedule_bytes,
+        as_of_utc=stamped,
+    )
+    if payload != expected:
+        raise ValueError(
+            "Saved shadow probabilities or metadata differ from original"
+            " independently reconstructed frozen source"
+        )
