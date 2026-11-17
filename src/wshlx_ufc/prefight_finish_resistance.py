@@ -76,6 +76,12 @@ def build_from_records(records,*,as_of_exclusive:str):
             if key in seen:raise ValueError("Duplicate fight result")
             seen.add(key);batch.append(item)
         frozen={}
+        # Freeze opponent finishing record too: updating one fighter must
+        # not affect any same-date fighter's opponent-threat features.
+        frozen_threat={
+            name:(state[name]["wins"],state[name]["finish_wins"])
+            for x in batch for name in (x["a"],x["b"])
+        }
         for x in batch:
             for f in (x["a"],x["b"]):
                 if f not in frozen:frozen[f]=snap(state[f])
@@ -91,10 +97,12 @@ def build_from_records(records,*,as_of_exclusive:str):
                 (a,b,"a","b",x["result"][0]),
                 (b,a,"b","a",x["result"][1]),
             ):
-                own=state[fighter];prev_opp=state[enemy]
-                # Prior-opponent threat is established BEFORE this historical bout.
-                dangerous=prev_opp["wins"]>=3 and _smooth(
-                    prev_opp["finish_wins"],prev_opp["wins"],.55,2)>=.6
+                own=state[fighter]
+                # Only PRE-DATE opponent finishing record; never information
+                # from this match or any other match on this same date.
+                opp_wins,opp_finishes=frozen_threat[enemy]
+                dangerous=opp_wins>=3 and _smooth(
+                    opp_finishes,opp_wins,.55,2)>=.6
                 survived=not(result=="L" and x["method"] in ("KO_TKO","SUB"))
                 if dangerous:
                     own["dangerous_opponent_bouts"]+=1
