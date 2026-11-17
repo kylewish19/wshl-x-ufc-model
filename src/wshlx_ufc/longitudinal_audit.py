@@ -78,6 +78,26 @@ def _summarize(rows):
         "exact_pct":sum(x["joint_correct"] for x in rows)/n,
         "actual_methods":dict(Counter(x["actual_method"] for x in rows)),
         "displayed_methods":dict(Counter(x["displayed_method"] for x in rows)),
+        "method_confusion_predicted_by_actual":{
+            predicted:{
+                actual:sum(x["displayed_method"]==predicted and
+                           x["actual_method"]==actual for x in rows)
+                for actual in METHODS
+            } for predicted in METHODS
+        },
+        "method_recall":{
+            label:{
+                "actual":sum(x["actual_method"]==label for x in rows),
+                "predicted":sum(x["displayed_method"]==label for x in rows),
+                "class_true_positive":sum(
+                    x["displayed_method"]==label and
+                    x["actual_method"]==label for x in rows),
+                "exact_selected_fighter_true_positive":sum(
+                    x["displayed_method"]==label and
+                    x["actual_method"]==label and
+                    x["winner_correct"] for x in rows),
+            } for label in METHODS
+        },
         "fighter_pick_and_KO_exact":sum(
             x["winner_correct"] and x["actual_method"]=="KO" for x in rows),
         "fighter_pick_and_DEC_exact":sum(
