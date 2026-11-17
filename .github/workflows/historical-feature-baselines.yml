@@ -1,0 +1,37 @@
+name: Historical as-of feature benchmark (research only)
+
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  historical-feature-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install project and tests
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Verify historical feature and draw-label regression tests
+        run: pytest -q tests/test_ufc_historical_feature_baselines.py
+      - name: Export source-pinned matrix and transparent retrospective baselines
+        run: python tools/build_historical_feature_baselines.py > historical_feature_baselines_run.log
+      - name: Preserve outputs without changing champion models
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wshlx-historical-feature-baselines-research
+          path: |
+            reports/model_health/2026-11-17_historical_feature_baselines/
+            historical_feature_baselines_run.log
+          if-no-files-found: warn
