@@ -152,3 +152,30 @@ opponent exposure using only prior fights, and it must be scored against
 *originally selected fighters* across prospective locks. Maintain
 no-odds Stage A / FanDuel Stage B separation, original 10k sims and
 no-model-promotion governance.
+
+
+## November 16 — finishing-resistance post-research decision
+
+The pinned UFCStats-compatible historical archive is now audited for prior
+fighter KO/sub resistance, KD faced, defended submission attempts inferred
+only as *threat bouts without submission defeat*, takedowns conceded,
+control allowed, and survival vs fighters with earlier documented UFC
+finishing records. **There is no verified direct get-up count** in the
+source, and 27 abnormal legacy round-format matches need further review.
+For the pre-Nov14 UFC334 query, 25/26 fighters had prior UFC stats.
+
+In a true originally-picked-fighter three-event test (40 decided outcomes,
+with one draw excluded), this challenger **worsened** exact
+winner+method and six-class proper scores across all three original
+model families. Reference baseline 9 vs challenger 6 exact,
+Historical 13 vs 12, Unified 14 vs 13.
+
+**Do NOT promote this resistance method shadow.** Keep the useful
+historical statistics as research-only features and preserve all original
+three-model winner, method, timing and FanDuel Stage A/B gates. The
+mathematically coherent winner+timing IPF sidecar remains a distinct,
+unpromoted candidate, pending a truly pre-event frozen prospective card
+and the original >=300 observation promotion guard.
+
+See:
+`reports/ufc334_2026-11-14/FINISH_RESISTANCE_2026-11-16_RESULTS_AND_DECISION.md`.
