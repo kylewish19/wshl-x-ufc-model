@@ -35,6 +35,10 @@ def test_seven_archived_stage_a_card_artifacts_match_exact_89_selected_winners()
 
 def test_reference_archive_stage_b_scenarios_and_simple_selected_fighter_ko():
     report=audit()
+    archived=json.loads((ROOT/"reports/model_health/2026-11-17_FULL_HISTORY_BASELINE_AUDIT.json").read_text())
+    assert archived["schema"]==report["schema"]
+    assert archived["reconstructed_reference_before_334"]==report["reconstructed_reference_before_334"]
+    assert archived["strategy_stage_b_recorded"]==report["strategy_stage_b_recorded"]
     assert report["scope"]["reconstructed_decisive_fights"]==153
     assert report["scope"]["dated_events_reconstructed"]==12
     assert report["scope"]["historical_fights_without_independent_stage_a_card_artifact"]==64
