@@ -98,8 +98,10 @@ def test_historical_replays_cannot_be_locked_from_real_today_and_before_stage_a(
 def test_odds_source_digest_and_identity_are_required():
     raw,frozen,schedule=_inputs()
     t=datetime(2026,11,12,12,tzinfo=timezone.utc)
+    tampered=json.loads(raw)
+    tampered["fights"][0]["joint_calibrated"]["A_KO"]+=1e-7
     with pytest.raises(ValueError,match="raw SHA"):
-        create_lock(raw_bytes=raw+b"x",frozen_bytes=frozen,
+        create_lock(raw_bytes=json.dumps(tampered).encode(),frozen_bytes=frozen,
                     schedule_bytes=schedule,as_of_utc=t)
     payload=create_lock(raw_bytes=raw,frozen_bytes=frozen,
                         schedule_bytes=schedule,as_of_utc=t)
