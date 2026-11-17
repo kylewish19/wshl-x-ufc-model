@@ -277,3 +277,36 @@ Docs/grade:
 `reports/ufc334_2026-11-14/FINISH_RESISTANCE_SELECTED_FIGHTER_3CARD_RESEARCH.json`.
 CI runs: https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/43988964181
 and https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/43989338994 .
+
+
+## November 16 — separate prospective coherence lock and grader
+
+After earlier historical KO/DEC intercept, opponent-strength and
+finishing-resistance modifications failed genuine chosen-fighter+
+method tests, **no predictor was changed or promoted**. The
+remaining mathematical winner+method+direct-GTD coherence candidate is
+now implemented as a **strict prospective sidecar pathway** with
+independent timing/odds guards:
+
+- Three original frozen views (Reference, Historical, Unified).
+- Read-only original six-way forecasts and reference/historical/unified
+  winner P; 2 constrained projections per view.
+- Direct `GTD_NO` used only to reconcile six-way finish/decision mass;
+  all other original timing props and 10k sims unchanged.
+- Exact raw/final frozen Stage A SHA and fighter/selection identity
+  assertions; latest UFC Nov21 official event-start manifest.
+- A real UTC lock must happen before Nov21 **15:00 UTC** or fail closed.
+  Post-event replay cannot be mislabeled as a real live lock.
+- Separate exclusive-written `data/shadow_locks` file, with all
+  forecast values reconstructed and checked at scoring time to reject
+  post-event editing. Never overwrites Stage A/B or an existing lock.
+- Post-event-only, independently verified results gate scores
+  exact originally selected fighter+method, six-way Brier/log loss,
+  KO/SUB/DEC recall, GTD Brier and explicit draw exclusions.
+- No official predictions are made for Nov21 until the ordinary
+  Stage A card is prepared and frozen; the user-provided complete card
+  and established FanDuel Stage B workflow stay primary.
+
+See `reports/ufcqatar_2026-11-21/PROSPECTIVE_COHERENCE_READINESS.md`.
+All work remains on `feature/historical-conditional-rates`; no model
+coefficient, official pick, betting wager or original freeze changed.
