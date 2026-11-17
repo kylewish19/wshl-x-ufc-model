@@ -43,6 +43,17 @@ def test_reference_archive_stage_b_scenarios_and_simple_selected_fighter_ko():
     assert report["reconstructed_reference_before_334"]["method_class_correct"]==79
     assert report["reconstructed_reference_before_334"]["exact_fighter_and_method"]==48
     assert report["sanity_check"]["chosen_fixed_method"]=="KO"
+    # Exact fighter+method failures are more important than generic KO bias:
+    # only 2/24 real submissions had the correct class selected, and
+    # both also had the correct fighter; first 64 had ZERO sub recognition.
+    sub=report["reconstructed_reference_before_334"]["method_recall"]["SUB"]
+    assert sub=={"actual":24,"predicted":10,
+                 "class_true_positive":2,
+                 "exact_selected_fighter_true_positive":2}
+    early_sub=report["earlier_first_64"]["method_recall"]["SUB"]
+    assert early_sub["class_true_positive"]==0
+    assert sum(report["reconstructed_reference_before_334"][
+        "method_confusion_predicted_by_actual"]["KO"].values())==82
     assert report["sanity_check"]["subsequent_89_exact_model"]==33
     assert report["sanity_check"]["subsequent_89_exact_fixed_method"]==30
     assert report["sanity_check"]["all_153_exact_model"]==48
