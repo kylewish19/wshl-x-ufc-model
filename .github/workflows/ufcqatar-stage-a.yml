@@ -48,6 +48,24 @@ jobs:
                   assert key in r
           print('ALL_12_UNPRICED_THREE_VIEW_RAW_VALIDATED')
           PY
+      - name: Freeze original odds-blind Stage A research card
+        run: python tools/finalize_ufcqatar_2026_11_21_stage_a.py > qatar_stage_a_freeze.log
+      - name: Verify frozen lock and no-price model integrity
+        run: |
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          d=Path('data/locks/ufcqatar_2026-11-21')
+          r=d/'stage_a_model_raw_three_view.json'; f=d/'stage_a_final_selection.json'
+          j=json.loads(f.read_text())
+          assert j['stage_a_frozen'] is True and j['odds_used'] is False
+          assert len(j['fights'])==12 and j['research']['official_ufc_site_fights_verified']==11
+          assert j['raw_model_sha256']==hashlib.sha256(r.read_bytes()).hexdigest()
+          assert j['fights'][11]['stage_a_posture']=='PASS' and j['fights'][11]['model_extrapolation_quarantine']
+          assert sum(x['primary_timing_forecast']['stage_a_primary_timing_for_grade'] for x in j['fights'])==12
+          assert all(x['method']['official_method_if_any'] is None for x in j['fights'])
+          print('QATAR_STAGE_A_FROZEN_UNPRICED_PASS')
+          PY
       - name: Archive generated model raw and model stdout for validation
         if: always()
         uses: actions/upload-artifact@v4
@@ -56,4 +74,5 @@ jobs:
           path: |
             data/locks/ufcqatar_2026-11-21/
             qatar_raw_stage_a_execution.log
+            qatar_stage_a_freeze.log
           if-no-files-found: warn
