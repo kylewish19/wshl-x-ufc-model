@@ -1,0 +1,58 @@
+name: Independent UFC Finish v1 historical benchmark (research only)
+
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths:
+      - "src/wshlx_ufc/finish_v1_research.py"
+      - "tools/benchmark_matchup_finish_v1.py"
+      - "tests/test_ufc_finish_v1_research.py"
+      - ".github/workflows/finish-v1-research.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  method-research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install research dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Regression tests for information leakage and coherent six-states
+        run: pytest -q tests/test_ufc_finish_v1_research.py tests/test_ufc_historical_feature_baselines.py
+      - name: Run untouched chronological 2024 2025 2026 research comparison
+        run: python tools/benchmark_matchup_finish_v1.py > finish_v1_benchmark_run.log
+      - name: Verify source identities and year population
+        run: |
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          root=Path('reports/model_health/2026-11-18_finish_v1_research')
+          j=json.loads((root/'evaluation.json').read_text())
+          assert j['no_accepted_challenger'] and j['no_model_wager_or_stage_b_promotion']
+          assert j['pre_event_qatar_stage_a_and_coherent_shadow_untouched']
+          for year,count in [('2024',511),('2025',513),('2026_retrospective',488)]:
+              assert all(v['fights']==count for v in j['per_year'][year]['models'].values())
+          assert all(v['fights']==28 for v in j['same_28_original_historical']['scores'].values())
+          for file,digest in j['output_sha256'].items():
+              assert hashlib.sha256((root/file).read_bytes()).hexdigest()==digest,file
+          print('FINISH_V1_RESEARCH_VALIDATED_NO_PROMOTION')
+          PY
+      - name: Preserve tested evaluation, all forecasts, and research-only fitted models
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wshlx-2026-11-18-independent-finish-v1-research
+          path: |
+            reports/model_health/2026-11-18_finish_v1_research/
+            finish_v1_benchmark_run.log
+          if-no-files-found: warn
