@@ -1,0 +1,59 @@
+name: UFC Qatar 2026-11-21 Stage A research runner
+
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths:
+      - "tools/run_ufcqatar_2026_11_21_stage_a.py"
+      - ".github/workflows/ufcqatar-stage-a.yml"
+      - "tools/finalize_ufcqatar_2026_11_21_stage_a.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qatar-stage-a:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install pinned project dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Run existing three-view prediction models on Qatar card
+        run: python tools/run_ufcqatar_2026_11_21_stage_a.py > qatar_raw_stage_a_execution.log
+      - name: Validate 12 unique bouts and finite model distributions
+        run: |
+          python - <<'PY'
+          import json,math
+          from pathlib import Path
+          p=Path('data/locks/ufcqatar_2026-11-21/stage_a_model_raw_three_view.json')
+          d=json.loads(p.read_text())
+          assert d['event_date']=='2026-11-21' and d['odds_used'] is False
+          assert len(d['fights'])==12
+          assert len({(r['a'],r['b']) for r in d['fights']})==12
+          assert sum(r['scheduled_seconds']==1500 for r in d['fights'])==1
+          for r in d['fights']:
+              for m in ('joint_calibrated','historical_shadow','oof_unified_shadow'):
+                  j=r[m] if m=='joint_calibrated' else r[m]['joint_method']
+                  assert abs(sum(j.values())-1)<1e-6
+                  assert all(math.isfinite(v) and 0<=v<=1 for v in j.values())
+              for key in ('joint_calibrated_sim_10000','timing_v033_sim_10000'):
+                  assert key in r
+          print('ALL_12_UNPRICED_THREE_VIEW_RAW_VALIDATED')
+          PY
+      - name: Archive generated model raw and model stdout for validation
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wshlx-qatar-nov21-raw-stage-a-research
+          path: |
+            data/locks/ufcqatar_2026-11-21/
+            qatar_raw_stage_a_execution.log
+          if-no-files-found: warn
