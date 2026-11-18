@@ -8,7 +8,7 @@ from wshlx_ufc.finish_v1_research import (
     NonlinearFinish, train_candidate_family, predict_family,
 )
 
-def fighter(a,b=2):
+def fighter(a=5,b=2):
     return {
         "bout_id":"x", "event_date":"2023-01-01",
         "feature_as_of_exclusive":"2023-01-01",
