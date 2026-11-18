@@ -268,7 +268,9 @@ def main():
         "approved_for_stage_a":False,"approved_for_fanduel":False,
     },OUTPUT/"finish_v1_train_through_2025_RESEARCH_ONLY.joblib")
     for f in OUTPUT.iterdir():
-        report.setdefault("output_sha256",{})[f.name]=sha(f)
+        if f!=report_path:
+            report.setdefault("output_sha256",{})[f.name]=sha(f)
+    # A file cannot truthfully contain its own unchanging SHA256 digest.
     report_path.write_text(json.dumps(report,indent=2,sort_keys=True,allow_nan=False)+"\n")
     print(json.dumps({
         "status":"RESEARCH_TRAINED_EVALUATED_NO_PROMOTION",
