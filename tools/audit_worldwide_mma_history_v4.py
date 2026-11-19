@@ -190,8 +190,11 @@ def prior(history,when):
 
 def run():
     source=load_source_pairs()
-    if len(source)!=3036:
-        raise ValueError("Pinned 2021-26 UFC source fight universe changed")
+    if not 2900<=len(source)<=3500:
+        raise ValueError(f"Unexpected 2021–Nov7 UFC source fight count: {len(source)}")
+    # Source result rows can include NCs and other metadata not represented by
+    # the strict decisive/draw training matrix. Join on identical verified
+    # pre-fight source names/dates rather than inventing a 3,036 raw-row count.
     con=get_tables(DB)
     alias=aliases(con)
     index,available=source_matched_fights(con,alias)
