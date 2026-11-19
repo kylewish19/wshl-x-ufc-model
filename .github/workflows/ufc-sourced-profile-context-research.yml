@@ -1,0 +1,58 @@
+name: UFC sourced age, height, reach, weight-class and layoff feature research
+
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths:
+      - "src/wshlx_ufc/prefight_profile_context.py"
+      - "tools/audit_prefight_profile_context_2026.py"
+      - "tests/test_ufc_prefight_profile_context.py"
+      - ".github/workflows/ufc-sourced-profile-context-research.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-context:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install project dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Validate date freeze and actual physical profile parsers
+        run: pytest -q tests/test_ufc_prefight_profile_context.py tests/test_ufc_exact_outcome_phase2.py
+      - name: Calculate full age and division prior-history features and chronological ablations
+        run: python tools/audit_prefight_profile_context_2026.py > prefight_context_stdout.log
+      - name: Verify source integrity and unchanged Stage A
+        run: |
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          root=Path("reports/model_health/2026-11-19_new_prefight_context")
+          r=json.loads((root/"sourced_context_results.json").read_text())
+          assert r["original_ufc_qatar_nov21_pred_lock_untouched"]
+          assert r["research_only_no_fanduel_wagers_or_model_promotion"]
+          assert [r["yearly"][y]["evaluated"] for y in
+                  ("2024","2025","2026_retrospective")]==[511,513,488]
+          assert all(len(x["summary"])==8 for x in r["yearly"].values())
+          assert hashlib.sha256((root/"historical_context_2024_2026_forecasts.csv").read_bytes()).hexdigest()==r["probability_file_sha256"]
+          assert r["sources"]["feature_bouts_joined"]>2900
+          print("SOURCE_PROFILE_CONTEXT_VERIFIED_RESEARCH_ONLY")
+          PY
+      - name: Keep source-audited data and model forecasts for inspection
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wshlx-pre-event-profile-weightclass-layoff-research
+          path: |
+            reports/model_health/2026-11-19_new_prefight_context/
+            prefight_context_stdout.log
+          if-no-files-found: warn
