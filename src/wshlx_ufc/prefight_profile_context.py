@@ -96,9 +96,14 @@ def load_weightclass_history(*,cutoff="2026-11-14"):
         if not a_b:continue
         a,b=a_b
         key=(when.isoformat(),ev,*sorted((a,b)))
-        if key in seen:raise ValueError("Duplicate same-date source fight")
-        seen.add(key)
         weight=txt(x[c_weight]).strip()
+        if key in seen:
+            # Duplicate source rows can occur in this secondary results export.
+            # Count a repeated identical bout ONCE; conflicting divisions fail
+            # rather than guessing which record is the correct matchup.
+            if seen[key]!=weight:raise ValueError("Conflicting same-date weight class for duplicate fight")
+            continue
+        seen[key]=weight
         records.append({"date":when,"event":ev,"a":a,"b":b,
                         "weightclass":weight if weight and weight!="--" else None,
                         "key":key})
