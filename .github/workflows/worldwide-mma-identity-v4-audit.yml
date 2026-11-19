@@ -39,7 +39,7 @@ jobs:
             https://github.com/Jadevit/fight-canon-db/releases/download/db-2026-11-19-1934/canon.db \
             > .research_cache/fightcanon/download_url.txt
           sha256sum .research_cache/fightcanon/canon.db
-          printf '%s  %s\\n' '8185a2163b5f97071dbc4ec68667cceb43f5e321fadc38c26b5069303af4d949' '.research_cache/fightcanon/canon.db' | sha256sum --check
+          echo '8185a2163b5f97071dbc4ec68667cceb43f5e321fadc38c26b5069303af4d949  .research_cache/fightcanon/canon.db' | sha256sum --check
           python - <<'PY'
           from pathlib import Path
           import sqlite3
