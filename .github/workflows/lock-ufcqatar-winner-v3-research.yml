@@ -25,7 +25,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -e ".[dev]"
-      - name: Regression tests: no outcome leakage on future-card queries
+      - name: "Regression tests for future-card queries without outcome leakage"
         run: pytest -q tests/test_ufc_qatar_winner_v3_future_query.py tests/test_ufc_winner_recent_form_v3.py tests/test_ufc_historical_feature_baselines.py
       - name: Prevent overwriting or post-event 'prospective' predictions
         run: |
