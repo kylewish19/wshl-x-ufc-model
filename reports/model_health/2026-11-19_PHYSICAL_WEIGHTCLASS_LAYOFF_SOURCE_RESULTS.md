@@ -17,7 +17,7 @@ The PREVIOUS 101-column pre-event matrix lacked physical and specific UFC fight-
 
 Source SHA256:
 - Fighter `ufc_fighter_tott.csv`: `3296e67941f984cd5484488226e5a5d94de3249c63fe289fbc66d98546311ea1`.
-- Historical `ufc_fight_results.csv`: `b99d94a82984f07ec34d9f04423fd7edd67ea28d6d320a8da` — **CAUTION:** This visible string may be malformed; the executable report's **own** SHA256 is the authoritative source identity; inspect `sourced_context_results.json` rather than hand-copied text.
+- Historical `ufc_fight_results.csv`: `b99d94a82984f07ec34d9f04423fd7edd67ea28c365621a144e05aec64f3a840` (64-byte hex checksum matched against original pinned manifest).
 - Event and feature source hashes checked against `data/raw/ufcvegas124_2026-11-07/availability.json`; any mismatch stops the code.
 
 Current fight-day weight class is known BEFORE the bout; previous same-class UFC bout count, days since previous UFC fight, and previous-year UFC appearances are computed by source fighter identities with strict whole-calendar-day snapshot (no current opponent/result or same-day result leakage). Date-of-birth permits age-on-fight-date computation; fighter height and reach were observed in **2026 profile snapshots**, not shown to have been sourced with versioned historic dates, so their retroactive use is tagged **historically unverified for revision/availability**. Current profile `WEIGHT` is deliberately **not** treated as past fight division.
