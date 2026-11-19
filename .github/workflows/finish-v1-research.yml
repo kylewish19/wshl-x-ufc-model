@@ -7,6 +7,7 @@ on:
       - "src/wshlx_ufc/finish_v1_research.py"
       - "tools/benchmark_matchup_finish_v1.py"
       - "tools/audit_finish_v1_submission_ranking.py"
+      - "tools/audit_finish_v1_top5_exact_selection.py"
       - "tests/test_ufc_finish_v1_research.py"
       - ".github/workflows/finish-v1-research.yml"
   workflow_dispatch:
@@ -34,6 +35,8 @@ jobs:
         run: python tools/benchmark_matchup_finish_v1.py > finish_v1_benchmark_run.log
       - name: Audit fixed out-of-year submission ranking rather than forced class boost
         run: python tools/audit_finish_v1_submission_ranking.py > finish_v1_submission_ranking_run.log
+      - name: Audit full-card vs top 1-5 exact selection and confidence ranking
+        run: python tools/audit_finish_v1_top5_exact_selection.py > finish_v1_top5_exact_selection_run.log
       - name: Verify source identities and year population
         run: |
           python - <<'PY'
@@ -46,6 +49,10 @@ jobs:
           for year,count in [('2024',511),('2025',513),('2026_retrospective',488)]:
               assert all(v['fights']==count for v in j['per_year'][year]['models'].values())
           assert all(v['fights']==28 for v in j['same_28_original_historical']['scores'].values())
+          selection=json.loads((root/'selection_top1_to5_diagnostic.json').read_text())
+          assert selection['models_unmodified']
+          assert selection['sample_cohorts']['combined/multinomial']['event_cards']==117
+          assert selection['sample_cohorts']['combined/multinomial']['selection']['5']['top_six_probability']['picks']==585
           rank=json.loads((root/'submission_ranking.json').read_text())
           assert rank['no_method_production_promotion']
           assert rank['folds']['2026']['hierarchical']['fights']==488
@@ -63,4 +70,5 @@ jobs:
             reports/model_health/2026-11-18_finish_v1_research/
             finish_v1_benchmark_run.log
             finish_v1_submission_ranking_run.log
+            finish_v1_top5_exact_selection_run.log
           if-no-files-found: warn
