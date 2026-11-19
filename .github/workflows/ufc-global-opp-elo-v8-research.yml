@@ -1,0 +1,88 @@
+name: UFC professional opponent-strength global Elo winner v8
+
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths:
+      - "src/wshlx_ufc/worldwide_opponent_elo_v8.py"
+      - "tools/benchmark_global_opponent_elo_v8.py"
+      - "tests/test_ufc_worldwide_opponent_elo_v8.py"
+      - ".github/workflows/ufc-global-opp-elo-v8-research.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  dated-global-opponent-strength:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install pinned project and verify same-day global Elo updates
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+          pytest -q tests/test_ufc_worldwide_opponent_elo_v8.py tests/test_ufc_worldwide_mma_identity_v4.py
+      - name: Download exact original source SHA to prevent pro-MMA results drift
+        run: |
+          mkdir -p .research_cache/fightcanon
+          curl --fail --silent --show-error --location --retry 2 --connect-timeout 20 --max-time 360 \
+            --output .research_cache/fightcanon/canon.db \
+            https://github.com/Jadevit/fight-canon-db/releases/download/db-2026-11-19-1934/canon.db
+          echo '8185a2163b5f97071dbc4ec68667cceb43f5e321fadc38c26b5069303af4d949  .research_cache/fightcanon/canon.db' | sha256sum --check
+      - name: Independently verify regional fighter identity crosswalk by event day and BOTH opponents
+        run: python tools/audit_worldwide_mma_history_v4.py > opponent_elo_v8_source_audit.log
+      - name: Rebuild all global pro opponent strengths, train new winner candidates and exact methods
+        run: python tools/benchmark_global_opponent_elo_v8.py > opponent_elo_v8_stdout.log
+      - name: Verify source provenance, identical yearly fights, and NO original source lock modifications
+        run: |
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          root=Path('reports/model_health/2026-11-19_global_elo_winner_v8')
+          report=json.loads((root/'global_elo_winner_v8_results.json').read_text())
+          assert report['schema']=="WSHLX_GLOBAL_PRO_MMA_ASOF_OPPONENT_ELO_WINNER_V8"
+          assert report['fightcanon_external_source_SHA256']=="8185a2163b5f97071dbc4ec68667cceb43f5e321fadc38c26b5069303af4d949"
+          assert report['same_KO_SUB_DEC_method_predictions_across_winner_arms']
+          assert report['only_pre_fight_opponent_strength_extracted']
+          assert report['no_future_sameday_fight_results_used_to_train_elo_snapshot']
+          assert report['historical_2024_26_retrospective_not_pristine']
+          assert report['nov21_original_and_all_other_SHA_protected_shadows_unchanged']
+          assert report['no_model_promoted_or_betting_picks_issued']
+          assert [report['yearly'][y]['evaluation_fights'] for y in
+             ('2024','2025','2026_retrospective')]==[511,513,488]
+          assert all(len(x['scores'])==4 and x['same_method_model_across_all_winner_arms']
+             for x in report['yearly'].values())
+          assert report['source_verification']['verified_UFC_source_pairs']==3016
+          assert report['source_verification']['raw_pro_bouts_used']>100000
+          assert hashlib.sha256((root/'global_professional_opponent_quality_elo_v8_forecasts.csv').read_bytes()).hexdigest()==report['forecast_sha256']
+          for filename in (
+            'data/locks/ufcqatar_2026-11-21/stage_a_final_selection.json',
+            'data/shadow_locks/ufcqatar_2026-11-21/coherent_joint_pre_event_shadow.json',
+            'data/shadow_locks/ufcqatar_2026-11-21/winner_v3_prospective_shadow.json',
+            'data/shadow_locks/ufcqatar_2026-11-21/worldwide_winner_v4_prospective_shadow.json',
+            'data/shadow_locks/ufcqatar_2026-11-21/worldwide_method_v5_prospective_shadow.json',
+          ):
+              assert Path(filename).exists()
+          print('WORLD_PRO_FIGHTER_ELO_AND_MATCHED_EXACT_WINNER_V8_VALIDATED')
+          PY
+      - name: Preserve regional quality audit, all fight grades and Elo source checks
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wshlx-global-professional-opponent-elo-winner-v8-research
+          path: |
+            reports/model_health/2026-11-19_global_elo_winner_v8/
+            opponent_elo_v8_source_audit.log
+            opponent_elo_v8_stdout.log
+          if-no-files-found: warn
