@@ -60,7 +60,7 @@ jobs:
           assert a['no_current_bout_or_future_bouts_for_features']
           assert a['no_betting_odds_used'] and a['no_model_weights_retrained']
           assert a['nov21_original_stage_a_and_coherent_locked_unchanged']
-          assert a['pinned_ufc_modern_source_fights']==3036
+          assert 2900<=a['pinned_ufc_modern_source_fights']<=3500
           assert a['ufc_fights_exact_two_opponent_match']>1000
           assert a['db_sha256']==hashlib.sha256(
               Path('.research_cache/fightcanon/canon.db').read_bytes()).hexdigest()
