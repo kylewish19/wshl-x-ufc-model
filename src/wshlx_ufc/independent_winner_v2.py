@@ -12,7 +12,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
-from .finish_v1_research import method_features, prior_win_probability, elo_win_probability
+from .finish_v1_research import method_features, prior_win_probability
+from .historical_baselines import _winner_probabilities
 
 def winner_features(f:dict)->np.ndarray:
     if f["feature_as_of_exclusive"]!=f["event_date"]:
@@ -59,7 +60,7 @@ def predict_winner(f:dict,bundle:dict)->dict[str,float]:
         raise ValueError("Fighter-order reversal broke winner coherence")
     return {
        "prior_ufc_winrate":float(prior_win_probability(f)),
-       "past_only_elo":float(elo_win_probability(f)),
+       "past_only_elo":float(_winner_probabilities(f)["past_only_ufc_elo"]),
        "new_symmetric_logistic":p,
     }
 
