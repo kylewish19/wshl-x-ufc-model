@@ -51,3 +51,23 @@ The original Historical method joint is not coherent with its separate winner he
 **UNCHANGED:** Nov21 original Reference/Historical/Unified Stage A, independent timestamped coherence shadow, seeded 10,000 simulations, FanDuel-only Stage B, past grades and betting ledgers. **No model trained here is authorized for betting.**
 
 The meaningful action now is NOT another random coefficient tweak. We have directly verified the proposed independent winner replacement fails to improve exact predictions. Focus on real missing matchup information, leakage-safe feature quality, error decomposition and new event-locked testing instead.
+
+
+## Follow-up verified 2026 winner-vs-method failure decomposition
+
+GitHub CI success https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/44430725166. Reproducible `tools/audit_joint_v2_failure_decomposition.py`, `reports/model_health/2026-11-18_joint_winner_finish_v2/winner_method_failure_decomposition.json` in the Actions artifact. All 488 outcomes and pre-event bout/stat coverage joined by exact bout ID.
+
+| Error type (2026, 488 decisive fights) | Prior-UFC-winrate + multinomial | Newly trained winner + multinomial |
+|---|---:|---:|
+| Wrong winning fighter | **194** | 195 |
+| Correct winning fighter, wrong finishing method | **143** | 148 |
+| **Correct exact fighter and method** | **151 (30.9%)** | 145 (29.7%) |
+| Correct method GIVEN correct winner | **51.4%** | 49.5% |
+
+For the newly trained winner+method challenger, 109/488 decisive contests featured a UFC debutant on at least one side: **26/109 exact (23.9%)**. Among the 181 where both had at least five prior UFC bouts: **57/181 exact (31.5%)**. On the 83 contests with calculated winner probability >=70%, only **28/83 exact (33.7%)**, despite **62/83 correct winning fighter**. This demonstrates that winner-side confidence is not fighter+method confidence, and UFC sample size matters without solving the core problem. No ranking/eligibility threshold has been refitted to these historical outcomes.
+
+**Mathematical bottleneck:** At 294/488 winner accuracy, even **perfect** conditional methods would allow at most 60.25% exact across all fights. To actually reach 60% exact at this winner level would require almost 100% conditional method correctness. A 70% exact full-card target necessarily needs winner accuracy materially above 70% **and** very high conditional method accuracy. Neither has been demonstrated; do not raise confidence labels or sim counts to imply otherwise.
+
+**Do not ignore outcome quality:** 2026's roughly 17% submissions are not a requirement for forced submission calls. This new winner+method combination identified 12/84 actual SUB classes as the top class—better than the fixed prior-winrate combination's 7/84—but still missed 6 more exact fight outcomes overall. Primary optimization remains all-six exact outcome quality, not SUB share.
+
+**Next research focus:** critical data-quality and feature-family audit, particularly transferable pre-UFC/debutant form, valid age/reach/weight-class metadata at prediction time, opponent grappling access and actual get-ups where ethically/legitimately measurable, plus recency and injuries. Then one prespecified chronological ablation and matched exact-score comparison. The unplayed November 21 card's Stage A and locked coherent shadow remain UNCHANGED. No candidate approved for bets or promotion.
