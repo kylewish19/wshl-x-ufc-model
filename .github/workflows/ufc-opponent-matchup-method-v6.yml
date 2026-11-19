@@ -1,0 +1,83 @@
+name: UFC opponent-relative finishing v6 nested chronological comparison
+
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths:
+      - "tools/benchmark_opponent_matchup_method_v6.py"
+      - "tests/test_ufc_opponent_matchup_method_v6.py"
+      - ".github/workflows/ufc-opponent-matchup-method-v6.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  nested-method-research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install and test strict pre-event fighter matchup code
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+          pytest -q tests/test_ufc_opponent_matchup_method_v6.py tests/test_ufc_worldwide_method_v5.py
+      - name: Download the PINNED world professional MMA archive and verify SHA
+        run: |
+          mkdir -p .research_cache/fightcanon
+          curl --fail --silent --show-error --location --retry 2 --connect-timeout 20 --max-time 360 \
+            --output .research_cache/fightcanon/canon.db \
+            https://github.com/Jadevit/fight-canon-db/releases/download/db-2026-11-19-1934/canon.db
+          echo '8185a2163b5f97071dbc4ec68667cceb43f5e321fadc38c26b5069303af4d949  .research_cache/fightcanon/canon.db' | sha256sum --check
+      - name: Recreate time-filtered, identity-verified UFC vs regional pro fight histories
+        run: python tools/audit_worldwide_mma_history_v4.py > method_v6_world_identity_source_stdout.log
+      - name: Execute pre-specified nested validation and winner-constant 2024–26 method comparisons
+        run: python tools/benchmark_opponent_matchup_method_v6.py > method_v6_stdout.log
+      - name: Verify all dated forecasts, model families, chosen coefficients and no changes to locked November 21 cards
+        run: |
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          root=Path("reports/model_health/2026-11-19_matchup_method_v6")
+          d=json.loads((root/"method_v6_results.json").read_text())
+          assert d['schema']=="WSHLX_FIGHTER_VS_OPPONENT_MATCHUP_METHOD_V6_NESTED_COEFFICIENT_RESEARCH"
+          assert d['same_winner_head_within_all_method_comparisons']
+          assert d['all_inner_coefficient_tuning_uses_past_year_conditional_logloss_NOT_test_labels']
+          assert d['historical_2024_2026_NOT_pristine_prospective']
+          assert d['nov21_original_and_v3_v4_v5_SHA_locked_artifacts_untouched']
+          assert d['model_promotion_or_betting_authority'] is False
+          assert d['model_feature_dimensionalities']['opponent_interactions_115_tuned']==115
+          assert [d['yearly'][y]['eval_n'] for y in ("2024","2025","2026_retrospective")]==[511,513,488]
+          assert all(len(y['scores'])==12 for y in d['yearly'].values())
+          assert hashlib.sha256((root/"method_v6_2024_26_asof_bout_forecasts.csv").read_bytes()).hexdigest()==d['out_of_year_forecast_sha256']
+          for year,information in d['yearly'].items():
+              for name,t in information['chosen_coefficients_from_PREVIOUS_calendar_year_ONLY'].items():
+                  assert t['chosen_C'] in d['coefficient_candidates_prespecified']
+                  assert t['training_ends_strictly_before_validation_start']
+                  assert t['test_year_excluded_from_tuning']
+                  assert t['validation_n']>100
+          for p in (
+              "data/locks/ufcqatar_2026-11-21/stage_a_final_selection.json",
+              "data/shadow_locks/ufcqatar_2026-11-21/coherent_joint_pre_event_shadow.json",
+              "data/shadow_locks/ufcqatar_2026-11-21/winner_v3_prospective_shadow.json",
+              "data/shadow_locks/ufcqatar_2026-11-21/worldwide_winner_v4_prospective_shadow.json",
+              "data/shadow_locks/ufcqatar_2026-11-21/worldwide_method_v5_prospective_shadow.json",
+          ):
+              assert Path(p).exists()
+          print("OPPONENT_MATCHUP_METHOD_V6_TUNING_PRIOR_YEARS_ONLY_NO_PROMOTION")
+          PY
+      - name: Preserve complete scoring and critical source/missingness artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wshlx-opponent-relative-method-v6-nested-chronological-research
+          path: |
+            reports/model_health/2026-11-19_matchup_method_v6/
+            method_v6_stdout.log
+            method_v6_world_identity_source_stdout.log
+          if-no-files-found: warn
