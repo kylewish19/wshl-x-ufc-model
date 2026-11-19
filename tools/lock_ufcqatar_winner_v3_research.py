@@ -80,8 +80,8 @@ def main():
         audit["final_sha256"]!=sha(FINAL) or
         audit["raw_sha256"]!=source["raw_model_sha256"]):
         raise ValueError("The original independent Stage A has invalid SHA")
-    if len(source["fights"])!=12 or
-        any((int(x["fight_no"])!=i) for i,x in enumerate(source["fights"],1)):
+    if (len(source["fights"])!=12 or
+        any(int(x["fight_no"])!=i for i,x in enumerate(source["fights"],1))):
         raise ValueError("Expected 11 official plus exactly 1 provisional matchup")
     if not COHERENT.exists():
         raise FileNotFoundError("Original Nov21 Coherent Challenger lock required and unchanged")
