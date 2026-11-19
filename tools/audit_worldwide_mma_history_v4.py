@@ -144,28 +144,32 @@ def build_verified_map(source,index,alias):
 def history_for_ids(con,ids):
     # Historical per fighter all pro bouts (outside the UFC included).
     # Filter source as-of per EVENT DATE, never per modern current record.
-    con.execute("CREATE TEMP TABLE selected_fighters (fighter_id INTEGER PRIMARY KEY)")
-    con.executemany("INSERT INTO selected_fighters VALUES (?)",[(int(x),) for x in sorted(set(ids))])
-    rows=con.execute("""
-       SELECT p.fighter_id AS athlete_id, e.date AS day,
-              e.promotion, p.result, f.method, f.fight_id, f.bout_type
-       FROM selected_fighters z
-       JOIN fight_participants p ON p.fighter_id=z.fighter_id
-       JOIN fights f ON f.fight_id=p.fight_id
-       JOIN events e ON e.event_id=f.event_id
-       WHERE e.date IS NOT NULL AND e.date < ?
-       ORDER BY p.fighter_id,e.date,f.fight_id
-    """,(DATE_CUTOFF,)).fetchall()
     histories=defaultdict(list)
-    for fid,d,promotion,result,method,fightid,kind in rows:
-        when=clean_day(d)
-        if not when or (kind and str(kind).lower() in ("amateur","exhibition")):
-            continue
-        histories[int(fid)].append({
-            "date":when,"promotion":str(promotion or "").strip(),
-            "result":str(result or "").upper().strip(),"method":str(method or "").lower(),
-            "fight_id":int(fightid),
-        })
+    ids=sorted(set(int(x) for x in ids))
+    for offset in range(0,len(ids),350):
+        batch=ids[offset:offset+350]
+        keys=",".join("?" for _ in batch)
+        # Query-only connection stays immutable: no temp tables or cached
+        # post-event records are created or used.
+        query=f"""
+          SELECT p.fighter_id AS athlete_id, e.date AS day,
+                 e.promotion, p.result, f.method, f.fight_id, f.bout_type
+          FROM fight_participants p
+          JOIN fights f ON f.fight_id=p.fight_id
+          JOIN events e ON e.event_id=f.event_id
+          WHERE p.fighter_id IN ({keys}) AND e.date IS NOT NULL AND e.date < ?
+          ORDER BY p.fighter_id,e.date,f.fight_id
+        """
+        for fid,d,promotion,result,method,fightid,kind in con.execute(
+            query,(*batch,DATE_CUTOFF)):
+            when=clean_day(d)
+            if not when or (kind and str(kind).lower() in ("amateur","exhibition")):
+                continue
+            histories[int(fid)].append({
+                "date":when,"promotion":str(promotion or "").strip(),
+                "result":str(result or "").upper().strip(),"method":str(method or "").lower(),
+                "fight_id":int(fightid),
+            })
     return histories
 
 def prior(history,when):
