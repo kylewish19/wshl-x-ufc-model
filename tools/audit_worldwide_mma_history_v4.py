@@ -172,11 +172,24 @@ def history_for_ids(con,ids):
             })
     return histories
 
+def victory_class(text):
+    s=str(text or "").strip().lower()
+    if "submission" in s or s in ("sub","tapout","technical submission"):
+        return "SUB"
+    if "ko" in s or "tko" in s or "knockout" in s:
+        return "KO"
+    if "decision" in s or s.startswith(("ud ","sd ","md ")):
+        return "DEC"
+    return "UNREPORTED"
+
 def prior(history,when):
     # Date strictly earlier; same-day outcomes excluded from all queries.
     data=[x for x in history if x["date"]<when]
     nonufc=[x for x in data if x["promotion"].upper()!="UFC" and x["result"] in ("W","L","D")]
     completed=[x for x in nonufc if x["result"] in ("W","L")]
+    recent5=completed[-5:]
+    recent3=completed[-3:]
+    def win_stats(seq):return sum(x["result"]=="W" for x in seq)
     result={
         "known_nonUFC_bouts_prior":len(nonufc),
         "known_nonUFC_wins_prior":sum(x["result"]=="W" for x in nonufc),
@@ -184,7 +197,17 @@ def prior(history,when):
         "known_nonUFC_decisive_prior":len(completed),
         "known_nonUFC_bouts_prior_365d":sum((date.fromisoformat(when)-date.fromisoformat(x["date"])).days<=365 for x in nonufc),
         "known_pro_mma_bouts_any_org_prior":sum(x["result"] in ("W","L","D") for x in data),
+        "known_nonUFC_recent3_decisive":len(recent3),
+        "known_nonUFC_recent3_wins":win_stats(recent3),
+        "known_nonUFC_recent5_decisive":len(recent5),
+        "known_nonUFC_recent5_wins":win_stats(recent5),
+        "known_nonUFC_method_recorded":sum(victory_class(x["method"])!="UNREPORTED" for x in completed),
     }
+    for method in ("KO","SUB","DEC"):
+        result[f"known_nonUFC_{method}_wins_prior"]=sum(
+            x["result"]=="W" and victory_class(x["method"])==method for x in completed)
+        result[f"known_nonUFC_{method}_losses_prior"]=sum(
+            x["result"]=="L" and victory_class(x["method"])==method for x in completed)
     if any(q<0 for q in result.values()):raise ValueError("Negative historical fight count")
     return result
 
