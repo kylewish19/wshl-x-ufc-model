@@ -69,3 +69,17 @@ The strict filter **fails to improve selection on two of three years**, and perf
 4. Prospective actual future Fight Night Stage A research challenger requires source-checked profiles and immutable pre-event predictions. Keep current November 21 Stage A and separate Coherent lock untouched. No new model/betting authority before future-event validation and the existing ≥300 prospectively gradeable fight policy.
 
 **What has not improved:** The project has not demonstrated 60–70% full-card exact predictions, nor 100% correct 2–5 selection groups. A 60% winner hit rate mathematically caps full-card exact rate at 60% even with flawless methods. This research correctly found multiple negative paths instead of promoting a spurious backtest winner.
+
+
+## Follow-up learned selective-reliability test — completed, failed to improve
+
+**Verified Actions run:** https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/44434146283. Added `tools/audit_learned_exact_reliability_gate.py`; complete `trained_selective_gate_2025_2026.json` appended to same artifact family. This training/test procedure is pre-event-feature-only and scores ONLY exact fighter+method correctness. For test 2025 it learns from 2024's past OOF forecasts/outcomes, and for test 2026 it learns from 2024–25; neither fold trains on its own target year's results.
+
+| Historic year / 11–14-fight cards | Trained correctness gate, top 2 | Baseline top 2 by exact P | Trained top 3 | Baseline top 3 by exact P | Trained top 5 | Baseline top 5 |
+|---|---:|---:|---:|---:|---:|---:|
+| **2025 / 39 cards** | 29/78 | **31/78** | 41/117 | **47/117** | 66/195 | **77/195** |
+| **2026 / 38 cards** | 23/76 | **25/76** | 40/114 | **42/114** | 66/190 | 66/190 |
+
+A cautious unforced gate of model-estimated **≥60% exact correctness AND both fighters ≥5 prior UFC fights** produced only **one** eligible pick across 39 historical cards in 2025 (it missed), and **zero** on 38 cards in 2026. No eligible 2–5-fight selected groups existed. The threshold was fixed before evaluating the outcomes, not tuned to make the card look successful. **This learned selection model did not beat simple exact-probability ranking and is NOT promoted.**
+
+Even using multiple exact probability, winner, method-margin, direct-six-agreement and data-density features does not currently extract 2–5 reliable 100%-accurate subsets. A selective classifier that abstains is more honest than forcing 2–5 bets, but is NOT evidence of profitable picks.
