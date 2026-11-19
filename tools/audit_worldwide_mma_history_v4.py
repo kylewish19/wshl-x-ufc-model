@@ -270,8 +270,8 @@ def run():
         "schema":"WSHLX_FIGHTCANON_CROSS_PROMOTION_EVIDENCE_AUDIT_V1",
         "db_size_bytes":DB.stat().st_size,
         "db_sha256":hashlib.sha256(DB.read_bytes()).hexdigest(),
-        "db_download_url":"https://github.com/Jadevit/fight-canon-db/releases/latest/download/canon.db",
-        "db_release_url_resolved":(DB.parent/"download_url.txt").read_text().strip()
+        "db_download_url":"https://github.com/Jadevit/fight-canon-db/releases/download/db-2026-11-19-1934/canon.db",
+        "db_release_final_asset_url_transient_UNTRUSTED":(DB.parent/"download_url.txt").read_text().strip()
              if (DB.parent/"download_url.txt").exists() else None,
         "inspected_utc":datetime.now(timezone.utc).isoformat(),
         "source_class":"SECONDARY_CROSS_PROMOTION_AGGREGATE_UFCSTATS_SHERDOG_ET_AL",
