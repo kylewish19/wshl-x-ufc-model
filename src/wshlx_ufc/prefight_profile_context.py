@@ -112,7 +112,7 @@ def construct_metadata(records,profiles):
         while i<len(records) and records[i]["date"]==day:
             batch.append(records[i]);i+=1
         for r in batch:
-            details={"weight_class_pre_event_listing":r["weightclass"]}
+            details={"weight_class_pre_event_listing":r["weightclass"],"source_a":r["a"],"source_b":r["b"]}
             for side,fighter in (("a",r["a"]),("b",r["b"])):
                 h=history[fighter];p=profiles.get(_profile_name(fighter))
                 dob=p["dob"] if p else None
@@ -163,9 +163,17 @@ def metadata_for_features(features):
         if record is None:
             missing.append({"date":f["event_date"],"a":f["fighter_a"],"b":f["fighter_b"]})
             continue
-        # Source original A/B name identities stored separately in index:
-        # enforce that fighter ordering by pairing with ordered original record.
-        matched[f["bout_id"]]=record
+        # Explicit source-pair orientation; never attach one fighter's DOB,
+        # reach or recency data to the opponent after an order reversal.
+        if f["fighter_a"]==record["source_a"] and f["fighter_b"]==record["source_b"]:
+            matched[f["bout_id"]]=record
+        elif f["fighter_a"]==record["source_b"] and f["fighter_b"]==record["source_a"]:
+            matched[f["bout_id"]]={
+                **record,"a":record["b"],"b":record["a"],
+                "source_a":f["fighter_a"],"source_b":f["fighter_b"],
+            }
+        else:
+            raise ValueError("Weightclass metadata fighter identity mismatch")
     return matched,{
         "source_fight_records":len(rows),"source_profiles":len(profiles),
         "feature_bouts_joined":len(matched),"feature_bouts_unmatched":len(missing),
