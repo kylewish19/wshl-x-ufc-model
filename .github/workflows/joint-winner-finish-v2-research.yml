@@ -1,0 +1,62 @@
+name: Joint winner and exact-method v2 historical research
+
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths:
+      - "src/wshlx_ufc/independent_winner_v2.py"
+      - "tools/benchmark_joint_winner_finish_v2.py"
+      - "tests/test_ufc_independent_joint_v2.py"
+      - ".github/workflows/joint-winner-finish-v2-research.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  joint-exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Verify as-of data and independent winner/method training
+        run: pytest -q tests/test_ufc_independent_joint_v2.py tests/test_ufc_finish_v1_research.py tests/test_ufc_historical_feature_baselines.py
+      - name: Execute yearly frozen training and joint fighter-method scoring
+        run: python tools/benchmark_joint_winner_finish_v2.py > joint_finish_v2_execution.log
+      - name: Audit result integrity, fairness, and source hashes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json,hashlib
+          d=Path('reports/model_health/2026-11-18_joint_winner_finish_v2')
+          r=json.loads((d/'joint_v2_evaluation.json').read_text())
+          assert r['no_promotion'] and r['research_not_production']
+          assert r['frozen_nov21_and_all_fanduel_original_picks_unchanged']
+          assert len(r['folds'])==3
+          for year,n in [('2024',511),('2025',513),('2026_retrospective',488)]:
+              cohort=r['folds'][year]
+              assert cohort['eval_count']==n
+              assert cohort['winner_training_n']==cohort['method_training_n']
+              assert all(v['fights']==n for v in cohort['candidates'].values())
+          c=r['matched_two_frozen_cards']['cohort_28']['models']
+          assert len(c)==12 and all(v['fights']==28 for v in c.values())
+          assert hashlib.sha256((d/'all_date_fold_forecasts.csv').read_bytes()).hexdigest()==r['source_forecast_csv_sha256']
+          print('JOINT_V2_CHRONOLOGICAL_EVALUATION_VERIFIED_NO_MODEL_PROMOTION')
+          PY
+      - name: Preserve comparative scores and per-fight probabilities
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wshlx-independent-joint-winner-and-method-v2-research
+          path: |
+            reports/model_health/2026-11-18_joint_winner_finish_v2/
+            joint_finish_v2_execution.log
+          if-no-files-found: warn
