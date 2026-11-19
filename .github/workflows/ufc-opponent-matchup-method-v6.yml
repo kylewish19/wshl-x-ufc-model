@@ -15,7 +15,12 @@ permissions:
 jobs:
   nested-method-research:
     runs-on: ubuntu-latest
-    timeout-minutes: 22
+    timeout-minutes: 25
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -38,6 +43,12 @@ jobs:
         run: python tools/audit_worldwide_mma_history_v4.py > method_v6_world_identity_source_stdout.log
       - name: Execute pre-specified nested validation and winner-constant 2024–26 method comparisons
         run: python tools/benchmark_opponent_matchup_method_v6.py > method_v6_stdout.log
+      - name: Repeat full score run and reject any non-reproducible fight probabilities
+        run: |
+          cp reports/model_health/2026-11-19_matchup_method_v6/method_v6_2024_26_asof_bout_forecasts.csv /tmp/method_v6_first_pass.csv
+          python tools/benchmark_opponent_matchup_method_v6.py > method_v6_repro_repeat.log
+          cmp /tmp/method_v6_first_pass.csv reports/model_health/2026-11-19_matchup_method_v6/method_v6_2024_26_asof_bout_forecasts.csv
+          echo "TWO_IDENTICAL_2024_2026_DATE_FOLD_FORECASTS_IN_REPEATED_CPU_TRAINING"
       - name: Verify all dated forecasts, model families, chosen coefficients and no changes to locked November 21 cards
         run: |
           python - <<'PY'
@@ -79,5 +90,6 @@ jobs:
           path: |
             reports/model_health/2026-11-19_matchup_method_v6/
             method_v6_stdout.log
+            method_v6_repro_repeat.log
             method_v6_world_identity_source_stdout.log
           if-no-files-found: warn
