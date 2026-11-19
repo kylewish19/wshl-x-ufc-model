@@ -232,7 +232,7 @@ def selection(card_records):
     groups=defaultdict(list)
     for r in card_records:
         groups[(r["date"],r["event"])].append(r)
-    cards={k:v for k,v in groups.items() if 11<=len(v)<=14}
+    cards={k:v for k,v in groups.items() if 11<=len({r["bout_id"] for r in v})<=14}
     stats=defaultdict(list)
     evidence=[]
     for (date,event),rs in sorted(cards.items()):
