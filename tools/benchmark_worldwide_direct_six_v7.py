@@ -135,7 +135,11 @@ def select_prediction(q,policy):
         idx=int(np.argmax(q))
     elif policy=="winner_marginal_method":
         first=float(q[:3].sum())
-        side=0 if first>=.5 else 1
+        # A 50.000000000000000% tie must not flip winner when the
+        # conditional method's three probabilities sum to 1 +/- 1 ULP.
+        # Previous v7 run counted two historical B wins incorrectly at
+        # perfectly tied A/B original winner probabilities.
+        side=0 if first>=.5-1e-12 else 1
         idx=side*3+int(np.argmax(q[side*3:side*3+3]))
     else:raise ValueError("Unregistered selection rule")
     return idx
@@ -166,7 +170,14 @@ def grade_base(f,l,model,p,cond):
     # Choose side by winner head; identical to old coherent-same-head method.
     idx=select_prediction(q,"winner_marginal_method")
     scored=grade_direct(f,l,model,"winner_marginal_method",q)
+    # Preserve the ORIGINAL frozen fighter head selection, not
+    # a floating-rounding change after summing method class probabilities.
+    original=score_six(q,0 if int(l["label_a_win"]) else 1,l["label_method"],p_a=p)
+    if (scored["winner_hit"]!=original["winner_correct"] or
+        scored["exact_hit"]!=original["exact"]):
+        raise ValueError("Baseline fighter/method decisions drifted from source head")
     scored["model"]=model
+    scored["p_a_win"]=float(p)
     return scored
 
 def metric(rows):
