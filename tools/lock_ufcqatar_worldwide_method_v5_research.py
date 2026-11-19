@@ -99,7 +99,7 @@ def main():
                 oldv4["a"],oldv4["b"])!=(original["a"],original["b"]):
             raise ValueError("Original fighter ordering changed")
         p=float(oldv3["research_models"]["logit_recent_57"]["p_a"])
-        p_other=float(oldv4["fights"][0]["research_variants"]["winner_v3_logit57"]["p_a_win"]) if False else float(oldv4["research_variants"]["winner_v3_logit57"]["p_a_win"])
+        p_other=float(oldv4["research_variants"]["winner_v3_logit57"]["p_a_win"])
         if abs(p-p_other)>1e-8:
             raise ValueError("Cannot score changed v3 winner probabilities, true method-only pair required")
         r=resistance[i-1];q=qualities[i-1]
