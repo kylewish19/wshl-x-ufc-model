@@ -87,7 +87,7 @@ def load_weightclass_history(*,cutoff="2026-11-14"):
     c_weight=col(results,"WEIGHTCLASS")
     if any(x is None for x in (c_event,c_bout,c_weight)):
         raise ValueError("Source fight weight class and identity columns absent")
-    records=[];seen={}
+    records=[];seen={};quarantined=set();identical_duplicates=0
     limit=date.fromisoformat(cutoff)
     for x in results.to_dict("records"):
         ev=txt(x[c_event]);when=ev_dates.get(ev)
@@ -98,16 +98,25 @@ def load_weightclass_history(*,cutoff="2026-11-14"):
         key=(when.isoformat(),ev,*sorted((a,b)))
         weight=txt(x[c_weight]).strip()
         if key in seen:
-            # Duplicate source rows can occur in this secondary results export.
-            # Count a repeated identical bout ONCE; conflicting divisions fail
-            # rather than guessing which record is the correct matchup.
-            if seen[key]!=weight:raise ValueError("Conflicting same-date weight class for duplicate fight")
+            # If two source rows claim DIFFERENT weightclasses for the exact
+            # same date/event/fighter pair, quarantine the whole identity.
+            # Never select one using outcomes or arbitrary order.
+            if seen[key]!=weight:
+                quarantined.add(key)
+            else:
+                identical_duplicates+=1
             continue
         seen[key]=weight
         records.append({"date":when,"event":ev,"a":a,"b":b,
                         "weightclass":weight if weight and weight!="--" else None,
                         "key":key})
-    return sorted(records,key=lambda r:(r["date"],r["event"],r["a"],r["b"]))
+    usable=[r for r in records if r["key"] not in quarantined]
+    return sorted(usable,key=lambda r:(r["date"],r["event"],r["a"],r["b"])),{
+        "identical_source_duplicate_rows":identical_duplicates,
+        "quarantined_conflicting_weightclass_identity_count":len(quarantined),
+        "quarantined_examples":[str(k) for k in sorted(quarantined)[:8]],
+        "never_arbitrarily_choose_conflicting_weightclass":True,
+    }
 
 def construct_metadata(records,profiles):
     """Freeze each calendar day before updating any fighter on that day."""
@@ -157,7 +166,7 @@ def feature_context(source_feature,metadata):
     return row
 
 def metadata_for_features(features):
-    rows=load_weightclass_history()
+    rows,source_conflicts=load_weightclass_history()
     profiles=load_profiles()
     indexed=construct_metadata(rows,profiles)
     matched={};missing=[]
@@ -181,6 +190,7 @@ def metadata_for_features(features):
             raise ValueError("Weightclass metadata fighter identity mismatch")
     return matched,{
         "source_fight_records":len(rows),"source_profiles":len(profiles),
+        "source_conflict_audit":source_conflicts,
         "feature_bouts_joined":len(matched),"feature_bouts_unmatched":len(missing),
         "missing_samples":missing[:15],
         "profile_source_snapshot":"PINNED_2026_11_08_SECONDARY_NOT_HISTORICALLY_VERSIONED",
