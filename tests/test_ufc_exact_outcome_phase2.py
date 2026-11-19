@@ -6,9 +6,17 @@ import math
 import numpy as np
 import pytest
 
-from tools.research_exact_outcomes_phase2 import (
-    ALL,CORE,GROUPS,VARIANTS,selection,scored,actual_state,
-)
+import importlib.util
+from pathlib import Path
+
+# tools/ is a scripts directory rather than an installed Python package.
+spec=importlib.util.spec_from_file_location(
+    "wshlx_phase2_research_test_target",
+    Path(__file__).resolve().parents[1]/"tools/research_exact_outcomes_phase2.py")
+phase2=importlib.util.module_from_spec(spec)
+spec.loader.exec_module(phase2)
+ALL,CORE,GROUPS,VARIANTS=phase2.ALL,phase2.CORE,phase2.GROUPS,phase2.VARIANTS
+selection,scored,actual_state=phase2.selection,phase2.scored,phase2.actual_state
 
 def one(index,model="factorized6",*,data=True,agree=True,hit=True):
     year="2025"; event="Synthetic Historical Event"
