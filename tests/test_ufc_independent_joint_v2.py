@@ -26,14 +26,14 @@ def fighter(a=6,b=3,when="2023-01-01",fid="1",win=1,method="SUB"):
 
 def test_winner_training_only_past_ignores_draw_and_is_role_symmetric():
     fs,ls=[],[]
-    for i in range(120):
-        when="2022-01-01" if i<80 else "2024-01-01"
+    for i in range(160):
+        when="2022-01-01" if i<120 else "2024-01-01"
         f,l=fighter(3+i%6,2+i%4,when,str(i),win=i%2)
         fs.append(f);ls.append(l)
     # All same-day fights receive earlier as-of features; winner classifier
     # must exclude after-cutoff training results from its fit.
     bundle=fit_winner_logistic(fs,ls,before="2023-01-01")
-    assert bundle["training_decisive_bouts"]==80
+    assert bundle["training_decisive_bouts"]==120
     t,lab=fighter()
     p=predict_winner(t,bundle)
     assert set(p)=={"prior_ufc_winrate","past_only_elo","new_symmetric_logistic"}
