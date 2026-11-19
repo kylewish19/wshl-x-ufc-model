@@ -177,3 +177,24 @@ post-card-picked correction**.
 - 2026 decomposition new model: **195/488 wrong winner**, **148/488 right fighter but wrong method**, **145/488 exact**. Even among 83 fights with winner-confidence >=70% it made **62 correct winners but just 28 exact outcomes**. With at least one UFC debutant **26/109 exact (23.9%)**, versus both with >=5 UFC bouts **57/181 exact (31.5%)**. Sparse/missing UFC data are real issues; naive data gates do not repair core signal.
 - **Important upper bound:** current historical ~60% winner hit rate caps full-card exact at 60% even if method prediction were perfect. The user wants 60–70% exact across every 11–14 fight card and a small near-perfect 2–5-fight subset; no existing research has proven such performance and no 100% group can be guaranteed.
 - **Now** inspect date-as-of data missingness/transfer limitations, test source-valid new matchup features (not arbitrary coefficient/tally boosts), use year/event chronological ablations and compare all-six exact selections plus proper scores on same fights. No modification to original Nov21 Stage A, independent Coherent shadow, FanDuel Stage B, prior grades or prospectively frozen predictions. **No new model promoted.**
+
+
+## November 19, 2026 — active four-part exact-outcome development (not promoted)
+
+**LATEST DEVELOPMENT RESUME POINTS:**
+- `reports/model_health/2026-11-19_PHASE2_EXACT_FEATURE_ABLATION_DIRECT_SIX_AND_SELECTION.md` (passed CI https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/44432085423, artifact `wshlx-phase2-exact-outcome-research`).
+- `reports/model_health/2026-11-19_PHYSICAL_WEIGHTCLASS_LAYOFF_SOURCE_RESULTS.md` (passed CI https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/44433269497, artifact `wshlx-pre-event-profile-weightclass-layoff-research`).
+- Selective historical meta gate: `tools/audit_learned_exact_reliability_gate.py`, added to `.github/workflows/ufc-phase2-exact-outcome-research.yml` to validate before claiming results.
+
+**User's precise goals:** 60–70% full-card exact fighter+method (11–14 fights), aspire to 100%; find anywhere on card 2–5 unusually reliable exact picks, aspire perfect subsets but neither near-certainty nor forcing a fixed number of bets is justified.
+
+**What has been executed:** 
+1. Audited the actual pinned feature matrix (8,871 bouts, 3,036 modern 2021-26, 3,015 decisive; 2026 110 UFC-debutant bouts and 310 bouts with a fighter under five UFC bouts). Existing matrix was missing age/reach/height/division-specific UFC experience/layoff/regional form/getups. Source archives DO contain pinned 2026 fighter profiles and fight divisions.
+2. Six predeclared feature-family ablations, fit through prior years and scored 2024/25/26: baseline factorized exact **169/511, 170/513, 145/488**; remove grappling **171/511, 162/513, 148/488**, but six-class log loss worsens every year and all correct SUB classifications collapse to zero. No feature-family deletion earned promotion.
+3. Newly fitted symmetric direct-six-outcome model versus factorized exact same fights: direct6 **168/511, 160/513, 143/488**; underperforms exact full-feature factorized in each year. Do not promote.
+4. Pre-declared 2–5 anywhere-on-card strict exact-consensus+UFC evidence filter: 2024 **38/82** exact (46.3%); 2025 **21/70** (30%); 2026 **23/75** (30.7%). It did NOT reliably improve picks; perfect 2–5 subsets **4/27,1/20,3/24** card dates. Higher confidence winner ≠ higher exact result.
+5. New truly source-hashed DOB age on event day, previous UFC layoff and same-weightclass UFC experience from date-locked fight histories, plus 2026-vintage height/reach snapshots. **All 3,036 modern feature-bout identities joined**, no ungrounded aliases. One ambiguous repeated SAME-date source pair (Sakuraba–Silveira, legitimate 1997 same-night rematch) was quarantined because date+pair cannot identify two separate bouts; no modern rows lost. Vintage caveat for physical profile revisions is explicit.
+6. Factorized full-profile exact 2024 **182/511**, 2025 **185/513**, but 2026 **136/488** versus original **145/488**; in 2026 full-profile winner picks improved 293→301 but exact degraded 145→136. Historical 2024/25 gains DO NOT transfer into 2026, so no new predictive model improvement proven.
+
+**Next step:** specifically investigate metadata regime shift, debutants, age/reach missingness and division moves; then investigate a source-timestamped prospective feature adapter for independently locked FUTURE research challenger picks, and only promote with valid out-of-time paired winner+method and six-outcome scores. Current 2026 historical year already researched, not pristine. Physical reach/height from 2026 source isn't a verified as-of 2024 profile. Keep FanDuel-only Stage B separately. **NO CHANGE** to original November 21 Stage A, independently locked Coherent Challenger, model weights, price gates, old grading, or officially selected bets; no new model promoted.
+
