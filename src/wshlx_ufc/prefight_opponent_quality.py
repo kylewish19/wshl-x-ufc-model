@@ -88,7 +88,7 @@ def _validate(fights: Sequence[Mapping]) -> list[dict]:
     return sorted(records,key=lambda x:(x["date"],x["event"],x["a"],x["b"]))
 
 
-def build_historical_opponent_quality(fights: Sequence[Mapping]) -> list[dict]:
+def build_historical_opponent_quality(fights: Sequence[Mapping], *, query_date: str | None = None, query_bouts: Sequence[tuple[str, str]] = ()) -> list[dict]:
     """Derive each fight's pre-day snapshots, then update whole day afterward.
 
     Every fight on the same event DATE sees the identical state frozen before
@@ -145,6 +145,26 @@ def build_historical_opponent_quality(fights: Sequence[Mapping]) -> list[dict]:
                     q.prior_losses += 1
                 else:
                     q.prior_draws += 1
+    if query_bouts:
+        if query_date is None:
+            raise ValueError("Prospective fighter queries require a strictly future date")
+        future=_date(query_date)
+        if bouts and future<=bouts[-1]["date"]:
+            raise ValueError("Query must be after all completed source bouts")
+        observed=set()
+        for a,b in query_bouts:
+            if not a or not b or a==b or a in observed or b in observed:
+                raise ValueError("Duplicate or invalid fighter prospective query")
+            observed.update((a,b))
+            pa=state[a].pre_fight_features()
+            pb=state[b].pre_fight_features()
+            snapshots.append({
+                "date":future.isoformat(),"event":"__PREFIGHT_QUERY_NO_RESULTS__",
+                "a":a,"b":b,"a_pre":dict(pa),"b_pre":dict(pb),
+                "pre_a_elo_minus_b_elo":pa["ufc_elo_pre"]-pb["ufc_elo_pre"],
+                "source_status":"QUERY_ONLY_NO_RESULTS_OR_FUTURE_FEATURES",
+                "query_only":True,
+            })
     return snapshots
 
 
