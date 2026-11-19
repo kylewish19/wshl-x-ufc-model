@@ -58,3 +58,18 @@ def test_exact_outcome_grade_is_not_method_class_hit_alone():
     g=m.grade_direct(f,fight(1,"SUB"),"direct_diff115","global_best_cell",q)
     assert g["exact_hit"]==0 and g["method_class_hit"]==1
     assert g["winner_hit"]==0
+
+def test_floating_point_50_50_fighter_tie_cannot_turn_original_A_pick_into_B():
+    # Exact A/B tie in the original winner head: A wins the deterministic
+    # tie break in the original score_six function, regardless of whether
+    # adding three conditional cells yields 0.49999999999999994.
+    q=np.array([.2,.2,.1,.2,.2,.1],dtype=float)
+    q[0]-=1e-16
+    q[3]+=1e-16
+    assert q.sum()==pytest.approx(1.0)
+    assert m.select_prediction(q,"winner_marginal_method")<3
+    f={"event_date":"2026-01-31","event":"Synthetic","bout_id":"tie"}
+    b=m.grade_base(f,fight(0,"KO_TKO"),"factorized_v3plusv5",.5,
+        np.array([[.5,.25,.25],[.5,.25,.25]]))
+    assert b["winner_hit"]==0 and b["exact_hit"]==0
+    assert b["p_a_win"]==.5
