@@ -43,12 +43,12 @@ def test_mirror_representation_shapes_for_two_fighters():
     assert np.allclose(m.representation(row,"direct_diff115"),-m.representation(row,"direct_diff115",True))
     assert np.allclose(m.representation(row,"direct_paired230")[:115],row["Xa"])
     assert np.allclose(m.representation(row,"direct_paired230",True)[:115],row["Xb"])
-    row["truth"]=3
-    X,y=m.create_training([row]*6,"direct_diff115")
+    cases=[dict(row,truth=i) for i in range(6)]
+    X,y=m.create_training(cases,"direct_diff115")
     assert X.shape==(12,115)
-    # This synthetic set only trains two classes: the explicit safeguard must refuse.
-    # Use real source datasets for actual 6-class fitting, not dummy labels.
-    assert y.tolist()==[3,0]*6
+    assert y.tolist()==[0,3,1,4,2,5,3,0,4,1,5,2]
+    with pytest.raises(ValueError,match="Missing independent"):
+        m.create_training([dict(row,truth=3)]*6,"direct_diff115")
 
 def test_exact_outcome_grade_is_not_method_class_hit_alone():
     f={"event_date":"2025-04-12","event":"Synthetic","bout_id":"qq"}
