@@ -103,7 +103,7 @@ def fighter_snapshot(history:list[dict],when:date):
         raise ValueError("Nonfinite or wrong-dimension pre-fight recent form")
     return output
 
-def construct_record_history(records:list[dict],*,cutoff:str):
+def construct_record_history(records:list[dict],*,cutoff:str,query_date:str|None=None,query_bouts:tuple[tuple[str,str],...]=()):
     boundary=date.fromisoformat(cutoff)
     records=sorted(records,key=lambda x:(x["date"],x["event"],x["a"],x["b"]))
     history=defaultdict(list)
@@ -157,6 +157,25 @@ def construct_record_history(records:list[dict],*,cutoff:str):
                 if any(v<0 for k,v in state.items() if isinstance(v,(float,int))):
                     raise ValueError("Negative prior source fighter stats")
                 history[fighter].append(state)
+    if query_bouts:
+        if query_date is None:
+            raise ValueError("Must provide pre-event query date")
+        future=date.fromisoformat(query_date)
+        if records and future<=max(x["date"] for x in records):
+            raise ValueError("Future query date cannot overlap any completed fight")
+        observed=set()
+        for a,b in query_bouts:
+            if not a or not b or a==b or a in observed or b in observed:
+                raise ValueError("Duplicate or empty prospective fighter")
+            observed.update((a,b))
+            key=(future.isoformat(),"__PREFIGHT_QUERY_NO_RESULTS__",*sorted((a,b)))
+            if key in snapshots:raise ValueError("Duplicate pre-event query")
+            snapshots[key]={
+                "a_name":a,"b_name":b,
+                "a":fighter_snapshot(history[a],future),
+                "b":fighter_snapshot(history[b],future),
+                "query_only":True,
+            }
     return snapshots
 
 def supplement_current_feature_matrix(features:list[dict],*,cutoff:str="2026-11-14"):
