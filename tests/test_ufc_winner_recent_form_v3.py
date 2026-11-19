@@ -57,7 +57,7 @@ def test_all_same_calendar_date_fights_frozen_prior_to_result():
     assert first["a"][17]==1
     assert second["a"][17]==1
     assert third["a"][17]==0
-    assert third["a"][0]==np.log1p(2)
+    assert third["a"][0]==pytest.approx(np.log1p(2))
     assert third["a"][7]==pytest.approx((1+1)/(2+2))
     assert third["a"][15]==pytest.approx(np.log1p(2))
 
