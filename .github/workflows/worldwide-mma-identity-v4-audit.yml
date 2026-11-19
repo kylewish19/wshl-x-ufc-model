@@ -6,13 +6,14 @@ on:
     paths:
       - "tools/audit_worldwide_mma_history_v4.py"
       - "tools/benchmark_worldwide_mma_winner_v4.py"
+      - "tools/lock_ufcqatar_worldwide_winner_v4_research.py"
       - "tests/test_ufc_worldwide_mma_identity_v4.py"
       - "tests/test_ufc_worldwide_winner_v4.py"
       - ".github/workflows/worldwide-mma-identity-v4-audit.yml"
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   identity-audit:
@@ -53,6 +54,19 @@ jobs:
         run: python tools/audit_worldwide_mma_history_v4.py > world_mma_coverage_stdout.log
       - name: Train separate 57-feature versus 73-feature winner/method joint forecasts
         run: python tools/benchmark_worldwide_mma_winner_v4.py > worldwide_winner_v4_stdout.log
+      - name: Verify research v4 future lock cannot be rewritten or retrofitted after first bout
+        run: |
+          if test -f data/shadow_locks/ufcqatar_2026-11-21/worldwide_winner_v4_prospective_shadow.json; then
+            echo "An original winner-v4 prospective research lock already exists. Refuse overwrite."
+            exit 1
+          fi
+          python -m py_compile tools/lock_ufcqatar_worldwide_winner_v4_research.py
+          python - <<'PY'
+          from datetime import datetime,timezone
+          assert datetime.now(timezone.utc).isoformat() < '2026-11-21T15:00:00+00:00'
+          PY
+      - name: Lock novel regional v4 winner and six-method research card before November 21
+        run: python tools/lock_ufcqatar_worldwide_winner_v4_research.py > worldwide_qatar_winner_v4_lock_stdout.log
       - name: Validate provenance and retain no wagering or target-event changes
         run: |
           python - <<'PY'
@@ -82,7 +96,35 @@ jobs:
           assert all(len(x['models'])==4 for x in research['yearly'].values())
           assert hashlib.sha256((v/'worldwide_mma_winner_v4_chronological_forecasts.csv').read_bytes()).hexdigest()==research['source_predictions_sha256']
           print('IDENTITY_AND_WORLDWIDE_MMA_CHRONOLOGICAL_WINNER_METHOD_AUDIT_PASSED')
+          import datetime
+          locked=Path('data/shadow_locks/ufcqatar_2026-11-21/worldwide_winner_v4_prospective_shadow.json')
+          pre=json.loads(locked.read_text())
+          assert pre['fights_predicted']==12 and len(pre['fights'])==12
+          assert pre['primary_registered_research_winner']=='winner_v4_boost73'
+          assert pre['training_fights']==3015
+          assert pre['external_source_SHA256']==a['db_sha256']
+          assert pre['original_Reference_Historical_Unified_Coherent_and_v3_NOT_MODIFIED']
+          assert not pre['no_betting_prices_observed']==False
+          assert pre['no_official_wagers_or_model_promotion']
+          assert datetime.datetime.fromisoformat(pre['locked_at_utc'])<datetime.datetime.fromisoformat(pre['first_fight_at_utc'])
+          for p,key in (
+            ('data/locks/ufcqatar_2026-11-21/stage_a_final_selection.json','original_stage_a_sha256'),
+            ('data/shadow_locks/ufcqatar_2026-11-21/coherent_joint_pre_event_shadow.json','original_coherent_shadow_sha256'),
+            ('data/shadow_locks/ufcqatar_2026-11-21/winner_v3_prospective_shadow.json','original_independent_v3_shadow_sha256'),
+          ):
+            assert hashlib.sha256(Path(p).read_bytes()).hexdigest()==pre[key]
+          assert all(f['not_authorized_for_any_bet'] for f in pre['fights'])
+          assert pre['fights'][11]['provisional']
+          assert all(len(f['research_variants'])==4 for f in pre['fights'])
+          print('WORLDWIDE_WINNER_V4_NOV21_INDEPENDENT_PRE_FIGHT_RESEARCH_SIDELOCK_PASSED')
           PY
+      - name: Commit the separately SHA-locked v4 research card with an immutable pre-event Git timestamp
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/shadow_locks/ufcqatar_2026-11-21/worldwide_winner_v4_prospective_shadow.json
+          git commit -m "research: pre-Nov21 independent worldwide MMA winner-v4 exact shadow [skip ci]"
+          git push origin HEAD:feature/historical-conditional-rates
       - name: Upload SOURCE SUMMARY and vetted historical feature rows (not raw database)
         if: always()
         uses: actions/upload-artifact@v4
@@ -93,4 +135,6 @@ jobs:
             world_mma_coverage_stdout.log
             reports/model_health/2026-11-19_worldwide_mma_winner_v4/
             worldwide_winner_v4_stdout.log
+            data/shadow_locks/ufcqatar_2026-11-21/worldwide_winner_v4_prospective_shadow.json
+            worldwide_qatar_winner_v4_lock_stdout.log
           if-no-files-found: warn
