@@ -6,6 +6,7 @@ on:
     paths:
       - "src/wshlx_ufc/independent_winner_v2.py"
       - "tools/benchmark_joint_winner_finish_v2.py"
+      - "tools/audit_joint_v2_failure_decomposition.py"
       - "tests/test_ufc_independent_joint_v2.py"
       - ".github/workflows/joint-winner-finish-v2-research.yml"
   workflow_dispatch:
@@ -31,6 +32,8 @@ jobs:
         run: pytest -q tests/test_ufc_independent_joint_v2.py tests/test_ufc_finish_v1_research.py tests/test_ufc_historical_feature_baselines.py
       - name: Execute yearly frozen training and joint fighter-method scoring
         run: python tools/benchmark_joint_winner_finish_v2.py > joint_finish_v2_execution.log
+      - name: Decompose winner errors versus selected-fighter method errors
+        run: python tools/audit_joint_v2_failure_decomposition.py > joint_v2_failure_decomposition.log
       - name: Audit result integrity, fairness, and source hashes
         run: |
           python - <<'PY'
@@ -39,6 +42,10 @@ jobs:
           d=Path('reports/model_health/2026-11-18_joint_winner_finish_v2')
           r=json.loads((d/'joint_v2_evaluation.json').read_text())
           assert r['no_promotion'] and r['research_not_production']
+          e=json.loads((d/'winner_method_failure_decomposition.json').read_text())
+          assert set(e['variants'])=={'prior_ufc_winrate__multinomial','new_symmetric_logistic__multinomial'}
+          assert all(v['all']['fights']==488 for v in e['variants'].values())
+          assert all(v['all']['winner_wrong']+v['all']['winner_right_method_wrong']+v['all']['exact']==488 for v in e['variants'].values())
           assert r['frozen_nov21_and_all_fanduel_original_picks_unchanged']
           assert len(r['folds'])==3
           for year,n in [('2024',511),('2025',513),('2026_retrospective',488)]:
@@ -59,4 +66,5 @@ jobs:
           path: |
             reports/model_health/2026-11-18_joint_winner_finish_v2/
             joint_finish_v2_execution.log
+            joint_v2_failure_decomposition.log
           if-no-files-found: warn
