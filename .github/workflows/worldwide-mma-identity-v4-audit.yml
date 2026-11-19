@@ -1,0 +1,77 @@
+name: External worldwide MMA history verified identity coverage (research only)
+
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths:
+      - "tools/audit_worldwide_mma_history_v4.py"
+      - "tests/test_ufc_worldwide_mma_identity_v4.py"
+      - ".github/workflows/worldwide-mma-identity-v4-audit.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  identity-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install research dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Verify fighter source identity and past-date audit policy
+        run: pytest -q tests/test_ufc_worldwide_mma_identity_v4.py
+      - name: Download open-data Fight Canon SQLite release and pin exact content SHA
+        run: |
+          mkdir -p .research_cache/fightcanon
+          curl --fail --silent --show-error --location --retry 2 --connect-timeout 20 --max-time 360 \
+            --write-out '%{url_effective}' \
+            --output .research_cache/fightcanon/canon.db \
+            https://github.com/Jadevit/fight-canon-db/releases/latest/download/canon.db \
+            > .research_cache/fightcanon/download_url.txt
+          sha256sum .research_cache/fightcanon/canon.db
+          python - <<'PY'
+          from pathlib import Path
+          import sqlite3
+          p=Path('.research_cache/fightcanon/canon.db')
+          assert 10_000_000 <= p.stat().st_size <= 3_000_000_000, 'Unexpected database archive size'
+          c=sqlite3.connect(f'file:{p}?mode=ro',uri=True)
+          assert c.execute('PRAGMA quick_check').fetchone()[0]=='ok'
+          print('WORLDWIDE_MMA_DATABASE_DOWNLOADED_AND_SQLITE_INTEGRITY_OK')
+          PY
+      - name: Cross-verify UFC fight identities then measure historical regional coverage
+        run: python tools/audit_worldwide_mma_history_v4.py > world_mma_coverage_stdout.log
+      - name: Validate provenance and retain no wagering or target-event changes
+        run: |
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          d=Path('reports/model_health/2026-11-19_worldwide_mma_identity_audit')
+          a=json.loads((d/'identity_and_regional_data_coverage.json').read_text())
+          assert a['no_naive_name_only_identity_linkage']
+          assert a['matches_use_UFC_fight_date_and_BOTH_fighter_aliases']
+          assert a['no_current_bout_or_future_bouts_for_features']
+          assert a['no_betting_odds_used'] and a['no_model_weights_retrained']
+          assert a['nov21_original_stage_a_and_coherent_locked_unchanged']
+          assert a['pinned_ufc_modern_source_fights']==3036
+          assert a['ufc_fights_exact_two_opponent_match']>1000
+          assert a['db_sha256']==hashlib.sha256(
+              Path('.research_cache/fightcanon/canon.db').read_bytes()).hexdigest()
+          print('IDENTITY_AND_SOURCE_CUTOFF_AUDIT_PASSED')
+          PY
+      - name: Upload SOURCE SUMMARY and vetted historical feature rows (not raw database)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wshlx-worldwide-regional-history-v4-identity-audit
+          path: |
+            reports/model_health/2026-11-19_worldwide_mma_identity_audit/
+            world_mma_coverage_stdout.log
+          if-no-files-found: warn
