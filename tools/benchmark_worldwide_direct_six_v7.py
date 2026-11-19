@@ -65,7 +65,7 @@ SWAP=np.array([3,4,5,0,1,2],dtype=int)
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 
 def outcome(label):
-    if label["label_method"] not in METHODS or label["result_status"]!="DECISIVE":
+    if label.get("result_status")!="DECISIVE" or label.get("label_method") not in METHODS:
         raise ValueError("Only six decisive outcomes can be trained")
     return (0 if int(label["label_a_win"]) else 3)+METHODS.index(label["label_method"])
 
