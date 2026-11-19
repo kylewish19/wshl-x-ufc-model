@@ -152,7 +152,8 @@ def main():
         win_a=float(q6[:3].sum())
         side=state//3
         exact=float(q6[state])
-        if not .0<=exact<=win_a+1e-8 if side==0 else not .0<=exact<=1-win_a+1e-8:
+        owner_mass=win_a if side==0 else 1-win_a
+        if not 0.0 <= exact <= owner_mass+1e-8:
             raise ValueError("Bad six-cell winner/method joint probability")
         warning=other["cross_promotion_identity_or_UFC_data_warning"]
         outputs.append({
