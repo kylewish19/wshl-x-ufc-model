@@ -87,7 +87,7 @@ def load_weightclass_history(*,cutoff="2026-11-14"):
     c_weight=col(results,"WEIGHTCLASS")
     if any(x is None for x in (c_event,c_bout,c_weight)):
         raise ValueError("Source fight weight class and identity columns absent")
-    records=[];seen=set()
+    records=[];seen={}
     limit=date.fromisoformat(cutoff)
     for x in results.to_dict("records"):
         ev=txt(x[c_event]);when=ev_dates.get(ev)
