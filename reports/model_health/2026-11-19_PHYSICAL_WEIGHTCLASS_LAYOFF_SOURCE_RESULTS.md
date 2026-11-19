@@ -57,3 +57,19 @@ Winner accuracy in 2026 *did* increase when adding all physical/context fields t
 - Keep November 21 Reference/Historical/Unified Stage A and the pre-event Coherent Challenger **unchanged**; don't manufacture past pre-event predictions for new models. Minimum 300 truly prospective observations remains a promotion guard, not a waiting period before research.
 
 **Outcome:** New feature data and code were successfully generated and audited, but the challenge of exact winner+method is NOT fixed yet. Nothing here implies FanDuel edge or 60–70% exact card performance.
+
+
+## Where the 2026 exact accuracy got worse (paired by bout)
+
+From the same 488 decisive bouts and unchanged model family, `base_38` versus the enriched `age_height_reach_context` variant:
+
+| Actual 2026 result / prior-UFC experience group | Baseline exact | Full-profile exact |
+|---|---:|---:|
+| Actual decision (205 fights) | **86** | 65 |
+| Actual KO/TKO (199 fights) | 47 | **56** |
+| Actual submission (84 fights) | 12 | **15** |
+| Any UFC debutant (109 fights) | 26 | 27 |
+| At least one side 1–4 prior UFC bouts but no debut (198 fights) | 62 | 65 |
+| BOTH fighters ≥5 prior UFC bouts (181 fights) | **57** | 44 |
+
+**Interpretation:** The richer profile model predicted more correct KOs/submissions and won more fighters in 2026, but it **lost 21 previously correct exact decisions** and 13 exact results in the two-experienced-fighter group. The overall loss therefore cannot be dismissed as only a debutant/missing-reach problem. It may indicate era/feature interactions, poor stability or noise; these are not proven causal mechanisms. Do NOT globally force DEC/KO/SUB quotas to backfit this result.
