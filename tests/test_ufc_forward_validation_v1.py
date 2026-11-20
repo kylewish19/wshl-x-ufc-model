@@ -99,6 +99,8 @@ def quote(odds=200,book="FanDuel",source="a"*64,
           at="2026-11-21T12:00:00+00:00",outcome="B_KO",fight="yes"):
     return {"sportsbook":book,"american_odds":odds,
             "source_sha256":source,"quoted_at_utc":at,
+            "source_verified_pre_event":True,
+            "evidence":"verified FanDuel screenshot archival reference",
             "outcome":outcome,"bout_id":fight}
 
 def test_straight_price_math_breakeven_profit_and_refusal_without_independent_history():
@@ -125,6 +127,8 @@ def test_prices_not_fanduel_late_or_no_match_are_rejected():
     bet=research_selection([candidate("yes")],model_id="direct_paired230_v7",
         history=h,event_date="2026-11-21")["selected"][0]
     for q in (quote(book="DraftKings"),quote(source="unverified"),
+              {**quote(),"source_verified_pre_event":False},
+              {**quote(),"evidence":""},
               quote(at="2026-11-21T16:00:00+00:00"),
               quote(outcome="A_KO"),quote(fight="wrong")):
         p=fanduel_price_audit(selected=bet,quote=q,
@@ -144,3 +148,9 @@ def test_selected_2_to_5_all_hit_only_when_every_decisive_result_verified():
     void=grade_selected_card(picks,{"x":"B_KO","y":"VOID"})
     assert void["perfect_group"] is False
     with pytest.raises(ValueError):grade_selected_card(picks,{"x":"not verified"})
+
+
+def test_cannot_count_six_bet_group_as_two_to_five_perfect():
+    bets=[{"bout_id":str(i),"selected_outcome":"A_KO"} for i in range(6)]
+    with pytest.raises(ValueError,match="exceeds five"):
+        grade_selected_card(bets,{str(i):"A_KO" for i in range(6)})
