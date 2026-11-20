@@ -1,0 +1,4421 @@
+{
+  "schema": "WSHL_X_THREE_EVENT_COHERENT_JOINT_SHADOW_RESEARCH_V1",
+  "date_run": "2026-11-16",
+  "scope": "Three previously frozen pre-event raw models and post-event independently graded result files; no re-fitting, no moneyline odds",
+  "events": [
+    {
+      "slug": "ufc333_2026-10-24",
+      "raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json",
+      "grading": "data/grades/ufc333_2026-10-24_stage_a_grade.json"
+    },
+    {
+      "slug": "ufcvegas124_2026-11-07",
+      "raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json",
+      "grading": "data/results/ufcvegas124_2026-11-07_all_models_grading.json"
+    },
+    {
+      "slug": "ufc334_2026-11-14",
+      "raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json",
+      "grading": "data/results/ufc334_2026-11-14_all_models_grading.json"
+    }
+  ],
+  "projections": [
+    "original",
+    "winner_aligned",
+    "winner_timing_aligned"
+  ],
+  "method": "KL/IPF row normalization to saved winner P(A), optional 2x2 finish-vs-decision column constraint matching saved DIRECT timing GTD_NO, within side KO:SUB ratios preserved",
+  "limitations": [
+    "Three historical events 41 fights (one draw excluded from 6-way scoring), overlapping model families and different training vintages; not randomized or prospective 300-fight validation",
+    "A draw is not among the six modeled methods; excluded from six-way Brier/logloss and reported separately",
+    "Winner marginal synchronization is mathematically coherent but can worsen predictive six-way Brier/logloss",
+    "Winner plus timing synchronization is an experimental research-only joint; it is not an official new future outcome model",
+    "Frozen champion, historical/unified originals, Stage A/B, prices and bet approval unchanged",
+    "Retrospective exact winner+method differences are post-event research, not out-of-time prior-selected challenger track records; the projection was designed after inspecting method/timing failures."
+  ],
+  "summary": {
+    "historical": {
+      "all": {
+        "original": {
+          "n": 40,
+          "mean_brier": 0.7567790818332277,
+          "mean_logloss": 1.5712872835794838
+        },
+        "winner_aligned": {
+          "n": 40,
+          "mean_brier": 0.7592352040870962,
+          "mean_logloss": 1.5845711796932633
+        },
+        "winner_timing_aligned": {
+          "n": 40,
+          "mean_brier": 0.7424190209638628,
+          "mean_logloss": 1.5647439085243202
+        }
+      },
+      "event": {
+        "ufc333_2026-10-24": {
+          "original": {
+            "n": 14,
+            "mean_brier": 0.824565588721555,
+            "mean_logloss": 1.699870828559931
+          },
+          "winner_aligned": {
+            "n": 14,
+            "mean_brier": 0.8205720044040955,
+            "mean_logloss": 1.6975347544478652
+          },
+          "winner_timing_aligned": {
+            "n": 14,
+            "mean_brier": 0.7930387563875912,
+            "mean_logloss": 1.6420442130319397
+          }
+        },
+        "ufcvegas124_2026-11-07": {
+          "original": {
+            "n": 14,
+            "mean_brier": 0.6940063335739847,
+            "mean_logloss": 1.4675055922682716
+          },
+          "winner_aligned": {
+            "n": 14,
+            "mean_brier": 0.6913651088163373,
+            "mean_logloss": 1.4653556045733713
+          },
+          "winner_timing_aligned": {
+            "n": 14,
+            "mean_brier": 0.6825463923712599,
+            "mean_logloss": 1.4712421071688984
+          }
+        },
+        "ufc334_2026-11-14": {
+          "original": {
+            "n": 12,
+            "mean_brier": 0.7509296967659632,
+            "mean_logloss": 1.5423517876320423
+          },
+          "winner_aligned": {
+            "n": 12,
+            "mean_brier": 0.7668573815331493,
+            "mean_logloss": 1.5918651801194352
+          },
+          "winner_timing_aligned": {
+            "n": 12,
+            "mean_brier": 0.7532140629942172,
+            "mean_logloss": 1.5836456548467561
+          }
+        }
+      },
+      "max_original_winner_gap_pp": 17.569410577296004,
+      "max_original_timing_gap_pp": 26.02975513162409,
+      "max_projection_residual": 9.843237336326638e-13,
+      "max_winner_only_finish_gap": 0.25911205810822013,
+      "retrospective_exact_winner_method": {
+        "original": {
+          "winner_correct": 26,
+          "exact": 13,
+          "method_counts": {
+            "KO": 15,
+            "SUB": 11,
+            "DEC": 14
+          }
+        },
+        "winner_aligned": {
+          "winner_correct": 26,
+          "exact": 13,
+          "method_counts": {
+            "KO": 15,
+            "SUB": 11,
+            "DEC": 14
+          }
+        },
+        "winner_timing_aligned": {
+          "winner_correct": 26,
+          "exact": 20,
+          "method_counts": {
+            "KO": 12,
+            "SUB": 4,
+            "DEC": 24
+          }
+        }
+      },
+      "event_retrospective_exact": {
+        "ufc333_2026-10-24": {
+          "original": {
+            "winner_correct": null,
+            "exact": 3
+          },
+          "winner_aligned": {
+            "winner_correct": null,
+            "exact": 3
+          },
+          "winner_timing_aligned": {
+            "winner_correct": null,
+            "exact": 6
+          }
+        },
+        "ufcvegas124_2026-11-07": {
+          "original": {
+            "winner_correct": null,
+            "exact": 7
+          },
+          "winner_aligned": {
+            "winner_correct": null,
+            "exact": 7
+          },
+          "winner_timing_aligned": {
+            "winner_correct": null,
+            "exact": 9
+          }
+        },
+        "ufc334_2026-11-14": {
+          "original": {
+            "winner_correct": null,
+            "exact": 3
+          },
+          "winner_aligned": {
+            "winner_correct": null,
+            "exact": 3
+          },
+          "winner_timing_aligned": {
+            "winner_correct": null,
+            "exact": 5
+          }
+        }
+      }
+    },
+    "unified": {
+      "all": {
+        "original": {
+          "n": 40,
+          "mean_brier": 0.7641768434046023,
+          "mean_logloss": 1.5610952851820312
+        },
+        "winner_aligned": {
+          "n": 40,
+          "mean_brier": 0.7648841260525774,
+          "mean_logloss": 1.5663563348113425
+        },
+        "winner_timing_aligned": {
+          "n": 40,
+          "mean_brier": 0.7397689043090395,
+          "mean_logloss": 1.5252394106311642
+        }
+      },
+      "event": {
+        "ufc333_2026-10-24": {
+          "original": {
+            "n": 14,
+            "mean_brier": 0.8339713100031491,
+            "mean_logloss": 1.70074684853451
+          },
+          "winner_aligned": {
+            "n": 14,
+            "mean_brier": 0.8291051830147732,
+            "mean_logloss": 1.6922036723371394
+          },
+          "winner_timing_aligned": {
+            "n": 14,
+            "mean_brier": 0.8110137973094547,
+            "mean_logloss": 1.676281939086769
+          }
+        },
+        "ufcvegas124_2026-11-07": {
+          "original": {
+            "n": 14,
+            "mean_brier": 0.6980823819806451,
+            "mean_logloss": 1.4379236256041008
+          },
+          "winner_aligned": {
+            "n": 14,
+            "mean_brier": 0.6929017438385049,
+            "mean_logloss": 1.4296490799818045
+          },
+          "winner_timing_aligned": {
+            "n": 14,
+            "mean_brier": 0.6785941278389148,
+            "mean_logloss": 1.3968288534613225
+          }
+        },
+        "ufc334_2026-11-14": {
+          "original": {
+            "n": 12,
+            "mean_brier": 0.7598601707009155,
+            "mean_logloss": 1.541868730778391
+          },
+          "winner_aligned": {
+            "n": 12,
+            "mean_brier": 0.7739390055130996,
+            "mean_logloss": 1.579026238332374
+          },
+          "winner_timing_aligned": {
+            "n": 12,
+            "mean_brier": 0.7280204350237005,
+            "mean_logloss": 1.4988354441311067
+          }
+        }
+      },
+      "max_original_winner_gap_pp": 10.227708822518355,
+      "max_original_timing_gap_pp": 32.32790939485527,
+      "max_projection_residual": 9.736655925962623e-13,
+      "max_winner_only_finish_gap": 0.31660320918482754,
+      "retrospective_exact_winner_method": {
+        "original": {
+          "winner_correct": 26,
+          "exact": 14,
+          "method_counts": {
+            "KO": 20,
+            "SUB": 9,
+            "DEC": 11
+          }
+        },
+        "winner_aligned": {
+          "winner_correct": 26,
+          "exact": 14,
+          "method_counts": {
+            "KO": 20,
+            "SUB": 9,
+            "DEC": 11
+          }
+        },
+        "winner_timing_aligned": {
+          "winner_correct": 26,
+          "exact": 16,
+          "method_counts": {
+            "KO": 14,
+            "SUB": 3,
+            "DEC": 23
+          }
+        }
+      },
+      "event_retrospective_exact": {
+        "ufc333_2026-10-24": {
+          "original": {
+            "winner_correct": null,
+            "exact": 3
+          },
+          "winner_aligned": {
+            "winner_correct": null,
+            "exact": 3
+          },
+          "winner_timing_aligned": {
+            "winner_correct": null,
+            "exact": 3
+          }
+        },
+        "ufcvegas124_2026-11-07": {
+          "original": {
+            "winner_correct": null,
+            "exact": 8
+          },
+          "winner_aligned": {
+            "winner_correct": null,
+            "exact": 8
+          },
+          "winner_timing_aligned": {
+            "winner_correct": null,
+            "exact": 8
+          }
+        },
+        "ufc334_2026-11-14": {
+          "original": {
+            "winner_correct": null,
+            "exact": 3
+          },
+          "winner_aligned": {
+            "winner_correct": null,
+            "exact": 3
+          },
+          "winner_timing_aligned": {
+            "winner_correct": null,
+            "exact": 5
+          }
+        }
+      }
+    }
+  },
+  "rows": {
+    "historical": [
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 1,
+        "bout": "Iasmin Lucindo vs Nicolle Caliari",
+        "actual_method": "DEC",
+        "actual_winner": "Iasmin Lucindo",
+        "pA": 0.6908801592778198,
+        "pFinish": 0.33999823788311534,
+        "original_pA_from_joint": 0.593017836817034,
+        "original_finish_from_joint": 0.42703192097890286,
+        "raw_gap_winner_pp": 9.786232246078574,
+        "raw_gap_finish_pp": 8.703368309578751,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.14519730657655042,
+            "A_SUB": 0.18819297981123792,
+            "A_DEC": 0.3574898728900315,
+            "B_KO": 0.029225000497190297,
+            "B_SUB": 0.07776853945426423,
+            "B_DEC": 0.20212630077072571
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.11359735671840888,
+            "A_SUB": 0.14723568614026986,
+            "A_DEC": 0.4300471164191412,
+            "B_KO": 0.021623762191830175,
+            "B_SUB": 0.05754143283339368,
+            "B_DEC": 0.2299546456969564
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.604862601234814,
+            "logloss": 1.1813901452046192,
+            "p_true": 0.3068518733072973
+          },
+          "winner_aligned": {
+            "brier": 0.5170752067723537,
+            "logloss": 1.0286482448296397,
+            "p_true": 0.3574898728900315
+          },
+          "winner_timing_aligned": {
+            "brier": 0.41608673889020303,
+            "logloss": 0.8438605032294488,
+            "p_true": 0.4300471164191412
+          }
+        },
+        "maxdiff": 0.10038558845612755,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 2,
+        "bout": "Kody Steele vs Noah Gugnon",
+        "actual_method": "KO",
+        "actual_winner": "Kody Steele",
+        "pA": 0.4888162618951344,
+        "pFinish": 0.5359082463434726,
+        "original_pA_from_joint": 0.5047625202978359,
+        "original_finish_from_joint": 0.699178310277131,
+        "raw_gap_winner_pp": 1.5946258402701474,
+        "raw_gap_finish_pp": 16.32700639336584,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.11330018434599544,
+            "A_SUB": 0.21077042375080093,
+            "A_DEC": 0.16474565379833803,
+            "B_KO": 0.1354627016442783,
+            "B_SUB": 0.24081087373576354,
+            "B_DEC": 0.13491016272482384
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.08401687488505692,
+            "A_SUB": 0.15629517660504466,
+            "A_DEC": 0.24850421040503276,
+            "B_KO": 0.10641794101583393,
+            "B_SUB": 0.18917825383756728,
+            "B_DEC": 0.21558754325146437
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.9447406738327258,
+            "logloss": 2.145613098374888,
+            "p_true": 0.11699628481869728
+          },
+          "winner_aligned": {
+            "brier": 0.9523426375069668,
+            "logloss": 2.17771448388864,
+            "p_true": 0.11330018434599544
+          },
+          "winner_timing_aligned": {
+            "brier": 1.0187987890146508,
+            "logloss": 2.4767376088260438,
+            "p_true": 0.08401687488505692
+          }
+        },
+        "maxdiff": 0.16443593713336568,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 3,
+        "bout": "Bolaji Oki vs Daniel Santos",
+        "actual_method": "DEC",
+        "actual_winner": "Daniel Santos",
+        "pA": 0.47469239845632916,
+        "pFinish": 0.5323534900636717,
+        "original_pA_from_joint": 0.44942459142930524,
+        "original_finish_from_joint": 0.5542305228195064,
+        "raw_gap_winner_pp": 2.5267807027023914,
+        "raw_gap_finish_pp": 2.1877032755834636,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.20755276906814854,
+            "A_SUB": 0.08757340403464615,
+            "A_DEC": 0.17956622535353442,
+            "B_KO": 0.15011389812919387,
+            "B_SUB": 0.11208781691977751,
+            "B_DEC": 0.26310588649469946
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.19942745759750197,
+            "A_SUB": 0.08414506536433602,
+            "A_DEC": 0.19111987549449116,
+            "B_KO": 0.14243034506879929,
+            "B_SUB": 0.10635062203336072,
+            "B_DEC": 0.2765266344415108
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.6374681064049093,
+            "logloss": 1.2882187875563993,
+            "p_true": 0.2757615357715917
+          },
+          "winner_aligned": {
+            "brier": 0.6611020779619342,
+            "logloss": 1.335198717584125,
+            "p_true": 0.26310588649469946
+          },
+          "winner_timing_aligned": {
+            "brier": 0.6383890783538289,
+            "logloss": 1.2854481355648324,
+            "p_true": 0.2765266344415108
+          }
+        },
+        "maxdiff": 0.02497439808809443,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 4,
+        "bout": "Abubakar Vagaev vs Jacob Malkoun",
+        "actual_method": "DEC",
+        "actual_winner": "Abubakar Vagaev",
+        "pA": 0.30232605304267995,
+        "pFinish": 0.5479317116054929,
+        "original_pA_from_joint": 0.3000260062129121,
+        "original_finish_from_joint": 0.5060399491571107,
+        "raw_gap_winner_pp": 0.23000468297678656,
+        "raw_gap_finish_pp": 4.189176244838222,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.0818649106697328,
+            "A_SUB": 0.06196288386302276,
+            "A_DEC": 0.1584982585099244,
+            "B_KO": 0.16065877360172276,
+            "B_SUB": 0.20145380960475048,
+            "B_DEC": 0.33556136375084683
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.0891230176619793,
+            "A_SUB": 0.06745648590749724,
+            "A_DEC": 0.1457465494732034,
+            "B_KO": 0.17363154086667262,
+            "B_SUB": 0.2177206671690854,
+            "B_DEC": 0.3063217389215621
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.9007159894373604,
+            "logloss": 1.849648595581954,
+            "p_true": 0.1572924298579094
+          },
+          "winner_aligned": {
+            "brier": 0.8976627512882207,
+            "logloss": 1.8420116730442517,
+            "p_true": 0.1584982585099244
+          },
+          "winner_timing_aligned": {
+            "brier": 0.9136254561373202,
+            "logloss": 1.925886128315114,
+            "p_true": 0.1457465494732034
+          }
+        },
+        "maxdiff": 0.04199133386626408,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 5,
+        "bout": "Colby Thicknesse vs Asaf Chopurov",
+        "actual_method": "DEC",
+        "actual_winner": "Colby Thicknesse",
+        "pA": 0.6973760492302636,
+        "pFinish": 0.5152047733765754,
+        "original_pA_from_joint": 0.6718152186019712,
+        "original_finish_from_joint": 0.6242798723070371,
+        "raw_gap_winner_pp": 2.5560830628292397,
+        "raw_gap_finish_pp": 10.907509893046164,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.14774643939478785,
+            "A_SUB": 0.2944263347623621,
+            "A_DEC": 0.2552032750731137,
+            "B_KO": 0.10751250605589392,
+            "B_SUB": 0.07535570964524818,
+            "B_DEC": 0.11975573506859426
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.12227832919853068,
+            "A_SUB": 0.2436739621899746,
+            "A_DEC": 0.33142375784175837,
+            "B_KO": 0.08774902905942955,
+            "B_SUB": 0.06150345292869602,
+            "B_DEC": 0.15337146878161081
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.706588737849462,
+            "logloss": 1.4030363545493896,
+            "p_true": 0.2458493437226903
+          },
+          "winner_aligned": {
+            "brier": 0.6948168964336291,
+            "logloss": 1.3656948942352531,
+            "p_true": 0.2552032750731137
+          },
+          "winner_timing_aligned": {
+            "brier": 0.5563285554786347,
+            "logloss": 1.1043574872358808,
+            "p_true": 0.33142375784175837
+          }
+        },
+        "maxdiff": 0.1098362164817166,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 6,
+        "bout": "Grant Dawson vs Nurullo Aliev",
+        "actual_method": "DEC",
+        "actual_winner": "Grant Dawson",
+        "pA": 0.44514634384558627,
+        "pFinish": 0.4764000843053492,
+        "original_pA_from_joint": 0.4824084667963743,
+        "original_finish_from_joint": 0.4917122777386054,
+        "raw_gap_winner_pp": 3.7262122950788013,
+        "raw_gap_finish_pp": 1.5312193433256183,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.09985006107193534,
+            "A_SUB": 0.1408652847956156,
+            "A_DEC": 0.20443099797803535,
+            "B_KO": 0.16394736786379754,
+            "B_SUB": 0.08351887334523096,
+            "B_DEC": 0.30738741494538513
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.09766305395623189,
+            "A_SUB": 0.1377799248379321,
+            "A_DEC": 0.20970336505142223,
+            "B_KO": 0.15963503960677936,
+            "B_SUB": 0.08132206590505194,
+            "B_DEC": 0.31389655064258243
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.7526898200672989,
+            "logloss": 1.5071366726540194,
+            "p_true": 0.22154342198628968
+          },
+          "winner_aligned": {
+            "brier": 0.7910842646359744,
+            "logloss": 1.587524778637926,
+            "p_true": 0.20443099797803535
+          },
+          "winner_timing_aligned": {
+            "brier": 0.7837178197860848,
+            "logloss": 1.5620612942243675,
+            "p_true": 0.20970336505142223
+          }
+        },
+        "maxdiff": 0.011781502771230246,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 7,
+        "bout": "Abus Magomedov vs Cam Rowston",
+        "actual_method": "SUB",
+        "actual_winner": "Abus Magomedov",
+        "pA": 0.3683860002333085,
+        "pFinish": 0.620948258309945,
+        "original_pA_from_joint": 0.4251968422099678,
+        "original_finish_from_joint": 0.5601606326219555,
+        "raw_gap_winner_pp": 5.681084197665931,
+        "raw_gap_finish_pp": 6.078762568798957,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.13357764275091313,
+            "A_SUB": 0.09666516302335829,
+            "A_DEC": 0.13814319445903703,
+            "B_KO": 0.2543594365230832,
+            "B_SUB": 0.06914955469779385,
+            "B_DEC": 0.3081050085458145
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.14708990747833692,
+            "A_SUB": 0.10644348554643833,
+            "A_DEC": 0.11485260720853321,
+            "B_KO": 0.28888049680294314,
+            "B_SUB": 0.07853436848209147,
+            "B_DEC": 0.26419913448165694
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.9746610279609571,
+            "logloss": 2.1930812820014145,
+            "p_true": 0.11157243229442186
+          },
+          "winner_aligned": {
+            "brier": 1.0173494366681137,
+            "logloss": 2.3365021997214828,
+            "p_true": 0.09666516302335829
+          },
+          "winner_timing_aligned": {
+            "brier": 0.9926905779138343,
+            "logloss": 2.240141086824455,
+            "p_true": 0.10644348554643833
+          }
+        },
+        "maxdiff": 0.06719646131479662,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 8,
+        "bout": "Nikita Krylov vs Abdul Rakhman Yakhyaev",
+        "actual_method": "KO",
+        "actual_winner": "Abdul Rakhman Yakhyaev",
+        "pA": 0.17526286295206772,
+        "pFinish": 0.8099342083045663,
+        "original_pA_from_joint": 0.1907400083101347,
+        "original_finish_from_joint": 0.8477632504971166,
+        "raw_gap_winner_pp": 1.547714535806699,
+        "raw_gap_finish_pp": 3.7829042192550344,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.06789697010944241,
+            "A_SUB": 0.0666018778846101,
+            "A_DEC": 0.04076401495801522,
+            "B_KO": 0.20603517599285245,
+            "B_SUB": 0.5087659463453378,
+            "B_DEC": 0.10993601470974211
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.06309755277591986,
+            "A_SUB": 0.06189400643395022,
+            "A_DEC": 0.050271303742197626,
+            "B_KO": 0.19742873205018033,
+            "B_SUB": 0.4875139170447025,
+            "B_DEC": 0.1397944879530494
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.910072486503313,
+            "logloss": 1.5986528417449708,
+            "p_true": 0.2021686878423001
+          },
+          "winner_aligned": {
+            "brier": 0.9120163708549248,
+            "logloss": 1.5797083675230585,
+            "p_true": 0.20603517599285245
+          },
+          "winner_timing_aligned": {
+            "brier": 0.9116723314916018,
+            "logloss": 1.622377610141959,
+            "p_true": 0.19742873205018033
+          }
+        },
+        "maxdiff": 0.0393657620276765,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 9,
+        "bout": "Azamat Murzakanov vs Dominick Reyes",
+        "actual_method": "KO",
+        "actual_winner": "Dominick Reyes",
+        "pA": 0.3797606676551403,
+        "pFinish": 0.5779178432168439,
+        "original_pA_from_joint": 0.39218800557916994,
+        "original_finish_from_joint": 0.7319379841366979,
+        "raw_gap_winner_pp": 1.2427337924029613,
+        "raw_gap_finish_pp": 15.402014091985395,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.24970114616961975,
+            "A_SUB": 0.024358941583922714,
+            "A_DEC": 0.1057005799015979,
+            "B_KO": 0.3784402122609523,
+            "B_SUB": 0.07964772010889441,
+            "B_DEC": 0.16215139997501277
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.19546596849186576,
+            "A_SUB": 0.019068170816099884,
+            "A_DEC": 0.16522652834717474,
+            "B_KO": 0.30020220207071524,
+            "B_SUB": 0.06318150183816809,
+            "B_DEC": 0.2568556284359763
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.5062089971092257,
+            "logloss": 0.9919369872803895,
+            "p_true": 0.37085764831095536
+          },
+          "winner_aligned": {
+            "brier": 0.49309003859165634,
+            "logloss": 0.9716971782620208,
+            "p_true": 0.3784402122609523
+          },
+          "winner_timing_aligned": {
+            "brier": 0.6255540196668375,
+            "logloss": 1.203299024464192,
+            "p_true": 0.30020220207071524
+          }
+        },
+        "maxdiff": 0.15423017690654528,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 10,
+        "bout": "Aaron Pico vs Losene Keita",
+        "actual_method": "KO",
+        "actual_winner": "Aaron Pico",
+        "pA": 0.5448689881966905,
+        "pFinish": 0.6052611977982674,
+        "original_pA_from_joint": 0.5024900372826488,
+        "original_finish_from_joint": 0.6154746249522455,
+        "raw_gap_winner_pp": 4.237895091404164,
+        "raw_gap_finish_pp": 1.0213427153978105,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.12731950578829299,
+            "A_SUB": 0.09756800605261602,
+            "A_DEC": 0.3199814763557815,
+            "B_KO": 0.31625932137378665,
+            "B_SUB": 0.057058159564913294,
+            "B_DEC": 0.08181353086460952
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.12998121971638396,
+            "A_SUB": 0.0996077415906893,
+            "A_DEC": 0.3152800268896172,
+            "B_KO": 0.31825417409524887,
+            "B_SUB": 0.057418062395271835,
+            "B_DEC": 0.07945877531278879
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 1.0055315057045209,
+            "logloss": 2.1420251219278463,
+            "p_true": 0.11741681871472742
+          },
+          "winner_aligned": {
+            "brier": 0.9834479517547756,
+            "logloss": 2.0610555582260064,
+            "p_true": 0.12731950578829299
+          },
+          "winner_timing_aligned": {
+            "brier": 0.9771521257789907,
+            "logloss": 2.040365302682566,
+            "p_true": 0.12998121971638396
+          }
+        },
+        "maxdiff": 0.007056205018658446,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 11,
+        "bout": "Alexander Volkov vs Rizvan Kuniev",
+        "actual_method": "DEC",
+        "actual_winner": "Alexander Volkov",
+        "pA": 0.5641740715948428,
+        "pFinish": 0.5318633721552243,
+        "original_pA_from_joint": 0.5455950127377702,
+        "original_finish_from_joint": 0.5876764778752449,
+        "raw_gap_winner_pp": 1.8579058857072561,
+        "raw_gap_finish_pp": 5.581310572002063,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.23980066899968416,
+            "A_SUB": 0.11198853520702404,
+            "A_DEC": 0.21238486738813458,
+            "B_KO": 0.1916300695278078,
+            "B_SUB": 0.04572383774868152,
+            "B_DEC": 0.19847202112866785
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.2181208917722693,
+            "A_SUB": 0.1018639325299732,
+            "A_DEC": 0.2441892472926004,
+            "B_KO": 0.17106228131035936,
+            "B_SUB": 0.04081626654327952,
+            "B_DEC": 0.2239473805515183
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.7819258382496133,
+            "logloss": 1.5828411138188665,
+            "p_true": 0.20539073002836342
+          },
+          "winner_aligned": {
+            "brier": 0.7685872860463161,
+            "logloss": 1.5493552379710325,
+            "p_true": 0.21238486738813458
+          },
+          "winner_timing_aligned": {
+            "brier": 0.7102835790436501,
+            "logloss": 1.4098117506558203,
+            "p_true": 0.2441892472926004
+          }
+        },
+        "maxdiff": 0.057279739327973256,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 12,
+        "bout": "Lone'er Kavanagh vs Ramazan Temirov",
+        "actual_method": "KO",
+        "actual_winner": "Lone'er Kavanagh",
+        "pA": 0.5539163653580989,
+        "pFinish": 0.4805011540298526,
+        "original_pA_from_joint": 0.5517504308084792,
+        "original_finish_from_joint": 0.4726330604733691,
+        "raw_gap_winner_pp": 0.21659345496196636,
+        "raw_gap_finish_pp": 0.7868093556483491,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.1407296066411872,
+            "A_SUB": 0.12069797618614571,
+            "A_DEC": 0.29248878253076593,
+            "B_KO": 0.17289405390014986,
+            "B_SUB": 0.03830818212785098,
+            "B_DEC": 0.23488139861390034
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.14307638638940132,
+            "A_SUB": 0.1227107123326076,
+            "A_DEC": 0.28812926663609,
+            "B_KO": 0.17576889406883775,
+            "B_SUB": 0.03894516123896697,
+            "B_DEC": 0.23136957933409638
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.9259993095146953,
+            "logloss": 1.96483279746178,
+            "p_true": 0.14017932299506045
+          },
+          "winner_aligned": {
+            "brier": 0.9249924403715604,
+            "logloss": 1.9609149131087602,
+            "p_true": 0.1407296066411872
+          },
+          "winner_timing_aligned": {
+            "brier": 0.9183377847242219,
+            "logloss": 1.9443766207852808,
+            "p_true": 0.14307638638940132
+          }
+        },
+        "maxdiff": 0.007871335174518823,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 13,
+        "bout": "Petr Yan vs Merab Dvalishvili",
+        "actual_method": "DEC",
+        "actual_winner": "Petr Yan",
+        "pA": 0.5531636386367922,
+        "pFinish": 0.32284112068477533,
+        "original_pA_from_joint": 0.5138863209581014,
+        "original_finish_from_joint": 0.4058685739116146,
+        "raw_gap_winner_pp": 3.9277317678690804,
+        "raw_gap_finish_pp": 8.30274532268393,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.2636331935549158,
+            "A_SUB": 0.03429508965379055,
+            "A_DEC": 0.2552353554280859,
+            "B_KO": 0.08475603481952275,
+            "B_SUB": 0.03390794717977966,
+            "B_DEC": 0.3281723793639054
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.21067925113971067,
+            "A_SUB": 0.027406502605389033,
+            "A_DEC": 0.3150778848916925,
+            "B_KO": 0.06053672488029933,
+            "B_SUB": 0.024218642059517726,
+            "B_DEC": 0.36208099442339076
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.7803207142724022,
+            "logloss": 1.4392209899702688,
+            "p_true": 0.23711239969171852
+          },
+          "winner_aligned": {
+            "brier": 0.7413834346202967,
+            "logloss": 1.3655691970285861,
+            "p_true": 0.2552353554280859
+          },
+          "winner_timing_aligned": {
+            "brier": 0.6496090512153578,
+            "logloss": 1.1549354170942232,
+            "p_true": 0.3150778848916925
+          }
+        },
+        "maxdiff": 0.09375114452323341,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 14,
+        "bout": "Alexander Volkanovski vs Movsar Evloev",
+        "actual_method": "KO",
+        "actual_winner": "Alexander Volkanovski",
+        "pA": 0.37442340975800525,
+        "pFinish": 0.46020456820828626,
+        "original_pA_from_joint": 0.4110527596389705,
+        "original_finish_from_joint": 0.30521250823992324,
+        "raw_gap_winner_pp": 3.6629349880965223,
+        "raw_gap_finish_pp": 15.499205996836302,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.07398513249381117,
+            "A_SUB": 0.02908389392015029,
+            "A_DEC": 0.2713543833440438,
+            "B_KO": 0.13766330556126063,
+            "B_SUB": 0.06634219095689732,
+            "B_DEC": 0.4215710937238368
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.11361258306602295,
+            "A_SUB": 0.044661625957929836,
+            "A_DEC": 0.21614920073405247,
+            "B_KO": 0.2037431932178613,
+            "B_SUB": 0.09818716596640471,
+            "B_DEC": 0.3236462310577288
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 1.1121324339604732,
+            "logloss": 2.5105568117122314,
+            "p_true": 0.08122300072928529
+          },
+          "winner_aligned": {
+            "brier": 1.1330572681506157,
+            "logloss": 2.603891118209331,
+            "p_true": 0.07398513249381117
+          },
+          "winner_timing_aligned": {
+            "brier": 0.9902966819310615,
+            "logloss": 2.1749610124029752,
+            "p_true": 0.11361258306602295
+          }
+        },
+        "maxdiff": 0.15313004527616686,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 1,
+        "bout": "Jonny Parsons vs Jose Souza",
+        "actual_method": "KO",
+        "actual_winner": "Jose Souza",
+        "pA": 0.5979093486392045,
+        "pFinish": 0.4872354523453786,
+        "original_pA_from_joint": 0.5543128728500418,
+        "original_finish_from_joint": 0.6046139164803779,
+        "raw_gap_winner_pp": 4.35964757891627,
+        "raw_gap_finish_pp": 11.73784641349993,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.30484191114662557,
+            "A_SUB": 0.07696556419998869,
+            "A_DEC": 0.21610187329259034,
+            "B_KO": 0.18117689048571956,
+            "B_SUB": 0.04495116827814632,
+            "B_DEC": 0.1759625925969296
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.24781539457347687,
+            "A_SUB": 0.06256768168474197,
+            "A_DEC": 0.28752627238098555,
+            "B_KO": 0.14169654022511358,
+            "B_SUB": 0.03515583586303049,
+            "B_DEC": 0.22523827527265142
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.8043111415773319,
+            "logloss": 1.6053417963370828,
+            "p_true": 0.20082090332930336
+          },
+          "winner_aligned": {
+            "brier": 0.8490070347023551,
+            "logloss": 1.708281429457434,
+            "p_true": 0.18117689048571956
+          },
+          "winner_timing_aligned": {
+            "brier": 0.9366515843928831,
+            "logloss": 1.95406754877897,
+            "p_true": 0.14169654022511358
+          }
+        },
+        "maxdiff": 0.1207000817651015,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 2,
+        "bout": "Seokhyeon Ko vs Wellington Turman",
+        "actual_method": "DEC",
+        "actual_winner": "Seokhyeon Ko",
+        "pA": 0.6724239600830939,
+        "pFinish": 0.4806363465309216,
+        "original_pA_from_joint": 0.6209014172074167,
+        "original_finish_from_joint": 0.5548657871803127,
+        "raw_gap_winner_pp": 5.152254287567725,
+        "raw_gap_finish_pp": 7.422944064939108,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.12320225517372174,
+            "A_SUB": 0.18255886552514614,
+            "A_DEC": 0.3666628393842261,
+            "B_KO": 0.062355719218008754,
+            "B_SUB": 0.17313762236901878,
+            "B_DEC": 0.09208269832987856
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.10607045051230625,
+            "A_SUB": 0.15717326832989686,
+            "A_DEC": 0.40918024124089075,
+            "B_KO": 0.05756287443574502,
+            "B_SUB": 0.15982975325305732,
+            "B_DEC": 0.11018341222810372
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.5355615178112195,
+            "logloss": 1.0830292606625709,
+            "p_true": 0.33856835884138986
+          },
+          "winner_aligned": {
+            "brier": 0.4919665894090733,
+            "logloss": 1.0033125469612814,
+            "p_true": 0.3666628393842261
+          },
+          "winner_timing_aligned": {
+            "brier": 0.4260217829580243,
+            "logloss": 0.8935995323830709,
+            "p_true": 0.40918024124089075
+          }
+        },
+        "maxdiff": 0.06061811575497378,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 3,
+        "bout": "Mantas Kondratavicius vs Andre Petroski",
+        "actual_method": "KO",
+        "actual_winner": "Andre Petroski",
+        "pA": 0.7884492716221979,
+        "pFinish": 0.6235996596689045,
+        "original_pA_from_joint": 0.7420260250113563,
+        "original_finish_from_joint": 0.7235082893651612,
+        "raw_gap_winner_pp": 4.642324661084163,
+        "raw_gap_finish_pp": 9.990862969625669,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.44811562300758134,
+            "A_SUB": 0.14703166218401184,
+            "A_DEC": 0.1933019864306048,
+            "B_KO": 0.04557864705829124,
+            "B_SUB": 0.08841928389793939,
+            "B_DEC": 0.07755279742157148
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.3877090248185891,
+            "A_SUB": 0.12721159324957304,
+            "A_DEC": 0.27352865355403566,
+            "B_KO": 0.0369665683972835,
+            "B_SUB": 0.07171247320421324,
+            "B_DEC": 0.10287168677630534
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 1.142597036097267,
+            "logloss": 2.88992205091445,
+            "p_true": 0.05558054489528105
+          },
+          "winner_aligned": {
+            "brier": 1.1845441043301015,
+            "logloss": 3.0883159383982255,
+            "p_true": 0.04557864705829124
+          },
+          "winner_timing_aligned": {
+            "brier": 1.1844776548357312,
+            "logloss": 3.29774133162162,
+            "p_true": 0.0369665683972835
+          }
+        },
+        "maxdiff": 0.10554555647891939,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 4,
+        "bout": "Austin Bashi vs Carlos Calderon",
+        "actual_method": "SUB",
+        "actual_winner": "Austin Bashi",
+        "pA": 0.6038112872064767,
+        "pFinish": 0.5381827103363503,
+        "original_pA_from_joint": 0.6478141452919289,
+        "original_finish_from_joint": 0.617984134791466,
+        "raw_gap_winner_pp": 4.400285808545224,
+        "raw_gap_finish_pp": 7.980142445511563,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.13179232726558557,
+            "A_SUB": 0.28081873698972576,
+            "A_DEC": 0.19120022295116532,
+            "B_KO": 0.11644551258232633,
+            "B_SUB": 0.08076130534283561,
+            "B_DEC": 0.19898189486836138
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.11845544449244222,
+            "A_SUB": 0.2524009477796848,
+            "A_DEC": 0.23295489493434965,
+            "B_KO": 0.09880185219010486,
+            "B_SUB": 0.06852446587429808,
+            "B_DEC": 0.22886239472912037
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.5974338426759377,
+            "logloss": 1.1997037502086338,
+            "p_true": 0.30128345385294225
+          },
+          "winner_aligned": {
+            "brier": 0.6308241721743508,
+            "logloss": 1.2700458818852516,
+            "p_true": 0.28081873698972576
+          },
+          "winner_timing_aligned": {
+            "brier": 0.6940394224251905,
+            "logloss": 1.3767363932520627,
+            "p_true": 0.2524009477796848
+          }
+        },
+        "maxdiff": 0.07163517184412294,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 5,
+        "bout": "Jose Delano vs Murtazali Magomedov",
+        "actual_method": "DEC",
+        "actual_winner": "Murtazali Magomedov",
+        "pA": 0.31065968114175685,
+        "pFinish": 0.3061882778601982,
+        "original_pA_from_joint": 0.3015851752405335,
+        "original_finish_from_joint": 0.5664858291764391,
+        "raw_gap_winner_pp": 0.9074505901223329,
+        "raw_gap_finish_pp": 26.02975513162409,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.1122633371923802,
+            "A_SUB": 0.03537610283043013,
+            "A_DEC": 0.16302024111894656,
+            "B_KO": 0.09925939607101275,
+            "B_SUB": 0.3184014998745953,
+            "B_DEC": 0.2716794229126351
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.05489422145120877,
+            "A_SUB": 0.01729811059800005,
+            "A_DEC": 0.238467349092548,
+            "B_KO": 0.055610416224730896,
+            "B_SUB": 0.17838552958691384,
+            "B_DEC": 0.45534437304659847
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.6775365234207351,
+            "logloss": 1.290054349607995,
+            "p_true": 0.27525582263715
+          },
+          "winner_aligned": {
+            "brier": 0.682112930383165,
+            "logloss": 1.303132500005127,
+            "p_true": 0.2716794229126351
+          },
+          "winner_timing_aligned": {
+            "brier": 0.39174294429291656,
+            "logloss": 0.7867012824695044,
+            "p_true": 0.45534437304659847
+          }
+        },
+        "maxdiff": 0.25911205810822013,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 6,
+        "bout": "Karine Silva vs Gabriella Fernandes",
+        "actual_method": "DEC",
+        "actual_winner": "Karine Silva",
+        "pA": 0.571377171957904,
+        "pFinish": 0.34714982274807826,
+        "original_pA_from_joint": 0.5787335986312342,
+        "original_finish_from_joint": 0.40400851379913555,
+        "raw_gap_winner_pp": 0.7356426673330141,
+        "raw_gap_finish_pp": 5.685869105105729,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.08992565768309148,
+            "A_SUB": 0.15365317491964167,
+            "A_DEC": 0.3277983393551709,
+            "B_KO": 0.09813228381423253,
+            "B_SUB": 0.061908106271818086,
+            "B_DEC": 0.2685824379560453
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.07772529230205408,
+            "A_SUB": 0.13280678998040132,
+            "A_DEC": 0.3608450896754487,
+            "B_KO": 0.08377017123129947,
+            "B_SUB": 0.05284756923433114,
+            "B_DEC": 0.29200508757646537
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.5614023774034026,
+            "logloss": 1.1025639509424265,
+            "p_true": 0.33201871175619385
+          },
+          "winner_aligned": {
+            "brier": 0.5691500793734613,
+            "logloss": 1.1153566787158353,
+            "p_true": 0.3277983393551709
+          },
+          "winner_timing_aligned": {
+            "brier": 0.5272751422529612,
+            "logloss": 1.01930652721766,
+            "p_true": 0.3608450896754487
+          }
+        },
+        "maxdiff": 0.056469399940705545,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 7,
+        "bout": "Gabriel Lorenco vs Thomas Petersen",
+        "actual_method": "KO",
+        "actual_winner": "Thomas Petersen",
+        "pA": 0.3757275934831491,
+        "pFinish": 0.7563534430412762,
+        "original_pA_from_joint": 0.4116201852649942,
+        "original_finish_from_joint": 0.668044535666755,
+        "raw_gap_winner_pp": 3.589259178184512,
+        "raw_gap_finish_pp": 8.830890737452112,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.18636277971659435,
+            "A_SUB": 0.0846816427269805,
+            "A_DEC": 0.10468317103957421,
+            "B_KO": 0.20241785442681579,
+            "B_SUB": 0.1913283334667101,
+            "B_DEC": 0.23052621862332504
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.20735758631113121,
+            "A_SUB": 0.0942215021016061,
+            "A_DEC": 0.07414850507041179,
+            "B_KO": 0.2337913405707415,
+            "B_SUB": 0.2209830140577865,
+            "B_DEC": 0.16949805188832298
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.7980049921116181,
+            "logloss": 1.6566352711092305,
+            "p_true": 0.19077982374909344
+          },
+          "winner_aligned": {
+            "brier": 0.7787467801745783,
+            "logloss": 1.5974211318881906,
+            "p_true": 0.20241785442681579
+          },
+          "winner_timing_aligned": {
+            "brier": 0.7220116527436201,
+            "logloss": 1.453326268394235,
+            "p_true": 0.2337913405707415
+          }
+        },
+        "maxdiff": 0.09156283270417542,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 8,
+        "bout": "Keiichiro Nakamura vs Ollie Schmid",
+        "actual_method": "DEC",
+        "actual_winner": "Ollie Schmid",
+        "pA": 0.7385393343114893,
+        "pFinish": 0.6954805020840062,
+        "original_pA_from_joint": 0.7025226544555974,
+        "original_finish_from_joint": 0.7110448394007667,
+        "raw_gap_winner_pp": 3.6016679855891964,
+        "raw_gap_finish_pp": 1.5564337316760435,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.4581518724548422,
+            "A_SUB": 0.06951195927201408,
+            "A_DEC": 0.21087550258463303,
+            "B_KO": 0.12009450339437418,
+            "B_SUB": 0.06370114103541079,
+            "B_DEC": 0.07766502125872571
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.44796568911419093,
+            "A_SUB": 0.06796648580768286,
+            "A_DEC": 0.22260715938961548,
+            "B_KO": 0.11731925015268013,
+            "B_SUB": 0.062229077009486225,
+            "B_DEC": 0.08191233852634437
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 1.0895423221281522,
+            "logloss": 2.426296081337228,
+            "p_true": 0.08836351848510782
+          },
+          "winner_aligned": {
+            "brier": 1.1283858664304551,
+            "logloss": 2.5553502998189317,
+            "p_true": 0.07766502125872571
+          },
+          "winner_timing_aligned": {
+            "brier": 1.1153678678601169,
+            "logloss": 2.5021056459129025,
+            "p_true": 0.08191233852634437
+          }
+        },
+        "maxdiff": 0.015978974072635044,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 9,
+        "bout": "Mitch Raposo vs Marcos Degli",
+        "actual_method": "DEC",
+        "actual_winner": "Mitch Raposo",
+        "pA": 0.661000089820539,
+        "pFinish": 0.5664584062977358,
+        "original_pA_from_joint": 0.5917547490818083,
+        "original_finish_from_joint": 0.5762455641987094,
+        "raw_gap_winner_pp": 6.924534073873079,
+        "raw_gap_finish_pp": 0.978715790097362,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.13921689668548023,
+            "A_SUB": 0.20299662403553645,
+            "A_DEC": 0.31878656909952235,
+            "B_KO": 0.12930096118266712,
+            "B_SUB": 0.09480429302652069,
+            "B_DEC": 0.11489465597027318
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.13925579883909794,
+            "A_SUB": 0.2030533485139591,
+            "A_DEC": 0.318690942467482,
+            "B_KO": 0.12932635038906407,
+            "B_SUB": 0.0948229085552913,
+            "B_DEC": 0.11485065123510557
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.6156509807710375,
+            "logloss": 1.2538951643921914,
+            "p_true": 0.28539098422718057
+          },
+          "winner_aligned": {
+            "brier": 0.563548086641308,
+            "logloss": 1.143233462503356,
+            "p_true": 0.31878656909952235
+          },
+          "winner_timing_aligned": {
+            "brier": 0.5637122327098625,
+            "logloss": 1.143533478209079,
+            "p_true": 0.318690942467482
+          }
+        },
+        "maxdiff": 0.0001396313675312566,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 10,
+        "bout": "Priscila Cachoeira vs Nina Milosevic",
+        "actual_method": "KO",
+        "actual_winner": "Nina Milosevic",
+        "pA": 0.20785036595192574,
+        "pFinish": 0.6147246899569195,
+        "original_pA_from_joint": 0.17681971869901947,
+        "original_finish_from_joint": 0.7740125792550968,
+        "raw_gap_winner_pp": 3.1030647252906274,
+        "raw_gap_finish_pp": 15.928788929817728,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.07791565971437767,
+            "A_SUB": 0.037370846439217474,
+            "A_DEC": 0.09256385979833062,
+            "B_KO": 0.5988287839187879,
+            "B_SUB": 0.05162860309252973,
+            "B_DEC": 0.14169224703675662
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.05137875123358876,
+            "A_SUB": 0.02464289501786627,
+            "A_DEC": 0.13182871970047072,
+            "B_KO": 0.4959446921464784,
+            "B_SUB": 0.04275835155938309,
+            "B_DEC": 0.2534465903422128
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.17883123973852244,
+            "logloss": 0.4743546335862967,
+            "p_true": 0.6222865297283923
+          },
+          "winner_aligned": {
+            "brier": 0.19971604847276506,
+            "logloss": 0.5127795582553042,
+            "p_true": 0.5988287839187879
+          },
+          "winner_timing_aligned": {
+            "brier": 0.34076106385052746,
+            "logloss": 0.7012908662438598,
+            "p_true": 0.4959446921464784
+          }
+        },
+        "maxdiff": 0.15101920320799322,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 11,
+        "bout": "Billy Elekana vs Lucas Fernando",
+        "actual_method": "DEC",
+        "actual_winner": "Lucas Fernando",
+        "pA": 0.40995137911777085,
+        "pFinish": 0.8559204072004999,
+        "original_pA_from_joint": 0.4980999932891831,
+        "original_finish_from_joint": 0.8090052580491253,
+        "raw_gap_winner_pp": 8.814861417141223,
+        "raw_gap_finish_pp": 4.691514915137462,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.07611995297531682,
+            "A_SUB": 0.2666609744254196,
+            "A_DEC": 0.06717045171703442,
+            "B_KO": 0.4054814498602887,
+            "B_SUB": 0.055975419279077225,
+            "B_DEC": 0.12859175174286314
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.0801858734505644,
+            "A_SUB": 0.2809045764441618,
+            "A_DEC": 0.04886092922304472,
+            "B_KO": 0.4348063317311715,
+            "B_SUB": 0.060023625574575204,
+            "B_DEC": 0.09521866357648227
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 1.0346189282743627,
+            "logloss": 2.212916639841229,
+            "p_true": 0.10938115738021635
+          },
+          "winner_aligned": {
+            "brier": 1.0083149809811913,
+            "logloss": 2.0511126080935873,
+            "p_true": 0.12859175174286314
+          },
+          "winner_timing_aligned": {
+            "brier": 1.0990131942538044,
+            "logloss": 2.3515793104278653,
+            "p_true": 0.09521866357648227
+          }
+        },
+        "maxdiff": 0.05168261066039759,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 12,
+        "bout": "Davey Grant vs Elijah Smith",
+        "actual_method": "KO",
+        "actual_winner": "Elijah Smith",
+        "pA": 0.16821336696618466,
+        "pFinish": 0.5695060927709934,
+        "original_pA_from_joint": 0.20753557276450832,
+        "original_finish_from_joint": 0.6573967001046235,
+        "raw_gap_winner_pp": 3.9322205798323657,
+        "raw_gap_finish_pp": 8.789060733363009,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.0481760969602136,
+            "A_SUB": 0.02392058701547298,
+            "A_DEC": 0.09611668299049808,
+            "B_KO": 0.19699527920965978,
+            "B_SUB": 0.39965753580311003,
+            "B_DEC": 0.23513381802104555
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.0364740008476741,
+            "A_SUB": 0.01811021577359751,
+            "A_DEC": 0.11362915034491305,
+            "B_KO": 0.17001039165656742,
+            "B_SUB": 0.3449114844933481,
+            "B_DEC": 0.31686475688389976
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.8734913927179956,
+            "logloss": 1.673003853210718,
+            "p_true": 0.18768244752573737
+          },
+          "winner_aligned": {
+            "brier": 0.8719621874635213,
+            "logloss": 1.6245755139340177,
+            "p_true": 0.19699527920965978
+          },
+          "winner_timing_aligned": {
+            "brier": 0.9228198727098919,
+            "logloss": 1.7718957164085052,
+            "p_true": 0.17001039165656742
+          }
+        },
+        "maxdiff": 0.09924340621746297,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 13,
+        "bout": "Tatiana Suarez vs Virna Jandiroba",
+        "actual_method": "DEC",
+        "actual_winner": "Tatiana Suarez",
+        "pA": 0.7253340134781193,
+        "pFinish": 0.27690943360709397,
+        "original_pA_from_joint": 0.6670870003467237,
+        "original_finish_from_joint": 0.3444970542660353,
+        "raw_gap_winner_pp": 5.824701313139558,
+        "raw_gap_finish_pp": 6.75876206589413,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.07916671233734744,
+            "A_SUB": 0.14550469099289934,
+            "A_DEC": 0.5006626101478726,
+            "B_KO": 0.05371478129350614,
+            "B_SUB": 0.06003127238718376,
+            "B_DEC": 0.16091993284119077
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.06414099062000582,
+            "A_SUB": 0.11788812171930475,
+            "A_DEC": 0.5433049011388088,
+            "B_KO": 0.04480573647209871,
+            "B_SUB": 0.0500745847957145,
+            "B_DEC": 0.17978566525406744
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.3618908387498782,
+            "logloss": 0.775534621888382,
+            "p_true": 0.4604575445011591
+          },
+          "winner_aligned": {
+            "brier": 0.3091610685270257,
+            "logloss": 0.6918228375935986,
+            "p_true": 0.5006626101478726
+          },
+          "winner_timing_aligned": {
+            "brier": 0.26341999273817246,
+            "logloss": 0.6100846044110351,
+            "p_true": 0.5433049011388088
+          }
+        },
+        "maxdiff": 0.061508023403842704,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 14,
+        "bout": "Waldo Cortes Acosta vs Johnny Walker",
+        "actual_method": "KO",
+        "actual_winner": "Johnny Walker",
+        "pA": 0.33493913716165613,
+        "pFinish": 0.9554130630038358,
+        "original_pA_from_joint": 0.3683788499190714,
+        "original_finish_from_joint": 0.8318221858095523,
+        "raw_gap_winner_pp": 3.3439712757415254,
+        "raw_gap_finish_pp": 12.359087719428352,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.2165349850533498,
+            "A_SUB": 0.046720890053741075,
+            "A_DEC": 0.07168326205456521,
+            "B_KO": 0.4273131866024591,
+            "B_SUB": 0.14368006687108298,
+            "B_DEC": 0.09406760936480187
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.2590531889466886,
+            "A_SUB": 0.055894873319742175,
+            "A_DEC": 0.01999107489522531,
+            "B_KO": 0.47930363223656003,
+            "B_SUB": 0.16116136850082782,
+            "B_DEC": 0.024595862100956007
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.44521553655832585,
+            "logloss": 0.9018268677173648,
+            "p_true": 0.4058275887934728
+          },
+          "winner_aligned": {
+            "brier": 0.4116715943653694,
+            "logloss": 0.8502380765170582,
+            "p_true": 0.4273131866024591
+          },
+          "winner_timing_aligned": {
+            "brier": 0.36833508517393365,
+            "logloss": 0.7354209946342081,
+            "p_true": 0.47930363223656003
+          }
+        },
+        "maxdiff": 0.12116393442320295,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 1,
+        "bout": "Evan Elder vs Samuel Sanches",
+        "actual_method": "DEC",
+        "actual_winner": "Evan Elder",
+        "pA": 0.46288719092540104,
+        "pFinish": 0.5271541497490075,
+        "original_pA_from_joint": 0.4616924115758585,
+        "original_finish_from_joint": 0.6482314339003432,
+        "raw_gap_winner_pp": 0.11947793495425407,
+        "raw_gap_finish_pp": 12.107728415133568,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.13787793816538593,
+            "A_SUB": 0.12422582591364115,
+            "A_DEC": 0.2007834268463739,
+            "B_KO": 0.2383479218342677,
+            "B_SUB": 0.14759776004659553,
+            "B_DEC": 0.15116712719373568
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.10667133285208577,
+            "A_SUB": 0.09610917164255946,
+            "A_DEC": 0.2601066864307558,
+            "B_KO": 0.20032296738601246,
+            "B_SUB": 0.12405067786838876,
+            "B_DEC": 0.21273916382019767
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.7757387560034426,
+            "logloss": 1.6081129129415943,
+            "p_true": 0.20026517553843246
+          },
+          "winner_aligned": {
+            "brier": 0.7746358434175832,
+            "logloss": 1.605528430196443,
+            "p_true": 0.2007834268463739
+          },
+          "winner_timing_aligned": {
+            "brier": 0.6688336753555965,
+            "logloss": 1.346663399703953,
+            "p_true": 0.2601066864307558
+          }
+        },
+        "maxdiff": 0.1208952962108828,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 2,
+        "bout": "Alatengheili vs Juan Diaz",
+        "actual_method": "DEC",
+        "actual_winner": "Juan Diaz",
+        "pA": 0.27094799791084284,
+        "pFinish": 0.48625358154731546,
+        "original_pA_from_joint": 0.26878888661671885,
+        "original_finish_from_joint": 0.5669110315035335,
+        "raw_gap_winner_pp": 0.21591112941239943,
+        "raw_gap_finish_pp": 8.065744995621804,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.0660154457892945,
+            "A_SUB": 0.04693981780633873,
+            "A_DEC": 0.15799273431520963,
+            "B_KO": 0.07712554112753278,
+            "B_SUB": 0.3763872438061723,
+            "B_DEC": 0.27553921715545204
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.05363341482918452,
+            "A_SUB": 0.038135661894173986,
+            "A_DEC": 0.17917892118748432,
+            "B_KO": 0.06708704122956484,
+            "B_SUB": 0.3273974635944926,
+            "B_DEC": 0.3345674972650997
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.7031757771438678,
+            "logloss": 1.2860681555656281,
+            "p_true": 0.2763552355382693
+          },
+          "winner_aligned": {
+            "brier": 0.703982221948805,
+            "logloss": 1.289025311498224,
+            "p_true": 0.27553921715545204
+          },
+          "winner_timing_aligned": {
+            "brier": 0.5909261436573344,
+            "logloss": 1.0949166342239303,
+            "p_true": 0.3345674972650997
+          }
+        },
+        "maxdiff": 0.08021446698202284,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 3,
+        "bout": "Macy Chiasson vs Bia Mesquita",
+        "actual_method": "SUB",
+        "actual_winner": "Bia Mesquita",
+        "pA": 0.30048592792430384,
+        "pFinish": 0.5260216511423692,
+        "original_pA_from_joint": 0.2541134207824547,
+        "original_finish_from_joint": 0.728234126486304,
+        "raw_gap_winner_pp": 4.6372507141849155,
+        "raw_gap_finish_pp": 20.221247534393484,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.08958733592691731,
+            "A_SUB": 0.10037767203734962,
+            "A_DEC": 0.11052091996003688,
+            "B_KO": 0.09777025936896377,
+            "B_SUB": 0.43452786813748095,
+            "B_DEC": 0.16721594456925135
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.05939028622308887,
+            "A_SUB": 0.06654354224316615,
+            "A_DEC": 0.1745520994580488,
+            "B_KO": 0.07348643208022032,
+            "B_SUB": 0.3266013905961304,
+            "B_DEC": 0.2994262493993454
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.3523516115814632,
+            "logloss": 0.7693075591029446,
+            "p_true": 0.4633337885226786
+          },
+          "winner_aligned": {
+            "brier": 0.3875953691993365,
+            "logloss": 0.8334951979272998,
+            "p_true": 0.43452786813748095
+          },
+          "winner_timing_aligned": {
+            "brier": 0.5869457062134461,
+            "logloss": 1.1190148406589688,
+            "p_true": 0.3266013905961304
+          }
+        },
+        "maxdiff": 0.19624148432834243,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 4,
+        "bout": "Jared Gordon vs Melquizael Costa",
+        "actual_method": "DEC",
+        "actual_winner": "Melquizael Costa",
+        "pA": 0.22592139328386937,
+        "pFinish": 0.4577803211825967,
+        "original_pA_from_joint": 0.27268542249478167,
+        "original_finish_from_joint": 0.6291940371211706,
+        "raw_gap_winner_pp": 4.67640292109123,
+        "raw_gap_finish_pp": 17.14137159385739,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.06879334753461065,
+            "A_SUB": 0.030816400771592402,
+            "A_DEC": 0.1263116449776663,
+            "B_KO": 0.2214182530034862,
+            "B_SUB": 0.3202724611308031,
+            "B_DEC": 0.23238789258184125
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.041163280393106634,
+            "A_SUB": 0.018439343208719525,
+            "A_DEC": 0.1663187696820432,
+            "B_KO": 0.162756731623533,
+            "B_SUB": 0.23542096595737216,
+            "B_DEC": 0.3759009091352255
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.7763364851458276,
+            "logloss": 1.5216616899057982,
+            "p_true": 0.21834875740529602
+          },
+          "winner_aligned": {
+            "brier": 0.7624656464553417,
+            "logloss": 1.4593473526857568,
+            "p_true": 0.23238789258184125
+          },
+          "winner_timing_aligned": {
+            "brier": 0.501108818298554,
+            "logloss": 0.9784297098588627,
+            "p_true": 0.3759009091352255
+          }
+        },
+        "maxdiff": 0.18352014125789562,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 5,
+        "bout": "Donte Johnson vs Cesar Almeida",
+        "actual_method": "KO",
+        "actual_winner": "Cesar Almeida",
+        "pA": 0.7645300376454174,
+        "pFinish": 0.5070135526240401,
+        "original_pA_from_joint": 0.7609826845742964,
+        "original_finish_from_joint": 0.6573208701250912,
+        "raw_gap_winner_pp": 0.35473530711209733,
+        "raw_gap_finish_pp": 15.030731750105108,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.28357874509510206,
+            "A_SUB": 0.23392533192520246,
+            "A_DEC": 0.24702596062511284,
+            "B_KO": 0.08716038442357879,
+            "B_SUB": 0.05294686809655073,
+            "B_DEC": 0.0953627098344531
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.22112743849897395,
+            "A_SUB": 0.1824089793164675,
+            "A_DEC": 0.36099361982997585,
+            "B_KO": 0.0643728763987303,
+            "B_SUB": 0.03910425841074085,
+            "B_DEC": 0.13199282754511146
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 1.0374829138899921,
+            "logloss": 2.4250527165111726,
+            "p_true": 0.08847345490727583
+          },
+          "winner_aligned": {
+            "brier": 1.0413333718427011,
+            "logloss": 2.4400053583649766,
+            "p_true": 0.08716038442357879
+          },
+          "winner_timing_aligned": {
+            "brier": 1.1068361373179352,
+            "logloss": 2.7430629085232408,
+            "p_true": 0.0643728763987303
+          }
+        },
+        "maxdiff": 0.15059777691639387,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 6,
+        "bout": "Jim Miller vs Terrance McKinney",
+        "actual_method": "KO",
+        "actual_winner": "Terrance McKinney",
+        "pA": 0.2089192889837211,
+        "pFinish": 0.6686010277531769,
+        "original_pA_from_joint": 0.38461339475668116,
+        "original_finish_from_joint": 0.7512685277986706,
+        "raw_gap_winner_pp": 17.569410577296004,
+        "raw_gap_finish_pp": 8.266750004549372,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.03527396014200504,
+            "A_SUB": 0.14906865204435124,
+            "A_DEC": 0.02457667679736484,
+            "B_KO": 0.34986292560798926,
+            "B_SUB": 0.17963530864675434,
+            "B_DEC": 0.2615824767615354
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.034276727034875276,
+            "A_SUB": 0.14485431958903922,
+            "A_DEC": 0.029788242359806583,
+            "B_KO": 0.32341448661554034,
+            "B_SUB": 0.16605549451418497,
+            "B_DEC": 0.30161072988655363
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.6722602851036753,
+            "logloss": 1.3013631448598182,
+            "p_true": 0.27216054581055993
+          },
+          "winner_aligned": {
+            "brier": 0.5474421800891386,
+            "logloss": 1.0502138423301213,
+            "p_true": 0.34986292560798926
+          },
+          "winner_timing_aligned": {
+            "brier": 0.5993564238654763,
+            "logloss": 1.1288205381128225,
+            "p_true": 0.32341448661554034
+          }
+        },
+        "maxdiff": 0.04523981868792304,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 7,
+        "bout": "Drew Dober vs Chris Duncan",
+        "actual_method": "DEC",
+        "actual_winner": "Chris Duncan",
+        "pA": 0.23113983802307206,
+        "pFinish": 0.4590401357190731,
+        "original_pA_from_joint": 0.25560627816146253,
+        "original_finish_from_joint": 0.5966871099133282,
+        "raw_gap_winner_pp": 2.4466440138390473,
+        "raw_gap_finish_pp": 13.76469741942551,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.07722549007783613,
+            "A_SUB": 0.04780446242844708,
+            "A_DEC": 0.10610988551678885,
+            "B_KO": 0.12733933948461432,
+            "B_SUB": 0.34615049463987924,
+            "B_DEC": 0.2953703278524345
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.05723176858244025,
+            "A_SUB": 0.03542786103597757,
+            "A_DEC": 0.13848020840465425,
+            "B_KO": 0.0985335867520448,
+            "B_SUB": 0.26784691934877486,
+            "B_DEC": 0.4024796558761083
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.6612095737549688,
+            "logloss": 1.251864379390337,
+            "p_true": 0.2859711408449078
+          },
+          "winner_aligned": {
+            "brier": 0.6520467979408174,
+            "logloss": 1.2195253612813017,
+            "p_true": 0.2953703278524345
+          },
+          "winner_timing_aligned": {
+            "brier": 0.46218877835724076,
+            "logloss": 0.910110727808115,
+            "p_true": 0.4024796558761083
+          }
+        },
+        "maxdiff": 0.13947965091170367,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 8,
+        "bout": "Stephen Thompson vs Charles Radtke",
+        "actual_method": "KO",
+        "actual_winner": "Stephen Thompson",
+        "pA": 0.2154239232003167,
+        "pFinish": 0.5595442314189221,
+        "original_pA_from_joint": 0.3140741397305359,
+        "original_finish_from_joint": 0.6038823028614864,
+        "raw_gap_winner_pp": 9.865021653021918,
+        "raw_gap_finish_pp": 4.43380714425643,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.10219232944309202,
+            "A_SUB": 0.02946828538059672,
+            "A_DEC": 0.08376330837662795,
+            "B_KO": 0.27276389893784836,
+            "B_SUB": 0.19840968491552452,
+            "B_DEC": 0.31340249294631045
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.09499640687595395,
+            "A_SUB": 0.02739326173703465,
+            "A_DEC": 0.0930342545873281,
+            "B_KO": 0.2530701785406764,
+            "B_SUB": 0.184084384265281,
+            "B_DEC": 0.34742151399372584
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.9030075943657471,
+            "logloss": 1.9038774091962891,
+            "p_true": 0.14898980336113132
+          },
+          "winner_aligned": {
+            "brier": 1.0259309552013085,
+            "logloss": 2.28089865840213,
+            "p_true": 0.10219232944309202
+          },
+          "winner_timing_aligned": {
+            "brier": 1.0470705510652776,
+            "logloss": 2.353916210455259,
+            "p_true": 0.09499640687595395
+          }
+        },
+        "maxdiff": 0.043289967258139495,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 9,
+        "bout": "Bilal Hasan vs Luis Gurule",
+        "actual_method": "DEC",
+        "actual_winner": "Luis Gurule",
+        "pA": 0.6568700529862117,
+        "pFinish": 0.644639321895401,
+        "original_pA_from_joint": 0.5881077228481397,
+        "original_finish_from_joint": 0.6412811462271236,
+        "raw_gap_winner_pp": 6.876233013807198,
+        "raw_gap_finish_pp": 0.3358175668277341,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.36507207222844235,
+            "A_SUB": 0.10646708898128159,
+            "A_DEC": 0.18533089177648773,
+            "B_KO": 0.04453053321005722,
+            "B_SUB": 0.13799531749305363,
+            "B_DEC": 0.16060409631067746
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.3606142892811649,
+            "A_SUB": 0.10516705205758602,
+            "A_DEC": 0.19108871164746088,
+            "B_KO": 0.043635688930672,
+            "B_SUB": 0.13522229162655186,
+            "B_DEC": 0.16427196645656442
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.8253407684718983,
+            "logloss": 1.646160349249589,
+            "p_true": 0.19278873069817892
+          },
+          "winner_aligned": {
+            "brier": 0.9045715575723806,
+            "logloss": 1.8288129715016208,
+            "p_true": 0.16060409631067746
+          },
+          "winner_timing_aligned": {
+            "brier": 0.8962481577428977,
+            "logloss": 1.8062318926200287,
+            "p_true": 0.16427196645656442
+          }
+        },
+        "maxdiff": 0.009425690017433763,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 10,
+        "bout": "Uros Medic vs Kevin Holland",
+        "actual_method": "DRAW",
+        "actual_winner": null,
+        "pA": 0.6017125327577811,
+        "pFinish": 0.6450365630189068,
+        "original_pA_from_joint": 0.43239377267213164,
+        "original_finish_from_joint": 0.7397245462495966,
+        "raw_gap_winner_pp": 16.93187600856495,
+        "raw_gap_finish_pp": 9.468798323068983,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.32452899596950774,
+            "A_SUB": 0.06072498913376724,
+            "A_DEC": 0.21645854765450614,
+            "B_KO": 0.08798435470815455,
+            "B_SUB": 0.23681636592581298,
+            "B_DEC": 0.07348674660825126
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.2869702814068812,
+            "A_SUB": 0.05369710391543669,
+            "A_DEC": 0.2610451474354633,
+            "B_KO": 0.08244971144294483,
+            "B_SUB": 0.22191946625415732,
+            "B_DEC": 0.09391828954511675
+          }
+        },
+        "metrics": {
+          "original": null,
+          "winner_aligned": null,
+          "winner_timing_aligned": null
+        },
+        "maxdiff": 0.06501814271833573,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 11,
+        "bout": "Caio Borralho vs Yousri Belgaroui",
+        "actual_method": "DEC",
+        "actual_winner": "Caio Borralho",
+        "pA": 0.46804656659321425,
+        "pFinish": 0.6357421285541665,
+        "original_pA_from_joint": 0.515298664928595,
+        "original_finish_from_joint": 0.6235662414708603,
+        "raw_gap_winner_pp": 4.7252098335380746,
+        "raw_gap_finish_pp": 1.2175887083306192,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.1516427532715882,
+            "A_SUB": 0.1475581539762168,
+            "A_DEC": 0.1688456593454093,
+            "B_KO": 0.2713156653238947,
+            "B_SUB": 0.05152026007083426,
+            "B_DEC": 0.20911750801205672
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.15483196942366123,
+            "A_SUB": 0.1506614664516122,
+            "A_DEC": 0.16255313071794084,
+            "B_KO": 0.27754545491478294,
+            "B_SUB": 0.05270323776409049,
+            "B_DEC": 0.20170474072791225
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.8166624951825379,
+            "logloss": 1.6825913674115685,
+            "p_true": 0.1858916378192254
+          },
+          "winner_aligned": {
+            "brier": 0.8555831310187108,
+            "logloss": 1.778770239644695,
+            "p_true": 0.1688456593454093
+          },
+          "winner_timing_aligned": {
+            "brier": 0.8684829883460684,
+            "logloss": 1.8167503723872989,
+            "p_true": 0.16255313071794084
+          }
+        },
+        "maxdiff": 0.013705295911632609,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 12,
+        "bout": "Kayla Harrison vs Amanda Nunes",
+        "actual_method": "SUB",
+        "actual_winner": "Kayla Harrison",
+        "pA": 0.7052284720223374,
+        "pFinish": 0.5205221201982078,
+        "original_pA_from_joint": 0.6769548432190419,
+        "original_finish_from_joint": 0.6215920040879603,
+        "raw_gap_winner_pp": 2.8273628803295536,
+        "raw_gap_finish_pp": 10.106988388975257,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.14792831723743405,
+            "A_SUB": 0.3134675280097139,
+            "A_DEC": 0.2438326267751895,
+            "B_KO": 0.07855480843070024,
+            "B_SUB": 0.08449966523791237,
+            "B_DEC": 0.13171705430904998
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.12473602975528283,
+            "A_SUB": 0.26432190692993285,
+            "A_DEC": 0.3161705353371217,
+            "B_KO": 0.06333554375426402,
+            "B_SUB": 0.0681286397587967,
+            "B_DEC": 0.16330734446460185
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.600510841148069,
+            "logloss": 1.2009767579060842,
+            "p_true": 0.3009001617157555
+          },
+          "winner_aligned": {
+            "brier": 0.5833244057666372,
+            "logloss": 1.1600595031902112,
+            "p_true": 0.3134675280097139
+          },
+          "winner_timing_aligned": {
+            "brier": 0.6920673325717956,
+            "logloss": 1.3305875742009232,
+            "p_true": 0.26432190692993285
+          }
+        },
+        "maxdiff": 0.10392819871755288,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 13,
+        "bout": "Ciryl Gane vs Josh Hokit",
+        "actual_method": "DEC",
+        "actual_winner": "Ciryl Gane",
+        "pA": 0.4015405612006268,
+        "pFinish": 0.7666086219160886,
+        "original_pA_from_joint": 0.5132810122270635,
+        "original_finish_from_joint": 0.7101548168305346,
+        "raw_gap_winner_pp": 11.174045102643666,
+        "raw_gap_finish_pp": 5.645380508555398,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.16875051957575152,
+            "A_SUB": 0.1170837114616665,
+            "A_DEC": 0.11570633016320879,
+            "B_KO": 0.3091708539229061,
+            "B_SUB": 0.11476193560722613,
+            "B_DEC": 0.17452664926924089
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.18216065047288377,
+            "A_SUB": 0.12638802590508486,
+            "A_DEC": 0.09299188482265816,
+            "B_KO": 0.3340595207718283,
+            "B_SUB": 0.1240004247662914,
+            "B_DEC": 0.1403994932612533
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.8870792594000669,
+            "logloss": 1.9111850095436829,
+            "p_true": 0.1479050138538231
+          },
+          "winner_aligned": {
+            "brier": 0.9633770979450296,
+            "logloss": 2.1566999344104443,
+            "p_true": 0.11570633016320879
+          },
+          "winner_timing_aligned": {
+            "brier": 1.0185040431389836,
+            "logloss": 2.3752430496076715,
+            "p_true": 0.09299188482265816
+          }
+        },
+        "maxdiff": 0.05684160134853833,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      }
+    ],
+    "unified": [
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 1,
+        "bout": "Iasmin Lucindo vs Nicolle Caliari",
+        "actual_method": "DEC",
+        "actual_winner": "Iasmin Lucindo",
+        "pA": 0.6801831331314847,
+        "pFinish": 0.3150046264545112,
+        "original_pA_from_joint": 0.6151354354992049,
+        "original_finish_from_joint": 0.4515533798164925,
+        "raw_gap_winner_pp": 6.50476976322798,
+        "raw_gap_finish_pp": 13.65487533619813,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.17657477941603028,
+            "A_SUB": 0.16807748031744432,
+            "A_DEC": 0.33553087339801013,
+            "B_KO": 0.038574520875337984,
+            "B_SUB": 0.07764803974942905,
+            "B_DEC": 0.20359430624374825
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.1231956277435777,
+            "A_SUB": 0.1172670908367934,
+            "A_DEC": 0.4397204145511136,
+            "B_KO": 0.024740621493127047,
+            "B_SUB": 0.04980128638103469,
+            "B_DEC": 0.24527495899435353
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.6047096965254954,
+            "logloss": 1.1925609162084314,
+            "p_true": 0.3034431756354879
+          },
+          "winner_aligned": {
+            "brier": 0.5499157655954559,
+            "logloss": 1.092041304753469,
+            "p_true": 0.33553087339801013
+          },
+          "winner_timing_aligned": {
+            "brier": 0.40609401914598875,
+            "logloss": 0.8216161755103575,
+            "p_true": 0.4397204145511136
+          }
+        },
+        "maxdiff": 0.14587019390373035,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 2,
+        "bout": "Kody Steele vs Noah Gugnon",
+        "actual_method": "KO",
+        "actual_winner": "Kody Steele",
+        "pA": 0.4587410274428296,
+        "pFinish": 0.5198431386037172,
+        "original_pA_from_joint": 0.4451328102431499,
+        "original_finish_from_joint": 0.740174674255148,
+        "raw_gap_winner_pp": 1.3608217199679695,
+        "raw_gap_finish_pp": 22.03315356514308,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.16581926336160666,
+            "A_SUB": 0.13410162015612168,
+            "A_DEC": 0.15882014392510116,
+            "B_KO": 0.17377479721955752,
+            "B_SUB": 0.264360425303254,
+            "B_DEC": 0.10312375003435878
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.10440874248833502,
+            "A_SUB": 0.08443760539217826,
+            "A_DEC": 0.2698946795623163,
+            "B_KO": 0.13128115985987351,
+            "B_SUB": 0.19971563086338454,
+            "B_DEC": 0.21026218183391232
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.8611258393339106,
+            "logloss": 1.8269700115479406,
+            "p_true": 0.16090035614222384
+          },
+          "winner_aligned": {
+            "brier": 0.8497832064598236,
+            "logloss": 1.7968568587016724,
+            "p_true": 0.16581926336160666
+          },
+          "winner_timing_aligned": {
+            "brier": 0.9833878090466065,
+            "logloss": 2.2594418667299,
+            "p_true": 0.10440874248833502
+          }
+        },
+        "maxdiff": 0.2182129674368226,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 3,
+        "bout": "Bolaji Oki vs Daniel Santos",
+        "actual_method": "DEC",
+        "actual_winner": "Daniel Santos",
+        "pA": 0.5001254589028339,
+        "pFinish": 0.4808720108993503,
+        "original_pA_from_joint": 0.49573920094974966,
+        "original_finish_from_joint": 0.5991830162803192,
+        "raw_gap_winner_pp": 0.4386257953084227,
+        "raw_gap_finish_pp": 11.831100538096894,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.23655012050295715,
+            "A_SUB": 0.07588492172487307,
+            "A_DEC": 0.18769041667500366,
+            "B_KO": 0.18260371025646852,
+            "B_SUB": 0.10436633648916208,
+            "B_DEC": 0.21290449435153555
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.1920478664264338,
+            "A_SUB": 0.06160866576695159,
+            "A_DEC": 0.24646892670944848,
+            "B_KO": 0.14458090629991543,
+            "B_SUB": 0.08263457240606895,
+            "B_DEC": 0.2726590623911817
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.7568473389675737,
+            "logloss": 1.5381751536151256,
+            "p_true": 0.2147726711735579
+          },
+          "winner_aligned": {
+            "brier": 0.7606979555703993,
+            "logloss": 1.5469115971526985,
+            "p_true": 0.21290449435153555
+          },
+          "winner_timing_aligned": {
+            "brier": 0.6581818930747504,
+            "logloss": 1.2995331199772906,
+            "p_true": 0.2726590623911817
+          }
+        },
+        "maxdiff": 0.11853307807411051,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 4,
+        "bout": "Abubakar Vagaev vs Jacob Malkoun",
+        "actual_method": "DEC",
+        "actual_winner": "Abubakar Vagaev",
+        "pA": 0.31400943802984327,
+        "pFinish": 0.4830115524535974,
+        "original_pA_from_joint": 0.3133618543806872,
+        "original_finish_from_joint": 0.571732144123517,
+        "raw_gap_winner_pp": 0.06475836491560694,
+        "raw_gap_finish_pp": 8.872059166991964,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.12015547788176342,
+            "A_SUB": 0.058868298399088095,
+            "A_DEC": 0.13498566174899168,
+            "B_KO": 0.22334573822952103,
+            "B_SUB": 0.16936111131320714,
+            "B_DEC": 0.2932837124274286
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.10145097543896495,
+            "A_SUB": 0.04970431977222391,
+            "A_DEC": 0.16285414281865443,
+            "B_KO": 0.1887379373346712,
+            "B_SUB": 0.14311831990773735,
+            "B_DEC": 0.3541343047277482
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.9314532628065979,
+            "logloss": 2.0046511512547953,
+            "p_true": 0.13470727996541343
+          },
+          "winner_aligned": {
+            "brier": 0.9307344615869777,
+            "logloss": 2.0025867154510393,
+            "p_true": 0.13498566174899168
+          },
+          "winner_timing_aligned": {
+            "brier": 0.8950919742849921,
+            "logloss": 1.8149003081075472,
+            "p_true": 0.16285414281865443
+          }
+        },
+        "maxdiff": 0.0887190733699823,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 5,
+        "bout": "Colby Thicknesse vs Asaf Chopurov",
+        "actual_method": "DEC",
+        "actual_winner": "Colby Thicknesse",
+        "pA": 0.6691078974118307,
+        "pFinish": 0.5392174188300511,
+        "original_pA_from_joint": 0.6399795391792508,
+        "original_finish_from_joint": 0.6552135270189711,
+        "raw_gap_winner_pp": 2.9128358232579976,
+        "raw_gap_finish_pp": 11.599610818891993,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.20823520445465102,
+            "A_SUB": 0.21698029626465012,
+            "A_DEC": 0.24389239669252963,
+            "B_KO": 0.147822042921639,
+            "B_SUB": 0.08058070050845728,
+            "B_DEC": 0.10248935915807296
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.17010680416000468,
+            "A_SUB": 0.17725064721853387,
+            "A_DEC": 0.32175044603329217,
+            "B_KO": 0.12417159232699058,
+            "B_SUB": 0.06768837512456523,
+            "B_DEC": 0.13903213513661344
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.7165959040170903,
+            "logloss": 1.4555372710640788,
+            "p_true": 0.23327499831994705
+          },
+          "winner_aligned": {
+            "brier": 0.7009897315293258,
+            "logloss": 1.411028148118545,
+            "p_true": 0.24389239669252963
+          },
+          "winner_timing_aligned": {
+            "brier": 0.5597068092856272,
+            "logloss": 1.1339790462340036,
+            "p_true": 0.32175044603329217
+          }
+        },
+        "maxdiff": 0.11440082531934626,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 6,
+        "bout": "Grant Dawson vs Nurullo Aliev",
+        "actual_method": "DEC",
+        "actual_winner": "Grant Dawson",
+        "pA": 0.46958804869619286,
+        "pFinish": 0.4020663628953681,
+        "original_pA_from_joint": 0.5027177826014638,
+        "original_finish_from_joint": 0.5353472312901614,
+        "raw_gap_winner_pp": 3.3129733905270964,
+        "raw_gap_finish_pp": 13.328086839479326,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.11506711083505662,
+            "A_SUB": 0.15035374361235992,
+            "A_DEC": 0.20416719424877633,
+            "B_KO": 0.19080680247617957,
+            "B_SUB": 0.07712936068703535,
+            "B_DEC": 0.26247578814059225
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.08812947265661414,
+            "A_SUB": 0.11515537359323434,
+            "A_DEC": 0.26630320244634437,
+            "B_KO": 0.14155933687609623,
+            "B_SUB": 0.05722217976949238,
+            "B_DEC": 0.3316304346582185
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.7495002402517141,
+            "logloss": 1.5206429151283565,
+            "p_true": 0.21857131896282714
+          },
+          "winner_aligned": {
+            "brier": 0.7804462564352429,
+            "logloss": 1.5888160411590642,
+            "p_true": 0.20416719424877633
+          },
+          "winner_timing_aligned": {
+            "brier": 0.6926307236645913,
+            "logloss": 1.3231197605254172,
+            "p_true": 0.26630320244634437
+          }
+        },
+        "maxdiff": 0.13129065471526336,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 7,
+        "bout": "Abus Magomedov vs Cam Rowston",
+        "actual_method": "SUB",
+        "actual_winner": "Abus Magomedov",
+        "pA": 0.4311995719089328,
+        "pFinish": 0.5781528559366325,
+        "original_pA_from_joint": 0.4842390052634087,
+        "original_finish_from_joint": 0.6426775399234773,
+        "raw_gap_winner_pp": 5.3039433354475864,
+        "raw_gap_finish_pp": 6.452468398684486,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.2004982048858377,
+            "A_SUB": 0.09842476476228562,
+            "A_DEC": 0.13227660226080948,
+            "B_KO": 0.28872866337942266,
+            "B_SUB": 0.04982663786187009,
+            "B_DEC": 0.23024512684977447
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.18430228968374185,
+            "A_SUB": 0.0904741741583255,
+            "A_DEC": 0.1564231080668655,
+            "B_KO": 0.25872718539395817,
+            "B_SUB": 0.04464920670070348,
+            "B_DEC": 0.2654240359964057
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.9780881837235348,
+            "logloss": 2.2024552616203468,
+            "p_true": 0.11053144132489996
+          },
+          "winner_aligned": {
+            "brier": 1.0093942877976025,
+            "logloss": 2.31846283217515,
+            "p_true": 0.09842476476228562
+          },
+          "winner_timing_aligned": {
+            "brier": 1.0250559775984514,
+            "logloss": 2.402690837417864,
+            "p_true": 0.0904741741583255
+          }
+        },
+        "maxdiff": 0.05932541495278365,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 8,
+        "bout": "Nikita Krylov vs Abdul Rakhman Yakhyaev",
+        "actual_method": "KO",
+        "actual_winner": "Abdul Rakhman Yakhyaev",
+        "pA": 0.22644228236327288,
+        "pFinish": 0.7440673088826679,
+        "original_pA_from_joint": 0.2463355465589303,
+        "original_finish_from_joint": 0.8654058354901212,
+        "raw_gap_winner_pp": 1.9893264195657427,
+        "raw_gap_finish_pp": 12.133852660745326,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.11383777026229391,
+            "A_SUB": 0.06629587918738328,
+            "A_DEC": 0.04630863291359568,
+            "B_KO": 0.1650702887789709,
+            "B_SUB": 0.5220472270425937,
+            "B_DEC": 0.08644020181516252
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.09025099840938769,
+            "A_SUB": 0.052559614206281635,
+            "A_DEC": 0.08363166974760357,
+            "B_KO": 0.14444343827334802,
+            "B_SUB": 0.4568132579938018,
+            "B_DEC": 0.17230102136957723
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.9930782377287197,
+            "logloss": 1.82743694221869,
+            "p_true": 0.1608252443683667
+          },
+          "winner_aligned": {
+            "brier": 0.9966115094501835,
+            "logloss": 1.8013839031908203,
+            "p_true": 0.1650702887789709
+          },
+          "winner_timing_aligned": {
+            "brier": 0.9882450369016184,
+            "logloss": 1.934867278692888,
+            "p_true": 0.14444343827334802
+          }
+        },
+        "maxdiff": 0.12318385638857388,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 9,
+        "bout": "Azamat Murzakanov vs Dominick Reyes",
+        "actual_method": "KO",
+        "actual_winner": "Dominick Reyes",
+        "pA": 0.46435209769412816,
+        "pFinish": 0.5849771051958421,
+        "original_pA_from_joint": 0.4942380699189123,
+        "original_finish_from_joint": 0.7340439374042401,
+        "raw_gap_winner_pp": 2.988597222478412,
+        "raw_gap_finish_pp": 14.9066832208398,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.30604755368556585,
+            "A_SUB": 0.02529728255652402,
+            "A_DEC": 0.1330072614520383,
+            "B_KO": 0.3376105811729999,
+            "B_SUB": 0.06629871296202405,
+            "B_DEC": 0.13173860817084784
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.2393136774255448,
+            "A_SUB": 0.019781192970079194,
+            "A_DEC": 0.20525722729850418,
+            "B_KO": 0.2723910845391055,
+            "B_SUB": 0.05349115026113065,
+            "B_DEC": 0.20976566750563572
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.6103363241078762,
+            "logloss": 1.1432731562900813,
+            "p_true": 0.3187739155045738
+          },
+          "winner_aligned": {
+            "brier": 0.5725063116178187,
+            "logloss": 1.0858621744144108,
+            "p_true": 0.3376105811729999
+          },
+          "winner_timing_aligned": {
+            "brier": 0.6760705334350499,
+            "logloss": 1.3005164345408329,
+            "p_true": 0.2723910845391055
+          }
+        },
+        "maxdiff": 0.15027702518127173,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 10,
+        "bout": "Aaron Pico vs Losene Keita",
+        "actual_method": "KO",
+        "actual_winner": "Aaron Pico",
+        "pA": 0.5536349436852782,
+        "pFinish": 0.45736009527240196,
+        "original_pA_from_joint": 0.5284824641265367,
+        "original_finish_from_joint": 0.594571316490095,
+        "raw_gap_winner_pp": 2.515247955874156,
+        "raw_gap_finish_pp": 13.721122121769302,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.13809169660129608,
+            "A_SUB": 0.07847184349147555,
+            "A_DEC": 0.33707140359250654,
+            "B_KO": 0.3209334372975308,
+            "B_SUB": 0.04622398742112035,
+            "B_DEC": 0.07920763159607061
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.08950171746816694,
+            "A_SUB": 0.05086015262495039,
+            "A_DEC": 0.41327307359216087,
+            "B_KO": 0.27708912628434484,
+            "B_SUB": 0.03990909889524098,
+            "B_DEC": 0.12936683113513595
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.9871972849671699,
+            "logloss": 2.026333245191868,
+            "p_true": 0.1318179802912748
+          },
+          "winner_aligned": {
+            "brier": 0.9740696619001802,
+            "logloss": 1.9798373463608003,
+            "p_true": 0.13809169660129608
+          },
+          "winner_timing_aligned": {
+            "brier": 1.0974954080523611,
+            "logloss": 2.4134974642969875,
+            "p_true": 0.08950171746816694
+          }
+        },
+        "maxdiff": 0.12636086953902081,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 11,
+        "bout": "Alexander Volkov vs Rizvan Kuniev",
+        "actual_method": "DEC",
+        "actual_winner": "Alexander Volkov",
+        "pA": 0.5686527378226099,
+        "pFinish": 0.5328146751505872,
+        "original_pA_from_joint": 0.55428370980389,
+        "original_finish_from_joint": 0.6330173501870052,
+        "raw_gap_winner_pp": 1.4369028018719976,
+        "raw_gap_finish_pp": 10.0202675036418,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.3012010334715995,
+            "A_SUB": 0.07485462914701718,
+            "A_DEC": 0.19259707520399322,
+            "B_KO": 0.2257076955199541,
+            "B_SUB": 0.03216608765661976,
+            "B_DEC": 0.17347347900081622
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.25600650796703633,
+            "A_SUB": 0.06362286341524898,
+            "A_DEC": 0.24902336644032463,
+            "B_KO": 0.1865934684774112,
+            "B_SUB": 0.026591835291085636,
+            "B_DEC": 0.2181619584088932
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.8389313224213322,
+            "logloss": 1.6727482435872985,
+            "p_true": 0.18773042709723078
+          },
+          "winner_aligned": {
+            "brier": 0.8302964299669515,
+            "logloss": 1.6471549655901512,
+            "p_true": 0.19259707520399322
+          },
+          "winner_timing_aligned": {
+            "brier": 0.7166719933026371,
+            "logloss": 1.3902085457944307,
+            "p_true": 0.24902336644032463
+          }
+        },
+        "maxdiff": 0.10111477064460328,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 12,
+        "bout": "Lone'er Kavanagh vs Ramazan Temirov",
+        "actual_method": "KO",
+        "actual_winner": "Lone'er Kavanagh",
+        "pA": 0.5835058608918344,
+        "pFinish": 0.42050793057051106,
+        "original_pA_from_joint": 0.5882351293809467,
+        "original_finish_from_joint": 0.522060578301553,
+        "raw_gap_winner_pp": 0.47292684891122594,
+        "raw_gap_finish_pp": 10.15526477310419,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.18416917284803067,
+            "A_SUB": 0.11881869663890128,
+            "A_DEC": 0.2805179914049024,
+            "B_KO": 0.1854434558178775,
+            "B_SUB": 0.03366148525697589,
+            "B_DEC": 0.1973891980333122
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.14816210266523352,
+            "A_SUB": 0.09558835313056778,
+            "A_DEC": 0.33975540509603314,
+            "B_KO": 0.1496019067532891,
+            "B_SUB": 0.027155568021429478,
+            "B_DEC": 0.239736664333447
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.8302682797392488,
+            "logloss": 1.6838282743082822,
+            "p_true": 0.1856618493131562
+          },
+          "winner_aligned": {
+            "brier": 0.8328730310998914,
+            "logloss": 1.691900526126329,
+            "p_true": 0.18416917284803067
+          },
+          "winner_timing_aligned": {
+            "brier": 0.930790495486414,
+            "logloss": 1.9094483163299933,
+            "p_true": 0.14816210266523352
+          }
+        },
+        "maxdiff": 0.1015848799912743,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 13,
+        "bout": "Petr Yan vs Merab Dvalishvili",
+        "actual_method": "DEC",
+        "actual_winner": "Petr Yan",
+        "pA": 0.5204850655859079,
+        "pFinish": 0.4210783542791945,
+        "original_pA_from_joint": 0.49672121531153224,
+        "original_finish_from_joint": 0.5138901988854108,
+        "raw_gap_winner_pp": 2.3763850274375664,
+        "raw_gap_finish_pp": 9.281184460621628,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.29345568042165704,
+            "A_SUB": 0.03947423174320213,
+            "A_DEC": 0.18755515342104875,
+            "B_KO": 0.1254229006492475,
+            "B_SUB": 0.06147566928754566,
+            "B_DEC": 0.29261636447729894
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.24655352628889166,
+            "A_SUB": 0.03316518194450029,
+            "A_DEC": 0.24076635735251603,
+            "B_KO": 0.09486288122921104,
+            "B_SUB": 0.046496764816654636,
+            "B_DEC": 0.33815528836822645
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.8697187904101933,
+            "logloss": 1.7204145867251237,
+            "p_true": 0.17899192485066107
+          },
+          "winner_aligned": {
+            "brier": 0.8528755787576834,
+            "logloss": 1.6736823252468387,
+            "p_true": 0.18755515342104875
+          },
+          "winner_timing_aligned": {
+            "brier": 0.7638342091715874,
+            "logloss": 1.4239282872993129,
+            "p_true": 0.24076635735251603
+          }
+        },
+        "maxdiff": 0.09875012782245784,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc333_2026-10-24",
+        "fight_no": 14,
+        "bout": "Alexander Volkanovski vs Movsar Evloev",
+        "actual_method": "KO",
+        "actual_winner": "Alexander Volkanovski",
+        "pA": 0.3936200019468037,
+        "pFinish": 0.4524203711276159,
+        "original_pA_from_joint": 0.4174997332620568,
+        "original_finish_from_joint": 0.44526971686941025,
+        "raw_gap_winner_pp": 2.3879731315253117,
+        "raw_gap_finish_pp": 0.7150654258205658,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.12817911282149116,
+            "A_SUB": 0.036239405678877436,
+            "A_DEC": 0.2292014834464351,
+            "B_KO": 0.20168968018343011,
+            "B_SUB": 0.08029138636045528,
+            "B_DEC": 0.324398931509311
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.1300027459889208,
+            "A_SUB": 0.03675499188250465,
+            "A_DEC": 0.22686226407537824,
+            "B_KO": 0.2043229563173664,
+            "B_SUB": 0.08133967693869089,
+            "B_DEC": 0.32071736479713897
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.947747635043629,
+            "logloss": 1.9954287507227209,
+            "p_true": 0.13595535071404213
+          },
+          "winner_aligned": {
+            "brier": 0.9662783744392877,
+            "logloss": 2.054326674278962,
+            "p_true": 0.12817911282149116
+          },
+          "winner_timing_aligned": {
+            "brier": 0.9609362798816881,
+            "logloss": 2.0401997057579435,
+            "p_true": 0.1300027459889208
+          }
+        },
+        "maxdiff": 0.006020786083361873,
+        "source_raw": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 1,
+        "bout": "Jonny Parsons vs Jose Souza",
+        "actual_method": "KO",
+        "actual_winner": "Jose Souza",
+        "pA": 0.6174557875446999,
+        "pFinish": 0.6265032288939973,
+        "original_pA_from_joint": 0.5916742008427175,
+        "original_finish_from_joint": 0.6919224736664923,
+        "raw_gap_winner_pp": 2.5781586701982384,
+        "raw_gap_finish_pp": 6.541924477249495,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.3935269625402923,
+            "A_SUB": 0.05171657042420145,
+            "A_DEC": 0.17221225458020606,
+            "B_KO": 0.21174967271980374,
+            "B_SUB": 0.03677113734156444,
+            "B_DEC": 0.13402340239393193
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.3582544444663861,
+            "A_SUB": 0.04708112269469214,
+            "A_DEC": 0.21212022038362166,
+            "B_KO": 0.18844369602978317,
+            "B_SUB": 0.032723965703750156,
+            "B_DEC": 0.1613765507217668
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.7929386923027475,
+            "logloss": 1.4871293426564418,
+            "p_true": 0.22602055270855775
+          },
+          "winner_aligned": {
+            "brier": 0.8278481019182022,
+            "logloss": 1.5523504910483166,
+            "p_true": 0.21174967271980374
+          },
+          "winner_timing_aligned": {
+            "brier": 0.861294750557742,
+            "logloss": 1.6689560115144604,
+            "p_true": 0.18844369602978317
+          }
+        },
+        "maxdiff": 0.06726111413186464,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 2,
+        "bout": "Seokhyeon Ko vs Wellington Turman",
+        "actual_method": "DEC",
+        "actual_winner": "Seokhyeon Ko",
+        "pA": 0.6838509509148233,
+        "pFinish": 0.45001368044622647,
+        "original_pA_from_joint": 0.6524658824507259,
+        "original_finish_from_joint": 0.5602887248722779,
+        "raw_gap_winner_pp": 3.1385068464097388,
+        "raw_gap_finish_pp": 11.02750444260514,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.17220384422922913,
+            "A_SUB": 0.15158504448318783,
+            "A_DEC": 0.36006206220240633,
+            "B_KO": 0.07682057903751205,
+            "B_SUB": 0.15183963193605327,
+            "B_DEC": 0.08748883811161136
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.13370817655614342,
+            "A_SUB": 0.1176986494218385,
+            "A_DEC": 0.4324441249368413,
+            "B_KO": 0.06672386724466756,
+            "B_SUB": 0.13188298722446753,
+            "B_DEC": 0.11754219461604157
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.5230961883898012,
+            "logloss": 1.0684600028435176,
+            "p_true": 0.34353715650705086
+          },
+          "winner_aligned": {
+            "brier": 0.498763725895186,
+            "logloss": 1.0214788673836086,
+            "p_true": 0.36006206220240633
+          },
+          "winner_timing_aligned": {
+            "brier": 0.38951188416688987,
+            "logloss": 0.8383021518535426,
+            "p_true": 0.4324441249368413
+          }
+        },
+        "maxdiff": 0.10243541923975585,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 3,
+        "bout": "Mantas Kondratavicius vs Andre Petroski",
+        "actual_method": "KO",
+        "actual_winner": "Andre Petroski",
+        "pA": 0.7862768232745152,
+        "pFinish": 0.58543760963337,
+        "original_pA_from_joint": 0.7593052141702941,
+        "original_finish_from_joint": 0.7214703393544892,
+        "raw_gap_winner_pp": 2.697160910422114,
+        "raw_gap_finish_pp": 13.603272972111924,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.4881907003259513,
+            "A_SUB": 0.10224292149884412,
+            "A_DEC": 0.1958432014497198,
+            "B_KO": 0.060639149321835346,
+            "B_SUB": 0.07369799259637191,
+            "B_DEC": 0.07938603480727753
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.4003648037995816,
+            "A_SUB": 0.08384933833940295,
+            "A_DEC": 0.30206268113553075,
+            "B_KO": 0.04569179359200734,
+            "B_SUB": 0.05553167390239356,
+            "B_DEC": 0.11249970923108392
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 1.1507390376460822,
+            "logloss": 2.683966494991952,
+            "p_true": 0.06829173738916408
+          },
+          "winner_aligned": {
+            "brier": 1.1812706788573994,
+            "logloss": 2.8028145660802686,
+            "p_true": 0.060639149321835346
+          },
+          "winner_timing_aligned": {
+            "brier": 1.1850086551973387,
+            "logloss": 3.0858365684977005,
+            "p_true": 0.04569179359200734
+          }
+        },
+        "maxdiff": 0.13933315410963265,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 4,
+        "bout": "Austin Bashi vs Carlos Calderon",
+        "actual_method": "SUB",
+        "actual_winner": "Austin Bashi",
+        "pA": 0.6346776904896176,
+        "pFinish": 0.5117689273086616,
+        "original_pA_from_joint": 0.6682372980245274,
+        "original_finish_from_joint": 0.6381621820788714,
+        "raw_gap_winner_pp": 3.355960753490972,
+        "raw_gap_finish_pp": 12.639325477020979,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.1700732580350311,
+            "A_SUB": 0.2664706921954884,
+            "A_DEC": 0.1981337402590981,
+            "B_KO": 0.1262715386451206,
+            "B_SUB": 0.07032354334587353,
+            "B_DEC": 0.16872722751938823
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.14080357148547937,
+            "A_SUB": 0.22061096253947446,
+            "A_DEC": 0.2732631564646638,
+            "B_KO": 0.09657149298837743,
+            "B_SUB": 0.05378290029576915,
+            "B_DEC": 0.21496791622623576
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.6338826160643345,
+            "logloss": 1.2709649634063036,
+            "p_true": 0.2805607602467816
+          },
+          "winner_aligned": {
+            "brier": 0.6556059170627804,
+            "logloss": 1.322491014423755,
+            "p_true": 0.2664706921954884
+          },
+          "winner_timing_aligned": {
+            "brier": 0.7603755287666213,
+            "logloss": 1.51135447920219,
+            "p_true": 0.22061096253947446
+          }
+        },
+        "maxdiff": 0.12137010491285205,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 5,
+        "bout": "Jose Delano vs Murtazali Magomedov",
+        "actual_method": "DEC",
+        "actual_winner": "Murtazali Magomedov",
+        "pA": 0.30286075371111126,
+        "pFinish": 0.4126586730767017,
+        "original_pA_from_joint": 0.29418920140572413,
+        "original_finish_from_joint": 0.6480248229126823,
+        "raw_gap_winner_pp": 0.8671552305387131,
+        "raw_gap_finish_pp": 23.53661498359806,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.13990125510341933,
+            "A_SUB": 0.025478761056248186,
+            "A_DEC": 0.13748073755144374,
+            "B_KO": 0.09253154176934852,
+            "B_SUB": 0.3888605256750888,
+            "B_DEC": 0.21574717884445146
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.07985817426408258,
+            "A_SUB": 0.014543739003332633,
+            "A_DEC": 0.208458840443696,
+            "B_KO": 0.06117422918915295,
+            "B_SUB": 0.25708253062030284,
+            "B_DEC": 0.3788824864794331
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.8115387489472681,
+            "logloss": 1.5212859845008744,
+            "p_true": 0.21843080762600212
+          },
+          "winner_aligned": {
+            "brier": 0.8139495637831182,
+            "logloss": 1.5336480251437143,
+            "p_true": 0.21574717884445146
+          },
+          "winner_timing_aligned": {
+            "brier": 0.5056646159691175,
+            "logloss": 0.9705291840384329,
+            "p_true": 0.3788824864794331
+          }
+        },
+        "maxdiff": 0.2341134105274032,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 6,
+        "bout": "Karine Silva vs Gabriella Fernandes",
+        "actual_method": "DEC",
+        "actual_winner": "Karine Silva",
+        "pA": 0.572422114387603,
+        "pFinish": 0.34851078206065333,
+        "original_pA_from_joint": 0.5822905825033585,
+        "original_finish_from_joint": 0.44783743032787116,
+        "raw_gap_winner_pp": 0.986846811575548,
+        "raw_gap_finish_pp": 9.932664826721782,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.09878767568894484,
+            "A_SUB": 0.1556656945055838,
+            "A_DEC": 0.31796874419307436,
+            "B_KO": 0.1209177363534227,
+            "B_SUB": 0.07254468668392758,
+            "B_DEC": 0.23411546257504667
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.07675790891377911,
+            "A_SUB": 0.12095206326629784,
+            "A_DEC": 0.3747121422075261,
+            "B_KO": 0.09425340737877576,
+            "B_SUB": 0.056547402501819416,
+            "B_DEC": 0.27677707573180177
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.5641779764202013,
+            "logloss": 1.1287092653861484,
+            "p_true": 0.32345047582958386
+          },
+          "winner_aligned": {
+            "brier": 0.5738513275591353,
+            "logloss": 1.1458021897336352,
+            "p_true": 0.31796874419307436
+          },
+          "winner_timing_aligned": {
+            "brier": 0.5001929464747512,
+            "logloss": 0.9815971685633458,
+            "p_true": 0.3747121422075261
+          }
+        },
+        "maxdiff": 0.09940501117122558,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 7,
+        "bout": "Gabriel Lorenco vs Thomas Petersen",
+        "actual_method": "KO",
+        "actual_winner": "Thomas Petersen",
+        "pA": 0.4291954388097487,
+        "pFinish": 0.7002992963614252,
+        "original_pA_from_joint": 0.4724675339405835,
+        "original_finish_from_joint": 0.695525485692032,
+        "raw_gap_winner_pp": 4.32720951308348,
+        "raw_gap_finish_pp": 0.4773810669393197,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.2509548773497332,
+            "A_SUB": 0.07995390717864953,
+            "A_DEC": 0.09828665428136593,
+            "B_KO": 0.2422566603349411,
+            "B_SUB": 0.11616923750280204,
+            "B_DEC": 0.21237866335250813
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.25395347187921585,
+            "A_SUB": 0.0809092556110394,
+            "A_DEC": 0.09433271131949349,
+            "B_KO": 0.2469951063052292,
+            "B_SUB": 0.11844146256590465,
+            "B_DEC": 0.2053679923191173
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.7481671352301862,
+            "logloss": 1.4965940009018215,
+            "p_true": 0.22389143699083772
+          },
+          "winner_aligned": {
+            "brier": 0.7118062013447138,
+            "logloss": 1.417757534946517,
+            "p_true": 0.2422566603349411
+          },
+          "winner_timing_aligned": {
+            "brier": 0.7031580962001359,
+            "logloss": 1.398386755079867,
+            "p_true": 0.2469951063052292
+          }
+        },
+        "maxdiff": 0.010964613995299244,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 8,
+        "bout": "Keiichiro Nakamura vs Ollie Schmid",
+        "actual_method": "DEC",
+        "actual_winner": "Ollie Schmid",
+        "pA": 0.7066769078615044,
+        "pFinish": 0.6553886483594069,
+        "original_pA_from_joint": 0.6683307066299735,
+        "original_finish_from_joint": 0.7485441220994385,
+        "raw_gap_winner_pp": 3.8346201231530874,
+        "raw_gap_finish_pp": 9.315547374003163,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.5003516057998807,
+            "A_SUB": 0.032471651803934465,
+            "A_DEC": 0.17385365025768915,
+            "B_KO": 0.14272385910295318,
+            "B_SUB": 0.07362596985213933,
+            "B_DEC": 0.07697326318340311
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.438747230452371,
+            "A_SUB": 0.028473671578238356,
+            "A_DEC": 0.239456005830895,
+            "B_KO": 0.1241324157474893,
+            "B_SUB": 0.0640353305813097,
+            "B_DEC": 0.1051553458096966
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 1.1183745584297686,
+            "logloss": 2.441433485674303,
+            "p_true": 0.0870359971398716
+          },
+          "winner_aligned": {
+            "brier": 1.159400469577521,
+            "logloss": 2.564297148811604,
+            "p_true": 0.07697326318340311
+          },
+          "winner_timing_aligned": {
+            "brier": 1.0709053962661859,
+            "logloss": 2.252316538280778,
+            "p_true": 0.1051553458096966
+          }
+        },
+        "maxdiff": 0.09378443819950077,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 9,
+        "bout": "Mitch Raposo vs Marcos Degli",
+        "actual_method": "DEC",
+        "actual_winner": "Mitch Raposo",
+        "pA": 0.6455116160330533,
+        "pFinish": 0.5035836474980426,
+        "original_pA_from_joint": 0.5912530479818552,
+        "original_finish_from_joint": 0.5898130528848,
+        "raw_gap_winner_pp": 5.42585680511981,
+        "raw_gap_finish_pp": 8.622940538675739,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.1889272488689943,
+            "A_SUB": 0.14516076402935943,
+            "A_DEC": 0.3114236031346996,
+            "B_KO": 0.15887927122297185,
+            "B_SUB": 0.0872540211656002,
+            "B_DEC": 0.10835509157837464
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.15993024331715927,
+            "A_SUB": 0.12288114314001534,
+            "A_DEC": 0.3627002295758786,
+            "B_KO": 0.14250870168776963,
+            "B_SUB": 0.07826355935316626,
+            "B_DEC": 0.13371612292601082
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.6177890840021054,
+            "logloss": 1.2544003362053306,
+            "p_true": 0.28524684915577786
+          },
+          "winner_aligned": {
+            "brier": 0.5754993200036616,
+            "logloss": 1.166601225618773,
+            "p_true": 0.3114236031346996
+          },
+          "winner_timing_aligned": {
+            "brier": 0.4911423717592449,
+            "logloss": 1.0141785997299333,
+            "p_true": 0.3627002295758786
+          }
+        },
+        "maxdiff": 0.0766376577888832,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 10,
+        "bout": "Priscila Cachoeira vs Nina Milosevic",
+        "actual_method": "KO",
+        "actual_winner": "Nina Milosevic",
+        "pA": 0.18638632881230358,
+        "pFinish": 0.47656870756918823,
+        "original_pA_from_joint": 0.16145245871875322,
+        "original_finish_from_joint": 0.7998478015177409,
+        "raw_gap_winner_pp": 2.493387009355036,
+        "raw_gap_finish_pp": 32.32790939485527,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.08163418401374435,
+            "A_SUB": 0.025599843346581955,
+            "A_DEC": 0.07915230145197727,
+            "B_KO": 0.6321329371374634,
+            "B_SUB": 0.053804952256226064,
+            "B_DEC": 0.127675781794007
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.03184272492401929,
+            "A_SUB": 0.00998563015765489,
+            "A_DEC": 0.1445579737306294,
+            "B_KO": 0.40063932924473267,
+            "B_SUB": 0.03410102324298224,
+            "B_DEC": 0.37887331869998153
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.1520324327150915,
+            "logloss": 0.4284699336378437,
+            "p_true": 0.6515051786503568
+          },
+          "winner_aligned": {
+            "brier": 0.16810683288721917,
+            "logloss": 0.4586555633824513,
+            "p_true": 0.6321329371374634
+          },
+          "winner_timing_aligned": {
+            "brier": 0.5259517647664977,
+            "logloss": 0.9146936847212928,
+            "p_true": 0.40063932924473267
+          }
+        },
+        "maxdiff": 0.31660320918482754,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 11,
+        "bout": "Billy Elekana vs Lucas Fernando",
+        "actual_method": "DEC",
+        "actual_winner": "Lucas Fernando",
+        "pA": 0.4295072379643773,
+        "pFinish": 0.6572762583409931,
+        "original_pA_from_joint": 0.49261341764503125,
+        "original_finish_from_joint": 0.7940469219843469,
+        "raw_gap_winner_pp": 6.310617968065396,
+        "raw_gap_finish_pp": 13.677066364335378,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.09073124208678485,
+            "A_SUB": 0.2637783305627049,
+            "A_DEC": 0.07499766531488755,
+            "B_KO": 0.40638725353230665,
+            "B_SUB": 0.02925220939809159,
+            "B_DEC": 0.13485329910522453
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.07756208121743915,
+            "A_SUB": 0.225492298220008,
+            "A_DEC": 0.12645285852693017,
+            "B_KO": 0.33043667701811574,
+            "B_SUB": 0.023785201885459874,
+            "B_DEC": 0.21627088313204715
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 1.0155784915555053,
+            "logloss": 2.120795043967887,
+            "p_true": 0.1199362360148923
+          },
+          "winner_aligned": {
+            "brier": 0.9979209214250575,
+            "logloss": 2.00356776469585,
+            "p_true": 0.13485329910522453
+          },
+          "winner_timing_aligned": {
+            "brier": 0.7968384404030815,
+            "logloss": 1.5312235684359226,
+            "p_true": 0.21627088313204715
+          }
+        },
+        "maxdiff": 0.1328727772388948,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 12,
+        "bout": "Davey Grant vs Elijah Smith",
+        "actual_method": "KO",
+        "actual_winner": "Elijah Smith",
+        "pA": 0.22534058910213536,
+        "pFinish": 0.42108954661701237,
+        "original_pA_from_joint": 0.2786101462984848,
+        "original_finish_from_joint": 0.6529812103424133,
+        "raw_gap_winner_pp": 5.3269557196349435,
+        "raw_gap_finish_pp": 23.189166372540093,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.07104737195219324,
+            "A_SUB": 0.028432055193236713,
+            "A_DEC": 0.12586116195670544,
+            "B_KO": 0.2501015889214338,
+            "B_SUB": 0.31901935809985504,
+            "B_DEC": 0.20553846387657573
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.0338230860826601,
+            "A_SUB": 0.013535473922313078,
+            "A_DEC": 0.17798202909716218,
+            "B_KO": 0.1642369940345266,
+            "B_SUB": 0.2094939925775664,
+            "B_DEC": 0.4009284242857715
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.7464985840565047,
+            "logloss": 1.4571318472858568,
+            "p_true": 0.2329033199679766
+          },
+          "winner_aligned": {
+            "brier": 0.7280641808262609,
+            "logloss": 1.3858880879742674,
+            "p_true": 0.2501015889214338
+          },
+          "winner_timing_aligned": {
+            "brier": 0.9361359493548047,
+            "logloss": 1.8064448087128966,
+            "p_true": 0.1642369940345266
+          }
+        },
+        "maxdiff": 0.24751082754970644,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 13,
+        "bout": "Tatiana Suarez vs Virna Jandiroba",
+        "actual_method": "DEC",
+        "actual_winner": "Tatiana Suarez",
+        "pA": 0.7354037284416138,
+        "pFinish": 0.3455847238044497,
+        "original_pA_from_joint": 0.7016032687181821,
+        "original_finish_from_joint": 0.3858993732754187,
+        "raw_gap_winner_pp": 3.380045972343171,
+        "raw_gap_finish_pp": 4.031464947096897,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.08909751724820927,
+            "A_SUB": 0.17870807962022303,
+            "A_DEC": 0.4675981315731816,
+            "B_KO": 0.05956302664385898,
+            "B_SUB": 0.0560684037801563,
+            "B_DEC": 0.1489648411343709
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.08001685048264438,
+            "A_SUB": 0.16049445740643567,
+            "A_DEC": 0.49489242055253374,
+            "B_KO": 0.05412447678612852,
+            "B_SUB": 0.05094893912929168,
+            "B_DEC": 0.15952285564296592
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.379823965974706,
+            "logloss": 0.8071975839817431,
+            "p_true": 0.4461064920808397
+          },
+          "winner_aligned": {
+            "brier": 0.35220863874533015,
+            "logloss": 0.7601460451724003,
+            "p_true": 0.4675981315731816
+          },
+          "winner_timing_aligned": {
+            "brier": 0.3182676288928854,
+            "logloss": 0.7034148722506189,
+            "p_true": 0.49489242055253374
+          }
+        },
+        "maxdiff": 0.037852303487997896,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufcvegas124_2026-11-07",
+        "fight_no": 14,
+        "bout": "Waldo Cortes Acosta vs Johnny Walker",
+        "actual_method": "KO",
+        "actual_winner": "Johnny Walker",
+        "pA": 0.42302719381008935,
+        "pFinish": 0.8329539708952249,
+        "original_pA_from_joint": 0.46993944324016496,
+        "original_finish_from_joint": 0.8292556290074474,
+        "raw_gap_winner_pp": 4.69122494300756,
+        "raw_gap_finish_pp": 0.3698341887777512,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.3043277219901632,
+            "A_SUB": 0.034376014699383055,
+            "A_DEC": 0.08432345712054307,
+            "B_KO": 0.4149535904150498,
+            "B_SUB": 0.07812853464991558,
+            "B_DEC": 0.08389068112494534
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.30483686724758285,
+            "A_SUB": 0.03443352633433607,
+            "A_DEC": 0.08375680022817046,
+            "B_KO": 0.4154597429541727,
+            "B_SUB": 0.07822383435837561,
+            "B_DEC": 0.0832892288773624
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.518515835994726,
+            "logloss": 0.9643924730173857,
+            "p_true": 0.3812147276357025
+          },
+          "winner_aligned": {
+            "brier": 0.4563285338534859,
+            "logloss": 0.8795885953300969,
+            "p_true": 0.4149535904150498
+          },
+          "winner_timing_aligned": {
+            "brier": 0.4558697609695137,
+            "logloss": 0.8783695575775357,
+            "p_true": 0.4154597429541727
+          }
+        },
+        "maxdiff": 0.0011681091407133026,
+        "source_raw": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 1,
+        "bout": "Evan Elder vs Samuel Sanches",
+        "actual_method": "DEC",
+        "actual_winner": "Evan Elder",
+        "pA": 0.4785556097330425,
+        "pFinish": 0.4993552341773084,
+        "original_pA_from_joint": 0.48215677550812935,
+        "original_finish_from_joint": 0.6646167149544578,
+        "raw_gap_winner_pp": 0.36011657750868453,
+        "raw_gap_finish_pp": 16.526148077714943,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.1677984392513368,
+            "A_SUB": 0.1191038799284892,
+            "A_DEC": 0.19165329055321656,
+            "B_KO": 0.26043331188451097,
+            "B_SUB": 0.11773379647614764,
+            "B_DEC": 0.1432772819062988
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.11921122141601327,
+            "A_SUB": 0.0846165141047238,
+            "A_DEC": 0.27472787421230543,
+            "B_KO": 0.20352168003655655,
+            "B_SUB": 0.09200581862021263,
+            "B_DEC": 0.22591689161018833
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.7948847696905491,
+            "logloss": 1.6445704170793338,
+            "p_true": 0.19309549550617494
+          },
+          "winner_aligned": {
+            "brier": 0.797981589384926,
+            "logloss": 1.6520673177062217,
+            "p_true": 0.19165329055321656
+          },
+          "winner_timing_aligned": {
+            "brier": 0.6483155130350218,
+            "logloss": 1.2919742195606232,
+            "p_true": 0.27472787421230543
+          }
+        },
+        "maxdiff": 0.16571419336317617,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 2,
+        "bout": "Alatengheili vs Juan Diaz",
+        "actual_method": "DEC",
+        "actual_winner": "Juan Diaz",
+        "pA": 0.2402237146606672,
+        "pFinish": 0.40940866061400427,
+        "original_pA_from_joint": 0.22897581949648618,
+        "original_finish_from_joint": 0.6204437980311902,
+        "raw_gap_winner_pp": 1.124789516418101,
+        "raw_gap_finish_pp": 21.103513741718594,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.0753506211918902,
+            "A_SUB": 0.025404276441072324,
+            "A_DEC": 0.1394688170277047,
+            "B_KO": 0.11056032577863689,
+            "B_SUB": 0.4061960049926756,
+            "B_DEC": 0.2430199545680203
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.04114034856934064,
+            "A_SUB": 0.013870367243237666,
+            "A_DEC": 0.18521299884808887,
+            "B_KO": 0.07582365207612146,
+            "B_SUB": 0.27857429272541384,
+            "B_DEC": 0.4053783405377974
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.7735071993637886,
+            "logloss": 1.399916014408818,
+            "p_true": 0.2466176754031268
+          },
+          "winner_aligned": {
+            "brier": 0.7760122135890957,
+            "logloss": 1.4146117214491816,
+            "p_true": 0.2430199545680203
+          },
+          "winner_timing_aligned": {
+            "brier": 0.47311655099338024,
+            "logloss": 0.9029344737773292,
+            "p_true": 0.4053783405377974
+          }
+        },
+        "maxdiff": 0.2081025677902707,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 3,
+        "bout": "Macy Chiasson vs Bia Mesquita",
+        "actual_method": "SUB",
+        "actual_winner": "Bia Mesquita",
+        "pA": 0.3751981784750592,
+        "pFinish": 0.5357805259163769,
+        "original_pA_from_joint": 0.3509684510345053,
+        "original_finish_from_joint": 0.7306570393917498,
+        "raw_gap_winner_pp": 2.4229727440553903,
+        "raw_gap_finish_pp": 19.487651347537284,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.1459589785755082,
+            "A_SUB": 0.08273632953059346,
+            "A_DEC": 0.1465028703689575,
+            "B_KO": 0.10279280403077297,
+            "B_SUB": 0.3946470732379664,
+            "B_DEC": 0.1273619442562014
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.09459247595643991,
+            "A_SUB": 0.053619409632947305,
+            "A_DEC": 0.22698629288567196,
+            "B_KO": 0.08008860791855865,
+            "B_SUB": 0.30748003240869,
+            "B_DEC": 0.2372331811976921
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.42047417744996846,
+            "logloss": 0.8917165856648972,
+            "p_true": 0.4099514316606579
+          },
+          "winner_aligned": {
+            "brier": 0.4428520060219329,
+            "logloss": 0.9297633989505845,
+            "p_true": 0.3946470732379664
+          },
+          "winner_timing_aligned": {
+            "brier": 0.6056232276471143,
+            "logloss": 1.1793451291002424,
+            "p_true": 0.30748003240869
+          }
+        },
+        "maxdiff": 0.19035465945846408,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 4,
+        "bout": "Jared Gordon vs Melquizael Costa",
+        "actual_method": "DEC",
+        "actual_winner": "Melquizael Costa",
+        "pA": 0.25519365502643926,
+        "pFinish": 0.49644475648057873,
+        "original_pA_from_joint": 0.29935398989854756,
+        "original_finish_from_joint": 0.6400203554942783,
+        "raw_gap_winner_pp": 4.4160334872108296,
+        "raw_gap_finish_pp": 14.357559901369953,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.08750643010969583,
+            "A_SUB": 0.03644277070432804,
+            "A_DEC": 0.1312444542124154,
+            "B_KO": 0.274759875516976,
+            "B_SUB": 0.2510373808431461,
+            "B_DEC": 0.21900908861343865
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.05914653038725039,
+            "A_SUB": 0.024632057806004682,
+            "A_DEC": 0.1714150668331842,
+            "B_KO": 0.2156422530878822,
+            "B_SUB": 0.19702391520028228,
+            "B_DEC": 0.33214017668539625
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.7890394603231129,
+            "logloss": 1.5797635134326105,
+            "p_true": 0.20602381430895075
+          },
+          "winner_aligned": {
+            "brier": 0.7746701170517688,
+            "logloss": 1.5186420495087742,
+            "p_true": 0.21900908861343865
+          },
+          "winner_timing_aligned": {
+            "brier": 0.5648449235415134,
+            "logloss": 1.1021981802430638,
+            "p_true": 0.33214017668539625
+          }
+        },
+        "maxdiff": 0.1533017006935673,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 5,
+        "bout": "Donte Johnson vs Cesar Almeida",
+        "actual_method": "KO",
+        "actual_winner": "Cesar Almeida",
+        "pA": 0.7941541006746058,
+        "pFinish": 0.5956061906800814,
+        "original_pA_from_joint": 0.7937630120073029,
+        "original_finish_from_joint": 0.6856765001914402,
+        "raw_gap_winner_pp": 0.03910886673028635,
+        "raw_gap_finish_pp": 9.007030951135885,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.37947703712781594,
+            "A_SUB": 0.1799949317918984,
+            "A_DEC": 0.23468213175489142,
+            "B_KO": 0.08629808362101511,
+            "B_SUB": 0.039942119876022246,
+            "B_DEC": 0.07960569582835685
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.3318887983679644,
+            "A_SUB": 0.15742270488060053,
+            "A_DEC": 0.3048425974260409,
+            "B_KO": 0.0726632845189504,
+            "B_SUB": 0.03363140291257478,
+            "B_DEC": 0.09955121189386905
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 1.073762981070421,
+            "logloss": 2.4480497797734,
+            "p_true": 0.08646204220665979
+          },
+          "winner_aligned": {
+            "brier": 1.0742603318862332,
+            "logloss": 2.449947887153042,
+            "p_true": 0.08629808362101511
+          },
+          "winner_timing_aligned": {
+            "brier": 1.0988559906300983,
+            "logloss": 2.621919049261528,
+            "p_true": 0.0726632845189504
+          }
+        },
+        "maxdiff": 0.09010598173667028,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 6,
+        "bout": "Jim Miller vs Terrance McKinney",
+        "actual_method": "KO",
+        "actual_winner": "Terrance McKinney",
+        "pA": 0.2227554556152009,
+        "pFinish": 0.6263043358966449,
+        "original_pA_from_joint": 0.3203186583568453,
+        "original_finish_from_joint": 0.7202295184063917,
+        "raw_gap_winner_pp": 9.75632027416444,
+        "raw_gap_finish_pp": 9.39251825097468,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.05717806346034646,
+            "A_SUB": 0.13051527292729023,
+            "A_DEC": 0.03506211922756421,
+            "B_KO": 0.36323509106995133,
+            "B_SUB": 0.1517359827493823,
+            "B_DEC": 0.26227347056546546
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.05359285357417483,
+            "A_SUB": 0.12233163363492734,
+            "A_DEC": 0.046830968406098746,
+            "B_KO": 0.31767563980014646,
+            "B_SUB": 0.1327042088874919,
+            "B_DEC": 0.3268646956971607
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.5803492840324626,
+            "logloss": 1.1468359772238204,
+            "p_true": 0.31764020193375636
+          },
+          "winner_aligned": {
+            "brier": 0.5188136506811565,
+            "logloss": 1.0127050205400363,
+            "p_true": 0.36323509106995133
+          },
+          "winner_timing_aligned": {
+            "brier": 0.6100478310156581,
+            "logloss": 1.146724417385079,
+            "p_true": 0.31767563980014646
+          }
+        },
+        "maxdiff": 0.07636007431032543,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 7,
+        "bout": "Drew Dober vs Chris Duncan",
+        "actual_method": "DEC",
+        "actual_winner": "Chris Duncan",
+        "pA": 0.26592024101671763,
+        "pFinish": 0.4750201337902943,
+        "original_pA_from_joint": 0.2942831800828705,
+        "original_finish_from_joint": 0.6110948690162744,
+        "raw_gap_winner_pp": 2.836293906615289,
+        "raw_gap_finish_pp": 13.607473522598013,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.10638039458130642,
+            "A_SUB": 0.045045223219781445,
+            "A_DEC": 0.11449462321562977,
+            "B_KO": 0.17053402986201563,
+            "B_SUB": 0.29080934180911067,
+            "B_DEC": 0.27273638731215616
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.08036770022760852,
+            "A_SUB": 0.03403052799965133,
+            "A_DEC": 0.1515220127894578,
+            "B_KO": 0.13330267776346919,
+            "B_SUB": 0.22731922779959493,
+            "B_DEC": 0.3734578534202183
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.6817892955612831,
+            "logloss": 1.3386531986242634,
+            "p_true": 0.2621985602711663
+          },
+          "winner_aligned": {
+            "brier": 0.6690191701956845,
+            "logloss": 1.2992495645441289,
+            "p_true": 0.27273638731215616
+          },
+          "winner_timing_aligned": {
+            "brier": 0.4925746611026945,
+            "logloss": 0.9849501230248421,
+            "p_true": 0.3734578534202183
+          }
+        },
+        "maxdiff": 0.13774885568191986,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 8,
+        "bout": "Stephen Thompson vs Charles Radtke",
+        "actual_method": "KO",
+        "actual_winner": "Stephen Thompson",
+        "pA": 0.2549318192391383,
+        "pFinish": 0.5388670877810551,
+        "original_pA_from_joint": 0.3367274127868628,
+        "original_finish_from_joint": 0.6136557188179342,
+        "raw_gap_winner_pp": 8.179559354772447,
+        "raw_gap_finish_pp": 7.478863103687916,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.13097513576946357,
+            "A_SUB": 0.02830184711338971,
+            "A_DEC": 0.09565483635628504,
+            "B_KO": 0.3144795404103847,
+            "B_SUB": 0.13852700608850427,
+            "B_DEC": 0.29206163426197285
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.11571412470406732,
+            "A_SUB": 0.025004161644837646,
+            "A_DEC": 0.1142135328902334,
+            "B_KO": 0.27639700365774156,
+            "B_SUB": 0.12175179777538225,
+            "B_DEC": 0.3469193793277379
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.8624732255594156,
+            "logloss": 1.7544701720455511,
+            "p_true": 0.17299887765555425
+          },
+          "winner_aligned": {
+            "brier": 0.9685421678796253,
+            "logloss": 2.0327477770824465,
+            "p_true": 0.13097513576946357
+          },
+          "winner_timing_aligned": {
+            "brier": 1.0072033080883813,
+            "logloss": 2.1566325718182657,
+            "p_true": 0.11571412470406732
+          }
+        },
+        "maxdiff": 0.07341644160068705,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 9,
+        "bout": "Bilal Hasan vs Luis Gurule",
+        "actual_method": "DEC",
+        "actual_winner": "Luis Gurule",
+        "pA": 0.6232987509413758,
+        "pFinish": 0.6230252973704393,
+        "original_pA_from_joint": 0.5905253517512812,
+        "original_finish_from_joint": 0.6392983484509309,
+        "raw_gap_winner_pp": 3.2773399190094588,
+        "raw_gap_finish_pp": 1.6273051080491596,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.3912890375520411,
+            "A_SUB": 0.08785952013619831,
+            "A_DEC": 0.14415019325313636,
+            "B_KO": 0.08066001566499614,
+            "B_SUB": 0.0898491976578246,
+            "B_DEC": 0.2061920357358035
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.37926158243596536,
+            "A_SUB": 0.08515889135914619,
+            "A_DEC": 0.1588782771462643,
+            "B_KO": 0.07502859994988059,
+            "B_SUB": 0.08357622362590442,
+            "B_DEC": 0.21809642548283922
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.7822087153285723,
+            "logloss": 1.4955247702686427,
+            "p_true": 0.22413095660180807
+          },
+          "winner_aligned": {
+            "brier": 0.8263156849779824,
+            "logloss": 1.578947332122877,
+            "p_true": 0.2061920357358035
+          },
+          "winner_timing_aligned": {
+            "brier": 0.8003211674470361,
+            "logloss": 1.5228179952585201,
+            "p_true": 0.21809642548283922
+          }
+        },
+        "maxdiff": 0.026632473640620824,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 10,
+        "bout": "Uros Medic vs Kevin Holland",
+        "actual_method": "DRAW",
+        "actual_winner": null,
+        "pA": 0.5771896249540096,
+        "pFinish": 0.7217977011608412,
+        "original_pA_from_joint": 0.49037049551912815,
+        "original_finish_from_joint": 0.7344285860261128,
+        "raw_gap_winner_pp": 8.681912943488147,
+        "raw_gap_finish_pp": 1.263088486527164,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.3019257337893564,
+            "A_SUB": 0.04692997275524422,
+            "A_DEC": 0.22833391840940895,
+            "B_KO": 0.15865949520178727,
+            "B_SUB": 0.20476273758464608,
+            "B_DEC": 0.059388142259557054
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.30796092505054495,
+            "A_SUB": 0.04786805563379034,
+            "A_DEC": 0.22136064426967436,
+            "B_KO": 0.15977121709130154,
+            "B_SUB": 0.20619750338445034,
+            "B_DEC": 0.05684165457023857
+          }
+        },
+        "metrics": {
+          "original": null,
+          "winner_aligned": null,
+          "winner_timing_aligned": null
+        },
+        "maxdiff": 0.009519761829807294,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 11,
+        "bout": "Caio Borralho vs Yousri Belgaroui",
+        "actual_method": "DEC",
+        "actual_winner": "Caio Borralho",
+        "pA": 0.49038817020388253,
+        "pFinish": 0.5560260143003058,
+        "original_pA_from_joint": 0.5262218888057859,
+        "original_finish_from_joint": 0.6452888955255986,
+        "raw_gap_winner_pp": 3.5833718601903373,
+        "raw_gap_finish_pp": 8.92628812252928,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.19000939463612698,
+            "A_SUB": 0.1295620851254816,
+            "A_DEC": 0.17081669044227388,
+            "B_KO": 0.29480624565989016,
+            "B_SUB": 0.03042850778342105,
+            "B_DEC": 0.18437707635280623
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.1642795544216448,
+            "A_SUB": 0.1120176276289576,
+            "A_DEC": 0.21409098815328012,
+            "B_KO": 0.2535577946868724,
+            "B_SUB": 0.026171037563693957,
+            "B_DEC": 0.22988299754555103
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.8332035456945169,
+            "logloss": 1.6966385791432945,
+            "p_true": 0.1832986335023441
+          },
+          "winner_aligned": {
+            "brier": 0.8622663876515675,
+            "logloss": 1.767164283184819,
+            "p_true": 0.17081669044227388
+          },
+          "winner_timing_aligned": {
+            "brier": 0.77501136681664,
+            "logloss": 1.541354176036605,
+            "p_true": 0.21409098815328012
+          }
+        },
+        "maxdiff": 0.08878021890461407,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 12,
+        "bout": "Kayla Harrison vs Amanda Nunes",
+        "actual_method": "SUB",
+        "actual_winner": "Kayla Harrison",
+        "pA": 0.7497884627009841,
+        "pFinish": 0.6466910009986437,
+        "original_pA_from_joint": 0.7506754590511301,
+        "original_finish_from_joint": 0.6797084742314149,
+        "raw_gap_winner_pp": 0.08869963501459965,
+        "raw_gap_finish_pp": 3.3017473232771155,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.20448502746683875,
+            "A_SUB": 0.3157223918433251,
+            "A_DEC": 0.22958104339082022,
+            "B_KO": 0.09425491827665002,
+            "B_SUB": 0.06519598481679495,
+            "B_DEC": 0.09076063420557098
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.19495652931340485,
+            "A_SUB": 0.3010105067486342,
+            "A_DEC": 0.2538214266389451,
+            "B_KO": 0.08909623414993989,
+            "B_SUB": 0.06162773078667125,
+            "B_DEC": 0.0994875723624048
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.5836909235950339,
+            "logloss": 1.1517096620574339,
+            "p_true": 0.3160958900006795
+          },
+          "winner_aligned": {
+            "brier": 0.5841294257441185,
+            "logloss": 1.152891958333418,
+            "p_true": 0.3157223918433251
+          },
+          "winner_timing_aligned": {
+            "brier": 0.6126535698149391,
+            "logloss": 1.2006101087008245,
+            "p_true": 0.3010105067486342
+          }
+        },
+        "maxdiff": 0.032967321404965055,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      },
+      {
+        "slug": "ufc334_2026-11-14",
+        "fight_no": 13,
+        "bout": "Ciryl Gane vs Josh Hokit",
+        "actual_method": "DEC",
+        "actual_winner": "Ciryl Gane",
+        "pA": 0.5032851141979564,
+        "pFinish": 0.8024466683504213,
+        "original_pA_from_joint": 0.60556220242314,
+        "original_finish_from_joint": 0.7614593441270124,
+        "raw_gap_winner_pp": 10.227708822518355,
+        "raw_gap_finish_pp": 4.098732422340889,
+        "projections": {
+          "winner_aligned": {
+            "A_KO": 0.2728155473455444,
+            "A_SUB": 0.11276489226842976,
+            "A_DEC": 0.11770467458398227,
+            "B_KO": 0.33178575947770655,
+            "B_SUB": 0.04288276498968154,
+            "B_DEC": 0.12204636133465553
+          },
+          "winner_timing_aligned": {
+            "A_KO": 0.28756931950272296,
+            "A_SUB": 0.11886317934937084,
+            "A_DEC": 0.09685261534586259,
+            "B_KO": 0.3506882842044213,
+            "B_SUB": 0.04532588529370958,
+            "B_DEC": 0.1007007163039128
+          }
+        },
+        "metrics": {
+          "original": {
+            "brier": 0.9429384707418631,
+            "logloss": 1.9545760996186277,
+            "p_true": 0.14162449865055976
+          },
+          "winner_aligned": {
+            "brier": 0.9924053210931043,
+            "logloss": 2.139576549412961,
+            "p_true": 0.11770467458398227
+          },
+          "winner_timing_aligned": {
+            "brier": 1.0476771101519287,
+            "logloss": 2.3345648854063574,
+            "p_true": 0.09685261534586259
+          }
+        },
+        "maxdiff": 0.04219770426905911,
+        "source_raw": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json"
+      }
+    ]
+  },
+  "status": "POST_EVENT_CHALLENGER_NOT_PROMOTED",
+  "corrected_note": "max_projection_residual is now the actual winner-and-timing IPF marginal residual; prior research report incorrectly aggregated winner-only timing mismatch under this name.",
+  "postevent_method_check": "The winner+timing six-way projection adds internal coherence and improved historical retrospective exact counts, but is NOT promoted without a pre-registered prospective sample and confidence calibration."
+}

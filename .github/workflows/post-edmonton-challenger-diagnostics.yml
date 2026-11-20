@@ -1,0 +1,43 @@
+name: post-edmonton-challenger-diagnostics
+on:
+  push:
+    branches:
+      - feature/historical-conditional-rates
+    paths:
+      - "tools/benchmark_winner_interactions_v034_edmonton.py"
+      - "tools/diagnose_method_submission_access_edmonton.py"
+      - ".github/workflows/post-edmonton-challenger-diagnostics.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: post-edmonton-challenger-diagnostics
+  cancel-in-progress: true
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11", cache: "pip"}
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Winner diagnostic
+        run: PYTHONPATH=src python tools/benchmark_winner_interactions_v034_edmonton.py
+      - name: Submission-access diagnostic
+        run: PYTHONPATH=src python tools/diagnose_method_submission_access_edmonton.py
+      - name: Test
+        run: pytest -q
+      - name: Save diagnostics
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add reports/post_edmonton_challengers
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "diagnostic: save post-Edmonton challenger benchmarks"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin HEAD:"${GITHUB_REF_NAME}"

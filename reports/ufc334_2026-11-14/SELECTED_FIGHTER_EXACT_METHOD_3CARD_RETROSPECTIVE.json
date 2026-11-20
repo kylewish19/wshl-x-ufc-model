@@ -1,0 +1,375 @@
+{
+  "all_bouts": 41,
+  "draw_event_count": 1,
+  "evaluation_events": [
+    {
+      "event": "ufc333_2026-10-24",
+      "event_date": "2026-10-24",
+      "fake_draw_query_result_persisted_as_real_result": false,
+      "frozen_source": "data/locks/ufc333_2026-10-24/stage_a_model_raw_three_view.json",
+      "original_fight_count": 14,
+      "original_lock_and_raw_sha_verified": true,
+      "prior_quality_from_ufc_derived_archive": true,
+      "shadow_fit_rows_strictly_before_event": 125
+    },
+    {
+      "event": "ufcvegas124_2026-11-07",
+      "event_date": "2026-11-07",
+      "fake_draw_query_result_persisted_as_real_result": false,
+      "frozen_source": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json",
+      "original_fight_count": 14,
+      "original_lock_and_raw_sha_verified": true,
+      "prior_quality_from_ufc_derived_archive": true,
+      "shadow_fit_rows_strictly_before_event": 139
+    },
+    {
+      "event": "ufc334_2026-11-14",
+      "event_date": "2026-11-14",
+      "fake_draw_query_result_persisted_as_real_result": false,
+      "frozen_source": "data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json",
+      "original_fight_count": 13,
+      "original_lock_and_raw_sha_verified": true,
+      "prior_quality_from_ufc_derived_archive": true,
+      "shadow_fit_rows_strictly_before_event": 153
+    }
+  ],
+  "model_promoted": false,
+  "outcome_views": 123,
+  "per_event": {
+    "ufc333_2026-10-24": {
+      "historical": {
+        "intercept_only": {
+          "conditional_method_correct_when_selected_fighter_wins": 3,
+          "decisive_fights": 14,
+          "exact_fighter_method_correct": 3,
+          "six_way_brier": 0.8477913304605602,
+          "six_way_logloss": 1.7499814752923892,
+          "winner_correct": 9
+        },
+        "original_coherent": {
+          "conditional_method_correct_when_selected_fighter_wins": 3,
+          "decisive_fights": 14,
+          "exact_fighter_method_correct": 3,
+          "six_way_brier": 0.8205720044040954,
+          "six_way_logloss": 1.6975347544478652,
+          "winner_correct": 9
+        },
+        "quality_only": {
+          "conditional_method_correct_when_selected_fighter_wins": 2,
+          "decisive_fights": 14,
+          "exact_fighter_method_correct": 2,
+          "six_way_brier": 0.8496632221727997,
+          "six_way_logloss": 1.7532734058150636,
+          "winner_correct": 9
+        }
+      },
+      "reference": {
+        "intercept_only": {
+          "conditional_method_correct_when_selected_fighter_wins": 1,
+          "decisive_fights": 14,
+          "exact_fighter_method_correct": 1,
+          "six_way_brier": 0.926679689695514,
+          "six_way_logloss": 1.9498821836209355,
+          "winner_correct": 8
+        },
+        "original_coherent": {
+          "conditional_method_correct_when_selected_fighter_wins": 3,
+          "decisive_fights": 14,
+          "exact_fighter_method_correct": 3,
+          "six_way_brier": 0.877629286957686,
+          "six_way_logloss": 1.803169703908609,
+          "winner_correct": 8
+        },
+        "quality_only": {
+          "conditional_method_correct_when_selected_fighter_wins": 1,
+          "decisive_fights": 14,
+          "exact_fighter_method_correct": 1,
+          "six_way_brier": 0.9269024271128846,
+          "six_way_logloss": 1.9476031995255958,
+          "winner_correct": 8
+        }
+      },
+      "unified": {
+        "intercept_only": {
+          "conditional_method_correct_when_selected_fighter_wins": 2,
+          "decisive_fights": 14,
+          "exact_fighter_method_correct": 2,
+          "six_way_brier": 0.8639196229162225,
+          "six_way_logloss": 1.7793773178717847,
+          "winner_correct": 8
+        },
+        "original_coherent": {
+          "conditional_method_correct_when_selected_fighter_wins": 3,
+          "decisive_fights": 14,
+          "exact_fighter_method_correct": 3,
+          "six_way_brier": 0.8291051830147732,
+          "six_way_logloss": 1.6922036723371392,
+          "winner_correct": 8
+        },
+        "quality_only": {
+          "conditional_method_correct_when_selected_fighter_wins": 2,
+          "decisive_fights": 14,
+          "exact_fighter_method_correct": 2,
+          "six_way_brier": 0.8650564351473834,
+          "six_way_logloss": 1.7803027812473444,
+          "winner_correct": 8
+        }
+      }
+    },
+    "ufc334_2026-11-14": {
+      "historical": {
+        "intercept_only": {
+          "conditional_method_correct_when_selected_fighter_wins": 3,
+          "decisive_fights": 12,
+          "exact_fighter_method_correct": 3,
+          "six_way_brier": 0.8269256883461201,
+          "six_way_logloss": 1.7376878825420665,
+          "winner_correct": 6
+        },
+        "original_coherent": {
+          "conditional_method_correct_when_selected_fighter_wins": 3,
+          "decisive_fights": 12,
+          "exact_fighter_method_correct": 3,
+          "six_way_brier": 0.7668573815331491,
+          "six_way_logloss": 1.5918651801194352,
+          "winner_correct": 6
+        },
+        "quality_only": {
+          "conditional_method_correct_when_selected_fighter_wins": 3,
+          "decisive_fights": 12,
+          "exact_fighter_method_correct": 3,
+          "six_way_brier": 0.82875887974293,
+          "six_way_logloss": 1.7376322616309487,
+          "winner_correct": 6
+        }
+      },
+      "reference": {
+        "intercept_only": {
+          "conditional_method_correct_when_selected_fighter_wins": 1,
+          "decisive_fights": 12,
+          "exact_fighter_method_correct": 1,
+          "six_way_brier": 0.9219257641397248,
+          "six_way_logloss": 1.8365379019882127,
+          "winner_correct": 8
+        },
+        "original_coherent": {
+          "conditional_method_correct_when_selected_fighter_wins": 1,
+          "decisive_fights": 12,
+          "exact_fighter_method_correct": 1,
+          "six_way_brier": 0.8357258458059897,
+          "six_way_logloss": 1.6461963580989263,
+          "winner_correct": 8
+        },
+        "quality_only": {
+          "conditional_method_correct_when_selected_fighter_wins": 1,
+          "decisive_fights": 12,
+          "exact_fighter_method_correct": 1,
+          "six_way_brier": 0.924761545904798,
+          "six_way_logloss": 1.8373759414548532,
+          "winner_correct": 8
+        }
+      },
+      "unified": {
+        "intercept_only": {
+          "conditional_method_correct_when_selected_fighter_wins": 3,
+          "decisive_fights": 12,
+          "exact_fighter_method_correct": 3,
+          "six_way_brier": 0.8452077170419594,
+          "six_way_logloss": 1.738664939371526,
+          "winner_correct": 7
+        },
+        "original_coherent": {
+          "conditional_method_correct_when_selected_fighter_wins": 3,
+          "decisive_fights": 12,
+          "exact_fighter_method_correct": 3,
+          "six_way_brier": 0.7739390055130996,
+          "six_way_logloss": 1.579026238332374,
+          "winner_correct": 7
+        },
+        "quality_only": {
+          "conditional_method_correct_when_selected_fighter_wins": 2,
+          "decisive_fights": 12,
+          "exact_fighter_method_correct": 2,
+          "six_way_brier": 0.8472800307899776,
+          "six_way_logloss": 1.738970986714195,
+          "winner_correct": 7
+        }
+      }
+    },
+    "ufcvegas124_2026-11-07": {
+      "historical": {
+        "intercept_only": {
+          "conditional_method_correct_when_selected_fighter_wins": 7,
+          "decisive_fights": 14,
+          "exact_fighter_method_correct": 7,
+          "six_way_brier": 0.7321791427176417,
+          "six_way_logloss": 1.5373892846530783,
+          "winner_correct": 11
+        },
+        "original_coherent": {
+          "conditional_method_correct_when_selected_fighter_wins": 7,
+          "decisive_fights": 14,
+          "exact_fighter_method_correct": 7,
+          "six_way_brier": 0.6913651088163373,
+          "six_way_logloss": 1.4653556045733713,
+          "winner_correct": 11
+        },
+        "quality_only": {
+          "conditional_method_correct_when_selected_fighter_wins": 7,
+          "decisive_fights": 14,
+          "exact_fighter_method_correct": 7,
+          "six_way_brier": 0.7323108552967715,
+          "six_way_logloss": 1.53826042791721,
+          "winner_correct": 11
+        }
+      },
+      "reference": {
+        "intercept_only": {
+          "conditional_method_correct_when_selected_fighter_wins": 4,
+          "decisive_fights": 14,
+          "exact_fighter_method_correct": 4,
+          "six_way_brier": 0.8214295454637021,
+          "six_way_logloss": 1.605193462023627,
+          "winner_correct": 9
+        },
+        "original_coherent": {
+          "conditional_method_correct_when_selected_fighter_wins": 5,
+          "decisive_fights": 14,
+          "exact_fighter_method_correct": 5,
+          "six_way_brier": 0.7512997455752078,
+          "six_way_logloss": 1.466432398270331,
+          "winner_correct": 9
+        },
+        "quality_only": {
+          "conditional_method_correct_when_selected_fighter_wins": 4,
+          "decisive_fights": 14,
+          "exact_fighter_method_correct": 4,
+          "six_way_brier": 0.8215821204673065,
+          "six_way_logloss": 1.6066250645484128,
+          "winner_correct": 9
+        }
+      },
+      "unified": {
+        "intercept_only": {
+          "conditional_method_correct_when_selected_fighter_wins": 8,
+          "decisive_fights": 14,
+          "exact_fighter_method_correct": 8,
+          "six_way_brier": 0.743776570320579,
+          "six_way_logloss": 1.5256783999288603,
+          "winner_correct": 11
+        },
+        "original_coherent": {
+          "conditional_method_correct_when_selected_fighter_wins": 8,
+          "decisive_fights": 14,
+          "exact_fighter_method_correct": 8,
+          "six_way_brier": 0.6929017438385051,
+          "six_way_logloss": 1.4296490799818042,
+          "winner_correct": 11
+        },
+        "quality_only": {
+          "conditional_method_correct_when_selected_fighter_wins": 7,
+          "decisive_fights": 14,
+          "exact_fighter_method_correct": 7,
+          "six_way_brier": 0.7439411672253,
+          "six_way_logloss": 1.52673806300165,
+          "winner_correct": 11
+        }
+      }
+    }
+  },
+  "schema": "WSHL_X_SELECTED_FIGHTER_EXACT_METHOD_BACKTEST_RESEARCH_V1",
+  "status": "RETROSPECTIVE_SHADOW_ONLY_NOT_PROSPECTIVELY_FROZEN",
+  "summary": {
+    "historical": {
+      "intercept_only": {
+        "conditional_method_correct_when_selected_fighter_wins": 13,
+        "decisive_fights": 40,
+        "exact_fighter_method_correct": 13,
+        "six_way_brier": 0.8010673721162067,
+        "six_way_logloss": 1.671886130743534,
+        "winner_correct": 26
+      },
+      "original_coherent": {
+        "conditional_method_correct_when_selected_fighter_wins": 13,
+        "decisive_fights": 40,
+        "exact_fighter_method_correct": 13,
+        "six_way_brier": 0.7592352040870962,
+        "six_way_logloss": 1.5845711796932633,
+        "winner_correct": 26
+      },
+      "quality_only": {
+        "conditional_method_correct_when_selected_fighter_wins": 12,
+        "decisive_fights": 40,
+        "exact_fighter_method_correct": 12,
+        "six_way_brier": 0.8023185910372291,
+        "six_way_logloss": 1.6733265202955807,
+        "winner_correct": 26
+      }
+    },
+    "reference": {
+      "intercept_only": {
+        "conditional_method_correct_when_selected_fighter_wins": 6,
+        "decisive_fights": 40,
+        "exact_fighter_method_correct": 6,
+        "six_way_brier": 0.8884159615476429,
+        "six_way_logloss": 1.7952378465720606,
+        "winner_correct": 25
+      },
+      "original_coherent": {
+        "conditional_method_correct_when_selected_fighter_wins": 9,
+        "decisive_fights": 40,
+        "exact_fighter_method_correct": 9,
+        "six_way_brier": 0.8208429151283099,
+        "six_way_logloss": 1.638219643192307,
+        "winner_correct": 25
+      },
+      "quality_only": {
+        "conditional_method_correct_when_selected_fighter_wins": 6,
+        "decisive_fights": 40,
+        "exact_fighter_method_correct": 6,
+        "six_way_brier": 0.8893980554245061,
+        "six_way_logloss": 1.7951926748623592,
+        "winner_correct": 25
+      }
+    },
+    "unified": {
+      "intercept_only": {
+        "conditional_method_correct_when_selected_fighter_wins": 13,
+        "decisive_fights": 40,
+        "exact_fighter_method_correct": 13,
+        "six_way_brier": 0.8162559827454684,
+        "six_way_logloss": 1.6783689830416832,
+        "winner_correct": 26
+      },
+      "original_coherent": {
+        "conditional_method_correct_when_selected_fighter_wins": 14,
+        "decisive_fights": 40,
+        "exact_fighter_method_correct": 14,
+        "six_way_brier": 0.7648841260525773,
+        "six_way_logloss": 1.5663563348113425,
+        "winner_correct": 26
+      },
+      "quality_only": {
+        "conditional_method_correct_when_selected_fighter_wins": 11,
+        "decisive_fights": 40,
+        "exact_fighter_method_correct": 11,
+        "six_way_brier": 0.8173331700674324,
+        "six_way_logloss": 1.6791555915014065,
+        "winner_correct": 26
+      }
+    }
+  },
+  "source_ci_run": "https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/43987572406",
+  "documented_at_local_date": "2026-11-16",
+  "source_code": "src/wshlx_ufc/predicted_side_method_shadow.py",
+  "source_benchmark": "tools/run_selected_fighter_method_shadow.py",
+  "source_test": "tests/test_ufc_predicted_side_method_shadow.py",
+  "notes": [
+    "This grading selects each model's originally frozen fighter, never actual winner at inference.",
+    "Historical and Unified original sixway coherent comparator is reconstructed from archived own-method conditionals and standalone frozen side marginal (not rewriting their raw inconsistent original sixway file).",
+    "Models were modified after these events, so retrospective research evaluation is not prospective validation.",
+    "Intercept/quality challenger fitted from 153 causal winner-oriented historical method cases with rows restricted to dates strictly prior to each test event.",
+    "Method conditional features at evaluation use original selected fighter's preevent UFC-only opponent quality; no odds or postfight stats.",
+    "No champion promotion, price bet approval or original Stage A/B edits."
+  ]
+}

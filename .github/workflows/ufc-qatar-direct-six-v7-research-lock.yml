@@ -1,0 +1,107 @@
+name: Lock separately preregistered Nov21 direct-six v7 research only
+
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths:
+      - "tools/lock_ufcqatar_direct_six_v7_research.py"
+      - ".github/workflows/ufc-qatar-direct-six-v7-research-lock.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  direct-six-future-shadow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 24
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install exact project and six-state mirrored fighter regression tests
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+          pytest -q tests/test_ufc_worldwide_direct_six_v7.py tests/test_ufc_opponent_matchup_method_v6.py tests/test_ufc_worldwide_mma_identity_v4.py
+      - name: Verify pre-event status and absence of an earlier v7 prediction file
+        run: |
+          python -m py_compile tools/lock_ufcqatar_direct_six_v7_research.py
+          if test -e data/shadow_locks/ufcqatar_2026-11-21/worldwide_direct_six_v7_prospective_shadow.json; then
+            echo "Cannot overwrite pre-existing future predictions"; exit 1
+          fi
+          python - <<'PY'
+          from datetime import datetime,timezone
+          assert datetime.now(timezone.utc).isoformat() < '2026-11-21T15:00:00+00:00', 'Future research event already underway'
+          PY
+      - name: Download SHA-locked independent MMA professional history source
+        run: |
+          mkdir -p .research_cache/fightcanon
+          curl --fail --silent --show-error --location --retry 2 --connect-timeout 20 --max-time 360 \
+            --output .research_cache/fightcanon/canon.db \
+            https://github.com/Jadevit/fight-canon-db/releases/download/db-2026-11-19-1934/canon.db
+          echo '8185a2163b5f97071dbc4ec68667cceb43f5e321fadc38c26b5069303af4d949  .research_cache/fightcanon/canon.db' | sha256sum --check
+      - name: Rebuild identities and independently dated pre-UFC professional histories
+        run: python tools/audit_worldwide_mma_history_v4.py > direct_six_v7_source_stdout.log
+      - name: Fit v7 direct six model and timestamp pre-fight primary predictions for all 12 bouts
+        run: python tools/lock_ufcqatar_direct_six_v7_research.py > direct_six_v7_qatar_lock_stdout.log
+      - name: Verify SHA of all earlier immutable forecasts and zero authorized betting picks
+        run: |
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          from datetime import datetime
+          target=Path('data/shadow_locks/ufcqatar_2026-11-21/worldwide_direct_six_v7_prospective_shadow.json')
+          r=json.loads(target.read_text())
+          assert r['schema']=='WSHLX_UFC_QATAR_INDEPENDENT_DIRECT_SIX_V7_PROSPECTIVE_RESEARCH'
+          assert r['primary_architecture_locked_before_results']=='direct_paired230'
+          assert r['primary_selection_policy_locked_before_results']=='winner_marginal_method'
+          assert r['date_before_event_training_decisive_fights']==3015
+          assert r['fights_predicted']==len(r['research_fights'])==12
+          assert r['betting_picks_approved']==0
+          assert not r['FanDuel_odds_used']
+          assert r['all_prior_official_research_predictions_UNCHANGED']
+          assert r['world_MMA_source_SHA256']=='8185a2163b5f97071dbc4ec68667cceb43f5e321fadc38c26b5069303af4d949'
+          assert datetime.fromisoformat(r['created_and_locked_utc'])<datetime.fromisoformat(r['earliest_fight_utc'])
+          assert r['nested_C_chosen_using_2021_to_2024_training_and_2025_validation']['chosen_C'] in (.005,.025,.10)
+          assert len(r['original_frozen_sha256'])==6
+          for name,checksum in r['original_frozen_sha256'].items():
+              if name=='stage_a_final_selection.json':
+                  path=Path('data/locks/ufcqatar_2026-11-21')/name
+              elif name=='stage_a_final_audit.json':
+                  path=Path('data/locks/ufcqatar_2026-11-21')/name
+              else:
+                  path=Path('data/shadow_locks/ufcqatar_2026-11-21')/name
+              assert hashlib.sha256(path.read_bytes()).hexdigest()==checksum,(str(path),checksum)
+          for p in r['research_fights']:
+              assert p['not_an_approved_wager'] and p['prospective_research_only']
+              assert abs(sum(p['six_joint'].values())-1)<1e-8
+              assert 0<=p['p_exact_winner_method']<=p['p_winner']<=1
+          assert r['research_fights'][-1]['original_provisional_12th']
+          assert r['research_fights'][-1]['original_Stage_A_posture_unchanged']=='PASS'
+          print('GITHUB_SHA_LOCKED_NEW_QATAR_DIRECT_SIX_V7_SIDE_CAR_ISOLATED')
+          PY
+      - name: Commit independently timestamped research sidecar without altering existing files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/shadow_locks/ufcqatar_2026-11-21/worldwide_direct_six_v7_prospective_shadow.json
+          git commit -m "research: Nov21 independently SHA-frozen bilateral 6-state v7 primary [skip ci]"
+          git push origin HEAD:feature/historical-conditional-rates
+      - name: Archive research forecasts and independent source audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wshlx-ufc-qatar-2026-direct-six-v7-independent-prospective-shadow
+          path: |
+            data/shadow_locks/ufcqatar_2026-11-21/worldwide_direct_six_v7_prospective_shadow.json
+            direct_six_v7_source_stdout.log
+            direct_six_v7_qatar_lock_stdout.log
+          if-no-files-found: warn

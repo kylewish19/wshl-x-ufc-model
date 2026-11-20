@@ -1,0 +1,47 @@
+{
+  "validation": {
+    "n_rows": 2790.0,
+    "accuracy": 0.6021505376344086,
+    "log_loss": 0.6571022650210986,
+    "brier": 0.23212220089308502,
+    "roc_auc": 0.6523276936318906,
+    "n_fights": 1395.0
+  },
+  "test": {
+    "n_rows": 2928.0,
+    "accuracy": 0.6308060109289617,
+    "log_loss": 0.6804862889107273,
+    "brier": 0.23824809625894486,
+    "roc_auc": 0.6556600208277344,
+    "n_fights": 1464.0
+  },
+  "raw_validation": {
+    "n_rows": 2790.0,
+    "accuracy": 0.6021505376344086,
+    "log_loss": 0.6726982247388335,
+    "brier": 0.23708727345600203,
+    "roc_auc": 0.6523276936318906,
+    "n_fights": 1395.0
+  },
+  "raw_test": {
+    "n_rows": 2928.0,
+    "accuracy": 0.6308060109289617,
+    "log_loss": 0.7333767265094433,
+    "brier": 0.24517422947531012,
+    "roc_auc": 0.6556600208277344,
+    "n_fights": 1464.0
+  },
+  "calibration": {
+    "temperature": 1.7375,
+    "raw_log_loss": 0.6726982247388335,
+    "calibrated_log_loss": 0.6571022650210986,
+    "raw_brier": 0.23708727345600203,
+    "calibrated_brier": 0.23212220089308502,
+    "raw_roc_auc": 0.6523276936318906,
+    "calibrated_roc_auc": 0.6523276936318906
+  },
+  "baseline": {
+    "coinflip_log_loss": 0.6931471805599453,
+    "coinflip_brier": 0.25
+  }
+}

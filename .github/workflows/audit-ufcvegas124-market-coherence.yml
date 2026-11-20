@@ -1,0 +1,41 @@
+name: Audit UFC Vegas124 method/timing coherence
+on:
+  push:
+    branches: [feature/historical-conditional-rates]
+    paths:
+      - "src/wshlx_ufc/coherence.py"
+      - "tools/audit_ufcvegas124_market_coherence.py"
+      - ".github/workflows/audit-ufcvegas124-market-coherence.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: audit-ufcvegas124-market-coherence
+  cancel-in-progress: true
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11", cache: "pip"}
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Check frozen reference method versus timing markets and derive coherence shadow
+        run: PYTHONPATH=src:tools python tools/audit_ufcvegas124_market_coherence.py
+      - name: Test
+        run: pytest -q
+      - name: Commit independent pre-price coherence audit
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/locks/ufcvegas124_2026-11-07/stage_a_coherence_shadow.json
+          git add data/locks/ufcvegas124_2026-11-07/stage_a_coherence_audit.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "audit: preserve Vegas124 method-timing probability contradictions and unpromoted shadow"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

@@ -1,0 +1,29 @@
+event_date,bout,fighter,opponent,winner,method,finish_round,duration_seconds,source_url,kd_for,sig_landed,sig_attempted,td_landed,td_attempted,sub_att,ctrl_seconds,ground_landed,ground_attempted,r1_sig_landed,r3_sig_landed
+2026-10-24,Aaron Pico vs. Losene Keita,Aaron Pico,Losene Keita,Aaron Pico,KO,1,74.0,http://ufcstats.com/fight-details/8271c52b2987e021,1.0,6.0,10.0,1.0,2.0,0.0,37.0,4.0,6.0,6.0,0.0
+2026-10-24,Aaron Pico vs. Losene Keita,Losene Keita,Aaron Pico,Aaron Pico,KO,1,74.0,http://ufcstats.com/fight-details/8271c52b2987e021,0.0,2.0,4.0,0.0,0.0,0.0,0.0,1.0,1.0,2.0,0.0
+2026-10-24,Abubakar Vagaev vs. Jacob Malkoun,Abubakar Vagaev,Jacob Malkoun,Abubakar Vagaev,DEC,3,900.0,http://ufcstats.com/fight-details/23a6bddecfa23fcd,0.0,71.0,139.0,6.0,12.0,0.0,127.0,2.0,7.0,26.0,19.0
+2026-10-24,Abubakar Vagaev vs. Jacob Malkoun,Jacob Malkoun,Abubakar Vagaev,Abubakar Vagaev,DEC,3,900.0,http://ufcstats.com/fight-details/23a6bddecfa23fcd,0.0,106.0,202.0,0.0,4.0,0.0,12.0,0.0,0.0,30.0,31.0
+2026-10-24,Abus Magomedov vs. Cam Rowston,Abus Magomedov,Cam Rowston,Abus Magomedov,SUB,1,104.0,http://ufcstats.com/fight-details/69aec85e917d47e6,0.0,11.0,15.0,0.0,0.0,1.0,7.0,0.0,0.0,11.0,0.0
+2026-10-24,Abus Magomedov vs. Cam Rowston,Cam Rowston,Abus Magomedov,Abus Magomedov,SUB,1,104.0,http://ufcstats.com/fight-details/69aec85e917d47e6,0.0,1.0,11.0,1.0,1.0,0.0,6.0,0.0,0.0,1.0,0.0
+2026-10-24,Alexander Volkanovski vs. Movsar Evloev,Alexander Volkanovski,Movsar Evloev,Alexander Volkanovski,KO,2,594.0,http://ufcstats.com/fight-details/ce1388d6c7651d2e,0.0,56.0,110.0,1.0,2.0,0.0,104.0,11.0,16.0,24.0,0.0
+2026-10-24,Alexander Volkanovski vs. Movsar Evloev,Movsar Evloev,Alexander Volkanovski,Alexander Volkanovski,KO,2,594.0,http://ufcstats.com/fight-details/ce1388d6c7651d2e,0.0,40.0,65.0,3.0,7.0,0.0,46.0,1.0,1.0,20.0,0.0
+2026-10-24,Alexander Volkov vs. Rizvan Kuniev,Alexander Volkov,Rizvan Kuniev,Alexander Volkov,DEC,3,900.0,http://ufcstats.com/fight-details/8788a6dda6e64aff,0.0,74.0,150.0,0.0,0.0,1.0,122.0,0.0,0.0,21.0,27.0
+2026-10-24,Alexander Volkov vs. Rizvan Kuniev,Rizvan Kuniev,Alexander Volkov,Alexander Volkov,DEC,3,900.0,http://ufcstats.com/fight-details/8788a6dda6e64aff,0.0,51.0,87.0,0.0,4.0,0.0,4.0,0.0,0.0,21.0,14.0
+2026-10-24,Azamat Murzakanov vs. Dominick Reyes,Azamat Murzakanov,Dominick Reyes,Dominick Reyes,KO,1,160.0,http://ufcstats.com/fight-details/c6bcc7e9fb90da47,0.0,3.0,7.0,0.0,1.0,0.0,0.0,0.0,0.0,3.0,0.0
+2026-10-24,Azamat Murzakanov vs. Dominick Reyes,Dominick Reyes,Azamat Murzakanov,Dominick Reyes,KO,1,160.0,http://ufcstats.com/fight-details/c6bcc7e9fb90da47,1.0,14.0,24.0,0.0,0.0,0.0,4.0,5.0,6.0,14.0,0.0
+2026-10-24,Bolaji Oki vs. Daniel Santos,Bolaji Oki,Daniel Santos,Daniel Santos,DEC,3,900.0,http://ufcstats.com/fight-details/1fa88509d87cc05e,0.0,69.0,107.0,2.0,3.0,0.0,163.0,4.0,5.0,17.0,38.0
+2026-10-24,Bolaji Oki vs. Daniel Santos,Daniel Santos,Bolaji Oki,Daniel Santos,DEC,3,900.0,http://ufcstats.com/fight-details/1fa88509d87cc05e,0.0,76.0,159.0,2.0,5.0,1.0,100.0,0.0,0.0,14.0,39.0
+2026-10-24,Colby Thicknesse vs. Asaf Chopurov,Colby Thicknesse,Asaf Chopurov,Colby Thicknesse,DEC,3,900.0,http://ufcstats.com/fight-details/411ec0a245687c49,0.0,77.0,135.0,1.0,15.0,0.0,194.0,0.0,0.0,20.0,20.0
+2026-10-24,Colby Thicknesse vs. Asaf Chopurov,Asaf Chopurov,Colby Thicknesse,Colby Thicknesse,DEC,3,900.0,http://ufcstats.com/fight-details/411ec0a245687c49,0.0,54.0,96.0,8.0,12.0,0.0,301.0,2.0,3.0,22.0,12.0
+2026-10-24,Grant Dawson vs. Nurullo Aliev,Grant Dawson,Nurullo Aliev,Grant Dawson,DEC,3,900.0,http://ufcstats.com/fight-details/c70b4b6a8a5a3abb,0.0,95.0,188.0,5.0,7.0,1.0,378.0,16.0,22.0,32.0,30.0
+2026-10-24,Grant Dawson vs. Nurullo Aliev,Nurullo Aliev,Grant Dawson,Grant Dawson,DEC,3,900.0,http://ufcstats.com/fight-details/c70b4b6a8a5a3abb,0.0,65.0,106.0,1.0,2.0,0.0,86.0,0.0,0.0,33.0,14.0
+2026-10-24,Iasmin Lucindo vs. Nicolle Caliari,Iasmin Lucindo,Nicolle Caliari,Iasmin Lucindo,DEC,3,900.0,http://ufcstats.com/fight-details/4081a5fe66569321,0.0,31.0,49.0,3.0,4.0,0.0,567.0,13.0,17.0,7.0,8.0
+2026-10-24,Iasmin Lucindo vs. Nicolle Caliari,Nicolle Caliari,Iasmin Lucindo,Iasmin Lucindo,DEC,3,900.0,http://ufcstats.com/fight-details/4081a5fe66569321,0.0,27.0,36.0,2.0,4.0,0.0,135.0,4.0,4.0,2.0,9.0
+2026-10-24,Kody Steele vs. Noah Gugnon,Kody Steele,Noah Gugnon,Kody Steele,KO,1,234.0,http://ufcstats.com/fight-details/02df66c779a72260,1.0,25.0,52.0,1.0,3.0,0.0,22.0,3.0,3.0,25.0,0.0
+2026-10-24,Kody Steele vs. Noah Gugnon,Noah Gugnon,Kody Steele,Kody Steele,KO,1,234.0,http://ufcstats.com/fight-details/02df66c779a72260,0.0,31.0,57.0,0.0,0.0,0.0,0.0,0.0,0.0,31.0,0.0
+2026-10-24,Lone'er Kavanagh vs. Ramazan Temirov,Lone'er Kavanagh,Ramazan Temirov,Lone'er Kavanagh,KO,1,268.0,http://ufcstats.com/fight-details/b9004bd72276a190,1.0,23.0,44.0,0.0,0.0,0.0,1.0,1.0,1.0,23.0,0.0
+2026-10-24,Lone'er Kavanagh vs. Ramazan Temirov,Ramazan Temirov,Lone'er Kavanagh,Lone'er Kavanagh,KO,1,268.0,http://ufcstats.com/fight-details/b9004bd72276a190,0.0,18.0,40.0,0.0,0.0,0.0,0.0,0.0,0.0,18.0,0.0
+2026-10-24,Nikita Krylov vs. Abdul Rakhman Yakhyaev,Nikita Krylov,Abdul Rakhman Yakhyaev,Abdul Rakhman Yakhyaev,KO,1,158.0,http://ufcstats.com/fight-details/6193cd89b1cd9a9e,0.0,4.0,6.0,0.0,1.0,0.0,89.0,0.0,0.0,4.0,0.0
+2026-10-24,Nikita Krylov vs. Abdul Rakhman Yakhyaev,Abdul Rakhman Yakhyaev,Nikita Krylov,Abdul Rakhman Yakhyaev,KO,1,158.0,http://ufcstats.com/fight-details/6193cd89b1cd9a9e,1.0,6.0,9.0,1.0,1.0,1.0,44.0,2.0,3.0,6.0,0.0
+2026-10-24,Petr Yan vs. Merab Dvalishvili,Petr Yan,Merab Dvalishvili,Petr Yan,DEC,5,1500.0,http://ufcstats.com/fight-details/e262f5e588b149a6,0.0,128.0,228.0,0.0,1.0,0.0,23.0,2.0,2.0,6.0,24.0
+2026-10-24,Petr Yan vs. Merab Dvalishvili,Merab Dvalishvili,Petr Yan,Petr Yan,DEC,5,1500.0,http://ufcstats.com/fight-details/e262f5e588b149a6,0.0,131.0,363.0,5.0,58.0,0.0,114.0,0.0,0.0,8.0,31.0

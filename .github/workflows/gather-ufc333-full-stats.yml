@@ -1,0 +1,37 @@
+name: gather-ufc333-full-stats
+on:
+  push:
+    branches: [feature/historical-conditional-rates]
+    paths:
+      - "tools/gather_ufc333_full_stats.py"
+      - ".github/workflows/gather-ufc333-full-stats.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: gather-ufc333-full-stats
+  cancel-in-progress: true
+jobs:
+  gather:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11", cache: "pip"}
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Gather and validate against frozen grade
+        run: PYTHONPATH=src python tools/gather_ufc333_full_stats.py
+      - name: Commit pinned source and event extracts
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/raw/ufc333_2026-10-24
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "data: record canonical UFC 333 full round stats"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin HEAD:"${GITHUB_REF_NAME}"

@@ -1,0 +1,121 @@
+name: Worldwide MMA independently fitted KO/SUB/DEC method v5 research
+
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths:
+      - "tools/benchmark_worldwide_method_v5.py"
+      - "tools/lock_ufcqatar_worldwide_method_v5_research.py"
+      - "tests/test_ufc_worldwide_method_v5.py"
+      - ".github/workflows/worldwide-mma-method-v5-research.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  method-research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install research project
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Test real exact fighter-method scoring and original prior source integrity
+        run: pytest -q tests/test_ufc_worldwide_method_v5.py tests/test_ufc_worldwide_winner_v4.py tests/test_ufc_worldwide_mma_identity_v4.py
+      - name: Fetch precisely the original verified source release with SHA enforcement
+        run: |
+          mkdir -p .research_cache/fightcanon
+          curl --fail --silent --show-error --location --retry 2 --connect-timeout 20 --max-time 360 \
+            --output .research_cache/fightcanon/canon.db \
+            https://github.com/Jadevit/fight-canon-db/releases/download/db-2026-11-19-1934/canon.db
+          echo '8185a2163b5f97071dbc4ec68667cceb43f5e321fadc38c26b5069303af4d949  .research_cache/fightcanon/canon.db' | sha256sum --check
+      - name: Reconstruct VERIFIED historical professional fight identities as-of UFC bouts
+        run: python tools/audit_worldwide_mma_history_v4.py > world_history_method_v5_source_stdout.log
+      - name: Train baseline 38 versus worldwide 54 conditional method classifiers on prior years
+        run: python tools/benchmark_worldwide_method_v5.py > worldwide_method_v5_stdout.log
+      - name: Refuse overwrites of future method-v5 shadow and post-event historical claims
+        run: |
+          python -m py_compile tools/lock_ufcqatar_worldwide_method_v5_research.py
+          if test -f data/shadow_locks/ufcqatar_2026-11-21/worldwide_method_v5_prospective_shadow.json; then
+            echo "Cannot rewrite original future-only method experiment"; exit 1
+          fi
+          python - <<'PY'
+          from datetime import datetime,timezone
+          assert datetime.now(timezone.utc).isoformat() < '2026-11-21T15:00:00+00:00'
+          PY
+      - name: Lock new regional method-v5 November 21 predictions on frozen Winner v3 probabilities
+        run: python tools/lock_ufcqatar_worldwide_method_v5_research.py > worldwide_method_v5_nov21_lock_stdout.log
+      - name: Verify exact fighter-method grade, chronological provenance and preserved future locks
+        run: |
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          p=Path('reports/model_health/2026-11-19_worldwide_method_v5')
+          data=json.loads((p/'worldwide_method_v5_results.json').read_text())
+          assert data['no_model_or_bet_promotion']
+          assert data['all_original_nov21_reference_historical_unified_coherent_v3_v4_frozen_untouched']
+          assert data['new_method_head_trained_on_past_winners_only']
+          assert data['winner_head_FIXED_within_each_method_comparison']
+          assert data['two_potential_winner_methods_forecast_before_result']
+          assert data['win_method_exact_primary_metric']
+          assert [data['yearly'][y]['evaluation_fights'] for y in
+                  ('2024','2025','2026_retrospective')]==[511,513,488]
+          assert all(len(y['models'])==6 and y['same_winner_head_within_method_comparison']
+                      for y in data['yearly'].values())
+          assert hashlib.sha256((p/'worldwide_mma_method_v5_datefold_forecasts.csv').read_bytes()).hexdigest()==data['predictions_csv_sha256']
+          for f in (
+             'data/locks/ufcqatar_2026-11-21/stage_a_final_selection.json',
+             'data/shadow_locks/ufcqatar_2026-11-21/coherent_joint_pre_event_shadow.json',
+             'data/shadow_locks/ufcqatar_2026-11-21/winner_v3_prospective_shadow.json',
+             'data/shadow_locks/ufcqatar_2026-11-21/worldwide_winner_v4_prospective_shadow.json',
+          ):
+              assert Path(f).exists()
+          print('INDEPENDENT_WORLD_MMA_FINISH_V5_MATCHED_COHORTS_VALIDATED_NO_PROMOTION')
+          from datetime import datetime
+          q=Path('data/shadow_locks/ufcqatar_2026-11-21/worldwide_method_v5_prospective_shadow.json')
+          side=json.loads(q.read_text())
+          assert side['primary_registered_method_model']=='worldwide_MMA_multinomial54'
+          assert side['new_model_modifies_ONLY_method_given_winner']
+          assert side['winner_head_fixed_to_independent_v3_prospectively_frozen']
+          assert side['all_12_test_prospectively_no_results_used']
+          assert side['no_FanDuel_prices_or_approved_wagers']
+          assert side['train_method_n_decisive_bouts']==3015
+          assert side['n_fights']==12
+          assert datetime.fromisoformat(side['locked_at_utc'])<datetime.fromisoformat(side['first_bout_at_utc'])
+          for path,attr in (
+            ('data/locks/ufcqatar_2026-11-21/stage_a_final_selection.json','original_stage_a_sha256'),
+            ('data/shadow_locks/ufcqatar_2026-11-21/coherent_joint_pre_event_shadow.json','original_coherent_sha256'),
+            ('data/shadow_locks/ufcqatar_2026-11-21/winner_v3_prospective_shadow.json','independent_v3_sha256'),
+            ('data/shadow_locks/ufcqatar_2026-11-21/worldwide_winner_v4_prospective_shadow.json','independent_v4_sha256'),
+          ):
+              assert hashlib.sha256(Path(path).read_bytes()).hexdigest()==side[attr]
+          assert all(r['no_method_bets_approved'] for r in side['research_predictions'])
+          assert all(len(r['method_model_variants'])==3 for r in side['research_predictions'])
+          print('FUTURE_WORLDWIDE_METHOD_V5_SAME_WINNER_ONLY_PROSPECTIVE_SHA_LOCK_PASSED')
+          PY
+      - name: Commit immutable separately timestamped Nov21 method-only research shadow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/shadow_locks/ufcqatar_2026-11-21/worldwide_method_v5_prospective_shadow.json
+          git commit -m "research: pre-Nov21 same-winner independent world-MMA method-v5 forecast [skip ci]"
+          git push origin HEAD:feature/historical-conditional-rates
+      - name: Archive complete predictions and proper class scores for audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wshlx-worldwide-mma-method-v5-chronological-audit
+          path: |
+            reports/model_health/2026-11-19_worldwide_method_v5/
+            world_history_method_v5_source_stdout.log
+            worldwide_method_v5_stdout.log
+            data/shadow_locks/ufcqatar_2026-11-21/worldwide_method_v5_prospective_shadow.json
+            worldwide_method_v5_nov21_lock_stdout.log
+          if-no-files-found: warn

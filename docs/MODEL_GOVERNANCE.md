@@ -38,6 +38,42 @@ Training folds for evaluation must respect chronology. Random train/test splits 
 
 Odds are not prediction features in the core fight models. Predictions are frozen first. Prices may be used afterward to calculate expected value and to decide whether a supported outcome is bettable.
 
+## Permanent UFC Stage B Top 5 + Top 5 straight-bet cards (effective 2026-11-07)
+
+Stage B now has two independently graded FanDuel-only categories: **Top 5 Longshots** (American **+200 and longer**) and **Top 5 Best Bets** (American **−150 to +190**, inclusive). A fight may appear **once in each category only if the two outcomes can both win** (e.g., Fighter A ML plus Fighter A by KO/TKO). Fighter A ML plus Fighter B ML is incompatible and prohibited. One market maximum per fight **within** each tier; up to two per fight across tiers if compatible. Maximum five **approved** bets per category, never forced to five; separately display up to five researched markets per tier with any unqualified entries clearly marked PASS. **+191 to +199 and shorter than −150 are outside these two categories.**
+
+Select only verified, timestamped, pre-fight FanDuel lines from the existing odds-blind frozen Stage A. Research, price, calibration, Stage A support, and market-family checks must all pass; preserve existing probability/method/timing gates. Rank gate-cleared candidates by **conservative expected value**, then edge and reliability, and enforce tested **logical win-condition compatibility** (not blanket fight exclusivity) across categories. Compatible same-fight picks are highly correlated, so show exposure concentration. Exact typed market specifications are required; unknown markets fail closed. Display-only top-five research slots never count as official bets. **Price alone cannot flip Stage A or promote a PASS, and a new tier cannot bypass blocked method bets.**
+
+After the card, grade W-L, units risked, net P/L and ROI for **each category separately**, with pushes/voids/pending distinguished. Recommendations are **not** evidence of actual wager placement. Three-leg parlays are optional research only, never a required Top-5 output. The new categories do **not** rewrite old official betting records.
+
+See the executable specification and schema in [TWO_TIER_TOP5_FANDUEL_POLICY.md](TWO_TIER_TOP5_FANDUEL_POLICY.md), `src/wshlx_ufc/two_tier_card.py`, and `tests/test_two_tier_card.py`.
+
+## One primary timing prediction per fight — new WSHL_X workflow (effective Nov 7, 2026)
+
+Each UFC matchup must have **exactly ONE clearly named primary timing forecast** for post-card grading (rather than presenting GTD, O/U, and rounds-to-start as if all are simultaneously official picks). This is a **prediction-track slot**, NOT a requirement to gamble on that slot.
+
+- From the **pre-fight odds-blind timing probabilities**, consider GTD Yes/No, relevant fight O/U thresholds, and Round 3 Starts Yes/No; choose the most reliable prediction based on a documented deterministic rule, using the **minimum** of the current and unified timing-model probability as an uncalibrated agreement/stress check. Both full probability vectors stay in the archive. Do not optimize based on FanDuel prices.
+- Avoid automatically assigning **Round 2 Starts Yes** to every fight just because it is mechanically likely and heavily priced; keep R2 probabilities in the full data but omit the routine R2-Yes market from the *primary-pick competition* unless a different documented model design earns promotion. Other timing markets may be selected instead. Round 4/5 starts for main events remain available for full reporting but are not silently inserted into the previously fixed timing-selection menu.
+- **Future cards:** predeclare and freeze a single timing market per fight in **Stage A before looking at any sportsbook odds**. The bookmaker may not offer that threshold; in that case mark PRICE UNAVAILABLE or PASS, **never retroactively substitute another timing prop** without a versioned, explicitly identified research alternative.
+- **November 7 transition exception:** the Stage A file was already frozen *without one designated timing market* before the user requested this policy. A separately timestamped **pre-event Stage B research tracking file** was generated from the original frozen current/unified timing probabilities and the markets visible in the FanDuel screenshots. **It is not retrospectively claimed to be the original pre-price Stage A pick**, despite the probabilities being unmodified.
+- **Stage B:** attach the screenshot's timestamped FanDuel price, then check conservative expected value, 12-percentage-point timing edge, sufficient UFC evidence, timing-vs-method family coherence and all other existing timing rules. If any gate fails, mark **MODEL FORECAST ONLY / NO APPROVED BET**. An attractive odds quote does not override this.
+- **Post-fight grading:** grade exactly one selected timing event per fight independently of moneyline, method, all other forecast markets, and officially wagered timing bets. Report 14-slate accuracy, separate type breakdown, and prospective calibration / ROI only when an actual pre-event price-qualified official timing bet was recorded.
+- Keep the historical raw timing probabilities for later diagnostic grading but **do not inflate the primary timing pick win count by evaluating several correlated markets and choosing the best outcome after the fact**.
+
+For Nov 7 the audit selector is `tools/select_ufcvegas124_single_timing_picks.py` and the separately frozen tracking file is `data/locks/ufcvegas124_2026-11-07/stage_b_one_timing_forecast_per_fight.json`.
+
+## Post-event UFC full-stat ML update — November 7, 2026
+
+**Data verified and integrated on November 9:** All 14 Nov 7 fights and 68 UFCStats fighter-round statistical rows were archived from a pinned **November 8 third-party UFCStats scrape** (`Greco1899/scrape_ufc_stats@c742842f29466758fedc3906dbad28d6d320a8da`). Raw source receipts and exact per-fight validation are in `data/raw/ufcvegas124_2026-11-07/availability.json`.
+
+**Future-only learning:** `tools/integrate_ufcvegas124_full_stats.py` includes 28 fighter-level aggregates in the 8,807-fight performance backbone and refits five future-only shadow components (winner, conditional method baseline, intercept calibrator, residual challenger, 30s timing). The 139 earlier frozen causal method-feedback rows remain unchanged, with 14 additional Nov7 locked pre-event baseline conditional-method forecasts appended post-event to form 153 legal training observations. **A fighter's Nov7 post-fight statistics cannot enter that same Nov7 pre-fight evaluation.** The separate historical-conditional research shadow was also refit through Nov7 on its own 8,832-fight source population; inclusion rules differ from the performance backbone.
+
+**Generalization gate:** Compared the genuinely frozen Nov7 reference/historical/unified results with earlier 112-fight winner and 88-fight fighter+method historical OOF and 61-fight walk-forward, plus the full chronological 153-row method-calibration feedback benchmark (116 test observations, 102 predating Nov7). The Nov7 Unified exact 8/14 result is promising, but earlier OOF did not consistently favor shadows; v0.27 feature residual and v0.35 finish-access were not consistently better than the low-capacity intercept calibrator on held-out probability metrics. **NO champion or fighter-method market-family promotion**, and the **300 newly locked prospective-fight** test gate remains.
+
+For the five-step post-card workflow, exact artifact hashes, calibration metrics, limitations and code changes see [November 7 full-stat model update](../reports/ufcvegas124_2026-11-07/POST_STATS_MODEL_UPDATE_2026-11-09.md).
+
+**Next Stage A:** Do not assume event-specific runners automatically load the new post-Nov7 models. Explicitly version and load the future-only research artifacts, freeze those predictions before any bookmaker prices, and keep the current reference champion and method/timing coherence safeguards untouched until documented authorization and prospective validation.
+
 ## Tape
 
 Tape is a separately logged evidence layer. Each source must be classified honestly as one of:

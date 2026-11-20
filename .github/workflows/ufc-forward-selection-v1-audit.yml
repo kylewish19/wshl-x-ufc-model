@@ -1,0 +1,72 @@
+name: UFC Nov21 prospective selection and FanDuel verification audit
+
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths:
+      - "src/wshlx_ufc/forward_validation_v1.py"
+      - "tools/audit_ufcqatar_forward_selection_readiness.py"
+      - "tests/test_ufc_forward_validation_v1.py"
+      - "tests/test_ufc_qatar_forward_readiness_v1.py"
+      - ".github/workflows/ufc-forward-selection-v1-audit.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  independent-evaluation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install project with regression checks
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Verify six-state grading, real prior calibration, no forced 2-5 picks and FanDuel math
+        run: pytest -q tests/test_ufc_forward_validation_v1.py tests/test_ufc_qatar_forward_readiness_v1.py tests/test_selection_policy.py
+      - name: Build November 21 exact-selection readiness from genuine frozen primary v7 file
+        run: |
+          python tools/audit_ufcqatar_forward_selection_readiness.py \
+            --output reports/model_health/2026-11-20_qatar_forward_selection_readiness.json \
+            > selection_readiness_stdout.log
+      - name: Verify original and research SHAs and zero unapproved selections
+        run: |
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          report=json.loads(Path(
+             'reports/model_health/2026-11-20_qatar_forward_selection_readiness.json').read_text())
+          root=Path('data/locks/ufcqatar_2026-11-21/stage_a_final_selection.json')
+          side=Path('data/shadow_locks/ufcqatar_2026-11-21/worldwide_direct_six_v7_prospective_shadow.json')
+          assert report['original_stage_a_sha256']==hashlib.sha256(root.read_bytes()).hexdigest()
+          assert report['direct_six_v7_research_lock_sha256']==hashlib.sha256(side.read_bytes()).hexdigest()
+          assert report['original_stage_a_and_all_research_locks_UNMODIFIED']
+          assert report['no_results_seen']
+          assert not report['FanDuel_quotes_verified']
+          assert report['new_official_betting_picks']==0
+          assert report['paper_model_is_NOT_promoted']
+          assert report['reviewed_bouts']==12
+          assert report['research_calibration']['prospective_fights']==0
+          assert report['candidate_selection']['num_selected']==0
+          assert report['candidate_selection']['will_not_promise_100_percent_exact']
+          assert all(not v['independent_eligibility'] for v in
+              report['candidate_selection']['all_reviews'])
+          assert any(not v['source_qa_verified'] for v in
+              report['candidate_selection']['all_reviews'])
+          print('PREFIGHT_UNCALIBRATED_MODEL_BLOCKED_NO_FANDUEL_PLAYABLE_PICK_DECLARED')
+          PY
+      - name: Preserve timestamped complete pre-event abstention audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wshlx-nov21-forward-selection-preregistered-readiness
+          path: |
+            reports/model_health/2026-11-20_qatar_forward_selection_readiness.json
+            selection_readiness_stdout.log
+          if-no-files-found: warn

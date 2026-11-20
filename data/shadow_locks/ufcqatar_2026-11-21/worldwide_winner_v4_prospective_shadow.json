@@ -1,0 +1,1064 @@
+{
+  "all_fight_history_used_date_strictly_before_event": true,
+  "event_date": "2026-11-21",
+  "external_source_SHA256": "8185a2163b5f97071dbc4ec68667cceb43f5e321fadc38c26b5069303af4d949",
+  "external_source_version": "FightCanon db-2026-11-19-1934",
+  "fights": [
+    {
+      "a": "Diyar Nurgozhay",
+      "a_prior_UFC_bouts": 4,
+      "b": "Alik Lorenz",
+      "b_prior_UFC_bouts": 0,
+      "cross_promotion_identity_or_UFC_data_warning": "UNKNOWN_NONUFC_IDENTITY_PASS",
+      "external_source_fighter_ids": {
+        "a": 117155,
+        "b": null
+      },
+      "external_source_ids_verified_both": false,
+      "fight_no": 1,
+      "not_authorized_for_any_bet": true,
+      "original_betting_posture_unmodified": "PASS",
+      "provisional": false,
+      "research_variants": {
+        "winner_v3_boost57": {
+          "method": "DEC",
+          "p_a_win": 0.5573552898267672,
+          "p_exact_fighter_method": 0.2830570953728258,
+          "p_winner": 0.5573552898267672,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2830570953728258,
+            "A_KO": 0.23338741556417916,
+            "A_SUB": 0.04091077888976216,
+            "B_DEC": 0.13476071452520358,
+            "B_KO": 0.1988779627402987,
+            "B_SUB": 0.10900603290773048
+          },
+          "winner": "Diyar Nurgozhay"
+        },
+        "winner_v3_logit57": {
+          "method": "DEC",
+          "p_a_win": 0.5707011429697855,
+          "p_exact_fighter_method": 0.2898348877341564,
+          "p_winner": 0.5707011429697855,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2898348877341564,
+            "A_KO": 0.2389758691599389,
+            "A_SUB": 0.041890386075690116,
+            "B_DEC": 0.1306976439311876,
+            "B_KO": 0.1928817404357874,
+            "B_SUB": 0.10571947266323947
+          },
+          "winner": "Diyar Nurgozhay"
+        },
+        "winner_v4_boost73": {
+          "method": "DEC",
+          "p_a_win": 0.6687089982637375,
+          "p_exact_fighter_method": 0.3396089176026964,
+          "p_winner": 0.6687089982637375,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.3396089176026964,
+            "A_KO": 0.2800157596383319,
+            "A_SUB": 0.049084321022709106,
+            "B_DEC": 0.10085969872378454,
+            "B_KO": 0.14884732153178878,
+            "B_SUB": 0.0815839814806891
+          },
+          "winner": "Diyar Nurgozhay"
+        },
+        "winner_v4_logit73": {
+          "method": "DEC",
+          "p_a_win": 0.9476286937491568,
+          "p_exact_fighter_method": 0.48126039250107683,
+          "p_winner": 0.9476286937491568,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.48126039250107683,
+            "A_KO": 0.3968108238773788,
+            "A_SUB": 0.06955747737070107,
+            "B_DEC": 0.01594415224846997,
+            "B_KO": 0.023530155119530896,
+            "B_SUB": 0.012896998882842313
+          },
+          "winner": "Diyar Nurgozhay"
+        }
+      }
+    },
+    {
+      "a": "Nikolas Motta",
+      "a_prior_UFC_bouts": 6,
+      "b": "Dom Mar Fan",
+      "b_prior_UFC_bouts": 2,
+      "cross_promotion_identity_or_UFC_data_warning": "SPARSE_UFC_SAMPLE",
+      "external_source_fighter_ids": {
+        "a": 65620,
+        "b": 149338
+      },
+      "external_source_ids_verified_both": true,
+      "fight_no": 2,
+      "not_authorized_for_any_bet": true,
+      "original_betting_posture_unmodified": "LEAN",
+      "provisional": false,
+      "research_variants": {
+        "winner_v3_boost57": {
+          "method": "KO_TKO",
+          "p_a_win": 0.4287914218535236,
+          "p_exact_fighter_method": 0.29898727670549646,
+          "p_winner": 0.5712085781464764,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.12783967072841682,
+            "A_KO": 0.2544812289165153,
+            "A_SUB": 0.046470522208591485,
+            "B_DEC": 0.22191839560711438,
+            "B_KO": 0.29898727670549646,
+            "B_SUB": 0.050302905833865555
+          },
+          "winner": "Dom Mar Fan"
+        },
+        "winner_v3_logit57": {
+          "method": "KO_TKO",
+          "p_a_win": 0.2843839012658209,
+          "p_exact_fighter_method": 0.37457439666159487,
+          "p_winner": 0.7156160987341791,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.08478608117002934,
+            "A_KO": 0.16877754775355788,
+            "A_SUB": 0.030820272342233706,
+            "B_DEC": 0.2780216939616543,
+            "B_KO": 0.37457439666159487,
+            "B_SUB": 0.06302000811092984
+          },
+          "winner": "Dom Mar Fan"
+        },
+        "winner_v4_boost73": {
+          "method": "KO_TKO",
+          "p_a_win": 0.4671751699300052,
+          "p_exact_fighter_method": 0.27889610030128953,
+          "p_winner": 0.5328248300699948,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.13928338313807445,
+            "A_KO": 0.2772614033395515,
+            "A_SUB": 0.05063038345237924,
+            "B_DEC": 0.20700604989591928,
+            "B_KO": 0.27889610030128953,
+            "B_SUB": 0.04692267987278598
+          },
+          "winner": "Dom Mar Fan"
+        },
+        "winner_v4_logit73": {
+          "method": "KO_TKO",
+          "p_a_win": 0.3147958274049773,
+          "p_exact_fighter_method": 0.3586559050219553,
+          "p_winner": 0.6852041725950226,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.09385307837589879,
+            "A_KO": 0.18682656632803527,
+            "A_SUB": 0.034116182701043274,
+            "B_DEC": 0.2662064549853359,
+            "B_KO": 0.3586559050219553,
+            "B_SUB": 0.06034181258773136
+          },
+          "winner": "Dom Mar Fan"
+        }
+      }
+    },
+    {
+      "a": "Jake Matthews",
+      "a_prior_UFC_bouts": 24,
+      "b": "Tahir Abdullayev",
+      "b_prior_UFC_bouts": 1,
+      "cross_promotion_identity_or_UFC_data_warning": "SPARSE_UFC_SAMPLE",
+      "external_source_fighter_ids": {
+        "a": 68674,
+        "b": 92481
+      },
+      "external_source_ids_verified_both": true,
+      "fight_no": 3,
+      "not_authorized_for_any_bet": true,
+      "original_betting_posture_unmodified": "PASS",
+      "provisional": false,
+      "research_variants": {
+        "winner_v3_boost57": {
+          "method": "DEC",
+          "p_a_win": 0.5564376487130858,
+          "p_exact_fighter_method": 0.34012544988944465,
+          "p_winner": 0.5564376487130858,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.34012544988944465,
+            "A_KO": 0.1243518045519184,
+            "A_SUB": 0.09196039427172274,
+            "B_DEC": 0.28296982349047367,
+            "B_KO": 0.09711654049312639,
+            "B_SUB": 0.06347598730331418
+          },
+          "winner": "Jake Matthews"
+        },
+        "winner_v3_logit57": {
+          "method": "DEC",
+          "p_a_win": 0.5435896847589561,
+          "p_exact_fighter_method": 0.33227206410548776,
+          "p_winner": 0.5435896847589561,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.33227206410548776,
+            "A_KO": 0.12148056191366581,
+            "A_SUB": 0.08983705873980251,
+            "B_DEC": 0.29116615954506453,
+            "B_KO": 0.09992956059725684,
+            "B_SUB": 0.06531459509872252
+          },
+          "winner": "Jake Matthews"
+        },
+        "winner_v4_boost73": {
+          "method": "DEC",
+          "p_a_win": 0.5654490790071034,
+          "p_exact_fighter_method": 0.3456337342228085,
+          "p_winner": 0.5654490790071034,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.3456337342228085,
+            "A_KO": 0.12636566472339777,
+            "A_SUB": 0.09344968006089714,
+            "B_DEC": 0.2772209973507063,
+            "B_KO": 0.09514351701060846,
+            "B_SUB": 0.06218640663158182
+          },
+          "winner": "Jake Matthews"
+        },
+        "winner_v4_logit73": {
+          "method": "DEC",
+          "p_a_win": 0.5665434128352185,
+          "p_exact_fighter_method": 0.3463026515516013,
+          "p_winner": 0.5665434128352185,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.3463026515516013,
+            "A_KO": 0.1266102247143025,
+            "A_SUB": 0.09363053656931473,
+            "B_DEC": 0.2765228690057669,
+            "B_KO": 0.09490391616255904,
+            "B_SUB": 0.06202980199645559
+          },
+          "winner": "Jake Matthews"
+        }
+      }
+    },
+    {
+      "a": "Amir Albazi",
+      "a_prior_UFC_bouts": 7,
+      "b": "Alessandro Costa",
+      "b_prior_UFC_bouts": 8,
+      "cross_promotion_identity_or_UFC_data_warning": "NORMAL_RESEARCH",
+      "external_source_fighter_ids": {
+        "a": 44982,
+        "b": 98675
+      },
+      "external_source_ids_verified_both": true,
+      "fight_no": 4,
+      "not_authorized_for_any_bet": true,
+      "original_betting_posture_unmodified": "PASS",
+      "provisional": false,
+      "research_variants": {
+        "winner_v3_boost57": {
+          "method": "DEC",
+          "p_a_win": 0.5376200662119675,
+          "p_exact_fighter_method": 0.2439971849524716,
+          "p_winner": 0.5376200662119675,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2439971849524716,
+            "A_KO": 0.18009553400194223,
+            "A_SUB": 0.11352734725755367,
+            "B_DEC": 0.25159153410911433,
+            "B_KO": 0.17169174384871747,
+            "B_SUB": 0.03909665583020075
+          },
+          "winner": "Amir Albazi"
+        },
+        "winner_v3_logit57": {
+          "method": "DEC",
+          "p_a_win": 0.5112254648107705,
+          "p_exact_fighter_method": 0.23201807768958263,
+          "p_winner": 0.5112254648107705,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.23201807768958263,
+            "A_KO": 0.17125369543812122,
+            "A_SUB": 0.10795369168306666,
+            "B_DEC": 0.2659534425170384,
+            "B_KO": 0.18149263444022132,
+            "B_SUB": 0.041328458231969775
+          },
+          "winner": "Amir Albazi"
+        },
+        "winner_v4_boost73": {
+          "method": "DEC",
+          "p_a_win": 0.529912656754312,
+          "p_exact_fighter_method": 0.2404992012849451,
+          "p_winner": 0.529912656754312,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2404992012849451,
+            "A_KO": 0.17751365488454185,
+            "A_SUB": 0.11189980058482508,
+            "B_DEC": 0.25578531248866565,
+            "B_KO": 0.17455367291103616,
+            "B_SUB": 0.03974835784598617
+          },
+          "winner": "Amir Albazi"
+        },
+        "winner_v4_logit73": {
+          "method": "DEC",
+          "p_a_win": 0.5692154438748509,
+          "p_exact_fighter_method": 0.258336648249614,
+          "p_winner": 0.5692154438748509,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.258336648249614,
+            "A_KO": 0.19067956307712663,
+            "A_SUB": 0.12019923254811032,
+            "B_DEC": 0.2343997639735924,
+            "B_KO": 0.15995969171562016,
+            "B_SUB": 0.0364251004359365
+          },
+          "winner": "Amir Albazi"
+        }
+      }
+    },
+    {
+      "a": "Shamil Gaziev",
+      "a_prior_UFC_bouts": 7,
+      "b": "Tallison Teixeira",
+      "b_prior_UFC_bouts": 4,
+      "cross_promotion_identity_or_UFC_data_warning": "SPARSE_UFC_SAMPLE",
+      "external_source_fighter_ids": {
+        "a": 138549,
+        "b": 145431
+      },
+      "external_source_ids_verified_both": true,
+      "fight_no": 5,
+      "not_authorized_for_any_bet": true,
+      "original_betting_posture_unmodified": "LEAN",
+      "provisional": false,
+      "research_variants": {
+        "winner_v3_boost57": {
+          "method": "KO_TKO",
+          "p_a_win": 0.5025540203500062,
+          "p_exact_fighter_method": 0.283389944148137,
+          "p_winner": 0.5025540203500062,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.16907148925726143,
+            "A_KO": 0.283389944148137,
+            "A_SUB": 0.05009258694460776,
+            "B_DEC": 0.14122458762334283,
+            "B_KO": 0.3031665981019974,
+            "B_SUB": 0.053054793924653565
+          },
+          "winner": "Shamil Gaziev"
+        },
+        "winner_v3_logit57": {
+          "method": "KO_TKO",
+          "p_a_win": 0.5680824988122962,
+          "p_exact_fighter_method": 0.3203414182177456,
+          "p_winner": 0.5680824988122962,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.19111687541229752,
+            "A_KO": 0.3203414182177456,
+            "A_SUB": 0.05662420518225317,
+            "B_DEC": 0.1226210955317325,
+            "B_KO": 0.26323051115605334,
+            "B_SUB": 0.04606589449991792
+          },
+          "winner": "Shamil Gaziev"
+        },
+        "winner_v4_boost73": {
+          "method": "KO_TKO",
+          "p_a_win": 0.5211803840132567,
+          "p_exact_fighter_method": 0.2938933406875483,
+          "p_winner": 0.5211803840132567,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.17533785449656414,
+            "A_KO": 0.2938933406875483,
+            "A_SUB": 0.05194918882914435,
+            "B_DEC": 0.1359365751860611,
+            "B_KO": 0.2918148301959194,
+            "B_SUB": 0.05106821060476277
+          },
+          "winner": "Shamil Gaziev"
+        },
+        "winner_v4_logit73": {
+          "method": "KO_TKO",
+          "p_a_win": 0.5759760359198016,
+          "p_exact_fighter_method": 0.3247925795843769,
+          "p_winner": 0.5759760359198016,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.19377245475348742,
+            "A_KO": 0.3247925795843769,
+            "A_SUB": 0.05741100158193736,
+            "B_DEC": 0.1203801255199106,
+            "B_KO": 0.2584198243885011,
+            "B_SUB": 0.04522401417178668
+          },
+          "winner": "Shamil Gaziev"
+        }
+      }
+    },
+    {
+      "a": "Aleksandre Topuria",
+      "a_prior_UFC_bouts": 2,
+      "b": "Santiago Luna",
+      "b_prior_UFC_bouts": 3,
+      "cross_promotion_identity_or_UFC_data_warning": "SPARSE_UFC_SAMPLE",
+      "external_source_fighter_ids": {
+        "a": 92391,
+        "b": 156854
+      },
+      "external_source_ids_verified_both": true,
+      "fight_no": 6,
+      "not_authorized_for_any_bet": true,
+      "original_betting_posture_unmodified": "PASS",
+      "provisional": false,
+      "research_variants": {
+        "winner_v3_boost57": {
+          "method": "DEC",
+          "p_a_win": 0.5398842951929939,
+          "p_exact_fighter_method": 0.31585349625371023,
+          "p_winner": 0.5398842951929939,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.31585349625371023,
+            "A_KO": 0.15559805080923642,
+            "A_SUB": 0.0684327481300472,
+            "B_DEC": 0.2094140291929986,
+            "B_KO": 0.18767751892497403,
+            "B_SUB": 0.06302415668903351
+          },
+          "winner": "Aleksandre Topuria"
+        },
+        "winner_v3_logit57": {
+          "method": "DEC",
+          "p_a_win": 0.5565088240655207,
+          "p_exact_fighter_method": 0.325579497944649,
+          "p_winner": 0.5565088240655207,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.325579497944649,
+            "A_KO": 0.16038934463129947,
+            "A_SUB": 0.07053998148957222,
+            "B_DEC": 0.2018476506967648,
+            "B_KO": 0.18089650645464087,
+            "B_SUB": 0.06074701878307359
+          },
+          "winner": "Aleksandre Topuria"
+        },
+        "winner_v4_boost73": {
+          "method": "DEC",
+          "p_a_win": 0.4295526351140971,
+          "p_exact_fighter_method": 0.2596296537484904,
+          "p_winner": 0.570447364885903,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2513051459985171,
+            "A_KO": 0.12379977217124287,
+            "A_SUB": 0.05444771694433712,
+            "B_DEC": 0.2596296537484904,
+            "B_KO": 0.2326809213434295,
+            "B_SUB": 0.0781367897939831
+          },
+          "winner": "Santiago Luna"
+        },
+        "winner_v4_logit73": {
+          "method": "DEC",
+          "p_a_win": 0.48400253122054404,
+          "p_exact_fighter_method": 0.2348476869221809,
+          "p_winner": 0.515997468779456,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2831604716840414,
+            "A_KO": 0.13949257482611535,
+            "A_SUB": 0.06134948471038729,
+            "B_DEC": 0.2348476869221809,
+            "B_KO": 0.21047124386400742,
+            "B_SUB": 0.07067853799326765
+          },
+          "winner": "Santiago Luna"
+        }
+      }
+    },
+    {
+      "a": "Jared Cannonier",
+      "a_prior_UFC_bouts": 21,
+      "b": "Ikram Aliskerov",
+      "b_prior_UFC_bouts": 6,
+      "cross_promotion_identity_or_UFC_data_warning": "NORMAL_RESEARCH",
+      "external_source_fighter_ids": {
+        "a": 58105,
+        "b": 64979
+      },
+      "external_source_ids_verified_both": true,
+      "fight_no": 7,
+      "not_authorized_for_any_bet": true,
+      "original_betting_posture_unmodified": "SIDE",
+      "provisional": false,
+      "research_variants": {
+        "winner_v3_boost57": {
+          "method": "DEC",
+          "p_a_win": 0.28573463356135154,
+          "p_exact_fighter_method": 0.3319084737238905,
+          "p_winner": 0.7142653664386485,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.13841264897777406,
+            "A_KO": 0.12961901911892654,
+            "A_SUB": 0.017702965464650968,
+            "B_DEC": 0.3319084737238905,
+            "B_KO": 0.32385032203787834,
+            "B_SUB": 0.058506570676879734
+          },
+          "winner": "Ikram Aliskerov"
+        },
+        "winner_v3_logit57": {
+          "method": "DEC",
+          "p_a_win": 0.2428123214855078,
+          "p_exact_fighter_method": 0.35185383263275966,
+          "p_winner": 0.7571876785144922,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.11762066152906804,
+            "A_KO": 0.11014798783285479,
+            "A_SUB": 0.015043672123584978,
+            "B_DEC": 0.35185383263275966,
+            "B_KO": 0.3433114428502736,
+            "B_SUB": 0.06202240303145904
+          },
+          "winner": "Ikram Aliskerov"
+        },
+        "winner_v4_boost73": {
+          "method": "DEC",
+          "p_a_win": 0.29934787231853893,
+          "p_exact_fighter_method": 0.3255826045012714,
+          "p_winner": 0.700652127681461,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.1450070348737513,
+            "A_KO": 0.13579445061193632,
+            "A_SUB": 0.018546386832851303,
+            "B_DEC": 0.3255826045012714,
+            "B_KO": 0.3176780337502978,
+            "B_SUB": 0.05739148942989191
+          },
+          "winner": "Ikram Aliskerov"
+        },
+        "winner_v4_logit73": {
+          "method": "DEC",
+          "p_a_win": 0.25734287751429363,
+          "p_exact_fighter_method": 0.34510169974142196,
+          "p_winner": 0.7426571224857064,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.1246594048763367,
+            "A_KO": 0.1167395458677663,
+            "A_SUB": 0.015943926770190638,
+            "B_DEC": 0.34510169974142196,
+            "B_KO": 0.33672323982319047,
+            "B_SUB": 0.06083218292109402
+          },
+          "winner": "Ikram Aliskerov"
+        }
+      }
+    },
+    {
+      "a": "Kyoji Horiguchi",
+      "a_prior_UFC_bouts": 11,
+      "b": "Asu Almabayev",
+      "b_prior_UFC_bouts": 8,
+      "cross_promotion_identity_or_UFC_data_warning": "NORMAL_RESEARCH",
+      "external_source_fighter_ids": {
+        "a": 50031,
+        "b": 75813
+      },
+      "external_source_ids_verified_both": true,
+      "fight_no": 8,
+      "not_authorized_for_any_bet": true,
+      "original_betting_posture_unmodified": "PASS",
+      "provisional": false,
+      "research_variants": {
+        "winner_v3_boost57": {
+          "method": "SUB",
+          "p_a_win": 0.4685281668948321,
+          "p_exact_fighter_method": 0.2622673691650982,
+          "p_winner": 0.5314718331051679,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2122119412561027,
+            "A_KO": 0.21817446754126105,
+            "A_SUB": 0.0381417580974683,
+            "B_DEC": 0.16501011503619775,
+            "B_KO": 0.10419434890387202,
+            "B_SUB": 0.2622673691650982
+          },
+          "winner": "Asu Almabayev"
+        },
+        "winner_v3_logit57": {
+          "method": "SUB",
+          "p_a_win": 0.46220609104733046,
+          "p_exact_fighter_method": 0.26538714729237733,
+          "p_winner": 0.5377939089526695,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2093484634907034,
+            "A_KO": 0.2152305345416176,
+            "A_SUB": 0.03762709301500938,
+            "B_DEC": 0.16697297816060605,
+            "B_KO": 0.10543378349968621,
+            "B_SUB": 0.26538714729237733
+          },
+          "winner": "Asu Almabayev"
+        },
+        "winner_v4_boost73": {
+          "method": "SUB",
+          "p_a_win": 0.41921227764056196,
+          "p_exact_fighter_method": 0.2866034632478026,
+          "p_winner": 0.580787722359438,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.1898751399005318,
+            "A_KO": 0.19521006830208082,
+            "A_SUB": 0.0341270694379493,
+            "B_DEC": 0.180321595442252,
+            "B_KO": 0.11386266366938347,
+            "B_SUB": 0.2866034632478026
+          },
+          "winner": "Asu Almabayev"
+        },
+        "winner_v4_logit73": {
+          "method": "SUB",
+          "p_a_win": 0.4866665367947837,
+          "p_exact_fighter_method": 0.2533165607529007,
+          "p_winner": 0.5133334632052162,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2204274103776294,
+            "A_KO": 0.22662076698407907,
+            "A_SUB": 0.039618359433075186,
+            "B_DEC": 0.1593785569416263,
+            "B_KO": 0.10063834551068923,
+            "B_SUB": 0.2533165607529007
+          },
+          "winner": "Asu Almabayev"
+        }
+      }
+    },
+    {
+      "a": "Dan Hooker",
+      "a_prior_UFC_bouts": 25,
+      "b": "Brian Ortega",
+      "b_prior_UFC_bouts": 13,
+      "cross_promotion_identity_or_UFC_data_warning": "NORMAL_RESEARCH",
+      "external_source_fighter_ids": {
+        "a": 41567,
+        "b": 49729
+      },
+      "external_source_ids_verified_both": true,
+      "fight_no": 9,
+      "not_authorized_for_any_bet": true,
+      "original_betting_posture_unmodified": "PASS",
+      "provisional": false,
+      "research_variants": {
+        "winner_v3_boost57": {
+          "method": "KO_TKO",
+          "p_a_win": 0.4987309977216466,
+          "p_exact_fighter_method": 0.22535933938260166,
+          "p_winner": 0.5012690022783535,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.22152331455599977,
+            "A_KO": 0.23750476775355067,
+            "A_SUB": 0.039702915412096106,
+            "B_DEC": 0.17998324053098316,
+            "B_KO": 0.22535933938260166,
+            "B_SUB": 0.09592642236476864
+          },
+          "winner": "Brian Ortega"
+        },
+        "winner_v3_logit57": {
+          "method": "KO_TKO",
+          "p_a_win": 0.5368583758893851,
+          "p_exact_fighter_method": 0.2556617183705135,
+          "p_winner": 0.5368583758893851,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.23845850251430162,
+            "A_KO": 0.2556617183705135,
+            "A_SUB": 0.04273815500456995,
+            "B_DEC": 0.16629340723909883,
+            "B_KO": 0.20821812235697582,
+            "B_SUB": 0.08863009451454025
+          },
+          "winner": "Dan Hooker"
+        },
+        "winner_v4_boost73": {
+          "method": "KO_TKO",
+          "p_a_win": 0.5023252484101581,
+          "p_exact_fighter_method": 0.23921641527279994,
+          "p_winner": 0.5023252484101581,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.22311978706222374,
+            "A_KO": 0.23921641527279994,
+            "A_SUB": 0.0399890460751344,
+            "B_DEC": 0.1786927061407481,
+            "B_KO": 0.2237434446094223,
+            "B_SUB": 0.09523860083967149
+          },
+          "winner": "Dan Hooker"
+        },
+        "winner_v4_logit73": {
+          "method": "KO_TKO",
+          "p_a_win": 0.4791077883290043,
+          "p_exact_fighter_method": 0.23418149572020153,
+          "p_winner": 0.5208922116709958,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.21280719623421318,
+            "A_KO": 0.22815983870227882,
+            "A_SUB": 0.03814075339251224,
+            "B_DEC": 0.18702905585180477,
+            "B_KO": 0.23418149572020153,
+            "B_SUB": 0.09968166009898947
+          },
+          "winner": "Brian Ortega"
+        }
+      }
+    },
+    {
+      "a": "Aljamain Sterling",
+      "a_prior_UFC_bouts": 22,
+      "b": "Kevin Vallejos",
+      "b_prior_UFC_bouts": 4,
+      "cross_promotion_identity_or_UFC_data_warning": "SPARSE_UFC_SAMPLE",
+      "external_source_fighter_ids": {
+        "a": 56764,
+        "b": 144263
+      },
+      "external_source_ids_verified_both": true,
+      "fight_no": 10,
+      "not_authorized_for_any_bet": true,
+      "original_betting_posture_unmodified": "LEAN",
+      "provisional": false,
+      "research_variants": {
+        "winner_v3_boost57": {
+          "method": "KO_TKO",
+          "p_a_win": 0.4106877433114471,
+          "p_exact_fighter_method": 0.35498605535470135,
+          "p_winner": 0.5893122566885529,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2300159335721157,
+            "A_KO": 0.08982029841879016,
+            "A_SUB": 0.09085151132054126,
+            "B_DEC": 0.2187087008040122,
+            "B_KO": 0.35498605535470135,
+            "B_SUB": 0.01561750052983941
+          },
+          "winner": "Kevin Vallejos"
+        },
+        "winner_v3_logit57": {
+          "method": "KO_TKO",
+          "p_a_win": 0.4952516796647401,
+          "p_exact_fighter_method": 0.3040469855311691,
+          "p_winner": 0.5047483203352598,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2773780793473911,
+            "A_KO": 0.1083150261588392,
+            "A_SUB": 0.10955857415850978,
+            "B_DEC": 0.1873248827266015,
+            "B_KO": 0.3040469855311691,
+            "B_SUB": 0.013376452077489252
+          },
+          "winner": "Kevin Vallejos"
+        },
+        "winner_v4_boost73": {
+          "method": "KO_TKO",
+          "p_a_win": 0.4035215143186381,
+          "p_exact_fighter_method": 0.35930280141428683,
+          "p_winner": 0.5964784856813619,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.22600230794335546,
+            "A_KO": 0.08825299372768484,
+            "A_SUB": 0.08926621264759779,
+            "B_DEC": 0.2213682698438423,
+            "B_KO": 0.35930280141428683,
+            "B_SUB": 0.01580741442323276
+          },
+          "winner": "Kevin Vallejos"
+        },
+        "winner_v4_logit73": {
+          "method": "KO_TKO",
+          "p_a_win": 0.4569884835589402,
+          "p_exact_fighter_method": 0.327095718858363,
+          "p_winner": 0.5430115164410598,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.25594782018561696,
+            "A_KO": 0.09994659601050308,
+            "A_SUB": 0.10109406736282017,
+            "B_DEC": 0.20152532368795645,
+            "B_KO": 0.327095718858363,
+            "B_SUB": 0.014390473894740363
+          },
+          "winner": "Kevin Vallejos"
+        }
+      }
+    },
+    {
+      "a": "Jiri Prochazka",
+      "a_prior_UFC_bouts": 9,
+      "b": "Navajo Stirling",
+      "b_prior_UFC_bouts": 6,
+      "cross_promotion_identity_or_UFC_data_warning": "NORMAL_RESEARCH",
+      "external_source_fighter_ids": {
+        "a": 64524,
+        "b": 152616
+      },
+      "external_source_ids_verified_both": true,
+      "fight_no": 11,
+      "not_authorized_for_any_bet": true,
+      "original_betting_posture_unmodified": "LEAN",
+      "provisional": false,
+      "research_variants": {
+        "winner_v3_boost57": {
+          "method": "KO_TKO",
+          "p_a_win": 0.2981583695206216,
+          "p_exact_fighter_method": 0.4108465224651489,
+          "p_winner": 0.7018416304793784,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.13710827643120388,
+            "A_KO": 0.13411114917900993,
+            "A_SUB": 0.026938943910407746,
+            "B_DEC": 0.26500593453349025,
+            "B_KO": 0.4108465224651489,
+            "B_SUB": 0.02598917348073928
+          },
+          "winner": "Navajo Stirling"
+        },
+        "winner_v3_logit57": {
+          "method": "KO_TKO",
+          "p_a_win": 0.2992316422508741,
+          "p_exact_fighter_method": 0.41021824629894355,
+          "p_winner": 0.7007683577491259,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.13760182143690716,
+            "A_KO": 0.1345939055056832,
+            "A_SUB": 0.027035915308283746,
+            "B_DEC": 0.26460068122485475,
+            "B_KO": 0.41021824629894355,
+            "B_SUB": 0.025949430225327617
+          },
+          "winner": "Navajo Stirling"
+        },
+        "winner_v4_boost73": {
+          "method": "KO_TKO",
+          "p_a_win": 0.3162532630086284,
+          "p_exact_fighter_method": 0.40025407006410363,
+          "p_winner": 0.6837467369913717,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.14542922231756525,
+            "A_KO": 0.14225020280963604,
+            "A_SUB": 0.02857383788142708,
+            "B_DEC": 0.2581735467827125,
+            "B_KO": 0.40025407006410363,
+            "B_SUB": 0.02531912014455559
+          },
+          "winner": "Navajo Stirling"
+        },
+        "winner_v4_logit73": {
+          "method": "KO_TKO",
+          "p_a_win": 0.3075590227097398,
+          "p_exact_fighter_method": 0.4053435350333374,
+          "p_winner": 0.6924409772902602,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.14143117153611004,
+            "A_KO": 0.13833954767828055,
+            "A_SUB": 0.027788303495349186,
+            "B_DEC": 0.26145637466781807,
+            "B_KO": 0.4053435350333374,
+            "B_SUB": 0.025641067589104748
+          },
+          "winner": "Navajo Stirling"
+        }
+      }
+    },
+    {
+      "a": "John Mitchell",
+      "a_prior_UFC_bouts": 0,
+      "b": "Shoaib Yousaf",
+      "b_prior_UFC_bouts": 0,
+      "cross_promotion_identity_or_UFC_data_warning": "UNKNOWN_NONUFC_IDENTITY_PASS",
+      "external_source_fighter_ids": {
+        "a": null,
+        "b": null
+      },
+      "external_source_ids_verified_both": false,
+      "fight_no": 12,
+      "not_authorized_for_any_bet": true,
+      "original_betting_posture_unmodified": "PASS",
+      "provisional": true,
+      "research_variants": {
+        "winner_v3_boost57": {
+          "method": "KO_TKO",
+          "p_a_win": 0.5,
+          "p_exact_fighter_method": 0.2168259130495675,
+          "p_winner": 0.5,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.21057781475180518,
+            "A_KO": 0.2168259130495675,
+            "A_SUB": 0.07259627219862738,
+            "B_DEC": 0.21057781475180518,
+            "B_KO": 0.2168259130495675,
+            "B_SUB": 0.07259627219862738
+          },
+          "winner": "John Mitchell"
+        },
+        "winner_v3_logit57": {
+          "method": "KO_TKO",
+          "p_a_win": 0.5,
+          "p_exact_fighter_method": 0.2168259130495675,
+          "p_winner": 0.5,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.21057781475180518,
+            "A_KO": 0.2168259130495675,
+            "A_SUB": 0.07259627219862738,
+            "B_DEC": 0.21057781475180518,
+            "B_KO": 0.2168259130495675,
+            "B_SUB": 0.07259627219862738
+          },
+          "winner": "John Mitchell"
+        },
+        "winner_v4_boost73": {
+          "method": "KO_TKO",
+          "p_a_win": 0.5,
+          "p_exact_fighter_method": 0.2168259130495675,
+          "p_winner": 0.5,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.21057781475180518,
+            "A_KO": 0.2168259130495675,
+            "A_SUB": 0.07259627219862738,
+            "B_DEC": 0.21057781475180518,
+            "B_KO": 0.2168259130495675,
+            "B_SUB": 0.07259627219862738
+          },
+          "winner": "John Mitchell"
+        },
+        "winner_v4_logit73": {
+          "method": "KO_TKO",
+          "p_a_win": 0.5,
+          "p_exact_fighter_method": 0.2168259130495675,
+          "p_winner": 0.5,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.21057781475180518,
+            "A_KO": 0.2168259130495675,
+            "A_SUB": 0.07259627219862738,
+            "B_DEC": 0.21057781475180518,
+            "B_KO": 0.2168259130495675,
+            "B_SUB": 0.07259627219862738
+          },
+          "winner": "John Mitchell"
+        }
+      }
+    }
+  ],
+  "fights_predicted": 12,
+  "first_fight_at_utc": "2026-11-21T15:00:00+00:00",
+  "locked_at_utc": "2026-11-19T21:58:03.809542+00:00",
+  "method_trained_fights": 3015,
+  "no_betting_prices_observed": true,
+  "no_official_wagers_or_model_promotion": true,
+  "nov21_provisional_12th_fight_quarantined": true,
+  "original_Reference_Historical_Unified_Coherent_and_v3_NOT_MODIFIED": true,
+  "original_coherent_shadow_sha256": "56953d0b7507f42697e7deab49dbe91a25ae0a3c3ff1947399ea4bae7192cdd4",
+  "original_independent_v3_shadow_sha256": "77dddff444bf157d06fa7b3a94bce214fdef3a04232fd9f30cff02bad114e999",
+  "original_stage_a_sha256": "eb5b161b2ff2ac541de7319d2047fffc1dc40c5afed5192643649cd5c5fcb277",
+  "other_three_variants_diagnostic_only": true,
+  "primary_registered_research_winner": "winner_v4_boost73",
+  "regional_history_feature_cutoff_in_pipeline": "2026-11-08 exclusive",
+  "results_not_yet_observed": true,
+  "schema": "WSHLX_QATAR_SEPARATE_WORLDWIDE_WINNER_V4_PROSPECTIVE_RESEARCH_ONLY",
+  "source_UFC_form_report": {
+    "example_unmatched": [],
+    "historical_snapshots": 8871,
+    "modern_rows_joined": 3036,
+    "modern_rows_unmatched": 0,
+    "new_feature_columns": [
+      "prior_recorded_stat_fights",
+      "lifetime_sig_strikes_landed_per15",
+      "lifetime_sig_strikes_absorbed_per15",
+      "lifetime_sig_strike_accuracy",
+      "lifetime_sig_strike_defense",
+      "lifetime_td_accuracy",
+      "lifetime_td_defense",
+      "recent3_wins_fraction_smoothed",
+      "recent5_wins_fraction_smoothed",
+      "streak_signed_scaled",
+      "recent3_sig_strikes_landed_per15",
+      "recent3_sig_strikes_absorbed_per15",
+      "recent3_knockdowns_per15",
+      "recent3_takedowns_per15",
+      "recent3_submission_attempts_per15",
+      "last12months_bout_count",
+      "recent3_stats_coverage",
+      "no_previous_ufc_stats",
+      "last3_sig_absorbed_per15_missing"
+    ],
+    "same_day_frozen_before_update": true,
+    "schema": "WSHLX_PRIOR_STRIKING_AND_RECENT_FORM_V3",
+    "source_bout_count": 8871,
+    "source_class": "PINNED_SECONDARY_UFCSTATS_COMPATIBLE",
+    "source_values_only_prio_event": true,
+    "unmeasured_getups_injuries_regional_mma_not_added": true
+  },
+  "source_UFC_pin_sha256": "f5b316d5e745bd89da921b2c9711ec9209c2fa39dcbcd80bcb063b62d9175bcb",
+  "source_region_report": {
+    "both_fighters_verified": 3016,
+    "no_bet_odds_features": true,
+    "source_db_sha256": "8185a2163b5f97071dbc4ec68667cceb43f5e321fadc38c26b5069303af4d949",
+    "source_db_size_bytes": 184770560,
+    "source_id_verification": "Original UFC date, both opponents and unique third-party source fighter IDs",
+    "source_sha256": "41c9bcc9bfe49fff6277e881a0a4292dd88511ce8a436df2463d9be37548c4e9",
+    "third_party_2026_vintage_not_prospective_historical_snapshot": true,
+    "training_era_matchup_rows": 3036,
+    "unresolved_identity_sample": [
+      "326c7fa4e73cc22baf87f43477c79f0539c70862ccb658433793992d906229fa",
+      "2fe6bded18b34f42f1877357617b8d810daeab49d7491296235b4601f9f454c9",
+      "06068900baf8f460c5364ae315ad71d0d2593fff65e6086de06b18e119968443",
+      "6caefffb5c6cb8bbdbd7cd696c4b5b70f11d29a13360e666213ad1d3091783df",
+      "1017453812a0587319963350cdf8b4fafecaddd831ad14a46d011db8d65d1245",
+      "6a3ab8217e732ca478f1643f6bda4bee4527416cd83074bf6104729f950128d0",
+      "bf3c7e8e9da8130ab3411ab3cae1127a5c089a5b03dc7f43cf1e8af1afdf723f",
+      "fd8aadc80f1ef2b632e026248e79fe228e96628e9dc4caea2224de83eb1ecfb8"
+    ],
+    "withheld_identity_mismatches": 20
+  },
+  "training_fights": 3015
+}

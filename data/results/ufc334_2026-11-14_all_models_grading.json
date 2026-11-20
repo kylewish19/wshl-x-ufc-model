@@ -1,0 +1,1059 @@
+{
+  "schema": "WSHL_X_UFC334_STAGE_A_AND_B_POST_EVENT_GRADE_V1",
+  "event": "UFC 334: Gane vs Hokit",
+  "event_date": "2026-11-14",
+  "result_date": "2026-11-15",
+  "source_results": [
+    "https://www.ufc.com/index.php/news/polymarket-ufc-334-gane-vs-hokit-results",
+    "https://www.cbssports.com/ufc/news/ufc-334-fight-card-ciryl-gane-josh-hokit-results-winners/",
+    "https://www.sherdog.com/news/news/UFC-334-Gane-vs-Hokit-playbyplay-results-round-scoring-203625",
+    "https://sports.yahoo.com/mma/live/ufc-334-live-results-gane-vs-hokit-updates-round-by-round-scoring-for-tonights-title-doubleheader-191500505.html",
+    "https://www.mmafighting.com/ufc/521306/ufc-334-video-stephen-wonderboy-thompson-retires-with-spinning-wheel-kick-knockout-over-charles-radtke",
+    "https://www.ufc.com/news/official-weigh-results-polymarket-ufc-334-gane-vs-hokit"
+  ],
+  "original_stage_a_sha256": "fda4e7d5636174eb14114a1cabd55c804aae1c3e7de41bb0b12791b46920740a",
+  "original_raw_sha256": "13aeb532c5fddd5ec3cdc003ac7500a231addc45e34b45b7aebc38c5c241270d",
+  "original_stage_b_sha256": "de50106f116d1931413c51518cfeafb0e4c8f2a51f0e54ff83edb682aef0d4d2",
+  "original_frozen_research_watchlist_sha256": "0bd97214a1da9877a9000001593fd4dba4334509b5809f8453e3dae3f707f0be",
+  "original_fanduel_quote_snapshot_sha256": "ce57c3a0e1d79154e164c7d3e1223adb15c03c0eefef3dbc5c76ccd55206aa2a",
+  "model_or_stage_a_b_changed": false,
+  "draw_handling": "Medić vs Holland majority draw: no binary winner or exact-method score, grade full-distance timing; no losses attributed to ML on draw.",
+  "summary_models": {
+    "reference": {
+      "W": 8,
+      "L": 4,
+      "D": 1,
+      "winner_hit_rate": 0.666667,
+      "exact_fighter_method_correct": 1,
+      "exact_hit_rate": 0.083333,
+      "method_given_correct_winner": 0.125,
+      "predicted_methods": {
+        "KO": 12,
+        "SUB": 1
+      },
+      "mean_winner_2class_brier": 0.438256,
+      "mean_winner_logloss": 0.638134,
+      "mean_joint_6class_brier": 0.835726,
+      "mean_joint_6class_logloss": 1.646196,
+      "max_abs_joint_winner_gap_pp": 0
+    },
+    "historical": {
+      "W": 6,
+      "L": 6,
+      "D": 1,
+      "winner_hit_rate": 0.5,
+      "exact_fighter_method_correct": 3,
+      "exact_hit_rate": 0.25,
+      "method_given_correct_winner": 0.5,
+      "predicted_methods": {
+        "KO": 7,
+        "SUB": 5,
+        "DEC": 1
+      },
+      "mean_winner_2class_brier": 0.493312,
+      "mean_winner_logloss": 0.689064,
+      "mean_joint_6class_brier": 0.75093,
+      "mean_joint_6class_logloss": 1.542352,
+      "max_abs_joint_winner_gap_pp": 17.569
+    },
+    "unified": {
+      "W": 7,
+      "L": 5,
+      "D": 1,
+      "winner_hit_rate": 0.583333,
+      "exact_fighter_method_correct": 3,
+      "exact_hit_rate": 0.25,
+      "method_given_correct_winner": 0.428571,
+      "predicted_methods": {
+        "KO": 9,
+        "SUB": 4
+      },
+      "mean_winner_2class_brier": 0.466531,
+      "mean_winner_logloss": 0.662384,
+      "mean_joint_6class_brier": 0.75986,
+      "mean_joint_6class_logloss": 1.541869,
+      "max_abs_joint_winner_gap_pp": 10.228
+    },
+    "consensus": {
+      "W": 7,
+      "L": 5,
+      "D": 1,
+      "winner_hit_rate": 0.583333,
+      "exact_fighter_method_correct": 3,
+      "exact_hit_rate": 0.25,
+      "method_given_correct_winner": 0.428571,
+      "predicted_methods": {
+        "KO": 9,
+        "SUB": 4
+      },
+      "mean_winner_2class_brier": null,
+      "mean_winner_logloss": null,
+      "mean_joint_6class_brier": null,
+      "mean_joint_6class_logloss": null,
+      "max_abs_joint_winner_gap_pp": 0
+    }
+  },
+  "original_stage_a_timing": {
+    "W": 9,
+    "L": 4,
+    "PUSH": 0,
+    "market": {
+      "OVER_1.5": {
+        "W": 7,
+        "L": 1,
+        "PUSH": 0
+      },
+      "GTD_NO": {
+        "W": 2,
+        "L": 3,
+        "PUSH": 0
+      }
+    }
+  },
+  "editorial_consensus_timing": {
+    "W": 8,
+    "L": 5,
+    "PUSH": 0,
+    "market": {
+      "OVER_1.5": {
+        "W": 7,
+        "L": 2,
+        "PUSH": 0
+      },
+      "GTD_NO": {
+        "W": 1,
+        "L": 3,
+        "PUSH": 0
+      }
+    }
+  },
+  "reference_posture_record": {
+    "PASS": {
+      "W": 5,
+      "L": 2,
+      "D": 1
+    },
+    "SIDE": {
+      "W": 2,
+      "L": 0,
+      "D": 0
+    },
+    "LEAN": {
+      "W": 1,
+      "L": 2,
+      "D": 0
+    }
+  },
+  "actual_methods": {
+    "DEC": 7,
+    "SUB": 2,
+    "KO": 3,
+    "DRAW": 1
+  },
+  "expected_non_GTD_fights": 7.5726,
+  "actual_non_GTD_fights": 5,
+  "unreconciled_fight_count_joint_winner_gap_gt1pp": 11,
+  "stage_b_research_only": {
+    "categories": {
+      "top_5_best_bets": {
+        "W": 3,
+        "L": 2,
+        "PUSH": 0,
+        "units_virtual_net": 1.449672,
+        "units_virtual_risked": 5,
+        "virtual_roi": 0.289934,
+        "selections": [
+          {
+            "id": "top_5_best_bets:1:8",
+            "fight_no": 8,
+            "market": "Charles Radtke ML",
+            "original_fanduel_odds": 126,
+            "graded_result": "L",
+            "hypothetical_one_unit_profit": -1,
+            "official_bet": false
+          },
+          {
+            "id": "top_5_best_bets:2:7",
+            "fight_no": 7,
+            "market": "OVER 1.5 rounds",
+            "original_fanduel_odds": -122,
+            "graded_result": "W",
+            "hypothetical_one_unit_profit": 0.819672,
+            "official_bet": false
+          },
+          {
+            "id": "top_5_best_bets:3:6",
+            "fight_no": 6,
+            "market": "Terrance McKinney KO_OR_DEC",
+            "original_fanduel_odds": 125,
+            "graded_result": "W",
+            "hypothetical_one_unit_profit": 1.25,
+            "official_bet": false
+          },
+          {
+            "id": "top_5_best_bets:4:5",
+            "fight_no": 5,
+            "market": "Donte Johnson KO_OR_SUB",
+            "original_fanduel_odds": 116,
+            "graded_result": "L",
+            "hypothetical_one_unit_profit": -1,
+            "official_bet": false
+          },
+          {
+            "id": "top_5_best_bets:5:9",
+            "fight_no": 9,
+            "market": "OVER 1.5 rounds",
+            "original_fanduel_odds": 138,
+            "graded_result": "W",
+            "hypothetical_one_unit_profit": 1.38,
+            "official_bet": false
+          }
+        ]
+      },
+      "top_5_longshots": {
+        "W": 1,
+        "L": 4,
+        "PUSH": 0,
+        "units_virtual_net": -1.15,
+        "units_virtual_risked": 5,
+        "virtual_roi": -0.23,
+        "selections": [
+          {
+            "id": "top_5_longshots:1:8",
+            "fight_no": 8,
+            "market": "Charles Radtke by KO_TKO",
+            "original_fanduel_odds": 480,
+            "graded_result": "L",
+            "hypothetical_one_unit_profit": -1,
+            "official_bet": false
+          },
+          {
+            "id": "top_5_longshots:2:7",
+            "fight_no": 7,
+            "market": "Fight goes distance YES",
+            "original_fanduel_odds": 285,
+            "graded_result": "W",
+            "hypothetical_one_unit_profit": 2.85,
+            "official_bet": false
+          },
+          {
+            "id": "top_5_longshots:3:6",
+            "fight_no": 6,
+            "market": "Round 3 starts YES",
+            "original_fanduel_odds": 640,
+            "graded_result": "L",
+            "hypothetical_one_unit_profit": -1,
+            "official_bet": false
+          },
+          {
+            "id": "top_5_longshots:4:3",
+            "fight_no": 3,
+            "market": "Fight goes distance YES",
+            "original_fanduel_odds": 200,
+            "graded_result": "L",
+            "hypothetical_one_unit_profit": -1,
+            "official_bet": false
+          },
+          {
+            "id": "top_5_longshots:5:11",
+            "fight_no": 11,
+            "market": "Yousri Belgaroui by KO_TKO",
+            "original_fanduel_odds": 470,
+            "graded_result": "L",
+            "hypothetical_one_unit_profit": -1,
+            "official_bet": false
+          }
+        ]
+      }
+    },
+    "combined": {
+      "W": 4,
+      "L": 6,
+      "virtual_net_units": 0.299672,
+      "virtual_roi": 0.029967
+    },
+    "official_approved_stakes": 0,
+    "official_betting_roi": null,
+    "virtual_one_unit_each_not_actual_bet": true
+  },
+  "fights": [
+    {
+      "fight_no": 1,
+      "bout": "Evan Elder vs Samuel Sanches",
+      "actual": {
+        "winner": "Evan Elder",
+        "method": "DEC",
+        "round": 3,
+        "time": "5:00",
+        "details": "Unanimous decision 30-26 on all three cards"
+      },
+      "stage_a_posture": "PASS",
+      "models": {
+        "reference": {
+          "fighter": "Evan Elder",
+          "method": "KO",
+          "winner_result": "W",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.5152262278664443,
+          "six_class_winner_gap_pp": 0,
+          "actual_outcome_probability": 0.5152262278664443
+        },
+        "historical": {
+          "fighter": "Samuel Sanches",
+          "method": "KO",
+          "winner_result": "L",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.5371128090745989,
+          "six_class_winner_gap_pp": 0.119,
+          "actual_outcome_probability": 0.4628871909254011
+        },
+        "unified": {
+          "fighter": "Samuel Sanches",
+          "method": "KO",
+          "winner_result": "L",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.5214443902669574,
+          "six_class_winner_gap_pp": 0.36,
+          "actual_outcome_probability": 0.47855560973304256
+        },
+        "consensus": {
+          "fighter": "Samuel Sanches",
+          "method": "KO",
+          "winner_result": "L",
+          "exact_fighter_method_correct": false
+        }
+      },
+      "timing": {
+        "original": {
+          "market": "OVER_1.5",
+          "result": "W",
+          "simulated_probability": 0.6903
+        },
+        "consensus": {
+          "market": "OVER_1.5",
+          "result": "W",
+          "simulated_probability": null
+        }
+      },
+      "method_timing_warning": true
+    },
+    {
+      "fight_no": 2,
+      "bout": "Alatengheili vs Juan Diaz",
+      "actual": {
+        "winner": "Juan Diaz",
+        "method": "DEC",
+        "round": 3,
+        "time": "5:00",
+        "details": "Unanimous decision 30-27 on all three cards; opponent billed Heili Alateng / Alatengheili"
+      },
+      "stage_a_posture": "PASS",
+      "models": {
+        "reference": {
+          "fighter": "Juan Diaz",
+          "method": "SUB",
+          "winner_result": "W",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.821801721933182,
+          "six_class_winner_gap_pp": 0,
+          "actual_outcome_probability": 0.821801721933182
+        },
+        "historical": {
+          "fighter": "Juan Diaz",
+          "method": "SUB",
+          "winner_result": "W",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.7290520020891571,
+          "six_class_winner_gap_pp": 0.216,
+          "actual_outcome_probability": 0.7290520020891571
+        },
+        "unified": {
+          "fighter": "Juan Diaz",
+          "method": "SUB",
+          "winner_result": "W",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.7597762853393328,
+          "six_class_winner_gap_pp": 1.125,
+          "actual_outcome_probability": 0.7597762853393328
+        },
+        "consensus": {
+          "fighter": "Juan Diaz",
+          "method": "SUB",
+          "winner_result": "W",
+          "exact_fighter_method_correct": false
+        }
+      },
+      "timing": {
+        "original": {
+          "market": "OVER_1.5",
+          "result": "W",
+          "simulated_probability": 0.7645
+        },
+        "consensus": {
+          "market": "OVER_1.5",
+          "result": "W",
+          "simulated_probability": null
+        }
+      },
+      "method_timing_warning": true
+    },
+    {
+      "fight_no": 3,
+      "bout": "Macy Chiasson vs Bia Mesquita",
+      "actual": {
+        "winner": "Bia Mesquita",
+        "method": "SUB",
+        "round": 1,
+        "time": "3:23",
+        "details": "Rear-naked choke"
+      },
+      "stage_a_posture": "PASS",
+      "models": {
+        "reference": {
+          "fighter": "Macy Chiasson",
+          "method": "KO",
+          "winner_result": "L",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.5675096643887366,
+          "six_class_winner_gap_pp": 0,
+          "actual_outcome_probability": 0.4324903356112634
+        },
+        "historical": {
+          "fighter": "Bia Mesquita",
+          "method": "SUB",
+          "winner_result": "W",
+          "exact_fighter_method_correct": true,
+          "pre_fight_selected_winner_probability": 0.6995140720756962,
+          "six_class_winner_gap_pp": 4.637,
+          "actual_outcome_probability": 0.6995140720756962
+        },
+        "unified": {
+          "fighter": "Bia Mesquita",
+          "method": "SUB",
+          "winner_result": "W",
+          "exact_fighter_method_correct": true,
+          "pre_fight_selected_winner_probability": 0.6248018215249408,
+          "six_class_winner_gap_pp": 2.423,
+          "actual_outcome_probability": 0.6248018215249408
+        },
+        "consensus": {
+          "fighter": "Bia Mesquita",
+          "method": "SUB",
+          "winner_result": "W",
+          "exact_fighter_method_correct": true
+        }
+      },
+      "timing": {
+        "original": {
+          "market": "OVER_1.5",
+          "result": "L",
+          "simulated_probability": 0.6511
+        },
+        "consensus": {
+          "market": "OVER_1.5",
+          "result": "L",
+          "simulated_probability": null
+        }
+      },
+      "method_timing_warning": true
+    },
+    {
+      "fight_no": 4,
+      "bout": "Jared Gordon vs Melquizael Costa",
+      "actual": {
+        "winner": "Melquizael Costa",
+        "method": "DEC",
+        "round": 3,
+        "time": "5:00",
+        "details": "Unanimous decision 29-28 on all three cards"
+      },
+      "stage_a_posture": "SIDE",
+      "models": {
+        "reference": {
+          "fighter": "Melquizael Costa",
+          "method": "KO",
+          "winner_result": "W",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.6674935512090474,
+          "six_class_winner_gap_pp": 0,
+          "actual_outcome_probability": 0.6674935512090474
+        },
+        "historical": {
+          "fighter": "Melquizael Costa",
+          "method": "SUB",
+          "winner_result": "W",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.7740786067161306,
+          "six_class_winner_gap_pp": 4.676,
+          "actual_outcome_probability": 0.7740786067161306
+        },
+        "unified": {
+          "fighter": "Melquizael Costa",
+          "method": "KO",
+          "winner_result": "W",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.7448063449735607,
+          "six_class_winner_gap_pp": 4.416,
+          "actual_outcome_probability": 0.7448063449735607
+        },
+        "consensus": {
+          "fighter": "Melquizael Costa",
+          "method": "KO",
+          "winner_result": "W",
+          "exact_fighter_method_correct": false
+        }
+      },
+      "timing": {
+        "original": {
+          "market": "OVER_1.5",
+          "result": "W",
+          "simulated_probability": 0.6731
+        },
+        "consensus": {
+          "market": "OVER_1.5",
+          "result": "W",
+          "simulated_probability": null
+        }
+      },
+      "method_timing_warning": true
+    },
+    {
+      "fight_no": 5,
+      "bout": "Donte Johnson vs Cesar Almeida",
+      "actual": {
+        "winner": "Cesar Almeida",
+        "method": "KO",
+        "round": 1,
+        "time": "3:20",
+        "details": "TKO punches; two knockdowns"
+      },
+      "stage_a_posture": "LEAN",
+      "models": {
+        "reference": {
+          "fighter": "Donte Johnson",
+          "method": "KO",
+          "winner_result": "L",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.8522783924209046,
+          "six_class_winner_gap_pp": 0,
+          "actual_outcome_probability": 0.14772160757909536
+        },
+        "historical": {
+          "fighter": "Donte Johnson",
+          "method": "KO",
+          "winner_result": "L",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.7645300376454174,
+          "six_class_winner_gap_pp": 0.355,
+          "actual_outcome_probability": 0.23546996235458262
+        },
+        "unified": {
+          "fighter": "Donte Johnson",
+          "method": "KO",
+          "winner_result": "L",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.7941541006746058,
+          "six_class_winner_gap_pp": 0.039,
+          "actual_outcome_probability": 0.2058458993253942
+        },
+        "consensus": {
+          "fighter": "Donte Johnson",
+          "method": "KO",
+          "winner_result": "L",
+          "exact_fighter_method_correct": false
+        }
+      },
+      "timing": {
+        "original": {
+          "market": "GTD_NO",
+          "result": "W",
+          "simulated_probability": 0.6295999999999999
+        },
+        "consensus": {
+          "market": "OVER_1.5",
+          "result": "L",
+          "simulated_probability": null
+        }
+      },
+      "method_timing_warning": false
+    },
+    {
+      "fight_no": 6,
+      "bout": "Jim Miller vs Terrance McKinney",
+      "actual": {
+        "winner": "Terrance McKinney",
+        "method": "KO",
+        "round": 1,
+        "time": "1:53",
+        "details": "KO punches; McKinney weighed 160.2, contracted non-title 156 maximum"
+      },
+      "stage_a_posture": "SIDE",
+      "models": {
+        "reference": {
+          "fighter": "Terrance McKinney",
+          "method": "KO",
+          "winner_result": "W",
+          "exact_fighter_method_correct": true,
+          "pre_fight_selected_winner_probability": 0.7424764997918065,
+          "six_class_winner_gap_pp": 0,
+          "actual_outcome_probability": 0.7424764997918065
+        },
+        "historical": {
+          "fighter": "Terrance McKinney",
+          "method": "KO",
+          "winner_result": "W",
+          "exact_fighter_method_correct": true,
+          "pre_fight_selected_winner_probability": 0.7910807110162789,
+          "six_class_winner_gap_pp": 17.569,
+          "actual_outcome_probability": 0.7910807110162789
+        },
+        "unified": {
+          "fighter": "Terrance McKinney",
+          "method": "KO",
+          "winner_result": "W",
+          "exact_fighter_method_correct": true,
+          "pre_fight_selected_winner_probability": 0.7772445443847991,
+          "six_class_winner_gap_pp": 9.756,
+          "actual_outcome_probability": 0.7772445443847991
+        },
+        "consensus": {
+          "fighter": "Terrance McKinney",
+          "method": "KO",
+          "winner_result": "W",
+          "exact_fighter_method_correct": true
+        }
+      },
+      "timing": {
+        "original": {
+          "market": "GTD_NO",
+          "result": "W",
+          "simulated_probability": 0.6161
+        },
+        "consensus": {
+          "market": "GTD_NO",
+          "result": "W",
+          "simulated_probability": null
+        }
+      },
+      "method_timing_warning": false
+    },
+    {
+      "fight_no": 7,
+      "bout": "Drew Dober vs Chris Duncan",
+      "actual": {
+        "winner": "Chris Duncan",
+        "method": "DEC",
+        "round": 3,
+        "time": "5:00",
+        "details": "Unanimous decision 30-27,30-27,29-28"
+      },
+      "stage_a_posture": "LEAN",
+      "models": {
+        "reference": {
+          "fighter": "Chris Duncan",
+          "method": "KO",
+          "winner_result": "W",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.6411448026283184,
+          "six_class_winner_gap_pp": 0,
+          "actual_outcome_probability": 0.6411448026283184
+        },
+        "historical": {
+          "fighter": "Chris Duncan",
+          "method": "SUB",
+          "winner_result": "W",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.768860161976928,
+          "six_class_winner_gap_pp": 2.447,
+          "actual_outcome_probability": 0.768860161976928
+        },
+        "unified": {
+          "fighter": "Chris Duncan",
+          "method": "SUB",
+          "winner_result": "W",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.7340797589832824,
+          "six_class_winner_gap_pp": 2.836,
+          "actual_outcome_probability": 0.7340797589832824
+        },
+        "consensus": {
+          "fighter": "Chris Duncan",
+          "method": "SUB",
+          "winner_result": "W",
+          "exact_fighter_method_correct": false
+        }
+      },
+      "timing": {
+        "original": {
+          "market": "OVER_1.5",
+          "result": "W",
+          "simulated_probability": 0.6938
+        },
+        "consensus": {
+          "market": "OVER_1.5",
+          "result": "W",
+          "simulated_probability": null
+        }
+      },
+      "method_timing_warning": true
+    },
+    {
+      "fight_no": 8,
+      "bout": "Stephen Thompson vs Charles Radtke",
+      "actual": {
+        "winner": "Stephen Thompson",
+        "method": "KO",
+        "round": 3,
+        "time": "2:54",
+        "details": "TKO via spinning wheel kick; R3 2:54 confirmed Sherdog, MMA Fighting video writeup, UFC event live"
+      },
+      "stage_a_posture": "LEAN",
+      "models": {
+        "reference": {
+          "fighter": "Charles Radtke",
+          "method": "KO",
+          "winner_result": "L",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.636224672421754,
+          "six_class_winner_gap_pp": 0,
+          "actual_outcome_probability": 0.36377532757824604
+        },
+        "historical": {
+          "fighter": "Charles Radtke",
+          "method": "DEC",
+          "winner_result": "L",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.7845760767996833,
+          "six_class_winner_gap_pp": 9.865,
+          "actual_outcome_probability": 0.21542392320031667
+        },
+        "unified": {
+          "fighter": "Charles Radtke",
+          "method": "KO",
+          "winner_result": "L",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.7450681807608617,
+          "six_class_winner_gap_pp": 8.18,
+          "actual_outcome_probability": 0.2549318192391383
+        },
+        "consensus": {
+          "fighter": "Charles Radtke",
+          "method": "KO",
+          "winner_result": "L",
+          "exact_fighter_method_correct": false
+        }
+      },
+      "timing": {
+        "original": {
+          "market": "OVER_1.5",
+          "result": "W",
+          "simulated_probability": 0.6563
+        },
+        "consensus": {
+          "market": "OVER_1.5",
+          "result": "W",
+          "simulated_probability": null
+        }
+      },
+      "method_timing_warning": false
+    },
+    {
+      "fight_no": 9,
+      "bout": "Bilal Hasan vs Luis Gurule",
+      "actual": {
+        "winner": "Luis Gurule",
+        "method": "DEC",
+        "round": 3,
+        "time": "5:00",
+        "details": "Split decision 29-28,28-29,29-28"
+      },
+      "stage_a_posture": "PASS",
+      "models": {
+        "reference": {
+          "fighter": "Bilal Hasan",
+          "method": "KO",
+          "winner_result": "L",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.5407507620836096,
+          "six_class_winner_gap_pp": 0,
+          "actual_outcome_probability": 0.4592492379163904
+        },
+        "historical": {
+          "fighter": "Bilal Hasan",
+          "method": "KO",
+          "winner_result": "L",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.6568700529862117,
+          "six_class_winner_gap_pp": 6.876,
+          "actual_outcome_probability": 0.3431299470137883
+        },
+        "unified": {
+          "fighter": "Bilal Hasan",
+          "method": "KO",
+          "winner_result": "L",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.6232987509413758,
+          "six_class_winner_gap_pp": 3.277,
+          "actual_outcome_probability": 0.37670124905862423
+        },
+        "consensus": {
+          "fighter": "Bilal Hasan",
+          "method": "KO",
+          "winner_result": "L",
+          "exact_fighter_method_correct": false
+        }
+      },
+      "timing": {
+        "original": {
+          "market": "GTD_NO",
+          "result": "L",
+          "simulated_probability": 0.613
+        },
+        "consensus": {
+          "market": "GTD_NO",
+          "result": "L",
+          "simulated_probability": null
+        }
+      },
+      "method_timing_warning": false
+    },
+    {
+      "fight_no": 10,
+      "bout": "Uros Medic vs Kevin Holland",
+      "actual": {
+        "winner": null,
+        "method": "DRAW",
+        "round": 3,
+        "time": "5:00",
+        "details": "Majority draw 29-27 / 28-28 / 28-28; Medić point deducted for repeat low blows; two-way moneyline grading must be PUSH/VOID under book rules"
+      },
+      "stage_a_posture": "PASS",
+      "models": {
+        "reference": {
+          "fighter": "Uros Medic",
+          "method": "KO",
+          "winner_result": "D",
+          "exact_fighter_method_correct": null,
+          "pre_fight_selected_winner_probability": 0.5186771461788903,
+          "six_class_winner_gap_pp": 0
+        },
+        "historical": {
+          "fighter": "Uros Medic",
+          "method": "KO",
+          "winner_result": "D",
+          "exact_fighter_method_correct": null,
+          "pre_fight_selected_winner_probability": 0.6017125327577811,
+          "six_class_winner_gap_pp": 16.932
+        },
+        "unified": {
+          "fighter": "Uros Medic",
+          "method": "KO",
+          "winner_result": "D",
+          "exact_fighter_method_correct": null,
+          "pre_fight_selected_winner_probability": 0.5771896249540096,
+          "six_class_winner_gap_pp": 8.682
+        },
+        "consensus": {
+          "fighter": "Uros Medic",
+          "method": "KO",
+          "winner_result": "D",
+          "exact_fighter_method_correct": null
+        }
+      },
+      "timing": {
+        "original": {
+          "market": "GTD_NO",
+          "result": "L",
+          "simulated_probability": 0.7444999999999999
+        },
+        "consensus": {
+          "market": "GTD_NO",
+          "result": "L",
+          "simulated_probability": null
+        }
+      },
+      "method_timing_warning": false
+    },
+    {
+      "fight_no": 11,
+      "bout": "Caio Borralho vs Yousri Belgaroui",
+      "actual": {
+        "winner": "Caio Borralho",
+        "method": "DEC",
+        "round": 3,
+        "time": "5:00",
+        "details": "Unanimous decision 30-27 on all three cards"
+      },
+      "stage_a_posture": "PASS",
+      "models": {
+        "reference": {
+          "fighter": "Caio Borralho",
+          "method": "KO",
+          "winner_result": "W",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.5425134826456827,
+          "six_class_winner_gap_pp": 0,
+          "actual_outcome_probability": 0.5425134826456827
+        },
+        "historical": {
+          "fighter": "Yousri Belgaroui",
+          "method": "KO",
+          "winner_result": "L",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.5319534334067857,
+          "six_class_winner_gap_pp": 4.725,
+          "actual_outcome_probability": 0.4680465665932143
+        },
+        "unified": {
+          "fighter": "Yousri Belgaroui",
+          "method": "KO",
+          "winner_result": "L",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.5096118297961174,
+          "six_class_winner_gap_pp": 3.583,
+          "actual_outcome_probability": 0.4903881702038826
+        },
+        "consensus": {
+          "fighter": "Yousri Belgaroui",
+          "method": "KO",
+          "winner_result": "L",
+          "exact_fighter_method_correct": false
+        }
+      },
+      "timing": {
+        "original": {
+          "market": "OVER_1.5",
+          "result": "W",
+          "simulated_probability": 0.6546
+        },
+        "consensus": {
+          "market": "OVER_1.5",
+          "result": "W",
+          "simulated_probability": null
+        }
+      },
+      "method_timing_warning": true
+    },
+    {
+      "fight_no": 12,
+      "bout": "Kayla Harrison vs Amanda Nunes",
+      "actual": {
+        "winner": "Kayla Harrison",
+        "method": "SUB",
+        "round": 4,
+        "time": "1:29",
+        "details": "Rear-naked choke round 4 at 1:29"
+      },
+      "stage_a_posture": "PASS",
+      "models": {
+        "reference": {
+          "fighter": "Kayla Harrison",
+          "method": "KO",
+          "winner_result": "W",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.8351898846823993,
+          "six_class_winner_gap_pp": 0,
+          "actual_outcome_probability": 0.8351898846823993
+        },
+        "historical": {
+          "fighter": "Kayla Harrison",
+          "method": "SUB",
+          "winner_result": "W",
+          "exact_fighter_method_correct": true,
+          "pre_fight_selected_winner_probability": 0.7052284720223374,
+          "six_class_winner_gap_pp": 2.827,
+          "actual_outcome_probability": 0.7052284720223374
+        },
+        "unified": {
+          "fighter": "Kayla Harrison",
+          "method": "SUB",
+          "winner_result": "W",
+          "exact_fighter_method_correct": true,
+          "pre_fight_selected_winner_probability": 0.7497884627009841,
+          "six_class_winner_gap_pp": 0.089,
+          "actual_outcome_probability": 0.7497884627009841
+        },
+        "consensus": {
+          "fighter": "Kayla Harrison",
+          "method": "SUB",
+          "winner_result": "W",
+          "exact_fighter_method_correct": true
+        }
+      },
+      "timing": {
+        "original": {
+          "market": "OVER_1.5",
+          "result": "W",
+          "simulated_probability": 0.6573
+        },
+        "consensus": {
+          "market": "OVER_1.5",
+          "result": "W",
+          "simulated_probability": null
+        }
+      },
+      "method_timing_warning": false
+    },
+    {
+      "fight_no": 13,
+      "bout": "Ciryl Gane vs Josh Hokit",
+      "actual": {
+        "winner": "Ciryl Gane",
+        "method": "DEC",
+        "round": 5,
+        "time": "5:00",
+        "details": "Unanimous decision 48-47 on all three cards"
+      },
+      "stage_a_posture": "PASS",
+      "models": {
+        "reference": {
+          "fighter": "Ciryl Gane",
+          "method": "KO",
+          "winner_result": "W",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.7260989287196635,
+          "six_class_winner_gap_pp": 0,
+          "actual_outcome_probability": 0.7260989287196635
+        },
+        "historical": {
+          "fighter": "Josh Hokit",
+          "method": "KO",
+          "winner_result": "L",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.5984594387993731,
+          "six_class_winner_gap_pp": 11.174,
+          "actual_outcome_probability": 0.40154056120062687
+        },
+        "unified": {
+          "fighter": "Ciryl Gane",
+          "method": "KO",
+          "winner_result": "W",
+          "exact_fighter_method_correct": false,
+          "pre_fight_selected_winner_probability": 0.5032851141979564,
+          "six_class_winner_gap_pp": 10.228,
+          "actual_outcome_probability": 0.5032851141979564
+        },
+        "consensus": {
+          "fighter": "Ciryl Gane",
+          "method": "KO",
+          "winner_result": "W",
+          "exact_fighter_method_correct": false
+        }
+      },
+      "timing": {
+        "original": {
+          "market": "GTD_NO",
+          "result": "L",
+          "simulated_probability": 0.8101
+        },
+        "consensus": {
+          "market": "GTD_NO",
+          "result": "L",
+          "simulated_probability": null
+        }
+      },
+      "method_timing_warning": false
+    }
+  ],
+  "post_card_official_full_fight_stats_imported": false
+}

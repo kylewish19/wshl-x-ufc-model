@@ -1,0 +1,61 @@
+name: UFC winner v3 chronological recent-form and boosted winner research
+
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths:
+      - "src/wshlx_ufc/winner_recent_form_v3.py"
+      - "tools/benchmark_winner_recent_form_v3.py"
+      - "tests/test_ufc_winner_recent_form_v3.py"
+      - ".github/workflows/ufc-winner-v3-recent-form-research.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  winner-v3:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install project research environment
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Verify time-safe snapshots and previous regression tests
+        run: pytest -q tests/test_ufc_winner_recent_form_v3.py tests/test_ufc_independent_joint_v2.py tests/test_ufc_historical_feature_baselines.py
+      - name: Benchmark all winner models against same fighter-method probabilities
+        run: python tools/benchmark_winner_recent_form_v3.py > winner_v3_results_stdout.log
+      - name: Validate complete research results and original card isolation
+        run: |
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          root=Path("reports/model_health/2026-11-19_winner_v3_recent_form")
+          data=json.loads((root/"winner_v3_results.json").read_text())
+          assert data['no_model_promoted']
+          assert data['no_bookmaker_odds_or_wager_promotion']
+          assert data['nov21_original_stage_a_and_coherent_shadow_not_modified']
+          assert data['same_conditional_method_model_for_all_winner_heads']
+          assert data['source_recent_forms']['modern_rows_joined']==3036
+          assert data['source_recent_forms']['modern_rows_unmatched']==0
+          assert [data['out_of_year_tests'][y]['test_decisive_bouts']
+                  for y in ('2024','2025','2026_retrospective')]==[511,513,488]
+          assert all(len(k['winner_models'])==6 for k in data['out_of_year_tests'].values())
+          assert hashlib.sha256((root/"year_fold_winner_v3_six_exact.csv").read_bytes()).hexdigest()==data['prediction_csv_sha256']
+          print("WINNER_V3_RESEARCH_EXACT_AND_WINNER_SCORE_VERIFIED_NO_PROMOTION")
+          PY
+      - name: Archive time-safe pre-event source results and model forecasts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wshlx-winner-v3-recent-form-2024-26
+          path: |
+            reports/model_health/2026-11-19_winner_v3_recent_form/
+            winner_v3_results_stdout.log
+          if-no-files-found: warn

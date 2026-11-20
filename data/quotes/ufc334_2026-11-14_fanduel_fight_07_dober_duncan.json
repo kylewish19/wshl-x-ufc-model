@@ -1,0 +1,78 @@
+{
+  "event": "UFC 334: Gane vs Hokit",
+  "event_date": "2026-11-14",
+  "sportsbook": "FanDuel",
+  "status": "FULL_DISPLAYED_FIGHT_MARKETS_TRANSCRIBED_PENDING_OTHER_FIGHTS",
+  "fight_no": 7,
+  "a": "Drew Dober",
+  "b": "Chris Duncan",
+  "stage_a_locked": true,
+  "stage_a_final_selection_github_blob_sha": "564b8dbf2147f7a1cc839917ca3a4eb2d42ed63e",
+  "price_source": "User-provided FanDuel screenshots in conversation on November 11, 2026 (4 images)",
+  "exact_quote_capture_timestamp_utc": null,
+  "collected_before_event_start": true,
+  "odds_used_in_stage_a": false,
+  "moneyline": {
+    "a": 134,
+    "b": -172
+  },
+  "method_of_victory": {
+    "a": {
+      "KO_TKO": 200,
+      "SUB": 1800,
+      "DEC": 1000
+    },
+    "b": {
+      "KO_TKO": 310,
+      "SUB": 310,
+      "DEC": 440
+    },
+    "DRAW": 5000
+  },
+  "double_chance": {
+    "a": {
+      "KO_OR_SUB": 170,
+      "KO_OR_DEC": 145,
+      "SUB_OR_DEC": 700
+    },
+    "b": {
+      "KO_OR_SUB": 110,
+      "KO_OR_DEC": 140,
+      "SUB_OR_DEC": 140
+    },
+    "DRAW": 5000
+  },
+  "goes_distance": {
+    "YES": 285,
+    "NO": -400
+  },
+  "total_rounds": {
+    "threshold": 1.5,
+    "OVER": -122,
+    "UNDER": 100
+  },
+  "how_fight_ends": {
+    "KO_TKO": -130,
+    "SUB": 250,
+    "DEC": 270
+  },
+  "round_to_start": {
+    "2": {
+      "YES": -215,
+      "NO": 164
+    },
+    "3": {
+      "YES": 136,
+      "NO": -174
+    }
+  },
+  "market_count": 27,
+  "missing_markets": [
+    "Only Over/Under 1.5 shown; 2.5 alternate not supplied",
+    "No exact finish-round market shown"
+  ],
+  "full_fight_pricing_complete": true,
+  "full_event_pricing_complete": false,
+  "used_for_price_comparison_yet": false,
+  "odds_freshness_note": "User screenshot price snapshot, not independently reverified live quote and not evidence of wager placement."
+}

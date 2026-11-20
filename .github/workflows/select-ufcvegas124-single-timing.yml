@@ -1,0 +1,39 @@
+name: Select single timing forecast for UFC Vegas124
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/historical-conditional-rates]
+    paths:
+      - "tools/select_ufcvegas124_single_timing_picks.py"
+      - ".github/workflows/select-ufcvegas124-single-timing.yml"
+permissions:
+  contents: write
+concurrency:
+  group: select-ufcvegas124-single-timing
+  cancel-in-progress: true
+jobs:
+  select:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11", cache: "pip"}
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Select exactly one research timing outcome per UFC fight
+        run: PYTHONPATH=src:tools python tools/select_ufcvegas124_single_timing_picks.py
+      - name: Test
+        run: pytest -q
+      - name: Commit separately labeled post-price research forecast
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/locks/ufcvegas124_2026-11-07/stage_b_one_timing_forecast_per_fight.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "research: independently grade one Nov7 timing forecast per fight without bets"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

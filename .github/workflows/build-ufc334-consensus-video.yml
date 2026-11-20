@@ -1,0 +1,44 @@
+name: Build UFC334 three-view consensus video overlay
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/historical-conditional-rates]
+    paths:
+      - 'src/wshlx_ufc/consensus_video.py'
+      - 'tools/generate_consensus_video_card.py'
+      - 'tests/test_consensus_video.py'
+      - '.github/workflows/build-ufc334-consensus-video.yml'
+permissions:
+  contents: write
+concurrency:
+  group: ufc334-consensus-video-overlay
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11', cache: pip}
+      - name: Install
+        run: pip install -e '.[dev]'
+      - name: Regression tests, original lock intact
+        run: pytest -q
+      - name: Generate UFC334 2-of-3 editorial consensus only
+        run: |
+          python tools/generate_consensus_video_card.py \
+            --stage-a data/locks/ufc334_2026-11-14/stage_a_final_selection.json \
+            --raw data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json \
+            --json-out reports/ufc334_2026-11-14/CONSENSUS_VIDEO_REVEAL.json \
+            --markdown-out reports/ufc334_2026-11-14/CONSENSUS_VIDEO_REVEAL.md
+      - name: Commit derived overlay ONLY (no original frozen changes)
+        run: |
+          git config user.name 'WSHL_X model bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add reports/ufc334_2026-11-14/CONSENSUS_VIDEO_REVEAL.json reports/ufc334_2026-11-14/CONSENSUS_VIDEO_REVEAL.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'reports: UFC334 video consensus 2-of-3 overlay; picks immutable'
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"

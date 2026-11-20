@@ -1,0 +1,2148 @@
+{
+  "event": "UFC Fight Night: Cortes Acosta vs Walker",
+  "event_date": "2026-11-07",
+  "fights": [
+    {
+      "a": "Jonny Parsons",
+      "b": "Jose Souza",
+      "confidence_10_model_raw": 6.61525640744948,
+      "confidence_tier_after_research": "PASS",
+      "double_chance_current": {
+        "KO_OR_DEC": 0.6379138895090919,
+        "KO_OR_SUB": 0.5570496969087918,
+        "SUB_OR_DEC": 0.12808769507201237
+      },
+      "evidence_density": {
+        "a_age": 35.17115341177437,
+        "a_days_since_last": 1204.0,
+        "a_prior_ufc_bouts": 1,
+        "a_reach": 69.0,
+        "b_age": null,
+        "b_days_since_last": 161.0,
+        "b_prior_ufc_bouts": 1,
+        "b_reach": null
+      },
+      "fight_no": 1,
+      "method": {
+        "current_conditional_if_official_winner": {
+          "DEC": 0.15793181307153148,
+          "KO": 0.8063753130902499,
+          "SUB": 0.03569287383821861
+        },
+        "historical_conditional_if_official_winner": {
+          "DEC": 0.36142915942763143,
+          "KO": 0.5098463702573345,
+          "SUB": 0.12872447031503415
+        },
+        "method_score_10": 6.512,
+        "official_gate": "PASS \u2014 NO METHOD BET",
+        "official_method_if_any": null,
+        "oof_unified_conditional_if_official_winner": {
+          "DEC": 0.2789062116738828,
+          "KO": 0.6373362603096557,
+          "SUB": 0.08375752801646143
+        },
+        "score_definition": "Cross-model conditional-method concentration; average top-method probability x10 when current/historical/unified agree, otherwise conservative minimum x10.",
+        "top_method_current": "KO/TKO",
+        "top_method_historical": "KO/TKO",
+        "top_method_unified": "KO/TKO",
+        "winner_plus_method_current_direct": {
+          "DEC": 0.10447594383615622,
+          "KO_TKO": 0.5334379456729357,
+          "SUB": 0.02361175123585616
+        },
+        "winner_plus_method_current_sim_10000": {
+          "DEC": 0.1095,
+          "KO_TKO": 0.5324,
+          "SUB": 0.0224
+        }
+      },
+      "official_reference_pick": "Jonny Parsons",
+      "official_reference_probability": 0.661525640744948,
+      "official_reference_probability_a": 0.661525640744948,
+      "research_override": "NONE \u2014 reference side preserved",
+      "research_reason": "Parsons has just one UFC bout and has not fought in the UFC for more than three years; Souza is a 9-1 Brazilian prospect with exceptionally limited UFC-specific history. Three model winner views align on Parsons, but severe inactivity and uncertain prospect transfer outweigh the point estimate.",
+      "scheduled_rounds": 3,
+      "shadow_disagreement": {
+        "historical_vs_reference": false,
+        "unified_vs_reference": false
+      },
+      "sparse_ufc_evidence": true,
+      "stage_a_posture": "PASS",
+      "tape_provenance": {
+        "classification": "UNAVAILABLE_FOR_CONTINUOUS_VISUAL_REVIEW_IN_CURRENT_ENVIRONMENT",
+        "integrity_rule": "No claim that a full fight was watched unless continuous playback was actually available.",
+        "note": "UFC official preview and public result/stat summaries read. Continuous full-fight footage was NOT played in this environment; no tape-complete claim."
+      },
+      "timing_current": {
+        "direct": {
+          "GTD_NO": 0.6738386778164402,
+          "GTD_YES": 0.3261613221835598,
+          "OVER_0.5": 0.80093474959597,
+          "OVER_1.5": 0.5375826421094801,
+          "OVER_2.5": 0.3807135256913875,
+          "ROUND_2_STARTS_NO": 0.3485246829666533,
+          "ROUND_2_STARTS_YES": 0.6514753170333467,
+          "ROUND_3_STARTS_NO": 0.5504151137099456,
+          "ROUND_3_STARTS_YES": 0.4495848862900544,
+          "UNDER_0.5": 0.19906525040403,
+          "UNDER_1.5": 0.46241735789051985,
+          "UNDER_2.5": 0.6192864743086125
+        },
+        "exact_finish_round_from_sim_10000": {
+          "FINISH_ROUND_1": 0.35509999999999997,
+          "FINISH_ROUND_2": 0.1965,
+          "FINISH_ROUND_3": 0.12420000000000003,
+          "GTD": 0.3242
+        },
+        "sim_10000": {
+          "GTD_NO": 0.6758,
+          "GTD_YES": 0.3242,
+          "OVER_0.5": 0.7996,
+          "OVER_1.5": 0.5322,
+          "OVER_2.5": 0.378,
+          "ROUND_2_STARTS_NO": 0.35509999999999997,
+          "ROUND_2_STARTS_YES": 0.6449,
+          "ROUND_3_STARTS_NO": 0.5516,
+          "ROUND_3_STARTS_YES": 0.4484,
+          "UNDER_0.5": 0.20040000000000002,
+          "UNDER_1.5": 0.4678,
+          "UNDER_2.5": 0.622
+        }
+      },
+      "timing_oof_unified_shadow": {
+        "exact_finish_round_sim_10000": {
+          "FINISH_ROUND_1": 0.3136,
+          "FINISH_ROUND_2": 0.1979,
+          "FINISH_ROUND_3": 0.1199
+        },
+        "sim_10000": {
+          "FINISH_ROUND_1": 0.3136,
+          "FINISH_ROUND_2": 0.1979,
+          "FINISH_ROUND_3": 0.1199,
+          "GTD_NO": 0.6314,
+          "GTD_YES": 0.3686,
+          "OVER_0.5": 0.827,
+          "OVER_1.5": 0.5776,
+          "OVER_2.5": 0.4214,
+          "ROUND_2_STARTS_NO": 0.3136,
+          "ROUND_2_STARTS_YES": 0.6864,
+          "ROUND_3_STARTS_NO": 0.5115000000000001,
+          "ROUND_3_STARTS_YES": 0.4885,
+          "UNDER_0.5": 0.17300000000000004,
+          "UNDER_1.5": 0.4224,
+          "UNDER_2.5": 0.5786
+        }
+      },
+      "weight_class": "Welterweight",
+      "winner_views": {
+        "historical_shadow": {
+          "pick": "Jonny Parsons",
+          "probability": 0.5979093486392045
+        },
+        "oof_unified_shadow": {
+          "pick": "Jonny Parsons",
+          "probability": 0.6174557875446999
+        },
+        "reference": {
+          "pick": "Jonny Parsons",
+          "probability": 0.661525640744948
+        }
+      }
+    },
+    {
+      "a": "Seokhyeon Ko",
+      "b": "Wellington Turman",
+      "confidence_10_model_raw": 7.096517809478034,
+      "confidence_tier_after_research": "B",
+      "double_chance_current": {
+        "KO_OR_DEC": 0.6060174477003809,
+        "KO_OR_SUB": 0.38407526857457386,
+        "SUB_OR_DEC": 0.42921084562065226
+      },
+      "evidence_density": {
+        "a_age": 33.12046106353998,
+        "a_days_since_last": 112.0,
+        "a_prior_ufc_bouts": 3,
+        "a_reach": 71.0,
+        "b_age": 30.294941032327838,
+        "b_days_since_last": 1071.0,
+        "b_prior_ufc_bouts": 9,
+        "b_reach": 72.0
+      },
+      "fight_no": 2,
+      "method": {
+        "current_conditional_if_official_winner": {
+          "DEC": 0.45878347819883303,
+          "KO": 0.3951810491514546,
+          "SUB": 0.14603547264971237
+        },
+        "historical_conditional_if_official_winner": {
+          "DEC": 0.5452852086634691,
+          "KO": 0.18322109634299347,
+          "SUB": 0.2714936949935375
+        },
+        "method_score_10": 5.102,
+        "official_gate": "SIDE ONLY \u2014 NO METHOD BET",
+        "official_method_if_any": null,
+        "oof_unified_conditional_if_official_winner": {
+          "DEC": 0.5265212568919183,
+          "KO": 0.2518148786645146,
+          "SUB": 0.22166386444356706
+        },
+        "score_definition": "Cross-model conditional-method concentration; average top-method probability x10 when current/historical/unified agree, otherwise conservative minimum x10.",
+        "top_method_current": "DEC",
+        "top_method_historical": "DEC",
+        "top_method_unified": "DEC",
+        "winner_plus_method_current_direct": {
+          "DEC": 0.32557651237322965,
+          "KO_TKO": 0.28044093532715125,
+          "SUB": 0.10363433324742263
+        },
+        "winner_plus_method_current_sim_10000": {
+          "DEC": 0.3225,
+          "KO_TKO": 0.2795,
+          "SUB": 0.1028
+        }
+      },
+      "official_reference_pick": "Seokhyeon Ko",
+      "official_reference_probability": 0.7096517809478035,
+      "official_reference_probability_a": 0.7096517809478035,
+      "research_override": "NONE \u2014 reference side preserved",
+      "research_reason": "All three models select Ko. He has UFC wrestling/control evidence and faces Turman returning from a near-three-year Octagon absence; the recent Ko loss and uncertainty about Turman's form after the layoff prevent an A tier. Style issue: control acquisition vs Turman's reactive submissions.",
+      "scheduled_rounds": 3,
+      "shadow_disagreement": {
+        "historical_vs_reference": false,
+        "unified_vs_reference": false
+      },
+      "sparse_ufc_evidence": false,
+      "stage_a_posture": "SIDE",
+      "tape_provenance": {
+        "classification": "UNAVAILABLE_FOR_CONTINUOUS_VISUAL_REVIEW_IN_CURRENT_ENVIRONMENT",
+        "integrity_rule": "No claim that a full fight was watched unless continuous playback was actually available.",
+        "note": "UFC official preview and public result/stat summaries read. Continuous full-fight footage was NOT played in this environment; no tape-complete claim."
+      },
+      "timing_current": {
+        "direct": {
+          "GTD_NO": 0.4400406857066097,
+          "GTD_YES": 0.5599593142933903,
+          "OVER_0.5": 0.89130143073525,
+          "OVER_1.5": 0.7250352069964912,
+          "OVER_2.5": 0.6065441737404265,
+          "ROUND_2_STARTS_NO": 0.1991356083878103,
+          "ROUND_2_STARTS_YES": 0.8008643916121897,
+          "ROUND_3_STARTS_NO": 0.33900597742136185,
+          "ROUND_3_STARTS_YES": 0.6609940225786382,
+          "UNDER_0.5": 0.10869856926474997,
+          "UNDER_1.5": 0.27496479300350885,
+          "UNDER_2.5": 0.39345582625957354
+        },
+        "exact_finish_round_from_sim_10000": {
+          "FINISH_ROUND_1": 0.1955,
+          "FINISH_ROUND_2": 0.13680000000000003,
+          "FINISH_ROUND_3": 0.10259999999999991,
+          "GTD": 0.5651
+        },
+        "sim_10000": {
+          "GTD_NO": 0.43489999999999995,
+          "GTD_YES": 0.5651,
+          "OVER_0.5": 0.8909,
+          "OVER_1.5": 0.7296,
+          "OVER_2.5": 0.6169,
+          "ROUND_2_STARTS_NO": 0.1955,
+          "ROUND_2_STARTS_YES": 0.8045,
+          "ROUND_3_STARTS_NO": 0.33230000000000004,
+          "ROUND_3_STARTS_YES": 0.6677,
+          "UNDER_0.5": 0.10909999999999997,
+          "UNDER_1.5": 0.2704,
+          "UNDER_2.5": 0.3831
+        }
+      },
+      "timing_oof_unified_shadow": {
+        "exact_finish_round_sim_10000": {
+          "FINISH_ROUND_1": 0.2066,
+          "FINISH_ROUND_2": 0.1448,
+          "FINISH_ROUND_3": 0.1064
+        },
+        "sim_10000": {
+          "FINISH_ROUND_1": 0.2066,
+          "FINISH_ROUND_2": 0.1448,
+          "FINISH_ROUND_3": 0.1064,
+          "GTD_NO": 0.4578,
+          "GTD_YES": 0.5422,
+          "OVER_0.5": 0.8847,
+          "OVER_1.5": 0.7157,
+          "OVER_2.5": 0.5904,
+          "ROUND_2_STARTS_NO": 0.2066,
+          "ROUND_2_STARTS_YES": 0.7934,
+          "ROUND_3_STARTS_NO": 0.35140000000000005,
+          "ROUND_3_STARTS_YES": 0.6486,
+          "UNDER_0.5": 0.11529999999999996,
+          "UNDER_1.5": 0.2843,
+          "UNDER_2.5": 0.40959999999999996
+        }
+      },
+      "weight_class": "Welterweight",
+      "winner_views": {
+        "historical_shadow": {
+          "pick": "Seokhyeon Ko",
+          "probability": 0.6724239600830939
+        },
+        "oof_unified_shadow": {
+          "pick": "Seokhyeon Ko",
+          "probability": 0.6838509509148233
+        },
+        "reference": {
+          "pick": "Seokhyeon Ko",
+          "probability": 0.7096517809478035
+        }
+      }
+    },
+    {
+      "a": "Mantas Kondratavicius",
+      "b": "Andre Petroski",
+      "confidence_10_model_raw": 7.5,
+      "confidence_tier_after_research": "C",
+      "double_chance_current": {
+        "KO_OR_DEC": 0.7279234778370808,
+        "KO_OR_SUB": 0.5902574476345422,
+        "SUB_OR_DEC": 0.24410864506395863
+      },
+      "evidence_density": {
+        "a_age": 27.310622394710364,
+        "a_days_since_last": 231.0,
+        "a_prior_ufc_bouts": 1,
+        "a_reach": 75.0,
+        "b_age": 35.40661341437538,
+        "b_days_since_last": 175.0,
+        "b_prior_ufc_bouts": 13,
+        "b_reach": 73.0
+      },
+      "fight_no": 3,
+      "method": {
+        "current_conditional_if_official_winner": {
+          "DEC": 0.2443687024906771,
+          "KO": 0.6874988482701402,
+          "SUB": 0.0681324492391827
+        },
+        "historical_conditional_if_official_winner": {
+          "DEC": 0.24516730928407723,
+          "KO": 0.5683506081318385,
+          "SUB": 0.18648208258408433
+        },
+        "method_score_10": 6.256,
+        "official_gate": "SIDE ONLY \u2014 NO METHOD BET",
+        "official_method_if_any": null,
+        "oof_unified_conditional_if_official_winner": {
+          "DEC": 0.24907665551442115,
+          "KO": 0.6208890887726292,
+          "SUB": 0.13003425571294977
+        },
+        "score_definition": "Cross-model conditional-method concentration; average top-method probability x10 when current/historical/unified agree, otherwise conservative minimum x10.",
+        "top_method_current": "KO/TKO",
+        "top_method_historical": "KO/TKO",
+        "top_method_unified": "KO/TKO",
+        "winner_plus_method_current_direct": {
+          "DEC": 0.1908873376332486,
+          "KO_TKO": 0.5370361402038322,
+          "SUB": 0.053221307430710026
+        },
+        "winner_plus_method_current_sim_10000": {
+          "DEC": 0.1862,
+          "KO_TKO": 0.54,
+          "SUB": 0.0489
+        }
+      },
+      "official_reference_pick": "Mantas Kondratavicius",
+      "official_reference_probability": 0.781144785267791,
+      "official_reference_probability_a": 0.781144785267791,
+      "research_override": "NONE \u2014 reference side preserved",
+      "research_reason": "All three models strongly prefer Kondratavicius, but he has only one UFC fight, where he had conditioning questions; Petroski brings 13 UFC bouts and a grappling route despite a three-fight losing skid. Treat 78% as potentially overconfident because of one-bout prospect data.",
+      "scheduled_rounds": 3,
+      "shadow_disagreement": {
+        "historical_vs_reference": false,
+        "unified_vs_reference": false
+      },
+      "sparse_ufc_evidence": true,
+      "stage_a_posture": "LEAN",
+      "tape_provenance": {
+        "classification": "UNAVAILABLE_FOR_CONTINUOUS_VISUAL_REVIEW_IN_CURRENT_ENVIRONMENT",
+        "integrity_rule": "No claim that a full fight was watched unless continuous playback was actually available.",
+        "note": "UFC official preview and public result/stat summaries read. Continuous full-fight footage was NOT played in this environment; no tape-complete claim."
+      },
+      "timing_current": {
+        "direct": {
+          "GTD_NO": 0.5727908425006722,
+          "GTD_YES": 0.42720915749932775,
+          "OVER_0.5": 0.8448166184208978,
+          "OVER_1.5": 0.624149945107515,
+          "OVER_2.5": 0.48037921026525476,
+          "ROUND_2_STARTS_NO": 0.277824228127429,
+          "ROUND_2_STARTS_YES": 0.722175771872571,
+          "ROUND_3_STARTS_NO": 0.45503121078032716,
+          "ROUND_3_STARTS_YES": 0.5449687892196728,
+          "UNDER_0.5": 0.15518338157910216,
+          "UNDER_1.5": 0.375850054892485,
+          "UNDER_2.5": 0.5196207897347452
+        },
+        "exact_finish_round_from_sim_10000": {
+          "FINISH_ROUND_1": 0.277,
+          "FINISH_ROUND_2": 0.1795,
+          "FINISH_ROUND_3": 0.1159,
+          "GTD": 0.4276
+        },
+        "sim_10000": {
+          "GTD_NO": 0.5724,
+          "GTD_YES": 0.4276,
+          "OVER_0.5": 0.8471,
+          "OVER_1.5": 0.622,
+          "OVER_2.5": 0.4819,
+          "ROUND_2_STARTS_NO": 0.277,
+          "ROUND_2_STARTS_YES": 0.723,
+          "ROUND_3_STARTS_NO": 0.4565,
+          "ROUND_3_STARTS_YES": 0.5435,
+          "UNDER_0.5": 0.15290000000000004,
+          "UNDER_1.5": 0.378,
+          "UNDER_2.5": 0.5181
+        }
+      },
+      "timing_oof_unified_shadow": {
+        "exact_finish_round_sim_10000": {
+          "FINISH_ROUND_1": 0.285,
+          "FINISH_ROUND_2": 0.181,
+          "FINISH_ROUND_3": 0.1165
+        },
+        "sim_10000": {
+          "FINISH_ROUND_1": 0.285,
+          "FINISH_ROUND_2": 0.181,
+          "FINISH_ROUND_3": 0.1165,
+          "GTD_NO": 0.5825,
+          "GTD_YES": 0.4175,
+          "OVER_0.5": 0.8407,
+          "OVER_1.5": 0.6179,
+          "OVER_2.5": 0.4701,
+          "ROUND_2_STARTS_NO": 0.28500000000000003,
+          "ROUND_2_STARTS_YES": 0.715,
+          "ROUND_3_STARTS_NO": 0.46599999999999997,
+          "ROUND_3_STARTS_YES": 0.534,
+          "UNDER_0.5": 0.1593,
+          "UNDER_1.5": 0.3821,
+          "UNDER_2.5": 0.5299
+        }
+      },
+      "weight_class": "Middleweight",
+      "winner_views": {
+        "historical_shadow": {
+          "pick": "Mantas Kondratavicius",
+          "probability": 0.7884492716221979
+        },
+        "oof_unified_shadow": {
+          "pick": "Mantas Kondratavicius",
+          "probability": 0.7862768232745152
+        },
+        "reference": {
+          "pick": "Mantas Kondratavicius",
+          "probability": 0.781144785267791
+        }
+      }
+    },
+    {
+      "a": "Austin Bashi",
+      "b": "Carlos Calderon",
+      "confidence_10_model_raw": 7.02226977527582,
+      "confidence_tier_after_research": "PASS",
+      "double_chance_current": {
+        "KO_OR_DEC": 0.4622747117193238,
+        "KO_OR_SUB": 0.49560414923244067,
+        "SUB_OR_DEC": 0.4465750941033995
+      },
+      "evidence_density": {
+        "a_age": 25.106607254084615,
+        "a_days_since_last": 112.0,
+        "a_prior_ufc_bouts": 3,
+        "a_reach": 70.0,
+        "b_age": 30.741219874466964,
+        "b_days_since_last": null,
+        "b_prior_ufc_bouts": 0,
+        "b_reach": 71.0
+      },
+      "fight_no": 4,
+      "method": {
+        "current_conditional_if_official_winner": {
+          "DEC": 0.29423937687871815,
+          "KO": 0.3640587610636776,
+          "SUB": 0.3417018620576042
+        },
+        "historical_conditional_if_official_winner": {
+          "DEC": 0.31665559588286285,
+          "KO": 0.2182674124482182,
+          "SUB": 0.4650769916689189
+        },
+        "method_score_10": 3.641,
+        "official_gate": "PASS \u2014 NO METHOD BET",
+        "official_method_if_any": null,
+        "oof_unified_conditional_if_official_winner": {
+          "DEC": 0.31218009271170255,
+          "KO": 0.26796791597295516,
+          "SUB": 0.41985199131534223
+        },
+        "score_definition": "Cross-model conditional-method concentration; average top-method probability x10 when current/historical/unified agree, otherwise conservative minimum x10.",
+        "top_method_current": "KO/TKO",
+        "top_method_historical": "SUB",
+        "top_method_unified": "SUB",
+        "winner_plus_method_current_direct": {
+          "DEC": 0.20662282829514134,
+          "KO_TKO": 0.2556518834241825,
+          "SUB": 0.23995226580825818
+        },
+        "winner_plus_method_current_sim_10000": {
+          "DEC": 0.2058,
+          "KO_TKO": 0.2576,
+          "SUB": 0.2429
+        }
+      },
+      "official_reference_pick": "Austin Bashi",
+      "official_reference_probability": 0.702226977527582,
+      "official_reference_probability_a": 0.702226977527582,
+      "research_override": "NONE \u2014 reference side preserved",
+      "research_reason": "Bashi has three UFC bouts, while Calderon is a 0-UFC-fight Fury FC featherweight champion replacing injured Brennan on four days notice. UFC history alone cannot reflect Calderon's regional five-round championship experience. All views favor Bashi, but the opponent's tiny-sample uncertainty triggers pass.",
+      "scheduled_rounds": 3,
+      "shadow_disagreement": {
+        "historical_vs_reference": false,
+        "unified_vs_reference": false
+      },
+      "sparse_ufc_evidence": true,
+      "stage_a_posture": "PASS",
+      "tape_provenance": {
+        "classification": "UNAVAILABLE_FOR_CONTINUOUS_VISUAL_REVIEW_IN_CURRENT_ENVIRONMENT",
+        "integrity_rule": "No claim that a full fight was watched unless continuous playback was actually available.",
+        "note": "UFC official preview and public result/stat summaries read. Continuous full-fight footage was NOT played in this environment; no tape-complete claim."
+      },
+      "timing_current": {
+        "direct": {
+          "GTD_NO": 0.5030777660493613,
+          "GTD_YES": 0.49692223395063867,
+          "OVER_0.5": 0.870468196853533,
+          "OVER_1.5": 0.6786284953975562,
+          "OVER_2.5": 0.5472148391899103,
+          "ROUND_2_STARTS_NO": 0.23488324741526767,
+          "ROUND_2_STARTS_YES": 0.7651167525847323,
+          "ROUND_3_STARTS_NO": 0.39299328284066426,
+          "ROUND_3_STARTS_YES": 0.6070067171593357,
+          "UNDER_0.5": 0.12953180314646695,
+          "UNDER_1.5": 0.3213715046024438,
+          "UNDER_2.5": 0.4527851608100897
+        },
+        "exact_finish_round_from_sim_10000": {
+          "FINISH_ROUND_1": 0.24019999999999997,
+          "FINISH_ROUND_2": 0.1582,
+          "FINISH_ROUND_3": 0.10750000000000004,
+          "GTD": 0.4941
+        },
+        "sim_10000": {
+          "GTD_NO": 0.5059,
+          "GTD_YES": 0.4941,
+          "OVER_0.5": 0.8647,
+          "OVER_1.5": 0.6722,
+          "OVER_2.5": 0.5446,
+          "ROUND_2_STARTS_NO": 0.24019999999999997,
+          "ROUND_2_STARTS_YES": 0.7598,
+          "ROUND_3_STARTS_NO": 0.3984,
+          "ROUND_3_STARTS_YES": 0.6016,
+          "UNDER_0.5": 0.13529999999999998,
+          "UNDER_1.5": 0.3278,
+          "UNDER_2.5": 0.4554
+        }
+      },
+      "timing_oof_unified_shadow": {
+        "exact_finish_round_sim_10000": {
+          "FINISH_ROUND_1": 0.2416,
+          "FINISH_ROUND_2": 0.1599,
+          "FINISH_ROUND_3": 0.1099
+        },
+        "sim_10000": {
+          "FINISH_ROUND_1": 0.2416,
+          "FINISH_ROUND_2": 0.1599,
+          "FINISH_ROUND_3": 0.1099,
+          "GTD_NO": 0.5114000000000001,
+          "GTD_YES": 0.4886,
+          "OVER_0.5": 0.8713,
+          "OVER_1.5": 0.6718,
+          "OVER_2.5": 0.5383,
+          "ROUND_2_STARTS_NO": 0.24160000000000004,
+          "ROUND_2_STARTS_YES": 0.7584,
+          "ROUND_3_STARTS_NO": 0.40149999999999997,
+          "ROUND_3_STARTS_YES": 0.5985,
+          "UNDER_0.5": 0.12870000000000004,
+          "UNDER_1.5": 0.32820000000000005,
+          "UNDER_2.5": 0.4617
+        }
+      },
+      "weight_class": "Featherweight",
+      "winner_views": {
+        "historical_shadow": {
+          "pick": "Austin Bashi",
+          "probability": 0.6038112872064767
+        },
+        "oof_unified_shadow": {
+          "pick": "Austin Bashi",
+          "probability": 0.6346776904896176
+        },
+        "reference": {
+          "pick": "Austin Bashi",
+          "probability": 0.702226977527582
+        }
+      }
+    },
+    {
+      "a": "Jose Delano",
+      "b": "Murtazali Magomedov",
+      "confidence_10_model_raw": 7.148968052863847,
+      "confidence_tier_after_research": "PASS",
+      "double_chance_current": {
+        "KO_OR_DEC": 0.2123237266280788,
+        "KO_OR_SUB": 0.5788150623075863,
+        "SUB_OR_DEC": 0.6386548216371044
+      },
+      "evidence_density": {
+        "a_age": 30.155307774971423,
+        "a_days_since_last": 217.0,
+        "a_prior_ufc_bouts": 1,
+        "a_reach": 70.0,
+        "b_age": 27.20110611443082,
+        "b_days_since_last": 140.0,
+        "b_prior_ufc_bouts": 1,
+        "b_reach": 70.0
+      },
+      "fight_no": 5,
+      "method": {
+        "current_conditional_if_official_winner": {
+          "DEC": 0.19035158916997075,
+          "KO": 0.10664753721865929,
+          "SUB": 0.70300087361137
+        },
+        "historical_conditional_if_official_winner": {
+          "DEC": 0.3941150916032573,
+          "KO": 0.14399186201006847,
+          "SUB": 0.4618930463866742
+        },
+        "method_score_10": 5.742,
+        "official_gate": "PASS \u2014 NO METHOD BET",
+        "official_method_if_any": null,
+        "oof_unified_conditional_if_official_winner": {
+          "DEC": 0.3094750152038458,
+          "KO": 0.13273035804815989,
+          "SUB": 0.5577946267479943
+        },
+        "score_definition": "Cross-model conditional-method concentration; average top-method probability x10 when current/historical/unified agree, otherwise conservative minimum x10.",
+        "top_method_current": "SUB",
+        "top_method_historical": "SUB",
+        "top_method_unified": "SUB",
+        "winner_plus_method_current_direct": {
+          "DEC": 0.13608174297879846,
+          "KO_TKO": 0.07624198364928032,
+          "SUB": 0.5025730786583059
+        },
+        "winner_plus_method_current_sim_10000": {
+          "DEC": 0.1383,
+          "KO_TKO": 0.0729,
+          "SUB": 0.5012
+        }
+      },
+      "official_reference_pick": "Murtazali Magomedov",
+      "official_reference_probability": 0.7148968052863847,
+      "official_reference_probability_a": 0.2851031947136154,
+      "research_override": "NONE \u2014 reference side preserved",
+      "research_reason": "All views prefer Magomedov, whose first UFC bout ended by a rare Scottish-twister submission; Delano also has only one UFC fight and beat experienced Robert Ruchala by decision. His submission probability is a research signal, not a promoted exact-method wager: the historic SUB-vs-KO recall and sample size are weak.",
+      "scheduled_rounds": 3,
+      "shadow_disagreement": {
+        "historical_vs_reference": false,
+        "unified_vs_reference": false
+      },
+      "sparse_ufc_evidence": true,
+      "stage_a_posture": "PASS",
+      "tape_provenance": {
+        "classification": "UNAVAILABLE_FOR_CONTINUOUS_VISUAL_REVIEW_IN_CURRENT_ENVIRONMENT",
+        "integrity_rule": "No claim that a full fight was watched unless continuous playback was actually available.",
+        "note": "UFC official preview and public result/stat summaries read. Continuous full-fight footage was NOT played in this environment; no tape-complete claim."
+      },
+      "timing_current": {
+        "direct": {
+          "GTD_NO": 0.4528056742047539,
+          "GTD_YES": 0.5471943257952461,
+          "OVER_0.5": 0.8872392622736183,
+          "OVER_1.5": 0.7158326650449002,
+          "OVER_2.5": 0.594607366398427,
+          "ROUND_2_STARTS_NO": 0.20616715821577059,
+          "ROUND_2_STARTS_YES": 0.7938328417842294,
+          "ROUND_3_STARTS_NO": 0.3497925600014278,
+          "ROUND_3_STARTS_YES": 0.6502074399985722,
+          "UNDER_0.5": 0.11276073772638173,
+          "UNDER_1.5": 0.2841673349550998,
+          "UNDER_2.5": 0.40539263360157296
+        },
+        "exact_finish_round_from_sim_10000": {
+          "FINISH_ROUND_1": 0.2087,
+          "FINISH_ROUND_2": 0.14,
+          "FINISH_ROUND_3": 0.10109999999999997,
+          "GTD": 0.5502
+        },
+        "sim_10000": {
+          "GTD_NO": 0.4498,
+          "GTD_YES": 0.5502,
+          "OVER_0.5": 0.8866,
+          "OVER_1.5": 0.7155,
+          "OVER_2.5": 0.5967,
+          "ROUND_2_STARTS_NO": 0.2087,
+          "ROUND_2_STARTS_YES": 0.7913,
+          "ROUND_3_STARTS_NO": 0.3487,
+          "ROUND_3_STARTS_YES": 0.6513,
+          "UNDER_0.5": 0.11339999999999995,
+          "UNDER_1.5": 0.2845,
+          "UNDER_2.5": 0.4033
+        }
+      },
+      "timing_oof_unified_shadow": {
+        "exact_finish_round_sim_10000": {
+          "FINISH_ROUND_1": 0.1841,
+          "FINISH_ROUND_2": 0.1348,
+          "FINISH_ROUND_3": 0.0976
+        },
+        "sim_10000": {
+          "FINISH_ROUND_1": 0.1841,
+          "FINISH_ROUND_2": 0.1348,
+          "FINISH_ROUND_3": 0.0976,
+          "GTD_NO": 0.4165,
+          "GTD_YES": 0.5835,
+          "OVER_0.5": 0.8985,
+          "OVER_1.5": 0.7452,
+          "OVER_2.5": 0.6291,
+          "ROUND_2_STARTS_NO": 0.18410000000000004,
+          "ROUND_2_STARTS_YES": 0.8159,
+          "ROUND_3_STARTS_NO": 0.31889999999999996,
+          "ROUND_3_STARTS_YES": 0.6811,
+          "UNDER_0.5": 0.10150000000000003,
+          "UNDER_1.5": 0.2548,
+          "UNDER_2.5": 0.3709
+        }
+      },
+      "weight_class": "Featherweight",
+      "winner_views": {
+        "historical_shadow": {
+          "pick": "Murtazali Magomedov",
+          "probability": 0.6893403188582432
+        },
+        "oof_unified_shadow": {
+          "pick": "Murtazali Magomedov",
+          "probability": 0.6971392462888888
+        },
+        "reference": {
+          "pick": "Murtazali Magomedov",
+          "probability": 0.7148968052863847
+        }
+      }
+    },
+    {
+      "a": "Karine Silva",
+      "b": "Gabriella Fernandes",
+      "confidence_10_model_raw": 5.748577866300034,
+      "confidence_tier_after_research": "C",
+      "double_chance_current": {
+        "KO_OR_DEC": 0.41633018470839156,
+        "KO_OR_SUB": 0.2736679910182094,
+        "SUB_OR_DEC": 0.4597173975334059
+      },
+      "evidence_density": {
+        "a_age": 32.93154548005777,
+        "a_days_since_last": 203.0,
+        "a_prior_ufc_bouts": 8,
+        "a_reach": 67.0,
+        "b_age": 33.2354531578335,
+        "b_days_since_last": 224.0,
+        "b_prior_ufc_bouts": 6,
+        "b_reach": 66.0
+      },
+      "fight_no": 6,
+      "method": {
+        "current_conditional_if_official_winner": {
+          "DEC": 0.5239379245038378,
+          "KO": 0.20029369310901501,
+          "SUB": 0.2757683823871472
+        },
+        "historical_conditional_if_official_winner": {
+          "DEC": 0.573698697537957,
+          "KO": 0.15738405749559192,
+          "SUB": 0.26891724496645103
+        },
+        "method_score_10": 5.51,
+        "official_gate": "SIDE ONLY \u2014 NO METHOD BET",
+        "official_method_if_any": null,
+        "oof_unified_conditional_if_official_winner": {
+          "DEC": 0.5554794900494862,
+          "KO": 0.17257837041224608,
+          "SUB": 0.27194213953826774
+        },
+        "score_definition": "Cross-model conditional-method concentration; average top-method probability x10 when current/historical/unified agree, otherwise conservative minimum x10.",
+        "top_method_current": "DEC",
+        "top_method_historical": "DEC",
+        "top_method_unified": "DEC",
+        "winner_plus_method_current_direct": {
+          "DEC": 0.30118979561179404,
+          "KO_TKO": 0.11514038909659755,
+          "SUB": 0.15852760192161186
+        },
+        "winner_plus_method_current_sim_10000": {
+          "DEC": 0.3079,
+          "KO_TKO": 0.1114,
+          "SUB": 0.1558
+        }
+      },
+      "official_reference_pick": "Karine Silva",
+      "official_reference_probability": 0.5748577866300034,
+      "official_reference_probability_a": 0.5748577866300034,
+      "research_override": "NONE \u2014 reference side preserved",
+      "research_reason": "All three views favor Karine Silva by a small 57% edge, but Gabriella Fernandes enters with several wins including a technical submission of Wang Cong, while Silva has lost three of four. Small edge and opponent's grappling means cautious lean; no method promotion.",
+      "scheduled_rounds": 3,
+      "shadow_disagreement": {
+        "historical_vs_reference": false,
+        "unified_vs_reference": false
+      },
+      "sparse_ufc_evidence": false,
+      "stage_a_posture": "LEAN",
+      "tape_provenance": {
+        "classification": "UNAVAILABLE_FOR_CONTINUOUS_VISUAL_REVIEW_IN_CURRENT_ENVIRONMENT",
+        "integrity_rule": "No claim that a full fight was watched unless continuous playback was actually available.",
+        "note": "UFC official preview and public result/stat summaries read. Continuous full-fight footage was NOT played in this environment; no tape-complete claim."
+      },
+      "timing_current": {
+        "direct": {
+          "GTD_NO": 0.34896587665366785,
+          "GTD_YES": 0.6510341233463321,
+          "OVER_0.5": 0.9183232890097158,
+          "OVER_1.5": 0.7881750942717144,
+          "OVER_2.5": 0.690682451183102,
+          "ROUND_2_STARTS_NO": 0.15160670491796446,
+          "ROUND_2_STARTS_YES": 0.8483932950820355,
+          "ROUND_3_STARTS_NO": 0.2639583160585025,
+          "ROUND_3_STARTS_YES": 0.7360416839414975,
+          "UNDER_0.5": 0.08167671099028417,
+          "UNDER_1.5": 0.2118249057282856,
+          "UNDER_2.5": 0.309317548816898
+        },
+        "exact_finish_round_from_sim_10000": {
+          "FINISH_ROUND_1": 0.1511,
+          "FINISH_ROUND_2": 0.11639999999999995,
+          "FINISH_ROUND_3": 0.08330000000000004,
+          "GTD": 0.6492
+        },
+        "sim_10000": {
+          "GTD_NO": 0.3508,
+          "GTD_YES": 0.6492,
+          "OVER_0.5": 0.9184,
+          "OVER_1.5": 0.7855,
+          "OVER_2.5": 0.6881,
+          "ROUND_2_STARTS_NO": 0.1511,
+          "ROUND_2_STARTS_YES": 0.8489,
+          "ROUND_3_STARTS_NO": 0.26749999999999996,
+          "ROUND_3_STARTS_YES": 0.7325,
+          "UNDER_0.5": 0.0816,
+          "UNDER_1.5": 0.21450000000000002,
+          "UNDER_2.5": 0.31189999999999996
+        }
+      },
+      "timing_oof_unified_shadow": {
+        "exact_finish_round_sim_10000": {
+          "FINISH_ROUND_1": 0.1492,
+          "FINISH_ROUND_2": 0.1147,
+          "FINISH_ROUND_3": 0.0846
+        },
+        "sim_10000": {
+          "FINISH_ROUND_1": 0.1492,
+          "FINISH_ROUND_2": 0.1147,
+          "FINISH_ROUND_3": 0.0846,
+          "GTD_NO": 0.34850000000000003,
+          "GTD_YES": 0.6515,
+          "OVER_0.5": 0.9195,
+          "OVER_1.5": 0.7904,
+          "OVER_2.5": 0.6926,
+          "ROUND_2_STARTS_NO": 0.1492,
+          "ROUND_2_STARTS_YES": 0.8508,
+          "ROUND_3_STARTS_NO": 0.2639,
+          "ROUND_3_STARTS_YES": 0.7361,
+          "UNDER_0.5": 0.08050000000000002,
+          "UNDER_1.5": 0.2096,
+          "UNDER_2.5": 0.3074
+        }
+      },
+      "weight_class": "Women's Flyweight",
+      "winner_views": {
+        "historical_shadow": {
+          "pick": "Karine Silva",
+          "probability": 0.571377171957904
+        },
+        "oof_unified_shadow": {
+          "pick": "Karine Silva",
+          "probability": 0.572422114387603
+        },
+        "reference": {
+          "pick": "Karine Silva",
+          "probability": 0.5748577866300034
+        }
+      }
+    },
+    {
+      "a": "Gabriel Lorenco",
+      "b": "Thomas Petersen",
+      "confidence_10_model_raw": 5.582930504220359,
+      "confidence_tier_after_research": "PASS",
+      "double_chance_current": {
+        "KO_OR_DEC": 0.487531879276621,
+        "KO_OR_SUB": 0.4721152682117143,
+        "SUB_OR_DEC": 0.15693895335573654
+      },
+      "evidence_density": {
+        "a_age": 27.105279369186224,
+        "a_days_since_last": null,
+        "a_prior_ufc_bouts": 0,
+        "a_reach": null,
+        "b_age": 31.60913639568232,
+        "b_days_since_last": 105.0,
+        "b_prior_ufc_bouts": 7,
+        "b_reach": 74.0
+      },
+      "fight_no": 7,
+      "method": {
+        "current_conditional_if_official_winner": {
+          "DEC": 0.1543594034444391,
+          "KO": 0.718895026120959,
+          "SUB": 0.1267455704346019
+        },
+        "historical_conditional_if_official_winner": {
+          "DEC": 0.2786145411070777,
+          "KO": 0.49600503915332605,
+          "SUB": 0.2253804197395962
+        },
+        "method_score_10": 5.999,
+        "official_gate": "PASS \u2014 NO METHOD BET",
+        "official_method_if_any": null,
+        "oof_unified_conditional_if_official_winner": {
+          "DEC": 0.22900209413673167,
+          "KO": 0.5847100287125256,
+          "SUB": 0.18628787715074258
+        },
+        "score_definition": "Cross-model conditional-method concentration; average top-method probability x10 when current/historical/unified agree, otherwise conservative minimum x10.",
+        "top_method_current": "KO/TKO",
+        "top_method_historical": "KO/TKO",
+        "top_method_unified": "KO/TKO",
+        "winner_plus_method_current_direct": {
+          "DEC": 0.08617778221032163,
+          "KO_TKO": 0.4013540970662994,
+          "SUB": 0.07076117114541491
+        },
+        "winner_plus_method_current_sim_10000": {
+          "DEC": 0.0828,
+          "KO_TKO": 0.4057,
+          "SUB": 0.0716
+        }
+      },
+      "official_reference_pick": "Gabriel Lorenco",
+      "official_reference_probability": 0.5582930504220359,
+      "official_reference_probability_a": 0.5582930504220359,
+      "research_override": "NONE \u2014 reference side preserved",
+      "research_reason": "Reference narrowly selects UFC debutant Lorenco on limited regional/DWCS finishing data, but historical and unified models favor Petersen, who has seven UFC bouts. This is the biggest style/sample-transfer disagreement and is heavyweight high variance. Preserve the reference pick for post-event calibration, mark pass.",
+      "scheduled_rounds": 3,
+      "shadow_disagreement": {
+        "historical_vs_reference": true,
+        "unified_vs_reference": true
+      },
+      "sparse_ufc_evidence": true,
+      "stage_a_posture": "PASS",
+      "tape_provenance": {
+        "classification": "UNAVAILABLE_FOR_CONTINUOUS_VISUAL_REVIEW_IN_CURRENT_ENVIRONMENT",
+        "integrity_rule": "No claim that a full fight was watched unless continuous playback was actually available.",
+        "note": "UFC official preview and public result/stat summaries read. Continuous full-fight footage was NOT played in this environment; no tape-complete claim."
+      },
+      "timing_current": {
+        "direct": {
+          "GTD_NO": 0.6810746126512792,
+          "GTD_YES": 0.31892538734872083,
+          "OVER_0.5": 0.7973941307476323,
+          "OVER_1.5": 0.5309545685083356,
+          "OVER_2.5": 0.3734261098407301,
+          "ROUND_2_STARTS_NO": 0.3540769837697121,
+          "ROUND_2_STARTS_YES": 0.6459230162302879,
+          "ROUND_3_STARTS_NO": 0.5575465949355722,
+          "ROUND_3_STARTS_YES": 0.44245340506442776,
+          "UNDER_0.5": 0.20260586925236768,
+          "UNDER_1.5": 0.46904543149166444,
+          "UNDER_2.5": 0.6265738901592699
+        },
+        "exact_finish_round_from_sim_10000": {
+          "FINISH_ROUND_1": 0.3546,
+          "FINISH_ROUND_2": 0.20509999999999995,
+          "FINISH_ROUND_3": 0.12240000000000001,
+          "GTD": 0.3179
+        },
+        "sim_10000": {
+          "GTD_NO": 0.6820999999999999,
+          "GTD_YES": 0.3179,
+          "OVER_0.5": 0.7984,
+          "OVER_1.5": 0.5297,
+          "OVER_2.5": 0.3717,
+          "ROUND_2_STARTS_NO": 0.3546,
+          "ROUND_2_STARTS_YES": 0.6454,
+          "ROUND_3_STARTS_NO": 0.5597,
+          "ROUND_3_STARTS_YES": 0.4403,
+          "UNDER_0.5": 0.2016,
+          "UNDER_1.5": 0.47030000000000005,
+          "UNDER_2.5": 0.6283000000000001
+        }
+      },
+      "timing_oof_unified_shadow": {
+        "exact_finish_round_sim_10000": {
+          "FINISH_ROUND_1": 0.3714,
+          "FINISH_ROUND_2": 0.2043,
+          "FINISH_ROUND_3": 0.1228
+        },
+        "sim_10000": {
+          "FINISH_ROUND_1": 0.3714,
+          "FINISH_ROUND_2": 0.2043,
+          "FINISH_ROUND_3": 0.1228,
+          "GTD_NO": 0.6985,
+          "GTD_YES": 0.3015,
+          "OVER_0.5": 0.7859,
+          "OVER_1.5": 0.5103,
+          "OVER_2.5": 0.3558,
+          "ROUND_2_STARTS_NO": 0.37139999999999995,
+          "ROUND_2_STARTS_YES": 0.6286,
+          "ROUND_3_STARTS_NO": 0.5757,
+          "ROUND_3_STARTS_YES": 0.4243,
+          "UNDER_0.5": 0.21409999999999996,
+          "UNDER_1.5": 0.4897,
+          "UNDER_2.5": 0.6442
+        }
+      },
+      "weight_class": "Heavyweight",
+      "winner_views": {
+        "historical_shadow": {
+          "pick": "Thomas Petersen",
+          "probability": 0.6242724065168509
+        },
+        "oof_unified_shadow": {
+          "pick": "Thomas Petersen",
+          "probability": 0.5708045611902512
+        },
+        "reference": {
+          "pick": "Gabriel Lorenco",
+          "probability": 0.5582930504220359
+        }
+      }
+    },
+    {
+      "a": "Keiichiro Nakamura",
+      "b": "Ollie Schmid",
+      "confidence_10_model_raw": 6.243574543582888,
+      "confidence_tier_after_research": "PASS",
+      "double_chance_current": {
+        "KO_OR_DEC": 0.616379017420593,
+        "KO_OR_SUB": 0.5142579658863113,
+        "SUB_OR_DEC": 0.11807792540967331
+      },
+      "evidence_density": {
+        "a_age": 27.932127285296755,
+        "a_days_since_last": 280.0,
+        "a_prior_ufc_bouts": 1,
+        "a_reach": 70.0,
+        "b_age": 25.859531681006455,
+        "b_days_since_last": 189.0,
+        "b_prior_ufc_bouts": 1,
+        "b_reach": null
+      },
+      "fight_no": 8,
+      "method": {
+        "current_conditional_if_official_winner": {
+          "DEC": 0.17634047243840012,
+          "KO": 0.8108808910898114,
+          "SUB": 0.012778636471788432
+        },
+        "historical_conditional_if_official_winner": {
+          "DEC": 0.28553049619384707,
+          "KO": 0.6203486411214088,
+          "SUB": 0.0941208626847442
+        },
+        "method_score_10": 7.131,
+        "official_gate": "PASS \u2014 NO METHOD BET",
+        "official_method_if_any": null,
+        "oof_unified_conditional_if_official_winner": {
+          "DEC": 0.24601575107893756,
+          "KO": 0.7080344641712,
+          "SUB": 0.0459497847498624
+        },
+        "score_definition": "Cross-model conditional-method concentration; average top-method probability x10 when current/historical/unified agree, otherwise conservative minimum x10.",
+        "top_method_current": "KO/TKO",
+        "top_method_historical": "KO/TKO",
+        "top_method_unified": "KO/TKO",
+        "winner_plus_method_current_direct": {
+          "DEC": 0.1100994884719775,
+          "KO_TKO": 0.5062795289486155,
+          "SUB": 0.007978436937695812
+        },
+        "winner_plus_method_current_sim_10000": {
+          "DEC": 0.1097,
+          "KO_TKO": 0.5116,
+          "SUB": 0.007
+        }
+      },
+      "official_reference_pick": "Keiichiro Nakamura",
+      "official_reference_probability": 0.6243574543582888,
+      "official_reference_probability_a": 0.6243574543582888,
+      "research_override": "NONE \u2014 reference side preserved",
+      "research_reason": "Nakamura won Road to UFC by a late TKO and Schmid returned for his second UFC fight after his May short-notice debut. All views lean Nakamura, but both have only one official UFC bout in the current history; do not promote a method or timing bet on that evidence.",
+      "scheduled_rounds": 3,
+      "shadow_disagreement": {
+        "historical_vs_reference": false,
+        "unified_vs_reference": false
+      },
+      "sparse_ufc_evidence": true,
+      "stage_a_posture": "PASS",
+      "tape_provenance": {
+        "classification": "UNAVAILABLE_FOR_CONTINUOUS_VISUAL_REVIEW_IN_CURRENT_ENVIRONMENT",
+        "integrity_rule": "No claim that a full fight was watched unless continuous playback was actually available.",
+        "note": "UFC official preview and public result/stat summaries read. Continuous full-fight footage was NOT played in this environment; no tape-complete claim."
+      },
+      "timing_current": {
+        "direct": {
+          "GTD_NO": 0.6419166744837517,
+          "GTD_YES": 0.3580833255162484,
+          "OVER_0.5": 0.8158453340005068,
+          "OVER_1.5": 0.5660744494097808,
+          "OVER_2.5": 0.4126048692700727,
+          "ROUND_2_STARTS_NO": 0.32489269442572954,
+          "ROUND_2_STARTS_YES": 0.6751073055742705,
+          "ROUND_3_STARTS_NO": 0.5194743939050233,
+          "ROUND_3_STARTS_YES": 0.48052560609497674,
+          "UNDER_0.5": 0.18415466599949315,
+          "UNDER_1.5": 0.4339255505902192,
+          "UNDER_2.5": 0.5873951307299272
+        },
+        "exact_finish_round_from_sim_10000": {
+          "FINISH_ROUND_1": 0.32909999999999995,
+          "FINISH_ROUND_2": 0.19050000000000006,
+          "FINISH_ROUND_3": 0.12419999999999998,
+          "GTD": 0.3562
+        },
+        "sim_10000": {
+          "GTD_NO": 0.6437999999999999,
+          "GTD_YES": 0.3562,
+          "OVER_0.5": 0.815,
+          "OVER_1.5": 0.5617,
+          "OVER_2.5": 0.4114,
+          "ROUND_2_STARTS_NO": 0.32909999999999995,
+          "ROUND_2_STARTS_YES": 0.6709,
+          "ROUND_3_STARTS_NO": 0.5196000000000001,
+          "ROUND_3_STARTS_YES": 0.4804,
+          "UNDER_0.5": 0.18500000000000005,
+          "UNDER_1.5": 0.4383,
+          "UNDER_2.5": 0.5886
+        }
+      },
+      "timing_oof_unified_shadow": {
+        "exact_finish_round_sim_10000": {
+          "FINISH_ROUND_1": 0.335,
+          "FINISH_ROUND_2": 0.1895,
+          "FINISH_ROUND_3": 0.124
+        },
+        "sim_10000": {
+          "FINISH_ROUND_1": 0.335,
+          "FINISH_ROUND_2": 0.1895,
+          "FINISH_ROUND_3": 0.124,
+          "GTD_NO": 0.6485000000000001,
+          "GTD_YES": 0.3515,
+          "OVER_0.5": 0.8093,
+          "OVER_1.5": 0.5593,
+          "OVER_2.5": 0.409,
+          "ROUND_2_STARTS_NO": 0.33499999999999996,
+          "ROUND_2_STARTS_YES": 0.665,
+          "ROUND_3_STARTS_NO": 0.5245,
+          "ROUND_3_STARTS_YES": 0.4755,
+          "UNDER_0.5": 0.19069999999999998,
+          "UNDER_1.5": 0.4407,
+          "UNDER_2.5": 0.591
+        }
+      },
+      "weight_class": "Featherweight",
+      "winner_views": {
+        "historical_shadow": {
+          "pick": "Keiichiro Nakamura",
+          "probability": 0.7385393343114893
+        },
+        "oof_unified_shadow": {
+          "pick": "Keiichiro Nakamura",
+          "probability": 0.7066769078615044
+        },
+        "reference": {
+          "pick": "Keiichiro Nakamura",
+          "probability": 0.6243574543582888
+        }
+      }
+    },
+    {
+      "a": "Mitch Raposo",
+      "b": "Marcos Degli",
+      "confidence_10_model_raw": 6.082111625487285,
+      "confidence_tier_after_research": "PASS",
+      "double_chance_current": {
+        "KO_OR_DEC": 0.5357573383246672,
+        "KO_OR_SUB": 0.3467651282925769,
+        "SUB_OR_DEC": 0.3338998584802132
+      },
+      "evidence_density": {
+        "a_age": 28.060808914625213,
+        "a_days_since_last": 140.0,
+        "a_prior_ufc_bouts": 4,
+        "a_reach": 64.0,
+        "b_age": 26.486512385606822,
+        "b_days_since_last": null,
+        "b_prior_ufc_bouts": 0,
+        "b_reach": null
+      },
+      "fight_no": 9,
+      "method": {
+        "current_conditional_if_official_winner": {
+          "DEC": 0.42986063123299756,
+          "KO": 0.45101326802192354,
+          "SUB": 0.11912610074507891
+        },
+        "historical_conditional_if_official_winner": {
+          "DEC": 0.48227916154455086,
+          "KO": 0.21061554881675965,
+          "SUB": 0.3071052896386896
+        },
+        "method_score_10": 4.51,
+        "official_gate": "PASS \u2014 NO METHOD BET",
+        "official_method_if_any": null,
+        "oof_unified_conditional_if_official_winner": {
+          "DEC": 0.48244461509233816,
+          "KO": 0.292678310004758,
+          "SUB": 0.22487707490290385
+        },
+        "score_definition": "Cross-model conditional-method concentration; average top-method probability x10 when current/historical/unified agree, otherwise conservative minimum x10.",
+        "top_method_current": "KO/TKO",
+        "top_method_historical": "DEC",
+        "top_method_unified": "DEC",
+        "winner_plus_method_current_direct": {
+          "DEC": 0.26144603425615176,
+          "KO_TKO": 0.27431130406851545,
+          "SUB": 0.07245382422406142
+        },
+        "winner_plus_method_current_sim_10000": {
+          "DEC": 0.2657,
+          "KO_TKO": 0.2616,
+          "SUB": 0.0698
+        }
+      },
+      "official_reference_pick": "Mitch Raposo",
+      "official_reference_probability": 0.6082111625487285,
+      "official_reference_probability_a": 0.6082111625487285,
+      "research_override": "NONE \u2014 reference side preserved",
+      "research_reason": "Raposo won his last two on the scorecards; Degli enters his UFC debut after a 13-fight win streak and DWCS submission. History-limited prospect transfer especially risks misclassifying a counter-grappling submission path. All models lean Raposo, but opponent sample zero so pass.",
+      "scheduled_rounds": 3,
+      "shadow_disagreement": {
+        "historical_vs_reference": false,
+        "unified_vs_reference": false
+      },
+      "sparse_ufc_evidence": true,
+      "stage_a_posture": "PASS",
+      "tape_provenance": {
+        "classification": "UNAVAILABLE_FOR_CONTINUOUS_VISUAL_REVIEW_IN_CURRENT_ENVIRONMENT",
+        "integrity_rule": "No claim that a full fight was watched unless continuous playback was actually available.",
+        "note": "UFC official preview and public result/stat summaries read. Continuous full-fight footage was NOT played in this environment; no tape-complete claim."
+      },
+      "timing_current": {
+        "direct": {
+          "GTD_NO": 0.48325589955157233,
+          "GTD_YES": 0.5167441004484277,
+          "OVER_0.5": 0.877235444889268,
+          "OVER_1.5": 0.6934883102412285,
+          "OVER_2.5": 0.5659763670942881,
+          "ROUND_2_STARTS_NO": 0.22335703438180787,
+          "ROUND_2_STARTS_YES": 0.7766429656181921,
+          "ROUND_3_STARTS_NO": 0.3758175738235079,
+          "ROUND_3_STARTS_YES": 0.6241824261764921,
+          "UNDER_0.5": 0.12276455511073203,
+          "UNDER_1.5": 0.3065116897587715,
+          "UNDER_2.5": 0.4340236329057119
+        },
+        "exact_finish_round_from_sim_10000": {
+          "FINISH_ROUND_1": 0.22240000000000004,
+          "FINISH_ROUND_2": 0.1509999999999999,
+          "FINISH_ROUND_3": 0.11040000000000005,
+          "GTD": 0.5162
+        },
+        "sim_10000": {
+          "GTD_NO": 0.4838,
+          "GTD_YES": 0.5162,
+          "OVER_0.5": 0.8799,
+          "OVER_1.5": 0.6939,
+          "OVER_2.5": 0.5658,
+          "ROUND_2_STARTS_NO": 0.22240000000000004,
+          "ROUND_2_STARTS_YES": 0.7776,
+          "ROUND_3_STARTS_NO": 0.37339999999999995,
+          "ROUND_3_STARTS_YES": 0.6266,
+          "UNDER_0.5": 0.12009999999999998,
+          "UNDER_1.5": 0.30610000000000004,
+          "UNDER_2.5": 0.43420000000000003
+        }
+      },
+      "timing_oof_unified_shadow": {
+        "exact_finish_round_sim_10000": {
+          "FINISH_ROUND_1": 0.2394,
+          "FINISH_ROUND_2": 0.1554,
+          "FINISH_ROUND_3": 0.1115
+        },
+        "sim_10000": {
+          "FINISH_ROUND_1": 0.2394,
+          "FINISH_ROUND_2": 0.1554,
+          "FINISH_ROUND_3": 0.1115,
+          "GTD_NO": 0.5063,
+          "GTD_YES": 0.4937,
+          "OVER_0.5": 0.866,
+          "OVER_1.5": 0.6769,
+          "OVER_2.5": 0.5437,
+          "ROUND_2_STARTS_NO": 0.23939999999999995,
+          "ROUND_2_STARTS_YES": 0.7606,
+          "ROUND_3_STARTS_NO": 0.39480000000000004,
+          "ROUND_3_STARTS_YES": 0.6052,
+          "UNDER_0.5": 0.134,
+          "UNDER_1.5": 0.32310000000000005,
+          "UNDER_2.5": 0.45630000000000004
+        }
+      },
+      "weight_class": "Flyweight",
+      "winner_views": {
+        "historical_shadow": {
+          "pick": "Mitch Raposo",
+          "probability": 0.661000089820539
+        },
+        "oof_unified_shadow": {
+          "pick": "Mitch Raposo",
+          "probability": 0.6455116160330533
+        },
+        "reference": {
+          "pick": "Mitch Raposo",
+          "probability": 0.6082111625487285
+        }
+      }
+    },
+    {
+      "a": "Priscila Cachoeira",
+      "b": "Nina Milosevic",
+      "confidence_10_model_raw": 7.5,
+      "confidence_tier_after_research": "C",
+      "double_chance_current": {
+        "KO_OR_DEC": 0.7993214858705918,
+        "KO_OR_SUB": 0.7496199407064031,
+        "SUB_OR_DEC": 0.16500447473427407
+      },
+      "evidence_density": {
+        "a_age": 38.21844391055258,
+        "a_days_since_last": 154.0,
+        "a_prior_ufc_bouts": 14,
+        "a_reach": 65.0,
+        "b_age": 30.24839661320903,
+        "b_days_since_last": 98.0,
+        "b_prior_ufc_bouts": 1,
+        "b_reach": null
+      },
+      "fight_no": 10,
+      "method": {
+        "current_conditional_if_official_winner": {
+          "DEC": 0.12527000982598113,
+          "KO": 0.8074566127110127,
+          "SUB": 0.06727337746300621
+        },
+        "historical_conditional_if_official_winner": {
+          "DEC": 0.17887055796854354,
+          "KO": 0.7559541255591187,
+          "SUB": 0.06517531647233768
+        },
+        "method_score_10": 7.801,
+        "official_gate": "SIDE ONLY \u2014 NO METHOD BET",
+        "official_method_if_any": null,
+        "oof_unified_conditional_if_official_winner": {
+          "DEC": 0.15692433192233424,
+          "KO": 0.7769448320782132,
+          "SUB": 0.06613083599945255
+        },
+        "score_definition": "Cross-model conditional-method concentration; average top-method probability x10 when current/historical/unified agree, otherwise conservative minimum x10.",
+        "top_method_current": "KO/TKO",
+        "top_method_historical": "KO/TKO",
+        "top_method_unified": "KO/TKO",
+        "winner_plus_method_current_direct": {
+          "DEC": 0.10735300994923137,
+          "KO_TKO": 0.6919684759213605,
+          "SUB": 0.0576514647850427
+        },
+        "winner_plus_method_current_sim_10000": {
+          "DEC": 0.107,
+          "KO_TKO": 0.6935,
+          "SUB": 0.0594
+        }
+      },
+      "official_reference_pick": "Nina Milosevic",
+      "official_reference_probability": 0.8569729506556345,
+      "official_reference_probability_a": 0.14302704934436553,
+      "research_override": "NONE \u2014 reference side preserved",
+      "research_reason": "Nina Milosevic is the strong three-view winner side after a striking/KO UFC debut and nine-fight streak; Cachoeira has veteran power but has lost three straight. The raw 85.7% is NOT a reliable lock because Milosevic has one UFC bout, so cap confidence at a speculative C lean and keep out of safe anchors.",
+      "scheduled_rounds": 3,
+      "shadow_disagreement": {
+        "historical_vs_reference": false,
+        "unified_vs_reference": false
+      },
+      "sparse_ufc_evidence": true,
+      "stage_a_posture": "LEAN",
+      "tape_provenance": {
+        "classification": "UNAVAILABLE_FOR_CONTINUOUS_VISUAL_REVIEW_IN_CURRENT_ENVIRONMENT",
+        "integrity_rule": "No claim that a full fight was watched unless continuous playback was actually available.",
+        "note": "UFC official preview and public result/stat summaries read. Continuous full-fight footage was NOT played in this environment; no tape-complete claim."
+      },
+      "timing_current": {
+        "direct": {
+          "GTD_NO": 0.43372122564293636,
+          "GTD_YES": 0.5662787743570636,
+          "OVER_0.5": 0.8932852309783785,
+          "OVER_1.5": 0.7295566370553112,
+          "OVER_2.5": 0.6124397906128328,
+          "ROUND_2_STARTS_NO": 0.1956908984213922,
+          "ROUND_2_STARTS_YES": 0.8043091015786078,
+          "ROUND_3_STARTS_NO": 0.33369187811561885,
+          "ROUND_3_STARTS_YES": 0.6663081218843812,
+          "UNDER_0.5": 0.10671476902162147,
+          "UNDER_1.5": 0.27044336294468885,
+          "UNDER_2.5": 0.3875602093871672
+        },
+        "exact_finish_round_from_sim_10000": {
+          "FINISH_ROUND_1": 0.19679999999999997,
+          "FINISH_ROUND_2": 0.13780000000000003,
+          "FINISH_ROUND_3": 0.09970000000000001,
+          "GTD": 0.5657
+        },
+        "sim_10000": {
+          "GTD_NO": 0.4343,
+          "GTD_YES": 0.5657,
+          "OVER_0.5": 0.8904,
+          "OVER_1.5": 0.7265,
+          "OVER_2.5": 0.6116,
+          "ROUND_2_STARTS_NO": 0.19679999999999997,
+          "ROUND_2_STARTS_YES": 0.8032,
+          "ROUND_3_STARTS_NO": 0.3346,
+          "ROUND_3_STARTS_YES": 0.6654,
+          "UNDER_0.5": 0.10960000000000003,
+          "UNDER_1.5": 0.27349999999999997,
+          "UNDER_2.5": 0.38839999999999997
+        }
+      },
+      "timing_oof_unified_shadow": {
+        "exact_finish_round_sim_10000": {
+          "FINISH_ROUND_1": 0.2235,
+          "FINISH_ROUND_2": 0.1434,
+          "FINISH_ROUND_3": 0.1068
+        },
+        "sim_10000": {
+          "FINISH_ROUND_1": 0.2235,
+          "FINISH_ROUND_2": 0.1434,
+          "FINISH_ROUND_3": 0.1068,
+          "GTD_NO": 0.4737,
+          "GTD_YES": 0.5263,
+          "OVER_0.5": 0.8757,
+          "OVER_1.5": 0.7028,
+          "OVER_2.5": 0.5746,
+          "ROUND_2_STARTS_NO": 0.22350000000000003,
+          "ROUND_2_STARTS_YES": 0.7765,
+          "ROUND_3_STARTS_NO": 0.3669,
+          "ROUND_3_STARTS_YES": 0.6331,
+          "UNDER_0.5": 0.12429999999999997,
+          "UNDER_1.5": 0.2972,
+          "UNDER_2.5": 0.4254
+        }
+      },
+      "weight_class": "Women's Bantamweight",
+      "winner_views": {
+        "historical_shadow": {
+          "pick": "Nina Milosevic",
+          "probability": 0.7921496340480743
+        },
+        "oof_unified_shadow": {
+          "pick": "Nina Milosevic",
+          "probability": 0.8136136711876965
+        },
+        "reference": {
+          "pick": "Nina Milosevic",
+          "probability": 0.8569729506556345
+        }
+      }
+    },
+    {
+      "a": "Billy Elekana",
+      "b": "Lucas Fernando",
+      "confidence_10_model_raw": 5.241024924193298,
+      "confidence_tier_after_research": "PASS",
+      "double_chance_current": {
+        "KO_OR_DEC": 0.5148826467687404,
+        "KO_OR_SUB": 0.3884050088315911,
+        "SUB_OR_DEC": 0.14491732923832829
+      },
+      "evidence_density": {
+        "a_age": 31.447599882269998,
+        "a_days_since_last": 280.0,
+        "a_prior_ufc_bouts": 4,
+        "a_reach": 77.0,
+        "b_age": 29.824021027125813,
+        "b_days_since_last": 84.0,
+        "b_prior_ufc_bouts": 1,
+        "b_reach": 80.0
+      },
+      "fight_no": 11,
+      "method": {
+        "current_conditional_if_official_winner": {
+          "DEC": 0.25891402073159453,
+          "KO": 0.7234942948479985,
+          "SUB": 0.017591684420406876
+        },
+        "historical_conditional_if_official_winner": {
+          "DEC": 0.21793416201972524,
+          "KO": 0.6872000637066499,
+          "SUB": 0.09486577427362491
+        },
+        "method_score_10": 7.077,
+        "official_gate": "PASS \u2014 NO METHOD BET",
+        "official_method_if_any": null,
+        "oof_unified_conditional_if_official_winner": {
+          "DEC": 0.23638038565825664,
+          "KO": 0.712344275994392,
+          "SUB": 0.05127533834735141
+        },
+        "score_definition": "Cross-model conditional-method concentration; average top-method probability x10 when current/historical/unified agree, otherwise conservative minimum x10.",
+        "top_method_current": "KO/TKO",
+        "top_method_historical": "KO/TKO",
+        "top_method_unified": "KO/TKO",
+        "winner_plus_method_current_direct": {
+          "DEC": 0.13569748358773875,
+          "KO_TKO": 0.3791851631810016,
+          "SUB": 0.00921984565058954
+        },
+        "winner_plus_method_current_sim_10000": {
+          "DEC": 0.1274,
+          "KO_TKO": 0.3854,
+          "SUB": 0.0092
+        }
+      },
+      "official_reference_pick": "Lucas Fernando",
+      "official_reference_probability": 0.5241024924193298,
+      "official_reference_probability_a": 0.47589750758067023,
+      "research_override": "NONE \u2014 reference side preserved",
+      "research_reason": "All three views select Lucas Fernando but reference is only 52.4%. Elekana has three consecutive UFC wins including a submission of Junior Tafa, while Fernando won his UFC debut by third-round TKO. Competing finishing routes, limited Fernando sample, and low margin make pass.",
+      "scheduled_rounds": 3,
+      "shadow_disagreement": {
+        "historical_vs_reference": false,
+        "unified_vs_reference": false
+      },
+      "sparse_ufc_evidence": true,
+      "stage_a_posture": "PASS",
+      "tape_provenance": {
+        "classification": "UNAVAILABLE_FOR_CONTINUOUS_VISUAL_REVIEW_IN_CURRENT_ENVIRONMENT",
+        "integrity_rule": "No claim that a full fight was watched unless continuous playback was actually available.",
+        "note": "UFC official preview and public result/stat summaries read. Continuous full-fight footage was NOT played in this environment; no tape-complete claim."
+      },
+      "timing_current": {
+        "direct": {
+          "GTD_NO": 0.5841198716188627,
+          "GTD_YES": 0.4158801283811373,
+          "OVER_0.5": 0.8403377749557206,
+          "OVER_1.5": 0.6149344975613391,
+          "OVER_2.5": 0.4693816739846816,
+          "ROUND_2_STARTS_NO": 0.28520003815878503,
+          "ROUND_2_STARTS_YES": 0.714799961841215,
+          "ROUND_3_STARTS_NO": 0.46537644450405713,
+          "ROUND_3_STARTS_YES": 0.5346235554959429,
+          "UNDER_0.5": 0.1596622250442794,
+          "UNDER_1.5": 0.3850655024386609,
+          "UNDER_2.5": 0.5306183260153183
+        },
+        "exact_finish_round_from_sim_10000": {
+          "FINISH_ROUND_1": 0.2843,
+          "FINISH_ROUND_2": 0.1845,
+          "FINISH_ROUND_3": 0.122,
+          "GTD": 0.4092
+        },
+        "sim_10000": {
+          "GTD_NO": 0.5908,
+          "GTD_YES": 0.4092,
+          "OVER_0.5": 0.8418,
+          "OVER_1.5": 0.6137,
+          "OVER_2.5": 0.4661,
+          "ROUND_2_STARTS_NO": 0.2843,
+          "ROUND_2_STARTS_YES": 0.7157,
+          "ROUND_3_STARTS_NO": 0.4688,
+          "ROUND_3_STARTS_YES": 0.5312,
+          "UNDER_0.5": 0.1582,
+          "UNDER_1.5": 0.3863,
+          "UNDER_2.5": 0.5339
+        }
+      },
+      "timing_oof_unified_shadow": {
+        "exact_finish_round_sim_10000": {
+          "FINISH_ROUND_1": 0.3267,
+          "FINISH_ROUND_2": 0.2012,
+          "FINISH_ROUND_3": 0.1203
+        },
+        "sim_10000": {
+          "FINISH_ROUND_1": 0.3267,
+          "FINISH_ROUND_2": 0.2012,
+          "FINISH_ROUND_3": 0.1203,
+          "GTD_NO": 0.6482,
+          "GTD_YES": 0.3518,
+          "OVER_0.5": 0.8092,
+          "OVER_1.5": 0.5571,
+          "OVER_2.5": 0.4038,
+          "ROUND_2_STARTS_NO": 0.3267,
+          "ROUND_2_STARTS_YES": 0.6733,
+          "ROUND_3_STARTS_NO": 0.5279,
+          "ROUND_3_STARTS_YES": 0.4721,
+          "UNDER_0.5": 0.19079999999999997,
+          "UNDER_1.5": 0.44289999999999996,
+          "UNDER_2.5": 0.5962000000000001
+        }
+      },
+      "weight_class": "Light Heavyweight",
+      "winner_views": {
+        "historical_shadow": {
+          "pick": "Lucas Fernando",
+          "probability": 0.5900486208822291
+        },
+        "oof_unified_shadow": {
+          "pick": "Lucas Fernando",
+          "probability": 0.5704927620356227
+        },
+        "reference": {
+          "pick": "Lucas Fernando",
+          "probability": 0.5241024924193298
+        }
+      }
+    },
+    {
+      "a": "Davey Grant",
+      "b": "Elijah Smith",
+      "confidence_10_model_raw": 5.9545636845836185,
+      "confidence_tier_after_research": "C",
+      "double_chance_current": {
+        "KO_OR_DEC": 0.4227882424922309,
+        "KO_OR_SUB": 0.46602589342592204,
+        "SUB_OR_DEC": 0.3020986009985706
+      },
+      "evidence_density": {
+        "a_age": 40.88790324236637,
+        "a_days_since_last": 196.0,
+        "a_prior_ufc_bouts": 16,
+        "a_reach": 69.0,
+        "b_age": 24.172980964701534,
+        "b_days_since_last": 238.0,
+        "b_prior_ufc_bouts": 3,
+        "b_reach": 71.0
+      },
+      "fight_no": 12,
+      "method": {
+        "current_conditional_if_official_winner": {
+          "DEC": 0.21736349107750008,
+          "KO": 0.49266039125468636,
+          "SUB": 0.28997611766781356
+        },
+        "historical_conditional_if_official_winner": {
+          "DEC": 0.28268525687102075,
+          "KO": 0.23683390834395768,
+          "SUB": 0.4804808347850216
+        },
+        "method_score_10": 4.118,
+        "official_gate": "SIDE ONLY \u2014 NO METHOD BET",
+        "official_method_if_any": null,
+        "oof_unified_conditional_if_official_winner": {
+          "DEC": 0.26532752456766456,
+          "KO": 0.3228536120558518,
+          "SUB": 0.4118188633764837
+        },
+        "score_definition": "Cross-model conditional-method concentration; average top-method probability x10 when current/historical/unified agree, otherwise conservative minimum x10.",
+        "top_method_current": "KO/TKO",
+        "top_method_historical": "SUB",
+        "top_method_unified": "SUB",
+        "winner_plus_method_current_direct": {
+          "DEC": 0.12943047503243973,
+          "KO_TKO": 0.2933577674597912,
+          "SUB": 0.17266812596613088
+        },
+        "winner_plus_method_current_sim_10000": {
+          "DEC": 0.1293,
+          "KO_TKO": 0.292,
+          "SUB": 0.1781
+        }
+      },
+      "official_reference_pick": "Elijah Smith",
+      "official_reference_probability": 0.5954563684583618,
+      "official_reference_probability_a": 0.40454363154163825,
+      "research_override": "NONE \u2014 reference side preserved",
+      "research_reason": "All three models prefer Smith, but their strength differs sharply: reference ~59.5%, historical ~83.2%, unified ~77.5%. Grant is 40 with extensive UFC experience and has won three of his last four; Smith is 24 on an eight-fight streak with three UFC wins. Age/experience gap supports the side but magnitude disagreement requires a C lean.",
+      "scheduled_rounds": 3,
+      "shadow_disagreement": {
+        "historical_vs_reference": false,
+        "unified_vs_reference": false
+      },
+      "sparse_ufc_evidence": false,
+      "stage_a_posture": "LEAN",
+      "tape_provenance": {
+        "classification": "UNAVAILABLE_FOR_CONTINUOUS_VISUAL_REVIEW_IN_CURRENT_ENVIRONMENT",
+        "integrity_rule": "No claim that a full fight was watched unless continuous playback was actually available.",
+        "note": "UFC official preview and public result/stat summaries read. Continuous full-fight footage was NOT played in this environment; no tape-complete claim."
+      },
+      "timing_current": {
+        "direct": {
+          "GTD_NO": 0.3768307745780438,
+          "GTD_YES": 0.6231692254219562,
+          "OVER_0.5": 0.9103937460772268,
+          "OVER_1.5": 0.7692977189935112,
+          "OVER_2.5": 0.6651220663861684,
+          "ROUND_2_STARTS_NO": 0.16568990779430304,
+          "ROUND_2_STARTS_YES": 0.834310092205697,
+          "ROUND_3_STARTS_NO": 0.28658273479272367,
+          "ROUND_3_STARTS_YES": 0.7134172652072763,
+          "UNDER_0.5": 0.08960625392277322,
+          "UNDER_1.5": 0.23070228100648882,
+          "UNDER_2.5": 0.33487793361383156
+        },
+        "exact_finish_round_from_sim_10000": {
+          "FINISH_ROUND_1": 0.16659999999999997,
+          "FINISH_ROUND_2": 0.1199,
+          "FINISH_ROUND_3": 0.09130000000000005,
+          "GTD": 0.6222
+        },
+        "sim_10000": {
+          "GTD_NO": 0.3778,
+          "GTD_YES": 0.6222,
+          "OVER_0.5": 0.9097,
+          "OVER_1.5": 0.7685,
+          "OVER_2.5": 0.6647,
+          "ROUND_2_STARTS_NO": 0.16659999999999997,
+          "ROUND_2_STARTS_YES": 0.8334,
+          "ROUND_3_STARTS_NO": 0.2865,
+          "ROUND_3_STARTS_YES": 0.7135,
+          "UNDER_0.5": 0.09030000000000005,
+          "UNDER_1.5": 0.23150000000000004,
+          "UNDER_2.5": 0.33530000000000004
+        }
+      },
+      "timing_oof_unified_shadow": {
+        "exact_finish_round_sim_10000": {
+          "FINISH_ROUND_1": 0.1873,
+          "FINISH_ROUND_2": 0.134,
+          "FINISH_ROUND_3": 0.0959
+        },
+        "sim_10000": {
+          "FINISH_ROUND_1": 0.1873,
+          "FINISH_ROUND_2": 0.134,
+          "FINISH_ROUND_3": 0.0959,
+          "GTD_NO": 0.4172,
+          "GTD_YES": 0.5828,
+          "OVER_0.5": 0.9,
+          "OVER_1.5": 0.7389,
+          "OVER_2.5": 0.6273,
+          "ROUND_2_STARTS_NO": 0.18730000000000002,
+          "ROUND_2_STARTS_YES": 0.8127,
+          "ROUND_3_STARTS_NO": 0.32130000000000003,
+          "ROUND_3_STARTS_YES": 0.6787,
+          "UNDER_0.5": 0.09999999999999998,
+          "UNDER_1.5": 0.2611,
+          "UNDER_2.5": 0.37270000000000003
+        }
+      },
+      "weight_class": "Bantamweight",
+      "winner_views": {
+        "historical_shadow": {
+          "pick": "Elijah Smith",
+          "probability": 0.8317866330338153
+        },
+        "oof_unified_shadow": {
+          "pick": "Elijah Smith",
+          "probability": 0.7746594108978646
+        },
+        "reference": {
+          "pick": "Elijah Smith",
+          "probability": 0.5954563684583618
+        }
+      }
+    },
+    {
+      "a": "Tatiana Suarez",
+      "b": "Virna Jandiroba",
+      "confidence_10_model_raw": 7.5796162056209475,
+      "confidence_tier_after_research": "A-",
+      "double_chance_current": {
+        "KO_OR_DEC": 0.5125606235529135,
+        "KO_OR_SUB": 0.35116975465632,
+        "SUB_OR_DEC": 0.6521928629149558
+      },
+      "evidence_density": {
+        "a_age": 35.88574714059837,
+        "a_days_since_last": 210.0,
+        "a_prior_ufc_bouts": 10,
+        "a_reach": 66.0,
+        "b_age": 38.44021437811865,
+        "b_days_since_last": 217.0,
+        "b_prior_ufc_bouts": 13,
+        "b_reach": 64.0
+      },
+      "fight_no": 13,
+      "method": {
+        "current_conditional_if_official_winner": {
+          "DEC": 0.5366919048013314,
+          "KO": 0.1395436850334218,
+          "SUB": 0.3237644101652467
+        },
+        "historical_conditional_if_official_winner": {
+          "DEC": 0.6902511130659609,
+          "KO": 0.10914518120793408,
+          "SUB": 0.200603705726105
+        },
+        "method_score_10": 6.209,
+        "official_gate": "SIDE ONLY \u2014 NO METHOD BET",
+        "official_method_if_any": null,
+        "oof_unified_conditional_if_official_winner": {
+          "DEC": 0.6358386740356399,
+          "KO": 0.12115456286442122,
+          "SUB": 0.24300676309993882
+        },
+        "score_definition": "Cross-model conditional-method concentration; average top-method probability x10 when current/historical/unified agree, otherwise conservative minimum x10.",
+        "top_method_current": "DEC",
+        "top_method_historical": "DEC",
+        "top_method_unified": "DEC",
+        "winner_plus_method_current_direct": {
+          "DEC": 0.40679186590577465,
+          "KO_TKO": 0.1057687576471389,
+          "SUB": 0.2454009970091811
+        },
+        "winner_plus_method_current_sim_10000": {
+          "DEC": 0.4056,
+          "KO_TKO": 0.1041,
+          "SUB": 0.242
+        }
+      },
+      "official_reference_pick": "Tatiana Suarez",
+      "official_reference_probability": 0.7579616205620947,
+      "official_reference_probability_a": 0.7579616205620947,
+      "research_override": "NONE \u2014 reference side preserved",
+      "research_reason": "All three model views agree on Suarez against Jandiroba and both have substantial UFC evidence. Suarez has a recent RNC of Godinez, but Jandiroba is a proven submission grappler who rebounded against Ricci. Strongest relatively well-supported odds-blind side; do not treat grappler-vs-grappler as an automatic SUB, and leave exact method unpromoted.",
+      "scheduled_rounds": 3,
+      "shadow_disagreement": {
+        "historical_vs_reference": false,
+        "unified_vs_reference": false
+      },
+      "sparse_ufc_evidence": false,
+      "stage_a_posture": "SIDE",
+      "tape_provenance": {
+        "classification": "UNAVAILABLE_FOR_CONTINUOUS_VISUAL_REVIEW_IN_CURRENT_ENVIRONMENT",
+        "integrity_rule": "No claim that a full fight was watched unless continuous playback was actually available.",
+        "note": "UFC official preview and public result/stat summaries read. Continuous full-fight footage was NOT played in this environment; no tape-complete claim."
+      },
+      "timing_current": {
+        "direct": {
+          "GTD_NO": 0.3710092474054445,
+          "GTD_YES": 0.6289907525945555,
+          "OVER_0.5": 0.912073372792,
+          "OVER_1.5": 0.7732719612161467,
+          "OVER_2.5": 0.6704748494891487,
+          "ROUND_2_STARTS_NO": 0.16271623537448854,
+          "ROUND_2_STARTS_YES": 0.8372837646255115,
+          "ROUND_3_STARTS_NO": 0.28183267637365894,
+          "ROUND_3_STARTS_YES": 0.7181673236263411,
+          "UNDER_0.5": 0.08792662720800004,
+          "UNDER_1.5": 0.22672803878385328,
+          "UNDER_2.5": 0.3295251505108513
+        },
+        "exact_finish_round_from_sim_10000": {
+          "FINISH_ROUND_1": 0.16710000000000003,
+          "FINISH_ROUND_2": 0.12290000000000001,
+          "FINISH_ROUND_3": 0.08749999999999991,
+          "GTD": 0.6225
+        },
+        "sim_10000": {
+          "GTD_NO": 0.37749999999999995,
+          "GTD_YES": 0.6225,
+          "OVER_0.5": 0.9128,
+          "OVER_1.5": 0.7689,
+          "OVER_2.5": 0.6624,
+          "ROUND_2_STARTS_NO": 0.16710000000000003,
+          "ROUND_2_STARTS_YES": 0.8329,
+          "ROUND_3_STARTS_NO": 0.29000000000000004,
+          "ROUND_3_STARTS_YES": 0.71,
+          "UNDER_0.5": 0.08720000000000006,
+          "UNDER_1.5": 0.23109999999999997,
+          "UNDER_2.5": 0.3376
+        }
+      },
+      "timing_oof_unified_shadow": {
+        "exact_finish_round_sim_10000": {
+          "FINISH_ROUND_1": 0.1526,
+          "FINISH_ROUND_2": 0.1107,
+          "FINISH_ROUND_3": 0.089
+        },
+        "sim_10000": {
+          "FINISH_ROUND_1": 0.1526,
+          "FINISH_ROUND_2": 0.1107,
+          "FINISH_ROUND_3": 0.089,
+          "GTD_NO": 0.35229999999999995,
+          "GTD_YES": 0.6477,
+          "OVER_0.5": 0.9161,
+          "OVER_1.5": 0.7902,
+          "OVER_2.5": 0.6928,
+          "ROUND_2_STARTS_NO": 0.15259999999999996,
+          "ROUND_2_STARTS_YES": 0.8474,
+          "ROUND_3_STARTS_NO": 0.2633,
+          "ROUND_3_STARTS_YES": 0.7367,
+          "UNDER_0.5": 0.08389999999999997,
+          "UNDER_1.5": 0.2098,
+          "UNDER_2.5": 0.30720000000000003
+        }
+      },
+      "weight_class": "Women's Strawweight",
+      "winner_views": {
+        "historical_shadow": {
+          "pick": "Tatiana Suarez",
+          "probability": 0.7253340134781193
+        },
+        "oof_unified_shadow": {
+          "pick": "Tatiana Suarez",
+          "probability": 0.7354037284416138
+        },
+        "reference": {
+          "pick": "Tatiana Suarez",
+          "probability": 0.7579616205620947
+        }
+      }
+    },
+    {
+      "a": "Waldo Cortes Acosta",
+      "b": "Johnny Walker",
+      "confidence_10_model_raw": 6.378336295410217,
+      "confidence_tier_after_research": "PASS",
+      "double_chance_current": {
+        "KO_OR_DEC": 0.618144810740104,
+        "KO_OR_SUB": 0.5322598068907629,
+        "SUB_OR_DEC": 0.12526264145117663
+      },
+      "evidence_density": {
+        "a_age": 35.097229922585676,
+        "a_days_since_last": 56.0,
+        "a_prior_ufc_bouts": 14,
+        "a_reach": 78.0,
+        "b_age": 34.60714456833474,
+        "b_days_since_last": 35.0,
+        "b_prior_ufc_bouts": 16,
+        "b_reach": 82.0
+      },
+      "fight_no": 14,
+      "method": {
+        "current_conditional_if_official_winner": {
+          "DEC": 0.16551937332973277,
+          "KO": 0.8036123596347307,
+          "SUB": 0.030868267035536585
+        },
+        "historical_conditional_if_official_winner": {
+          "DEC": 0.21401876968461817,
+          "KO": 0.6464905441875569,
+          "SUB": 0.13949068612782492
+        },
+        "method_score_10": 7.232,
+        "official_gate": "PASS \u2014 NO METHOD BET",
+        "official_method_if_any": null,
+        "oof_unified_conditional_if_official_winner": {
+          "DEC": 0.1993334195872018,
+          "KO": 0.7194046303481516,
+          "SUB": 0.0812619500646466
+        },
+        "score_definition": "Cross-model conditional-method concentration; average top-method probability x10 when current/historical/unified agree, otherwise conservative minimum x10.",
+        "top_method_current": "KO/TKO",
+        "top_method_historical": "KO/TKO",
+        "top_method_unified": "KO/TKO",
+        "winner_plus_method_current_direct": {
+          "DEC": 0.10557382265025884,
+          "KO_TKO": 0.5125709880898451,
+          "SUB": 0.019688818800917777
+        },
+        "winner_plus_method_current_sim_10000": {
+          "DEC": 0.1025,
+          "KO_TKO": 0.5229,
+          "SUB": 0.0174
+        }
+      },
+      "official_reference_pick": "Waldo Cortes Acosta",
+      "official_reference_probability": 0.6378336295410217,
+      "official_reference_probability_a": 0.6378336295410217,
+      "research_override": "NONE \u2014 reference side preserved",
+      "research_reason": "Official reference selects Cortes Acosta at 63.8% while both historical (Walker 66.5%) and unified (Walker 57.7%) choose Walker. He moved to heavyweight only last month and KO'd Mick Parkin; Cortes Acosta lost two recent decisions against Volkov and Blaydes. This is a five-round short-notice heavyweight matchup with serious distribution shift. Preserve raw reference, pass pending better data.",
+      "scheduled_rounds": 5,
+      "shadow_disagreement": {
+        "historical_vs_reference": true,
+        "unified_vs_reference": true
+      },
+      "sparse_ufc_evidence": false,
+      "stage_a_posture": "PASS",
+      "tape_provenance": {
+        "classification": "UNAVAILABLE_FOR_CONTINUOUS_VISUAL_REVIEW_IN_CURRENT_ENVIRONMENT",
+        "integrity_rule": "No claim that a full fight was watched unless continuous playback was actually available.",
+        "note": "UFC official preview and public result/stat summaries read. Continuous full-fight footage was NOT played in this environment; no tape-complete claim."
+      },
+      "timing_current": {
+        "direct": {
+          "GTD_NO": 0.7737829232539749,
+          "GTD_YES": 0.22621707674602506,
+          "OVER_0.5": 0.8276380673035212,
+          "OVER_1.5": 0.5845157632439402,
+          "OVER_2.5": 0.4284446467877989,
+          "OVER_3.5": 0.3246643225491614,
+          "OVER_4.5": 0.2534480212512898,
+          "ROUND_2_STARTS_NO": 0.30787130361151605,
+          "ROUND_2_STARTS_YES": 0.692128696388484,
+          "ROUND_3_STARTS_NO": 0.5017603700210511,
+          "ROUND_3_STARTS_YES": 0.49823962997894894,
+          "ROUND_4_STARTS_NO": 0.6285000259260894,
+          "ROUND_4_STARTS_YES": 0.37149997407391055,
+          "ROUND_5_STARTS_NO": 0.7141511106703788,
+          "ROUND_5_STARTS_YES": 0.2858488893296212,
+          "UNDER_0.5": 0.17236193269647881,
+          "UNDER_1.5": 0.41548423675605983,
+          "UNDER_2.5": 0.5715553532122011,
+          "UNDER_3.5": 0.6753356774508386,
+          "UNDER_4.5": 0.7465519787487103
+        },
+        "exact_finish_round_from_sim_10000": {
+          "FINISH_ROUND_1": 0.30589999999999995,
+          "FINISH_ROUND_2": 0.19620000000000004,
+          "FINISH_ROUND_3": 0.12780000000000002,
+          "FINISH_ROUND_4": 0.08479999999999999,
+          "FINISH_ROUND_5": 0.06029999999999999,
+          "GTD": 0.225
+        },
+        "sim_10000": {
+          "GTD_NO": 0.775,
+          "GTD_YES": 0.225,
+          "OVER_0.5": 0.8278,
+          "OVER_1.5": 0.5846,
+          "OVER_2.5": 0.4253,
+          "OVER_3.5": 0.3249,
+          "OVER_4.5": 0.2531,
+          "ROUND_2_STARTS_NO": 0.30589999999999995,
+          "ROUND_2_STARTS_YES": 0.6941,
+          "ROUND_3_STARTS_NO": 0.5021,
+          "ROUND_3_STARTS_YES": 0.4979,
+          "ROUND_4_STARTS_NO": 0.6299,
+          "ROUND_4_STARTS_YES": 0.3701,
+          "ROUND_5_STARTS_NO": 0.7147,
+          "ROUND_5_STARTS_YES": 0.2853,
+          "UNDER_0.5": 0.17220000000000002,
+          "UNDER_1.5": 0.4154,
+          "UNDER_2.5": 0.5747,
+          "UNDER_3.5": 0.6751,
+          "UNDER_4.5": 0.7469
+        }
+      },
+      "timing_oof_unified_shadow": {
+        "exact_finish_round_sim_10000": {
+          "FINISH_ROUND_1": 0.3654,
+          "FINISH_ROUND_2": 0.2055,
+          "FINISH_ROUND_3": 0.1316,
+          "FINISH_ROUND_4": 0.0781,
+          "FINISH_ROUND_5": 0.0552
+        },
+        "sim_10000": {
+          "FINISH_ROUND_1": 0.3654,
+          "FINISH_ROUND_2": 0.2055,
+          "FINISH_ROUND_3": 0.1316,
+          "FINISH_ROUND_4": 0.0781,
+          "FINISH_ROUND_5": 0.0552,
+          "GTD_NO": 0.8358,
+          "GTD_YES": 0.1642,
+          "OVER_0.5": 0.7954,
+          "OVER_1.5": 0.5195,
+          "OVER_2.5": 0.3553,
+          "OVER_3.5": 0.2535,
+          "OVER_4.5": 0.19,
+          "ROUND_2_STARTS_NO": 0.36539999999999995,
+          "ROUND_2_STARTS_YES": 0.6346,
+          "ROUND_3_STARTS_NO": 0.5709,
+          "ROUND_3_STARTS_YES": 0.4291,
+          "ROUND_4_STARTS_NO": 0.7025,
+          "ROUND_4_STARTS_YES": 0.2975,
+          "ROUND_5_STARTS_NO": 0.7806,
+          "ROUND_5_STARTS_YES": 0.2194,
+          "UNDER_0.5": 0.2046,
+          "UNDER_1.5": 0.48050000000000004,
+          "UNDER_2.5": 0.6447,
+          "UNDER_3.5": 0.7464999999999999,
+          "UNDER_4.5": 0.81
+        }
+      },
+      "weight_class": "Heavyweight",
+      "winner_views": {
+        "historical_shadow": {
+          "pick": "Johnny Walker",
+          "probability": 0.6650608628383439
+        },
+        "oof_unified_shadow": {
+          "pick": "Johnny Walker",
+          "probability": 0.5769728061899106
+        },
+        "reference": {
+          "pick": "Waldo Cortes Acosta",
+          "probability": 0.6378336295410217
+        }
+      }
+    }
+  ],
+  "freeze_type": "STAGE_A_ODDS_BLIND_WEIGH_IN_VERIFICATION_PENDING",
+  "frozen_at_utc": "2026-11-06T17:25:22.551930+00:00",
+  "governance": {
+    "challenger_promoted": false,
+    "current_retrained_shadows_fit_through": "2026-10-31",
+    "historical_shadow_only": true,
+    "material_late_change_audited": "Calderon for injured Brennan; short-notice heavyweight headliner",
+    "model_reference_weights_fit_through": "2026-09-12",
+    "odds_influenced_stage_a": false,
+    "official_reference_model_unchanged": true,
+    "oof_unified_shadow_only": true,
+    "oof_weights": {
+      "method_current": 0.375,
+      "timing_current": 0.75,
+      "winner_current": 0.3
+    },
+    "pr_1_merged": false,
+    "research_side_flips": 0
+  },
+  "model_history_through": "2026-10-31",
+  "odds_used": false,
+  "raw_model_path": "data/locks/ufcvegas124_2026-11-07/stage_a_model_raw_three_view.json",
+  "raw_model_sha256": "6b9c19acaab0b6fd2be2b43df72d5a0f516e92b9ebfb4dafa4260d3ed095aed2",
+  "research": {
+    "card_identity_verified": true,
+    "card_source": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "official_changes": "https://www.ufc.com/news/updates-ufc-fight-night-cortes-acosta-vs-walker",
+    "official_preview": "https://www.ufc.com/news/fight-by-fight-preview-ufc-fight-night-cortes-acosta-vs-walker",
+    "official_ufc_card_count": 14,
+    "price_fields_policy": "Any sportsbook prices visible on public event pages were ignored and not stored in the finalizer.",
+    "tape_limit": "No continuous fight-video playback was available in this environment. Full-fight/clip sources were located where possible and logged honestly as source availability rather than watched tape."
+  },
+  "simulation": {
+    "current_joint_per_fight": 10000,
+    "current_timing_per_fight": 10000,
+    "oof_unified_joint_per_fight": 10000,
+    "oof_unified_timing_per_fight": 10000
+  },
+  "stage_a_frozen": true,
+  "weigh_in_context": "Official weigh-ins started November 6; complete athlete scale readings were not independently verified at this freeze. Verify final weights and any late changes before FanDuel Stage B. Never rewrite frozen pre-price probabilities."
+}

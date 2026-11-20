@@ -1,0 +1,48 @@
+{
+  "categories": {
+    "top_5_best_bets": {
+      "W_L": "2-3",
+      "hypothetical_hit_rate": 0.4,
+      "hypothetical_roi": -0.024,
+      "net_hypothetical_units": -0.12,
+      "record": {
+        "L": 3,
+        "PENDING": 0,
+        "PUSH": 0,
+        "VOID": 0,
+        "W": 2
+      },
+      "researched_candidates": 5,
+      "settled_hypothetical_risk_units": 5.0
+    },
+    "top_5_longshots": {
+      "W_L": "0-5",
+      "hypothetical_hit_rate": 0.0,
+      "hypothetical_roi": -1.0,
+      "net_hypothetical_units": -5.0,
+      "record": {
+        "L": 5,
+        "PENDING": 0,
+        "PUSH": 0,
+        "VOID": 0,
+        "W": 0
+      },
+      "researched_candidates": 5,
+      "settled_hypothetical_risk_units": 5.0
+    }
+  },
+  "combined": {
+    "L": 8,
+    "PENDING": 0,
+    "PUSH": 0,
+    "VOID": 0,
+    "W": 2,
+    "hypothetical_roi": -0.512,
+    "net_hypothetical_units": -5.12,
+    "researched_candidates": 10,
+    "settled_hypothetical_risk_units": 10.0
+  },
+  "events": 1,
+  "ledger_type": "CUMULATIVE_TOP5_RESEARCH_ONLY_HYPOTHETICAL_ONE_UNIT",
+  "not_actual_wagers_not_approved_bet_pnl": true
+}

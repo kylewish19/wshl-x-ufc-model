@@ -1,0 +1,113 @@
+date,fight_id,a,b,actual_a_win,current_winner_p_a,historical_winner_p_a,source,unified_winner_p_a
+2026-08-08,2026-08-08::UFC Fight Night: Gamrot vs. Salkilld::Amanda Lemos::Alexia Thainara,Amanda Lemos,Alexia Thainara,0,0.218,0.31253393181446015,recovered_winner_only,0.218
+2026-08-08,2026-08-08::UFC Fight Night: Gamrot vs. Salkilld::Billy Ray Goff::Ty Miller,Ty Miller,Billy Ray Goff,1,0.54,0.5918142606220709,recovered_winner_only,0.54
+2026-08-08,2026-08-08::UFC Fight Night: Gamrot vs. Salkilld::Darren Elkins::Yadier del Valle,Darren Elkins,Yadier del Valle,0,0.292,0.23710242416118565,recovered_winner_only,0.292
+2026-08-08,2026-08-08::UFC Fight Night: Gamrot vs. Salkilld::Diego Ferreira::Billy Quarantillo,Diego Ferreira,Billy Quarantillo,1,0.489,0.5129861467223863,recovered_winner_only,0.489
+2026-08-08,2026-08-08::UFC Fight Night: Gamrot vs. Salkilld::Diyar Nurgozhay::Bruno Lopes,Diyar Nurgozhay,Bruno Lopes,1,0.598,0.7420209579182169,recovered_winner_only,0.598
+2026-08-08,2026-08-08::UFC Fight Night: Gamrot vs. Salkilld::Gigi Canuto::Carol Foro,Gigi Canuto,Carol Foro,0,0.562,0.5849523996968042,recovered_winner_only,0.562
+2026-08-08,2026-08-08::UFC Fight Night: Gamrot vs. Salkilld::Juliana Miller::Ravena Oliveira,Juliana Miller,Ravena Oliveira,1,0.574,0.5344880330265597,recovered_winner_only,0.574
+2026-08-08,2026-08-08::UFC Fight Night: Gamrot vs. Salkilld::Louie Sutherland::Jose Montanha,Louie Sutherland,Jose Montanha,0,0.565,0.8931528051976526,recovered_winner_only,0.565
+2026-08-08,2026-08-08::UFC Fight Night: Gamrot vs. Salkilld::Manoel Sousa::Richie Miranda,Manoel Sousa,Richie Miranda,1,0.583,0.7147045543272295,recovered_winner_only,0.583
+2026-08-08,2026-08-08::UFC Fight Night: Gamrot vs. Salkilld::Mateusz Gamrot::Quillan Salkilld,Mateusz Gamrot,Quillan Salkilld,0,0.36,0.3398433211406433,recovered_winner_only,0.36
+2026-08-08,2026-08-08::UFC Fight Night: Gamrot vs. Salkilld::Miles Johns::Gianni Vazquez,Miles Johns,Gianni Vazquez,1,0.671,0.6805179605750452,recovered_winner_only,0.671
+2026-08-08,2026-08-08::UFC Fight Night: Gamrot vs. Salkilld::Steven Asplund::Guilherme Pat,Steven Asplund,Guilherme Pat,1,0.582,0.9312901800939182,recovered_winner_only,0.582
+2026-08-15,2026-08-15::UFC 330: Makhachev vs. Machado Garry::Charles Johnson::Eduardo Chapolin,Charles Johnson,Eduardo Chapolin,1,0.581,0.49147350817601126,recovered_winner_only,0.581
+2026-08-15,2026-08-15::UFC 330: Makhachev vs. Machado Garry::Chidi Njokuani::Joel Alvarez,Chidi Njokuani,Joel Alvarez,1,0.383,0.4605883821250271,recovered_winner_only,0.38300000000000006
+2026-08-15,2026-08-15::UFC 330: Makhachev vs. Machado Garry::Donte Johnson::Eric McConico,Donte Johnson,Eric McConico,1,0.739,0.7841048654135319,recovered_winner_only,0.739
+2026-08-15,2026-08-15::UFC 330: Makhachev vs. Machado Garry::Edson Barboza::Esteban Ribovics,Edson Barboza,Esteban Ribovics,0,0.278,0.3779943076073721,recovered_winner_only,0.278
+2026-08-15,2026-08-15::UFC 330: Makhachev vs. Machado Garry::Islam Makhachev::Ian Machado Garry,Islam Makhachev,Ian Machado Garry,1,0.613,0.5989353789873139,recovered_winner_only,0.613
+2026-08-15,2026-08-15::UFC 330: Makhachev vs. Machado Garry::Jalin Turner::Kaue Fernandes,Jalin Turner,Kaue Fernandes,1,0.444,0.38309359226791123,recovered_winner_only,0.444
+2026-08-15,2026-08-15::UFC 330: Makhachev vs. Machado Garry::Jeremiah Wells::Myktybek Orolbai,Jeremiah Wells,Myktybek Orolbai,1,0.159,0.3231916682579702,recovered_winner_only,0.159
+2026-08-15,2026-08-15::UFC 330: Makhachev vs. Machado Garry::Mackenzie Dern::Gillian Robertson,Mackenzie Dern,Gillian Robertson,1,0.379,0.4657763783564656,recovered_winner_only,0.379
+2026-08-15,2026-08-15::UFC 330: Makhachev vs. Machado Garry::Mansur Abdul-Malik::Dustin Stoltzfus,Mansur Abdul-Malik,Dustin Stoltzfus,0,0.65,0.6397165849741943,recovered_winner_only,0.65
+2026-08-15,2026-08-15::UFC 330: Makhachev vs. Machado Garry::Neil Magny::Ramiz Brahimaj,Neil Magny,Ramiz Brahimaj,1,0.605,0.5689506566477511,recovered_winner_only,0.605
+2026-08-15,2026-08-15::UFC 330: Makhachev vs. Machado Garry::Rafael Tobias::Lucas Fernando,Rafael Tobias,Lucas Fernando,0,0.431,0.7552984747234056,recovered_winner_only,0.431
+2026-08-15,2026-08-15::UFC 330: Makhachev vs. Machado Garry::Vicente Luque::Tresean Gore,Vicente Luque,Tresean Gore,0,0.727,0.5485432466167467,recovered_winner_only,0.727
+2026-08-29,2026-08-29::UFC Fight Night: Nurmagomedov vs. Song::Alex Perez::Sumudaerji,Alex Perez,Sumudaerji,0,0.460583,0.4438196190329605,recovered_full_head,0.4605829999999999
+2026-08-29,2026-08-29::UFC Fight Night: Nurmagomedov vs. Song::Aoriqileng::Kai Asakura,Aoriqileng,Kai Asakura,0,0.324203,0.43914590880610954,recovered_full_head,0.324203
+2026-08-29,2026-08-29::UFC Fight Night: Nurmagomedov vs. Song::Bilal Hasan::Nilson Rojas,Bilal Hasan,Nilson Rojas,1,0.715718,0.5511033025237592,recovered_full_head,0.7157180000000001
+2026-08-29,2026-08-29::UFC Fight Night: Nurmagomedov vs. Song::Ding Meng::Cam Nelson,Ding Meng,Cam Nelson,0,0.502632,0.9305036329243644,recovered_full_head,0.502632
+2026-08-29,2026-08-29::UFC Fight Night: Nurmagomedov vs. Song::Jack Jenkins::Sean Woodson,Jack Jenkins,Sean Woodson,0,0.44411901,0.48344031158345047,recovered_full_head,0.44411901000000004
+2026-08-29,2026-08-29::UFC Fight Night: Nurmagomedov vs. Song::Lawrence Lui::Hector Santiago,Lawrence Lui,Hector Santiago,0,0.701979,0.8726075622767036,recovered_full_head,0.701979
+2026-08-29,2026-08-29::UFC Fight Night: Nurmagomedov vs. Song::Liu Ce::Levi Rodrigues Jr.,Liu Ce,Levi Rodrigues Jr.,1,0.626343,0.5795677762945329,recovered_full_head,0.626343
+2026-08-29,2026-08-29::UFC Fight Night: Nurmagomedov vs. Song::Namsrai Batbayar::Andre Lima,Namsrai Batbayar,Andre Lima,0,0.36621501,0.41060145024051864,recovered_full_head,0.36621501000000006
+2026-08-29,2026-08-29::UFC Fight Night: Nurmagomedov vs. Song::Rei Tsuruya::Kevin Borjas,Rei Tsuruya,Kevin Borjas,1,0.734787,0.6949796481865986,recovered_full_head,0.734787
+2026-08-29,2026-08-29::UFC Fight Night: Nurmagomedov vs. Song::Umar Nurmagomedov::Song Yadong,Umar Nurmagomedov,Song Yadong,0,0.702156,0.7030690257924032,recovered_full_head,0.702156
+2026-08-29,2026-08-29::UFC Fight Night: Nurmagomedov vs. Song::Xiao Long::Francesco Nuzzi,Xiao Long,Francesco Nuzzi,0,0.588911,0.9080790737294057,recovered_full_head,0.588911
+2026-08-29,2026-08-29::UFC Fight Night: Nurmagomedov vs. Song::Xiong Jingnan::Julia Polastri,Xiong Jingnan,Julia Polastri,0,0.189625,0.11539381270730072,recovered_full_head,0.189625
+2026-08-29,2026-08-29::UFC Fight Night: Nurmagomedov vs. Song::Yan Xiaonan::Denise Gomes,Yan Xiaonan,Denise Gomes,0,0.372788,0.32449294132126927,recovered_full_head,0.372788
+2026-09-05,2026-09-05::UFC Fight Night: Hooker vs. Parnasse::Dan Hooker::Salahdine Parnasse,Dan Hooker,Salahdine Parnasse,0,0.573,0.8319167405695344,recovered_full_head,0.573
+2026-09-05,2026-09-05::UFC Fight Night: Hooker vs. Parnasse::Daniil Donchenko::Punahele Soriano,Daniil Donchenko,Punahele Soriano,1,0.806,0.6936928462600735,recovered_full_head,0.806
+2026-09-05,2026-09-05::UFC Fight Night: Hooker vs. Parnasse::Delphine Benouaich::Sofia Montenegro,Delphine Benouaich,Sofia Montenegro,1,0.435,0.12072100133241208,recovered_full_head,0.43500000000000005
+2026-09-05,2026-09-05::UFC Fight Night: Hooker vs. Parnasse::Fares Ziam::Axel Sola,Fares Ziam,Axel Sola,0,0.653,0.5913150421394601,recovered_full_head,0.6529999999999999
+2026-09-05,2026-09-05::UFC Fight Night: Hooker vs. Parnasse::Kurtis Campbell::Trevor Peek,Kurtis Campbell,Trevor Peek,1,0.552,0.6688312779650157,recovered_full_head,0.552
+2026-09-05,2026-09-05::UFC Fight Night: Hooker vs. Parnasse::Losene Keita::Muhammad Naimov,Losene Keita,Muhammad Naimov,1,0.671,0.5976405331716841,recovered_full_head,0.671
+2026-09-05,2026-09-05::UFC Fight Night: Hooker vs. Parnasse::Mario Pinto::Ryan Spann,Mario Pinto,Ryan Spann,1,0.763,0.7411521736071084,recovered_full_head,0.7630000000000001
+2026-09-05,2026-09-05::UFC Fight Night: Hooker vs. Parnasse::Matthieu Duclos::Luis Felipe Dias,Matthieu Duclos,Luis Felipe Dias,1,0.384,0.8644508402229271,recovered_full_head,0.38399999999999995
+2026-09-05,2026-09-05::UFC Fight Night: Hooker vs. Parnasse::Michael Aljarouj::Fabia Sintes,Michael Aljarouj,Fabia Sintes,0,0.536,0.5749502771712229,recovered_full_head,0.536
+2026-09-05,2026-09-05::UFC Fight Night: Hooker vs. Parnasse::Michael Page::Nursulton Ruziboev,Michael Page,Nursulton Ruziboev,1,0.573,0.5130512087227387,recovered_full_head,0.573
+2026-09-05,2026-09-05::UFC Fight Night: Hooker vs. Parnasse::Morgan Charriere::Felipe Lima,Morgan Charriere,Felipe Lima,0,0.335,0.39375840653422495,recovered_full_head,0.335
+2026-09-05,2026-09-05::UFC Fight Night: Hooker vs. Parnasse::Nathaniel Wood::Pavel Andrusca,Nathaniel Wood,Pavel Andrusca,0,0.623,0.49139428210552094,recovered_full_head,0.623
+2026-09-05,2026-09-05::UFC Fight Night: Hooker vs. Parnasse::Nora Cornolle::Klaudia Sygula,Nora Cornolle,Klaudia Sygula,1,0.398,0.38880842328789167,recovered_full_head,0.398
+2026-09-05,2026-09-05::UFC Fight Night: Hooker vs. Parnasse::Oumar Sy::Modestas Bukauskas,Oumar Sy,Modestas Bukauskas,0,0.765,0.7193134755735457,recovered_full_head,0.7650000000000001
+2026-09-19,2026-09-19::UFC 331: Van vs. Pantoja 2::Alonzo Menifield::Iwo Baraniewski,Alonzo Menifield,Iwo Baraniewski,1,0.5387944834487403,0.31361006744627956,native_frozen_lock,0.5387944834487403
+2026-09-19,2026-09-19::UFC 331: Van vs. Pantoja 2::Arman Tsarukyan::Mauricio Ruffy,Arman Tsarukyan,Mauricio Ruffy,1,0.6792748627500002,0.7375849985121458,native_frozen_lock,0.6792748627500002
+2026-09-19,2026-09-19::UFC 331: Van vs. Pantoja 2::Casey O'Neill::Eduarda Moura,Casey O'Neill,Eduarda Moura,1,0.5992113625380402,0.679534069109467,native_frozen_lock,0.5992113625380402
+2026-09-19,2026-09-19::UFC 331: Van vs. Pantoja 2::Edmen Shahbazyan::Brunno Ferreira,Edmen Shahbazyan,Brunno Ferreira,1,0.7025107171730383,0.6567688344304197,native_frozen_lock,0.7025107171730383
+2026-09-19,2026-09-19::UFC 331: Van vs. Pantoja 2::Gable Steveson::Sean Sharaf,Gable Steveson,Sean Sharaf,0,0.8266165718314533,0.30955168451407944,native_frozen_lock,0.8266165718314533
+2026-09-19,2026-09-19::UFC 331: Van vs. Pantoja 2::Giga Chikadze::Joanderson Brito,Giga Chikadze,Joanderson Brito,0,0.49337082947979866,0.5553840256024484,native_frozen_lock,0.49337082947979866
+2026-09-19,2026-09-19::UFC 331: Van vs. Pantoja 2::Joshua Van::Alexandre Pantoja,Joshua Van,Alexandre Pantoja,1,0.7243588549742722,0.7636938405520214,native_frozen_lock,0.7243588549742722
+2026-09-19,2026-09-19::UFC 331: Van vs. Pantoja 2::Marlon Vera::Charles Jourdain,Marlon Vera,Charles Jourdain,1,0.3889519340978799,0.42939385369137434,native_frozen_lock,0.38895193409788
+2026-09-19,2026-09-19::UFC 331: Van vs. Pantoja 2::Michael Aswell Jr.::JooSang Yoo,Michael Aswell Jr.,Joosang Yoo,1,0.45746374121616656,0.16461915449255402,native_frozen_lock,0.45746374121616656
+2026-09-19,2026-09-19::UFC 331: Van vs. Pantoja 2::Patricio Pitbull::Dooho Choi,Patricio Pitbull,Dooho Choi,1,0.4169783263465596,0.07790710522216962,native_frozen_lock,0.4169783263465596
+2026-09-19,2026-09-19::UFC 331: Van vs. Pantoja 2::Ryan Gandra::Ozzy Diaz,Ryan Gandra,Ozzy Diaz,1,0.7239651302912301,0.6473154680103156,native_frozen_lock,0.7239651302912301
+2026-09-19,2026-09-19::UFC 331: Van vs. Pantoja 2::Tai Tuivasa::Robelis Despaigne,Tai Tuivasa,Robelis Despaigne,0,0.5036953056526576,0.6112389374364768,native_frozen_lock,0.5036953056526576
+2026-09-26,2026-09-26::UFC Fight Night: Rosas Jr. vs. Barcelos::Brady Hiestand::Rinya Nakamura,Brady Hiestand,Rinya Nakamura,1,0.7078845180965979,0.44121201286804407,native_frozen_lock,0.7078845180965979
+2026-09-26,2026-09-26::UFC Fight Night: Rosas Jr. vs. Barcelos::Elves Brener::Josiah Harrell,Elves Brener,Josiah Harrell,1,0.6359996847313498,0.6376182077067583,native_frozen_lock,0.6359996847313499
+2026-09-26,2026-09-26::UFC Fight Night: Rosas Jr. vs. Barcelos::John Castaneda::Alatengheili,John Castaneda,Alatengheili,0,0.5093047042649078,0.618696557974094,native_frozen_lock,0.5093047042649078
+2026-09-26,2026-09-26::UFC Fight Night: Rosas Jr. vs. Barcelos::Luis Hernandez::Sedriques Dumas,Luis Hernandez,Sedriques Dumas,1,0.6071602461200024,0.07601576204676021,native_frozen_lock,0.6071602461200024
+2026-09-26,2026-09-26::UFC Fight Night: Rosas Jr. vs. Barcelos::Melissa Amaya::Tina Black,Melissa Amaya,Tina Black,0,0.5217018440653514,0.5603456544900527,native_frozen_lock,0.5217018440653514
+2026-09-26,2026-09-26::UFC Fight Night: Rosas Jr. vs. Barcelos::Montel Jackson::Ricky Simon,Montel Jackson,Ricky Simon,1,0.7017537981104017,0.5431518260912163,native_frozen_lock,0.7017537981104017
+2026-09-26,2026-09-26::UFC Fight Night: Rosas Jr. vs. Barcelos::Norma Dumont::Ailin Perez,Norma Dumont,Ailin Perez,0,0.40884468900286425,0.3947067482641499,native_frozen_lock,0.40884468900286425
+2026-09-26,2026-09-26::UFC Fight Night: Rosas Jr. vs. Barcelos::Raul Rosas Jr.::Raoni Barcelos,Raul Rosas Jr.,Raoni Barcelos,1,0.8267472737235394,0.7272371342404375,native_frozen_lock,0.8267472737235394
+2026-09-26,2026-09-26::UFC Fight Night: Rosas Jr. vs. Barcelos::Rodolfo Bellato::Christian Edwards,Rodolfo Bellato,Christian Edwards,0,0.38465431400416344,0.8368454443678282,native_frozen_lock,0.38465431400416344
+2026-09-26,2026-09-26::UFC Fight Night: Rosas Jr. vs. Barcelos::Rodolfo Vieira::Robert Bryczek,Rodolfo Vieira,Robert Bryczek,1,0.7232542222766234,0.5518110762736517,native_frozen_lock,0.7232542222766234
+2026-09-26,2026-09-26::UFC Fight Night: Rosas Jr. vs. Barcelos::Vanessa Demopoulos::Yazmin Jauregui,Vanessa Demopoulos,Yazmin Jauregui,0,0.15938001145975178,0.2562794031800421,native_frozen_lock,0.1593800114597518
+2026-10-03,2026-10-03::UFC 332: Silva vs. Wang::Anthony Wint::Lucas Armand,Anthony Wint,Lucas Armand,1,0.7752635014879146,0.7340569141370157,native_frozen_lock,0.7752635014879146
+2026-10-03,2026-10-03::UFC 332: Silva vs. Wang::Ateba Gautier::Roman Kopylov,Ateba Gautier,Roman Kopylov,0,0.8259034795773053,0.7197398111103057,native_frozen_lock,0.8259034795773053
+2026-10-03,2026-10-03::UFC 332: Silva vs. Wang::Court McGee::Eric Nolan,Court McGee,Eric Nolan,0,0.3508441969088871,0.33401359022717797,native_frozen_lock,0.3508441969088871
+2026-10-03,2026-10-03::UFC 332: Silva vs. Wang::Damian Pinas::Andrey Pulyaev,Damian Pinas,Andrey Pulyaev,1,0.588861507882877,0.5093701819611357,native_frozen_lock,0.588861507882877
+2026-10-03,2026-10-03::UFC 332: Silva vs. Wang::Deiveson Figueiredo::Payton Talbott,Deiveson Figueiredo,Payton Talbott,0,0.3097063340076383,0.25654018512185145,native_frozen_lock,0.3097063340076383
+2026-10-03,2026-10-03::UFC 332: Silva vs. Wang::Imanol Rodriguez::Alden Coria,Imanol Rodriguez,Alden Coria,1,0.7027464397767232,0.4671745876690238,native_frozen_lock,0.7027464397767232
+2026-10-03,2026-10-03::UFC 332: Silva vs. Wang::Jacobe Smith::Bruce Whitehead,Jacobe Smith,Bruce Whitehead,1,0.9795773076642681,0.8637921088396529,native_frozen_lock,0.9795773076642681
+2026-10-03,2026-10-03::UFC 332: Silva vs. Wang::Johnny Walker::Mick Parkin,Johnny Walker,Mick Parkin,1,0.5516823746057589,0.4705883541818462,native_frozen_lock,0.5516823746057589
+2026-10-03,2026-10-03::UFC 332: Silva vs. Wang::King Green::Esteban Ribovics,King Green,Esteban Ribovics,0,0.4211123778111201,0.45920784254419666,native_frozen_lock,0.4211123778111201
+2026-10-03,2026-10-03::UFC 332: Silva vs. Wang::Marcus McGhee::Anthony Romero,Marcus McGhee,Anthony Romero,1,0.9632864538787137,0.6741015309900386,native_frozen_lock,0.9632864538787137
+2026-10-03,2026-10-03::UFC 332: Silva vs. Wang::Marvin Vettori::Ismail Naurdiev,Marvin Vettori,Ismail Naurdiev,0,0.45276345332164775,0.37062652462195833,native_frozen_lock,0.45276345332164775
+2026-10-03,2026-10-03::UFC 332: Silva vs. Wang::Natalia Silva::Wang Cong,Natalia Silva,Wang Cong,1,0.6813436953186934,0.6568825746493357,native_frozen_lock,0.6813436953186934
+2026-10-03,2026-10-03::UFC 332: Silva vs. Wang::Rafael Dos Anjos::Alexander Hernandez,Rafael dos Anjos,Alexander Hernandez,0,0.3090663295390119,0.4187272272926384,native_frozen_lock,0.30906632953901186
+2026-10-03,2026-10-03::UFC 332: Silva vs. Wang::Roberto Soldic::Khaos Williams,Roberto Soldic,Khaos Williams,1,0.5951480239529626,0.06278644637011369,native_frozen_lock,0.5951480239529626
+2026-10-10,2026-10-10::UFC Fight Night: Allen vs. Duncan::Alice Pereira::Daria Zhelezniakova,Alice Pereira,Daria Zhelezniakova,1,0.7674688553902386,0.6832792157828759,native_frozen_lock,0.7674688553902386
+2026-10-10,2026-10-10::UFC Fight Night: Allen vs. Duncan::Allen Frye Jr.::RJ Harris,Allen Frye Jr.,RJ Harris,1,0.6502055722793714,0.08304988469537433,native_frozen_lock,0.6502055722793714
+2026-10-10,2026-10-10::UFC Fight Night: Allen vs. Duncan::Andre Fili::Kai Kamaka III,Andre Fili,Kai Kamaka III,1,0.40862439656158817,0.9060864040029748,native_frozen_lock,0.40862439656158817
+2026-10-10,2026-10-10::UFC Fight Night: Allen vs. Duncan::Brendan Allen::Christian Leroy Duncan,Brendan Allen,Christian Leroy Duncan,1,0.4533230554522102,0.41152194399644165,native_frozen_lock,0.4533230554522102
+2026-10-10,2026-10-10::UFC Fight Night: Allen vs. Duncan::Felipe Franco::Brendson Ribeiro,Felipe Franco,Brendson Ribeiro,0,0.7567001850430176,0.6363267332215309,native_frozen_lock,0.7567001850430176
+2026-10-10,2026-10-10::UFC Fight Night: Allen vs. Duncan::Francisco Prado::Ismael Bonfim,Francisco Prado,Ismael Bonfim,1,0.6360311768646199,0.5461557214109368,native_frozen_lock,0.6360311768646199
+2026-10-10,2026-10-10::UFC Fight Night: Allen vs. Duncan::Julius Walker::Gerald Meerschaert,Julius Walker,Gerald Meerschaert,1,0.781054455873709,0.6659518803948383,native_frozen_lock,0.781054455873709
+2026-10-10,2026-10-10::UFC Fight Night: Allen vs. Duncan::Loopy Godinez::Ketlen Souza,Loopy Godinez,Ketlen Souza,1,0.537893606317443,0.501457514888065,native_frozen_lock,0.537893606317443
+2026-10-10,2026-10-10::UFC Fight Night: Allen vs. Duncan::Malcolm Wellmaker::Otari Tanzilovi,Malcolm Wellmaker,Otari Tanzilovi,0,0.4385268951143316,0.38820093421716234,native_frozen_lock,0.4385268951143316
+2026-10-10,2026-10-10::UFC Fight Night: Allen vs. Duncan::Matheus Camilo::Jai Herbert,Matheus Camilo,Jai Herbert,0,0.7715217924240149,0.713480398030975,native_frozen_lock,0.7715217924240149
+2026-10-10,2026-10-10::UFC Fight Night: Allen vs. Duncan::Niko Price::Leon Shahbazyan,Niko Price,Leon Shahbazyan,1,0.45337413517971525,0.5533930077321051,native_frozen_lock,0.45337413517971525
+2026-10-17,2026-10-17::UFC Fight Night: Buckley vs. Malott::Chad Anheliger::Steven Koslow,Chad Anheliger,Steven Koslow,0,0.3024741978065555,0.34381102807982467,native_frozen_lock,0.3024741978065555
+2026-10-17,2026-10-17::UFC Fight Night: Buckley vs. Malott::Cody Chovancek::SuYoung You,Cody Chovancek,SuYoung You,0,0.5879162202098943,0.43294771358071177,native_frozen_lock,0.5879162202098943
+2026-10-17,2026-10-17::UFC Fight Night: Buckley vs. Malott::Erin Blanchfield::Jasmine Jasudavicius,Erin Blanchfield,Jasmine Jasudavicius,0,0.7301355574354045,0.7587416509452246,native_frozen_lock,0.7301355574354045
+2026-10-17,2026-10-17::UFC Fight Night: Buckley vs. Malott::Javad Mahjoub::Joel Faglier,Javad Mahjoub,Joel Faglier,0,0.5338020350741424,0.34272818230585256,native_frozen_lock,0.5338020350741424
+2026-10-17,2026-10-17::UFC Fight Night: Buckley vs. Malott::Joaquin Buckley::Mike Malott,Joaquin Buckley,Mike Malott,0,0.6262269977462097,0.5525447223966163,native_frozen_lock,0.6262269977462097
+2026-10-17,2026-10-17::UFC Fight Night: Buckley vs. Malott::Julien Leblanc::Nick Galanti,Julien Leblanc,Nick Galanti,0,0.7454533923605153,0.579134968309857,native_frozen_lock,0.7454533923605153
+2026-10-17,2026-10-17::UFC Fight Night: Buckley vs. Malott::Katlyn Cerminara::Mackenzie Stiller,Katlyn Cerminara,Mackenzie Stiller,1,0.27666324311703344,0.7381565321282672,native_frozen_lock,0.2766632431170335
+2026-10-17,2026-10-17::UFC Fight Night: Buckley vs. Malott::Kyle Nelson::Cristian Perez,Kyle Nelson,Cristian Perez,0,0.34277881977338925,0.3588097649037904,native_frozen_lock,0.34277881977338925
+2026-10-17,2026-10-17::UFC Fight Night: Buckley vs. Malott::Louis Jourdain::Timmy Cuamba,Louis Jourdain,Timmy Cuamba,0,0.5848397553151328,0.4105687333942508,native_frozen_lock,0.5848397553151328
+2026-10-17,2026-10-17::UFC Fight Night: Buckley vs. Malott::Mandel Nallo::Nate Landwehr,Mandel Nallo,Nate Landwehr,1,0.4713664858123425,0.43874885882486636,native_frozen_lock,0.4713664858123425
+2026-10-17,2026-10-17::UFC Fight Night: Buckley vs. Malott::Marc-Andre Barriault::Kyle Daukaus,Marc-Andre Barriault,Kyle Daukaus,1,0.31914409963572193,0.38530064196084773,native_frozen_lock,0.31914409963572193
+2026-10-17,2026-10-17::UFC Fight Night: Buckley vs. Malott::Melissa Croden::Chelsea Chandler,Melissa Croden,Chelsea Chandler,0,0.5381639504866813,0.39712312421829316,native_frozen_lock,0.5381639504866813
+2026-10-17,2026-10-17::UFC Fight Night: Buckley vs. Malott::Tanner Boser::Jhonata Diniz,Tanner Boser,Jhonata Diniz,1,0.5750739085920682,0.5862364825304971,native_frozen_lock,0.5750739085920682

@@ -1,0 +1,838 @@
+{
+  "candidate_source": "tools/diagnose_method_submission_access_edmonton.py",
+  "candidate_specified_pre_ufc333": true,
+  "folds": [
+    {
+      "baseline": {
+        "accuracy": 0.23076923076923078,
+        "actual": {
+          "DEC": 3,
+          "KO": 8,
+          "SUB": 2
+        },
+        "brier": 0.7580468397152663,
+        "calls": {
+          "DEC": 8,
+          "KO": 5,
+          "SUB": 0
+        },
+        "log_loss": 1.1807575573350912,
+        "n": 13,
+        "recall": {
+          "DEC": 0.3333333333333333,
+          "KO": 0.25,
+          "SUB": 0.0
+        }
+      },
+      "calibrated": {
+        "accuracy": 0.23076923076923078,
+        "actual": {
+          "DEC": 3,
+          "KO": 8,
+          "SUB": 2
+        },
+        "brier": 0.7171047348334475,
+        "calls": {
+          "DEC": 5,
+          "KO": 7,
+          "SUB": 1
+        },
+        "log_loss": 1.1356525940276005,
+        "n": 13,
+        "recall": {
+          "DEC": 0.0,
+          "KO": 0.375,
+          "SUB": 0.0
+        }
+      },
+      "submission_access": {
+        "accuracy": 0.15384615384615385,
+        "actual": {
+          "DEC": 3,
+          "KO": 8,
+          "SUB": 2
+        },
+        "brier": 0.7241487598576065,
+        "calls": {
+          "DEC": 4,
+          "KO": 6,
+          "SUB": 3
+        },
+        "log_loss": 1.1502766747048507,
+        "n": 13,
+        "recall": {
+          "DEC": 0.0,
+          "KO": 0.25,
+          "SUB": 0.0
+        }
+      },
+      "test_date": "2026-08-22",
+      "test_n": 13,
+      "train_n": 24,
+      "training_finish_n": 15,
+      "training_sub_n": 6
+    },
+    {
+      "baseline": {
+        "accuracy": 0.3076923076923077,
+        "actual": {
+          "DEC": 3,
+          "KO": 8,
+          "SUB": 2
+        },
+        "brier": 0.7525353228994877,
+        "calls": {
+          "DEC": 8,
+          "KO": 5,
+          "SUB": 0
+        },
+        "log_loss": 1.158253394571361,
+        "n": 13,
+        "recall": {
+          "DEC": 0.3333333333333333,
+          "KO": 0.375,
+          "SUB": 0.0
+        }
+      },
+      "calibrated": {
+        "accuracy": 0.38461538461538464,
+        "actual": {
+          "DEC": 3,
+          "KO": 8,
+          "SUB": 2
+        },
+        "brier": 0.6570678782649673,
+        "calls": {
+          "DEC": 5,
+          "KO": 8,
+          "SUB": 0
+        },
+        "log_loss": 1.0470024524270334,
+        "n": 13,
+        "recall": {
+          "DEC": 0.0,
+          "KO": 0.625,
+          "SUB": 0.0
+        }
+      },
+      "submission_access": {
+        "accuracy": 0.23076923076923078,
+        "actual": {
+          "DEC": 3,
+          "KO": 8,
+          "SUB": 2
+        },
+        "brier": 0.7200131429457666,
+        "calls": {
+          "DEC": 4,
+          "KO": 5,
+          "SUB": 4
+        },
+        "log_loss": 1.1119943927886786,
+        "n": 13,
+        "recall": {
+          "DEC": 0.0,
+          "KO": 0.375,
+          "SUB": 0.0
+        }
+      },
+      "test_date": "2026-08-29",
+      "test_n": 13,
+      "train_n": 37,
+      "training_finish_n": 25,
+      "training_sub_n": 8
+    },
+    {
+      "baseline": {
+        "accuracy": 0.6428571428571429,
+        "actual": {
+          "DEC": 6,
+          "KO": 6,
+          "SUB": 2
+        },
+        "brier": 0.48251086717202396,
+        "calls": {
+          "DEC": 9,
+          "KO": 4,
+          "SUB": 1
+        },
+        "log_loss": 0.80188716657045,
+        "n": 14,
+        "recall": {
+          "DEC": 0.8333333333333334,
+          "KO": 0.5,
+          "SUB": 0.5
+        }
+      },
+      "calibrated": {
+        "accuracy": 0.5714285714285714,
+        "actual": {
+          "DEC": 6,
+          "KO": 6,
+          "SUB": 2
+        },
+        "brier": 0.5114675662756091,
+        "calls": {
+          "DEC": 3,
+          "KO": 11,
+          "SUB": 0
+        },
+        "log_loss": 0.8504901812469853,
+        "n": 14,
+        "recall": {
+          "DEC": 0.3333333333333333,
+          "KO": 1.0,
+          "SUB": 0.0
+        }
+      },
+      "submission_access": {
+        "accuracy": 0.6428571428571429,
+        "actual": {
+          "DEC": 6,
+          "KO": 6,
+          "SUB": 2
+        },
+        "brier": 0.49694191795425763,
+        "calls": {
+          "DEC": 3,
+          "KO": 10,
+          "SUB": 1
+        },
+        "log_loss": 0.8276355440898167,
+        "n": 14,
+        "recall": {
+          "DEC": 0.3333333333333333,
+          "KO": 1.0,
+          "SUB": 0.5
+        }
+      },
+      "test_date": "2026-09-05",
+      "test_n": 14,
+      "train_n": 50,
+      "training_finish_n": 35,
+      "training_sub_n": 10
+    },
+    {
+      "baseline": {
+        "accuracy": 0.4166666666666667,
+        "actual": {
+          "DEC": 5,
+          "KO": 6,
+          "SUB": 1
+        },
+        "brier": 0.6392708325415924,
+        "calls": {
+          "DEC": 6,
+          "KO": 6,
+          "SUB": 0
+        },
+        "log_loss": 1.0321877414983447,
+        "n": 12,
+        "recall": {
+          "DEC": 0.4,
+          "KO": 0.5,
+          "SUB": 0.0
+        }
+      },
+      "calibrated": {
+        "accuracy": 0.4166666666666667,
+        "actual": {
+          "DEC": 5,
+          "KO": 6,
+          "SUB": 1
+        },
+        "brier": 0.6595081126776305,
+        "calls": {
+          "DEC": 2,
+          "KO": 10,
+          "SUB": 0
+        },
+        "log_loss": 1.0652419382643852,
+        "n": 12,
+        "recall": {
+          "DEC": 0.0,
+          "KO": 0.8333333333333334,
+          "SUB": 0.0
+        }
+      },
+      "submission_access": {
+        "accuracy": 0.4166666666666667,
+        "actual": {
+          "DEC": 5,
+          "KO": 6,
+          "SUB": 1
+        },
+        "brier": 0.6679633243164359,
+        "calls": {
+          "DEC": 2,
+          "KO": 10,
+          "SUB": 0
+        },
+        "log_loss": 1.0642945018115564,
+        "n": 12,
+        "recall": {
+          "DEC": 0.0,
+          "KO": 0.8333333333333334,
+          "SUB": 0.0
+        }
+      },
+      "test_date": "2026-09-19",
+      "test_n": 12,
+      "train_n": 64,
+      "training_finish_n": 43,
+      "training_sub_n": 12
+    },
+    {
+      "baseline": {
+        "accuracy": 0.36363636363636365,
+        "actual": {
+          "DEC": 3,
+          "KO": 6,
+          "SUB": 2
+        },
+        "brier": 0.673768220966916,
+        "calls": {
+          "DEC": 9,
+          "KO": 2,
+          "SUB": 0
+        },
+        "log_loss": 1.0731367283341018,
+        "n": 11,
+        "recall": {
+          "DEC": 1.0,
+          "KO": 0.16666666666666666,
+          "SUB": 0.0
+        }
+      },
+      "calibrated": {
+        "accuracy": 0.5454545454545454,
+        "actual": {
+          "DEC": 3,
+          "KO": 6,
+          "SUB": 2
+        },
+        "brier": 0.5782524283221885,
+        "calls": {
+          "DEC": 6,
+          "KO": 3,
+          "SUB": 2
+        },
+        "log_loss": 0.9394247641376356,
+        "n": 11,
+        "recall": {
+          "DEC": 1.0,
+          "KO": 0.3333333333333333,
+          "SUB": 0.5
+        }
+      },
+      "submission_access": {
+        "accuracy": 0.5454545454545454,
+        "actual": {
+          "DEC": 3,
+          "KO": 6,
+          "SUB": 2
+        },
+        "brier": 0.5673542218086192,
+        "calls": {
+          "DEC": 6,
+          "KO": 3,
+          "SUB": 2
+        },
+        "log_loss": 0.9259905457275156,
+        "n": 11,
+        "recall": {
+          "DEC": 1.0,
+          "KO": 0.3333333333333333,
+          "SUB": 0.5
+        }
+      },
+      "test_date": "2026-09-26",
+      "test_n": 11,
+      "train_n": 76,
+      "training_finish_n": 50,
+      "training_sub_n": 13
+    },
+    {
+      "baseline": {
+        "accuracy": 0.42857142857142855,
+        "actual": {
+          "DEC": 3,
+          "KO": 11,
+          "SUB": 0
+        },
+        "brier": 0.5294568795818421,
+        "calls": {
+          "DEC": 9,
+          "KO": 5,
+          "SUB": 0
+        },
+        "log_loss": 0.8516608180747502,
+        "n": 14,
+        "recall": {
+          "DEC": 0.6666666666666666,
+          "KO": 0.36363636363636365,
+          "SUB": null
+        }
+      },
+      "calibrated": {
+        "accuracy": 0.7142857142857143,
+        "actual": {
+          "DEC": 3,
+          "KO": 11,
+          "SUB": 0
+        },
+        "brier": 0.40229817295559295,
+        "calls": {
+          "DEC": 2,
+          "KO": 11,
+          "SUB": 1
+        },
+        "log_loss": 0.6952944774465616,
+        "n": 14,
+        "recall": {
+          "DEC": 0.3333333333333333,
+          "KO": 0.8181818181818182,
+          "SUB": null
+        }
+      },
+      "submission_access": {
+        "accuracy": 0.7857142857142857,
+        "actual": {
+          "DEC": 3,
+          "KO": 11,
+          "SUB": 0
+        },
+        "brier": 0.4198514469080775,
+        "calls": {
+          "DEC": 1,
+          "KO": 12,
+          "SUB": 1
+        },
+        "log_loss": 0.7154723951125964,
+        "n": 14,
+        "recall": {
+          "DEC": 0.3333333333333333,
+          "KO": 0.9090909090909091,
+          "SUB": null
+        }
+      },
+      "test_date": "2026-10-03",
+      "test_n": 14,
+      "train_n": 87,
+      "training_finish_n": 58,
+      "training_sub_n": 15
+    },
+    {
+      "baseline": {
+        "accuracy": 0.36363636363636365,
+        "actual": {
+          "DEC": 2,
+          "KO": 7,
+          "SUB": 2
+        },
+        "brier": 0.6144736921461408,
+        "calls": {
+          "DEC": 9,
+          "KO": 2,
+          "SUB": 0
+        },
+        "log_loss": 0.9930311463731449,
+        "n": 11,
+        "recall": {
+          "DEC": 1.0,
+          "KO": 0.2857142857142857,
+          "SUB": 0.0
+        }
+      },
+      "calibrated": {
+        "accuracy": 0.7272727272727273,
+        "actual": {
+          "DEC": 2,
+          "KO": 7,
+          "SUB": 2
+        },
+        "brier": 0.4671981786848241,
+        "calls": {
+          "DEC": 1,
+          "KO": 10,
+          "SUB": 0
+        },
+        "log_loss": 0.808836065050688,
+        "n": 11,
+        "recall": {
+          "DEC": 0.5,
+          "KO": 1.0,
+          "SUB": 0.0
+        }
+      },
+      "submission_access": {
+        "accuracy": 0.6363636363636364,
+        "actual": {
+          "DEC": 2,
+          "KO": 7,
+          "SUB": 2
+        },
+        "brier": 0.5231528441769376,
+        "calls": {
+          "DEC": 1,
+          "KO": 9,
+          "SUB": 1
+        },
+        "log_loss": 0.9018008049469461,
+        "n": 11,
+        "recall": {
+          "DEC": 0.5,
+          "KO": 0.8571428571428571,
+          "SUB": 0.0
+        }
+      },
+      "test_date": "2026-10-10",
+      "test_n": 11,
+      "train_n": 101,
+      "training_finish_n": 69,
+      "training_sub_n": 15
+    },
+    {
+      "baseline": {
+        "accuracy": 0.46153846153846156,
+        "actual": {
+          "DEC": 1,
+          "KO": 7,
+          "SUB": 5
+        },
+        "brier": 0.680739782860591,
+        "calls": {
+          "DEC": 7,
+          "KO": 5,
+          "SUB": 1
+        },
+        "log_loss": 1.0945885587688269,
+        "n": 13,
+        "recall": {
+          "DEC": 1.0,
+          "KO": 0.5714285714285714,
+          "SUB": 0.2
+        }
+      },
+      "calibrated": {
+        "accuracy": 0.6153846153846154,
+        "actual": {
+          "DEC": 1,
+          "KO": 7,
+          "SUB": 5
+        },
+        "brier": 0.5139488889116383,
+        "calls": {
+          "DEC": 4,
+          "KO": 8,
+          "SUB": 1
+        },
+        "log_loss": 0.9074663576162227,
+        "n": 13,
+        "recall": {
+          "DEC": 1.0,
+          "KO": 0.8571428571428571,
+          "SUB": 0.2
+        }
+      },
+      "submission_access": {
+        "accuracy": 0.6153846153846154,
+        "actual": {
+          "DEC": 1,
+          "KO": 7,
+          "SUB": 5
+        },
+        "brier": 0.4823868635958752,
+        "calls": {
+          "DEC": 3,
+          "KO": 9,
+          "SUB": 1
+        },
+        "log_loss": 0.8581027607745632,
+        "n": 13,
+        "recall": {
+          "DEC": 1.0,
+          "KO": 0.8571428571428571,
+          "SUB": 0.2
+        }
+      },
+      "test_date": "2026-10-17",
+      "test_n": 13,
+      "train_n": 112,
+      "training_finish_n": 78,
+      "training_sub_n": 17
+    },
+    {
+      "baseline": {
+        "accuracy": 0.42857142857142855,
+        "actual": {
+          "DEC": 7,
+          "KO": 6,
+          "SUB": 1
+        },
+        "brier": 0.6607097400877647,
+        "calls": {
+          "DEC": 9,
+          "KO": 4,
+          "SUB": 1
+        },
+        "log_loss": 1.0585464271306186,
+        "n": 14,
+        "recall": {
+          "DEC": 0.7142857142857143,
+          "KO": 0.16666666666666666,
+          "SUB": 0.0
+        }
+      },
+      "calibrated": {
+        "accuracy": 0.42857142857142855,
+        "actual": {
+          "DEC": 7,
+          "KO": 6,
+          "SUB": 1
+        },
+        "brier": 0.7286178027198984,
+        "calls": {
+          "DEC": 3,
+          "KO": 10,
+          "SUB": 1
+        },
+        "log_loss": 1.1117675445722184,
+        "n": 14,
+        "recall": {
+          "DEC": 0.2857142857142857,
+          "KO": 0.6666666666666666,
+          "SUB": 0.0
+        }
+      },
+      "submission_access": {
+        "accuracy": 0.35714285714285715,
+        "actual": {
+          "DEC": 7,
+          "KO": 6,
+          "SUB": 1
+        },
+        "brier": 0.756744686945489,
+        "calls": {
+          "DEC": 2,
+          "KO": 10,
+          "SUB": 2
+        },
+        "log_loss": 1.1830234453858475,
+        "n": 14,
+        "recall": {
+          "DEC": 0.14285714285714285,
+          "KO": 0.6666666666666666,
+          "SUB": 0.0
+        }
+      },
+      "test_date": "2026-10-24",
+      "test_n": 14,
+      "train_n": 125,
+      "training_finish_n": 90,
+      "training_sub_n": 22
+    }
+  ],
+  "full_chronological": {
+    "access": {
+      "accuracy": 0.48695652173913045,
+      "actual": {
+        "DEC": 33,
+        "KO": 65,
+        "SUB": 17
+      },
+      "brier": 0.5955287330968533,
+      "calls": {
+        "DEC": 26,
+        "KO": 74,
+        "SUB": 15
+      },
+      "log_loss": 0.9705038089641618,
+      "n": 115,
+      "recall": {
+        "DEC": 0.2727272727272727,
+        "KO": 0.676923076923077,
+        "SUB": 0.17647058823529413
+      }
+    },
+    "base": {
+      "accuracy": 0.40869565217391307,
+      "actual": {
+        "DEC": 33,
+        "KO": 65,
+        "SUB": 17
+      },
+      "brier": 0.6412746186235222,
+      "calls": {
+        "DEC": 74,
+        "KO": 38,
+        "SUB": 3
+      },
+      "log_loss": 1.0236540428121734,
+      "n": 115,
+      "recall": {
+        "DEC": 0.6666666666666666,
+        "KO": 0.35384615384615387,
+        "SUB": 0.11764705882352941
+      }
+    },
+    "cal": {
+      "accuracy": 0.5130434782608696,
+      "actual": {
+        "DEC": 33,
+        "KO": 65,
+        "SUB": 17
+      },
+      "brier": 0.5822000273274331,
+      "calls": {
+        "DEC": 31,
+        "KO": 78,
+        "SUB": 6
+      },
+      "log_loss": 0.9512267954685744,
+      "n": 115,
+      "recall": {
+        "DEC": 0.30303030303030304,
+        "KO": 0.7230769230769231,
+        "SUB": 0.11764705882352941
+      }
+    }
+  },
+  "held_out_ufc333": {
+    "access": {
+      "accuracy": 0.35714285714285715,
+      "actual": {
+        "DEC": 7,
+        "KO": 6,
+        "SUB": 1
+      },
+      "brier": 0.756744686945489,
+      "calls": {
+        "DEC": 2,
+        "KO": 10,
+        "SUB": 2
+      },
+      "log_loss": 1.1830234453858475,
+      "n": 14,
+      "recall": {
+        "DEC": 0.14285714285714285,
+        "KO": 0.6666666666666666,
+        "SUB": 0.0
+      }
+    },
+    "base": {
+      "accuracy": 0.42857142857142855,
+      "actual": {
+        "DEC": 7,
+        "KO": 6,
+        "SUB": 1
+      },
+      "brier": 0.6607097400877647,
+      "calls": {
+        "DEC": 9,
+        "KO": 4,
+        "SUB": 1
+      },
+      "log_loss": 1.0585464271306186,
+      "n": 14,
+      "recall": {
+        "DEC": 0.7142857142857143,
+        "KO": 0.16666666666666666,
+        "SUB": 0.0
+      }
+    },
+    "cal": {
+      "accuracy": 0.42857142857142855,
+      "actual": {
+        "DEC": 7,
+        "KO": 6,
+        "SUB": 1
+      },
+      "brier": 0.7286178027198984,
+      "calls": {
+        "DEC": 3,
+        "KO": 10,
+        "SUB": 1
+      },
+      "log_loss": 1.1117675445722184,
+      "n": 14,
+      "recall": {
+        "DEC": 0.2857142857142857,
+        "KO": 0.6666666666666666,
+        "SUB": 0.0
+      }
+    }
+  },
+  "prior_through_2026_10_17": {
+    "access": {
+      "accuracy": 0.504950495049505,
+      "actual": {
+        "DEC": 26,
+        "KO": 59,
+        "SUB": 16
+      },
+      "brier": 0.5731819672168442,
+      "calls": {
+        "DEC": 24,
+        "KO": 64,
+        "SUB": 13
+      },
+      "log_loss": 0.9410456415393738,
+      "n": 101,
+      "recall": {
+        "DEC": 0.3076923076923077,
+        "KO": 0.6779661016949152,
+        "SUB": 0.1875
+      }
+    },
+    "base": {
+      "accuracy": 0.40594059405940597,
+      "actual": {
+        "DEC": 26,
+        "KO": 59,
+        "SUB": 16
+      },
+      "brier": 0.6385806413908549,
+      "calls": {
+        "DEC": 65,
+        "KO": 34,
+        "SUB": 2
+      },
+      "log_loss": 1.0188174746888246,
+      "n": 101,
+      "recall": {
+        "DEC": 0.6538461538461539,
+        "KO": 0.3728813559322034,
+        "SUB": 0.125
+      }
+    },
+    "cal": {
+      "accuracy": 0.5247524752475248,
+      "actual": {
+        "DEC": 26,
+        "KO": 59,
+        "SUB": 16
+      },
+      "brier": 0.561904494104715,
+      "calls": {
+        "DEC": 28,
+        "KO": 68,
+        "SUB": 5
+      },
+      "log_loss": 0.9289736223254949,
+      "n": 101,
+      "recall": {
+        "DEC": 0.3076923076923077,
+        "KO": 0.7288135593220338,
+        "SUB": 0.125
+      }
+    }
+  },
+  "protocol": "Walk-forward event-date training. Baseline feature snapshots use only prior fighter fights. Calibration and submission-access weights fit STRICTLY prior dates.",
+  "submission_access_features": [
+    "submission_attempt_interaction",
+    "td_access_interaction",
+    "control_interaction",
+    "offensive_wrestling_exposure_interaction"
+  ]
+}

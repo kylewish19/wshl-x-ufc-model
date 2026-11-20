@@ -1,0 +1,59 @@
+name: Generate UFC model-grounded explanations for any frozen event
+on:
+  workflow_dispatch:
+    inputs:
+      event_slug:
+        description: Event folder under data/locks (example ufc334_2026-11-14)
+        required: true
+        type: string
+  push:
+    branches: [feature/historical-conditional-rates]
+    paths:
+      - 'data/locks/**/stage_a_final_selection.json'
+permissions:
+  contents: write
+concurrency:
+  group: ufc-explanations-generic
+  cancel-in-progress: false
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11', cache: pip}
+      - name: Install
+        run: |
+          pip install -e '.[dev]'
+      - name: Tests
+        run: pytest -q
+      - name: Generate reports for eligible frozen lock(s)
+        env:
+          REQUESTED_EVENT: ${{ inputs.event_slug }}
+          PREVIOUS_COMMIT: ${{ github.event.before }}
+        run: |
+          set -euo pipefail
+          if [ -n "$REQUESTED_EVENT" ]; then
+            EVENT_SLUGS="$REQUESTED_EVENT"
+          else
+            EVENT_SLUGS=$(git diff --name-only "$PREVIOUS_COMMIT" "$GITHUB_SHA" -- 'data/locks/*/stage_a_final_selection.json' | sed -n 's@^data/locks/\([^/]*\)/stage_a_final_selection.json$@\1@p' | sort -u)
+          fi
+          for EVENT_SLUG in $EVENT_SLUGS; do
+            [[ "$EVENT_SLUG" =~ ^[a-z0-9_]+$ ]] || { echo 'Unsafe event folder'; exit 1; }
+            LOCK="data/locks/$EVENT_SLUG/stage_a_final_selection.json"
+            RAW="data/locks/$EVENT_SLUG/stage_a_model_raw_three_view.json"
+            [ -f "$LOCK" ] && [ -f "$RAW" ] || { echo "Missing original lock/raw file: $EVENT_SLUG"; exit 1; }
+            python tools/generate_ufc_video_breakdowns.py \
+              --stage-a "$LOCK" --raw "$RAW" \
+              --json-out "reports/$EVENT_SLUG/VIDEO_BREAKDOWN_RESEARCH.json" \
+              --markdown-out "reports/$EVENT_SLUG/VIDEO_BREAKDOWN_RESEARCH.md"
+            git add "reports/$EVENT_SLUG/VIDEO_BREAKDOWN_RESEARCH.json" "reports/$EVENT_SLUG/VIDEO_BREAKDOWN_RESEARCH.md"
+          done
+          if git diff --cached --quiet; then echo 'No new breakdowns'; exit 0; fi
+          git config user.name 'WSHL_X model bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git commit -m 'reports: derived fight explanations from frozen odds-blind model, no pick changes'
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"

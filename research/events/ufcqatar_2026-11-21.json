@@ -1,0 +1,19 @@
+{
+  "schema": "WSHL_X_UFC_EVENT_START_MANIFEST_V1",
+  "event_slug": "ufcqatar_2026-11-21",
+  "event_name": "UFC Fight Night: Prochazka vs. Stirling",
+  "event_date": "2026-11-21",
+  "main_event_fighters": [
+    "Jiri Prochazka",
+    "Navajo Stirling"
+  ],
+  "first_fight_not_before_utc": "2026-11-21T15:00:00+00:00",
+  "start_time_basis": "UFC.com preliminary card 10:00 AM EST (UTC-05:00) November 21, 2026; earliest publicly advertised fight window. Lock must occur strictly BEFORE this time.",
+  "source_url": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+  "source_type": "official_UFC_event_page",
+  "card_roster_complete": false,
+  "roster_note": "Source lists at least nine matchups as of November 16; no Stage A lock is present in the research branch. Matchup list may change. User's normal complete fight submission and Stage A process remain required.",
+  "research_only": true,
+  "created_on": "2026-11-16",
+  "original_stage_a_or_stage_b_modified": false
+}

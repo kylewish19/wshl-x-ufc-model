@@ -1,0 +1,88 @@
+{
+  "event": "UFC 334: Gane vs Hokit",
+  "event_date": "2026-11-14",
+  "sportsbook": "FanDuel",
+  "status": "FULL_DISPLAYED_FIGHT_MARKETS_TRANSCRIBED_PENDING_OTHER_FIGHTS",
+  "fight_no": 13,
+  "a": "Ciryl Gane",
+  "b": "Josh Hokit",
+  "scheduled_rounds": 5,
+  "stage_a_locked": true,
+  "stage_a_final_selection_github_blob_sha": "564b8dbf2147f7a1cc839917ca3a4eb2d42ed63e",
+  "price_source": "Four user-supplied FanDuel screenshots in current conversation, November 11 2026",
+  "exact_quote_capture_timestamp_utc": null,
+  "collected_before_event_start": true,
+  "odds_used_in_stage_a": false,
+  "moneyline": {
+    "a": -188,
+    "b": 144
+  },
+  "method_of_victory": {
+    "a": {
+      "KO_TKO": 145,
+      "SUB": 1000,
+      "DEC": 380
+    },
+    "b": {
+      "KO_TKO": 410,
+      "SUB": 850,
+      "DEC": 600
+    },
+    "DRAW": 5000
+  },
+  "double_chance": {
+    "a": {
+      "KO_OR_SUB": 100,
+      "KO_OR_DEC": -155,
+      "SUB_OR_DEC": 250
+    },
+    "b": {
+      "KO_OR_SUB": 250,
+      "KO_OR_DEC": 210,
+      "SUB_OR_DEC": 340
+    },
+    "DRAW": 5000
+  },
+  "goes_distance": {
+    "YES": 210,
+    "NO": -280
+  },
+  "total_rounds": {
+    "threshold": 2.5,
+    "OVER": -124,
+    "UNDER": 102
+  },
+  "how_fight_ends": {
+    "KO_TKO": -145,
+    "SUB": 480,
+    "DEC": 195
+  },
+  "round_to_start": {
+    "2": {
+      "YES": -360,
+      "NO": 260
+    },
+    "3": {
+      "YES": -164,
+      "NO": 128
+    },
+    "4": {
+      "YES": 102,
+      "NO": -128
+    },
+    "5": {
+      "YES": 150,
+      "NO": -192
+    }
+  },
+  "market_count": 31,
+  "missing_markets": [
+    "Round Betting (5 Rounds) section collapsed; exact winning or ending round prices not visible",
+    "Only Over/Under 2.5 shown; no alternate total line"
+  ],
+  "full_displayed_markets_transcribed": true,
+  "full_fight_pricing_complete": false,
+  "full_event_pricing_complete": false,
+  "used_for_price_comparison_yet": false,
+  "odds_freshness_note": "Snapshot odds from user screenshots, not independently reverified live, may move, not a wager."
+}

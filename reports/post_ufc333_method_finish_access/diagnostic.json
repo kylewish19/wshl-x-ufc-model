@@ -1,0 +1,823 @@
+{
+  "calibration_ridge": 0.5,
+  "evaluation": {
+    "all_historical_dev": {
+      "cal": {
+        "accuracy": 0.5130434782608696,
+        "actual": {
+          "DEC": 33,
+          "KO": 65,
+          "SUB": 17
+        },
+        "actual_decision_rate": 0.28695652173913044,
+        "brier": 0.5822000273274331,
+        "calls": {
+          "DEC": 31,
+          "KO": 78,
+          "SUB": 6
+        },
+        "correct": 59,
+        "log_loss": 0.9512267954685742,
+        "mean_predicted_decision": 0.3327277388773271,
+        "n": 115,
+        "recall": {
+          "DEC": 0.30303030303030304,
+          "KO": 0.7230769230769231,
+          "SUB": 0.11764705882352941
+        }
+      },
+      "delta_finish_minus_cal": {
+        "accuracy": 0.0,
+        "brier": 0.011543936977720715,
+        "log_loss": 0.02133763860698379
+      },
+      "finish": {
+        "accuracy": 0.5130434782608696,
+        "actual": {
+          "DEC": 33,
+          "KO": 65,
+          "SUB": 17
+        },
+        "actual_decision_rate": 0.28695652173913044,
+        "brier": 0.5937439643051539,
+        "calls": {
+          "DEC": 28,
+          "KO": 82,
+          "SUB": 5
+        },
+        "correct": 59,
+        "log_loss": 0.972564434075558,
+        "mean_predicted_decision": 0.32579878196489376,
+        "n": 115,
+        "recall": {
+          "DEC": 0.2727272727272727,
+          "KO": 0.7384615384615385,
+          "SUB": 0.11764705882352941
+        }
+      }
+    },
+    "prior_125_feedback_dev": {
+      "cal": {
+        "accuracy": 0.5247524752475248,
+        "actual": {
+          "DEC": 26,
+          "KO": 59,
+          "SUB": 16
+        },
+        "actual_decision_rate": 0.25742574257425743,
+        "brier": 0.561904494104715,
+        "calls": {
+          "DEC": 28,
+          "KO": 68,
+          "SUB": 5
+        },
+        "correct": 53,
+        "log_loss": 0.9289736223254949,
+        "mean_predicted_decision": 0.33609851585326994,
+        "n": 101,
+        "recall": {
+          "DEC": 0.3076923076923077,
+          "KO": 0.7288135593220338,
+          "SUB": 0.125
+        }
+      },
+      "delta_finish_minus_cal": {
+        "accuracy": 0.0,
+        "brier": 0.007956608175831437,
+        "log_loss": 0.015972255710634542
+      },
+      "finish": {
+        "accuracy": 0.5247524752475248,
+        "actual": {
+          "DEC": 26,
+          "KO": 59,
+          "SUB": 16
+        },
+        "actual_decision_rate": 0.25742574257425743,
+        "brier": 0.5698611022805464,
+        "calls": {
+          "DEC": 25,
+          "KO": 72,
+          "SUB": 4
+        },
+        "correct": 53,
+        "log_loss": 0.9449458780361294,
+        "mean_predicted_decision": 0.32824075557275384,
+        "n": 101,
+        "recall": {
+          "DEC": 0.2692307692307692,
+          "KO": 0.7457627118644068,
+          "SUB": 0.125
+        }
+      }
+    },
+    "ufc333_retrospective": {
+      "cal": {
+        "accuracy": 0.42857142857142855,
+        "actual": {
+          "DEC": 7,
+          "KO": 6,
+          "SUB": 1
+        },
+        "actual_decision_rate": 0.5,
+        "brier": 0.7286178027198984,
+        "calls": {
+          "DEC": 3,
+          "KO": 10,
+          "SUB": 1
+        },
+        "correct": 6,
+        "log_loss": 1.1117675445722184,
+        "mean_predicted_decision": 0.3084099906937392,
+        "n": 14,
+        "recall": {
+          "DEC": 0.2857142857142857,
+          "KO": 0.6666666666666666,
+          "SUB": 0.0
+        }
+      },
+      "delta_finish_minus_cal": {
+        "accuracy": 0.0,
+        "brier": 0.037423951905636854,
+        "log_loss": 0.0600450437877893
+      },
+      "finish": {
+        "accuracy": 0.42857142857142855,
+        "actual": {
+          "DEC": 7,
+          "KO": 6,
+          "SUB": 1
+        },
+        "actual_decision_rate": 0.5,
+        "brier": 0.7660417546255353,
+        "calls": {
+          "DEC": 3,
+          "KO": 10,
+          "SUB": 1
+        },
+        "correct": 6,
+        "log_loss": 1.1718125883600077,
+        "mean_predicted_decision": 0.3081816866510459,
+        "n": 14,
+        "recall": {
+          "DEC": 0.2857142857142857,
+          "KO": 0.6666666666666666,
+          "SUB": 0.0
+        }
+      }
+    }
+  },
+  "feature_names": [
+    "winner_recent5_finish_rate",
+    "opponent_recent5_finish_rate",
+    "winner_kd_for_per15",
+    "opponent_kd_against_per15",
+    "winner_sub_att_per15",
+    "opponent_sub_att_against_per15",
+    "scheduled_five_round"
+  ],
+  "feature_source": "reports/ufc333_2026-10-24/full_stats/clean139_causal_method_inputs.csv",
+  "folds": [
+    {
+      "calibrated": {
+        "accuracy": 0.23076923076923078,
+        "actual": {
+          "DEC": 3,
+          "KO": 8,
+          "SUB": 2
+        },
+        "actual_decision_rate": 0.23076923076923078,
+        "brier": 0.7171047348334475,
+        "calls": {
+          "DEC": 5,
+          "KO": 7,
+          "SUB": 1
+        },
+        "correct": 3,
+        "log_loss": 1.1356525940276005,
+        "mean_predicted_decision": 0.36949100293001175,
+        "n": 13,
+        "recall": {
+          "DEC": 0.0,
+          "KO": 0.375,
+          "SUB": 0.0
+        }
+      },
+      "coefficients_scaled": [
+        -0.14041508028827698,
+        0.0006669195511842972,
+        0.006814396407750009,
+        0.12451491122260919,
+        -0.016904733282876772,
+        0.02499529614916096,
+        -0.11530057222651202,
+        0.030792405779068867,
+        -0.04236728851439225,
+        0.030792405779068867,
+        -0.04236728851439225,
+        0.03079240577906887,
+        -0.04236728851439225
+      ],
+      "date": "2026-08-22",
+      "finish_access": {
+        "accuracy": 0.15384615384615385,
+        "actual": {
+          "DEC": 3,
+          "KO": 8,
+          "SUB": 2
+        },
+        "actual_decision_rate": 0.23076923076923078,
+        "brier": 0.7347839962337238,
+        "calls": {
+          "DEC": 6,
+          "KO": 6,
+          "SUB": 1
+        },
+        "correct": 2,
+        "log_loss": 1.1540829818533807,
+        "mean_predicted_decision": 0.3794217976658287,
+        "n": 13,
+        "recall": {
+          "DEC": 0.0,
+          "KO": 0.25,
+          "SUB": 0.0
+        }
+      },
+      "ridge": 20.0,
+      "test_fights": 13,
+      "train_fights": 24,
+      "train_finishes": 15
+    },
+    {
+      "calibrated": {
+        "accuracy": 0.38461538461538464,
+        "actual": {
+          "DEC": 3,
+          "KO": 8,
+          "SUB": 2
+        },
+        "actual_decision_rate": 0.23076923076923078,
+        "brier": 0.6570678782649673,
+        "calls": {
+          "DEC": 5,
+          "KO": 8,
+          "SUB": 0
+        },
+        "correct": 5,
+        "log_loss": 1.0470024524270334,
+        "mean_predicted_decision": 0.37160918366929807,
+        "n": 13,
+        "recall": {
+          "DEC": 0.0,
+          "KO": 0.625,
+          "SUB": 0.0
+        }
+      },
+      "coefficients_scaled": [
+        -0.08857161379054367,
+        -0.00025348140145023585,
+        0.0516351310081092,
+        0.11169840948286174,
+        -0.10288249936106479,
+        0.007982574130226815,
+        -0.22787593880402326,
+        -0.030632130136863858,
+        -0.00623078412182984,
+        -0.030632130136863858,
+        -0.00623078412182984,
+        -0.030632130136863858,
+        -0.006230784121829821
+      ],
+      "date": "2026-08-29",
+      "finish_access": {
+        "accuracy": 0.3076923076923077,
+        "actual": {
+          "DEC": 3,
+          "KO": 8,
+          "SUB": 2
+        },
+        "actual_decision_rate": 0.23076923076923078,
+        "brier": 0.6628285908788267,
+        "calls": {
+          "DEC": 6,
+          "KO": 7,
+          "SUB": 0
+        },
+        "correct": 4,
+        "log_loss": 1.0559465068927711,
+        "mean_predicted_decision": 0.37553523804624034,
+        "n": 13,
+        "recall": {
+          "DEC": 0.0,
+          "KO": 0.5,
+          "SUB": 0.0
+        }
+      },
+      "ridge": 20.0,
+      "test_fights": 13,
+      "train_fights": 37,
+      "train_finishes": 25
+    },
+    {
+      "calibrated": {
+        "accuracy": 0.5714285714285714,
+        "actual": {
+          "DEC": 6,
+          "KO": 6,
+          "SUB": 2
+        },
+        "actual_decision_rate": 0.42857142857142855,
+        "brier": 0.5114675662756091,
+        "calls": {
+          "DEC": 3,
+          "KO": 11,
+          "SUB": 0
+        },
+        "correct": 8,
+        "log_loss": 0.8504901812469853,
+        "mean_predicted_decision": 0.28167694207421645,
+        "n": 14,
+        "recall": {
+          "DEC": 0.3333333333333333,
+          "KO": 1.0,
+          "SUB": 0.0
+        }
+      },
+      "coefficients_scaled": [
+        -0.09291550383790445,
+        -0.05779730030714826,
+        0.019448162742347546,
+        0.1425092983559819,
+        -0.11785657734643741,
+        0.011500683981690228,
+        -0.19557753898468225,
+        -0.03807493953142707,
+        0.03605680313209209,
+        -0.03807493953142707,
+        0.03605680313209209,
+        -0.03807493953142707,
+        0.036056803132092065
+      ],
+      "date": "2026-09-05",
+      "finish_access": {
+        "accuracy": 0.5,
+        "actual": {
+          "DEC": 6,
+          "KO": 6,
+          "SUB": 2
+        },
+        "actual_decision_rate": 0.42857142857142855,
+        "brier": 0.5365855842210433,
+        "calls": {
+          "DEC": 2,
+          "KO": 12,
+          "SUB": 0
+        },
+        "correct": 7,
+        "log_loss": 0.8838332175167782,
+        "mean_predicted_decision": 0.2808027548316004,
+        "n": 14,
+        "recall": {
+          "DEC": 0.16666666666666666,
+          "KO": 1.0,
+          "SUB": 0.0
+        }
+      },
+      "ridge": 20.0,
+      "test_fights": 14,
+      "train_fights": 50,
+      "train_finishes": 35
+    },
+    {
+      "calibrated": {
+        "accuracy": 0.4166666666666667,
+        "actual": {
+          "DEC": 5,
+          "KO": 6,
+          "SUB": 1
+        },
+        "actual_decision_rate": 0.4166666666666667,
+        "brier": 0.6595081126776305,
+        "calls": {
+          "DEC": 2,
+          "KO": 10,
+          "SUB": 0
+        },
+        "correct": 5,
+        "log_loss": 1.0652419382643852,
+        "mean_predicted_decision": 0.2864896598185434,
+        "n": 12,
+        "recall": {
+          "DEC": 0.0,
+          "KO": 0.8333333333333334,
+          "SUB": 0.0
+        }
+      },
+      "coefficients_scaled": [
+        -0.09129604470408102,
+        -0.016098669193542022,
+        0.005145517029790112,
+        0.11161113134937016,
+        -0.09105365570125898,
+        -0.004378835029613378,
+        -0.1519076512531046,
+        -0.049651332916695004,
+        0.028468749391703744,
+        -0.049651332916695004,
+        0.028468749391703744,
+        -0.049651332916695004,
+        0.02846874939170376
+      ],
+      "date": "2026-09-19",
+      "finish_access": {
+        "accuracy": 0.4166666666666667,
+        "actual": {
+          "DEC": 5,
+          "KO": 6,
+          "SUB": 1
+        },
+        "actual_decision_rate": 0.4166666666666667,
+        "brier": 0.7021668879981188,
+        "calls": {
+          "DEC": 2,
+          "KO": 10,
+          "SUB": 0
+        },
+        "correct": 5,
+        "log_loss": 1.1687592229880546,
+        "mean_predicted_decision": 0.26722360590602107,
+        "n": 12,
+        "recall": {
+          "DEC": 0.0,
+          "KO": 0.8333333333333334,
+          "SUB": 0.0
+        }
+      },
+      "ridge": 20.0,
+      "test_fights": 12,
+      "train_fights": 64,
+      "train_finishes": 43
+    },
+    {
+      "calibrated": {
+        "accuracy": 0.5454545454545454,
+        "actual": {
+          "DEC": 3,
+          "KO": 6,
+          "SUB": 2
+        },
+        "actual_decision_rate": 0.2727272727272727,
+        "brier": 0.5782524283221885,
+        "calls": {
+          "DEC": 6,
+          "KO": 3,
+          "SUB": 2
+        },
+        "correct": 6,
+        "log_loss": 0.9394247641376355,
+        "mean_predicted_decision": 0.42198579048288176,
+        "n": 11,
+        "recall": {
+          "DEC": 1.0,
+          "KO": 0.3333333333333333,
+          "SUB": 0.5
+        }
+      },
+      "coefficients_scaled": [
+        -0.090685129784117,
+        -0.06207878960657935,
+        0.06427717972866757,
+        -0.14074201750082627,
+        -0.010697488425908971,
+        0.014132014759452591,
+        -0.15758959354422739,
+        -0.04873148503236451,
+        0.029301575172914845,
+        -0.04873148503236451,
+        0.02930157517291485,
+        -0.04873148503236451,
+        0.029301575172914804
+      ],
+      "date": "2026-09-26",
+      "finish_access": {
+        "accuracy": 0.6363636363636364,
+        "actual": {
+          "DEC": 3,
+          "KO": 6,
+          "SUB": 2
+        },
+        "actual_decision_rate": 0.2727272727272727,
+        "brier": 0.5797177378686663,
+        "calls": {
+          "DEC": 6,
+          "KO": 4,
+          "SUB": 1
+        },
+        "correct": 7,
+        "log_loss": 0.9545408001885078,
+        "mean_predicted_decision": 0.4091454922072911,
+        "n": 11,
+        "recall": {
+          "DEC": 1.0,
+          "KO": 0.5,
+          "SUB": 0.5
+        }
+      },
+      "ridge": 20.0,
+      "test_fights": 11,
+      "train_fights": 76,
+      "train_finishes": 50
+    },
+    {
+      "calibrated": {
+        "accuracy": 0.7142857142857143,
+        "actual": {
+          "DEC": 3,
+          "KO": 11,
+          "SUB": 0
+        },
+        "actual_decision_rate": 0.21428571428571427,
+        "brier": 0.40229817295559295,
+        "calls": {
+          "DEC": 2,
+          "KO": 11,
+          "SUB": 1
+        },
+        "correct": 10,
+        "log_loss": 0.6952944774465616,
+        "mean_predicted_decision": 0.3086114424163558,
+        "n": 14,
+        "recall": {
+          "DEC": 0.3333333333333333,
+          "KO": 0.8181818181818182,
+          "SUB": null
+        }
+      },
+      "coefficients_scaled": [
+        -0.07886746128533845,
+        -0.05094418646689841,
+        0.06239499209056968,
+        -0.140144467307186,
+        -0.017394017517800106,
+        0.029836226099833666,
+        -0.13312545261809117,
+        -0.032877441426849056,
+        0.04153049627966013,
+        -0.032877441426849056,
+        0.04153049627966013,
+        -0.032877441426849056,
+        0.041530496279660135
+      ],
+      "date": "2026-10-03",
+      "finish_access": {
+        "accuracy": 0.7857142857142857,
+        "actual": {
+          "DEC": 3,
+          "KO": 11,
+          "SUB": 0
+        },
+        "actual_decision_rate": 0.21428571428571427,
+        "brier": 0.3798143138195239,
+        "calls": {
+          "DEC": 1,
+          "KO": 12,
+          "SUB": 1
+        },
+        "correct": 11,
+        "log_loss": 0.6658990035499676,
+        "mean_predicted_decision": 0.28863222874353506,
+        "n": 14,
+        "recall": {
+          "DEC": 0.3333333333333333,
+          "KO": 0.9090909090909091,
+          "SUB": null
+        }
+      },
+      "ridge": 20.0,
+      "test_fights": 14,
+      "train_fights": 87,
+      "train_finishes": 58
+    },
+    {
+      "calibrated": {
+        "accuracy": 0.7272727272727273,
+        "actual": {
+          "DEC": 2,
+          "KO": 7,
+          "SUB": 2
+        },
+        "actual_decision_rate": 0.18181818181818182,
+        "brier": 0.4671981786848241,
+        "calls": {
+          "DEC": 1,
+          "KO": 10,
+          "SUB": 0
+        },
+        "correct": 8,
+        "log_loss": 0.808836065050688,
+        "mean_predicted_decision": 0.33234682877905014,
+        "n": 11,
+        "recall": {
+          "DEC": 0.5,
+          "KO": 1.0,
+          "SUB": 0.0
+        }
+      },
+      "coefficients_scaled": [
+        -0.019618811216114022,
+        -0.017295476004033757,
+        0.06241064301878977,
+        -0.15003184139305029,
+        -6.84765834528998e-05,
+        -0.022926913890539784,
+        -0.18088808923683136,
+        -0.06724838710417383,
+        0.06571988703644924,
+        -0.06724838710417383,
+        0.06571988703644925,
+        -0.06724838710417383,
+        0.06571988703644922
+      ],
+      "date": "2026-10-10",
+      "finish_access": {
+        "accuracy": 0.7272727272727273,
+        "actual": {
+          "DEC": 2,
+          "KO": 7,
+          "SUB": 2
+        },
+        "actual_decision_rate": 0.18181818181818182,
+        "brier": 0.4862716705953533,
+        "calls": {
+          "DEC": 1,
+          "KO": 10,
+          "SUB": 0
+        },
+        "correct": 8,
+        "log_loss": 0.8357703317167353,
+        "mean_predicted_decision": 0.33413070901886577,
+        "n": 11,
+        "recall": {
+          "DEC": 0.5,
+          "KO": 1.0,
+          "SUB": 0.0
+        }
+      },
+      "ridge": 20.0,
+      "test_fights": 11,
+      "train_fights": 101,
+      "train_finishes": 69
+    },
+    {
+      "calibrated": {
+        "accuracy": 0.6153846153846154,
+        "actual": {
+          "DEC": 1,
+          "KO": 7,
+          "SUB": 5
+        },
+        "actual_decision_rate": 0.07692307692307693,
+        "brier": 0.5139488889116383,
+        "calls": {
+          "DEC": 4,
+          "KO": 8,
+          "SUB": 1
+        },
+        "correct": 8,
+        "log_loss": 0.9074663576162227,
+        "mean_predicted_decision": 0.3316981202167273,
+        "n": 13,
+        "recall": {
+          "DEC": 1.0,
+          "KO": 0.8571428571428571,
+          "SUB": 0.2
+        }
+      },
+      "coefficients_scaled": [
+        -0.04615966272601741,
+        -0.04191361390832693,
+        0.04254860058431896,
+        0.008437825355208563,
+        -6.817601081826977e-05,
+        -0.019878721272917073,
+        -0.16229070517109578,
+        -0.06956511475383352,
+        0.06386978066041,
+        -0.06956511475383352,
+        0.06386978066041,
+        -0.06956511475383352,
+        0.06386978066041002
+      ],
+      "date": "2026-10-17",
+      "finish_access": {
+        "accuracy": 0.6923076923076923,
+        "actual": {
+          "DEC": 1,
+          "KO": 7,
+          "SUB": 5
+        },
+        "actual_decision_rate": 0.07692307692307693,
+        "brier": 0.4927325366324957,
+        "calls": {
+          "DEC": 1,
+          "KO": 11,
+          "SUB": 1
+        },
+        "correct": 9,
+        "log_loss": 0.8687973927846403,
+        "mean_predicted_decision": 0.30638950724456665,
+        "n": 13,
+        "recall": {
+          "DEC": 1.0,
+          "KO": 1.0,
+          "SUB": 0.2
+        }
+      },
+      "ridge": 20.0,
+      "test_fights": 13,
+      "train_fights": 112,
+      "train_finishes": 78
+    },
+    {
+      "calibrated": {
+        "accuracy": 0.42857142857142855,
+        "actual": {
+          "DEC": 7,
+          "KO": 6,
+          "SUB": 1
+        },
+        "actual_decision_rate": 0.5,
+        "brier": 0.7286178027198984,
+        "calls": {
+          "DEC": 3,
+          "KO": 10,
+          "SUB": 1
+        },
+        "correct": 6,
+        "log_loss": 1.1117675445722184,
+        "mean_predicted_decision": 0.3084099906937392,
+        "n": 14,
+        "recall": {
+          "DEC": 0.2857142857142857,
+          "KO": 0.6666666666666666,
+          "SUB": 0.0
+        }
+      },
+      "coefficients_scaled": [
+        -0.09680783605897232,
+        -0.04939755899095228,
+        0.07763994187918691,
+        0.004121312445463684,
+        -0.01862101885510772,
+        0.03711890798630593,
+        -0.15070534031833915,
+        -0.07014807233153658,
+        0.08880497666058457,
+        -0.07014807233153658,
+        0.08880497666058457,
+        -0.07014807233153658,
+        0.08880497666058454
+      ],
+      "date": "2026-10-24",
+      "finish_access": {
+        "accuracy": 0.42857142857142855,
+        "actual": {
+          "DEC": 7,
+          "KO": 6,
+          "SUB": 1
+        },
+        "actual_decision_rate": 0.5,
+        "brier": 0.7660417546255353,
+        "calls": {
+          "DEC": 3,
+          "KO": 10,
+          "SUB": 1
+        },
+        "correct": 6,
+        "log_loss": 1.1718125883600077,
+        "mean_predicted_decision": 0.3081816866510459,
+        "n": 14,
+        "recall": {
+          "DEC": 0.2857142857142857,
+          "KO": 0.6666666666666666,
+          "SUB": 0.0
+        }
+      },
+      "ridge": 20.0,
+      "test_fights": 14,
+      "train_fights": 125,
+      "train_finishes": 90
+    }
+  ],
+  "generated_at_utc": "2026-11-06T16:35:29.348302+00:00",
+  "governance": {
+    "development_post_ufc333": true,
+    "model_role": "RESEARCH_SHADOW",
+    "promoted": false,
+    "reason": "This variant was proposed after UFC333. Chronology checks are necessary but not sufficient; future unseen frozen cards required.",
+    "ufc333_is_not_clean_prospective_proof": true
+  },
+  "ridge": 20.0,
+  "status": "V0.35_METHOD_FINISH_ACCESS_RETROSPECTIVE_RESEARCH_ONLY",
+  "training_scope": "Causal pre-bout snapshots; train and calibrate before each event."
+}

@@ -1,0 +1,29 @@
+name: selected-fighter-method-shadow
+
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths:
+      - "src/wshlx_ufc/predicted_side_method_shadow.py"
+      - "tests/test_ufc_predicted_side_method_shadow.py"
+      - "tools/run_selected_fighter_method_shadow.py"
+      - ".github/workflows/selected-fighter-method-shadow.yml"
+  workflow_dispatch:
+
+jobs:
+  grade-predicted-side:
+    name: Exact fighter plus method (research only)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Compute historical selected-side grade
+        run: |
+          python tools/run_selected_fighter_method_shadow.py

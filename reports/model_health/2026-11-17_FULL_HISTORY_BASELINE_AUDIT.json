@@ -1,0 +1,1248 @@
+{
+  "cumulative_ledger_prefix_verification": [
+    {
+      "ends_on": "2026-09-05",
+      "exact_prefix_of_latest": true,
+      "rows": 64,
+      "sha256": "5e1d96609cffd524b54a924dff8142770aa6e58a58eac997ae097d7258dfde82",
+      "source": "data/results/clean_ufc_64_2026-09-05.csv"
+    },
+    {
+      "ends_on": "2026-09-19",
+      "exact_prefix_of_latest": true,
+      "rows": 76,
+      "sha256": "f3ec6acf6382b01e279b4dc7e565e834218febcf754b918a32c19ca11446a153",
+      "source": "data/results/clean_ufc_76_2026-09-19.csv"
+    },
+    {
+      "ends_on": "2026-09-26",
+      "exact_prefix_of_latest": true,
+      "rows": 87,
+      "sha256": "1c26f6d19743fad18452bb7ad2c038373df7134c7db705ca5172184421d7b789",
+      "source": "data/results/clean_ufc_87_2026-09-26.csv"
+    },
+    {
+      "ends_on": "2026-10-03",
+      "exact_prefix_of_latest": true,
+      "rows": 101,
+      "sha256": "f1ed30e348d019004655c3ff1dd0c958ad3ba63d136454bf564fa25b0fe71a70",
+      "source": "data/results/clean_ufc_101_2026-10-03.csv"
+    },
+    {
+      "ends_on": "2026-10-10",
+      "exact_prefix_of_latest": true,
+      "rows": 112,
+      "sha256": "075ebd538504e648d62321281d477a5d4258f5a8f52effd05650deb47bbcf433",
+      "source": "data/results/clean_ufc_112_2026-10-10.csv"
+    },
+    {
+      "ends_on": "2026-10-17",
+      "exact_prefix_of_latest": true,
+      "rows": 125,
+      "sha256": "228004a883b2f44c98027f0351f96cbacb8deeda25658de83361d8ad0be3f3f5",
+      "source": "data/results/clean_ufc_125_2026-10-17.csv"
+    },
+    {
+      "ends_on": "2026-10-24",
+      "exact_prefix_of_latest": true,
+      "rows": 139,
+      "sha256": "e4ff7c03c8b251609c3173ee62359b21ef3d06e29544c827eb3d24dc422e54ca",
+      "source": "data/results/clean_ufc_139_2026-10-24.csv"
+    },
+    {
+      "ends_on": "2026-11-07",
+      "exact_prefix_of_latest": true,
+      "rows": 153,
+      "sha256": "13cd39f1c53dcbef676c453bc2bdbaf70d460fc10535bd4b0348c0255987899f",
+      "source": "data/results/clean_ufc_153_2026-11-07.csv"
+    }
+  ],
+  "earlier_first_64": {
+    "actual_methods": {
+      "DEC": 21,
+      "KO": 31,
+      "SUB": 12
+    },
+    "displayed_methods": {
+      "DEC": 37,
+      "KO": 25,
+      "SUB": 2
+    },
+    "exact_fighter_and_method": 15,
+    "exact_pct": 0.234375,
+    "fighter_pick_and_DEC_exact": 10,
+    "fighter_pick_and_KO_exact": 20,
+    "fighter_pick_and_SUB_exact": 6,
+    "fights": 64,
+    "method_class_correct": 28,
+    "method_class_pct": 0.4375,
+    "method_confusion_predicted_by_actual": {
+      "DEC": {
+        "DEC": 13,
+        "KO": 16,
+        "SUB": 8
+      },
+      "KO": {
+        "DEC": 6,
+        "KO": 15,
+        "SUB": 4
+      },
+      "SUB": {
+        "DEC": 2,
+        "KO": 0,
+        "SUB": 0
+      }
+    },
+    "method_recall": {
+      "DEC": {
+        "actual": 21,
+        "class_true_positive": 13,
+        "exact_selected_fighter_true_positive": 6,
+        "predicted": 37
+      },
+      "KO": {
+        "actual": 31,
+        "class_true_positive": 15,
+        "exact_selected_fighter_true_positive": 9,
+        "predicted": 25
+      },
+      "SUB": {
+        "actual": 12,
+        "class_true_positive": 0,
+        "exact_selected_fighter_true_positive": 0,
+        "predicted": 2
+      }
+    },
+    "winner_correct": 36,
+    "winner_pct": 0.5625
+  },
+  "fanduel_prices_reused_to_change_stage_a": false,
+  "limitations": [
+    "Only earliest dated 153 rows in repo, Aug08-Nov07: before Aug08 historical cards not verified by this audit.",
+    "The 153-row grade is a reconstructed, clean post-event ledger; 64 rows predate matching separate Stage A artifact evidence in this repository.",
+    "Separate old Stage A selection files exist for 7 later events (89 clean fights), but earliest four do not include complete pre-event timestamp proof.",
+    "Clean ledger excludes a disqualification (Sep26) and a draw (Oct10); UFC334 separately excludes one draw.",
+    "Top method CLASS accuracy ignores winner; exact fighter+method requires BOTH; do not confuse with given-actual-winner oracle studies.",
+    "Always-KO baseline is chosen from first64 and compared on next89; hypothesis audited retrospectively, not independent prospective trial.",
+    "Official Stage B are documented selections, NOT verified user-placed wagers; price/ROI edge vs closing FanDuel lines is NOT established.",
+    "Sep19 initial-frozen and later actionable ledgers are alternatives, NOT additive stake histories.",
+    "UFC334 FanDuel +0.2997u virtual research outcomes and Vegas124 hypothetical top5 are NOT real or approved wager PnL.",
+    "The three dated model views are correlated; data is too small for model promotion."
+  ],
+  "new_predictor_trained_or_promoted": false,
+  "original_models_or_stage_a_b_changed": false,
+  "original_stage_a_artifact_identity_verification": [
+    {
+      "date": "2026-09-19",
+      "excluded_from_clean_grade": 0,
+      "gradeable_bouts": 12,
+      "has_pre_fight_timestamp_evidence": false,
+      "kind": "picks",
+      "matched_reference_winner_picks": 12,
+      "odds_blind_flag": true,
+      "source": "data/locks/ufc331_2026-09-19/stage_a_official_selection_card.json",
+      "source_bouts": 12,
+      "timestamped_final_sha_checked": false
+    },
+    {
+      "date": "2026-09-26",
+      "excluded_from_clean_grade": 1,
+      "gradeable_bouts": 11,
+      "has_pre_fight_timestamp_evidence": false,
+      "kind": "picks",
+      "matched_reference_winner_picks": 11,
+      "odds_blind_flag": true,
+      "source": "data/locks/ufcvegas121_2026-09-26/stage_a_official_selection_card.json",
+      "source_bouts": 12,
+      "timestamped_final_sha_checked": false
+    },
+    {
+      "date": "2026-10-03",
+      "excluded_from_clean_grade": 0,
+      "gradeable_bouts": 14,
+      "has_pre_fight_timestamp_evidence": false,
+      "kind": "picks",
+      "matched_reference_winner_picks": 14,
+      "odds_blind_flag": true,
+      "source": "data/locks/ufc332_2026-10-03/stage_a_official_selection_card.json",
+      "source_bouts": 14,
+      "timestamped_final_sha_checked": false
+    },
+    {
+      "date": "2026-10-10",
+      "excluded_from_clean_grade": 1,
+      "gradeable_bouts": 11,
+      "has_pre_fight_timestamp_evidence": false,
+      "kind": "picks",
+      "matched_reference_winner_picks": 11,
+      "odds_blind_flag": true,
+      "source": "data/locks/ufcvegas122_2026-10-10/stage_a_official_selection_card.json",
+      "source_bouts": 12,
+      "timestamped_final_sha_checked": false
+    },
+    {
+      "date": "2026-10-17",
+      "excluded_from_clean_grade": 0,
+      "gradeable_bouts": 13,
+      "has_pre_fight_timestamp_evidence": true,
+      "kind": "wrapped_raw",
+      "matched_reference_winner_picks": 13,
+      "odds_blind_flag": true,
+      "source": "data/locks/ufcedmonton_2026-10-17/stage_a_model_raw_v033.json",
+      "source_bouts": 13,
+      "timestamped_final_sha_checked": false
+    },
+    {
+      "date": "2026-10-24",
+      "excluded_from_clean_grade": 0,
+      "gradeable_bouts": 14,
+      "has_pre_fight_timestamp_evidence": true,
+      "kind": "final",
+      "matched_reference_winner_picks": 14,
+      "odds_blind_flag": true,
+      "source": "data/locks/ufc333_2026-10-24/stage_a_final_selection.json",
+      "source_bouts": 14,
+      "timestamped_final_sha_checked": true
+    },
+    {
+      "date": "2026-11-07",
+      "excluded_from_clean_grade": 0,
+      "gradeable_bouts": 14,
+      "has_pre_fight_timestamp_evidence": true,
+      "kind": "final",
+      "matched_reference_winner_picks": 14,
+      "odds_blind_flag": true,
+      "source": "data/locks/ufcvegas124_2026-11-07/stage_a_final_selection.json",
+      "source_bouts": 14,
+      "timestamped_final_sha_checked": true
+    }
+  ],
+  "reconstructed_each_event": [
+    {
+      "actual_methods": {
+        "DEC": 5,
+        "KO": 4,
+        "SUB": 3
+      },
+      "displayed_methods": {
+        "DEC": 5,
+        "KO": 7
+      },
+      "event_date": "2026-08-08",
+      "exact_fighter_and_method": 3,
+      "exact_pct": 0.25,
+      "fighter_pick_and_DEC_exact": 3,
+      "fighter_pick_and_KO_exact": 4,
+      "fighter_pick_and_SUB_exact": 2,
+      "fights": 12,
+      "method_class_correct": 4,
+      "method_class_pct": 0.3333333333333333,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 2,
+          "KO": 2,
+          "SUB": 1
+        },
+        "KO": {
+          "DEC": 3,
+          "KO": 2,
+          "SUB": 2
+        },
+        "SUB": {
+          "DEC": 0,
+          "KO": 0,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 5,
+          "class_true_positive": 2,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 5
+        },
+        "KO": {
+          "actual": 4,
+          "class_true_positive": 2,
+          "exact_selected_fighter_true_positive": 2,
+          "predicted": 7
+        },
+        "SUB": {
+          "actual": 3,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 0
+        }
+      },
+      "winner_correct": 9,
+      "winner_pct": 0.75
+    },
+    {
+      "actual_methods": {
+        "DEC": 4,
+        "KO": 5,
+        "SUB": 3
+      },
+      "displayed_methods": {
+        "DEC": 8,
+        "KO": 3,
+        "SUB": 1
+      },
+      "event_date": "2026-08-15",
+      "exact_fighter_and_method": 1,
+      "exact_pct": 0.08333333333333333,
+      "fighter_pick_and_DEC_exact": 1,
+      "fighter_pick_and_KO_exact": 4,
+      "fighter_pick_and_SUB_exact": 1,
+      "fights": 12,
+      "method_class_correct": 3,
+      "method_class_pct": 0.25,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 2,
+          "KO": 4,
+          "SUB": 2
+        },
+        "KO": {
+          "DEC": 1,
+          "KO": 1,
+          "SUB": 1
+        },
+        "SUB": {
+          "DEC": 1,
+          "KO": 0,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 4,
+          "class_true_positive": 2,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 8
+        },
+        "KO": {
+          "actual": 5,
+          "class_true_positive": 1,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 3
+        },
+        "SUB": {
+          "actual": 3,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 1
+        }
+      },
+      "winner_correct": 6,
+      "winner_pct": 0.5
+    },
+    {
+      "actual_methods": {
+        "DEC": 3,
+        "KO": 8,
+        "SUB": 2
+      },
+      "displayed_methods": {
+        "DEC": 5,
+        "KO": 7,
+        "SUB": 1
+      },
+      "event_date": "2026-08-22",
+      "exact_fighter_and_method": 3,
+      "exact_pct": 0.23076923076923078,
+      "fighter_pick_and_DEC_exact": 1,
+      "fighter_pick_and_KO_exact": 5,
+      "fighter_pick_and_SUB_exact": 0,
+      "fights": 13,
+      "method_class_correct": 6,
+      "method_class_pct": 0.46153846153846156,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 1,
+          "KO": 3,
+          "SUB": 1
+        },
+        "KO": {
+          "DEC": 1,
+          "KO": 5,
+          "SUB": 1
+        },
+        "SUB": {
+          "DEC": 1,
+          "KO": 0,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 3,
+          "class_true_positive": 1,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 5
+        },
+        "KO": {
+          "actual": 8,
+          "class_true_positive": 5,
+          "exact_selected_fighter_true_positive": 3,
+          "predicted": 7
+        },
+        "SUB": {
+          "actual": 2,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 1
+        }
+      },
+      "winner_correct": 6,
+      "winner_pct": 0.46153846153846156
+    },
+    {
+      "actual_methods": {
+        "DEC": 3,
+        "KO": 8,
+        "SUB": 2
+      },
+      "displayed_methods": {
+        "DEC": 10,
+        "KO": 3
+      },
+      "event_date": "2026-08-29",
+      "exact_fighter_and_method": 5,
+      "exact_pct": 0.38461538461538464,
+      "fighter_pick_and_DEC_exact": 2,
+      "fighter_pick_and_KO_exact": 5,
+      "fighter_pick_and_SUB_exact": 2,
+      "fights": 13,
+      "method_class_correct": 6,
+      "method_class_pct": 0.46153846153846156,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 3,
+          "KO": 5,
+          "SUB": 2
+        },
+        "KO": {
+          "DEC": 0,
+          "KO": 3,
+          "SUB": 0
+        },
+        "SUB": {
+          "DEC": 0,
+          "KO": 0,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 3,
+          "class_true_positive": 3,
+          "exact_selected_fighter_true_positive": 2,
+          "predicted": 10
+        },
+        "KO": {
+          "actual": 8,
+          "class_true_positive": 3,
+          "exact_selected_fighter_true_positive": 3,
+          "predicted": 3
+        },
+        "SUB": {
+          "actual": 2,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 0
+        }
+      },
+      "winner_correct": 9,
+      "winner_pct": 0.6923076923076923
+    },
+    {
+      "actual_methods": {
+        "DEC": 6,
+        "KO": 6,
+        "SUB": 2
+      },
+      "displayed_methods": {
+        "DEC": 9,
+        "KO": 5
+      },
+      "event_date": "2026-09-05",
+      "exact_fighter_and_method": 3,
+      "exact_pct": 0.21428571428571427,
+      "fighter_pick_and_DEC_exact": 3,
+      "fighter_pick_and_KO_exact": 2,
+      "fighter_pick_and_SUB_exact": 1,
+      "fights": 14,
+      "method_class_correct": 9,
+      "method_class_pct": 0.6428571428571429,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 5,
+          "KO": 2,
+          "SUB": 2
+        },
+        "KO": {
+          "DEC": 1,
+          "KO": 4,
+          "SUB": 0
+        },
+        "SUB": {
+          "DEC": 0,
+          "KO": 0,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 6,
+          "class_true_positive": 5,
+          "exact_selected_fighter_true_positive": 2,
+          "predicted": 9
+        },
+        "KO": {
+          "actual": 6,
+          "class_true_positive": 4,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 5
+        },
+        "SUB": {
+          "actual": 2,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 0
+        }
+      },
+      "winner_correct": 6,
+      "winner_pct": 0.42857142857142855
+    },
+    {
+      "actual_methods": {
+        "DEC": 5,
+        "KO": 6,
+        "SUB": 1
+      },
+      "displayed_methods": {
+        "DEC": 6,
+        "KO": 5,
+        "SUB": 1
+      },
+      "event_date": "2026-09-19",
+      "exact_fighter_and_method": 3,
+      "exact_pct": 0.25,
+      "fighter_pick_and_DEC_exact": 4,
+      "fighter_pick_and_KO_exact": 3,
+      "fighter_pick_and_SUB_exact": 1,
+      "fights": 12,
+      "method_class_correct": 4,
+      "method_class_pct": 0.3333333333333333,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 2,
+          "KO": 3,
+          "SUB": 1
+        },
+        "KO": {
+          "DEC": 3,
+          "KO": 2,
+          "SUB": 0
+        },
+        "SUB": {
+          "DEC": 0,
+          "KO": 1,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 5,
+          "class_true_positive": 2,
+          "exact_selected_fighter_true_positive": 2,
+          "predicted": 6
+        },
+        "KO": {
+          "actual": 6,
+          "class_true_positive": 2,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 5
+        },
+        "SUB": {
+          "actual": 1,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 1
+        }
+      },
+      "winner_correct": 8,
+      "winner_pct": 0.6666666666666666
+    },
+    {
+      "actual_methods": {
+        "DEC": 3,
+        "KO": 6,
+        "SUB": 2
+      },
+      "displayed_methods": {
+        "DEC": 5,
+        "KO": 3,
+        "SUB": 3
+      },
+      "event_date": "2026-09-26",
+      "exact_fighter_and_method": 4,
+      "exact_pct": 0.36363636363636365,
+      "fighter_pick_and_DEC_exact": 2,
+      "fighter_pick_and_KO_exact": 5,
+      "fighter_pick_and_SUB_exact": 2,
+      "fights": 11,
+      "method_class_correct": 5,
+      "method_class_pct": 0.45454545454545453,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 2,
+          "KO": 3,
+          "SUB": 0
+        },
+        "KO": {
+          "DEC": 0,
+          "KO": 2,
+          "SUB": 1
+        },
+        "SUB": {
+          "DEC": 1,
+          "KO": 1,
+          "SUB": 1
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 3,
+          "class_true_positive": 2,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 5
+        },
+        "KO": {
+          "actual": 6,
+          "class_true_positive": 2,
+          "exact_selected_fighter_true_positive": 2,
+          "predicted": 3
+        },
+        "SUB": {
+          "actual": 2,
+          "class_true_positive": 1,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 3
+        }
+      },
+      "winner_correct": 9,
+      "winner_pct": 0.8181818181818182
+    },
+    {
+      "actual_methods": {
+        "DEC": 3,
+        "KO": 11
+      },
+      "displayed_methods": {
+        "DEC": 3,
+        "KO": 11
+      },
+      "event_date": "2026-10-03",
+      "exact_fighter_and_method": 9,
+      "exact_pct": 0.6428571428571429,
+      "fighter_pick_and_DEC_exact": 3,
+      "fighter_pick_and_KO_exact": 10,
+      "fighter_pick_and_SUB_exact": 0,
+      "fights": 14,
+      "method_class_correct": 10,
+      "method_class_pct": 0.7142857142857143,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 1,
+          "KO": 2,
+          "SUB": 0
+        },
+        "KO": {
+          "DEC": 2,
+          "KO": 9,
+          "SUB": 0
+        },
+        "SUB": {
+          "DEC": 0,
+          "KO": 0,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 3,
+          "class_true_positive": 1,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 3
+        },
+        "KO": {
+          "actual": 11,
+          "class_true_positive": 9,
+          "exact_selected_fighter_true_positive": 8,
+          "predicted": 11
+        },
+        "SUB": {
+          "actual": 0,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 0
+        }
+      },
+      "winner_correct": 13,
+      "winner_pct": 0.9285714285714286
+    },
+    {
+      "actual_methods": {
+        "DEC": 2,
+        "KO": 7,
+        "SUB": 2
+      },
+      "displayed_methods": {
+        "DEC": 1,
+        "KO": 10
+      },
+      "event_date": "2026-10-10",
+      "exact_fighter_and_method": 6,
+      "exact_pct": 0.5454545454545454,
+      "fighter_pick_and_DEC_exact": 1,
+      "fighter_pick_and_KO_exact": 5,
+      "fighter_pick_and_SUB_exact": 0,
+      "fights": 11,
+      "method_class_correct": 8,
+      "method_class_pct": 0.7272727272727273,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 1,
+          "KO": 0,
+          "SUB": 0
+        },
+        "KO": {
+          "DEC": 1,
+          "KO": 7,
+          "SUB": 2
+        },
+        "SUB": {
+          "DEC": 0,
+          "KO": 0,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 2,
+          "class_true_positive": 1,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 1
+        },
+        "KO": {
+          "actual": 7,
+          "class_true_positive": 7,
+          "exact_selected_fighter_true_positive": 5,
+          "predicted": 10
+        },
+        "SUB": {
+          "actual": 2,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 0
+        }
+      },
+      "winner_correct": 6,
+      "winner_pct": 0.5454545454545454
+    },
+    {
+      "actual_methods": {
+        "DEC": 1,
+        "KO": 7,
+        "SUB": 5
+      },
+      "displayed_methods": {
+        "DEC": 2,
+        "KO": 10,
+        "SUB": 1
+      },
+      "event_date": "2026-10-17",
+      "exact_fighter_and_method": 3,
+      "exact_pct": 0.23076923076923078,
+      "fighter_pick_and_DEC_exact": 0,
+      "fighter_pick_and_KO_exact": 2,
+      "fighter_pick_and_SUB_exact": 1,
+      "fights": 13,
+      "method_class_correct": 9,
+      "method_class_pct": 0.6923076923076923,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 1,
+          "KO": 0,
+          "SUB": 1
+        },
+        "KO": {
+          "DEC": 0,
+          "KO": 7,
+          "SUB": 3
+        },
+        "SUB": {
+          "DEC": 0,
+          "KO": 0,
+          "SUB": 1
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 1,
+          "class_true_positive": 1,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 2
+        },
+        "KO": {
+          "actual": 7,
+          "class_true_positive": 7,
+          "exact_selected_fighter_true_positive": 2,
+          "predicted": 10
+        },
+        "SUB": {
+          "actual": 5,
+          "class_true_positive": 1,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 1
+        }
+      },
+      "winner_correct": 3,
+      "winner_pct": 0.23076923076923078
+    },
+    {
+      "actual_methods": {
+        "DEC": 7,
+        "KO": 6,
+        "SUB": 1
+      },
+      "displayed_methods": {
+        "DEC": 4,
+        "KO": 8,
+        "SUB": 2
+      },
+      "event_date": "2026-10-24",
+      "exact_fighter_and_method": 3,
+      "exact_pct": 0.21428571428571427,
+      "fighter_pick_and_DEC_exact": 4,
+      "fighter_pick_and_KO_exact": 3,
+      "fighter_pick_and_SUB_exact": 1,
+      "fights": 14,
+      "method_class_correct": 6,
+      "method_class_pct": 0.42857142857142855,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 3,
+          "KO": 1,
+          "SUB": 0
+        },
+        "KO": {
+          "DEC": 4,
+          "KO": 3,
+          "SUB": 1
+        },
+        "SUB": {
+          "DEC": 0,
+          "KO": 2,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 7,
+          "class_true_positive": 3,
+          "exact_selected_fighter_true_positive": 2,
+          "predicted": 4
+        },
+        "KO": {
+          "actual": 6,
+          "class_true_positive": 3,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 8
+        },
+        "SUB": {
+          "actual": 1,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 2
+        }
+      },
+      "winner_correct": 8,
+      "winner_pct": 0.5714285714285714
+    },
+    {
+      "actual_methods": {
+        "DEC": 7,
+        "KO": 6,
+        "SUB": 1
+      },
+      "displayed_methods": {
+        "DEC": 3,
+        "KO": 10,
+        "SUB": 1
+      },
+      "event_date": "2026-11-07",
+      "exact_fighter_and_method": 5,
+      "exact_pct": 0.35714285714285715,
+      "fighter_pick_and_DEC_exact": 6,
+      "fighter_pick_and_KO_exact": 2,
+      "fighter_pick_and_SUB_exact": 1,
+      "fights": 14,
+      "method_class_correct": 9,
+      "method_class_pct": 0.6428571428571429,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 3,
+          "KO": 0,
+          "SUB": 0
+        },
+        "KO": {
+          "DEC": 3,
+          "KO": 6,
+          "SUB": 1
+        },
+        "SUB": {
+          "DEC": 1,
+          "KO": 0,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 7,
+          "class_true_positive": 3,
+          "exact_selected_fighter_true_positive": 3,
+          "predicted": 3
+        },
+        "KO": {
+          "actual": 6,
+          "class_true_positive": 6,
+          "exact_selected_fighter_true_positive": 2,
+          "predicted": 10
+        },
+        "SUB": {
+          "actual": 1,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 1
+        }
+      },
+      "winner_correct": 9,
+      "winner_pct": 0.6428571428571429
+    }
+  ],
+  "reconstructed_reference_before_334": {
+    "actual_methods": {
+      "DEC": 49,
+      "KO": 80,
+      "SUB": 24
+    },
+    "displayed_methods": {
+      "DEC": 61,
+      "KO": 82,
+      "SUB": 10
+    },
+    "exact_fighter_and_method": 48,
+    "exact_pct": 0.3137254901960784,
+    "fighter_pick_and_DEC_exact": 30,
+    "fighter_pick_and_KO_exact": 50,
+    "fighter_pick_and_SUB_exact": 12,
+    "fights": 153,
+    "method_class_correct": 79,
+    "method_class_pct": 0.5163398692810458,
+    "method_confusion_predicted_by_actual": {
+      "DEC": {
+        "DEC": 26,
+        "KO": 25,
+        "SUB": 10
+      },
+      "KO": {
+        "DEC": 19,
+        "KO": 51,
+        "SUB": 12
+      },
+      "SUB": {
+        "DEC": 4,
+        "KO": 4,
+        "SUB": 2
+      }
+    },
+    "method_recall": {
+      "DEC": {
+        "actual": 49,
+        "class_true_positive": 26,
+        "exact_selected_fighter_true_positive": 16,
+        "predicted": 61
+      },
+      "KO": {
+        "actual": 80,
+        "class_true_positive": 51,
+        "exact_selected_fighter_true_positive": 30,
+        "predicted": 82
+      },
+      "SUB": {
+        "actual": 24,
+        "class_true_positive": 2,
+        "exact_selected_fighter_true_positive": 2,
+        "predicted": 10
+      }
+    },
+    "winner_correct": 92,
+    "winner_pct": 0.6013071895424836
+  },
+  "reference_combined_mixed_vintages": {
+    "decisive_fights": 165,
+    "exact_fighter_and_method": 49,
+    "method_class_correct": 82,
+    "winner_correct": 100
+  },
+  "sanity_check": {
+    "all_153_exact_fixed_method": 50,
+    "all_153_exact_model": 48,
+    "chosen_fixed_method": "KO",
+    "first64_method_counts": {
+      "DEC": 21,
+      "KO": 31,
+      "SUB": 12
+    },
+    "not_a_moneyline_edge_or_roi_claim": true,
+    "not_an_independent_prospectively_registered_benchmark": true,
+    "rule": "Using the exact same locked fighter, always choose a fixed method class learned as PLURALITY from first 64 ONLY",
+    "subsequent_89_exact_fixed_method": 30,
+    "subsequent_89_exact_model": 33
+  },
+  "schema": "WSHL_X_LONGITUDINAL_EVIDENCE_FIRST_AUDIT_V1",
+  "scope": {
+    "all_available_reference_decisive_fights": 165,
+    "dated_events_reconstructed": 12,
+    "different_eras_and_model_vintages_not_one_homogeneous_backtest": true,
+    "first_reconstructed_event": "2026-08-08",
+    "historical_fights_with_matching_stage_a_card_artifact": 89,
+    "historical_fights_without_independent_stage_a_card_artifact": 64,
+    "last_reconstructed_event": "2026-11-07",
+    "later_ufc334_decisive_fights": 12,
+    "later_ufc334_excluded_draws": 1,
+    "missing_earlier_projects_cannot_claim_entire_multimonth_history": true,
+    "reconstructed_decisive_fights": 153
+  },
+  "status": "AUDIT_ONLY_NO_PREDICTOR_PROMOTED",
+  "strategy_stage_b_recorded": {
+    "actual_user_bankroll_or_bets_verified": false,
+    "market_beating_proven": false,
+    "missing_or_zero_approved_events": [
+      {
+        "event_date": "2026-10-24",
+        "status": "NO_FROZEN_STAGE_B_OFFICIAL_CARD_FOUND"
+      },
+      {
+        "event_date": "2026-11-07",
+        "status": "ZERO_APPROVED_WAGERS"
+      },
+      {
+        "event_date": "2026-11-14",
+        "status": "ZERO_APPROVED_WAGERS_ONLY_RESEARCH_VIRTUAL_UNITS"
+      }
+    ],
+    "not_cumulative_research_virtual_unit_pnl": true,
+    "only_recorded_strategy_wagers_included": true,
+    "original_sep19_frozen_scenario": {
+      "losses": 10,
+      "net_units": 0.6739475594182304,
+      "picks_with_stated_strategy_outcomes": 20,
+      "risked_units": 14.5,
+      "roi": 0.04647914202884347,
+      "strategy_events": 5,
+      "wins": 10
+    },
+    "post_recheck_actionable_scenario": {
+      "losses": 10,
+      "net_units": -0.1660524405817695,
+      "picks_with_stated_strategy_outcomes": 19,
+      "risked_units": 14,
+      "roi": -0.011860888612983535,
+      "strategy_events": 5,
+      "wins": 9
+    },
+    "source_events": [
+      {
+        "chosen_ledger": "POST_RECHECK_ACTIONABLE",
+        "event_date": "2026-09-19",
+        "initial_frozen_alternative": {
+          "net_units": -0.300977,
+          "record": "3-3",
+          "risked_units": 4.5
+        },
+        "net_units": -1.140977,
+        "record": "2-3",
+        "risked_units": 4,
+        "source": "reports/ufc331_2026-09-19/post_event_grade.json"
+      },
+      {
+        "chosen_ledger": "POST_EVENT_GRADED_STAGE_B",
+        "event_date": "2026-09-26",
+        "net_units": 2.8189370334307045,
+        "record": "4-0",
+        "risked_units": 3,
+        "source": "reports/ufcvegas121_2026-09-26/post_event_grade.json"
+      },
+      {
+        "chosen_ledger": "POST_EVENT_GRADED_STAGE_B",
+        "event_date": "2026-10-03",
+        "net_units": -0.7432432432432432,
+        "record": "1-2",
+        "risked_units": 2,
+        "source": "reports/ufc332_2026-10-03/post_event_grade.json"
+      },
+      {
+        "chosen_ledger": "POST_EVENT_GRADED_STAGE_B",
+        "event_date": "2026-10-10",
+        "net_units": -1.9807692307692308,
+        "record": "1-4",
+        "risked_units": 3.75,
+        "source": "reports/ufcvegas122_2026-10-10/post_event_grade.json"
+      },
+      {
+        "chosen_ledger": "POST_EVENT_GRADED_STAGE_B",
+        "event_date": "2026-10-17",
+        "net_units": 0.88,
+        "record": "1-1",
+        "risked_units": 1.25,
+        "source": "reports/ufcedmonton_2026-10-17/post_event_grade.json"
+      }
+    ]
+  },
+  "subsequent_89": {
+    "actual_methods": {
+      "DEC": 28,
+      "KO": 49,
+      "SUB": 12
+    },
+    "displayed_methods": {
+      "DEC": 24,
+      "KO": 57,
+      "SUB": 8
+    },
+    "exact_fighter_and_method": 33,
+    "exact_pct": 0.3707865168539326,
+    "fighter_pick_and_DEC_exact": 20,
+    "fighter_pick_and_KO_exact": 30,
+    "fighter_pick_and_SUB_exact": 6,
+    "fights": 89,
+    "method_class_correct": 51,
+    "method_class_pct": 0.5730337078651685,
+    "method_confusion_predicted_by_actual": {
+      "DEC": {
+        "DEC": 13,
+        "KO": 9,
+        "SUB": 2
+      },
+      "KO": {
+        "DEC": 13,
+        "KO": 36,
+        "SUB": 8
+      },
+      "SUB": {
+        "DEC": 2,
+        "KO": 4,
+        "SUB": 2
+      }
+    },
+    "method_recall": {
+      "DEC": {
+        "actual": 28,
+        "class_true_positive": 13,
+        "exact_selected_fighter_true_positive": 10,
+        "predicted": 24
+      },
+      "KO": {
+        "actual": 49,
+        "class_true_positive": 36,
+        "exact_selected_fighter_true_positive": 21,
+        "predicted": 57
+      },
+      "SUB": {
+        "actual": 12,
+        "class_true_positive": 2,
+        "exact_selected_fighter_true_positive": 2,
+        "predicted": 8
+      }
+    },
+    "winner_correct": 56,
+    "winner_pct": 0.6292134831460674
+  },
+  "ufc334_reference": {
+    "card_fights": 13,
+    "decisive_fights": 12,
+    "excluded": [
+      {
+        "bout": "Uros Medic vs Kevin Holland",
+        "method": "DRAW"
+      }
+    ],
+    "reference": {
+      "actual_methods": {
+        "DEC": 7,
+        "KO": 3,
+        "SUB": 2
+      },
+      "displayed_methods": {
+        "KO": 11,
+        "SUB": 1
+      },
+      "exact_fighter_and_method": 1,
+      "exact_pct": 0.08333333333333333,
+      "fighter_pick_and_DEC_exact": 6,
+      "fighter_pick_and_KO_exact": 1,
+      "fighter_pick_and_SUB_exact": 1,
+      "fights": 12,
+      "method_class_correct": 3,
+      "method_class_pct": 0.25,
+      "method_confusion_predicted_by_actual": {
+        "DEC": {
+          "DEC": 0,
+          "KO": 0,
+          "SUB": 0
+        },
+        "KO": {
+          "DEC": 6,
+          "KO": 3,
+          "SUB": 2
+        },
+        "SUB": {
+          "DEC": 1,
+          "KO": 0,
+          "SUB": 0
+        }
+      },
+      "method_recall": {
+        "DEC": {
+          "actual": 7,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 0
+        },
+        "KO": {
+          "actual": 3,
+          "class_true_positive": 3,
+          "exact_selected_fighter_true_positive": 1,
+          "predicted": 11
+        },
+        "SUB": {
+          "actual": 2,
+          "class_true_positive": 0,
+          "exact_selected_fighter_true_positive": 0,
+          "predicted": 1
+        }
+      },
+      "winner_correct": 8,
+      "winner_pct": 0.6666666666666666
+    },
+    "source": "data/results/ufc334_2026-11-14_all_models_grading.json",
+    "source_lock": "data/locks/ufc334_2026-11-14/stage_a_final_selection.json",
+    "source_lock_verified_sha": true
+  },
+  "ci_source_url": "https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/44189206559",
+  "created_from_verified_ci_at_utc": "2026-11-17"
+}

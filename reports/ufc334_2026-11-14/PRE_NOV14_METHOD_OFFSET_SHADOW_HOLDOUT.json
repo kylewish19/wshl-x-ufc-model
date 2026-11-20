@@ -1,0 +1,316 @@
+{
+  "schema": "WSHL_X_UFC334_PRE_EVENT_BASELINE_METHOD_OFFSET_SHADOW_HOLDOUT_V1",
+  "status": "RETROSPECTIVE_DIAGNOSTIC_SHADOW_ONLY_NOT_AN_ORIGINAL_FROZEN_PICK",
+  "date_evaluated": "2026-11-16",
+  "fitted_only_prior_events_through": "2026-11-07",
+  "evaluated_unseen_event": "2026-11-14",
+  "fit_n": 153,
+  "heldout_decisive_fights": 12,
+  "heldout_reference_winner_correct": 8,
+  "ridge": 2,
+  "finish_vs_decision_logit_offset": 0.6729356972592578,
+  "submission_given_finish_logit_offset": -0.4294005334331203,
+  "trained_original_prior_file": "reports/ufcvegas124_2026-11-07/full_stats/clean153_causal_method_inputs.csv",
+  "heldout_original_stage_a_file": "data/locks/ufc334_2026-11-14/stage_a_final_selection.json",
+  "heldout_results_file": "data/results/ufc334_2026-11-14_verified_outcomes.json",
+  "method_class_order": [
+    "KO",
+    "SUB",
+    "DEC"
+  ],
+  "metrics": {
+    "own_reference_selected_fighter_when_correct": {
+      "base": {
+        "n": 8,
+        "top_accuracy": 0.125,
+        "mean_brier": 0.7753716289658941,
+        "mean_logloss": 1.2247288185598135
+      },
+      "shadow": {
+        "n": 8,
+        "top_accuracy": 0.125,
+        "mean_brier": 0.9947993921626401,
+        "mean_logloss": 1.6049013344742682
+      }
+    },
+    "oracle_actual_winner_method_non_betting": {
+      "base": {
+        "n": 12,
+        "top_accuracy": 0.4166666666666667,
+        "mean_brier": 0.6213990891523714,
+        "mean_logloss": 1.0080626451916093
+      },
+      "shadow": {
+        "n": 12,
+        "top_accuracy": 0.3333333333333333,
+        "mean_brier": 0.7676567725527432,
+        "mean_logloss": 1.254142103752239
+      }
+    }
+  },
+  "original_frozen_exact_fighter_method_correct": 1,
+  "shadow_retro_exact_fighter_method_correct": 1,
+  "model_champion_picks_or_weights_changed": false,
+  "no_decision_from_post_event_stats_used_as_features": true,
+  "oracle_method_calculation_non_betting": true,
+  "limitations": [
+    "Prior 153 benchmark baseline distributions are a stored chronological causal collection and may not exactly match the current reference runner's selected-fighter method-label calibration vintage.",
+    "Only 8 correct reference winner selections in the 12-fight Nov14 decisive holdout qualify for conditional method comparison; extremely small and noisy.",
+    "Known-winner oracle diagnostic is NOT a deployable fight+method predictor and cannot be used to claim card wins.",
+    "Training on 153 prior rows includes outcomes through Nov7 only; Nov14 observed outcomes are evaluation labels, never fit."
+  ],
+  "rows": [
+    {
+      "fight_no": 1,
+      "pick": "Evan Elder",
+      "actual_winner": "Evan Elder",
+      "actual_method": "DEC",
+      "ref_winner_correct": true,
+      "base_method": "KO",
+      "shadow_method": "KO",
+      "base_own_conditional": {
+        "KO": 0.4466543750767387,
+        "SUB": 0.21304812560380584,
+        "DEC": 0.3402974993194554
+      },
+      "shadow_own_conditional": {
+        "KO": 0.6040967307254315,
+        "SUB": 0.18755399897169633,
+        "DEC": 0.2083492703028722
+      },
+      "original_exact_correct": false,
+      "shadow_retrospective_exact_correct": false
+    },
+    {
+      "fight_no": 2,
+      "pick": "Juan Diaz",
+      "actual_winner": "Juan Diaz",
+      "actual_method": "DEC",
+      "ref_winner_correct": true,
+      "base_method": "SUB",
+      "shadow_method": "SUB",
+      "base_own_conditional": {
+        "KO": 0.2343431596861237,
+        "SUB": 0.5363991270673535,
+        "DEC": 0.22925771324652292
+      },
+      "shadow_own_conditional": {
+        "KO": 0.3487064491487974,
+        "SUB": 0.5195286215487178,
+        "DEC": 0.13176492930248485
+      },
+      "original_exact_correct": false,
+      "shadow_retrospective_exact_correct": false
+    },
+    {
+      "fight_no": 3,
+      "pick": "Macy Chiasson",
+      "actual_winner": "Bia Mesquita",
+      "actual_method": "SUB",
+      "ref_winner_correct": false,
+      "base_method": "KO",
+      "shadow_method": "KO",
+      "base_own_conditional": {
+        "KO": 0.5280386104731493,
+        "SUB": 0.09614410848641325,
+        "DEC": 0.3758172810404376
+      },
+      "shadow_own_conditional": {
+        "KO": 0.6839406452895286,
+        "SUB": 0.08105673921372838,
+        "DEC": 0.23500261549674306
+      },
+      "original_exact_correct": false,
+      "shadow_retrospective_exact_correct": false
+    },
+    {
+      "fight_no": 4,
+      "pick": "Melquizael Costa",
+      "actual_winner": "Melquizael Costa",
+      "actual_method": "DEC",
+      "ref_winner_correct": true,
+      "base_method": "KO",
+      "shadow_method": "KO",
+      "base_own_conditional": {
+        "KO": 0.5184628873552843,
+        "SUB": 0.2202762138640092,
+        "DEC": 0.26126089878070646
+      },
+      "shadow_own_conditional": {
+        "KO": 0.6636218695960766,
+        "SUB": 0.18352039552244,
+        "DEC": 0.15285773488148335
+      },
+      "original_exact_correct": false,
+      "shadow_retrospective_exact_correct": false
+    },
+    {
+      "fight_no": 5,
+      "pick": "Donte Johnson",
+      "actual_winner": "Cesar Almeida",
+      "actual_method": "KO",
+      "ref_winner_correct": false,
+      "base_method": "KO",
+      "shadow_method": "KO",
+      "base_own_conditional": {
+        "KO": 0.6501929352343019,
+        "SUB": 0.1226221757380653,
+        "DEC": 0.22718488902763279
+      },
+      "shadow_own_conditional": {
+        "KO": 0.7745013796286154,
+        "SUB": 0.09507420114155707,
+        "DEC": 0.1304244192298275
+      },
+      "original_exact_correct": false,
+      "shadow_retrospective_exact_correct": false
+    },
+    {
+      "fight_no": 6,
+      "pick": "Terrance McKinney",
+      "actual_winner": "Terrance McKinney",
+      "actual_method": "KO",
+      "ref_winner_correct": true,
+      "base_method": "KO",
+      "shadow_method": "KO",
+      "base_own_conditional": {
+        "KO": 0.5056948851221856,
+        "SUB": 0.14978477911113885,
+        "DEC": 0.3445203357666755
+      },
+      "shadow_own_conditional": {
+        "KO": 0.6610870173778912,
+        "SUB": 0.1274534126785847,
+        "DEC": 0.211459569943524
+      },
+      "original_exact_correct": true,
+      "shadow_retrospective_exact_correct": true
+    },
+    {
+      "fight_no": 7,
+      "pick": "Chris Duncan",
+      "actual_winner": "Chris Duncan",
+      "actual_method": "DEC",
+      "ref_winner_correct": true,
+      "base_method": "KO",
+      "shadow_method": "KO",
+      "base_own_conditional": {
+        "KO": 0.37813312681275585,
+        "SUB": 0.29643780068175846,
+        "DEC": 0.3254290725054857
+      },
+      "shadow_own_conditional": {
+        "KO": 0.5313477444272325,
+        "SUB": 0.2711323983560201,
+        "DEC": 0.19751985721674736
+      },
+      "original_exact_correct": false,
+      "shadow_retrospective_exact_correct": false
+    },
+    {
+      "fight_no": 8,
+      "pick": "Charles Radtke",
+      "actual_winner": "Stephen Thompson",
+      "actual_method": "KO",
+      "ref_winner_correct": false,
+      "base_method": "KO",
+      "shadow_method": "KO",
+      "base_own_conditional": {
+        "KO": 0.5427989000902526,
+        "SUB": 0.10363929931168712,
+        "DEC": 0.3535618005980603
+      },
+      "shadow_own_conditional": {
+        "KO": 0.6954042410341907,
+        "SUB": 0.08642443757356827,
+        "DEC": 0.21817132139224105
+      },
+      "original_exact_correct": false,
+      "shadow_retrospective_exact_correct": false
+    },
+    {
+      "fight_no": 9,
+      "pick": "Bilal Hasan",
+      "actual_winner": "Luis Gurule",
+      "actual_method": "DEC",
+      "ref_winner_correct": false,
+      "base_method": "KO",
+      "shadow_method": "KO",
+      "base_own_conditional": {
+        "KO": 0.7346907923710188,
+        "SUB": 0.10669720398381852,
+        "DEC": 0.1586120036451628
+      },
+      "shadow_own_conditional": {
+        "KO": 0.8334717157241753,
+        "SUB": 0.0787867209888311,
+        "DEC": 0.08774156328699356
+      },
+      "original_exact_correct": false,
+      "shadow_retrospective_exact_correct": false
+    },
+    {
+      "fight_no": 11,
+      "pick": "Caio Borralho",
+      "actual_winner": "Caio Borralho",
+      "actual_method": "DEC",
+      "ref_winner_correct": true,
+      "base_method": "KO",
+      "shadow_method": "KO",
+      "base_own_conditional": {
+        "KO": 0.4984224866328859,
+        "SUB": 0.1878895612195718,
+        "DEC": 0.3136879521475423
+      },
+      "shadow_own_conditional": {
+        "KO": 0.651132672938941,
+        "SUB": 0.15976742316223863,
+        "DEC": 0.18909990389882048
+      },
+      "original_exact_correct": false,
+      "shadow_retrospective_exact_correct": false
+    },
+    {
+      "fight_no": 12,
+      "pick": "Kayla Harrison",
+      "actual_winner": "Kayla Harrison",
+      "actual_method": "SUB",
+      "ref_winner_correct": true,
+      "base_method": "KO",
+      "shadow_method": "KO",
+      "base_own_conditional": {
+        "KO": 0.39953082966483494,
+        "SUB": 0.36394175122228656,
+        "DEC": 0.23652741911287856
+      },
+      "shadow_own_conditional": {
+        "KO": 0.5420924841934969,
+        "SUB": 0.3214168845666272,
+        "DEC": 0.13649063123987593
+      },
+      "original_exact_correct": false,
+      "shadow_retrospective_exact_correct": false
+    },
+    {
+      "fight_no": 13,
+      "pick": "Ciryl Gane",
+      "actual_winner": "Ciryl Gane",
+      "actual_method": "DEC",
+      "ref_winner_correct": true,
+      "base_method": "KO",
+      "shadow_method": "KO",
+      "base_own_conditional": {
+        "KO": 0.7279679311754748,
+        "SUB": 0.12691299471371584,
+        "DEC": 0.1451190741108095
+      },
+      "shadow_own_conditional": {
+        "KO": 0.8265044467491092,
+        "SUB": 0.093789183801241,
+        "DEC": 0.07970636944964982
+      },
+      "original_exact_correct": false,
+      "shadow_retrospective_exact_correct": false
+    }
+  ]
+}

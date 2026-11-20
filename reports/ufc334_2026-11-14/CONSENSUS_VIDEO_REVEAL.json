@@ -1,0 +1,1032 @@
+{
+  "bets_approved_by_this_overlay": 0,
+  "consensus_is_only_editorial_not_official_replacement": true,
+  "event": "UFC 334: Gane vs Hokit",
+  "event_date": "2026-11-14",
+  "fighters": 13,
+  "fights": [
+    {
+      "auto_tactical_alignment_verified": false,
+      "bout": "Evan Elder vs Samuel Sanches",
+      "fight_no": 1,
+      "model_weights_or_picks_changed": false,
+      "original_stage_a_posture": "PASS",
+      "original_stage_a_primary_timing": "OVER_1.5",
+      "original_stage_a_reference_winner": "Evan Elder",
+      "review_cautions": [
+        "Method/timing finish probabilities differ by more than 15pp; DO NOT promote exact method to an official wager.",
+        "Some Historical/Unified six-way method masses do not reconcile with winner probabilities; consensus is NOT a validated exact-method EV.",
+        "Original Stage A is PASS. Consensus does NOT override PASS status.",
+        "Unified is a blend of other model components, not an independent third source. Majority votes are NOT confidence probabilities."
+      ],
+      "timing": {
+        "approved_bet": false,
+        "consensus": "UNANIMOUS",
+        "display_market": "Over 1.5 rounds",
+        "historical_uses_direct_probability": true,
+        "model_votes": {
+          "historical_shadow": {
+            "market": "OVER_1.5",
+            "p": 0.6593391960725168,
+            "probability_kind": "historical_direct"
+          },
+          "oof_unified_shadow": {
+            "market": "OVER_1.5",
+            "p": 0.6734,
+            "probability_kind": "simulated_10000"
+          },
+          "reference": {
+            "market": "OVER_1.5",
+            "p": 0.6903,
+            "probability_kind": "simulated_10000"
+          }
+        },
+        "same_as_original_frozen_timing": true,
+        "selection": "OVER_1.5",
+        "votes": 3
+      },
+      "video_alignment": "TACTICAL_EXPLANATION_MUST_MATCH_THE_SUPPORTED_WIN_CONDITION; NEVER_CHANGE_A_MODEL_PICK_TO_MATCH_THE_SCRIPT",
+      "video_publication_status": "EDITORIAL_MATCHUP_FACT_CHECK_REQUIRED",
+      "winner": {
+        "consensus": "MAJORITY",
+        "model_votes": {
+          "historical_shadow": "Samuel Sanches",
+          "oof_unified_shadow": "Samuel Sanches",
+          "reference": "Evan Elder"
+        },
+        "selection": "Samuel Sanches",
+        "votes": 2
+      },
+      "winner_plus_method": {
+        "approved_bet": false,
+        "coherence_blocked": true,
+        "consensus": "MAJORITY",
+        "model_votes": {
+          "historical_shadow": {
+            "fighter": "Samuel Sanches",
+            "method": "KO/TKO"
+          },
+          "oof_unified_shadow": {
+            "fighter": "Samuel Sanches",
+            "method": "KO/TKO"
+          },
+          "reference": {
+            "fighter": "Evan Elder",
+            "method": "KO/TKO"
+          }
+        },
+        "only_pair_consistent_votes_count": true,
+        "selection": [
+          "Samuel Sanches",
+          "KO/TKO"
+        ],
+        "votes": 2,
+        "warning_method_timing_gap_pp": 20.72
+      }
+    },
+    {
+      "auto_tactical_alignment_verified": false,
+      "bout": "Alatengheili vs Juan Diaz",
+      "fight_no": 2,
+      "model_weights_or_picks_changed": false,
+      "original_stage_a_posture": "PASS",
+      "original_stage_a_primary_timing": "OVER_1.5",
+      "original_stage_a_reference_winner": "Juan Diaz",
+      "review_cautions": [
+        "Method/timing finish probabilities differ by more than 15pp; DO NOT promote exact method to an official wager.",
+        "Some Historical/Unified six-way method masses do not reconcile with winner probabilities; consensus is NOT a validated exact-method EV.",
+        "Original Stage A is PASS. Consensus does NOT override PASS status.",
+        "Unified is a blend of other model components, not an independent third source. Majority votes are NOT confidence probabilities."
+      ],
+      "timing": {
+        "approved_bet": false,
+        "consensus": "UNANIMOUS",
+        "display_market": "Over 1.5 rounds",
+        "historical_uses_direct_probability": true,
+        "model_votes": {
+          "historical_shadow": {
+            "market": "OVER_1.5",
+            "p": 0.6904351041110364,
+            "probability_kind": "historical_direct"
+          },
+          "oof_unified_shadow": {
+            "market": "OVER_1.5",
+            "p": 0.7509,
+            "probability_kind": "simulated_10000"
+          },
+          "reference": {
+            "market": "OVER_1.5",
+            "p": 0.7645,
+            "probability_kind": "simulated_10000"
+          }
+        },
+        "same_as_original_frozen_timing": true,
+        "selection": "OVER_1.5",
+        "votes": 3
+      },
+      "video_alignment": "TACTICAL_EXPLANATION_MUST_MATCH_THE_SUPPORTED_WIN_CONDITION; NEVER_CHANGE_A_MODEL_PICK_TO_MATCH_THE_SCRIPT",
+      "video_publication_status": "EDITORIAL_MATCHUP_FACT_CHECK_REQUIRED",
+      "winner": {
+        "consensus": "UNANIMOUS",
+        "model_votes": {
+          "historical_shadow": "Juan Diaz",
+          "oof_unified_shadow": "Juan Diaz",
+          "reference": "Juan Diaz"
+        },
+        "selection": "Juan Diaz",
+        "votes": 3
+      },
+      "winner_plus_method": {
+        "approved_bet": false,
+        "coherence_blocked": true,
+        "consensus": "UNANIMOUS",
+        "model_votes": {
+          "historical_shadow": {
+            "fighter": "Juan Diaz",
+            "method": "SUB"
+          },
+          "oof_unified_shadow": {
+            "fighter": "Juan Diaz",
+            "method": "SUB"
+          },
+          "reference": {
+            "fighter": "Juan Diaz",
+            "method": "SUB"
+          }
+        },
+        "only_pair_consistent_votes_count": true,
+        "selection": [
+          "Juan Diaz",
+          "SUB"
+        ],
+        "votes": 3,
+        "warning_method_timing_gap_pp": 33.63
+      }
+    },
+    {
+      "auto_tactical_alignment_verified": false,
+      "bout": "Macy Chiasson vs Bia Mesquita",
+      "fight_no": 3,
+      "model_weights_or_picks_changed": false,
+      "original_stage_a_posture": "PASS",
+      "original_stage_a_primary_timing": "OVER_1.5",
+      "original_stage_a_reference_winner": "Macy Chiasson",
+      "review_cautions": [
+        "Method/timing finish probabilities differ by more than 15pp; DO NOT promote exact method to an official wager.",
+        "Some Historical/Unified six-way method masses do not reconcile with winner probabilities; consensus is NOT a validated exact-method EV.",
+        "Original Stage A is PASS. Consensus does NOT override PASS status.",
+        "Unified is a blend of other model components, not an independent third source. Majority votes are NOT confidence probabilities."
+      ],
+      "timing": {
+        "approved_bet": false,
+        "consensus": "UNANIMOUS",
+        "display_market": "Over 1.5 rounds",
+        "historical_uses_direct_probability": true,
+        "model_votes": {
+          "historical_shadow": {
+            "market": "OVER_1.5",
+            "p": 0.6602158265222688,
+            "probability_kind": "historical_direct"
+          },
+          "oof_unified_shadow": {
+            "market": "OVER_1.5",
+            "p": 0.6565,
+            "probability_kind": "simulated_10000"
+          },
+          "reference": {
+            "market": "OVER_1.5",
+            "p": 0.6511,
+            "probability_kind": "simulated_10000"
+          }
+        },
+        "same_as_original_frozen_timing": true,
+        "selection": "OVER_1.5",
+        "votes": 3
+      },
+      "video_alignment": "TACTICAL_EXPLANATION_MUST_MATCH_THE_SUPPORTED_WIN_CONDITION; NEVER_CHANGE_A_MODEL_PICK_TO_MATCH_THE_SCRIPT",
+      "video_publication_status": "EDITORIAL_MATCHUP_FACT_CHECK_REQUIRED",
+      "winner": {
+        "consensus": "MAJORITY",
+        "model_votes": {
+          "historical_shadow": "Bia Mesquita",
+          "oof_unified_shadow": "Bia Mesquita",
+          "reference": "Macy Chiasson"
+        },
+        "selection": "Bia Mesquita",
+        "votes": 2
+      },
+      "winner_plus_method": {
+        "approved_bet": false,
+        "coherence_blocked": true,
+        "consensus": "MAJORITY",
+        "model_votes": {
+          "historical_shadow": {
+            "fighter": "Bia Mesquita",
+            "method": "SUB"
+          },
+          "oof_unified_shadow": {
+            "fighter": "Bia Mesquita",
+            "method": "SUB"
+          },
+          "reference": {
+            "fighter": "Macy Chiasson",
+            "method": "KO/TKO"
+          }
+        },
+        "only_pair_consistent_votes_count": true,
+        "selection": [
+          "Bia Mesquita",
+          "SUB"
+        ],
+        "votes": 2,
+        "warning_method_timing_gap_pp": 18.06
+      }
+    },
+    {
+      "auto_tactical_alignment_verified": false,
+      "bout": "Jared Gordon vs Melquizael Costa",
+      "fight_no": 4,
+      "model_weights_or_picks_changed": false,
+      "original_stage_a_posture": "SIDE",
+      "original_stage_a_primary_timing": "OVER_1.5",
+      "original_stage_a_reference_winner": "Melquizael Costa",
+      "review_cautions": [
+        "Method/timing finish probabilities differ by more than 15pp; DO NOT promote exact method to an official wager.",
+        "Some Historical/Unified six-way method masses do not reconcile with winner probabilities; consensus is NOT a validated exact-method EV.",
+        "Unified is a blend of other model components, not an independent third source. Majority votes are NOT confidence probabilities."
+      ],
+      "timing": {
+        "approved_bet": false,
+        "consensus": "UNANIMOUS",
+        "display_market": "Over 1.5 rounds",
+        "historical_uses_direct_probability": true,
+        "model_votes": {
+          "historical_shadow": {
+            "market": "OVER_1.5",
+            "p": 0.7114412454149313,
+            "probability_kind": "historical_direct"
+          },
+          "oof_unified_shadow": {
+            "market": "OVER_1.5",
+            "p": 0.6869,
+            "probability_kind": "simulated_10000"
+          },
+          "reference": {
+            "market": "OVER_1.5",
+            "p": 0.6731,
+            "probability_kind": "simulated_10000"
+          }
+        },
+        "same_as_original_frozen_timing": true,
+        "selection": "OVER_1.5",
+        "votes": 3
+      },
+      "video_alignment": "TACTICAL_EXPLANATION_MUST_MATCH_THE_SUPPORTED_WIN_CONDITION; NEVER_CHANGE_A_MODEL_PICK_TO_MATCH_THE_SCRIPT",
+      "video_publication_status": "EDITORIAL_MATCHUP_FACT_CHECK_REQUIRED",
+      "winner": {
+        "consensus": "UNANIMOUS",
+        "model_votes": {
+          "historical_shadow": "Melquizael Costa",
+          "oof_unified_shadow": "Melquizael Costa",
+          "reference": "Melquizael Costa"
+        },
+        "selection": "Melquizael Costa",
+        "votes": 3
+      },
+      "winner_plus_method": {
+        "approved_bet": false,
+        "coherence_blocked": true,
+        "consensus": "MAJORITY",
+        "model_votes": {
+          "historical_shadow": {
+            "fighter": "Melquizael Costa",
+            "method": "SUB"
+          },
+          "oof_unified_shadow": {
+            "fighter": "Melquizael Costa",
+            "method": "KO/TKO"
+          },
+          "reference": {
+            "fighter": "Melquizael Costa",
+            "method": "KO/TKO"
+          }
+        },
+        "only_pair_consistent_votes_count": true,
+        "selection": [
+          "Melquizael Costa",
+          "KO/TKO"
+        ],
+        "votes": 2,
+        "warning_method_timing_gap_pp": 16.68
+      }
+    },
+    {
+      "auto_tactical_alignment_verified": false,
+      "bout": "Donte Johnson vs Cesar Almeida",
+      "fight_no": 5,
+      "model_weights_or_picks_changed": false,
+      "original_stage_a_posture": "LEAN",
+      "original_stage_a_primary_timing": "GTD_NO",
+      "original_stage_a_reference_winner": "Donte Johnson",
+      "review_cautions": [
+        "Some Historical/Unified six-way method masses do not reconcile with winner probabilities; consensus is NOT a validated exact-method EV.",
+        "Three-way editorial timing vote differs from the original pre-price locked timing forecast. BOTH must remain preserved and graded separately, without changing the official lock.",
+        "Unified is a blend of other model components, not an independent third source. Majority votes are NOT confidence probabilities."
+      ],
+      "timing": {
+        "approved_bet": false,
+        "consensus": "MAJORITY",
+        "display_market": "Over 1.5 rounds",
+        "historical_uses_direct_probability": true,
+        "model_votes": {
+          "historical_shadow": {
+            "market": "OVER_1.5",
+            "p": 0.6747939493004532,
+            "probability_kind": "historical_direct"
+          },
+          "oof_unified_shadow": {
+            "market": "OVER_1.5",
+            "p": 0.6056,
+            "probability_kind": "simulated_10000"
+          },
+          "reference": {
+            "market": "GTD_NO",
+            "p": 0.6295999999999999,
+            "probability_kind": "simulated_10000"
+          }
+        },
+        "same_as_original_frozen_timing": false,
+        "selection": "OVER_1.5",
+        "votes": 2
+      },
+      "video_alignment": "TACTICAL_EXPLANATION_MUST_MATCH_THE_SUPPORTED_WIN_CONDITION; NEVER_CHANGE_A_MODEL_PICK_TO_MATCH_THE_SCRIPT",
+      "video_publication_status": "EDITORIAL_MATCHUP_FACT_CHECK_REQUIRED",
+      "winner": {
+        "consensus": "UNANIMOUS",
+        "model_votes": {
+          "historical_shadow": "Donte Johnson",
+          "oof_unified_shadow": "Donte Johnson",
+          "reference": "Donte Johnson"
+        },
+        "selection": "Donte Johnson",
+        "votes": 3
+      },
+      "winner_plus_method": {
+        "approved_bet": false,
+        "coherence_blocked": false,
+        "consensus": "UNANIMOUS",
+        "model_votes": {
+          "historical_shadow": {
+            "fighter": "Donte Johnson",
+            "method": "KO/TKO"
+          },
+          "oof_unified_shadow": {
+            "fighter": "Donte Johnson",
+            "method": "KO/TKO"
+          },
+          "reference": {
+            "fighter": "Donte Johnson",
+            "method": "KO/TKO"
+          }
+        },
+        "only_pair_consistent_votes_count": true,
+        "selection": [
+          "Donte Johnson",
+          "KO/TKO"
+        ],
+        "votes": 3,
+        "warning_method_timing_gap_pp": 12.52
+      }
+    },
+    {
+      "auto_tactical_alignment_verified": false,
+      "bout": "Jim Miller vs Terrance McKinney",
+      "fight_no": 6,
+      "model_weights_or_picks_changed": false,
+      "original_stage_a_posture": "SIDE",
+      "original_stage_a_primary_timing": "GTD_NO",
+      "original_stage_a_reference_winner": "Terrance McKinney",
+      "review_cautions": [
+        "Some Historical/Unified six-way method masses do not reconcile with winner probabilities; consensus is NOT a validated exact-method EV.",
+        "Unified is a blend of other model components, not an independent third source. Majority votes are NOT confidence probabilities."
+      ],
+      "timing": {
+        "approved_bet": false,
+        "consensus": "UNANIMOUS",
+        "display_market": "Fight goes distance NO",
+        "historical_uses_direct_probability": true,
+        "model_votes": {
+          "historical_shadow": {
+            "market": "GTD_NO",
+            "p": 0.6686010277531769,
+            "probability_kind": "historical_direct"
+          },
+          "oof_unified_shadow": {
+            "market": "GTD_NO",
+            "p": 0.6243000000000001,
+            "probability_kind": "simulated_10000"
+          },
+          "reference": {
+            "market": "GTD_NO",
+            "p": 0.6161,
+            "probability_kind": "simulated_10000"
+          }
+        },
+        "same_as_original_frozen_timing": true,
+        "selection": "GTD_NO",
+        "votes": 3
+      },
+      "video_alignment": "TACTICAL_EXPLANATION_MUST_MATCH_THE_SUPPORTED_WIN_CONDITION; NEVER_CHANGE_A_MODEL_PICK_TO_MATCH_THE_SCRIPT",
+      "video_publication_status": "EDITORIAL_MATCHUP_FACT_CHECK_REQUIRED",
+      "winner": {
+        "consensus": "UNANIMOUS",
+        "model_votes": {
+          "historical_shadow": "Terrance McKinney",
+          "oof_unified_shadow": "Terrance McKinney",
+          "reference": "Terrance McKinney"
+        },
+        "selection": "Terrance McKinney",
+        "votes": 3
+      },
+      "winner_plus_method": {
+        "approved_bet": false,
+        "coherence_blocked": false,
+        "consensus": "UNANIMOUS",
+        "model_votes": {
+          "historical_shadow": {
+            "fighter": "Terrance McKinney",
+            "method": "KO/TKO"
+          },
+          "oof_unified_shadow": {
+            "fighter": "Terrance McKinney",
+            "method": "KO/TKO"
+          },
+          "reference": {
+            "fighter": "Terrance McKinney",
+            "method": "KO/TKO"
+          }
+        },
+        "only_pair_consistent_votes_count": true,
+        "selection": [
+          "Terrance McKinney",
+          "KO/TKO"
+        ],
+        "votes": 3,
+        "warning_method_timing_gap_pp": 7.29
+      }
+    },
+    {
+      "auto_tactical_alignment_verified": false,
+      "bout": "Drew Dober vs Chris Duncan",
+      "fight_no": 7,
+      "model_weights_or_picks_changed": false,
+      "original_stage_a_posture": "LEAN",
+      "original_stage_a_primary_timing": "OVER_1.5",
+      "original_stage_a_reference_winner": "Chris Duncan",
+      "review_cautions": [
+        "Method/timing finish probabilities differ by more than 15pp; DO NOT promote exact method to an official wager.",
+        "Some Historical/Unified six-way method masses do not reconcile with winner probabilities; consensus is NOT a validated exact-method EV.",
+        "Unified is a blend of other model components, not an independent third source. Majority votes are NOT confidence probabilities."
+      ],
+      "timing": {
+        "approved_bet": false,
+        "consensus": "UNANIMOUS",
+        "display_market": "Over 1.5 rounds",
+        "historical_uses_direct_probability": true,
+        "model_votes": {
+          "historical_shadow": {
+            "market": "OVER_1.5",
+            "p": 0.7105222604390017,
+            "probability_kind": "historical_direct"
+          },
+          "oof_unified_shadow": {
+            "market": "OVER_1.5",
+            "p": 0.701,
+            "probability_kind": "simulated_10000"
+          },
+          "reference": {
+            "market": "OVER_1.5",
+            "p": 0.6938,
+            "probability_kind": "simulated_10000"
+          }
+        },
+        "same_as_original_frozen_timing": true,
+        "selection": "OVER_1.5",
+        "votes": 3
+      },
+      "video_alignment": "TACTICAL_EXPLANATION_MUST_MATCH_THE_SUPPORTED_WIN_CONDITION; NEVER_CHANGE_A_MODEL_PICK_TO_MATCH_THE_SCRIPT",
+      "video_publication_status": "EDITORIAL_MATCHUP_FACT_CHECK_REQUIRED",
+      "winner": {
+        "consensus": "UNANIMOUS",
+        "model_votes": {
+          "historical_shadow": "Chris Duncan",
+          "oof_unified_shadow": "Chris Duncan",
+          "reference": "Chris Duncan"
+        },
+        "selection": "Chris Duncan",
+        "votes": 3
+      },
+      "winner_plus_method": {
+        "approved_bet": false,
+        "coherence_blocked": true,
+        "consensus": "MAJORITY",
+        "model_votes": {
+          "historical_shadow": {
+            "fighter": "Chris Duncan",
+            "method": "SUB"
+          },
+          "oof_unified_shadow": {
+            "fighter": "Chris Duncan",
+            "method": "SUB"
+          },
+          "reference": {
+            "fighter": "Chris Duncan",
+            "method": "KO/TKO"
+          }
+        },
+        "only_pair_consistent_votes_count": true,
+        "selection": [
+          "Chris Duncan",
+          "SUB"
+        ],
+        "votes": 2,
+        "warning_method_timing_gap_pp": 17.78
+      }
+    },
+    {
+      "auto_tactical_alignment_verified": false,
+      "bout": "Stephen Thompson vs Charles Radtke",
+      "fight_no": 8,
+      "model_weights_or_picks_changed": false,
+      "original_stage_a_posture": "LEAN",
+      "original_stage_a_primary_timing": "OVER_1.5",
+      "original_stage_a_reference_winner": "Charles Radtke",
+      "review_cautions": [
+        "Some Historical/Unified six-way method masses do not reconcile with winner probabilities; consensus is NOT a validated exact-method EV.",
+        "Unified is a blend of other model components, not an independent third source. Majority votes are NOT confidence probabilities."
+      ],
+      "timing": {
+        "approved_bet": false,
+        "consensus": "UNANIMOUS",
+        "display_market": "Over 1.5 rounds",
+        "historical_uses_direct_probability": true,
+        "model_votes": {
+          "historical_shadow": {
+            "market": "OVER_1.5",
+            "p": 0.6338616346784952,
+            "probability_kind": "historical_direct"
+          },
+          "oof_unified_shadow": {
+            "market": "OVER_1.5",
+            "p": 0.6438,
+            "probability_kind": "simulated_10000"
+          },
+          "reference": {
+            "market": "OVER_1.5",
+            "p": 0.6563,
+            "probability_kind": "simulated_10000"
+          }
+        },
+        "same_as_original_frozen_timing": true,
+        "selection": "OVER_1.5",
+        "votes": 3
+      },
+      "video_alignment": "TACTICAL_EXPLANATION_MUST_MATCH_THE_SUPPORTED_WIN_CONDITION; NEVER_CHANGE_A_MODEL_PICK_TO_MATCH_THE_SCRIPT",
+      "video_publication_status": "EDITORIAL_MATCHUP_FACT_CHECK_REQUIRED",
+      "winner": {
+        "consensus": "UNANIMOUS",
+        "model_votes": {
+          "historical_shadow": "Charles Radtke",
+          "oof_unified_shadow": "Charles Radtke",
+          "reference": "Charles Radtke"
+        },
+        "selection": "Charles Radtke",
+        "votes": 3
+      },
+      "winner_plus_method": {
+        "approved_bet": false,
+        "coherence_blocked": false,
+        "consensus": "MAJORITY",
+        "model_votes": {
+          "historical_shadow": {
+            "fighter": "Charles Radtke",
+            "method": "DEC"
+          },
+          "oof_unified_shadow": {
+            "fighter": "Charles Radtke",
+            "method": "KO/TKO"
+          },
+          "reference": {
+            "fighter": "Charles Radtke",
+            "method": "KO/TKO"
+          }
+        },
+        "only_pair_consistent_votes_count": true,
+        "selection": [
+          "Charles Radtke",
+          "KO/TKO"
+        ],
+        "votes": 2,
+        "warning_method_timing_gap_pp": 11.81
+      }
+    },
+    {
+      "auto_tactical_alignment_verified": false,
+      "bout": "Bilal Hasan vs Luis Gurule",
+      "fight_no": 9,
+      "model_weights_or_picks_changed": false,
+      "original_stage_a_posture": "PASS",
+      "original_stage_a_primary_timing": "GTD_NO",
+      "original_stage_a_reference_winner": "Bilal Hasan",
+      "review_cautions": [
+        "Some Historical/Unified six-way method masses do not reconcile with winner probabilities; consensus is NOT a validated exact-method EV.",
+        "Original Stage A is PASS. Consensus does NOT override PASS status.",
+        "Unified is a blend of other model components, not an independent third source. Majority votes are NOT confidence probabilities."
+      ],
+      "timing": {
+        "approved_bet": false,
+        "consensus": "UNANIMOUS",
+        "display_market": "Fight goes distance NO",
+        "historical_uses_direct_probability": true,
+        "model_votes": {
+          "historical_shadow": {
+            "market": "GTD_NO",
+            "p": 0.644639321895401,
+            "probability_kind": "historical_direct"
+          },
+          "oof_unified_shadow": {
+            "market": "GTD_NO",
+            "p": 0.6228,
+            "probability_kind": "simulated_10000"
+          },
+          "reference": {
+            "market": "GTD_NO",
+            "p": 0.613,
+            "probability_kind": "simulated_10000"
+          }
+        },
+        "same_as_original_frozen_timing": true,
+        "selection": "GTD_NO",
+        "votes": 3
+      },
+      "video_alignment": "TACTICAL_EXPLANATION_MUST_MATCH_THE_SUPPORTED_WIN_CONDITION; NEVER_CHANGE_A_MODEL_PICK_TO_MATCH_THE_SCRIPT",
+      "video_publication_status": "EDITORIAL_MATCHUP_FACT_CHECK_REQUIRED",
+      "winner": {
+        "consensus": "UNANIMOUS",
+        "model_votes": {
+          "historical_shadow": "Bilal Hasan",
+          "oof_unified_shadow": "Bilal Hasan",
+          "reference": "Bilal Hasan"
+        },
+        "selection": "Bilal Hasan",
+        "votes": 3
+      },
+      "winner_plus_method": {
+        "approved_bet": false,
+        "coherence_blocked": false,
+        "consensus": "UNANIMOUS",
+        "model_votes": {
+          "historical_shadow": {
+            "fighter": "Bilal Hasan",
+            "method": "KO/TKO"
+          },
+          "oof_unified_shadow": {
+            "fighter": "Bilal Hasan",
+            "method": "KO/TKO"
+          },
+          "reference": {
+            "fighter": "Bilal Hasan",
+            "method": "KO/TKO"
+          }
+        },
+        "only_pair_consistent_votes_count": true,
+        "selection": [
+          "Bilal Hasan",
+          "KO/TKO"
+        ],
+        "votes": 3,
+        "warning_method_timing_gap_pp": 5.09
+      }
+    },
+    {
+      "auto_tactical_alignment_verified": false,
+      "bout": "Uros Medic vs Kevin Holland",
+      "fight_no": 10,
+      "model_weights_or_picks_changed": false,
+      "original_stage_a_posture": "PASS",
+      "original_stage_a_primary_timing": "GTD_NO",
+      "original_stage_a_reference_winner": "Uros Medic",
+      "review_cautions": [
+        "Some Historical/Unified six-way method masses do not reconcile with winner probabilities; consensus is NOT a validated exact-method EV.",
+        "Original Stage A is PASS. Consensus does NOT override PASS status.",
+        "Unified is a blend of other model components, not an independent third source. Majority votes are NOT confidence probabilities."
+      ],
+      "timing": {
+        "approved_bet": false,
+        "consensus": "UNANIMOUS",
+        "display_market": "Fight goes distance NO",
+        "historical_uses_direct_probability": true,
+        "model_votes": {
+          "historical_shadow": {
+            "market": "GTD_NO",
+            "p": 0.6450365630189068,
+            "probability_kind": "historical_direct"
+          },
+          "oof_unified_shadow": {
+            "market": "GTD_NO",
+            "p": 0.7194,
+            "probability_kind": "simulated_10000"
+          },
+          "reference": {
+            "market": "GTD_NO",
+            "p": 0.7444999999999999,
+            "probability_kind": "simulated_10000"
+          }
+        },
+        "same_as_original_frozen_timing": true,
+        "selection": "GTD_NO",
+        "votes": 3
+      },
+      "video_alignment": "TACTICAL_EXPLANATION_MUST_MATCH_THE_SUPPORTED_WIN_CONDITION; NEVER_CHANGE_A_MODEL_PICK_TO_MATCH_THE_SCRIPT",
+      "video_publication_status": "EDITORIAL_MATCHUP_FACT_CHECK_REQUIRED",
+      "winner": {
+        "consensus": "UNANIMOUS",
+        "model_votes": {
+          "historical_shadow": "Uros Medic",
+          "oof_unified_shadow": "Uros Medic",
+          "reference": "Uros Medic"
+        },
+        "selection": "Uros Medic",
+        "votes": 3
+      },
+      "winner_plus_method": {
+        "approved_bet": false,
+        "coherence_blocked": false,
+        "consensus": "UNANIMOUS",
+        "model_votes": {
+          "historical_shadow": {
+            "fighter": "Uros Medic",
+            "method": "KO/TKO"
+          },
+          "oof_unified_shadow": {
+            "fighter": "Uros Medic",
+            "method": "KO/TKO"
+          },
+          "reference": {
+            "fighter": "Uros Medic",
+            "method": "KO/TKO"
+          }
+        },
+        "only_pair_consistent_votes_count": true,
+        "selection": [
+          "Uros Medic",
+          "KO/TKO"
+        ],
+        "votes": 3,
+        "warning_method_timing_gap_pp": 1.28
+      }
+    },
+    {
+      "auto_tactical_alignment_verified": false,
+      "bout": "Caio Borralho vs Yousri Belgaroui",
+      "fight_no": 11,
+      "model_weights_or_picks_changed": false,
+      "original_stage_a_posture": "PASS",
+      "original_stage_a_primary_timing": "OVER_1.5",
+      "original_stage_a_reference_winner": "Caio Borralho",
+      "review_cautions": [
+        "Method/timing finish probabilities differ by more than 15pp; DO NOT promote exact method to an official wager.",
+        "Some Historical/Unified six-way method masses do not reconcile with winner probabilities; consensus is NOT a validated exact-method EV.",
+        "Original Stage A is PASS. Consensus does NOT override PASS status.",
+        "Unified is a blend of other model components, not an independent third source. Majority votes are NOT confidence probabilities."
+      ],
+      "timing": {
+        "approved_bet": false,
+        "consensus": "MAJORITY",
+        "display_market": "Over 1.5 rounds",
+        "historical_uses_direct_probability": true,
+        "model_votes": {
+          "historical_shadow": {
+            "market": "GTD_NO",
+            "p": 0.6357421285541665,
+            "probability_kind": "historical_direct"
+          },
+          "oof_unified_shadow": {
+            "market": "OVER_1.5",
+            "p": 0.6387,
+            "probability_kind": "simulated_10000"
+          },
+          "reference": {
+            "market": "OVER_1.5",
+            "p": 0.6546,
+            "probability_kind": "simulated_10000"
+          }
+        },
+        "same_as_original_frozen_timing": true,
+        "selection": "OVER_1.5",
+        "votes": 2
+      },
+      "video_alignment": "TACTICAL_EXPLANATION_MUST_MATCH_THE_SUPPORTED_WIN_CONDITION; NEVER_CHANGE_A_MODEL_PICK_TO_MATCH_THE_SCRIPT",
+      "video_publication_status": "EDITORIAL_MATCHUP_FACT_CHECK_REQUIRED",
+      "winner": {
+        "consensus": "MAJORITY",
+        "model_votes": {
+          "historical_shadow": "Yousri Belgaroui",
+          "oof_unified_shadow": "Yousri Belgaroui",
+          "reference": "Caio Borralho"
+        },
+        "selection": "Yousri Belgaroui",
+        "votes": 2
+      },
+      "winner_plus_method": {
+        "approved_bet": false,
+        "coherence_blocked": true,
+        "consensus": "MAJORITY",
+        "model_votes": {
+          "historical_shadow": {
+            "fighter": "Yousri Belgaroui",
+            "method": "KO/TKO"
+          },
+          "oof_unified_shadow": {
+            "fighter": "Yousri Belgaroui",
+            "method": "KO/TKO"
+          },
+          "reference": {
+            "fighter": "Caio Borralho",
+            "method": "KO/TKO"
+          }
+        },
+        "only_pair_consistent_votes_count": true,
+        "selection": [
+          "Yousri Belgaroui",
+          "KO/TKO"
+        ],
+        "votes": 2,
+        "warning_method_timing_gap_pp": 15.97
+      }
+    },
+    {
+      "auto_tactical_alignment_verified": false,
+      "bout": "Kayla Harrison vs Amanda Nunes",
+      "fight_no": 12,
+      "model_weights_or_picks_changed": false,
+      "original_stage_a_posture": "PASS",
+      "original_stage_a_primary_timing": "OVER_1.5",
+      "original_stage_a_reference_winner": "Kayla Harrison",
+      "review_cautions": [
+        "Some Historical/Unified six-way method masses do not reconcile with winner probabilities; consensus is NOT a validated exact-method EV.",
+        "Original Stage A is PASS. Consensus does NOT override PASS status.",
+        "Unified is a blend of other model components, not an independent third source. Majority votes are NOT confidence probabilities."
+      ],
+      "timing": {
+        "approved_bet": false,
+        "consensus": "MAJORITY",
+        "display_market": "Over 1.5 rounds",
+        "historical_uses_direct_probability": true,
+        "model_votes": {
+          "historical_shadow": {
+            "market": "OVER_1.5",
+            "p": 0.7685797407865369,
+            "probability_kind": "historical_direct"
+          },
+          "oof_unified_shadow": {
+            "market": "OVER_1.5",
+            "p": 0.6918,
+            "probability_kind": "simulated_10000"
+          },
+          "reference": {
+            "market": "GTD_NO",
+            "p": 0.6854,
+            "probability_kind": "simulated_10000"
+          }
+        },
+        "same_as_original_frozen_timing": true,
+        "selection": "OVER_1.5",
+        "votes": 2
+      },
+      "video_alignment": "TACTICAL_EXPLANATION_MUST_MATCH_THE_SUPPORTED_WIN_CONDITION; NEVER_CHANGE_A_MODEL_PICK_TO_MATCH_THE_SCRIPT",
+      "video_publication_status": "EDITORIAL_MATCHUP_FACT_CHECK_REQUIRED",
+      "winner": {
+        "consensus": "UNANIMOUS",
+        "model_votes": {
+          "historical_shadow": "Kayla Harrison",
+          "oof_unified_shadow": "Kayla Harrison",
+          "reference": "Kayla Harrison"
+        },
+        "selection": "Kayla Harrison",
+        "votes": 3
+      },
+      "winner_plus_method": {
+        "approved_bet": false,
+        "coherence_blocked": false,
+        "consensus": "MAJORITY",
+        "model_votes": {
+          "historical_shadow": {
+            "fighter": "Kayla Harrison",
+            "method": "SUB"
+          },
+          "oof_unified_shadow": {
+            "fighter": "Kayla Harrison",
+            "method": "SUB"
+          },
+          "reference": {
+            "fighter": "Kayla Harrison",
+            "method": "KO/TKO"
+          }
+        },
+        "only_pair_consistent_votes_count": true,
+        "selection": [
+          "Kayla Harrison",
+          "SUB"
+        ],
+        "votes": 2,
+        "warning_method_timing_gap_pp": 8.03
+      }
+    },
+    {
+      "auto_tactical_alignment_verified": false,
+      "bout": "Ciryl Gane vs Josh Hokit",
+      "fight_no": 13,
+      "model_weights_or_picks_changed": false,
+      "original_stage_a_posture": "PASS",
+      "original_stage_a_primary_timing": "GTD_NO",
+      "original_stage_a_reference_winner": "Ciryl Gane",
+      "review_cautions": [
+        "Some Historical/Unified six-way method masses do not reconcile with winner probabilities; consensus is NOT a validated exact-method EV.",
+        "Original Stage A is PASS. Consensus does NOT override PASS status.",
+        "Unified is a blend of other model components, not an independent third source. Majority votes are NOT confidence probabilities."
+      ],
+      "timing": {
+        "approved_bet": false,
+        "consensus": "UNANIMOUS",
+        "display_market": "Fight goes distance NO",
+        "historical_uses_direct_probability": true,
+        "model_votes": {
+          "historical_shadow": {
+            "market": "GTD_NO",
+            "p": 0.7666086219160886,
+            "probability_kind": "historical_direct"
+          },
+          "oof_unified_shadow": {
+            "market": "GTD_NO",
+            "p": 0.7924,
+            "probability_kind": "simulated_10000"
+          },
+          "reference": {
+            "market": "GTD_NO",
+            "p": 0.8101,
+            "probability_kind": "simulated_10000"
+          }
+        },
+        "same_as_original_frozen_timing": true,
+        "selection": "GTD_NO",
+        "votes": 3
+      },
+      "video_alignment": "TACTICAL_EXPLANATION_MUST_MATCH_THE_SUPPORTED_WIN_CONDITION; NEVER_CHANGE_A_MODEL_PICK_TO_MATCH_THE_SCRIPT",
+      "video_publication_status": "EDITORIAL_MATCHUP_FACT_CHECK_REQUIRED",
+      "winner": {
+        "consensus": "MAJORITY",
+        "model_votes": {
+          "historical_shadow": "Josh Hokit",
+          "oof_unified_shadow": "Ciryl Gane",
+          "reference": "Ciryl Gane"
+        },
+        "selection": "Ciryl Gane",
+        "votes": 2
+      },
+      "winner_plus_method": {
+        "approved_bet": false,
+        "coherence_blocked": false,
+        "consensus": "MAJORITY",
+        "model_votes": {
+          "historical_shadow": {
+            "fighter": "Josh Hokit",
+            "method": "KO/TKO"
+          },
+          "oof_unified_shadow": {
+            "fighter": "Ciryl Gane",
+            "method": "KO/TKO"
+          },
+          "reference": {
+            "fighter": "Ciryl Gane",
+            "method": "KO/TKO"
+          }
+        },
+        "only_pair_consistent_votes_count": true,
+        "selection": [
+          "Ciryl Gane",
+          "KO/TKO"
+        ],
+        "votes": 2,
+        "warning_method_timing_gap_pp": 4.35
+      }
+    }
+  ],
+  "model_views_are_not_independent": true,
+  "original_freeze_utc": "2026-11-11T23:09:16.480846+00:00",
+  "original_raw_sha256": "13aeb532c5fddd5ec3cdc003ac7500a231addc45e34b45b7aebc38c5c241270d",
+  "schema": "WSHL_X_FROZEN_THREE_VIEW_EDITORIAL_CONSENSUS_V1",
+  "source": "ORIGINAL_FROZEN_STAGE_A_NO_STAGE_B_ODDS",
+  "timing_historical_uses_direct_rates_current_unified_use_simulations": true,
+  "winner_and_method_not_retrained": true
+}

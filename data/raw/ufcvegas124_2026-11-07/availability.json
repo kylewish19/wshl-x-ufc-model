@@ -1,0 +1,183 @@
+{
+  "checked_at_utc": "2026-11-10T00:41:55.091354+00:00",
+  "direct_outcome_feature_leakage_prohibited": true,
+  "event": "UFC Fight Night: Cortes Acosta vs. Walker",
+  "event_date": "2026-11-07",
+  "expected_fighter_round_stat_rows": 68,
+  "fighter_bout_aggregates_expected": 28,
+  "fighter_round_count_mismatches": [],
+  "fighter_round_key_duplicates": [],
+  "fighter_round_stat_rows": 68,
+  "frozen_stage_a_file": "data/locks/ufcvegas124_2026-11-07/stage_a_final_selection.json",
+  "frozen_stage_a_sha256": "70fefe546831de93d06a09b8347411fd387d7d09f98ca03bc56adfd921e3c68b",
+  "full_card_stats_available": true,
+  "future_only_training_admissible": true,
+  "missing_detail_bouts": [],
+  "missing_result_bouts": [],
+  "missing_stat_bouts": [],
+  "no_champion_promotion_from_ingestion": true,
+  "observed_finish_methods": {
+    "DEC": 7,
+    "KO": 6,
+    "SUB": 1
+  },
+  "official_outcomes_file": "data/results/ufcvegas124_2026-11-07_verified_outcomes.json",
+  "official_outcomes_sha256": "3df64810c129f54dcac10245641a92d6d1756c39eee0e34f1570500413390ccd",
+  "source_classification": "Third-party pinned CSV scrape originally sourced from UFCStats.com; not independent real-time UFCStats site verification",
+  "source_csv_files": {
+    "ufc_event_details.csv": {
+      "bytes": 103180,
+      "sha256": "07355c6e414bb5932a7a0f97e4088388ff7391876b7a9ab792433c83f5285841",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/c742842f29466758fedc3906dbad28d6d320a8da/ufc_event_details.csv"
+    },
+    "ufc_fight_details.csv": {
+      "bytes": 1050006,
+      "sha256": "9e825e7413b56ccff2889e7b9ca0bea3d90bb48480459c0d9d45825d4b737776",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/c742842f29466758fedc3906dbad28d6d320a8da/ufc_fight_details.csv"
+    },
+    "ufc_fight_results.csv": {
+      "bytes": 2117066,
+      "sha256": "b99d94a82984f07ec34d9f04423fd7edd67ea28c365621a144e05aec64f3a840",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/c742842f29466758fedc3906dbad28d6d320a8da/ufc_fight_results.csv"
+    },
+    "ufc_fight_stats.csv": {
+      "bytes": 7708125,
+      "sha256": "f5b316d5e745bd89da921b2c9711ec9209c2fa39dcbcd80bcb063b62d9175bcb",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/c742842f29466758fedc3906dbad28d6d320a8da/ufc_fight_stats.csv"
+    },
+    "ufc_fighter_details.csv": {
+      "bytes": 340441,
+      "sha256": "a1f6e4326217fab9734ac42f1958cd07b0b2b98f3caa5da08497ec7648eb6f70",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/c742842f29466758fedc3906dbad28d6d320a8da/ufc_fighter_details.csv"
+    },
+    "ufc_fighter_tott.csv": {
+      "bytes": 508399,
+      "sha256": "3296e67941f984cd5484488226e5a5d94de3249c63fe289fbc66d98546311ea1",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/c742842f29466758fedc3906dbad28d6d320a8da/ufc_fighter_tott.csv"
+    }
+  },
+  "stats_have_no_zero_filled_missing_rows": true,
+  "status": "UFCSTATS_ARCHIVED_SCRAPE_2026_11_08_FULL_CARD_VERIFIED",
+  "unique_detail_bouts": 14,
+  "unique_event_rows": 1,
+  "unique_result_bouts": 14,
+  "unique_stat_bouts": 14,
+  "upstream_commit": "c742842f29466758fedc3906dbad28d6d320a8da",
+  "upstream_repo": "Greco1899/scrape_ufc_stats",
+  "upstream_snapshot_recorded_at_utc": "2026-11-08T18:04:23Z",
+  "validated_results": [
+    {
+      "fight": "Waldo Cortes Acosta vs. Johnny Walker",
+      "source_finish_round": 3,
+      "source_finish_time": "2:27",
+      "source_method": "KO/TKO ",
+      "source_winner": "johnnywalker",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/4e6c304705f82ce0"
+    },
+    {
+      "fight": "Tatiana Suarez vs. Virna Jandiroba",
+      "source_finish_round": 3,
+      "source_finish_time": "5:00",
+      "source_method": "Decision - Unanimous ",
+      "source_winner": "tatianasuarez",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/588347615984ec29"
+    },
+    {
+      "fight": "Davey Grant vs. Elijah Smith",
+      "source_finish_round": 1,
+      "source_finish_time": "1:00",
+      "source_method": "KO/TKO ",
+      "source_winner": "elijahsmith",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/1f9c3310eeb1fb93"
+    },
+    {
+      "fight": "Billy Elekana vs. Lucas Fernando",
+      "source_finish_round": 3,
+      "source_finish_time": "5:00",
+      "source_method": "Decision - Unanimous ",
+      "source_winner": "lucasfernando",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/1955773d3e42a616"
+    },
+    {
+      "fight": "Priscila Cachoeira vs. Nina Milosevic",
+      "source_finish_round": 2,
+      "source_finish_time": "3:40",
+      "source_method": "KO/TKO ",
+      "source_winner": "ninamilosevic",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/d5bb4cadca484a31"
+    },
+    {
+      "fight": "Mitch Raposo vs. Marcos Degli",
+      "source_finish_round": 3,
+      "source_finish_time": "5:00",
+      "source_method": "Decision - Unanimous ",
+      "source_winner": "mitchraposo",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/beda278798850354"
+    },
+    {
+      "fight": "Keiichiro Nakamura vs. Ollie Schmid",
+      "source_finish_round": 3,
+      "source_finish_time": "5:00",
+      "source_method": "Decision - Unanimous ",
+      "source_winner": "ollieschmid",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/85d62e821823ba69"
+    },
+    {
+      "fight": "Gabriel Lorenco vs. Thomas Petersen",
+      "source_finish_round": 3,
+      "source_finish_time": "4:47",
+      "source_method": "KO/TKO ",
+      "source_winner": "thomaspetersen",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/a21a21810258623e"
+    },
+    {
+      "fight": "Karine Silva vs. Gabriella Fernandes",
+      "source_finish_round": 3,
+      "source_finish_time": "5:00",
+      "source_method": "Decision - Unanimous ",
+      "source_winner": "karinesilva",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/1452e906a169875d"
+    },
+    {
+      "fight": "Jose Delano vs. Murtazali Magomedov",
+      "source_finish_round": 3,
+      "source_finish_time": "5:00",
+      "source_method": "Decision - Unanimous ",
+      "source_winner": "murtazalimagomedov",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/9f33576489a0370c"
+    },
+    {
+      "fight": "Austin Bashi vs. Carlos Calderon",
+      "source_finish_round": 1,
+      "source_finish_time": "1:07",
+      "source_method": "Submission ",
+      "source_winner": "austinbashi",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/397399a62874a00e"
+    },
+    {
+      "fight": "Mantas Kondratavicius vs. Andre Petroski",
+      "source_finish_round": 2,
+      "source_finish_time": "4:39",
+      "source_method": "KO/TKO ",
+      "source_winner": "andrepetroski",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/869c3394cadfb23c"
+    },
+    {
+      "fight": "Seokhyeon Ko vs. Wellington Turman",
+      "source_finish_round": 3,
+      "source_finish_time": "5:00",
+      "source_method": "Decision - Unanimous ",
+      "source_winner": "seokhyeonko",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/cd446b8759b30093"
+    },
+    {
+      "fight": "Jonny Parsons vs. Jose Souza",
+      "source_finish_round": 1,
+      "source_finish_time": "4:16",
+      "source_method": "KO/TKO ",
+      "source_winner": "josesouza",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/e2cd8521c8ba55b2"
+    }
+  ],
+  "validation_issues": []
+}

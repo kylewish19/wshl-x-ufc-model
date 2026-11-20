@@ -1,0 +1,294 @@
+{
+  "schema": "WSHL_X_PAST_ONLY_QUALITY_ADJUSTED_CONDITIONAL_METHOD_RESEARCH_V1",
+  "event_scope": "2026-08-08 through 2026-11-07",
+  "created_for_audit_date": "2026-11-16",
+  "source_ci_run": "https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/43986253261",
+  "source_code": "src/wshlx_ufc/quality_aware_method_shadow.py",
+  "pre_fight_quality_code": "src/wshlx_ufc/prefight_opponent_quality.py",
+  "safe_fighter_pair_join": "src/wshlx_ufc/opponent_quality_join.py",
+  "data_not_promoted": true,
+  "original_frozen_stage_a_b_unchanged": true,
+  "conditional_method_not_fighter_method_betting": true,
+  "quality_source": "UFCStats-compatible historical fight-results archive through Nov07, no UFC334 stats or results",
+  "coverage": {
+    "actual_winner_oracle_orientation": true,
+    "coverage": 1,
+    "matched": 153,
+    "method_rows": 153,
+    "missing": 0,
+    "missing_identity_cases": [],
+    "model_or_wager_changed": false,
+    "not_directly_deployable_without_predicted_winner_orientation": true,
+    "source_status": "HISTORICAL_PRIOR_ONLY_OPPONENT_QUALITY_SHADOW"
+  },
+  "incremental": {
+    "brier_reduction": 0.0001291233119453672,
+    "logloss_reduction": -0.0001060372925201225,
+    "top_method_extra_hits": -1
+  },
+  "not_promoted": true,
+  "overall": {
+    "baseline": {
+      "brier": 0.6042237,
+      "hits": 39,
+      "logloss": 0.9735667,
+      "n": 89
+    },
+    "intercept": {
+      "brier": 0.5587457,
+      "hits": 49,
+      "logloss": 0.915636,
+      "n": 89
+    },
+    "opponent_only": {
+      "brier": 0.5587844,
+      "hits": 49,
+      "logloss": 0.9164603,
+      "n": 89
+    },
+    "quality_only": {
+      "brier": 0.5584348,
+      "hits": 49,
+      "logloss": 0.9146642,
+      "n": 89
+    },
+    "quality_plus_opponent": {
+      "brier": 0.5586166,
+      "hits": 48,
+      "logloss": 0.915742,
+      "n": 89
+    }
+  },
+  "per_event": [
+    {
+      "event_date": "2026-09-19",
+      "methods": {
+        "baseline": {
+          "brier": 0.639271,
+          "hits": 5,
+          "logloss": 1.032188
+        },
+        "intercept": {
+          "brier": 0.646522,
+          "hits": 4,
+          "logloss": 1.042917
+        },
+        "opponent_only": {
+          "brier": 0.647329,
+          "hits": 4,
+          "logloss": 1.045071
+        },
+        "quality_only": {
+          "brier": 0.643581,
+          "hits": 4,
+          "logloss": 1.040092
+        },
+        "quality_plus_opponent": {
+          "brier": 0.644421,
+          "hits": 4,
+          "logloss": 1.04231
+        }
+      },
+      "test": 12,
+      "train": 64
+    },
+    {
+      "event_date": "2026-09-26",
+      "methods": {
+        "baseline": {
+          "brier": 0.673768,
+          "hits": 4,
+          "logloss": 1.073137
+        },
+        "intercept": {
+          "brier": 0.608398,
+          "hits": 5,
+          "logloss": 0.982595
+        },
+        "opponent_only": {
+          "brier": 0.607759,
+          "hits": 5,
+          "logloss": 0.982966
+        },
+        "quality_only": {
+          "brier": 0.60815,
+          "hits": 4,
+          "logloss": 0.981561
+        },
+        "quality_plus_opponent": {
+          "brier": 0.607566,
+          "hits": 4,
+          "logloss": 0.981973
+        }
+      },
+      "test": 11,
+      "train": 76
+    },
+    {
+      "event_date": "2026-10-03",
+      "methods": {
+        "baseline": {
+          "brier": 0.529457,
+          "hits": 6,
+          "logloss": 0.851661
+        },
+        "intercept": {
+          "brier": 0.439749,
+          "hits": 11,
+          "logloss": 0.74424
+        },
+        "opponent_only": {
+          "brier": 0.438212,
+          "hits": 11,
+          "logloss": 0.742684
+        },
+        "quality_only": {
+          "brier": 0.443475,
+          "hits": 11,
+          "logloss": 0.74607
+        },
+        "quality_plus_opponent": {
+          "brier": 0.442055,
+          "hits": 11,
+          "logloss": 0.744739
+        }
+      },
+      "test": 14,
+      "train": 87
+    },
+    {
+      "event_date": "2026-10-10",
+      "methods": {
+        "baseline": {
+          "brier": 0.614474,
+          "hits": 4,
+          "logloss": 0.993031
+        },
+        "intercept": {
+          "brier": 0.502345,
+          "hits": 7,
+          "logloss": 0.853644
+        },
+        "opponent_only": {
+          "brier": 0.501404,
+          "hits": 7,
+          "logloss": 0.854651
+        },
+        "quality_only": {
+          "brier": 0.502755,
+          "hits": 8,
+          "logloss": 0.855787
+        },
+        "quality_plus_opponent": {
+          "brier": 0.501953,
+          "hits": 7,
+          "logloss": 0.856894
+        }
+      },
+      "test": 11,
+      "train": 101
+    },
+    {
+      "event_date": "2026-10-17",
+      "methods": {
+        "baseline": {
+          "brier": 0.68074,
+          "hits": 6,
+          "logloss": 1.094589
+        },
+        "intercept": {
+          "brier": 0.541374,
+          "hits": 7,
+          "logloss": 0.934715
+        },
+        "opponent_only": {
+          "brier": 0.538671,
+          "hits": 7,
+          "logloss": 0.931043
+        },
+        "quality_only": {
+          "brier": 0.535726,
+          "hits": 7,
+          "logloss": 0.926537
+        },
+        "quality_plus_opponent": {
+          "brier": 0.533426,
+          "hits": 7,
+          "logloss": 0.923407
+        }
+      },
+      "test": 13,
+      "train": 112
+    },
+    {
+      "event_date": "2026-10-24",
+      "methods": {
+        "baseline": {
+          "brier": 0.66071,
+          "hits": 6,
+          "logloss": 1.058546
+        },
+        "intercept": {
+          "brier": 0.701137,
+          "hits": 5,
+          "logloss": 1.081946
+        },
+        "opponent_only": {
+          "brier": 0.704955,
+          "hits": 5,
+          "logloss": 1.086679
+        },
+        "quality_only": {
+          "brier": 0.703088,
+          "hits": 5,
+          "logloss": 1.082627
+        },
+        "quality_plus_opponent": {
+          "brier": 0.707201,
+          "hits": 5,
+          "logloss": 1.088254
+        }
+      },
+      "test": 14,
+      "train": 125
+    },
+    {
+      "event_date": "2026-11-07",
+      "methods": {
+        "baseline": {
+          "brier": 0.458718,
+          "hits": 8,
+          "logloss": 0.754342
+        },
+        "intercept": {
+          "brier": 0.481547,
+          "hits": 10,
+          "logloss": 0.790005
+        },
+        "opponent_only": {
+          "brier": 0.482573,
+          "hits": 10,
+          "logloss": 0.792549
+        },
+        "quality_only": {
+          "brier": 0.481532,
+          "hits": 10,
+          "logloss": 0.79046
+        },
+        "quality_plus_opponent": {
+          "brier": 0.4825,
+          "hits": 10,
+          "logloss": 0.792827
+        }
+      },
+      "test": 14,
+      "train": 139
+    }
+  ],
+  "quality_only": {
+    "brier_reduction": 0.00031085810966846594,
+    "logloss_reduction": 0.000971760637858865,
+    "top_method_extra_hits": 0
+  },
+  "status": "RETROSPECTIVE_RESEARCH_ONLY_NO_AUTOMATIC_PROMOTION"
+}

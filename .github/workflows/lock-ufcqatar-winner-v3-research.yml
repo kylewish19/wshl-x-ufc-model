@@ -1,0 +1,85 @@
+name: Lock pre-Nov21 independent winner-v3 research only
+
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths:
+      - "tools/lock_ufcqatar_winner_v3_research.py"
+      - "tests/test_ufc_qatar_winner_v3_future_query.py"
+      - ".github/workflows/lock-ufcqatar-winner-v3-research.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  pre-event-research-lock:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install research dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: "Regression tests for future-card queries without outcome leakage"
+        run: pytest -q tests/test_ufc_qatar_winner_v3_future_query.py tests/test_ufc_winner_recent_form_v3.py tests/test_ufc_historical_feature_baselines.py
+      - name: Prevent overwriting or post-event 'prospective' predictions
+        run: |
+          if test -e data/shadow_locks/ufcqatar_2026-11-21/winner_v3_prospective_shadow.json; then
+            echo "Existing original research shadow cannot be overwritten"; exit 1
+          fi
+          python - <<'PY'
+          from datetime import datetime,timezone
+          assert datetime.now(timezone.utc).isoformat()<'2026-11-21T15:00:00+00:00'
+          print('BEFORE_UFC_QATAR_FIRST_BOUT')
+          PY
+      - name: Train v3 only on earlier UFC, infer all 12 as-of Nov21 matchup shadows
+        run: python tools/lock_ufcqatar_winner_v3_research.py > qatar_winner_v3_research_lock_stdout.log
+      - name: Verify checksum, original Stage A and original Coherent snapshots
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from datetime import datetime
+          import json,hashlib
+          path=Path('data/shadow_locks/ufcqatar_2026-11-21/winner_v3_prospective_shadow.json')
+          d=json.loads(path.read_text())
+          assert d['research_prediction_bouts']==12 and len(d['fights'])==12
+          assert d['winner_v3_primary_prespecified']=='logit_recent_57'
+          assert d['training_decisive_bouts']==3015
+          assert not d['betting_odds_used'] and not d['fan_duel_stage_b_approval']
+          assert d['fighter_method_bets_approved']==0
+          assert d['original_stage_a_and_coherent_shadow_unchanged']
+          assert datetime.fromisoformat(d['locked_at_utc'])<datetime.fromisoformat(d['event_first_fight_utc'])
+          for file,key in (
+            ('data/locks/ufcqatar_2026-11-21/stage_a_final_selection.json','original_stage_a_sha256'),
+            ('data/shadow_locks/ufcqatar_2026-11-21/coherent_joint_pre_event_shadow.json','original_coherent_shadow_sha256'),
+          ):
+              assert hashlib.sha256(Path(file).read_bytes()).hexdigest()==d[key]
+          for x in d['fights']:
+              assert len(x['research_models'])==6 and x['not_authorized_for_betting']
+              for pred in x['research_models'].values():
+                  assert abs(sum(pred['six_joint'].values())-1)<1e-8
+          assert d['fights'][11]['provisional_bout']
+          assert d['fights'][11]['original_official_stage_a_status']=='PASS'
+          print('QATAR_WINNER_V3_SEPARATE_PRE_EVENT_RESEARCH_HASH_LOCK_PASSED')
+          PY
+      - name: Git SHA commit for independently timestamped prospective shadow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/shadow_locks/ufcqatar_2026-11-21/winner_v3_prospective_shadow.json
+          git commit -m "research: immutable Nov21 winner-v3 exact forecast shadow before first bout [skip ci]"
+          git push origin HEAD:feature/historical-conditional-rates
+      - name: Preserve proof and one-run stdout without altering original frozen selections
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wshlx-2026-11-21-winner-v3-independent-prospective-shadow
+          path: |
+            data/shadow_locks/ufcqatar_2026-11-21/winner_v3_prospective_shadow.json
+            qatar_winner_v3_research_lock_stdout.log
+          if-no-files-found: warn
