@@ -45,7 +45,7 @@ def test_winner_marginal_and_true_exact_differ_from_highest_cell():
     assert exact["winner_hit"]==1
     assert exact["method_class_hit"]==0
     assert exact["exact_hit"]==0
-    assert exact["six_logloss"]==-pytest.approx(math.log(.21))
+    assert exact["six_logloss"]==pytest.approx(-math.log(.21))
     exact2=grade_one(p,"B_KO")
     assert exact2["exact_hit"]==1
     assert exact2["winner_brier"]==pytest.approx(.35**2)
