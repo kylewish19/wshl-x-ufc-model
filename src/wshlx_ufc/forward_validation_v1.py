@@ -219,6 +219,11 @@ def fanduel_price_audit(
     source=str(quote.get("source_sha256",""))
     if len(source)!=64 or any(x not in "0123456789abcdef" for x in source.lower()):
         reasons.append("unverified_FanDuel_quote_source_SHA")
+    if quote.get("source_verified_pre_event") is not True:
+        reasons.append("FanDuel_evidence_not_independently_verified")
+    evidence=quote.get("evidence")
+    if not isinstance(evidence,str) or len(evidence.strip())<8:
+        reasons.append("missing_reproducible_FanDuel_evidence_reference")
     try:
         quoted=datetime.fromisoformat(str(quote["quoted_at_utc"]).replace("Z","+00:00"))
         first=datetime.fromisoformat(before_event_utc.replace("Z","+00:00"))
@@ -259,6 +264,7 @@ def grade_selected_card(selected:Sequence[Mapping],settled:Mapping[str,str])->di
     This does not grade fighters not in the previously frozen selected list.
     """
     ids=[str(s["bout_id"]) for s in selected]
+    if len(ids)>5:raise ValueError("Research exact selection exceeds five fights")
     if len(ids)!=len(set(ids)):raise ValueError("Repeated research bet")
     statuses={}
     for s in selected:
