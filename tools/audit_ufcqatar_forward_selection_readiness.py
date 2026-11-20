@@ -48,7 +48,7 @@ def build(original:dict,shadow:dict,original_hash:str,shadow_hash:str,
         raise ValueError("Selected research cannot quietly authorize bets")
     if not shadow.get("all_prior_official_research_predictions_UNCHANGED"):
         raise ValueError("Earlier original locks were not verified")
-    if shadow.get("fights_predicted")!=len(shadow.get("research_fights",[]))!=12:
+    if (shadow.get("fights_predicted")!=12 or len(shadow.get("research_fights",[]))!=12):
         raise ValueError("Original expected 12-fight research panel must remain complete")
     if len(original.get("fights",[]))!=12:raise ValueError("12 original ordered bouts required")
     lock_time=datetime.fromisoformat(shadow["created_and_locked_utc"].replace("Z","+00:00"))
@@ -59,7 +59,7 @@ def build(original:dict,shadow:dict,original_hash:str,shadow_hash:str,
         raise ValueError("Cannot create first claimed pre-event readiness after opening fight")
     normalized=[]
     for i,(f,og) in enumerate(zip(shadow["research_fights"],original["fights"]),1):
-        if (f.get("fight_no")!=og.get("fight_no")!=i or
+        if (f.get("fight_no")!=i or og.get("fight_no")!=i or
             f.get("a")!=og.get("a") or f.get("b")!=og.get("b")):
             raise ValueError(f"Changed fighter/date/number identity at row {i}")
         if f.get("original_Stage_A_posture_unchanged")!=og.get("stage_a_posture"):
