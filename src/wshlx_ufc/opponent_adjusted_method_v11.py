@@ -88,6 +88,56 @@ def build(records):
         "opponent_quality":"UFC-only Elo at time of historical meeting",
         "n_features":MATCH_N}
 
+def strict_access_totals(records,root=None):
+    """Read KD/SUB/TD/control from the pinned source without legacy zero coercion."""
+    import pandas as pd
+    import re,math
+    from .historical_data import col,txt,bout
+    from .prefight_finish_resistance import ARCHIVE
+    from .round_method_v10 import strict_count,strict_pair,strict_time
+    root=ARCHIVE if root is None else root
+    df=pd.read_csv(root/"ufc_fight_stats.csv",low_memory=False)
+    columns={k:col(df,*v) for k,v in {
+        "event":("EVENT",),"bout":("BOUT",),"fighter":("FIGHTER",),"round":("ROUND",),
+        "kd":("KD",),"sub_att":("SUB ATT","SUB.ATT"),"td":("TD",),"ctrl_sec":("CTRL",)
+    }.items()}
+    if any(v is None for v in columns.values()):raise ValueError("Missing raw access columns")
+    rows={};bad=set()
+    for x in df.to_dict("records"):
+        pair=bout(x[columns["bout"]])
+        fighter=txt(x[columns["fighter"]])
+        rnd=re.fullmatch(r"(?:Round\s*)?(\d+)",txt(x[columns["round"]]),re.I)
+        if not pair or not rnd or fighter not in pair:continue
+        key=(txt(x[columns["event"]]),*sorted(pair),fighter,int(rnd[1]))
+        if key in rows:bad.add(key);continue
+        td=strict_pair(x[columns["td"]])
+        rows[key]={"kd":strict_count(x[columns["kd"]]),
+                   "sub_att":strict_count(x[columns["sub_att"]]),
+                   "td_landed":td[0] if td is not None else None,
+                   "ctrl_sec":strict_time(x[columns["ctrl_sec"]])}
+    for key in bad:rows.pop(key,None)
+    adapted=[];complete=0;unknown=0
+    fields=("kd","sub_att","td_landed","ctrl_sec")
+    for r in records:
+        copy=dict(r)
+        count=max(1,int(math.ceil(r["elapsed_seconds"]/300)))
+        for side in ("a","b"):
+            key=(r["event"],*sorted((r["a"],r["b"])),r[side])
+            source=[rows.get((*key,i)) for i in range(1,count+1)] if not r.get("round_format_mismatch") and count<=5 else []
+            values={}
+            for field in fields:
+                vals=[z[field] for z in source if z is not None]
+                ok=len(source)>0 and len(vals)==len(source) and all(v is not None for v in vals)
+                if field=="ctrl_sec" and ok and sum(vals)>r["elapsed_seconds"]:ok=False
+                values[field]=sum(vals) if ok else None
+                unknown+=int(not ok)
+            copy["stats_"+side]=values
+            complete+=int(all(v is not None for v in values.values()))
+        adapted.append(copy)
+    return adapted,{"strict_complete_fighter_bouts":complete,
+        "strict_missing_fighter_field_totals":unknown,"raw_duplicate_round_keys_excluded":len(bad),
+        "raw_missing_values_not_filled":True}
+
 def features(f,side,lookup):
     if f["event_date"]!=f["feature_as_of_exclusive"]:raise ValueError("not as-of")
     key=(f["event_date"],f["event"],*sorted((f["fighter_a"],f["fighter_b"])))
