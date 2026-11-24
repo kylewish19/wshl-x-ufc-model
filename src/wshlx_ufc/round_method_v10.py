@@ -96,7 +96,7 @@ def build_round_history(records,rounds):
             # Only fully elapsed rounds for pace and opportunity rates.
             # Exclude pre-modern formats and reported format mismatch.
             if day.year<2001 or r.get("round_format_mismatch"):continue
-            n=min(5,r["elapsed_seconds"]//300)
+            n=min(5,int(r["elapsed_seconds"]//300))
             aa={i:rounds[(key,a,i)] for i in range(1,n+1) if (key,a,i) in rounds}
             bb={i:rounds[(key,b,i)] for i in range(1,n+1) if (key,b,i) in rounds}
             valid={i for i in aa.keys()&bb.keys() if all(x["ctrl"] is None or x["ctrl"]<=300 for x in (aa[i],bb[i]))}
