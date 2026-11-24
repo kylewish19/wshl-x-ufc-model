@@ -53,7 +53,7 @@ def observe(s,own,rival,result,method):
             s["opportunities"][key]+=1
             s["conversions"][key]+=int(result==target_result and method==target)
 
-def build_conversion(records):
+def build_conversion(records,*,query_date=None,query_bouts=()):
     history=defaultdict(state);out={}
     data=sorted(records,key=lambda x:(x["date"],x["event"],x["a"],x["b"]))
     for day,batch in groupby(data,key=lambda r:r["date"]):
@@ -66,6 +66,13 @@ def build_conversion(records):
             a,b=r["a"],r["b"]
             observe(history[a],r["stats_a"],r["stats_b"],r["result"][0],r["method"])
             observe(history[b],r["stats_b"],r["stats_a"],r["result"][1],r["method"])
+    if query_bouts:
+        from datetime import date
+        if query_date is None or any(r['date']>=date.fromisoformat(query_date) for r in records):raise ValueError('Conversion query must follow historical records')
+        for a,b in query_bouts:
+            key=(query_date,'__PREFIGHT_QUERY_NO_RESULTS__',*sorted((a,b)))
+            if a==b or key in out:raise ValueError('Invalid conversion query identity')
+            out[key]=(a,b,vectors(history[a]),vectors(history[b]))
     return out
 
 def enriched_features(f,side,lookup):
