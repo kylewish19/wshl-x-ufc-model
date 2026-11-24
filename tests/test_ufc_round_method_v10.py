@@ -10,7 +10,7 @@ def row(sig,sub=0,ctrl=0,td=0):
 
 def bout(day, a,b,elapsed=900):
     return {"date":date.fromisoformat(day),"event":"test "+day,
-            "a":a,"b":b,"elapsed_seconds":elapsed}
+            "a":a,"b":b,"elapsed_seconds":float(elapsed)}
 
 def test_round_history_only_from_completed_prior_dates():
     r=[bout("2025-01-01","A","B"),bout("2025-01-01","A","C"),bout("2025-01-02","A","D")]
