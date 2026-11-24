@@ -16,7 +16,7 @@ from wshlx_ufc.finish_v1_research import METHODS,coherent_six,score_six,aggregat
 from wshlx_ufc.finish_conversion_v9 import build_conversion,enriched_features
 from benchmark_winner_recent_form_v3 import matrices,event_paired_diff
 from wshlx_ufc.round_method_v10 import read_rounds,build_round_history,features as round_features
-from wshlx_ufc.opponent_adjusted_method_v11 import build as build_adjusted,features as adjusted_features
+from wshlx_ufc.opponent_adjusted_method_v11 import build as build_adjusted,features as adjusted_features,strict_access_totals
 from benchmark_worldwide_mma_winner_v4 import load_external
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -65,7 +65,9 @@ def main():
     base=_load_records(ARCHIVE,date(2026,11,14))
     if len(base)!=8871:raise ValueError("Historical archive drift")
     conversion=build_conversion(base)
-    adjusted,adjusted_audit=build_adjusted(base)
+    strict_base,strict_audit=strict_access_totals(base)
+    adjusted,adjusted_audit=build_adjusted(strict_base)
+    adjusted_audit.update(strict_audit)
     assert adjusted_audit['historical_bouts']==8871
     rounds,round_audit=read_rounds()
     round_lookup,coverage=build_round_history(base,rounds)
