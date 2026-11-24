@@ -28,7 +28,9 @@ jobs:
       - name: Check past-only round and conversion feature invariants
         run: pytest -q tests/test_ufc_round_method_v10.py tests/test_ufc_finish_conversion_v9.py
       - name: Run chronological fixed-winner submission and round model comparisons
-        run: python tools/benchmark_round_method_v10.py | tee round_v10_stdout.log
+        run: |
+          set -o pipefail
+          python tools/benchmark_round_method_v10.py | tee round_v10_stdout.log
       - name: Verify cohort sizes, fixed winners, frozen original sources and forecast integrity
         run: |
           python - <<'PY'
