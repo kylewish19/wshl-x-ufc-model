@@ -1,0 +1,56 @@
+name: UFC strict history input and future runner research
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths:
+      - "src/wshlx_ufc/strict_history_inputs_v1.py"
+      - "tools/benchmark_strict_history_v1.py"
+      - "tools/run_future_updated_history_research.py"
+      - "tests/test_ufc_strict_history_inputs_v1.py"
+      - ".github/workflows/ufc-strict-history-input-v1.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -e ".[dev]"
+      - run: pytest -q tests/test_ufc_strict_history_inputs_v1.py tests/test_ufc_postevent_history_extension_v1.py
+      - name: Matched input-correction experiment
+        run: |
+          set -o pipefail
+          python tools/benchmark_strict_history_v1.py | tee strict_history_stdout.log
+      - name: Verify original frozen predictions
+        run: |
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          d=json.loads(Path("reports/model_health/2026-11-24_strict_history_v1/results.json").read_text())
+          assert d["same_labels"] and d["research_only"]
+          assert d["audit"]["bouts"]==8871
+          assert d["audit"]["legacy_complete_now_quarantined"]>0
+          original=json.loads(Path("data/grades/ufcqatar_2026_11_21_all_frozen_models_and_public_card_grade.json").read_text())
+          for name,sha in original["frozen_source_hashes"].items():
+              source=Path("data/locks/ufcqatar_2026-11-21" if name=="stage_a_final_selection.json" else "data/shadow_locks/ufcqatar_2026-11-21")/name
+              assert hashlib.sha256(source.read_bytes()).hexdigest()==sha
+          print("STRICT_HISTORY_FROZEN_LOCKS_VERIFIED")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: wshlx-nov24-strict-history-input-v1
+          path: |
+            reports/model_health/2026-11-24_strict_history_v1/
+            strict_history_stdout.log
+          if-no-files-found: warn
