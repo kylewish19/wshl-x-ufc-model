@@ -1,0 +1,1972 @@
+{
+  "betting_roi_UNVERIFIED": true,
+  "coherent_postprocessed_views_NOT_independent_winner_models": true,
+  "confirmed_fight_count": 12,
+  "created_utc": "2026-11-24T21:08:52.213167+00:00",
+  "event_date": "2026-11-21",
+  "event_results_not_added_to_training_or_old_picks": true,
+  "existing_Stage_B_and_FanDuel_prices_NOT_INFERRED": true,
+  "frozen_source_hashes": {
+    "coherent_joint_pre_event_shadow.json": "56953d0b7507f42697e7deab49dbe91a25ae0a3c3ff1947399ea4bae7192cdd4",
+    "stage_a_final_selection.json": "eb5b161b2ff2ac541de7319d2047fffc1dc40c5afed5192643649cd5c5fcb277",
+    "winner_v3_prospective_shadow.json": "77dddff444bf157d06fa7b3a94bce214fdef3a04232fd9f30cff02bad114e999",
+    "worldwide_direct_six_v7_prospective_shadow.json": "9f56c6aae5c515757cfce77acb3b197af4cbb54f4bb474aa1e23cff19df8a2cf",
+    "worldwide_method_v5_prospective_shadow.json": "3be179021826093315275a11afc4642cf8500f080fedf758da41146fb2c92212",
+    "worldwide_winner_v4_prospective_shadow.json": "d1f234f7ea802ec604bfb3e1992cf9a7751f33b3d968f14ad5b072b3581daa06"
+  },
+  "genuinely_forward_this_event_ONLY_one_event_n12": true,
+  "method_distribution": {
+    "DEC": 8,
+    "KO": 3,
+    "SUB": 1
+  },
+  "model_summaries": {
+    "coherent_historical_aligned": {
+      "conditional_method_when_winner_correct": 0.5,
+      "correct_winner_wrong_method": 5,
+      "exact_accuracy": 0.4166666666666667,
+      "exact_hits": 5,
+      "method_class_hits": 6,
+      "original_11_excluding_provisional_exact": 4,
+      "original_11_excluding_provisional_winner": 9,
+      "round_proper_scores_included": true,
+      "six_brier": 0.6692979811802804,
+      "six_logloss": 1.3286280410288043,
+      "winner_accuracy": 0.8333333333333334,
+      "winner_brier": 0.1527678124219131,
+      "winner_hits": 10
+    },
+    "coherent_reference_aligned": {
+      "conditional_method_when_winner_correct": 0.6363636363636364,
+      "correct_winner_wrong_method": 4,
+      "exact_accuracy": 0.5833333333333334,
+      "exact_hits": 7,
+      "method_class_hits": 8,
+      "original_11_excluding_provisional_exact": 6,
+      "original_11_excluding_provisional_winner": 10,
+      "round_proper_scores_included": true,
+      "six_brier": 0.6313981884493691,
+      "six_logloss": 1.2490232445312506,
+      "winner_accuracy": 0.9166666666666666,
+      "winner_brier": 0.14308058966847495,
+      "winner_hits": 11
+    },
+    "coherent_unified_aligned": {
+      "conditional_method_when_winner_correct": 0.6363636363636364,
+      "correct_winner_wrong_method": 4,
+      "exact_accuracy": 0.5833333333333334,
+      "exact_hits": 7,
+      "method_class_hits": 8,
+      "original_11_excluding_provisional_exact": 6,
+      "original_11_excluding_provisional_winner": 10,
+      "round_proper_scores_included": true,
+      "six_brier": 0.6283732476027687,
+      "six_logloss": 1.2420242851335017,
+      "winner_accuracy": 0.9166666666666666,
+      "winner_brier": 0.13876469914418804,
+      "winner_hits": 11
+    },
+    "direct_six_v7_primary": {
+      "conditional_method_when_winner_correct": 0.625,
+      "correct_winner_wrong_method": 3,
+      "exact_accuracy": 0.4166666666666667,
+      "exact_hits": 5,
+      "method_class_hits": 7,
+      "original_11_excluding_provisional_exact": 4,
+      "original_11_excluding_provisional_winner": 7,
+      "round_proper_scores_included": true,
+      "six_brier": 0.678484982280256,
+      "six_logloss": 1.3888999998551854,
+      "winner_accuracy": 0.6666666666666666,
+      "winner_brier": 0.19282386321069378,
+      "winner_hits": 8
+    },
+    "historical": {
+      "conditional_method_when_winner_correct": 0.5,
+      "correct_winner_wrong_method": 5,
+      "exact_accuracy": 0.4166666666666667,
+      "exact_hits": 5,
+      "method_class_hits": 6,
+      "original_11_excluding_provisional_exact": 4,
+      "original_11_excluding_provisional_winner": 9,
+      "round_proper_scores_included": false,
+      "winner_accuracy": 0.8333333333333334,
+      "winner_hits": 10
+    },
+    "method_v5_primary": {
+      "conditional_method_when_winner_correct": 0.625,
+      "correct_winner_wrong_method": 3,
+      "exact_accuracy": 0.4166666666666667,
+      "exact_hits": 5,
+      "method_class_hits": 7,
+      "original_11_excluding_provisional_exact": 4,
+      "original_11_excluding_provisional_winner": 7,
+      "round_proper_scores_included": true,
+      "six_brier": 0.7125006449324074,
+      "six_logloss": 1.4245091930036384,
+      "winner_accuracy": 0.6666666666666666,
+      "winner_brier": 0.21495632318187582,
+      "winner_hits": 8
+    },
+    "reference": {
+      "conditional_method_when_winner_correct": 0.36363636363636365,
+      "correct_winner_wrong_method": 7,
+      "exact_accuracy": 0.3333333333333333,
+      "exact_hits": 4,
+      "method_class_hits": 4,
+      "original_11_excluding_provisional_exact": 3,
+      "original_11_excluding_provisional_winner": 10,
+      "round_proper_scores_included": false,
+      "winner_accuracy": 0.9166666666666666,
+      "winner_hits": 11
+    },
+    "unified": {
+      "conditional_method_when_winner_correct": 0.2727272727272727,
+      "correct_winner_wrong_method": 8,
+      "exact_accuracy": 0.25,
+      "exact_hits": 3,
+      "method_class_hits": 4,
+      "original_11_excluding_provisional_exact": 2,
+      "original_11_excluding_provisional_winner": 10,
+      "round_proper_scores_included": false,
+      "winner_accuracy": 0.9166666666666666,
+      "winner_hits": 11
+    },
+    "winner_v3_primary": {
+      "conditional_method_when_winner_correct": 0.375,
+      "correct_winner_wrong_method": 5,
+      "exact_accuracy": 0.25,
+      "exact_hits": 3,
+      "method_class_hits": 5,
+      "original_11_excluding_provisional_exact": 2,
+      "original_11_excluding_provisional_winner": 7,
+      "round_proper_scores_included": true,
+      "six_brier": 0.7505342310173903,
+      "six_logloss": 1.5005627518358733,
+      "winner_accuracy": 0.6666666666666666,
+      "winner_brier": 0.21495632318187585,
+      "winner_hits": 8
+    },
+    "winner_v4_primary": {
+      "conditional_method_when_winner_correct": 0.4444444444444444,
+      "correct_winner_wrong_method": 5,
+      "exact_accuracy": 0.3333333333333333,
+      "exact_hits": 4,
+      "method_class_hits": 5,
+      "original_11_excluding_provisional_exact": 3,
+      "original_11_excluding_provisional_winner": 8,
+      "round_proper_scores_included": true,
+      "six_brier": 0.749046815022785,
+      "six_logloss": 1.4917410230101558,
+      "winner_accuracy": 0.75,
+      "winner_brier": 0.20935958515255912,
+      "winner_hits": 9
+    }
+  },
+  "newly_approved_bets": 0,
+  "no_model_promotion_based_on_single_event": true,
+  "original_Reference_and_model_shadows_never_modified": true,
+  "original_sha_checks": {
+    "coherent": true,
+    "v3": true,
+    "v4": true,
+    "v5": true,
+    "v7": true
+  },
+  "per_fight": [
+    {
+      "bout_key": "ufcqatar_2026_11_21_01",
+      "fight_no": 1,
+      "models": {
+        "coherent_historical_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.34419905498326886,
+          "selected_method": "KO",
+          "six_brier": 0.535275375134577,
+          "six_logloss": 1.06653514075388,
+          "winner": "Diyar Nurgozhay",
+          "winner_brier": 0.21336815790771216,
+          "winner_hit": 1
+        },
+        "coherent_reference_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.3524176765731899,
+          "selected_method": "KO",
+          "six_brier": 0.5295197908415114,
+          "six_logloss": 1.042938225641249,
+          "winner": "Diyar Nurgozhay",
+          "winner_brier": 0.102914209430784,
+          "winner_hit": 1
+        },
+        "coherent_unified_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.31120616367309334,
+          "selected_method": "KO",
+          "six_brier": 0.5799141944617111,
+          "six_logloss": 1.1672996807265674,
+          "winner": "Diyar Nurgozhay",
+          "winner_brier": 0.17454636671287335,
+          "winner_hit": 1
+        },
+        "direct_six_v7_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.7983431765057531,
+          "selected_method": "KO",
+          "six_brier": 0.05135364387105525,
+          "six_logloss": 0.2252167282289403,
+          "winner": "Diyar Nurgozhay",
+          "winner_brier": 0.0103350302820235,
+          "winner_hit": 1
+        },
+        "historical": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "selected_method": "KO",
+          "winner": "Diyar Nurgozhay",
+          "winner_hit": 1
+        },
+        "method_v5_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.28029423649415414,
+          "selected_method": "DEC",
+          "six_brier": 0.7282221470866367,
+          "six_logloss": 1.4030167685892174,
+          "winner": "Diyar Nurgozhay",
+          "winner_brier": 0.18429750864744857,
+          "winner_hit": 1
+        },
+        "reference": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "selected_method": "KO",
+          "winner": "Diyar Nurgozhay",
+          "winner_hit": 1
+        },
+        "unified": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "selected_method": "KO",
+          "winner": "Diyar Nurgozhay",
+          "winner_hit": 1
+        },
+        "winner_v3_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.2898348877341564,
+          "selected_method": "DEC",
+          "six_brier": 0.7303786411372073,
+          "six_logloss": 1.4313926980060179,
+          "winner": "Diyar Nurgozhay",
+          "winner_brier": 0.18429750864744857,
+          "winner_hit": 1
+        },
+        "winner_v4_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.3396089176026964,
+          "selected_method": "DEC",
+          "six_brier": 0.6751049438427855,
+          "six_logloss": 1.2729093929741822,
+          "winner": "Diyar Nurgozhay",
+          "winner_brier": 0.10975372783141633,
+          "winner_hit": 1
+        }
+      },
+      "original_a": "Diyar Nurgozhay",
+      "original_b": "Alik Lorenz",
+      "original_stage_a_posture_UNCHANGED": "PASS",
+      "original_unconfirmed_provisional": false,
+      "primary_timing": {
+        "actual_duration_minutes": 5.4,
+        "frozen_primary_timing_market": "Fight goes distance NO",
+        "hit": 1,
+        "market_key": "GTD_NO",
+        "original_frozen_p": 0.6624,
+        "unpriced": true
+      },
+      "public_video_card": {
+        "hit": 1,
+        "market_type": "WINNER_AND_ALLOWED_METHODS",
+        "pick": "Diyar Nurgozhay KO"
+      },
+      "result": {
+        "method": "KO",
+        "official_method_description": "TKO (head kick)",
+        "round": 2,
+        "time": "0:24",
+        "winner": "Diyar Nurgozhay"
+      }
+    },
+    {
+      "bout_key": "ufcqatar_2026_11_21_02",
+      "fight_no": 2,
+      "models": {
+        "coherent_historical_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.34989186854937004,
+          "selected_method": "KO",
+          "six_brier": 0.6416946970182813,
+          "six_logloss": 1.1910868623407846,
+          "winner": "Dom Mar Fan",
+          "winner_brier": 0.04792009297314827,
+          "winner_hit": 1
+        },
+        "coherent_reference_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.3686872683027766,
+          "selected_method": "KO",
+          "six_brier": 0.6642682741137178,
+          "six_logloss": 1.2051413503416837,
+          "winner": "Dom Mar Fan",
+          "winner_brier": 0.08555289925471446,
+          "winner_hit": 1
+        },
+        "coherent_unified_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.3614967191233371,
+          "selected_method": "KO",
+          "six_brier": 0.6283754931788391,
+          "six_logloss": 1.1516775607162122,
+          "winner": "Dom Mar Fan",
+          "winner_brier": 0.05736005252584388,
+          "winner_hit": 1
+        },
+        "direct_six_v7_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.31893474021236334,
+          "selected_method": "KO",
+          "six_brier": 0.732227051441112,
+          "six_logloss": 1.4001226039423902,
+          "winner": "Dom Mar Fan",
+          "winner_brier": 0.12709583797973237,
+          "winner_hit": 1
+        },
+        "historical": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "KO",
+          "winner": "Dom Mar Fan",
+          "winner_hit": 1
+        },
+        "method_v5_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.3764235547949293,
+          "selected_method": "DEC",
+          "six_brier": 0.4951528401169648,
+          "six_logloss": 0.9770402940712833,
+          "winner": "Dom Mar Fan",
+          "winner_brier": 0.08087420329916818,
+          "winner_hit": 1
+        },
+        "reference": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "KO",
+          "winner": "Dom Mar Fan",
+          "winner_hit": 1
+        },
+        "unified": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "KO",
+          "winner": "Dom Mar Fan",
+          "winner_hit": 1
+        },
+        "winner_v3_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.37457439666159487,
+          "selected_method": "KO",
+          "six_brier": 0.7021546038198234,
+          "six_logloss": 1.2800561325028483,
+          "winner": "Dom Mar Fan",
+          "winner_brier": 0.08087420329916818,
+          "winner_hit": 1
+        },
+        "winner_v4_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.27889610030128953,
+          "selected_method": "KO",
+          "six_brier": 0.8076613598801242,
+          "six_logloss": 1.5750072595935205,
+          "winner": "Dom Mar Fan",
+          "winner_brier": 0.21825263939912923,
+          "winner_hit": 1
+        }
+      },
+      "original_a": "Nikolas Motta",
+      "original_b": "Dom Mar Fan",
+      "original_stage_a_posture_UNCHANGED": "LEAN",
+      "original_unconfirmed_provisional": false,
+      "primary_timing": {
+        "actual_duration_minutes": 15.0,
+        "frozen_primary_timing_market": "Over 1.5 rounds",
+        "hit": 1,
+        "market_key": "OVER_1.5",
+        "original_frozen_p": 0.6283,
+        "unpriced": true
+      },
+      "public_video_card": {
+        "hit": 1,
+        "market_type": "WINNER_AND_ALLOWED_METHODS",
+        "pick": "Dom Mar Fan KO/DEC"
+      },
+      "result": {
+        "method": "DEC",
+        "official_method_description": "Unanimous decision",
+        "round": 3,
+        "time": "5:00",
+        "winner": "Dom Mar Fan"
+      }
+    },
+    {
+      "bout_key": "ufcqatar_2026_11_21_03",
+      "fight_no": 3,
+      "models": {
+        "coherent_historical_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.25588840461912604,
+          "selected_method": "KO",
+          "six_brier": 0.6945818856249095,
+          "six_logloss": 1.3932421997516398,
+          "winner": "Tahir Abdullayev",
+          "winner_brier": 0.15661819870430804,
+          "winner_hit": 1
+        },
+        "coherent_reference_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.27332431986467187,
+          "selected_method": "DEC",
+          "six_brier": 0.7067583623622822,
+          "six_logloss": 1.3628702073110406,
+          "winner": "Jake Matthews",
+          "winner_brier": 0.26422064749278584,
+          "winner_hit": 0
+        },
+        "coherent_unified_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.2843426485471164,
+          "selected_method": "DEC",
+          "six_brier": 0.6384788761367833,
+          "six_logloss": 1.2575752590992626,
+          "winner": "Tahir Abdullayev",
+          "winner_brier": 0.18541499910029363,
+          "winner_hit": 1
+        },
+        "direct_six_v7_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.4026256546506201,
+          "selected_method": "DEC",
+          "six_brier": 0.7204913347375533,
+          "six_logloss": 1.3051324113046197,
+          "winner": "Jake Matthews",
+          "winner_brier": 0.3317593513748328,
+          "winner_hit": 0
+        },
+        "historical": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "KO",
+          "winner": "Tahir Abdullayev",
+          "winner_hit": 1
+        },
+        "method_v5_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.3252129182990773,
+          "selected_method": "DEC",
+          "six_brier": 0.7376674166747028,
+          "six_logloss": 1.4373049334237695,
+          "winner": "Jake Matthews",
+          "winner_brier": 0.29548974537634126,
+          "winner_hit": 0
+        },
+        "reference": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "KO",
+          "winner": "Jake Matthews",
+          "winner_hit": 0
+        },
+        "unified": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "KO",
+          "winner": "Tahir Abdullayev",
+          "winner_hit": 1
+        },
+        "winner_v3_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.33227206410548776,
+          "selected_method": "DEC",
+          "six_brier": 0.6499302754189639,
+          "six_logloss": 1.2338611797660397,
+          "winner": "Jake Matthews",
+          "winner_brier": 0.29548974537634126,
+          "winner_hit": 0
+        },
+        "winner_v4_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.3456337342228085,
+          "selected_method": "DEC",
+          "six_brier": 0.6794927268268773,
+          "six_logloss": 1.282940266516704,
+          "winner": "Jake Matthews",
+          "winner_brier": 0.3197326609499815,
+          "winner_hit": 0
+        }
+      },
+      "original_a": "Jake Matthews",
+      "original_b": "Tahir Abdullayev",
+      "original_stage_a_posture_UNCHANGED": "PASS",
+      "original_unconfirmed_provisional": false,
+      "primary_timing": {
+        "actual_duration_minutes": 15.0,
+        "frozen_primary_timing_market": "Over 1.5 rounds",
+        "hit": 1,
+        "market_key": "OVER_1.5",
+        "original_frozen_p": 0.6821,
+        "unpriced": true
+      },
+      "public_video_card": {
+        "hit": 0,
+        "market_type": "WINNER_AND_ALLOWED_METHODS",
+        "pick": "Jake Matthews DEC"
+      },
+      "result": {
+        "method": "DEC",
+        "official_method_description": "Unanimous decision",
+        "round": 3,
+        "time": "5:00",
+        "winner": "Tahir Abdullayev"
+      }
+    },
+    {
+      "bout_key": "ufcqatar_2026_11_21_04",
+      "fight_no": 4,
+      "models": {
+        "coherent_historical_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.24845568532522622,
+          "selected_method": "DEC",
+          "six_brier": 0.9621514480884563,
+          "six_logloss": 2.10203593722545,
+          "winner": "Alessandro Costa",
+          "winner_brier": 0.25054496908693724,
+          "winner_hit": 0
+        },
+        "coherent_reference_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.35856410649425446,
+          "selected_method": "DEC",
+          "six_brier": 1.1107822777229248,
+          "six_logloss": 2.709568527022222,
+          "winner": "Amir Albazi",
+          "winner_brier": 0.206257366644753,
+          "winner_hit": 1
+        },
+        "coherent_unified_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.31897669414238133,
+          "selected_method": "DEC",
+          "six_brier": 1.051662091436391,
+          "six_logloss": 2.4181912260270377,
+          "winner": "Amir Albazi",
+          "winner_brier": 0.23677221120956693,
+          "winner_hit": 1
+        },
+        "direct_six_v7_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.28361645739911356,
+          "selected_method": "DEC",
+          "six_brier": 1.0437737407896803,
+          "six_logloss": 2.4390592719303315,
+          "winner": "Amir Albazi",
+          "winner_brier": 0.2125468760680905,
+          "winner_hit": 1
+        },
+        "historical": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "DEC",
+          "winner": "Alessandro Costa",
+          "winner_hit": 0
+        },
+        "method_v5_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.20297601344313843,
+          "selected_method": "DEC",
+          "six_brier": 0.8449785226924187,
+          "six_logloss": 1.7392475889827144,
+          "winner": "Amir Albazi",
+          "winner_brier": 0.23890054624944748,
+          "winner_hit": 1
+        },
+        "reference": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "DEC",
+          "winner": "Amir Albazi",
+          "winner_hit": 1
+        },
+        "unified": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "DEC",
+          "winner": "Amir Albazi",
+          "winner_hit": 1
+        },
+        "winner_v3_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.23201807768958263,
+          "selected_method": "DEC",
+          "six_brier": 0.9842856841603985,
+          "six_logloss": 2.2260529245229987,
+          "winner": "Amir Albazi",
+          "winner_brier": 0.23890054624944737,
+          "winner_hit": 1
+        },
+        "winner_v4_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.2404992012849451,
+          "selected_method": "DEC",
+          "six_brier": 0.9755479704535481,
+          "six_logloss": 2.190151445749625,
+          "winner": "Amir Albazi",
+          "winner_brier": 0.2209821102797893,
+          "winner_hit": 1
+        }
+      },
+      "original_a": "Amir Albazi",
+      "original_b": "Alessandro Costa",
+      "original_stage_a_posture_UNCHANGED": "PASS",
+      "original_unconfirmed_provisional": false,
+      "primary_timing": {
+        "actual_duration_minutes": 14.566666666666666,
+        "frozen_primary_timing_market": "Over 1.5 rounds",
+        "hit": 1,
+        "market_key": "OVER_1.5",
+        "original_frozen_p": 0.7462,
+        "unpriced": true
+      },
+      "public_video_card": {
+        "hit": 0,
+        "market_type": "WINNER_AND_ALLOWED_METHODS",
+        "pick": "Amir Albazi DEC"
+      },
+      "result": {
+        "method": "SUB",
+        "official_method_description": "Submission (rear-naked choke)",
+        "round": 3,
+        "time": "4:34",
+        "winner": "Amir Albazi"
+      }
+    },
+    {
+      "bout_key": "ufcqatar_2026_11_21_05",
+      "fight_no": 5,
+      "models": {
+        "coherent_historical_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.5315518709275582,
+          "selected_method": "KO",
+          "six_brier": 1.0939153390235175,
+          "six_logloss": 2.1024517005277845,
+          "winner": "Tallison Teixeira",
+          "winner_brier": 0.04870662297101359,
+          "winner_hit": 1
+        },
+        "coherent_reference_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.4539860019886864,
+          "selected_method": "KO",
+          "six_brier": 0.9666358095629393,
+          "six_logloss": 1.8239804558389565,
+          "winner": "Tallison Teixeira",
+          "winner_brier": 0.10796677755953056,
+          "winner_hit": 1
+        },
+        "coherent_unified_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.4872028890112115,
+          "selected_method": "KO",
+          "six_brier": 0.9609276046598552,
+          "six_logloss": 1.7582551854906219,
+          "winner": "Tallison Teixeira",
+          "winner_brier": 0.0626032460643247,
+          "winner_hit": 1
+        },
+        "direct_six_v7_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.3065746743444397,
+          "selected_method": "KO",
+          "six_brier": 1.0230481397026892,
+          "six_logloss": 2.2691528465047717,
+          "winner": "Shamil Gaziev",
+          "winner_brier": 0.3007767392662455,
+          "winner_hit": 0
+        },
+        "historical": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "KO",
+          "winner": "Tallison Teixeira",
+          "winner_hit": 1
+        },
+        "method_v5_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.32157251454858105,
+          "selected_method": "KO",
+          "six_brier": 1.0215398286755681,
+          "six_logloss": 2.216671660230201,
+          "winner": "Shamil Gaziev",
+          "winner_brier": 0.32271772545682254,
+          "winner_hit": 0
+        },
+        "reference": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "KO",
+          "winner": "Tallison Teixeira",
+          "winner_hit": 1
+        },
+        "unified": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "KO",
+          "winner": "Tallison Teixeira",
+          "winner_hit": 1
+        },
+        "winner_v3_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.3203414182177456,
+          "selected_method": "KO",
+          "six_brier": 0.9835566955511301,
+          "six_logloss": 2.098656202323353,
+          "winner": "Shamil Gaziev",
+          "winner_brier": 0.32271772545682254,
+          "winner_hit": 0
+        },
+        "winner_v4_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.2938933406875483,
+          "selected_method": "KO",
+          "six_brier": 0.954184836497791,
+          "six_logloss": 1.9955668609512518,
+          "winner": "Shamil Gaziev",
+          "winner_brier": 0.27162899268020574,
+          "winner_hit": 0
+        }
+      },
+      "original_a": "Shamil Gaziev",
+      "original_b": "Tallison Teixeira",
+      "original_stage_a_posture_UNCHANGED": "LEAN",
+      "original_unconfirmed_provisional": false,
+      "primary_timing": {
+        "actual_duration_minutes": 15.0,
+        "frozen_primary_timing_market": "Fight goes distance NO",
+        "hit": 0,
+        "market_key": "GTD_NO",
+        "original_frozen_p": 0.7352000000000001,
+        "unpriced": true
+      },
+      "public_video_card": {
+        "hit": 0,
+        "market_type": "WINNER_AND_ALLOWED_METHODS",
+        "pick": "Tallison Teixeira KO"
+      },
+      "result": {
+        "method": "DEC",
+        "official_method_description": "Unanimous decision",
+        "round": 3,
+        "time": "5:00",
+        "winner": "Tallison Teixeira"
+      }
+    },
+    {
+      "bout_key": "ufcqatar_2026_11_21_06",
+      "fight_no": 6,
+      "models": {
+        "coherent_historical_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.3759975762653361,
+          "selected_method": "DEC",
+          "six_brier": 0.4883893657626317,
+          "six_logloss": 0.9781725817158483,
+          "winner": "Santiago Luna",
+          "winner_brier": 0.10308421659402557,
+          "winner_hit": 1
+        },
+        "coherent_reference_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.3389189611645479,
+          "selected_method": "DEC",
+          "six_brier": 0.5944758410372813,
+          "six_logloss": 1.08199425279127,
+          "winner": "Santiago Luna",
+          "winner_brier": 0.20793244653534215,
+          "winner_hit": 1
+        },
+        "coherent_unified_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.40028237539478234,
+          "selected_method": "DEC",
+          "six_brier": 0.4678693898168849,
+          "six_logloss": 0.915585042444567,
+          "winner": "Santiago Luna",
+          "winner_brier": 0.12930374473423248,
+          "winner_hit": 1
+        },
+        "direct_six_v7_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.22149820064800615,
+          "selected_method": "DEC",
+          "six_brier": 0.7642401378051246,
+          "six_logloss": 1.507340813015242,
+          "winner": "Santiago Luna",
+          "winner_brier": 0.23103297172250295,
+          "winner_hit": 1
+        },
+        "historical": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "KO",
+          "winner": "Santiago Luna",
+          "winner_hit": 1
+        },
+        "method_v5_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.25920843073188166,
+          "selected_method": "DEC",
+          "six_brier": 0.7855542692012474,
+          "six_logloss": 1.5979846238450124,
+          "winner": "Aleksandre Topuria",
+          "winner_brier": 0.3097020712627887,
+          "winner_hit": 0
+        },
+        "reference": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "KO",
+          "winner": "Santiago Luna",
+          "winner_hit": 1
+        },
+        "unified": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "KO",
+          "winner": "Santiago Luna",
+          "winner_hit": 1
+        },
+        "winner_v3_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.325579497944649,
+          "selected_method": "DEC",
+          "six_brier": 0.8101635593784953,
+          "six_logloss": 1.6002420706076703,
+          "winner": "Aleksandre Topuria",
+          "winner_brier": 0.3097020712627887,
+          "winner_hit": 0
+        },
+        "winner_v4_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.2596296537484904,
+          "selected_method": "DEC",
+          "six_brier": 0.6898392325605549,
+          "six_logloss": 1.3484990720606533,
+          "winner": "Santiago Luna",
+          "winner_brier": 0.1845154663334647,
+          "winner_hit": 1
+        }
+      },
+      "original_a": "Aleksandre Topuria",
+      "original_b": "Santiago Luna",
+      "original_stage_a_posture_UNCHANGED": "PASS",
+      "original_unconfirmed_provisional": false,
+      "primary_timing": {
+        "actual_duration_minutes": 15.0,
+        "frozen_primary_timing_market": "Over 1.5 rounds",
+        "hit": 1,
+        "market_key": "OVER_1.5",
+        "original_frozen_p": 0.8033,
+        "unpriced": true
+      },
+      "public_video_card": {
+        "hit": 1,
+        "market_type": "GTD_YES",
+        "pick": "FIGHT_GOES_DISTANCE_YES"
+      },
+      "result": {
+        "method": "DEC",
+        "official_method_description": "Split decision",
+        "round": 3,
+        "time": "5:00",
+        "winner": "Santiago Luna"
+      }
+    },
+    {
+      "bout_key": "ufcqatar_2026_11_21_07",
+      "fight_no": 7,
+      "models": {
+        "coherent_historical_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.33665256345790695,
+          "selected_method": "KO",
+          "six_brier": 0.6987773061445139,
+          "six_logloss": 1.3060530974954445,
+          "winner": "Ikram Aliskerov",
+          "winner_brier": 0.03610874278001177,
+          "winner_hit": 1
+        },
+        "coherent_reference_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.4079915913676001,
+          "selected_method": "KO",
+          "six_brier": 0.6948784443888353,
+          "six_logloss": 1.2203449635391588,
+          "winner": "Ikram Aliskerov",
+          "winner_brier": 0.06632047617907101,
+          "winner_hit": 1
+        },
+        "coherent_unified_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.3747395606647356,
+          "selected_method": "KO",
+          "six_brier": 0.6559325375069583,
+          "six_logloss": 1.193767303655912,
+          "winner": "Ikram Aliskerov",
+          "winner_brier": 0.043570805870410255,
+          "winner_hit": 1
+        },
+        "direct_six_v7_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.3377238744488655,
+          "selected_method": "DEC",
+          "six_brier": 0.5681470688245545,
+          "six_logloss": 1.0855266568764406,
+          "winner": "Ikram Aliskerov",
+          "winner_brier": 0.07046109181887279,
+          "winner_hit": 1
+        },
+        "historical": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "KO",
+          "winner": "Ikram Aliskerov",
+          "winner_hit": 1
+        },
+        "method_v5_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.4028517889338787,
+          "selected_method": "DEC",
+          "six_brier": 0.47372444027320304,
+          "six_logloss": 0.9091865540740454,
+          "winner": "Ikram Aliskerov",
+          "winner_brier": 0.058957823465181594,
+          "winner_hit": 1
+        },
+        "reference": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "KO",
+          "winner": "Ikram Aliskerov",
+          "winner_hit": 1
+        },
+        "unified": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "KO",
+          "winner": "Ikram Aliskerov",
+          "winner_hit": 1
+        },
+        "winner_v3_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.35185383263275966,
+          "selected_method": "DEC",
+          "six_brier": 0.5679964908557005,
+          "six_logloss": 1.0445394378258368,
+          "winner": "Ikram Aliskerov",
+          "winner_brier": 0.058957823465181594,
+          "winner_hit": 1
+        },
+        "winner_v4_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.3255826045012714,
+          "selected_method": "DEC",
+          "six_brier": 0.5988630809821539,
+          "six_logloss": 1.1221390722598665,
+          "winner": "Ikram Aliskerov",
+          "winner_brier": 0.08960914866163629,
+          "winner_hit": 1
+        }
+      },
+      "original_a": "Jared Cannonier",
+      "original_b": "Ikram Aliskerov",
+      "original_stage_a_posture_UNCHANGED": "SIDE",
+      "original_unconfirmed_provisional": false,
+      "primary_timing": {
+        "actual_duration_minutes": 15.0,
+        "frozen_primary_timing_market": "Fight goes distance NO",
+        "hit": 0,
+        "market_key": "GTD_NO",
+        "original_frozen_p": 0.6068,
+        "unpriced": true
+      },
+      "public_video_card": {
+        "hit": 0,
+        "market_type": "WINNER_AND_ALLOWED_METHODS",
+        "pick": "Ikram Aliskerov KO"
+      },
+      "result": {
+        "method": "DEC",
+        "official_method_description": "Unanimous decision",
+        "round": 3,
+        "time": "5:00",
+        "winner": "Ikram Aliskerov"
+      }
+    },
+    {
+      "bout_key": "ufcqatar_2026_11_21_08",
+      "fight_no": 8,
+      "models": {
+        "coherent_historical_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.29617046710572165,
+          "selected_method": "DEC",
+          "six_brier": 0.7502092318611865,
+          "six_logloss": 1.4624923796064195,
+          "winner": "Asu Almabayev",
+          "winner_brier": 0.3356415395293064,
+          "winner_hit": 0
+        },
+        "coherent_reference_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.38681926328490485,
+          "selected_method": "DEC",
+          "six_brier": 0.48543078678037865,
+          "six_logloss": 0.9497977149757773,
+          "winner": "Kyoji Horiguchi",
+          "winner_brier": 0.1739889111669613,
+          "winner_hit": 1
+        },
+        "coherent_unified_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.3217668801722123,
+          "selected_method": "DEC",
+          "six_brier": 0.637220575039107,
+          "six_logloss": 1.2023503606655719,
+          "winner": "Asu Almabayev",
+          "winner_brier": 0.28183409207964266,
+          "winner_hit": 0
+        },
+        "direct_six_v7_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.23336347262327672,
+          "selected_method": "SUB",
+          "six_brier": 0.6354576000413434,
+          "six_logloss": 1.2360043311330178,
+          "winner": "Asu Almabayev",
+          "winner_brier": 0.25144480738251074,
+          "winner_hit": 0
+        },
+        "historical": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 1,
+          "selected_method": "DEC",
+          "winner": "Asu Almabayev",
+          "winner_hit": 0
+        },
+        "method_v5_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.2836497137886234,
+          "selected_method": "SUB",
+          "six_brier": 0.7846059390224402,
+          "six_logloss": 1.5489324803250137,
+          "winner": "Asu Almabayev",
+          "winner_brier": 0.2892222885065922,
+          "winner_hit": 0
+        },
+        "reference": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "selected_method": "DEC",
+          "winner": "Kyoji Horiguchi",
+          "winner_hit": 1
+        },
+        "unified": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 1,
+          "selected_method": "DEC",
+          "winner": "Asu Almabayev",
+          "winner_hit": 0
+        },
+        "winner_v3_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.26538714729237733,
+          "selected_method": "SUB",
+          "six_brier": 0.7822964293992091,
+          "six_logloss": 1.5637551259721325,
+          "winner": "Asu Almabayev",
+          "winner_brier": 0.2892222885065922,
+          "winner_hit": 0
+        },
+        "winner_v4_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.2866034632478026,
+          "selected_method": "SUB",
+          "six_brier": 0.8231960456924693,
+          "six_logloss": 1.6613885812631441,
+          "winner": "Asu Almabayev",
+          "winner_brier": 0.33731437844346374,
+          "winner_hit": 0
+        }
+      },
+      "original_a": "Kyoji Horiguchi",
+      "original_b": "Asu Almabayev",
+      "original_stage_a_posture_UNCHANGED": "PASS",
+      "original_unconfirmed_provisional": false,
+      "primary_timing": {
+        "actual_duration_minutes": 15.0,
+        "frozen_primary_timing_market": "Over 1.5 rounds",
+        "hit": 1,
+        "market_key": "OVER_1.5",
+        "original_frozen_p": 0.7708,
+        "unpriced": true
+      },
+      "public_video_card": {
+        "hit": 0,
+        "market_type": "WINNER_AND_ALLOWED_METHODS",
+        "pick": "Asu Almabayev SUB/DEC"
+      },
+      "result": {
+        "method": "DEC",
+        "official_method_description": "Unanimous decision",
+        "round": 3,
+        "time": "5:00",
+        "winner": "Kyoji Horiguchi"
+      }
+    },
+    {
+      "bout_key": "ufcqatar_2026_11_21_09",
+      "fight_no": 9,
+      "models": {
+        "coherent_historical_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.3095268180529755,
+          "selected_method": "DEC",
+          "six_brier": 0.58117194118475,
+          "six_logloss": 1.1727105410056098,
+          "winner": "Dan Hooker",
+          "winner_brier": 0.16263705455290586,
+          "winner_hit": 1
+        },
+        "coherent_reference_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.29019542076405525,
+          "selected_method": "DEC",
+          "six_brier": 0.6384395733228239,
+          "six_logloss": 1.2372007182428502,
+          "winner": "Dan Hooker",
+          "winner_brier": 0.20074952851657085,
+          "winner_hit": 1
+        },
+        "coherent_unified_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.30918030374507205,
+          "selected_method": "DEC",
+          "six_brier": 0.5888424739197857,
+          "six_logloss": 1.1738306649929553,
+          "winner": "Dan Hooker",
+          "winner_brier": 0.17353899287609156,
+          "winner_hit": 1
+        },
+        "direct_six_v7_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 0,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.3396266944579588,
+          "selected_method": "DEC",
+          "six_brier": 0.8060339319436368,
+          "six_logloss": 1.5408329112050867,
+          "winner": "Brian Ortega",
+          "winner_brier": 0.25749906160121067,
+          "winner_hit": 0
+        },
+        "historical": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "selected_method": "DEC",
+          "winner": "Dan Hooker",
+          "winner_hit": 1
+        },
+        "method_v5_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.2540298091096595,
+          "selected_method": "DEC",
+          "six_brier": 0.6990931923886675,
+          "six_logloss": 1.370303660150147,
+          "winner": "Dan Hooker",
+          "winner_brier": 0.21450016398381808,
+          "winner_hit": 1
+        },
+        "reference": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "KO",
+          "winner": "Dan Hooker",
+          "winner_hit": 1
+        },
+        "unified": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "KO",
+          "winner": "Dan Hooker",
+          "winner_hit": 1
+        },
+        "winner_v3_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.2556617183705135,
+          "selected_method": "KO",
+          "six_brier": 0.725998493948828,
+          "six_logloss": 1.4335599774431194,
+          "winner": "Dan Hooker",
+          "winner_brier": 0.2145001639838182,
+          "winner_hit": 1
+        },
+        "winner_v4_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.23921641527279994,
+          "selected_method": "KO",
+          "six_brier": 0.7534290857197042,
+          "six_logloss": 1.5000464900277202,
+          "winner": "Dan Hooker",
+          "winner_brier": 0.2476801583700108,
+          "winner_hit": 1
+        }
+      },
+      "original_a": "Dan Hooker",
+      "original_b": "Brian Ortega",
+      "original_stage_a_posture_UNCHANGED": "PASS",
+      "original_unconfirmed_provisional": false,
+      "primary_timing": {
+        "actual_duration_minutes": 15.0,
+        "frozen_primary_timing_market": "Over 1.5 rounds",
+        "hit": 1,
+        "market_key": "OVER_1.5",
+        "original_frozen_p": 0.6978,
+        "unpriced": true
+      },
+      "public_video_card": {
+        "hit": 1,
+        "market_type": "WINNER_AND_ALLOWED_METHODS",
+        "pick": "Dan Hooker KO/DEC"
+      },
+      "result": {
+        "method": "DEC",
+        "official_method_description": "Unanimous decision",
+        "round": 3,
+        "time": "5:00",
+        "winner": "Dan Hooker"
+      }
+    },
+    {
+      "bout_key": "ufcqatar_2026_11_21_10",
+      "fight_no": 10,
+      "models": {
+        "coherent_historical_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.30661587415266783,
+          "selected_method": "KO",
+          "six_brier": 0.6431132714932899,
+          "six_logloss": 1.2143097849279543,
+          "winner": "Kevin Vallejos",
+          "winner_brier": 0.11839478677312038,
+          "winner_hit": 1
+        },
+        "coherent_reference_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.3393149317846297,
+          "selected_method": "DEC",
+          "six_brier": 0.5831881448446354,
+          "six_logloss": 1.0808266005427243,
+          "winner": "Kevin Vallejos",
+          "winner_brier": 0.10895077237993257,
+          "winner_hit": 1
+        },
+        "coherent_unified_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.32546248922412085,
+          "selected_method": "DEC",
+          "six_brier": 0.5986196278930781,
+          "six_logloss": 1.1225080644530987,
+          "winner": "Kevin Vallejos",
+          "winner_brier": 0.11550003402750064,
+          "winner_hit": 1
+        },
+        "direct_six_v7_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.33334298122993167,
+          "selected_method": "KO",
+          "six_brier": 0.8810309925494756,
+          "six_logloss": 1.7144028642992961,
+          "winner": "Kevin Vallejos",
+          "winner_brier": 0.21629570339683038,
+          "winner_hit": 1
+        },
+        "historical": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "selected_method": "DEC",
+          "winner": "Kevin Vallejos",
+          "winner_hit": 1
+        },
+        "method_v5_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.33615769008805685,
+          "selected_method": "KO",
+          "six_brier": 0.9503122609534153,
+          "six_logloss": 1.8795255438028429,
+          "winner": "Kevin Vallejos",
+          "winner_brier": 0.24527422621074635,
+          "winner_hit": 1
+        },
+        "reference": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "KO",
+          "winner": "Kevin Vallejos",
+          "winner_hit": 1
+        },
+        "unified": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "selected_method": "KO",
+          "winner": "Kevin Vallejos",
+          "winner_hit": 1
+        },
+        "winner_v3_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.3040469855311691,
+          "selected_method": "KO",
+          "six_brier": 0.8537381700819876,
+          "six_logloss": 1.6749108287743901,
+          "winner": "Kevin Vallejos",
+          "winner_brier": 0.24527422621074635,
+          "winner_hit": 1
+        },
+        "winner_v4_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 1,
+          "exact_hit": 0,
+          "method_class_hit": 0,
+          "p_predicted_exact": 0.35930280141428683,
+          "selected_method": "KO",
+          "six_brier": 0.8024498394789421,
+          "six_logloss": 1.507927584950121,
+          "winner": "Kevin Vallejos",
+          "winner_brier": 0.16282961251800684,
+          "winner_hit": 1
+        }
+      },
+      "original_a": "Aljamain Sterling",
+      "original_b": "Kevin Vallejos",
+      "original_stage_a_posture_UNCHANGED": "LEAN",
+      "original_unconfirmed_provisional": false,
+      "primary_timing": {
+        "actual_duration_minutes": 15.0,
+        "frozen_primary_timing_market": "Over 1.5 rounds",
+        "hit": 1,
+        "market_key": "OVER_1.5",
+        "original_frozen_p": 0.7189,
+        "unpriced": true
+      },
+      "public_video_card": {
+        "hit": 0,
+        "market_type": "WINNER_AND_ALLOWED_METHODS",
+        "pick": "Kevin Vallejos KO"
+      },
+      "result": {
+        "method": "DEC",
+        "official_method_description": "Unanimous decision",
+        "round": 3,
+        "time": "5:00",
+        "winner": "Kevin Vallejos"
+      }
+    },
+    {
+      "bout_key": "ufcqatar_2026_11_21_11",
+      "fight_no": 11,
+      "models": {
+        "coherent_historical_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.5591799672068068,
+          "selected_method": "KO",
+          "six_brier": 0.2583419422549891,
+          "six_logloss": 0.5812839127263945,
+          "winner": "Navajo Stirling",
+          "winner_brier": 0.11018936719046772,
+          "winner_hit": 1
+        },
+        "coherent_reference_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.38113894818238636,
+          "selected_method": "KO",
+          "six_brier": 0.5041888904317405,
+          "six_logloss": 0.9645912769478172,
+          "winner": "Navajo Stirling",
+          "winner_brier": 0.19083719146647674,
+          "winner_hit": 1
+        },
+        "coherent_unified_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.45973116995359425,
+          "selected_method": "KO",
+          "six_brier": 0.3754177525663076,
+          "six_logloss": 0.7771133734792808,
+          "winner": "Navajo Stirling",
+          "winner_brier": 0.13120029636189842,
+          "winner_hit": 1
+        },
+        "direct_six_v7_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.5930047077332408,
+          "selected_method": "KO",
+          "six_brier": 0.21475822695917945,
+          "six_logloss": 0.5225529411740341,
+          "winner": "Navajo Stirling",
+          "winner_brier": 0.05463888763547308,
+          "winner_hit": 1
+        },
+        "historical": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "selected_method": "KO",
+          "winner": "Navajo Stirling",
+          "winner_hit": 1
+        },
+        "method_v5_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.4437289437005094,
+          "selected_method": "KO",
+          "six_brier": 0.4089491820204453,
+          "six_logloss": 0.8125413901340905,
+          "winner": "Navajo Stirling",
+          "winner_brier": 0.08953957572415515,
+          "winner_hit": 1
+        },
+        "reference": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "selected_method": "KO",
+          "winner": "Navajo Stirling",
+          "winner_hit": 1
+        },
+        "unified": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "selected_method": "KO",
+          "winner": "Navajo Stirling",
+          "winner_hit": 1
+        },
+        "winner_v3_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.41021824629894355,
+          "selected_method": "KO",
+          "six_brier": 0.4563101318109539,
+          "six_logloss": 0.8910659528632511,
+          "winner": "Navajo Stirling",
+          "winner_brier": 0.08953957572415511,
+          "winner_hit": 1
+        },
+        "winner_v4_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.40025407006410363,
+          "selected_method": "KO",
+          "six_brier": 0.4691910616924815,
+          "six_logloss": 0.9156557583522589,
+          "winner": "Navajo Stirling",
+          "winner_brier": 0.10001612636360467,
+          "winner_hit": 1
+        }
+      },
+      "original_a": "Jiri Prochazka",
+      "original_b": "Navajo Stirling",
+      "original_stage_a_posture_UNCHANGED": "LEAN",
+      "original_unconfirmed_provisional": false,
+      "primary_timing": {
+        "actual_duration_minutes": 9.966666666666667,
+        "frozen_primary_timing_market": "Fight goes distance NO",
+        "hit": 1,
+        "market_key": "GTD_NO",
+        "original_frozen_p": 0.7158,
+        "unpriced": true
+      },
+      "public_video_card": {
+        "hit": 1,
+        "market_type": "WINNER_AND_ALLOWED_METHODS",
+        "pick": "Navajo Stirling KO"
+      },
+      "result": {
+        "method": "KO",
+        "official_method_description": "KO (punch to head)",
+        "round": 2,
+        "time": "4:58",
+        "winner": "Navajo Stirling"
+      }
+    },
+    {
+      "bout_key": "ufcqatar_2026_11_21_12",
+      "fight_no": 12,
+      "models": {
+        "coherent_historical_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.25330465258267526,
+          "selected_method": "KO",
+          "six_brier": 0.6839539705722618,
+          "six_logloss": 1.3731623542684406,
+          "winner": "John Mitchell",
+          "winner_brier": 0.25,
+          "winner_hit": 1
+        },
+        "coherent_reference_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.7341626791684593,
+          "selected_method": "KO",
+          "six_brier": 0.09821206598335738,
+          "six_logloss": 0.3090246411802564,
+          "winner": "John Mitchell",
+          "winner_brier": 0.0012758493947769454,
+          "winner_hit": 1
+        },
+        "coherent_unified_aligned": {
+          "cohort": "COHERENT_PROBABILITY_POSTPROCESSOR_NOT_INDEPENDENT_MODEL",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.46480482167126924,
+          "selected_method": "KO",
+          "six_brier": 0.3572183546175232,
+          "six_logloss": 0.7661376998509325,
+          "winner": "John Mitchell",
+          "winner_brier": 0.07353154816757831,
+          "winner_hit": 1
+        },
+        "direct_six_v7_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.24136242941727054,
+          "selected_method": "KO",
+          "six_brier": 0.7012579186976691,
+          "six_logloss": 1.4214556186480536,
+          "winner": "John Mitchell",
+          "winner_brier": 0.25,
+          "winner_hit": 1
+        },
+        "historical": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "selected_method": "KO",
+          "winner": "John Mitchell",
+          "winner_hit": 1
+        },
+        "method_v5_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.3004857886668148,
+          "selected_method": "KO",
+          "six_brier": 0.6202077000831779,
+          "six_logloss": 1.202354818415324,
+          "winner": "John Mitchell",
+          "winner_brier": 0.25,
+          "winner_hit": 1
+        },
+        "reference": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "selected_method": "KO",
+          "winner": "John Mitchell",
+          "winner_hit": 1
+        },
+        "unified": {
+          "cohort": "ORIGINAL_ODDS_BLIND_STAGE_A",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "selected_method": "KO",
+          "winner": "John Mitchell",
+          "winner_hit": 1
+        },
+        "winner_v3_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.2168259130495675,
+          "selected_method": "KO",
+          "six_brier": 0.7596015966459877,
+          "six_logloss": 1.5286604914228243,
+          "winner": "John Mitchell",
+          "winner_brier": 0.25,
+          "winner_hit": 1
+        },
+        "winner_v4_primary": {
+          "cohort": "PROSPECTIVE_RESEARCH_ONLY",
+          "correct_winner_wrong_method": 0,
+          "exact_hit": 1,
+          "method_class_hit": 1,
+          "p_predicted_exact": 0.2168259130495675,
+          "selected_method": "KO",
+          "six_brier": 0.7596015966459877,
+          "six_logloss": 1.5286604914228243,
+          "winner": "John Mitchell",
+          "winner_brier": 0.25,
+          "winner_hit": 1
+        }
+      },
+      "original_a": "John Mitchell",
+      "original_b": "Shoaib Yousaf",
+      "original_stage_a_posture_UNCHANGED": "PASS",
+      "original_unconfirmed_provisional": true,
+      "primary_timing": {
+        "actual_duration_minutes": 3.8333333333333335,
+        "frozen_primary_timing_market": "Fight goes distance NO",
+        "hit": 1,
+        "market_key": "GTD_NO",
+        "original_frozen_p": 0.8539,
+        "unpriced": true
+      },
+      "public_video_card": {
+        "hit": 1,
+        "market_type": "WINNER_AND_ALLOWED_METHODS",
+        "pick": "John Mitchell KO"
+      },
+      "result": {
+        "method": "KO",
+        "official_method_description": "TKO (knee to head)",
+        "round": 1,
+        "time": "3:50",
+        "winner": "John Mitchell"
+      }
+    }
+  ],
+  "primary_stage_a_timing": {
+    "accuracy": 0.8333333333333334,
+    "all_unpriced": true,
+    "correct": 10,
+    "total": 12
+  },
+  "public_pre_event_selections_FROM_CHAT_NOT_OFFICIAL_MODEL_LOCK": {
+    "accuracy": 0.5,
+    "bets_not_verified_no_ROI_claim": true,
+    "correct": 6,
+    "distinct_public_card_vs_preregistered_original": true,
+    "original_11_excluding_provisional": 5,
+    "total": 12
+  },
+  "schema": "WSHLX_UFC_QATAR_NOV21_MODEL_X10_AND_PUBLIC_CARD_POST_EVENT_GRADE",
+  "scope": "12 distinct decisive completed bouts; original 11 plus late provisional Mitchell-Yousaf",
+  "source_result_path": "data/results/ufcqatar_2026-11-21/verified_event_results_2026-11-24.json",
+  "source_result_sha256": "25af3b2818f715e169a7271b9f0d4e23ef4aa1972952b5c928bb4ec1994484aa"
+}
