@@ -1,0 +1,1401 @@
+{
+  "schema": "WSHLX_NOV21_COHERENCE_MATCHED_POSTEVENT_AUDIT_V1",
+  "event_date": "2026-11-21",
+  "audit_date": "2026-11-24",
+  "source_lock_path": "data/shadow_locks/ufcqatar_2026-11-21/coherent_joint_pre_event_shadow.json",
+  "source_lock_git_blob": "c7d36c160593b6e8f94e822f336c78a582eaf1f8",
+  "source_results_path": "data/results/ufcqatar_2026-11-21/verified_event_results_2026-11-24.json",
+  "source_results_git_blob": "21cce01e16cd23c06d7f115c9c5cea26d9d75150",
+  "source_frozen_at_utc": "2026-11-18T21:31:33.464944+00:00",
+  "unique_prospective_decisive_bouts": 12,
+  "independent_events": 1,
+  "minimum_prospective_gate": 300,
+  "remaining_to_minimum": 288,
+  "original_winners_unchanged": true,
+  "no_model_promotion": true,
+  "earlier_three_card_reconstruction_not_prospective": true,
+  "summary": {
+    "reference": {
+      "raw_archived": {
+        "n": 12,
+        "winner_hits": 11,
+        "method_class_hits": 4,
+        "exact_hits": 4,
+        "six_logloss": 1.4851609386805116,
+        "six_brier": 0.7441283301067388,
+        "finish_brier": 0.32773252869504504,
+        "predicted_methods": {
+          "KO": 10,
+          "SUB": 0,
+          "DEC": 2
+        }
+      },
+      "winner_aligned": {
+        "n": 12,
+        "winner_hits": 11,
+        "method_class_hits": 4,
+        "exact_hits": 4,
+        "six_logloss": 1.4851609386805116,
+        "six_brier": 0.7441283301067388,
+        "finish_brier": 0.32773252869504504,
+        "predicted_methods": {
+          "KO": 10,
+          "SUB": 0,
+          "DEC": 2
+        }
+      },
+      "winner_and_timing_aligned": {
+        "n": 12,
+        "winner_hits": 11,
+        "method_class_hits": 8,
+        "exact_hits": 7,
+        "six_logloss": 1.2490232445312506,
+        "six_brier": 0.631398188449369,
+        "finish_brier": 0.22407205796362362,
+        "predicted_methods": {
+          "KO": 6,
+          "SUB": 0,
+          "DEC": 6
+        }
+      }
+    },
+    "historical": {
+      "raw_archived": {
+        "n": 12,
+        "winner_hits": 10,
+        "method_class_hits": 6,
+        "exact_hits": 5,
+        "six_logloss": 1.4264066620780478,
+        "six_brier": 0.7132560691510895,
+        "finish_brier": 0.27409986005282677,
+        "predicted_methods": {
+          "KO": 8,
+          "SUB": 0,
+          "DEC": 4
+        }
+      },
+      "winner_aligned": {
+        "n": 12,
+        "winner_hits": 10,
+        "method_class_hits": 6,
+        "exact_hits": 5,
+        "six_logloss": 1.3594812445404598,
+        "six_brier": 0.6888720431947646,
+        "finish_brier": 0.2743274677775434,
+        "predicted_methods": {
+          "KO": 8,
+          "SUB": 0,
+          "DEC": 4
+        }
+      },
+      "winner_and_timing_aligned": {
+        "n": 12,
+        "winner_hits": 10,
+        "method_class_hits": 6,
+        "exact_hits": 5,
+        "six_logloss": 1.3286280410288043,
+        "six_brier": 0.6692979811802804,
+        "finish_brier": 0.2592723012604788,
+        "predicted_methods": {
+          "KO": 8,
+          "SUB": 0,
+          "DEC": 4
+        }
+      }
+    },
+    "unified": {
+      "raw_archived": {
+        "n": 12,
+        "winner_hits": 11,
+        "method_class_hits": 4,
+        "exact_hits": 3,
+        "six_logloss": 1.4027269402374751,
+        "six_brier": 0.7021888465100915,
+        "finish_brier": 0.28687028418410637,
+        "predicted_methods": {
+          "KO": 10,
+          "SUB": 0,
+          "DEC": 2
+        }
+      },
+      "winner_aligned": {
+        "n": 12,
+        "winner_hits": 11,
+        "method_class_hits": 4,
+        "exact_hits": 3,
+        "six_logloss": 1.3652916823768209,
+        "six_brier": 0.693348689422598,
+        "finish_brier": 0.2874536072952188,
+        "predicted_methods": {
+          "KO": 10,
+          "SUB": 0,
+          "DEC": 2
+        }
+      },
+      "winner_and_timing_aligned": {
+        "n": 12,
+        "winner_hits": 11,
+        "method_class_hits": 8,
+        "exact_hits": 7,
+        "six_logloss": 1.2420242851335017,
+        "six_brier": 0.6283732476027687,
+        "finish_brier": 0.2299355881831462,
+        "predicted_methods": {
+          "KO": 6,
+          "SUB": 0,
+          "DEC": 6
+        }
+      }
+    }
+  },
+  "fight_grades": [
+    {
+      "fight_no": 1,
+      "a": "Diyar Nurgozhay",
+      "b": "Alik Lorenz",
+      "truth": "A_KO",
+      "views": {
+        "reference": {
+          "raw_archived": {
+            "selected_fighter": "Diyar Nurgozhay",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 0.866215058791392,
+            "six_brier": 0.4158354983552459,
+            "finish_brier": 0.05517009015202685
+          },
+          "winner_aligned": {
+            "selected_fighter": "Diyar Nurgozhay",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 0.8662150587913923,
+            "six_brier": 0.415835498355246,
+            "finish_brier": 0.05517009015202679
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Diyar Nurgozhay",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.042938225641249,
+            "six_brier": 0.5295197908415112,
+            "finish_brier": 0.11849696807679701
+          }
+        },
+        "historical": {
+          "raw_archived": {
+            "selected_fighter": "Diyar Nurgozhay",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.2563092227383759,
+            "six_brier": 0.6250576070611777,
+            "finish_brier": 0.06192574655536815
+          },
+          "winner_aligned": {
+            "selected_fighter": "Diyar Nurgozhay",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.2186583989616857,
+            "six_brier": 0.6051234229007166,
+            "finish_brier": 0.06286012857492074
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Diyar Nurgozhay",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.06653514075388,
+            "six_brier": 0.535275375134577,
+            "finish_brier": 0.022226158483617867
+          }
+        },
+        "unified": {
+          "raw_archived": {
+            "selected_fighter": "Diyar Nurgozhay",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.0915839368987232,
+            "six_brier": 0.539395413303638,
+            "finish_brier": 0.059758386241926156
+          },
+          "winner_aligned": {
+            "selected_fighter": "Diyar Nurgozhay",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.0921013591645965,
+            "six_brier": 0.5396833952888248,
+            "finish_brier": 0.059744224384337546
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Diyar Nurgozhay",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.1672996807265674,
+            "six_brier": 0.5799141944617111,
+            "finish_brier": 0.08483919903570408
+          }
+        }
+      }
+    },
+    {
+      "fight_no": 2,
+      "a": "Nikolas Motta",
+      "b": "Dom Mar Fan",
+      "truth": "B_DEC",
+      "views": {
+        "reference": {
+          "raw_archived": {
+            "selected_fighter": "Dom Mar Fan",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.7672369540086257,
+            "six_brier": 0.9646151415107757,
+            "finish_brier": 0.5599098106866753
+          },
+          "winner_aligned": {
+            "selected_fighter": "Dom Mar Fan",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.7672369540086257,
+            "six_brier": 0.9646151415107757,
+            "finish_brier": 0.5599098106866753
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Dom Mar Fan",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.2051413503416837,
+            "six_brier": 0.6642682741137178,
+            "finish_brier": 0.31718203644162746
+          }
+        },
+        "historical": {
+          "raw_archived": {
+            "selected_fighter": "Dom Mar Fan",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.2540578700806433,
+            "six_brier": 0.6641316337173659,
+            "finish_brier": 0.3604402552439963
+          },
+          "winner_aligned": {
+            "selected_fighter": "Dom Mar Fan",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.205898075942026,
+            "six_brier": 0.6504754006117804,
+            "finish_brier": 0.36325670885113015
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Dom Mar Fan",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.1910868623407846,
+            "six_brier": 0.6416946970182813,
+            "finish_brier": 0.3563285442277338
+          }
+        },
+        "unified": {
+          "raw_archived": {
+            "selected_fighter": "Dom Mar Fan",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.4195802188346167,
+            "six_brier": 0.7692326223242687,
+            "finish_brier": 0.4290689678199282
+          },
+          "winner_aligned": {
+            "selected_fighter": "Dom Mar Fan",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.37771479201093,
+            "six_brier": 0.7618541677488133,
+            "finish_brier": 0.4310940634884196
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Dom Mar Fan",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.1516775607162122,
+            "six_brier": 0.6283754931788392,
+            "finish_brier": 0.32671272192278944
+          }
+        }
+      }
+    },
+    {
+      "fight_no": 3,
+      "a": "Jake Matthews",
+      "b": "Tahir Abdullayev",
+      "truth": "B_DEC",
+      "views": {
+        "reference": {
+          "raw_archived": {
+            "selected_fighter": "Jake Matthews",
+            "selected_method": "KO",
+            "winner_hit": 0,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.7735570625303427,
+            "six_brier": 0.8710871045943235,
+            "finish_brier": 0.42034826004355585
+          },
+          "winner_aligned": {
+            "selected_fighter": "Jake Matthews",
+            "selected_method": "KO",
+            "winner_hit": 0,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.7735570625303427,
+            "six_brier": 0.8710871045943235,
+            "finish_brier": 0.42034826004355585
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Jake Matthews",
+            "selected_method": "DEC",
+            "winner_hit": 0,
+            "method_hit": 1,
+            "exact_hit": 0,
+            "six_logloss": 1.3628702073110406,
+            "six_brier": 0.7067583623622822,
+            "finish_brier": 0.22160604891088015
+          }
+        },
+        "historical": {
+          "raw_archived": {
+            "selected_fighter": "Tahir Abdullayev",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.5732520834893617,
+            "six_brier": 0.7655063701900606,
+            "finish_brier": 0.368815999141336
+          },
+          "winner_aligned": {
+            "selected_fighter": "Tahir Abdullayev",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.438217192141954,
+            "six_brier": 0.7152627017499447,
+            "finish_brier": 0.3687955336968996
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Tahir Abdullayev",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.3932421997516398,
+            "six_brier": 0.6945818856249096,
+            "finish_brier": 0.34717681686754975
+          }
+        },
+        "unified": {
+          "raw_archived": {
+            "selected_fighter": "Tahir Abdullayev",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.6255339394287003,
+            "six_brier": 0.7949142857962577,
+            "finish_brier": 0.37809804659497714
+          },
+          "winner_aligned": {
+            "selected_fighter": "Tahir Abdullayev",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.5207583757350343,
+            "six_brier": 0.758976840443798,
+            "finish_brier": 0.37828192846419395
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Tahir Abdullayev",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.2575752590992626,
+            "six_brier": 0.6384788761367834,
+            "finish_brier": 0.2494294012314056
+          }
+        }
+      }
+    },
+    {
+      "fight_no": 4,
+      "a": "Amir Albazi",
+      "b": "Alessandro Costa",
+      "truth": "A_SUB",
+      "views": {
+        "reference": {
+          "raw_archived": {
+            "selected_fighter": "Amir Albazi",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 2.316382717452344,
+            "six_brier": 1.0060776587554996,
+            "finish_brier": 0.20381656945703785
+          },
+          "winner_aligned": {
+            "selected_fighter": "Amir Albazi",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 2.316382717452344,
+            "six_brier": 1.0060776587554996,
+            "finish_brier": 0.20381656945703785
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Amir Albazi",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 2.709568527022222,
+            "six_brier": 1.1107822777229248,
+            "finish_brier": 0.382450084267064
+          }
+        },
+        "historical": {
+          "raw_archived": {
+            "selected_fighter": "Alessandro Costa",
+            "selected_method": "DEC",
+            "winner_hit": 0,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 2.327031335780617,
+            "six_brier": 1.0285900814879796,
+            "finish_brier": 0.32176446697349753
+          },
+          "winner_aligned": {
+            "selected_fighter": "Alessandro Costa",
+            "selected_method": "DEC",
+            "winner_hit": 0,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 2.2261463356217375,
+            "six_brier": 1.0046746163222504,
+            "finish_brier": 0.32363881388660004
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Alessandro Costa",
+            "selected_method": "DEC",
+            "winner_hit": 0,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 2.10203593722545,
+            "six_brier": 0.9621514480884562,
+            "finish_brier": 0.2640746755756719
+          }
+        },
+        "unified": {
+          "raw_archived": {
+            "selected_fighter": "Amir Albazi",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 2.308404605995775,
+            "six_brier": 1.0125029885878878,
+            "finish_brier": 0.2748795329519739
+          },
+          "winner_aligned": {
+            "selected_fighter": "Amir Albazi",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 2.255488062762212,
+            "six_brier": 1.0009473213470819,
+            "finish_brier": 0.27650932622872887
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Amir Albazi",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 2.4181912260270377,
+            "six_brier": 1.0516620914363908,
+            "finish_brier": 0.35244810916707264
+          }
+        }
+      }
+    },
+    {
+      "fight_no": 5,
+      "a": "Shamil Gaziev",
+      "b": "Tallison Teixeira",
+      "truth": "B_DEC",
+      "views": {
+        "reference": {
+          "raw_archived": {
+            "selected_fighter": "Tallison Teixeira",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 2.4003756639139935,
+            "six_brier": 1.1632951710257577,
+            "finish_brier": 0.7172646719623027
+          },
+          "winner_aligned": {
+            "selected_fighter": "Tallison Teixeira",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 2.400375663913994,
+            "six_brier": 1.1632951710257577,
+            "finish_brier": 0.7172646719623027
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Tallison Teixeira",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.8239804558389565,
+            "six_brier": 0.9666358095629393,
+            "finish_brier": 0.5369944873775183
+          }
+        },
+        "historical": {
+          "raw_archived": {
+            "selected_fighter": "Tallison Teixeira",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.6058865440765926,
+            "six_brier": 0.8575198077144841,
+            "finish_brier": 0.5170724983353834
+          },
+          "winner_aligned": {
+            "selected_fighter": "Tallison Teixeira",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.5217676880024054,
+            "six_brier": 0.8495655550619875,
+            "finish_brier": 0.5173173957853423
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Tallison Teixeira",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 2.1024517005277845,
+            "six_brier": 1.0939153390235172,
+            "finish_brier": 0.7104075999750697
+          }
+        },
+        "unified": {
+          "raw_archived": {
+            "selected_fighter": "Tallison Teixeira",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.882820833945474,
+            "six_brier": 0.9839547676421188,
+            "finish_brier": 0.597972793242644
+          },
+          "winner_aligned": {
+            "selected_fighter": "Tallison Teixeira",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.8131790661047544,
+            "six_brier": 0.9846837807956509,
+            "finish_brier": 0.6003467714600967
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Tallison Teixeira",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.7582551854906219,
+            "six_brier": 0.9609276046598552,
+            "finish_brier": 0.5810254916847611
+          }
+        }
+      }
+    },
+    {
+      "fight_no": 6,
+      "a": "Aleksandre Topuria",
+      "b": "Santiago Luna",
+      "truth": "B_DEC",
+      "views": {
+        "reference": {
+          "raw_archived": {
+            "selected_fighter": "Santiago Luna",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.605556183147802,
+            "six_brier": 0.8103490437006201,
+            "finish_brier": 0.31410525605897227
+          },
+          "winner_aligned": {
+            "selected_fighter": "Santiago Luna",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.605556183147802,
+            "six_brier": 0.8103490437006201,
+            "finish_brier": 0.31410525605897227
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Santiago Luna",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.08199425279127,
+            "six_brier": 0.5944758410372813,
+            "finish_brier": 0.09995766317635903
+          }
+        },
+        "historical": {
+          "raw_archived": {
+            "selected_fighter": "Santiago Luna",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.314730795553977,
+            "six_brier": 0.666262242741118,
+            "finish_brier": 0.33594267212064555
+          },
+          "winner_aligned": {
+            "selected_fighter": "Santiago Luna",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.3116806163581387,
+            "six_brier": 0.6651355452340486,
+            "finish_brier": 0.33611807694527945
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Santiago Luna",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 0.9781725817158483,
+            "six_brier": 0.48838936576263164,
+            "finish_brier": 0.17897105834938826
+          }
+        },
+        "unified": {
+          "raw_archived": {
+            "selected_fighter": "Santiago Luna",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.3978867521982636,
+            "six_brier": 0.7099357632100556,
+            "finish_brier": 0.3228753037942834
+          },
+          "winner_aligned": {
+            "selected_fighter": "Santiago Luna",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.3811426644311993,
+            "six_brier": 0.7038857179832012,
+            "finish_brier": 0.3241623032408291
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Santiago Luna",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 0.915585042444567,
+            "six_brier": 0.4678693898168849,
+            "finish_brier": 0.11620681563394032
+          }
+        }
+      }
+    },
+    {
+      "fight_no": 7,
+      "a": "Jared Cannonier",
+      "b": "Ikram Aliskerov",
+      "truth": "B_DEC",
+      "views": {
+        "reference": {
+          "raw_archived": {
+            "selected_fighter": "Ikram Aliskerov",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.5256284664547946,
+            "six_brier": 0.876860580087881,
+            "finish_brier": 0.5131572393725917
+          },
+          "winner_aligned": {
+            "selected_fighter": "Ikram Aliskerov",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.5256284664547946,
+            "six_brier": 0.876860580087881,
+            "finish_brier": 0.5131572393725917
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Ikram Aliskerov",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.2203449635391588,
+            "six_brier": 0.6948784443888353,
+            "finish_brier": 0.37628684419146124
+          }
+        },
+        "historical": {
+          "raw_archived": {
+            "selected_fighter": "Ikram Aliskerov",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.3660409562406086,
+            "six_brier": 0.7068272286944359,
+            "finish_brier": 0.4541045423400481
+          },
+          "winner_aligned": {
+            "selected_fighter": "Ikram Aliskerov",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.28813565986074,
+            "six_brier": 0.6888277727697086,
+            "finish_brier": 0.44943170117120523
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Ikram Aliskerov",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.3060530974954445,
+            "six_brier": 0.6987773061445138,
+            "finish_brier": 0.45742376764710063
+          }
+        },
+        "unified": {
+          "raw_archived": {
+            "selected_fighter": "Ikram Aliskerov",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.3848002891747149,
+            "six_brier": 0.744978445135761,
+            "finish_brier": 0.4591027517398768
+          },
+          "winner_aligned": {
+            "selected_fighter": "Ikram Aliskerov",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.323555927577941,
+            "six_brier": 0.7332391641592445,
+            "finish_brier": 0.4556275392853779
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Ikram Aliskerov",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.193767303655912,
+            "six_brier": 0.6559325375069583,
+            "finish_brier": 0.39587745162404797
+          }
+        }
+      }
+    },
+    {
+      "fight_no": 8,
+      "a": "Kyoji Horiguchi",
+      "b": "Asu Almabayev",
+      "truth": "A_DEC",
+      "views": {
+        "reference": {
+          "raw_archived": {
+            "selected_fighter": "Kyoji Horiguchi",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.1986793891421592,
+            "six_brier": 0.6092678467394519,
+            "finish_brier": 0.24663138872281284
+          },
+          "winner_aligned": {
+            "selected_fighter": "Kyoji Horiguchi",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.1986793891421592,
+            "six_brier": 0.6092678467394519,
+            "finish_brier": 0.24663138872281284
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Kyoji Horiguchi",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 0.9497977149757773,
+            "six_brier": 0.48543078678037865,
+            "finish_brier": 0.12191756469090395
+          }
+        },
+        "historical": {
+          "raw_archived": {
+            "selected_fighter": "Asu Almabayev",
+            "selected_method": "DEC",
+            "winner_hit": 0,
+            "method_hit": 1,
+            "exact_hit": 0,
+            "six_logloss": 1.4396521968801173,
+            "six_brier": 0.7800987107534966,
+            "finish_brier": 0.14141003099513536
+          },
+          "winner_aligned": {
+            "selected_fighter": "Asu Almabayev",
+            "selected_method": "DEC",
+            "winner_hit": 0,
+            "method_hit": 1,
+            "exact_hit": 0,
+            "six_logloss": 1.3007135661997329,
+            "six_brier": 0.6999449673796171,
+            "finish_brier": 0.13989537784308478
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Asu Almabayev",
+            "selected_method": "DEC",
+            "winner_hit": 0,
+            "method_hit": 1,
+            "exact_hit": 0,
+            "six_logloss": 1.4624923796064195,
+            "six_brier": 0.7502092318611864,
+            "finish_brier": 0.222945791691082
+          }
+        },
+        "unified": {
+          "raw_archived": {
+            "selected_fighter": "Asu Almabayev",
+            "selected_method": "DEC",
+            "winner_hit": 0,
+            "method_hit": 1,
+            "exact_hit": 0,
+            "six_logloss": 1.316989245088694,
+            "six_brier": 0.6888321124223133,
+            "finish_brier": 0.17555103825411209
+          },
+          "winner_aligned": {
+            "selected_fighter": "Asu Almabayev",
+            "selected_method": "DEC",
+            "winner_hit": 0,
+            "method_hit": 1,
+            "exact_hit": 0,
+            "six_logloss": 1.266447725059601,
+            "six_brier": 0.6601261966882687,
+            "finish_brier": 0.17486087644459058
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Asu Almabayev",
+            "selected_method": "DEC",
+            "winner_hit": 0,
+            "method_hit": 1,
+            "exact_hit": 0,
+            "six_logloss": 1.2023503606655719,
+            "six_brier": 0.6372205750391069,
+            "finish_brier": 0.14269203422089122
+          }
+        }
+      }
+    },
+    {
+      "fight_no": 9,
+      "a": "Dan Hooker",
+      "b": "Brian Ortega",
+      "truth": "A_DEC",
+      "views": {
+        "reference": {
+          "raw_archived": {
+            "selected_fighter": "Dan Hooker",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.639896282031554,
+            "six_brier": 0.8217228897185999,
+            "finish_brier": 0.4187452563358773
+          },
+          "winner_aligned": {
+            "selected_fighter": "Dan Hooker",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.6398962820315541,
+            "six_brier": 0.8217228897186001,
+            "finish_brier": 0.41874525633587745
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Dan Hooker",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.2372007182428502,
+            "six_brier": 0.6384395733228241,
+            "finish_brier": 0.22343923343124814
+          }
+        },
+        "historical": {
+          "raw_archived": {
+            "selected_fighter": "Dan Hooker",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.5423863626105732,
+            "six_brier": 0.7482219637590507,
+            "finish_brier": 0.3863945949181859
+          },
+          "winner_aligned": {
+            "selected_fighter": "Dan Hooker",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.4369901191346302,
+            "six_brier": 0.7064591971569555,
+            "finish_brier": 0.38321859700796895
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Dan Hooker",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.1727105410056098,
+            "six_brier": 0.5811719411847501,
+            "finish_brier": 0.24969829399958038
+          }
+        },
+        "unified": {
+          "raw_archived": {
+            "selected_fighter": "Dan Hooker",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.5490229224286078,
+            "six_brier": 0.7571158745519633,
+            "finish_brier": 0.38467435917637727
+          },
+          "winner_aligned": {
+            "selected_fighter": "Dan Hooker",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.4820899614116165,
+            "six_brier": 0.7328388325186743,
+            "finish_brier": 0.38368659262822014
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Dan Hooker",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.1738306649929553,
+            "six_brier": 0.5888424739197857,
+            "finish_brier": 0.22980400603874115
+          }
+        }
+      }
+    },
+    {
+      "fight_no": 10,
+      "a": "Aljamain Sterling",
+      "b": "Kevin Vallejos",
+      "truth": "B_DEC",
+      "views": {
+        "reference": {
+          "raw_archived": {
+            "selected_fighter": "Kevin Vallejos",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.6768963473055079,
+            "six_brier": 0.896604467175599,
+            "finish_brier": 0.45224555815921147
+          },
+          "winner_aligned": {
+            "selected_fighter": "Kevin Vallejos",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.6768963473055079,
+            "six_brier": 0.896604467175599,
+            "finish_brier": 0.45224555815921147
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Kevin Vallejos",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.0808266005427243,
+            "six_brier": 0.5831881448446355,
+            "finish_brier": 0.19525958326774992
+          }
+        },
+        "historical": {
+          "raw_archived": {
+            "selected_fighter": "Kevin Vallejos",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.1864684802615346,
+            "six_brier": 0.6248126653785658,
+            "finish_brier": 0.1955507569124587
+          },
+          "winner_aligned": {
+            "selected_fighter": "Kevin Vallejos",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.1050528366703913,
+            "six_brier": 0.583219337298881,
+            "finish_brier": 0.2016614579973875
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Kevin Vallejos",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.2143097849279543,
+            "six_brier": 0.6431132714932899,
+            "finish_brier": 0.25042496099874045
+          }
+        },
+        "unified": {
+          "raw_archived": {
+            "selected_fighter": "Kevin Vallejos",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.3370150807119732,
+            "six_brier": 0.7077975847490022,
+            "finish_brier": 0.2785711768152155
+          },
+          "winner_aligned": {
+            "selected_fighter": "Kevin Vallejos",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 0,
+            "exact_hit": 0,
+            "six_logloss": 1.2922889874851595,
+            "six_brier": 0.6917223406277422,
+            "finish_brier": 0.2832338488454276
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Kevin Vallejos",
+            "selected_method": "DEC",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.1225080644530987,
+            "six_brier": 0.5986196278930781,
+            "finish_brier": 0.2080941155147596
+          }
+        }
+      }
+    },
+    {
+      "fight_no": 11,
+      "a": "Jiri Prochazka",
+      "b": "Navajo Stirling",
+      "truth": "B_KO",
+      "views": {
+        "reference": {
+          "raw_archived": {
+            "selected_fighter": "Navajo Stirling",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 0.8089251977619543,
+            "six_brier": 0.4295943797174208,
+            "finish_brier": 0.02619161233980248
+          },
+          "winner_aligned": {
+            "selected_fighter": "Navajo Stirling",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 0.8089251977619543,
+            "six_brier": 0.4295943797174208,
+            "finish_brier": 0.02619161233980248
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Navajo Stirling",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 0.9645912769478172,
+            "six_brier": 0.5041888904317406,
+            "finish_brier": 0.07790584462394708
+          }
+        },
+        "historical": {
+          "raw_archived": {
+            "selected_fighter": "Navajo Stirling",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 0.7925938135902844,
+            "six_brier": 0.377476887013211,
+            "finish_brier": 0.07058829196855541
+          },
+          "winner_aligned": {
+            "selected_fighter": "Navajo Stirling",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 0.802044161958186,
+            "six_brier": 0.3832083705491583,
+            "finish_brier": 0.07054735644139129
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Navajo Stirling",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 0.5812839127263945,
+            "six_brier": 0.2583419422549891,
+            "finish_brier": 0.007669774417469694
+          }
+        },
+        "unified": {
+          "raw_archived": {
+            "selected_fighter": "Navajo Stirling",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 0.7796790695235244,
+            "six_brier": 0.37703993215148196,
+            "finish_brier": 0.05003408376214203
+          },
+          "winner_aligned": {
+            "selected_fighter": "Navajo Stirling",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 0.7781055128561334,
+            "six_brier": 0.3759875321346635,
+            "finish_brier": 0.05003884325658357
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "Navajo Stirling",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 0.7771133734792808,
+            "six_brier": 0.3754177525663076,
+            "finish_brier": 0.04970054507577763
+          }
+        }
+      }
+    },
+    {
+      "fight_no": 12,
+      "a": "John Mitchell",
+      "b": "Shoaib Yousaf",
+      "truth": "A_KO",
+      "views": {
+        "reference": {
+          "raw_archived": {
+            "selected_fighter": "John Mitchell",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 0.2425819416256689,
+            "six_brier": 0.06423017989969093,
+            "finish_brier": 0.005204631049674305
+          },
+          "winner_aligned": {
+            "selected_fighter": "John Mitchell",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 0.2425819416256689,
+            "six_brier": 0.06423017989969093,
+            "finish_brier": 0.005204631049674305
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "John Mitchell",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 0.3090246411802564,
+            "six_brier": 0.0982120659833574,
+            "finish_brier": 0.01736833710792708
+          }
+        },
+        "historical": {
+          "raw_archived": {
+            "selected_fighter": "John Mitchell",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.4584702836338903,
+            "six_brier": 0.7145676313021272,
+            "finish_brier": 0.07518846512931107
+          },
+          "winner_aligned": {
+            "selected_fighter": "John Mitchell",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.4584702836338903,
+            "six_brier": 0.7145676313021272,
+            "finish_brier": 0.07518846512931107
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "John Mitchell",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 1.3731623542684406,
+            "six_brier": 0.6839539705722618,
+            "finish_brier": 0.04392017289274109
+          }
+        },
+        "unified": {
+          "raw_archived": {
+            "selected_fighter": "John Mitchell",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 0.739406388620637,
+            "six_brier": 0.3405663682463506,
+            "finish_brier": 0.03185696981581994
+          },
+          "winner_aligned": {
+            "selected_fighter": "John Mitchell",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 0.8006277539226748,
+            "six_brier": 0.3762389833352121,
+            "finish_brier": 0.03185696981581994
+          },
+          "winner_and_timing_aligned": {
+            "selected_fighter": "John Mitchell",
+            "selected_method": "KO",
+            "winner_hit": 1,
+            "method_hit": 1,
+            "exact_hit": 1,
+            "six_logloss": 0.7661376998509325,
+            "six_brier": 0.3572183546175232,
+            "finish_brier": 0.022397167047863393
+          }
+        }
+      }
+    }
+  ]
+}
