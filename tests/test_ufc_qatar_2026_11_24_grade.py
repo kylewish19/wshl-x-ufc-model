@@ -29,7 +29,7 @@ def test_six_state_fighter_and_method_must_both_match():
     assert a["winner_hit"]==1 and a["method_class_hit"]==0 and a["exact_hit"]==0
     wrong=g.grade_prediction(p,{"winner":"Athlete B","method":"DEC"},"Athlete A")
     assert wrong["winner_hit"]==0 and wrong["method_class_hit"]==1 and wrong["exact_hit"]==0
-    with pytest.raises(ValueError,match="sum"):
+    with pytest.raises(ValueError,match="Incoherent"):
         g.probs({"A_KO":1.1,"A_SUB":0,"A_DEC":0,"B_KO":0,"B_SUB":0,"B_DEC":0})
 
 def test_same_verified_matches_original_and_coherent_research_variants():
