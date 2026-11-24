@@ -82,7 +82,7 @@ def snapshot(seq):
         access(early,1),access(late,1),(g[0]+5)/(g[1]+25),(g[2]+5)/(g[3]+25),
         log1p(len(pairs)),p]
 
-def build_round_history(records,rounds):
+def build_round_history(records,rounds,*,query_date=None,query_bouts=()):
     hist=defaultdict(list);out={};covered=0;paired=0
     for day,batch in groupby(sorted(records,key=lambda r:(r["date"],r["event"],r["a"],r["b"])),key=lambda r:r["date"]):
         rows=list(batch)
@@ -104,6 +104,13 @@ def build_round_history(records,rounds):
             aa={i:aa[i] for i in valid};bb={i:bb[i] for i in valid}
             hist[a].append((aa,bb));hist[b].append((bb,aa))
             covered+=1;paired+=int({1,2}<=valid)
+    if query_bouts:
+        from datetime import date
+        if query_date is None or any(r['date']>=date.fromisoformat(query_date) for r in records):raise ValueError('Round query must follow historical records')
+        for a,b in query_bouts:
+            key=(query_date,'__PREFIGHT_QUERY_NO_RESULTS__',*sorted((a,b)))
+            if a==b or key in out:raise ValueError('Invalid round query identity')
+            out[key]=(a,b,snapshot(hist[a]),snapshot(hist[b]))
     return out,{"bouts_with_paired_full_round_data":covered,"bouts_with_first_two_full_rounds":paired}
 
 def features(f,side,lookup):
