@@ -22,7 +22,7 @@ N=len(FIELDS)
 
 def strict_count(v):
     s=txt(v)
-    return int(s) if re.fullmatch(r"\d+",s) else None
+    return int(float(s)) if re.fullmatch(r"\d+(?:\.0+)?",s) else None
 
 def strict_pair(v):
     m=re.fullmatch(r"(\d+)\s+of\s+(\d+)",txt(v),re.I)
