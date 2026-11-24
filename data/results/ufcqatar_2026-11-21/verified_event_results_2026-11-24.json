@@ -1,0 +1,165 @@
+{
+  "schema": "WSHLX_UFC_QATAR_2026_11_21_INDEPENDENT_RESULT_SOURCE_V1",
+  "event": "UFC Fight Night: Prochazka vs. Stirling",
+  "event_date": "2026-11-21",
+  "verified_as_of_utc": "2026-11-24T21:00:00+00:00",
+  "source_quality": "Cross-referenced 2026-11-21 published fight-by-fight outcomes against Sports Illustrated MMA and Cage Almanac (UFCStats-derived); individual per-fight round stats not yet independently re-ingested.",
+  "sources": [
+    "https://www.si.com/fannation/mma/news/ufc-qatar-free-live-stream-results-highlights-prochazka-vs-stirling",
+    "https://cagealmanac.com/events/ufc-fight-night-prochazka-vs-stirling-cbf69f",
+    "https://www.ufc.com/news/ufc-qatar-results-prochazka-vs-stirling"
+  ],
+  "scope": "All 12 finished decisive bouts, one previously provisional matchup Mitchell vs Yousaf; source results not used by any original pre-fight model.",
+  "source_not_original_FanDuel_odds": true,
+  "method_aliases": {
+    "KO": "KO/TKO",
+    "SUB": "Submission",
+    "DEC": "Judges decision"
+  },
+  "fights": [
+    {
+      "fight_no": 1,
+      "winner": "Diyar Nurgozhay",
+      "loser": "Alik Lorenz",
+      "method": "KO",
+      "round": 2,
+      "round_clock": "0:24",
+      "official_method_description": "TKO (head kick)",
+      "decisive": true,
+      "goes_distance": false,
+      "winning_fighter_and_method_verified": true
+    },
+    {
+      "fight_no": 2,
+      "winner": "Dom Mar Fan",
+      "loser": "Nikolas Motta",
+      "method": "DEC",
+      "round": 3,
+      "round_clock": "5:00",
+      "official_method_description": "Unanimous decision",
+      "decisive": true,
+      "goes_distance": true,
+      "winning_fighter_and_method_verified": true
+    },
+    {
+      "fight_no": 3,
+      "winner": "Tahir Abdullayev",
+      "loser": "Jake Matthews",
+      "method": "DEC",
+      "round": 3,
+      "round_clock": "5:00",
+      "official_method_description": "Unanimous decision",
+      "decisive": true,
+      "goes_distance": true,
+      "winning_fighter_and_method_verified": true
+    },
+    {
+      "fight_no": 4,
+      "winner": "Amir Albazi",
+      "loser": "Alessandro Costa",
+      "method": "SUB",
+      "round": 3,
+      "round_clock": "4:34",
+      "official_method_description": "Submission (rear-naked choke)",
+      "decisive": true,
+      "goes_distance": false,
+      "winning_fighter_and_method_verified": true
+    },
+    {
+      "fight_no": 5,
+      "winner": "Tallison Teixeira",
+      "loser": "Shamil Gaziev",
+      "method": "DEC",
+      "round": 3,
+      "round_clock": "5:00",
+      "official_method_description": "Unanimous decision",
+      "decisive": true,
+      "goes_distance": true,
+      "winning_fighter_and_method_verified": true
+    },
+    {
+      "fight_no": 6,
+      "winner": "Santiago Luna",
+      "loser": "Aleksandre Topuria",
+      "method": "DEC",
+      "round": 3,
+      "round_clock": "5:00",
+      "official_method_description": "Split decision",
+      "decisive": true,
+      "goes_distance": true,
+      "winning_fighter_and_method_verified": true
+    },
+    {
+      "fight_no": 7,
+      "winner": "Ikram Aliskerov",
+      "loser": "Jared Cannonier",
+      "method": "DEC",
+      "round": 3,
+      "round_clock": "5:00",
+      "official_method_description": "Unanimous decision",
+      "decisive": true,
+      "goes_distance": true,
+      "winning_fighter_and_method_verified": true
+    },
+    {
+      "fight_no": 8,
+      "winner": "Kyoji Horiguchi",
+      "loser": "Asu Almabayev",
+      "method": "DEC",
+      "round": 3,
+      "round_clock": "5:00",
+      "official_method_description": "Unanimous decision",
+      "decisive": true,
+      "goes_distance": true,
+      "winning_fighter_and_method_verified": true
+    },
+    {
+      "fight_no": 9,
+      "winner": "Dan Hooker",
+      "loser": "Brian Ortega",
+      "method": "DEC",
+      "round": 3,
+      "round_clock": "5:00",
+      "official_method_description": "Unanimous decision",
+      "decisive": true,
+      "goes_distance": true,
+      "winning_fighter_and_method_verified": true
+    },
+    {
+      "fight_no": 10,
+      "winner": "Kevin Vallejos",
+      "loser": "Aljamain Sterling",
+      "method": "DEC",
+      "round": 3,
+      "round_clock": "5:00",
+      "official_method_description": "Unanimous decision",
+      "decisive": true,
+      "goes_distance": true,
+      "winning_fighter_and_method_verified": true
+    },
+    {
+      "fight_no": 11,
+      "winner": "Navajo Stirling",
+      "loser": "Jiri Prochazka",
+      "method": "KO",
+      "round": 2,
+      "round_clock": "4:58",
+      "official_method_description": "KO (punch to head)",
+      "decisive": true,
+      "goes_distance": false,
+      "winning_fighter_and_method_verified": true
+    },
+    {
+      "fight_no": 12,
+      "winner": "John Mitchell",
+      "loser": "Shoaib Yousaf",
+      "method": "KO",
+      "round": 1,
+      "round_clock": "3:50",
+      "official_method_description": "TKO (knee to head)",
+      "decisive": true,
+      "goes_distance": false,
+      "winning_fighter_and_method_verified": true
+    }
+  ]
+}
