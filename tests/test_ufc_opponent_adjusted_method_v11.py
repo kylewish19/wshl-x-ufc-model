@@ -41,3 +41,23 @@ def test_opposition_weight_uses_prior_rating_and_defensive_exposure():
     vulnerable=rates(fresh());vulnerable[1,0]=.70
     c=fresh();update(c,own,other,vulnerable,1700)
     assert vec(c)[0]<vec(a)[0]
+
+def test_strict_source_does_not_turn_unknown_or_duplicate_into_zero(tmp_path):
+    from wshlx_ufc.opponent_adjusted_method_v11 import strict_access_totals
+    # Fighter A has a missing submission count. Fighter B's duplicate
+    # round rows are ambiguous and must be excluded, not summed.
+    (tmp_path/"ufc_fight_stats.csv").write_text(
+        "EVENT,BOUT,FIGHTER,ROUND,KD,SUB ATT,TD,CTRL\n"
+        "test,A vs. B,A,Round 1,0,--,1 of 2,0:30\n"
+        "test,A vs. B,B,Round 1,0,0,0 of 1,0:00\n"
+        "test,A vs. B,B,Round 1,0,0,0 of 1,0:00\n")
+    r=row("2025-01-01","A","B")
+    r["elapsed_seconds"]=280.0
+    output,audit=strict_access_totals([r],root=tmp_path)
+    assert output[0]["stats_a"]["kd"]==0
+    assert output[0]["stats_a"]["sub_att"] is None
+    assert output[0]["stats_a"]["td_landed"]==1
+    assert output[0]["stats_a"]["ctrl_sec"]==30
+    assert all(v is None for v in output[0]["stats_b"].values())
+    assert audit["raw_duplicate_round_keys_excluded"]==1
+    assert audit["strict_missing_fighter_field_totals"]==5
