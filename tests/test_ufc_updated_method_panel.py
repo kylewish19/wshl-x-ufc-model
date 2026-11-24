@@ -27,6 +27,10 @@ def test_draft_not_a_live_lock():
         build_panel(d,now=datetime(2026,11,24,tzinfo=timezone.utc))
 
 def test_round_and_regional_panel_with_actual_archive_hypothetical_fixture():
+    from audit_worldwide_mma_history_v4 import DB
+    import os
+    if not DB.exists() and os.environ.get("REQUIRE_REGIONAL_INTEGRATION")!="1":
+        pytest.skip("Dedicated integration job supplies pinned external DB")
     # Fictional pairing, not a scheduled match or timestamped live forecast.
     fixture={"event_date":"2026-12-05","first_fight_utc":"2026-12-05T15:00:00+00:00",
         "lineup_verified_by_caller":True,"lineup_source_url":"https://example.invalid/test",
