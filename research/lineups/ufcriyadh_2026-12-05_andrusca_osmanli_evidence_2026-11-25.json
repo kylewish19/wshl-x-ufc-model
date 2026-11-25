@@ -1,0 +1,136 @@
+{
+  "schema": "WSHLX_MATCHUP_WRITTEN_EVIDENCE_V1",
+  "observed_date": "2026-11-25",
+  "event_date": "2026-12-05",
+  "matchup": [
+    "Pavel Andrusca",
+    "Mahammadali Osmanli"
+  ],
+  "odds_used": false,
+  "tape_reviewed": false,
+  "actual_predictions": 0,
+  "training_changed": false,
+  "record_discrepancy": {
+    "pinned": {
+      "w": 11,
+      "l": 2,
+      "ko": 3,
+      "sub": 6,
+      "dec": 2
+    },
+    "alternative": {
+      "w": 12,
+      "l": 2,
+      "ko": 2,
+      "sub": 8,
+      "dec": 2
+    },
+    "pinned_corroboration": [
+      "https://www.sherdog.com/fighter/Mehemmedali-Osmanli-390629",
+      "https://www.fightmatrix.com/fighter-profile/Mehemmedali%20Osmanli/244125/"
+    ],
+    "disputed": [
+      {
+        "opponent": "Zura Chabakauri",
+        "date": "2022-05-20",
+        "event": "Iron Fist FC 1",
+        "pinned": "absent",
+        "alternative": "W SUB R1 2:02",
+        "sources": [
+          "https://rcmma.com/mehemmedeli-osmanli/",
+          "https://mmma.co.kr/en/fighter/mehemmedeli-osmanli-382346"
+        ],
+        "resolution": "unconfirmed; not added"
+      },
+      {
+        "opponent": "Elnar Makhmudov",
+        "date": "2021-07-26",
+        "event": "WJF 13",
+        "pinned": "W TKO R1 4:13",
+        "alternative": "W SUB R1 3:18",
+        "sources": [
+          "https://www.sherdog.com/fighter/Mehemmedali-Osmanli-390629",
+          "https://rcmma.com/mehemmedeli-osmanli/"
+        ],
+        "resolution": "retain pinned method; conflicting result details"
+      }
+    ],
+    "tuf_exhibitions": [
+      {
+        "opponent": "Artem Belakh",
+        "method": "rear-naked choke",
+        "round": 1
+      },
+      {
+        "opponent": "Christian Strong",
+        "method": "buggy choke",
+        "round": 2
+      }
+    ],
+    "tuf_source": "https://www.ufc.com/athlete/mahammadali-osmanli",
+    "policy": "Keep exhibitions separate and retain pinned pro record; secondary sites may share feeds. No promotion or commission result independently verified."
+  },
+  "andrusca": {
+    "source": "https://www.ufc.com/athlete/pavel-andrusca",
+    "known_pro_record": "9-0",
+    "ko_wins": 6,
+    "sub_wins": 1,
+    "dec_wins": 2,
+    "background": "freestyle wrestling; UFC profile reports two U20 European bronze medals",
+    "ufc_debut": {
+      "opponent": "Nathaniel Wood",
+      "date": "2026-09-05",
+      "division": "Featherweight",
+      "weight_lbs": 146,
+      "result": "W DEC",
+      "sig_landed": 50,
+      "sig_attempted": 105,
+      "sig_absorbed_per_min": 1.87,
+      "td_attempted": 19,
+      "td_landed": 4,
+      "sub_attempts_per15": 1,
+      "control_seconds": 366,
+      "source_urls": [
+        "https://www.ufc.com/athlete/pavel-andrusca",
+        "https://www.ufc.com/index.php/news/ufc-paris-prelim-results-hooker-vs-parnasse",
+        "https://www.ufc.com/news/ufc-fight-night-paris-official-weigh-in-results-hooker-parnasse",
+        "https://cagenightly.com/fights/nathaniel-wood-vs-pavel-andrusca-ufc-2026-09-05"
+      ],
+      "td_landed_basis": "UFC profile rate 4 per15 over one full 15min fight; secondary reported 4/19",
+      "control_basis": "secondary fight recap; compare archived raw stats before treating as input",
+      "written_report": "Recovered after being dropped in R2 and returned to grappling, won third; UFC report says five days notice.",
+      "scorecards": [
+        30,
+        30,
+        29
+      ],
+      "opponent_scorecards": [
+        27,
+        27,
+        28
+      ]
+    }
+  },
+  "matchup_questions": [
+    {
+      "topic": "grappling",
+      "hypothesis": "Andrusca's repeated takedown attempts may create opportunities for Osmanli's demonstrated submission threats; investigate positional control, escapes and entry defense.",
+      "status": "tape required"
+    },
+    {
+      "topic": "durability and pace",
+      "hypothesis": "Andrusca's documented recovery and late-round grappling in one bout are evidence, not established durability or cardio ratings.",
+      "status": "tape required"
+    },
+    {
+      "topic": "weight class",
+      "hypothesis": "Andrusca's debut was 146lb featherweight, Riyadh listed bantamweight; verify weigh-in and do not assume same performance at lower weight.",
+      "status": "fight-week check"
+    },
+    {
+      "topic": "Osmanli UFC sample",
+      "hypothesis": "DQ loss does not establish KO vulnerability or meaningful full-round cardio evidence; preserve short observed fight and separate exhibition grappling evidence.",
+      "status": "source verified; tape required"
+    }
+  ]
+}
