@@ -1,0 +1,117 @@
+{
+  "schema": "WSHLX_RESEARCH_CONFIGURATION_FREEZE_V1",
+  "registered_date": "2026-11-25",
+  "status": "VALIDATED_RESEARCH_CONFIGURATION_NOT_PRODUCTION_PROMOTION",
+  "source_commit": "77ed169114a073800a45701a5bc8ff61c65940bb",
+  "source_blob_sha1": {
+    "tools/smoke_refreshed_three_view.py": "19732d5704d5ce4ede48f6512578275d80113567",
+    "tools/run_refreshed_three_view_card.py": "f05fd12418a6c231cd520ecb12d96397cdb69f48",
+    "tools/run_combined_refreshed_research.py": "7b4dcb52fee2390ecaec33fdb2121aa13698fc0c",
+    "tools/refreshed_identity_challenger_panel.py": "c47d806cb28601c6a1c9a33978fd793486e7ee72",
+    "src/wshlx_ufc/refreshed_unified.py": "030238f0d716224912a73ba70a9b55aca278cf92",
+    "src/wshlx_ufc/combined_research_grade.py": "d0b7106e5fca779123427603e2cd028a2af4f7bc",
+    "src/wshlx_ufc/combined_research_cumulative.py": "02e447425e4733d22a4965f4ed188ab5397ef71c",
+    "tools/grade_combined_refreshed_research.py": "f0882c576b6b47076ff191d0e8acdb91c35457ec",
+    "data/unified/oof_global_unified_shadow.json": "c22c068ace74d0ad9b5e09ecbe232556b76ba89f"
+  },
+  "training_UFC_through": "2026-11-21",
+  "worldwide": {
+    "release": "db-2026-11-24-2118",
+    "cutoff_exclusive": "2026-11-25",
+    "sha256": "e7e0a53ff47d336ed961b228e31a1ef98c77129fa9104e82496637e69f3ade29"
+  },
+  "artifact_groups": [
+    {
+      "run_id": 45656649064,
+      "artifact_id": 15044460313,
+      "name": "reference-identity-corrected-refit",
+      "archive_digest": "sha256:caa2e012f8cec4962415f68bbff5400ad0eca7e6665f9666998865d7875eec79",
+      "files": {
+        "winner": "72848612430383684f5da11cdbe493a7ae22e3dd11044865506536dd73589b0a",
+        "method_baseline": "fff7ec007b7df31871c8343d5b905464a82180027db22e47c0fda4c4d2e5db74",
+        "timing_30s": "89764a4ae32c7ee7ef5b44aa2832d937db0563edd494e59095d283ff1dbf27e6"
+      }
+    },
+    {
+      "run_id": 45656649131,
+      "artifact_id": 15044175462,
+      "name": "reference-corrected-method-offsets",
+      "archive_digest": "sha256:185536a7729cab1c68aa8aaeda44c0b31f6be25ba6d61f13a8e2705fe4beadef",
+      "files": {
+        "method_calibrator": "64f54078e6640349ac863a2c903fee5f4774505296bcd2de13cd6f487c03f503",
+        "method_residual": "e439278464ae1f9d56f268f6bf19f0570656118cdfa09106bba079a91167702c"
+      }
+    },
+    {
+      "run_id": 45656649012,
+      "artifact_id": 15044791473,
+      "name": "historical-identity-corrected-refit",
+      "archive_digest": "sha256:ec95b2026dacdf9cf3fb50254d8f338ad2088066c976940d02242c2f1147a24c",
+      "files": {
+        "historical_winner": "b5bef1ecb55509fc1ede5a15f90a4bbb6e4c92ffa1b33d64af9f4d36ddec71ea",
+        "historical_method": "e98af2fcdd77310616c4fbc6a34f3cf30912fcffcc1294a88f92b386a0951d7f",
+        "historical_timing": "746dce9a644d5c52b5e3e41b3c32bd52f70b7a0c6216f87bf8c1ecee900a6326"
+      }
+    }
+  ],
+  "artifact_expiry_utc": "2027-02-23T16:41:34Z",
+  "artifact_retention_note": "Available at inspection on Nov25; archive verified copies before expiration or explicitly register new artifact versions; no claim that this manifest preserves binaries.",
+  "unified": {
+    "weight_source_cutoff": "2026-10-17",
+    "weight_current": {
+      "winner": 0.3,
+      "method": 0.375,
+      "timing": 0.75
+    },
+    "refitted": false
+  },
+  "core": [
+    "reference",
+    "historical",
+    "unified"
+  ],
+  "core_joint_variants": [
+    "raw",
+    "winner_aligned",
+    "winner_and_timing_aligned"
+  ],
+  "challengers": [
+    "legacy_updated_v3_identity_corrected",
+    "strict_updated_v3_identity_corrected",
+    "round86_identity_corrected",
+    "regional_v5_refreshed_identity_corrected"
+  ],
+  "reference_residual": "loaded and exercised, not a separately graded primary arm",
+  "challenger_training": "deterministic refit on pinned source snapshot using existing code; no persistent challenger artifact hashes yet",
+  "nonperformance_policy": "Retain existing Reference exclusion and Historical inclusion. Sensitivity audit only, no superiority shown.",
+  "missing_physical_policy": "Do not inject unapproved measurements; nine incomplete profiles in rotated roster test.",
+  "validation": {
+    "combined_full_card": 45668210711,
+    "challenger": 45666401634,
+    "core_full_card": 45668210702,
+    "cumulative_tests": 45668447638,
+    "metric_audit": 45669724554,
+    "regression_tests": 45669737335,
+    "nonperformance_audit": 45669979206
+  },
+  "evaluation": {
+    "unique_prospective_fights": 0,
+    "minimum_unique_fights": 300,
+    "primary": "six_log_loss",
+    "secondary": "six_brier",
+    "paired_by": "same verified bout; cluster by event",
+    "event_interval_minimum": 10,
+    "bootstrap_reps": 10000,
+    "promotion_automatic": false
+  },
+  "upcoming": {
+    "event_date": "2026-12-05",
+    "lineup_attested": false,
+    "stage_a_locked": false,
+    "stage_b_priced": false,
+    "actual_predictions_generated": 0,
+    "requires": "Verify current official lineup, fight schedule, physical measurements, source freshness, pre-fight evidence, original production Stage A and independent research lock. Refresh only versioned and documented before any actual inference; do not use stale artifacts after new completed UFC events."
+  },
+  "production_migrated": false,
+  "bet_authorized": false
+}
