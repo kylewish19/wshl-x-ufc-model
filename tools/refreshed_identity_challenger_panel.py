@@ -46,8 +46,13 @@ def regional(features,queries,original,query_ids):
         for name,fid in query_ids.items():
             if name in NAMES.values():
                 if NAMES.get(fid)!=name:raise ValueError("Wrong Bruno Silva identity")
-            elif fid not in (ids.get(a.namekey(name)),FLAGGED.get(a.namekey(name))) or a.namekey(name) not in aliases.get(fid,set()):
-                raise ValueError("Unverified query regional identity")
+            else:
+                keys=aliases.get(fid,set())
+                known={ids[k] for k in keys if k in ids}
+                if a.namekey(name) not in keys or known-{fid}:
+                    raise ValueError("Conflicting query regional identity")
+                if known!={fid} and fid not in FLAGGED.values():
+                    raise ValueError("Unverified query regional identity")
         hist=a.history_for_ids(con,set(ids.values())|set(NAMES)|set(query_ids.values()))
         ext={};valid_queries=0;valid_training=0
         for f in features+queries:
