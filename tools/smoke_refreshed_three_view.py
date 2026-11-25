@@ -15,6 +15,7 @@ from wshlx_ufc.historical_timing_model import symmetric_timing_frame,_encode_tra
 
 REFERENCE={"winner":"72848612430383684f5da11cdbe493a7ae22e3dd11044865506536dd73589b0a","method_baseline":"fff7ec007b7df31871c8343d5b905464a82180027db22e47c0fda4c4d2e5db74","timing_30s":"89764a4ae32c7ee7ef5b44aa2832d937db0563edd494e59095d283ff1dbf27e6"}
 OFFSETS={"method_calibrator":"64f54078e6640349ac863a2c903fee5f4774505296bcd2de13cd6f487c03f503","method_residual":"e439278464ae1f9d56f268f6bf19f0570656118cdfa09106bba079a91167702c"}
+HISTORICAL={"winner":"b5bef1ecb55509fc1ede5a15f90a4bbb6e4c92ffa1b33d64af9f4d36ddec71ea","method":"e98af2fcdd77310616c4fbc6a34f3cf30912fcffcc1294a88f92b386a0951d7f","timing":"746dce9a644d5c52b5e3e41b3c32bd52f70b7a0c6216f87bf8c1ecee900a6326"}
 def checked_load(root,name,digest):
     p=root/(name+".joblib")
     if hashlib.sha256(p.read_bytes()).hexdigest()!=digest:raise ValueError("Artifact SHA mismatch: "+name)
@@ -55,14 +56,23 @@ def historical_view(t,names,wc,seconds,day,models):
     raw=[z for z in f if z in fields]
     pd.testing.assert_frame_equal(f.set_index("fighter")[raw].sort_index(),g.set_index("fighter")[raw].sort_index())
     idx=f[f.fighter==names[0]].index[0]
+    idx_g=g[g.fighter==names[0]].index[0]
     pa=float(pd.Series(models["winner"].predict_proba(f),index=f.index).loc[idx])
+    pa_g=float(pd.Series(models["winner"].predict_proba(g),index=g.index).loc[idx_g])
+    assert np.isclose(pa,pa_g,atol=1e-12,rtol=0)
     p=models["method"].predict_joint_probabilities(f).loc[idx]
+    pg=models["method"].predict_joint_probabilities(g).loc[idx_g]
+    np.testing.assert_allclose(p.to_numpy(float),pg.to_numpy(float),atol=1e-12,rtol=0)
     j={side+"_"+m:float(p[prefix+"_"+("KO_TKO" if m=="KO" else m)]) for side,prefix in (("A","WIN"),("B","LOSS")) for m in ("KO","SUB","DEC")}
     tm=models["timing"]
     tf=symmetric_timing_frame(f);tf["scheduled_seconds"]=seconds
     x=_encode_transform(tf,tm.rate_encoders).iloc[0]
     assert tm.hazard_model.bin_seconds==30
-    return {"winner_p_a":pa,"joint_method":j,"hazards_30s":tm._hazards(x,seconds)}
+    gx=symmetric_timing_frame(g);gx["scheduled_seconds"]=seconds
+    gx=_encode_transform(gx,tm.rate_encoders).iloc[0]
+    hazards=tm._hazards(x,seconds)
+    np.testing.assert_allclose(hazards,tm._hazards(gx,seconds),atol=1e-12,rtol=0)
+    return {"winner_p_a":pa,"joint_method":j,"hazards_30s":hazards}
 def main():
     ap=argparse.ArgumentParser();ap.add_argument("--reference",type=Path,required=True);ap.add_argument("--offsets",type=Path,required=True);ap.add_argument("--historical",type=Path)
     args=ap.parse_args()
@@ -71,7 +81,8 @@ def main():
     if args.historical:
         mf=json.loads((args.historical/"manifest.json").read_text())
         assert mf["history_through"]=="2026-11-21" and mf["research_only"] is True
-        hist={n:checked_load(args.historical,"historical_"+n,mf["models"][n]["sha256"]) for n in ("winner","method","timing")}
+        assert {n:v["sha256"] for n,v in mf["models"].items()}==HISTORICAL
+        hist={n:checked_load(args.historical,"historical_"+n,digest) for n,digest in HISTORICAL.items()}
         assert all(str(pd.Timestamp(x.history_end).date())=="2026-11-21" for x in hist.values())
     t=source()
     with tempfile.TemporaryDirectory() as tmp:

@@ -4,11 +4,6 @@ on:
     branches: ["feature/historical-conditional-rates"]
     paths: ["tools/smoke_refreshed_three_view.py",".github/workflows/ufc-refreshed-artifact-smoke.yml"]
   workflow_dispatch:
-    inputs:
-      historical_run_id:
-        description: Successful Historical refit run ID (optional; otherwise Reference only)
-        required: false
-        type: string
 permissions:
   contents: read
   actions: read
@@ -34,19 +29,13 @@ jobs:
           run-id: '45656649131'
           github-token: ${{ github.token }}
           path: /tmp/refreshed-offsets
-      - if: inputs.historical_run_id != ''
-        uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v4
         with:
           name: historical-identity-corrected-refit
-          run-id: ${{ inputs.historical_run_id }}
+          run-id: '45656649012'
           github-token: ${{ github.token }}
           path: /tmp/refreshed-historical
       - run: |
           mkdir -p .research_cache/fightcanon
           curl --fail --silent --show-error --location --retry 2 --max-time 360 -o .research_cache/fightcanon/new.db https://github.com/Jadevit/fight-canon-db/releases/download/db-2026-11-24-2118/canon.db
-      - env:
-          HISTORICAL_RUN_ID: ${{ inputs.historical_run_id }}
-        run: |
-          extra=()
-          if [ -n "$HISTORICAL_RUN_ID" ]; then extra=(--historical /tmp/refreshed-historical); fi
-          python tools/smoke_refreshed_three_view.py --reference /tmp/refreshed-reference --offsets /tmp/refreshed-offsets "${extra[@]}"
+      - run: python tools/smoke_refreshed_three_view.py --reference /tmp/refreshed-reference --offsets /tmp/refreshed-offsets --historical /tmp/refreshed-historical
