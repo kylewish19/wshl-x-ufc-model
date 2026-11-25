@@ -1,0 +1,266 @@
+{
+  "schema": "WSHLX_RIYADH_PROFILE_RESEARCH_CANDIDATES_V1",
+  "observed_date": "2026-11-25",
+  "units": "inches",
+  "status": "DRAFT_CANDIDATES_NOT_APPROVED_FOR_MODEL_INPUT",
+  "source_release": "db-2026-11-24-2118",
+  "source_sha256": "e7e0a53ff47d336ed961b228e31a1ef98c77129fa9104e82496637e69f3ade29",
+  "notes": "Candidate fields ordered height, reach. Corroboration means agreement with separately published values, not independent measurement provenance. No field approved for model input. Secondary-only Osmanli inches rounded candidates, no primary confirmation. Do not use odds or any performance claims from profile sources.",
+  "fighters": [
+    {
+      "fighter": "Yaroslav Amosov",
+      "id": 66342,
+      "db": [
+        72,
+        75
+      ],
+      "candidate": [
+        72,
+        75
+      ],
+      "status": [
+        "conflict",
+        "corroborated"
+      ],
+      "sources": [
+        [
+          "https://www.ufc.com/athlete/yaroslav-amosov",
+          "Official indexed reach 75; direct page blocked"
+        ],
+        [
+          "https://strikesheet.app/fighters/yaroslav-amosov/",
+          "183 cm / 190 cm"
+        ],
+        [
+          "https://thefightlife.com/athletes/yaroslav-amosov/",
+          "180 cm / 75 in"
+        ]
+      ],
+      "approved_for_input": false
+    },
+    {
+      "fighter": "Akbar Abdullaev",
+      "id": 138491,
+      "db": [
+        69,
+        70
+      ],
+      "candidate": [
+        69,
+        70
+      ],
+      "status": [
+        "conflict",
+        "unverified"
+      ],
+      "sources": [
+        [
+          "https://www.sherdog.com/fighter/Akbar-Abdullaev-377895",
+          "69 in"
+        ],
+        [
+          "https://thefightlife.com/athletes/akbar-abdullaev/",
+          "67 in"
+        ],
+        [
+          "https://www.ufc.com/athlete/akbar-abdullaev",
+          "Indexed profile lacks height/reach"
+        ]
+      ],
+      "approved_for_input": false
+    },
+    {
+      "fighter": "Magomed Tuchalov",
+      "id": 166491,
+      "db": [
+        75,
+        78
+      ],
+      "candidate": [
+        77,
+        78
+      ],
+      "status": [
+        "conflict",
+        "conflict"
+      ],
+      "sources": [
+        [
+          "https://www.sherdog.com/fighter/Magomed-Tuchalov-339963",
+          "77 in height"
+        ],
+        [
+          "https://www.ufc.news/fighter/magomed-tuchalov",
+          "77 in height/reach"
+        ],
+        [
+          "https://848combat.com/fighters/magomed-tuchalov",
+          "75 in height"
+        ]
+      ],
+      "approved_for_input": false
+    },
+    {
+      "fighter": "Luke Riley",
+      "id": 144783,
+      "db": [
+        69,
+        69
+      ],
+      "candidate": [
+        69,
+        69
+      ],
+      "status": [
+        "corroborated",
+        "corroborated"
+      ],
+      "sources": [
+        [
+          "https://www.rotowire.com/mma/player/luke-riley-2683",
+          "69 in height/reach"
+        ],
+        [
+          "https://www.sherdog.com/fighter/Luke-Riley-354035",
+          "69 in height"
+        ]
+      ],
+      "approved_for_input": false
+    },
+    {
+      "fighter": "Ivan Gnizditskiy",
+      "id": 121393,
+      "db": [
+        73,
+        null
+      ],
+      "candidate": [
+        73,
+        null
+      ],
+      "status": [
+        "corroborated",
+        "missing"
+      ],
+      "sources": [
+        [
+          "https://www.sherdog.com/fighter/Ivan-Gnizditskiy-291329",
+          "73 in height"
+        ],
+        [
+          "https://www.ufc.com/athlete/ivan-gnizditskiy",
+          "Indexed profile lacks height/reach"
+        ]
+      ],
+      "approved_for_input": false
+    },
+    {
+      "fighter": "Pavel Andrusca",
+      "id": 140692,
+      "db": [
+        67,
+        66
+      ],
+      "candidate": [
+        67,
+        66
+      ],
+      "status": [
+        "conflict",
+        "unverified"
+      ],
+      "sources": [
+        [
+          "https://www.sherdog.com/fighter/Pavel-Andrusca-384442",
+          "66 in height"
+        ],
+        [
+          "https://www.ufc.com/athlete/pavel-andrusca",
+          "Direct page blocked; no numeric value independently verified"
+        ]
+      ],
+      "approved_for_input": false
+    },
+    {
+      "fighter": "Mahammadali Osmanli",
+      "id": 133556,
+      "db": [
+        null,
+        null
+      ],
+      "candidate": [
+        70,
+        71.5
+      ],
+      "status": [
+        "secondary_only",
+        "secondary_only"
+      ],
+      "sources": [
+        [
+          "https://strikesheet.app/fighters/mahammadali-osmanli/",
+          "177 cm / 182 cm"
+        ],
+        [
+          "https://www.ufc.com/athlete/mahammadali-osmanli",
+          "Direct page blocked; no numeric value independently verified"
+        ]
+      ],
+      "approved_for_input": false
+    },
+    {
+      "fighter": "Modestino Rodrigues",
+      "id": 146940,
+      "db": [
+        75,
+        77
+      ],
+      "candidate": [
+        75,
+        77
+      ],
+      "status": [
+        "conflict",
+        "unverified"
+      ],
+      "sources": [
+        [
+          "https://www.sherdog.com/fighter/Modestino-Rodrigues-397486",
+          "74 in height"
+        ],
+        [
+          "https://www.ufc.com/athlete/modestino-rodrigues",
+          "Direct page blocked; no numeric value independently verified"
+        ]
+      ],
+      "approved_for_input": false
+    },
+    {
+      "fighter": "Abdul Hussein",
+      "id": 107541,
+      "db": [
+        67,
+        67
+      ],
+      "candidate": [
+        67,
+        67
+      ],
+      "status": [
+        "conflict",
+        "unverified"
+      ],
+      "sources": [
+        [
+          "https://strikesheet.app/fighters/abdul-hussein/",
+          "165 cm height; reach missing"
+        ],
+        [
+          "https://www.ufc.com/athlete/abdul-hussein",
+          "Direct page blocked; no numeric value independently verified"
+        ]
+      ],
+      "approved_for_input": false
+    }
+  ]
+}
