@@ -125,7 +125,7 @@ def resolve(t,fights,con):
         ret.append(pair)
     return ret
 
-def batch_historical(t,rows,day,models):
+def batch_historical(t,rows,day,models,*,physical_overrides=None):
     ev=pd.concat([t["events"],pd.DataFrame([{"EVENT":EVENT,"DATE":str(day.date())}])],ignore_index=True)
     rr=[]
     for x in rows:
@@ -137,6 +137,9 @@ def batch_historical(t,rows,day,models):
         f=build_prefight_perspective_rows(ev,result,t["stats"],t["fighters"])
         f=f[f.event==EVENT].copy()
         require(len(f)==len(rows)*2 and f.fight_id.nunique()==len(rows),"Query cardinality error")
+        if physical_overrides is not None:
+            from prospective_physical_overlay import patch_query_frame
+            f=patch_query_frame(f,physical_overrides,EVENT,day)
         return f
     f,g=make(False),make(True)
     def predict(frame):
@@ -180,8 +183,11 @@ def timing_sim(h,seconds,seed):
         out[f"OVER_{threshold}"]=p;out[f"UNDER_{threshold}"]=1-p
     return out
 
-def evaluate(t,rows,day,static,history,reference,historical):
-    hv=batch_historical(t,rows,day,historical)
+def evaluate(t,rows,day,static,history,reference,historical,*,physical_overrides=None):
+    if physical_overrides is not None:
+        from prospective_physical_overlay import patch_static
+        static=patch_static(static,physical_overrides)
+    hv=batch_historical(t,rows,day,historical,physical_overrides=physical_overrides)
     results=[]
     for i,(x,h) in enumerate(zip(rows,hv,strict=True),1):
         aa,bb=x["names"];seconds=x["rounds"]*300
