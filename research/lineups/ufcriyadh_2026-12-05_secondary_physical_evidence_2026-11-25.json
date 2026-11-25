@@ -1,0 +1,126 @@
+{
+  "schema": "WSHLX_SECONDARY_PHYSICAL_EVIDENCE_NOT_MODEL_INPUT_V1",
+  "observed_date": "2026-11-25",
+  "event_date": "2026-12-05",
+  "units": "inches",
+  "official_only_policy_retained": true,
+  "applied_to_model": false,
+  "fields": [
+    {
+      "fighter": "Akbar Abdullaev",
+      "regional_id": 138491,
+      "field": "height",
+      "status": "CONFLICTING",
+      "candidates": [
+        {
+          "value": 69,
+          "sources": [
+            "https://www.sherdog.com/fighter/Akbar-Abdullaev-377895",
+            "https://www.rotowire.com/mma/player/akbar-abdullaev-2840"
+          ]
+        },
+        {
+          "value": 67,
+          "sources": [
+            "https://thefightlife.com/athletes/akbar-abdullaev/",
+            "https://cagebrothers.com/fighter/akbar-abdullaev/"
+          ]
+        }
+      ],
+      "official_url": "https://www.ufc.com/athlete/akbar-abdullaev"
+    },
+    {
+      "fighter": "Akbar Abdullaev",
+      "regional_id": 138491,
+      "field": "reach",
+      "status": "CONSISTENT_SECONDARY_NOT_PRIMARY_CONFIRMED",
+      "candidates": [
+        {
+          "value": 70,
+          "sources": [
+            "https://www.probetrics.com/ufc/fighters/40381",
+            "https://thefightlife.com/athletes/akbar-abdullaev/",
+            "https://www.youtube.com/watch?v=pXAYx7lZ_wg"
+          ]
+        }
+      ],
+      "official_url": "https://www.ufc.com/athlete/akbar-abdullaev"
+    },
+    {
+      "fighter": "Magomed Tuchalov",
+      "regional_id": 166491,
+      "field": "reach",
+      "status": "CONFLICTING",
+      "candidates": [
+        {
+          "value": 77,
+          "sources": [
+            "https://www.ufc.news/fighter/magomed-tuchalov"
+          ]
+        },
+        {
+          "value": 78,
+          "sources": [
+            "https://cagealmanac.com/fighters/magomed-tuchalov-bc5a51",
+            "https://www.probetrics.com/ufc/fighters/39684"
+          ]
+        },
+        {
+          "value": 78.5,
+          "sources": [
+            "https://www.cbssports.com/ufc/fighter/50048231/magomed-tuchalov/"
+          ]
+        }
+      ],
+      "official_url": "https://www.ufc.com/athlete/magomed-tuchalov"
+    },
+    {
+      "fighter": "Ivan Gnizditskiy",
+      "regional_id": 121393,
+      "field": "height",
+      "status": "CONSISTENT_SECONDARY_NOT_PRIMARY_CONFIRMED",
+      "candidates": [
+        {
+          "value": 73,
+          "sources": [
+            "https://www.sherdog.com/fighter/Ivan-Gnizditskiy-291329",
+            "https://www.probetrics.com/ufc/fighters/42888"
+          ]
+        }
+      ],
+      "official_url": "https://www.ufc.com/athlete/ivan-gnizditskiy"
+    },
+    {
+      "fighter": "Ivan Gnizditskiy",
+      "regional_id": 121393,
+      "field": "reach",
+      "status": "NO_RELIABLE_MEASUREMENT",
+      "candidates": [],
+      "official_url": "https://www.ufc.com/athlete/ivan-gnizditskiy"
+    },
+    {
+      "fighter": "Abdul Hussein",
+      "regional_id": 107541,
+      "field": "reach",
+      "status": "CONFLICTING",
+      "candidates": [
+        {
+          "value": 65,
+          "sources": [
+            "https://www.ufc.news/fighter/abdul-hussein",
+            "https://thefightlife.com/athletes/abdul-hussein/"
+          ]
+        },
+        {
+          "value": 67,
+          "sources": [
+            "https://cagealmanac.com/fighters/abdul-hussein-0e6bc8",
+            "https://www.probetrics.com/ufc/fighters/39685"
+          ]
+        }
+      ],
+      "official_url": "https://www.ufc.com/athlete/abdul-hussein"
+    }
+  ],
+  "notes": "Secondary sources can share feeds; repetition is not independent verification. Candidate measurements only, no odds or picks recorded. Some directly fetched official profiles returned HTTP403. Recheck at fight week and do not infer reach from height."
+}
