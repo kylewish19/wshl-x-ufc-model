@@ -1,0 +1,137 @@
+{
+  "schema": "WSHLX_ROSTER_OBSERVATION_NOT_LOCK_V1",
+  "event": "UFC Fight Night: Adesanya vs Magomedov",
+  "event_date": "2026-12-05",
+  "first_fight_utc": "2026-12-05T15:00:00+00:00",
+  "main_card_utc": "2026-12-05T18:00:00+00:00",
+  "lineup_source_url": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
+  "lineup_observed_date": "2026-11-25",
+  "lineup_verified_by_caller": false,
+  "listed_on_official_event_page": true,
+  "needs_fight_week_reconfirmation": true,
+  "identity_verification_complete": false,
+  "odds_not_copied_or_used": true,
+  "order": "UFC page main card followed by prelims, not guaranteed chronological bout order",
+  "fights": [
+    {
+      "a": "Israel Adesanya",
+      "b": "Shara Magomedov",
+      "provisional": true,
+      "weight_class": "Middleweight Bout",
+      "card_section": "main",
+      "scheduled_rounds": null
+    },
+    {
+      "a": "Ian Machado Garry",
+      "b": "Yaroslav Amosov",
+      "provisional": true,
+      "weight_class": "Welterweight Bout",
+      "card_section": "main",
+      "scheduled_rounds": null
+    },
+    {
+      "a": "Levan Chokheli",
+      "b": "Islam Dulatov",
+      "provisional": true,
+      "weight_class": "Welterweight Bout",
+      "card_section": "main",
+      "scheduled_rounds": null
+    },
+    {
+      "a": "Serghei Spivac",
+      "b": "Mario Pinto",
+      "provisional": true,
+      "weight_class": "Heavyweight Bout",
+      "card_section": "main",
+      "scheduled_rounds": null
+    },
+    {
+      "a": "Mairon Santos",
+      "b": "Akbar Abdullaev",
+      "provisional": true,
+      "weight_class": "Lightweight Bout",
+      "card_section": "main",
+      "scheduled_rounds": null
+    },
+    {
+      "a": "Magomed Tuchalov",
+      "b": "Ion Cutelaba",
+      "provisional": true,
+      "weight_class": "Light Heavyweight Bout",
+      "card_section": "main",
+      "scheduled_rounds": null
+    },
+    {
+      "a": "Luke Riley",
+      "b": "Gabriel Santos",
+      "provisional": true,
+      "weight_class": "Featherweight Bout",
+      "card_section": "prelims",
+      "scheduled_rounds": null
+    },
+    {
+      "a": "Bruno Silva",
+      "b": "Jafel Filho",
+      "provisional": true,
+      "weight_class": "Flyweight Bout",
+      "card_section": "prelims",
+      "scheduled_rounds": null
+    },
+    {
+      "a": "Uran Satybaldiev",
+      "b": "Ivan Gnizditskiy",
+      "provisional": true,
+      "weight_class": "Light Heavyweight Bout",
+      "card_section": "prelims",
+      "scheduled_rounds": null
+    },
+    {
+      "a": "Marco Tulio",
+      "b": "JunYong Park",
+      "provisional": true,
+      "weight_class": "Middleweight Bout",
+      "card_section": "prelims",
+      "scheduled_rounds": null
+    },
+    {
+      "a": "Pavel Andrusca",
+      "b": "Mahammadali Osmanli",
+      "provisional": true,
+      "weight_class": "Bantamweight Bout",
+      "card_section": "prelims",
+      "scheduled_rounds": null
+    },
+    {
+      "a": "Modestino Rodrigues",
+      "b": "Matthieu Duclos",
+      "provisional": true,
+      "weight_class": "Middleweight Bout",
+      "card_section": "prelims",
+      "scheduled_rounds": null
+    },
+    {
+      "a": "Abdul Hussein",
+      "b": "Hecher Sosa",
+      "provisional": true,
+      "weight_class": "Bantamweight Bout",
+      "card_section": "prelims",
+      "scheduled_rounds": null
+    },
+    {
+      "a": "Mateusz Rębecki",
+      "b": "Elves Brener",
+      "provisional": true,
+      "weight_class": "Lightweight Bout",
+      "card_section": "prelims",
+      "scheduled_rounds": null
+    }
+  ],
+  "prior_draft_match": true,
+  "official_matchup_count": 14,
+  "official_card_sections": {
+    "main": 6,
+    "prelims": 8
+  },
+  "rounds_independently_verified": false,
+  "source_note": "Official event page lists sportsbook prices; prices were not copied into this observation, used to select models or fed into inference. No inference run."
+}
