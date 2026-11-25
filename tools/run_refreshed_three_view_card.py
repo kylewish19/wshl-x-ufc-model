@@ -98,14 +98,19 @@ def resolve(t,fights,con):
                 if (fid,sid)==(121393,"057a241e4ba90c4d"):
                     # Verified Nov25: archive and Sherdog agree on full name, DOB,
                     # 205-lb division; official UFC profile confirms Dec5 debut.
-                    # The pinned DB is missing this UFCStats cross-reference.
-                    require(not mapped and not owners and profiles[sid]=={"Ivan Gnizditskiy"},"Supplemental crosswalk conflict")
+                    # Diagnostic 45667940548: a separate profile-only row owns SID.
+                    # Do not merge source records or assume other duplicate IDs are safe.
+                    require(not mapped and owners=={180152} and profiles[sid]=={"Ivan Gnizditskiy"},"Supplemental crosswalk conflict")
+                    other=con.execute("SELECT name,dob FROM fighters WHERE fighter_id=?",(180152,)).fetchone()
+                    require(other is not None and a.namekey(other[0])=="ivangnizditskiy" and other[1]=="1996-05-10","Profile-only owner mismatch")
+                    require(con.execute("SELECT COUNT(*) FROM fight_participants WHERE fighter_id=?",(180152,)).fetchone()[0]==0,"Profile-only owner has fight history; review required")
+                    require(con.execute("SELECT COUNT(*) FROM fight_participants WHERE fighter_id=?",(fid,)).fetchone()[0]==7,"Regional record changed; review required")
                     rows=[x for x in t["fighters"].to_dict("records") if txt(x["URL"]).rstrip("/").endswith("/"+sid)]
                     require(len(rows)==1 and str(pd.to_datetime(rows[0]["DOB"]).date())=="1996-05-10" and txt(rows[0]["WEIGHT"])=="205 lbs.","Archived debut profile mismatch")
                     canon=con.execute("SELECT name,dob FROM fighters WHERE fighter_id=?",(fid,)).fetchone()
                     require(canon is not None and a.namekey(canon[0])=="ivangnizditskiy" and canon[1]=="1996-05-10","Canonical debut profile mismatch")
                     require(not any(a.namekey(n) in aliases[fid] for n in bout_names),"Unexpected prior UFC bout; review identity")
-                    identity_status="CORROBORATED_ARCHIVE_PROFILE_ONLY_CROSSWALK"
+                    identity_status="CORROBORATED_SPLIT_ID_PROFILE_CROSSWALK"
                 else:
                     require(sid in mapped and owners=={fid} and len(profiles[sid])==1,"UFCStats identity not uniquely verified in raw source: "+z["name"])
                     identity_status="PROFILE_ID_MATCH"

@@ -2,7 +2,7 @@ name: UFC combined prospective research integration
 on:
   push:
     branches: ["feature/historical-conditional-rates"]
-    paths: ["tools/run_combined_refreshed_research.py","tools/refreshed_identity_challenger_panel.py",".github/workflows/ufc-combined-refreshed-research.yml"]
+    paths: ["tools/run_refreshed_three_view_card.py","tools/run_combined_refreshed_research.py","tools/refreshed_identity_challenger_panel.py",".github/workflows/ufc-combined-refreshed-research.yml"]
   workflow_dispatch:
 permissions:
   contents: read
