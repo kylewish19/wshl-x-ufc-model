@@ -9,7 +9,7 @@ import hashlib,json
 import numpy as np
 from wshlx_ufc.unified_ensemble import binary_logit_pool,multiclass_log_pool,blend_hazards,markets_from_hazards
 from wshlx_ufc.joint_coherence_shadow import JOINT_KEYS,project
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=Path(__file__).resolve().parents[2]
 WEIGHTS_PATH=ROOT/"data/unified/oof_global_unified_shadow.json"
 WEIGHTS_BLOB="c22c068ace74d0ad9b5e09ecbe232556b76ba89f"
 def pinned_weights():
