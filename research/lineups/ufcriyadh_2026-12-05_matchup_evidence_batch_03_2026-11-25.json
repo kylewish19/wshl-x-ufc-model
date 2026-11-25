@@ -1,0 +1,178 @@
+{
+  "schema": "WSHLX_MATCHUP_WRITTEN_EVIDENCE_BATCH_V1",
+  "observed_date": "2026-11-25",
+  "event_date": "2026-12-05",
+  "source_history_run": 45673398387,
+  "cutoff_exclusive": "2026-11-25",
+  "odds_copied": false,
+  "odds_used": false,
+  "tape_reviewed": false,
+  "actual_predictions": 0,
+  "training_changed": false,
+  "matchups": [
+    {
+      "fighters": [
+        "Ian Machado Garry",
+        "Yaroslav Amosov"
+      ],
+      "scheduled_rounds_observed": 5,
+      "rounds_evidence": [
+        "https://www.mmafighting.com/ufc/519978/israel-adesanya-vs-shara-magomedov-ian-machado-garry-vs-yaroslav-amosov-set-for-ufc-saudi-arabia",
+        "https://www.mmamania.com/ufc-news/484946/israel-adesanya-vs-shara-magomedov-headlines-ufc-saudi-arabia-garry-vs-amosov-co-headlines"
+      ],
+      "rounds_status": "Announced five-round co-main; recheck final official schedule",
+      "pinned": {
+        "garry": {
+          "record": "17-2",
+          "ufc": "10-2",
+          "reference_bouts": 12
+        },
+        "amosov": {
+          "record": "30-1",
+          "ufc": "2-0",
+          "reference_bouts": 2
+        }
+      },
+      "written_evidence": [
+        {
+          "fact": "Garry's losses to Rakhmonov and Makhachev were both five-round unanimous decisions.",
+          "url": "https://www.ufc.com/athlete/ian-machado-garry"
+        },
+        {
+          "fact": "Amosov submitted Magny by anaconda in R1 and Alvarez by arm triangle in R2; official profile lists 13 career SUB wins.",
+          "url": "https://www.ufc.com/athlete/yaroslav-amosov"
+        },
+        {
+          "fact": "Amosov's prior Bellator title experience and sole loss to Jason Jackson provide non-UFC context.",
+          "url": "https://www.ufc.com/news/fighters-rise-ufc-328-chimaev-vs-strickland"
+        },
+        {
+          "fact": "Makhachev won by decision using grappling; secondary statistical providers disagree on exact takedown totals (Sofascore 6/14; FullFightCard 7/15). Verify archive before using numerical data.",
+          "urls": [
+            "https://www.reuters.com/sports/soccer/makhachev-edges-garry-retain-ufc-welterweight-title-2026-08-16/",
+            "https://www.sofascore.com/news/ufc-330-islam-makhachev-defeats-ian-machado-garry",
+            "https://fullfightcard.com/ian-machado-garry-vs-islam-makhachev"
+          ]
+        }
+      ],
+      "questions": [
+        "Evaluate Garry's initial takedown defense separately from sustained control and escape ability.",
+        "Assess Amosov's transition from takedown to submission against Garry's defense; two UFC submissions do not establish universal submission probability.",
+        "Check late-round pace and prior championship-level opposition, with 25-minute timing exposure."
+      ],
+      "film_queue": [
+        "Garry vs Rakhmonov — clinch and ground escapes",
+        "Garry vs Makhachev — repeated takedowns and late rounds",
+        "Amosov vs Magny and Alvarez — submission entry and control",
+        "Amosov vs Jason Jackson — defensive vulnerability"
+      ]
+    },
+    {
+      "fighters": [
+        "Levan Chokheli",
+        "Islam Dulatov"
+      ],
+      "pinned": {
+        "chokheli": {
+          "record": "15-3, 1 NC",
+          "reference_bouts": 1,
+          "bellator_bouts": 7
+        },
+        "dulatov": {
+          "record": "12-1",
+          "reference_bouts": 1
+        }
+      },
+      "written_evidence": [
+        {
+          "fact": "Chokheli defeated Leon Shahbazyan by TKO in 23 seconds on June 20 2026.",
+          "url": "https://www.ufc.com/news/ufc-fight-night-kape-vs-horiguchi-official-judges-scorecards"
+        },
+        {
+          "fact": "Chokheli's official profile describes his recent loss to Lorenz Larkin in September 2024; pinned history contains seven Bellator fights.",
+          "url": "https://www.ufc.com/athlete/levan-chokheli"
+        },
+        {
+          "fact": "Dulatov KO'd Adam Fugitt at 4:06 R1 on July 19 2025.",
+          "url": "https://www.ufc.com/news/prelim-results-highlights-winner-interviews-ufc-318-holloway-vs-poirier-3-new-orleans"
+        },
+        {
+          "fact": "UFC preview describes Dulatov's 12 straight victories after professional debut loss and all wins by finish.",
+          "url": "https://www.ufc.com/news/fight-fight-preview-ufc-abu-dhabi-ankalaev-guskov"
+        },
+        {
+          "fact": "DWCS R1 KO of Vanilton Antunes preceded Fugitt.",
+          "url": "https://www.ufc.com/news/fight-fight-preview-ufc-318-holloway-vs-poirier-3"
+        }
+      ],
+      "questions": [
+        "Both UFC samples are short first-round stoppages; do not interpret UFC rate estimates as stable.",
+        "Compare Chokheli's Bellator opposition, defensive reactions and wrestling with Dulatov's finishing and range management.",
+        "Dulatov's last recorded UFC appearance was July 2025; verify activity and reason for layoff separately, no speculation about injury."
+      ],
+      "film_queue": [
+        "Chokheli vs Shahbazyan — opening attack",
+        "Chokheli vs Larkin — defense under pressure",
+        "Dulatov vs Antunes and Fugitt — distance and finishing",
+        "Full regional fights — later-round defense and grappling"
+      ]
+    },
+    {
+      "fighters": [
+        "Magomed Tuchalov",
+        "Ion Cutelaba"
+      ],
+      "pinned": {
+        "tuchalov": {
+          "record": "6-0",
+          "reference_bouts": 1
+        },
+        "cutelaba": {
+          "record": "20-12-1, 1 NC",
+          "reference_bouts": 20,
+          "ufc_appearances": 21
+        }
+      },
+      "written_evidence": [
+        {
+          "fact": "Tuchalov beat Ribeiro by unanimous 29-28 scores in all three cards July 25 2026.",
+          "url": "https://www.ufc.com/news/ufc-abu-dhabi-official-scorecards"
+        },
+        {
+          "fact": "Secondary UFCStats reproductions report Tuchalov 8/14 takedowns, 35/80 significant strikes, 39 absorbed and 4:20 control. These numbers are written evidence pending archive cross-check, not new model inputs.",
+          "urls": [
+            "https://aisportsmetrics.com/mma/fight.php?id=12396",
+            "https://edgeup.gg/mma/fighters/mma-bc5a51159ec2fdf2",
+            "https://www.probetrics.com/ufc/fighters/39684"
+          ]
+        },
+        {
+          "fact": "Cutelaba submitted Oumar Sy with a guillotine in R1 on March 14 2026 and lost by R2 TKO to Navajo Stirling on June 20 2026.",
+          "url": "https://www.ufc.com/athlete/ion-cutelaba"
+        }
+      ],
+      "source_discrepancies": [
+        {
+          "fact": "UFC announcement lists Tuchalov 7-0 while pinned DB and Sherdog list 6-0. Sherdog classifies Aug27 2023 win over Zhakhongir Khakimzhonov at Hardcore MMA as pro exhibition; Probetrics includes same event/date KO in its seven wins. Likely scope discrepancy; retain pinned professional history, no added win.",
+          "urls": [
+            "https://www.ufc.com/news/ufc-returns-to-saudi-arabia-middleweight-showdown-between-israel-adesanya-shara-magomedov",
+            "https://www.sherdog.com/fighter/Magomed-Tuchalov-339963",
+            "https://www.probetrics.com/ufc/fighters/39684"
+          ]
+        }
+      ],
+      "questions": [
+        "Can Tuchalov's repeated takedowns translate against Cutelaba's experience and submission threat?",
+        "Compare Cutelaba's early grappling success against Sy with defensive vulnerability under sustained pressure against Stirling.",
+        "Tuchalov's one UFC fight is not sufficient for stable takedown or cardio ratings; reach remains unresolved."
+      ],
+      "film_queue": [
+        "Tuchalov vs Ribeiro — takedown chains, control and resets",
+        "Tuchalov vs Caio Machado — power and defense",
+        "Cutelaba vs Sy — guillotine setups",
+        "Cutelaba vs Stirling — pace and striking defense"
+      ]
+    }
+  ],
+  "limits": "Written sources only, no visual tape reviewed, no numerical prediction adjustment. Some retrieved search pages display odds or predictions; these were not copied or used. Recheck lineup, rounds and source freshness within pre-event gate."
+}
