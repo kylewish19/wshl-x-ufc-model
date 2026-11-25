@@ -42,4 +42,4 @@ jobs:
       - run: |
           mkdir -p .research_cache/fightcanon
           curl --fail --silent --show-error --location --retry 2 --max-time 360 -o .research_cache/fightcanon/new.db https://github.com/Jadevit/fight-canon-db/releases/download/db-2026-11-24-2118/canon.db
-      - run: python tools/run_combined_refreshed_research.py --self-test --reference /tmp/refreshed-reference --offsets /tmp/refreshed-offsets --historical /tmp/refreshed-historical
+      - run: python tools/run_combined_refreshed_research.py --self-test --official-physical-shadow --reference /tmp/refreshed-reference --offsets /tmp/refreshed-offsets --historical /tmp/refreshed-historical

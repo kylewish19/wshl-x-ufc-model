@@ -70,6 +70,7 @@ def main():
     ap=argparse.ArgumentParser()
     for n in ("reference","offsets","historical"):ap.add_argument("--"+n,type=Path,required=True)
     ap.add_argument("--lineup",type=Path);ap.add_argument("--output",type=Path);ap.add_argument("--self-test",action="store_true")
+    ap.add_argument("--official-physical-shadow",action="store_true",help="Retain original views and attach a separately identified optional physical sensitivity sidecar")
     args=ap.parse_args();now=datetime.now(timezone.utc)
     if args.self_test:
         require(args.lineup is None and args.output is None,"Fixture cannot publish")
@@ -97,15 +98,30 @@ def main():
     finally:con.close()
     rows=[{"names":tuple(z["source_name"] for z in pair),"rounds":f["scheduled_rounds"],"weight_class":f["weight_class"]} for f,pair in zip(bouts,identities,strict=True)]
     core=evaluate(t,rows,pd.Timestamp(day,tz="UTC"),static,history,ref,hist)
+    physical=None
+    if args.official_physical_shadow:
+        from prospective_physical_overlay import build_overrides
+        require(day=="2026-12-05","Physical observation registered for Riyadh only")
+        path=ROOT/"research/lineups/ufcriyadh_2026-12-05_physical_observed_2026-11-25.json"
+        blob=path.read_bytes();digest=hashlib.sha256(blob).hexdigest()
+        require(digest=="d7ec3e1722ec905ef970dc587a892557f81c44a0691d55041b42c04ebdd902b4","Physical observation digest mismatch")
+        override,ledger=build_overrides(json.loads(blob),identities,day,static)
+        shadow=evaluate(t,rows,pd.Timestamp(day,tz="UTC"),static,history,ref,hist,physical_overrides=override)
+        for x,y in zip(core,shadow,strict=True):
+            require(x["source_names"]==y["source_names"],"Physical shadow orientation mismatch")
+            if not any(n in override for n in x["source_names"]):require(x["models"]==y["models"],"Unchanged physical inputs changed probabilities")
+            x["official_physical_shadow"]={"models":y["models"],"source_coverage":y["source_coverage"],"research_only":True,"bet_authorized":False}
+        physical={"schema":"WSHLX_OFFICIAL_PHYSICAL_SHADOW_V1","observation_sha256":digest,"field_ledger":ledger,"filled_fields":len(ledger),"primary_models_unchanged":True,"challenger_inputs_unchanged":True,"grading_status":"SEPARATE_DIAGNOSTIC_NOT_REGISTERED_PRIMARY_ARM"}
+        if args.self_test:require(len(ledger)==12 and sum(not z["height_known"] or not z["reach_known"] for x in shadow for z in x["source_coverage"])==4,"Fixture physical coverage mismatch")
     ch,audit=panel(day,cp,ids)
     result=attach(core,ch,details)
     for row,pair in zip(result,identities,strict=True):row["identities"]=pair
     json.dumps(result,allow_nan=False)
     if args.self_test:
-        print(json.dumps({"fictional_fights":len(result),"core_views":len(result)*3,"core_coherence_variants":len(result)*9,"challenger_outputs":sum(len(x["challengers"]) for x in result),"regional_eligible":sum(x["regional_status"]=="ELIGIBLE" for x in result),"missing_physical_profiles_retained":sum(not z["height_known"] or not z["reach_known"] for x in result for z in x["source_coverage"]),"draft_rejected":True,"actual_forecasts":0,"production_migrated":False}))
+        print(json.dumps({"fictional_fights":len(result),"core_views":len(result)*3,"core_coherence_variants":len(result)*9,"challenger_outputs":sum(len(x["challengers"]) for x in result),"regional_eligible":sum(x["regional_status"]=="ELIGIBLE" for x in result),"missing_physical_profiles_retained":sum(not z["height_known"] or not z["reach_known"] for x in result for z in x["source_coverage"]),"official_physical_shadow_checked":physical is not None,"official_physical_shadow_fields":physical["filled_fields"] if physical else 0,"draft_rejected":True,"actual_forecasts":0,"production_migrated":False}))
         return
     require(datetime.now(timezone.utc)<first,"Event already started")
-    report={"schema":"WSHLX_REFRESHED_COMBINED_RESEARCH_V1","event":d["event"],"event_date":day,"first_fight_utc":first.isoformat(),"generated_at_utc":datetime.now(timezone.utc).isoformat(),"lineup_sha256":hashlib.sha256(raw).hexdigest(),"lineup_source_url":d["lineup_source_url"],"history_through":CUTOFF,"worldwide_source_sha256":SHA,"artifact_hashes":{"reference":REFERENCE,"offsets":OFFSETS,"historical":HISTORICAL},"source_coverage":coverage,"challenger_audit":audit,"research_only":True,"odds_used":False,"model_vote_created":False,"bet_authorized":False,"production_migrated":False,"fights":result}
+    report={"schema":"WSHLX_REFRESHED_COMBINED_RESEARCH_V1","event":d["event"],"event_date":day,"first_fight_utc":first.isoformat(),"generated_at_utc":datetime.now(timezone.utc).isoformat(),"lineup_sha256":hashlib.sha256(raw).hexdigest(),"lineup_source_url":d["lineup_source_url"],"history_through":CUTOFF,"worldwide_source_sha256":SHA,"artifact_hashes":{"reference":REFERENCE,"offsets":OFFSETS,"historical":HISTORICAL},"source_coverage":coverage,"challenger_audit":audit,"official_physical_shadow_metadata":physical,"research_only":True,"odds_used":False,"model_vote_created":False,"bet_authorized":False,"production_migrated":False,"fights":result}
     args.output.parent.mkdir(parents=True,exist_ok=True)
     with args.output.open("x") as f:json.dump(report,f,indent=2,allow_nan=False)
 if __name__=="__main__":main()
