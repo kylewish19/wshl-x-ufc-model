@@ -1,0 +1,232 @@
+{
+  "schema": "WSHLX_MATCHUP_WRITTEN_EVIDENCE_BATCH_V1",
+  "observed_date": "2026-11-25",
+  "event_date": "2026-12-05",
+  "source_history_run": 45673398387,
+  "cutoff_exclusive": "2026-11-25",
+  "odds_used": false,
+  "odds_copied": false,
+  "tape_reviewed": false,
+  "actual_predictions": 0,
+  "training_changed": false,
+  "matchups": [
+    {
+      "fighters": [
+        "Bruno Silva",
+        "Jafel Filho"
+      ],
+      "pinned": {
+        "silva": {
+          "regional_id": 55096,
+          "record": "15-9-2, 1 NC",
+          "reference_bouts": 11,
+          "identity": "Bulldog, not Blindado"
+        },
+        "filho": {
+          "regional_id": 67025,
+          "record": "17-5",
+          "reference_bouts": 6
+        }
+      },
+      "written_evidence": [
+        {
+          "fact": "Silva lost by R1 rear-naked choke to Edgar Chairez on June 6 2026, following split-decision loss to Charles Johnson March 14.",
+          "urls": [
+            "https://us.ufcespanol.com/athlete/bruno-silva",
+            "https://www.sherdog.com/fighter/Bruno-Silva-118601"
+          ]
+        },
+        {
+          "fact": "Silva submitted Hyun Sung Park by R3 rear-naked choke Oct18 2025.",
+          "url": "https://www.ufc.com/athlete/hyunsung-park?page=1"
+        },
+        {
+          "fact": "Filho submitted Clayton Carpenter via R1 kimura Oct11 2025 and lost unanimous DEC to Cody Durden Apr25 2026.",
+          "urls": [
+            "https://www.ufc.com/athlete/jafel-filho",
+            "https://www.ufc.com/athlete/jafel-filho?page=1"
+          ]
+        },
+        {
+          "fact": "Filho also has stoppage wins over Daniel Barez and Ode Osbourne; Osbourne finished by R1 rear-naked choke.",
+          "urls": [
+            "https://www.ufc.com/news/fight-by-fight-preview-oliveira-gamrot-rio",
+            "https://www.ufc.com/athlete/jafel-filho?page=1"
+          ]
+        }
+      ],
+      "questions": [
+        "Compare submission entry and conversion, defensive get-ups and back exposure; do not infer a method from one recent loss.",
+        "Review Filho's defeats against Mokaev, Nascimento and Durden for denied grappling and prolonged exchanges.",
+        "Keep Bulldog's UFC profile ID 294aa73dbf37d281 separate from Blindado."
+      ],
+      "film_queue": [
+        "Silva vs Chairez — defensive back exposure",
+        "Silva vs Hyun Sung Park — offensive transitions",
+        "Filho vs Carpenter and Osbourne — entry and conversion",
+        "Filho vs Durden — failed control and striking"
+      ]
+    },
+    {
+      "fighters": [
+        "Marco Tulio",
+        "JunYong Park"
+      ],
+      "pinned": {
+        "tulio": {
+          "regional_id": 112513,
+          "record": "14-3",
+          "reference_bouts": 4
+        },
+        "park": {
+          "regional_id": 81159,
+          "record": "19-7",
+          "reference_bouts": 13
+        }
+      },
+      "written_evidence": [
+        {
+          "fact": "Tulio stopped Ihor Potieria and Tresean Gore, then lost R2 KO to Christian Leroy Duncan Nov8 2025 and unanimous DEC to Roman Kopylov May9 2026.",
+          "urls": [
+            "https://www.ufc.com/news/fight-fight-preview-ufc-fight-night-bonfim-vs-brown-vegas-111",
+            "https://www.ufc.com/athlete/marco-tulio"
+          ]
+        },
+        {
+          "fact": "Park beat Ismail Naurdiev by unanimous DEC June21 2025, then lost all three scorecards 30-27 to Ikram Aliskerov Oct25 2025; no subsequent UFC bouts in pinned source.",
+          "urls": [
+            "https://www.ufc.com/athlete/jun-yong-park",
+            "https://www.ufc.com/news/official-judges-scorecards-ufc-321-aspinall-vs-gane"
+          ]
+        },
+        {
+          "fact": "Park recorded three consecutive rear-naked choke wins over Joseph Holmes, Denis Tiuliulin and Albert Duraev in 2022–23.",
+          "url": "https://www.ufc.com/news/fighters-rise-ufc-fight-night-song-vs-gutierrez"
+        }
+      ],
+      "questions": [
+        "Can Park establish clinch control, takedowns and back takes against Tulio's striking?",
+        "How does Tulio react when his opening offense does not finish an opponent?",
+        "Separate recent activity (Tulio roughly 7 months, Park roughly 13 months entering event) from assumed decline or injury."
+      ],
+      "film_queue": [
+        "Tulio vs Potieria and Gore — finish creation",
+        "Tulio vs Duncan and Kopylov — defense and prolonged exchanges",
+        "Park vs Holmes, Tiuliulin and Duraev — back control",
+        "Park vs Aliskerov — defensive responses and failed offense"
+      ]
+    },
+    {
+      "fighters": [
+        "Abdul Hussein",
+        "Hecher Sosa"
+      ],
+      "pinned": {
+        "hussein": {
+          "regional_id": 107541,
+          "record": "16-2",
+          "reference_bouts": 1
+        },
+        "sosa": {
+          "regional_id": 136096,
+          "record": "14-1",
+          "reference_bouts": 1
+        }
+      },
+      "written_evidence": [
+        {
+          "fact": "Hussein submitted Cody Gibson via arm triangle R3 on July25 2026 after navigating early difficulty; UFC profile lists 5 KO and 10 SUB wins.",
+          "urls": [
+            "https://www.ufc.com/news/ufc-abu-dhabi-official-scorecards",
+            "https://www.ufc.com/index.php/news/ufc-abu-dhabi-prelim-results",
+            "https://www.ufc.com/athlete/abdul-hussein"
+          ]
+        },
+        {
+          "fact": "Sosa defeated previously unbeaten Mackson Lee by DWCS unanimous DEC Sep16 2025 (30-27,30-27,30-26); UFC report describes grappling control.",
+          "url": "https://www.ufc.com/news/week-6-results-scorecards-fight-recaps-contract-winners-interviews-dana-whites-contender-series-season-9"
+        },
+        {
+          "fact": "Sosa defeated Luan Lacerda by UFC unanimous DEC March14 2026 (30-27,30-27,29-28); official scorecards date supersedes athlete profile typo March7.",
+          "urls": [
+            "https://www.ufc.com/news/ufc-fight-night-emmett-vs-vallejos-official-scorecards",
+            "https://www.ufc.com/news/ufc-fight-night-emmett-vs-vallejos-results-prelims-highlights-winners-interviews"
+          ]
+        }
+      ],
+      "source_discrepancies": [
+        {
+          "fact": "UFC profile lists Sosa 15-1, Sherdog and pinned database 14-1; both DWCS and UFC wins documented separately. FightMatrix confirms one UFC main-roster appearance. Missing additional professional win not identified; retain pinned history.",
+          "urls": [
+            "https://www.ufc.com/athlete/hecher-sosa",
+            "https://www.sherdog.com/fighter/Hecher-Sosa-236589",
+            "https://www.fightmatrix.com/fighter-profile/Hecher%2520Sosa/165903/"
+          ]
+        }
+      ],
+      "questions": [
+        "Compare Sosa's control with Hussein's submission transitions; top position alone does not guarantee safety from submission.",
+        "Assess Hussein's early difficulties and late recovery against Gibson; single UFC bout not stable rate estimate.",
+        "Review Sosa's sustained pace and submission defense against Lacerda; distinguish DWCS from UFC exposure."
+      ],
+      "film_queue": [
+        "Hussein vs Gibson — early trouble and late submission",
+        "Sosa vs Mackson Lee — control and transitions",
+        "Sosa vs Lacerda — competitive exchanges and defense"
+      ]
+    },
+    {
+      "fighters": [
+        "Mateusz Rębecki",
+        "Elves Brener"
+      ],
+      "pinned": {
+        "rebecki": {
+          "regional_id": 83722,
+          "record": "21-5",
+          "reference_bouts": 9
+        },
+        "brener": {
+          "regional_id": 102396,
+          "record": "17-6",
+          "reference_bouts": 7
+        }
+      },
+      "written_evidence": [
+        {
+          "fact": "Rębecki lost to Grant Dawson by R3 rear-naked choke May9 2026 after hurting Dawson in round two, then stopped Kyle Prepolec R1 Aug1 2026, ending a three-fight losing streak.",
+          "urls": [
+            "https://www.ufc.com/news/ufc-328-chimaev-vs-strickland-results-highlights-prelims-winners-interviews-newark",
+            "https://www.ufc.com/news/ufc-328-official-scorecards-chimaev-vs-strickland-judges",
+            "https://www.ufc.com/news/ufc-belgrade-prelim-results"
+          ]
+        },
+        {
+          "fact": "Brener previously lost DEC to Orolbai, R3 TKO to Joel Alvarez and DEC to Esteban Ribovics, then stopped Josiah Harrell R1 Sep26 2026.",
+          "urls": [
+            "https://www.ufc.com/athlete/elves-brener",
+            "https://www.ufc.com/news/bonus-coverage-2024-performance-fight-of-the-night",
+            "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-taira-vs-park-apex-las-vegas",
+            "https://www.ufc.com/index.php/news/ufc-fight-night-rosas-jr-vs-barcelos-official-scorecards"
+          ]
+        },
+        {
+          "fact": "UFC Ribovics recap describes Brener being pressured and kept in range by combination striking; evidence from that matchup only.",
+          "url": "https://www.ufc.com/news/main-card-results-highlights-winner-interviews-ufc-fight-night-taira-vs-park-apex-las-vegas"
+        }
+      ],
+      "questions": [
+        "Compare sustained pressure, striking defense and defensive recovery after competitive exchanges.",
+        "Does Rębecki's wrestling create control or expose him to Brener's grappling? Review specific positional evidence before method judgment.",
+        "Do not infer recovered durability solely from one early rebound stoppage per fighter."
+      ],
+      "film_queue": [
+        "Rębecki vs Dawson — fatigue, back exposure and recovery",
+        "Rębecki vs Prepolec — rebound performance",
+        "Brener vs Alvarez and Ribovics — pressure and defensive responses",
+        "Brener vs Harrell — current offense"
+      ]
+    }
+  ],
+  "limits": "Written evidence only; no video viewed, predictions generated or feature modifications. Some search results included betting markets/other predictions; these were not copied into the register or used to set probabilities. All records remain pinned coverage-limited. Final roster, rounds, weigh-ins and freshness require reconfirmation."
+}
