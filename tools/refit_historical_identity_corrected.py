@@ -90,6 +90,7 @@ def reconcile_legacy_aliases(t):
     from wshlx_ufc.historical_data import normalize_events,bout,txt
     days={txt(x.event):x.date.date().isoformat() for x in normalize_events(t["events"]).itertuples(index=False) if pd.notna(x.date)}
     prospect=0
+    unresolved={}
     def identity(n,day,pair):
         name=txt(n)
         if a.namekey(name)=="anthonyromero":
@@ -103,7 +104,16 @@ def reconcile_legacy_aliases(t):
         fixed=[];fighters=[]
         for row in df.to_dict("records"):
             ev=txt(row["EVENT"]);pair=bout(row["BOUT"])
-            if not pair or ev not in days:raise ValueError("Unresolved source date or bout "+str((ev,row["BOUT"])))
+            # Unrelated orphan source rows already excluded by legacy event joins
+            # remain untouched, counted, and never given a guessed event date.
+            if not pair or ev not in days:
+                names={a.namekey(z) for z in pair or ()}
+                if "anthonyromero" in names or (k=="stats" and a.namekey(row["FIGHTER"])=="anthonyromero"):
+                    raise ValueError("Unresolved targeted identity "+str((ev,row["BOUT"])))
+                unresolved[k]=unresolved.get(k,0)+1
+                fixed.append(row["BOUT"])
+                if k=="stats":fighters.append(row["FIGHTER"])
+                continue
             day=days[ev]
             aa,bb=(identity(z,day,pair) for z in pair)
             fixed.append(aa+" vs. "+bb)
@@ -114,7 +124,7 @@ def reconcile_legacy_aliases(t):
     assert prospect==1, f"Expected exactly one verified UFC332 prospect result, got {prospect}"
     t["fighters"]["FIGHTER"]=t["fighters"]["FIGHTER"].replace({"Kai Kamaka":"Kai Kamaka III","Zach Reese":"Zachary Reese"})
     t["fighters"]=t["fighters"][t["fighters"]["FIGHTER"]!="Anthony Romero (The Genius)"]
-    print("LEGACY_ALIAS_AUDIT UFC332 prospect matched by date and opponent",flush=True)
+    print("LEGACY_ALIAS_AUDIT",json.dumps({"prospect_results":prospect,"unresolved_unrelated_rows_preserved":unresolved}),flush=True)
     return t
 
 def main():

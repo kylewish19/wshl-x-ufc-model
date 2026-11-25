@@ -44,16 +44,20 @@ def main():
     assert len(idx)==len(m)
     old=pd.read_csv(LEDGER)
     assert len(old)==153
-    chosen=[]
+    chosen=[];issues=[]
     for r in old.to_dict("records"):
         k=key(r)
         if k not in idx:
             candidates=[z for z in idx if z[0]==k[0] and set(z[1:])&set(k[1:])]
-            raise ValueError("Historical feedback identity mismatch: "+str((k,candidates)))
+            issues.append({"type":"identity","key":k,"candidates":candidates})
+            continue
         x=idx[k]
         if x["method"]!=r["clean_actual_method"] or rb.norm_name(x["winner"])!=rb.norm_name(r["winner"]):
-            raise ValueError("Historical feedback label disagreement: "+str(k))
+            issues.append({"type":"label","key":k,"expected":[r["clean_actual_method"],r["winner"]],"observed":[x["method"],x["winner"]]})
+            continue
         chosen.append(x)
+    print("FEEDBACK_JOIN_AUDIT",json.dumps({"matched_prior":len(chosen),"issues":issues}),flush=True)
+    if issues:raise ValueError("Feedback validation failed; see complete join audit")
     chosen.extend(r for r in idx.values() if str(r["event_date"])[:10] in ("2026-11-14","2026-11-21"))
     assert len(chosen)==177 and len({key(r) for r in chosen})==177
     data=pd.DataFrame(chosen).sort_values(["event_date","fight_key"]).reset_index(drop=True)
