@@ -1,0 +1,32 @@
+name: UFC Reference corrected method offset compatibility
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths: ["tools/refit_reference_method_offsets.py", ".github/workflows/ufc-reference-offsets.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offsets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -e ".[dev]"
+      - run: |
+          mkdir -p .research_cache/fightcanon
+          curl --fail --silent --show-error --location --retry 2 --max-time 360 -o .research_cache/fightcanon/new.db https://github.com/Jadevit/fight-canon-db/releases/download/db-2026-11-24-2118/canon.db
+      - run: python tools/refit_reference_method_offsets.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reference-corrected-method-offsets
+          path: research_outputs/reference_method_offsets_2026-11-25/
+          if-no-files-found: error
