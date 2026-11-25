@@ -1,0 +1,220 @@
+{
+  "schema": "WSHLX_MATCHUP_WRITTEN_EVIDENCE_BATCH_V1",
+  "observed_date": "2026-11-25",
+  "event_date": "2026-12-05",
+  "source_history_run": 45673398387,
+  "source_job": 139414396620,
+  "cutoff_exclusive": "2026-11-25",
+  "odds_used": false,
+  "tape_reviewed": false,
+  "actual_predictions": 0,
+  "training_changed": false,
+  "matchups": [
+    {
+      "fighters": [
+        "Mairon Santos",
+        "Akbar Abdullaev"
+      ],
+      "pinned": {
+        "santos": {
+          "known_record": "17-1",
+          "ufc": "4-0",
+          "non_ufc": "13-1",
+          "ufc_decisive_history": 4
+        },
+        "abdullaev": {
+          "known_record": "14-0",
+          "non_ufc_ko": 13,
+          "non_ufc_sub": 1,
+          "ufc_decisive_history": 0
+        }
+      },
+      "written_evidence": [
+        {
+          "fact": "Santos stopped Muhammad Naimov early in round three, following decision wins over Marshall and Yusuff in pinned history.",
+          "url": "https://www.ufc.com/athlete/mairon-santos-alves"
+        },
+        {
+          "fact": "Santos weighed 147.5 for scheduled featherweight fight against Naimov; confirm Riyadh division and weigh-in.",
+          "url": "https://www.ufc.com/news/official-weigh-results-ufc-323-dvalishvili-vs-yan-2"
+        },
+        {
+          "fact": "Abdullaev defeated reigning ONE champion Tang Kai by fifth-round TKO in 156.75lb non-title catchweight fight.",
+          "url": "https://www.onefc.com/news/akbar-abdullaev-stays-perfect-with-domination-of-tang-kai-in-main-event-of-one-fight-night-27/"
+        },
+        {
+          "fact": "ONE report describes Dauev taking Abdullaev down and threatening a triangle in R1; Abdullaev escaped, defended a later shot and finished in R3. Specific evidence of adaptation, not a measured career TDD rate.",
+          "url": "https://www.onefc.com/news/one-fight-night-35-results-shadow-finishes-kouyate-with-spinning-backfist-ruotolo-stops-lee-in-mma-debut/"
+        },
+        {
+          "fact": "Abdullaev made 155lb for DWCS, KO win in 19 seconds.",
+          "url": "https://jp.ufc.com/news/official-weigh-in-results-dana-whites-contender-series-season-10"
+        },
+        {
+          "fact": "DWCS result confirmed.",
+          "url": "https://jp.ufc.com/news/dana-whites-contender-series-season-10-week-6-results"
+        }
+      ],
+      "questions": [
+        "Can Santos use distance management, UFC pacing and defensive grappling to avoid sustained pressure?",
+        "How much does Abdullaev's demonstrated late finish and counter-grappling translate to this opponent?",
+        "Check cage size, rules and division context before comparing ONE and UFC statistics."
+      ],
+      "film_queue": [
+        {
+          "fight": "Abdullaev vs Tang Kai",
+          "focus": "Full rounds, pressure and defensive resets"
+        },
+        {
+          "fight": "Abdullaev vs Dauev",
+          "focus": "Takedown recovery and submission defense"
+        },
+        {
+          "fight": "Santos vs Naimov",
+          "focus": "Late round striking and cage movement"
+        },
+        {
+          "fight": "Santos vs Marshall",
+          "focus": "Close-round management"
+        }
+      ]
+    },
+    {
+      "fighters": [
+        "Uran Satybaldiev",
+        "Ivan Gnizditskiy"
+      ],
+      "pinned": {
+        "satybaldiev": {
+          "known_record": "9-1",
+          "ufc": "1-1",
+          "non_ufc": "8-0",
+          "ufc_decisive_history": 2
+        },
+        "gnizditskiy": {
+          "known_record": "7-0",
+          "ko": 6,
+          "sub": 1,
+          "ufc_decisive_history": 0
+        }
+      },
+      "written_evidence": [
+        {
+          "fact": "Former LFA light heavyweight champion made short-notice UFC debut at heavyweight, losing all three scorecards 29-28 to Buday.",
+          "url": "https://www.ufc.com/news/prelim-results-highlights-winner-interviews-ufc-fight-night-emmett-vs-murphy-apex-las-vegas"
+        },
+        {
+          "fact": "Official weigh-in 222.5 vs 266 pounds; 43.5lb difference, a material context limitation on interpreting that loss.",
+          "url": "https://www.ufc.com/index.php/news/official-weigh-results-ufc-fight-night-emmett-vs-murphy-vegas-105"
+        },
+        {
+          "fact": "Satybaldiev defeated Nurgozhay by first-round Ezekiel choke.",
+          "url": "https://www.ufc.com/index.php/news/prelim-live-results-highlights-winner-interviews-recaps-ufc-fight-night-walker-vs-zhang-shanghai"
+        },
+        {
+          "fact": "Gnizditskiy stopped Kevin Church and Khurshidbek Bozarboev in round one in ONE middleweight bouts.",
+          "url": "https://www.onefc.com/news/one-friday-fights-99-results-and-video-highlights-for-every-fight/"
+        },
+        {
+          "fact": "Bozarboev stoppage result.",
+          "url": "https://www.onefc.com/news/one-friday-fights-110-results-and-highlights-for-every-fight/"
+        }
+      ],
+      "source_discrepancies": [
+        {
+          "fact": "UFC debut announcement reports Satybaldiev 9-0 before Buday; pinned eight pre-UFC victories. Reconcile possible missing regional bout; no change.",
+          "url": "https://www.ufc.com/news/updates-ufc-fight-night-emmett-vs-murphy-vegas-105"
+        },
+        {
+          "fact": "ONE preview calls Bozarboev undefeated; recap calls him debutant (potentially promotional debut). Pinned known prior record 5-0; wording does not establish professional debut.",
+          "urls": [
+            "https://www.onefc.com/news/full-card-revealed-for-one-friday-fights-110-on-may-30/",
+            "https://www.onefc.com/news/one-friday-fights-110-results-worapan-conquers-musaev-samingdam-and-lamsing-bag-statement-kos/"
+          ]
+        }
+      ],
+      "questions": [
+        "Can Gnizditskiy maintain power at the scheduled division and defend takedowns?",
+        "Can Satybaldiev convert wrestling and submission opportunities against a fighter with no UFC sample?",
+        "Avoid treating the Buday heavyweight loss as ordinary light heavyweight evidence."
+      ],
+      "film_queue": [
+        {
+          "fight": "Satybaldiev vs Buday",
+          "focus": "Size disparity, pace, grappling defense"
+        },
+        {
+          "fight": "Satybaldiev vs Nurgozhay",
+          "focus": "Submission entry and control"
+        },
+        {
+          "fight": "Gnizditskiy vs Church and Bozarboev",
+          "focus": "Distance, defensive wrestling and power; full fights not just finishes"
+        }
+      ]
+    },
+    {
+      "fighters": [
+        "Modestino Rodrigues",
+        "Matthieu Duclos"
+      ],
+      "pinned": {
+        "rodrigues": {
+          "known_record": "8-1",
+          "ko_wins": 8,
+          "ko_losses": 1,
+          "ufc_decisive_history": 0
+        },
+        "duclos": {
+          "known_record": "11-3",
+          "non_ufc_ko_wins": 8,
+          "non_ufc_ko_losses": 2,
+          "non_ufc_sub_losses": 1,
+          "ufc_decisive_history": 1
+        }
+      },
+      "written_evidence": [
+        {
+          "fact": "Rodrigues won DWCS by 15-second TKO over Holmes; not a sustained full-round sample.",
+          "url": "https://www.ufc.com/news/dana-whites-contender-series-season-10-week-4-results"
+        },
+        {
+          "fact": "UFC discussion acknowledged criticism about stoppage timing. Do not assume controversy invalidates official outcome.",
+          "url": "https://jp.ufc.com/news/dana-white-contender-series-season-10-week-4-adam-darby-silvestre-sanchez-gabriel-lorenco"
+        },
+        {
+          "fact": "Rodrigues had been active in K-1 between MMA bouts; UFC preview describes 14-month MMA absence before DWCS.",
+          "url": "https://www.ufc.com/index.php/news/week-4-preview-dana-whites-contender-series-season-10"
+        },
+        {
+          "fact": "Duclos stopped Luis Felipe Dias at 4:35 of round one with a left hook, per official event report.",
+          "url": "https://www.ufc.com/index.php/news/ufc-paris-prelim-results-hooker-vs-parnasse"
+        }
+      ],
+      "questions": [
+        "Both have documented knockout offense and prior knockout losses; compare defensive habits and ability to survive pressure rather than counting finishes alone.",
+        "Check Rodrigues' MMA grappling and recovery after initial burst; kickboxing experience is not MMA wrestling evidence.",
+        "Evaluate Duclos' later-round pace from regional decisions and defensive transitions."
+      ],
+      "film_queue": [
+        {
+          "fight": "Rodrigues vs Holmes",
+          "focus": "Stoppage context, not a full sample"
+        },
+        {
+          "fight": "Rodrigues prior KO loss",
+          "focus": "Defense and recovery; locate complete footage"
+        },
+        {
+          "fight": "Duclos vs Dias",
+          "focus": "Lead hand, defensive reactions and distance"
+        },
+        {
+          "fight": "Duclos regional decision bouts",
+          "focus": "Cardio and sustained grappling"
+        }
+      ]
+    }
+  ],
+  "limits": "Written evidence and database results only; no completed visual tape review, no matchup winner selection, no manual probabilities, no model inputs changed."
+}

@@ -1,0 +1,91 @@
+name: Grade 2026 Nov21 UFC Qatar all frozen winner/method model arms
+
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths:
+      - "data/results/ufcqatar_2026-11-21/verified_event_results_2026-11-24.json"
+      - "tools/grade_ufcqatar_2026_11_21_frozen_models.py"
+      - "tests/test_ufc_qatar_2026_11_24_grade.py"
+      - ".github/workflows/ufc-qatar-2026-11-24-all-frozen-grade.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  immutable-prospective-model-grade:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install grader dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Test verified results identity, original SHA, all 10 preregistered arms and public card
+        run: pytest -q tests/test_ufc_qatar_2026_11_24_grade.py
+      - name: Reject pre-existing graded report overwrite
+        run: |
+          if test -e data/grades/ufcqatar_2026_11_21_all_frozen_models_and_public_card_grade.json; then
+            echo "Original UFC Qatar grade exists; refuse overwrite"
+            exit 1
+          fi
+          if test -e reports/model_health/2026-11-24_UFC_QATAR_ALL_LOCKED_MODELS_GRADE.md; then
+            echo "Already graded; refuse overwrite"
+            exit 1
+          fi
+      - name: Grade all original and research locks WITHOUT changing pre-event picks
+        run: |
+          python tools/grade_ufcqatar_2026_11_21_frozen_models.py > ufc_qatar_full_grade_stdout.log
+      - name: Validate exact graded winner/method totals, original hashes, timing, source method mix
+        run: |
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          p=Path('data/grades/ufcqatar_2026_11_21_all_frozen_models_and_public_card_grade.json')
+          d=json.loads(p.read_text())
+          assert d['confirmed_fight_count']==12
+          assert d['original_Reference_and_model_shadows_never_modified']
+          assert all(d['original_sha_checks'].values())
+          assert d['coherent_postprocessed_views_NOT_independent_winner_models']
+          assert d['newly_approved_bets']==0 and d['betting_roi_UNVERIFIED']
+          assert d['method_distribution']=={'KO':3,'DEC':8,'SUB':1}
+          expected={'reference':(11,4),'historical':(10,5),'unified':(11,3),
+            'coherent_reference_aligned':(11,7),'coherent_historical_aligned':(10,5),
+            'coherent_unified_aligned':(11,7),'winner_v3_primary':(8,3),
+            'winner_v4_primary':(9,4),'method_v5_primary':(8,5),
+            'direct_six_v7_primary':(8,5)}
+          assert {k:(v['winner_hits'],v['exact_hits']) for k,v in d['model_summaries'].items()}==expected
+          assert d['public_pre_event_selections_FROM_CHAT_NOT_OFFICIAL_MODEL_LOCK']['correct']==6
+          assert all(v['unpriced'] for v in (r['primary_timing'] for r in d['per_fight']))
+          source=Path(d['source_result_path'])
+          assert hashlib.sha256(source.read_bytes()).hexdigest()==d['source_result_sha256']
+          for name,h in d['frozen_source_hashes'].items():
+              path=(Path('data/locks/ufcqatar_2026-11-21') if name=='stage_a_final_selection.json'
+                else Path('data/shadow_locks/ufcqatar_2026-11-21'))/name
+              assert hashlib.sha256(path.read_bytes()).hexdigest()==h
+          print('ALL_FROZEN_11_21_WINNER_METHOD_TIMING_AND_PUBLIC_GRADES_VERIFIED')
+          PY
+      - name: Commit first post-event grade to branch without rewriting research locks
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/grades/ufcqatar_2026_11_21_all_frozen_models_and_public_card_grade.json
+          git add reports/model_health/2026-11-24_UFC_QATAR_ALL_LOCKED_MODELS_GRADE.md
+          git commit -m "grade: immutable Nov21 UFC Qatar 10 original/research views, timing and video card [skip ci]"
+          git push origin HEAD:feature/historical-conditional-rates
+      - name: Preserve grader proof and full report in build artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wshlx-2026-nov21-ufc-qatar-all-frozen-models-official-grade
+          path: |
+            data/grades/ufcqatar_2026_11_21_all_frozen_models_and_public_card_grade.json
+            reports/model_health/2026-11-24_UFC_QATAR_ALL_LOCKED_MODELS_GRADE.md
+            ufc_qatar_full_grade_stdout.log
+          if-no-files-found: warn

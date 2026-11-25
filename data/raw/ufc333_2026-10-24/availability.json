@@ -1,0 +1,177 @@
+{
+  "checked_at_utc": "2026-11-06T16:25:04.635620+00:00",
+  "duplicate_fighter_round_keys": [],
+  "event_rows": 1,
+  "expected_round_stat_rows_from_locked_outcomes": 62,
+  "fighter_round_stat_rows": 62,
+  "full_card_stats_available": true,
+  "missing_detail": [],
+  "missing_stats": [],
+  "receipt": {
+    "ufc_event_details.csv": {
+      "bytes": 102912,
+      "sha256": "818420d6c7cdac420dcb963a57586ecca0a6e5343e07801e13cac0478a59c883",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/5d6622ffc349a1d0c6dd25158d737a96b889a3e0/ufc_event_details.csv"
+    },
+    "ufc_fight_details.csv": {
+      "bytes": 1046801,
+      "sha256": "a74e286ddd138b14fa055c25010b68975ffe17ecbc1454ec90e940fb826012c6",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/5d6622ffc349a1d0c6dd25158d737a96b889a3e0/ufc_fight_details.csv"
+    },
+    "ufc_fight_results.csv": {
+      "bytes": 2110761,
+      "sha256": "b20cde586d139f9a23fe37648b0acde88ff78f9cbd4cfabfb8034ffb17a13aec",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/5d6622ffc349a1d0c6dd25158d737a96b889a3e0/ufc_fight_results.csv"
+    },
+    "ufc_fight_stats.csv": {
+      "bytes": 7683173,
+      "sha256": "252b22f636a129f7117074313b055d1c277ea1af8785b16b48efd5a538320455",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/5d6622ffc349a1d0c6dd25158d737a96b889a3e0/ufc_fight_stats.csv"
+    },
+    "ufc_fighter_details.csv": {
+      "bytes": 340441,
+      "sha256": "a1f6e4326217fab9734ac42f1958cd07b0b2b98f3caa5da08497ec7648eb6f70",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/5d6622ffc349a1d0c6dd25158d737a96b889a3e0/ufc_fighter_details.csv"
+    },
+    "ufc_fighter_tott.csv": {
+      "bytes": 508399,
+      "sha256": "3296e67941f984cd5484488226e5a5d94de3249c63fe289fbc66d98546311ea1",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/5d6622ffc349a1d0c6dd25158d737a96b889a3e0/ufc_fighter_tott.csv"
+    }
+  },
+  "resolved_bouts": [
+    {
+      "bout": "Iasmin Lucindo vs. Nicolle Caliari",
+      "fight_no": 1,
+      "method": "decision - unanimous ",
+      "round": 3,
+      "source_fight_url": "http://ufcstats.com/fight-details/4081a5fe66569321",
+      "time": "5:00",
+      "winner": "Iasmin Lucindo"
+    },
+    {
+      "bout": "Kody Steele vs. Noah Gugnon",
+      "fight_no": 2,
+      "method": "ko/tko ",
+      "round": 1,
+      "source_fight_url": "http://ufcstats.com/fight-details/02df66c779a72260",
+      "time": "3:54",
+      "winner": "Kody Steele"
+    },
+    {
+      "bout": "Bolaji Oki vs. Daniel Santos",
+      "fight_no": 3,
+      "method": "decision - unanimous ",
+      "round": 3,
+      "source_fight_url": "http://ufcstats.com/fight-details/1fa88509d87cc05e",
+      "time": "5:00",
+      "winner": "Daniel Santos"
+    },
+    {
+      "bout": "Abubakar Vagaev vs. Jacob Malkoun",
+      "fight_no": 4,
+      "method": "decision - unanimous ",
+      "round": 3,
+      "source_fight_url": "http://ufcstats.com/fight-details/23a6bddecfa23fcd",
+      "time": "5:00",
+      "winner": "Abubakar Vagaev"
+    },
+    {
+      "bout": "Colby Thicknesse vs. Asaf Chopurov",
+      "fight_no": 5,
+      "method": "decision - split ",
+      "round": 3,
+      "source_fight_url": "http://ufcstats.com/fight-details/411ec0a245687c49",
+      "time": "5:00",
+      "winner": "Colby Thicknesse"
+    },
+    {
+      "bout": "Grant Dawson vs. Nurullo Aliev",
+      "fight_no": 6,
+      "method": "decision - unanimous ",
+      "round": 3,
+      "source_fight_url": "http://ufcstats.com/fight-details/c70b4b6a8a5a3abb",
+      "time": "5:00",
+      "winner": "Grant Dawson"
+    },
+    {
+      "bout": "Abus Magomedov vs. Cam Rowston",
+      "fight_no": 7,
+      "method": "submission ",
+      "round": 1,
+      "source_fight_url": "http://ufcstats.com/fight-details/69aec85e917d47e6",
+      "time": "1:44",
+      "winner": "Abus Magomedov"
+    },
+    {
+      "bout": "Nikita Krylov vs. Abdul Rakhman Yakhyaev",
+      "fight_no": 8,
+      "method": "ko/tko ",
+      "round": 1,
+      "source_fight_url": "http://ufcstats.com/fight-details/6193cd89b1cd9a9e",
+      "time": "2:38",
+      "winner": "Abdul Rakhman Yakhyaev"
+    },
+    {
+      "bout": "Azamat Murzakanov vs. Dominick Reyes",
+      "fight_no": 9,
+      "method": "ko/tko ",
+      "round": 1,
+      "source_fight_url": "http://ufcstats.com/fight-details/c6bcc7e9fb90da47",
+      "time": "2:40",
+      "winner": "Dominick Reyes"
+    },
+    {
+      "bout": "Aaron Pico vs. Losene Keita",
+      "fight_no": 10,
+      "method": "ko/tko ",
+      "round": 1,
+      "source_fight_url": "http://ufcstats.com/fight-details/8271c52b2987e021",
+      "time": "1:14",
+      "winner": "Aaron Pico"
+    },
+    {
+      "bout": "Alexander Volkov vs. Rizvan Kuniev",
+      "fight_no": 11,
+      "method": "decision - unanimous ",
+      "round": 3,
+      "source_fight_url": "http://ufcstats.com/fight-details/8788a6dda6e64aff",
+      "time": "5:00",
+      "winner": "Alexander Volkov"
+    },
+    {
+      "bout": "Lone'er Kavanagh vs. Ramazan Temirov",
+      "fight_no": 12,
+      "method": "ko/tko ",
+      "round": 1,
+      "source_fight_url": "http://ufcstats.com/fight-details/b9004bd72276a190",
+      "time": "4:28",
+      "winner": "Lone'er Kavanagh"
+    },
+    {
+      "bout": "Petr Yan vs. Merab Dvalishvili",
+      "fight_no": 13,
+      "method": "decision - unanimous ",
+      "round": 5,
+      "source_fight_url": "http://ufcstats.com/fight-details/e262f5e588b149a6",
+      "time": "5:00",
+      "winner": "Petr Yan"
+    },
+    {
+      "bout": "Alexander Volkanovski vs. Movsar Evloev",
+      "fight_no": 14,
+      "method": "ko/tko ",
+      "round": 2,
+      "source_fight_url": "http://ufcstats.com/fight-details/ce1388d6c7651d2e",
+      "time": "4:54",
+      "winner": "Alexander Volkanovski"
+    }
+  ],
+  "time_integrity": "UFCStats per-round observations are POST-FIGHT. Causal model features must be snapped at each historical bout date before ingesting those results.",
+  "unexpected_pairs": [],
+  "unique_detail_bouts": 14,
+  "unique_result_bouts": 14,
+  "unique_stat_bouts": 14,
+  "upstream_commit": "5d6622ffc349a1d0c6dd25158d737a96b889a3e0",
+  "upstream_repo": "Greco1899/scrape_ufc_stats"
+}

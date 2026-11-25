@@ -1,0 +1,286 @@
+{
+  "candidate_promotion_gate": {
+    "champion_promoted": false,
+    "minimum_prospective_fights": 300,
+    "must_improve_multiple_heldout_fight_probabilistic_metrics": true,
+    "must_pass_consistency_and_price_calibration_gates": true,
+    "newly_logged_nov7_prospective_fights": 14,
+    "reference_model_code_or_coefficients_modified": false,
+    "sufficient_prospective_evidence": false
+  },
+  "development_historical_data_through": "2026-10-17",
+  "diagnostic_issues": [
+    "Two winner disagreements Petersen and Walker favored both shadows on Nov7; exact paired p=0.5 (two discordant fights) insufficient to switch champion.",
+    "Longer 112-fight historical winner OOF favored reference (lower Brier/log loss) over historical conditional model, contradicting Nov7 winner ranking.",
+    "On older 88-fight fighter+method OOF, reference 36/88 exact vs unified 35/88 and historical 23/88. This contradicts Nov7 8/14 unified vs 5/14 reference advantage.",
+    "Reference's own predicted methods tilted KO; actual 6 KO, 1 submission and 7 decisions. Seven decisions challenge finish-vs-decision model. But a single event cannot calibrate a classifier.",
+    "v0.35 finish-access method candidate WORSENED older 115-fight log loss and Brier relative to calibrated baseline, so retain shadow only.",
+    "Bashi SUB and Raposo DEC are genuinely useful method-error investigations; Smith KO and Magomedov DEC illustrate residual method failure."
+  ],
+  "existing_finish_access_variant_115_historical_dev": {
+    "brier_access_minus_calibrated": 0.011543936977720715,
+    "calibrated": {
+      "accuracy": 0.5130434782608696,
+      "actual": {
+        "DEC": 33,
+        "KO": 65,
+        "SUB": 17
+      },
+      "actual_decision_rate": 0.28695652173913044,
+      "brier": 0.5822000273274331,
+      "calls": {
+        "DEC": 31,
+        "KO": 78,
+        "SUB": 6
+      },
+      "correct": 59,
+      "log_loss": 0.9512267954685742,
+      "mean_predicted_decision": 0.3327277388773271,
+      "n": 115,
+      "recall": {
+        "DEC": 0.30303030303030304,
+        "KO": 0.7230769230769231,
+        "SUB": 0.11764705882352941
+      }
+    },
+    "finish_access": {
+      "accuracy": 0.5130434782608696,
+      "actual": {
+        "DEC": 33,
+        "KO": 65,
+        "SUB": 17
+      },
+      "actual_decision_rate": 0.28695652173913044,
+      "brier": 0.5937439643051539,
+      "calls": {
+        "DEC": 28,
+        "KO": 82,
+        "SUB": 5
+      },
+      "correct": 59,
+      "log_loss": 0.972564434075558,
+      "mean_predicted_decision": 0.32579878196489376,
+      "n": 115,
+      "recall": {
+        "DEC": 0.2727272727272727,
+        "KO": 0.7384615384615385,
+        "SUB": 0.11764705882352941
+      }
+    },
+    "logloss_access_minus_calibrated": 0.02133763860698379,
+    "promote_finish_access": false
+  },
+  "existing_winner_interaction_benchmark": {
+    "best_candidate_retrospective_gate_pass": true,
+    "best_candidate_variant": "experience_only",
+    "promotion_status": "HISTORICAL_DEV_ONLY_NOT_PROSPECTIVE_APPROVED",
+    "reference": {
+      "accuracy": 0.6517857142857143,
+      "brier": 0.22704873710067539,
+      "log_loss": 0.6501812162545779,
+      "losses": 39,
+      "n": 112,
+      "wins": 73
+    },
+    "sample_fights": 112
+  },
+  "frozen_nov7_fights": 14,
+  "generated_at_utc": "2026-11-10T00:51:42.178606+00:00",
+  "historical_winner_112_diff_vs_reference": {
+    "historical_minus_reference_brier": 0.04123859538227628,
+    "historical_minus_reference_logloss": 0.1284212667593274
+  },
+  "model_promotion_allowed": false,
+  "no_lookahead_policy": "Nov7 historical grades derived solely from archived pre-Nov7 outputs. Refitting future-only shadows AFTER Nov7 never counts as a Nov7 model win.",
+  "nov7_actual_method_distribution": {
+    "DEC": 7,
+    "KO": 6,
+    "SUB": 1
+  },
+  "nov7_frozen_joint_fighter_method_accuracy": {
+    "historical": {
+      "accuracy": 0.5,
+      "correct": 7,
+      "n": 14,
+      "six_class_brier": 0.6940063335739847,
+      "six_class_log_loss": 1.4675055922682716
+    },
+    "reference": {
+      "accuracy": 0.35714285714285715,
+      "correct": 5,
+      "n": 14,
+      "six_class_brier": 0.7512997455752078,
+      "six_class_log_loss": 1.466432398270331
+    },
+    "unified": {
+      "accuracy": 0.5714285714285714,
+      "correct": 8,
+      "n": 14,
+      "six_class_brier": 0.6980823819806451,
+      "six_class_log_loss": 1.4379236256041008
+    }
+  },
+  "nov7_frozen_winner_accuracy": {
+    "historical": {
+      "accuracy": 0.7857142857142857,
+      "brier": 0.39319459339564145,
+      "correct": 11,
+      "log_loss": 0.5855592488735674,
+      "n": 14
+    },
+    "reference": {
+      "accuracy": 0.6428571428571429,
+      "brier": 0.45911726256470553,
+      "correct": 9,
+      "log_loss": 0.649532730726133,
+      "n": 14
+    },
+    "unified": {
+      "accuracy": 0.7857142857142857,
+      "brier": 0.4050945549684771,
+      "correct": 11,
+      "log_loss": 0.5973099837105088,
+      "n": 14
+    }
+  },
+  "nov7_top_method_call_distribution_per_own_fighter": {
+    "historical": {
+      "DEC": 5,
+      "KO": 6,
+      "SUB": 3
+    },
+    "reference": {
+      "DEC": 3,
+      "KO": 10,
+      "SUB": 1
+    },
+    "unified": {
+      "DEC": 4,
+      "KO": 7,
+      "SUB": 3
+    }
+  },
+  "older_method_88_retrospective_comparison": {
+    "contextual_unified": {
+      "joint_accuracy": 0.3977272727272727,
+      "log_loss": 1.559690078214924,
+      "method_accuracy": 0.5909090909090909,
+      "multiclass_brier": 0.7607145469404255,
+      "n": 88,
+      "winner_accuracy": 0.6022727272727273
+    },
+    "current": {
+      "joint_accuracy": 0.4090909090909091,
+      "log_loss": 1.5601122516380812,
+      "method_accuracy": 0.5909090909090909,
+      "multiclass_brier": 0.7603767374447817,
+      "n": 88,
+      "winner_accuracy": 0.6022727272727273
+    },
+    "global_unified": {
+      "joint_accuracy": 0.3977272727272727,
+      "log_loss": 1.5597143554503632,
+      "method_accuracy": 0.5909090909090909,
+      "multiclass_brier": 0.7607276197779792,
+      "n": 88,
+      "winner_accuracy": 0.6022727272727273
+    },
+    "historical": {
+      "joint_accuracy": 0.26136363636363635,
+      "log_loss": 1.6704920395115495,
+      "method_accuracy": 0.4431818181818182,
+      "multiclass_brier": 0.8060858106626996,
+      "n": 88,
+      "winner_accuracy": 0.6136363636363636
+    }
+  },
+  "older_winner_112_retrospective_comparison": {
+    "contextual_unified": {
+      "accuracy": 0.6071428571428571,
+      "brier": 0.23234403990726163,
+      "log_loss": 0.6577166486163056,
+      "n": 112,
+      "roc_auc": 0.6499517839922854
+    },
+    "current": {
+      "accuracy": 0.6071428571428571,
+      "brier": 0.23184323713795754,
+      "log_loss": 0.6569951637587409,
+      "n": 112,
+      "roc_auc": 0.654291224686596
+    },
+    "global_unified": {
+      "accuracy": 0.6071428571428571,
+      "brier": 0.23184323713795754,
+      "log_loss": 0.6569951637587409,
+      "n": 112,
+      "roc_auc": 0.654291224686596
+    },
+    "historical": {
+      "accuracy": 0.6071428571428571,
+      "brier": 0.2730818325202338,
+      "log_loss": 0.7854164305180683,
+      "n": 112,
+      "roc_auc": 0.5776277724204435
+    }
+  },
+  "older_winner_61_strict_walk_forward": {
+    "contextual": {
+      "accuracy": 0.6229508196721312,
+      "brier": 0.22621111857272022,
+      "log_loss": 0.6437363788314078,
+      "n": 61,
+      "roc_auc": 0.6593406593406594
+    },
+    "current": {
+      "accuracy": 0.6229508196721312,
+      "brier": 0.22584757720536988,
+      "log_loss": 0.6433895845784618,
+      "n": 61,
+      "roc_auc": 0.6626373626373626
+    },
+    "global": {
+      "accuracy": 0.6229508196721312,
+      "brier": 0.22584757720536985,
+      "log_loss": 0.6433895845784618,
+      "n": 61,
+      "roc_auc": 0.6626373626373626
+    },
+    "historical": {
+      "accuracy": 0.6065573770491803,
+      "brier": 0.2682169796206898,
+      "log_loss": 0.7768369574855627,
+      "n": 61,
+      "roc_auc": 0.6076923076923076
+    }
+  },
+  "prospective_paired_exact_method_mcnemar": {
+    "historical": {
+      "candidate_better": 3,
+      "discordant": 4,
+      "exact_p_value": 0.625,
+      "reference_better": 1
+    },
+    "unified": {
+      "candidate_better": 4,
+      "discordant": 5,
+      "exact_p_value": 0.375,
+      "reference_better": 1
+    }
+  },
+  "prospective_paired_winner_mcnemar": {
+    "historical": {
+      "candidate_better": 2,
+      "discordant": 2,
+      "exact_p_value": 0.5,
+      "reference_better": 0
+    },
+    "unified": {
+      "candidate_better": 2,
+      "discordant": 2,
+      "exact_p_value": 0.5,
+      "reference_better": 0
+    }
+  },
+  "status": "NOV7_CHALLENGER_GENERALIZATION_PROSPECTIVE_AND_OLDER_OOF_AUDIT"
+}

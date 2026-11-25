@@ -1,0 +1,20 @@
+{
+  "status": "EXPANDED_UNIFIED_BUILD_COMPLETE_SHADOW",
+  "trained_through": "2026-10-17",
+  "weights": {
+    "winner": 1.0,
+    "method": 0.9500000000000001,
+    "timing": 0.65
+  },
+  "winner_fights": 112,
+  "method_fights": 88,
+  "timing_fights": 88,
+  "timing_market_rows": 456,
+  "files": [
+    "expanded_unified_weights.json",
+    "expanded_unified_metrics.json",
+    "expanded_unified_winner_predictions.csv",
+    "expanded_unified_method_predictions.csv",
+    "expanded_unified_timing_predictions.csv"
+  ]
+}

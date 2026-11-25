@@ -1,0 +1,79 @@
+{
+  "status": "OOF_GLOBAL_UNIFIED_SHADOW_PREFERRED_FOR_PROSPECTIVE_TESTING_NOT_PROMOTED",
+  "source_cutoff": "2026-10-17",
+  "odds_used": false,
+  "weight_meaning": "weight_current; historical weight = 1 - weight_current",
+  "preferred_shadow_for_next_prospective_card": true,
+  "winner": {
+    "weight_current": 0.3,
+    "weight_historical": 0.7,
+    "fit_log_loss": 0.634977897999939,
+    "current_fit_log_loss": 0.6857988017134861,
+    "historical_fit_log_loss": 0.6503819924218636,
+    "fit_n": 5456,
+    "test_2022_2026": {
+      "n": 2479,
+      "current_accuracy": 0.6192012908430818,
+      "historical_accuracy": 0.6232351754739814,
+      "unified_accuracy": 0.6244453408632513,
+      "current_log_loss": 0.746484200541815,
+      "historical_log_loss": 0.6541279671172608,
+      "unified_log_loss": 0.6679479400524686
+    }
+  },
+  "method": {
+    "weight_current": 0.375,
+    "weight_historical": 0.625,
+    "fit_log_loss": 1.6128457624499482,
+    "current_fit_log_loss": 1.684058713432361,
+    "historical_fit_log_loss": 1.6566915629884875,
+    "fit_n": 5456,
+    "test_2022_2026": {
+      "n": 2479,
+      "current_joint_accuracy": 0.31988705123033484,
+      "historical_joint_accuracy": 0.32755143202904397,
+      "unified_joint_accuracy": 0.3348124243646632,
+      "current_method_accuracy": 0.509076240419524,
+      "historical_method_accuracy": 0.5195643404598629,
+      "unified_method_accuracy": 0.5151270673658733,
+      "current_log_loss": 1.7233125456170566,
+      "historical_log_loss": 1.6184724390236864,
+      "unified_log_loss": 1.6272254824744712
+    }
+  },
+  "timing": {
+    "weight_current": 0.75,
+    "weight_historical": 0.25,
+    "fit_log_loss": 0.6499123949098848,
+    "current_fit_log_loss": 0.6538031688241722,
+    "historical_fit_log_loss": 0.6817504464475382,
+    "fit_n_fights": 5456,
+    "test_2022_2026": {
+      "market_rows": 12881,
+      "current_accuracy": 0.6392360841549569,
+      "historical_accuracy": 0.6374505085008928,
+      "unified_accuracy": 0.6428848691871749,
+      "current_log_loss": 0.6386938724252212,
+      "historical_log_loss": 0.6641354587215813,
+      "unified_log_loss": 0.6392405905205036
+    }
+  },
+  "population": {
+    "aligned_oof_fights": 7935,
+    "first_oof_year": 2008,
+    "last_oof_year": 2026,
+    "weight_fit_through_year": 2021,
+    "evaluation_years": [2022, 2023, 2024, 2025, 2026]
+  },
+  "source_reports": {
+    "manifest": "reports/historical_oof_contextual_through_2026-10-17/manifest.json",
+    "diagnostic": "reports/historical_oof_contextual_through_2026-10-17/contextual_diagnostic.json"
+  },
+  "governance": {
+    "production_change": false,
+    "official_model_unchanged": true,
+    "promotion": false,
+    "contextual_gate_enabled": false,
+    "reason": "Use these leakage-safe OOF global weights as the preferred unified shadow baseline for future frozen prospective cards. The reconstructed historical OOF study is strong development evidence but is not sufficient by itself for production promotion."
+  }
+}

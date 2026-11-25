@@ -1,0 +1,78 @@
+{
+  "event": "UFC 334: Gane vs Hokit",
+  "event_date": "2026-11-14",
+  "sportsbook": "FanDuel",
+  "status": "FULL_DISPLAYED_FIGHT_MARKETS_TRANSCRIBED_PENDING_OTHER_FIGHTS",
+  "fight_no": 10,
+  "a": "Uros Medic",
+  "b": "Kevin Holland",
+  "stage_a_locked": true,
+  "stage_a_final_selection_github_blob_sha": "564b8dbf2147f7a1cc839917ca3a4eb2d42ed63e",
+  "price_source": "User-supplied FanDuel screenshots on November 11 2026 (4 images)",
+  "exact_quote_capture_timestamp_utc": null,
+  "collected_before_event_start": true,
+  "odds_used_in_stage_a": false,
+  "moneyline": {
+    "a": -156,
+    "b": 122
+  },
+  "method_of_victory": {
+    "a": {
+      "KO_TKO": 115,
+      "SUB": 1500,
+      "DEC": 750
+    },
+    "b": {
+      "KO_TKO": 330,
+      "SUB": 500,
+      "DEC": 900
+    },
+    "DRAW": 5000
+  },
+  "double_chance": {
+    "a": {
+      "KO_OR_SUB": -110,
+      "KO_OR_DEC": -140,
+      "SUB_OR_DEC": 500
+    },
+    "b": {
+      "KO_OR_SUB": 160,
+      "KO_OR_DEC": 210,
+      "SUB_OR_DEC": 310
+    },
+    "DRAW": 5000
+  },
+  "goes_distance": {
+    "YES": 390,
+    "NO": -590
+  },
+  "total_rounds": {
+    "threshold": 1.5,
+    "OVER": 134,
+    "UNDER": -162
+  },
+  "how_fight_ends": {
+    "KO_TKO": -210,
+    "SUB": 390,
+    "DEC": 380
+  },
+  "round_to_start": {
+    "2": {
+      "YES": -128,
+      "NO": 100
+    },
+    "3": {
+      "YES": 220,
+      "NO": -300
+    }
+  },
+  "market_count": 27,
+  "missing_markets": [
+    "Only Over/Under 1.5 shown; no 2.5 alternate supplied",
+    "No exact finish-round market shown"
+  ],
+  "full_fight_pricing_complete": true,
+  "full_event_pricing_complete": false,
+  "used_for_price_comparison_yet": false,
+  "odds_freshness_note": "FanDuel screenshot odds supplied by user; not independently reverified as live prices, not evidence of bet placement."
+}

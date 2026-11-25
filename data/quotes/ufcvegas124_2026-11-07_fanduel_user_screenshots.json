@@ -1,0 +1,845 @@
+{
+  "event": "UFC Fight Night: Cortes Acosta vs Walker",
+  "event_date": "2026-11-07",
+  "source": "User-supplied FanDuel screenshots, November 7 2026; transcribed per fight in conversation order",
+  "sportsbook": "FanDuel",
+  "collected_before_event_start": true,
+  "exact_quote_timestamp_utc": null,
+  "price_freshness_caveat": "These are user-provided snapshot odds. Quotes change, no independent live FanDuel authentication, no proof a bet was placed.",
+  "stage_a_sha256": null,
+  "odds_used_in_stage_a": false,
+  "missing_markets": [
+    "Kondratavicius vs Petroski: total rounds O/U not displayed",
+    "Nakamura vs Schmid: total rounds O/U not displayed",
+    "Cortes Acosta vs Walker: five-round exact-round betting section collapsed and prices not displayed"
+  ],
+  "fight_count": 14,
+  "quoted_markets": [
+    {
+      "fight_no": 1,
+      "a": "Jonny Parsons",
+      "b": "Jose Souza",
+      "moneyline": {
+        "a": 188,
+        "b": -225
+      },
+      "method_of_victory": {
+        "a": {
+          "KO_TKO": 460,
+          "SUB": 2500,
+          "DEC": 470
+        },
+        "b": {
+          "KO_TKO": 155,
+          "SUB": 900,
+          "DEC": 290
+        },
+        "DRAW": 5000
+      },
+      "double_chance": {
+        "a": {
+          "KO_OR_SUB": 390,
+          "KO_OR_DEC": 195,
+          "SUB_OR_DEC": 410
+        },
+        "b": {
+          "KO_OR_SUB": 105,
+          "KO_OR_DEC": -175,
+          "SUB_OR_DEC": 195
+        },
+        "DRAW": 5000
+      },
+      "goes_distance": {
+        "YES": 144,
+        "NO": -186
+      },
+      "total_rounds": {
+        "threshold": 2.5,
+        "OVER": 114,
+        "UNDER": -138
+      },
+      "how_fight_ends": {
+        "KO_TKO": -130,
+        "SUB": 750,
+        "DEC": 135
+      },
+      "round_to_start": {
+        "2": {
+          "YES": -290,
+          "NO": 210
+        },
+        "3": {
+          "YES": -116,
+          "NO": -110
+        }
+      }
+    },
+    {
+      "fight_no": 2,
+      "a": "Seokhyeon Ko",
+      "b": "Wellington Turman",
+      "moneyline": {
+        "a": -720,
+        "b": 520
+      },
+      "method_of_victory": {
+        "a": {
+          "KO_TKO": 145,
+          "SUB": 650,
+          "DEC": 150
+        },
+        "b": {
+          "KO_TKO": 2000,
+          "SUB": 1700,
+          "DEC": 850
+        },
+        "DRAW": 5000
+      },
+      "double_chance": {
+        "a": {
+          "KO_OR_SUB": -115,
+          "KO_OR_DEC": -350,
+          "SUB_OR_DEC": -110
+        },
+        "b": {
+          "KO_OR_SUB": 1100,
+          "KO_OR_DEC": 650,
+          "SUB_OR_DEC": 600
+        },
+        "DRAW": 5000
+      },
+      "goes_distance": {
+        "YES": 110,
+        "NO": -140
+      },
+      "total_rounds": {
+        "threshold": 2.5,
+        "OVER": -112,
+        "UNDER": -108
+      },
+      "how_fight_ends": {
+        "KO_TKO": 125,
+        "SUB": 500,
+        "DEC": 100
+      },
+      "round_to_start": {
+        "2": {
+          "YES": -340,
+          "NO": 240
+        },
+        "3": {
+          "YES": -140,
+          "NO": 110
+        }
+      }
+    },
+    {
+      "fight_no": 3,
+      "a": "Mantas Kondratavicius",
+      "b": "Andre Petroski",
+      "moneyline": {
+        "a": -295,
+        "b": 240
+      },
+      "method_of_victory": {
+        "a": {
+          "KO_TKO": -180,
+          "SUB": 2000,
+          "DEC": 900
+        },
+        "b": {
+          "KO_TKO": 950,
+          "SUB": 600,
+          "DEC": 750
+        },
+        "DRAW": 5000
+      },
+      "double_chance": {
+        "a": {
+          "KO_OR_SUB": -220,
+          "KO_OR_DEC": -260,
+          "SUB_OR_DEC": 650
+        },
+        "b": {
+          "KO_OR_SUB": 370,
+          "KO_OR_DEC": 440,
+          "SUB_OR_DEC": 320
+        },
+        "DRAW": 5000
+      },
+      "goes_distance": {
+        "YES": 400,
+        "NO": -590
+      },
+      "total_rounds": null,
+      "how_fight_ends": {
+        "KO_TKO": -250,
+        "SUB": 500,
+        "DEC": 390
+      },
+      "round_to_start": {
+        "2": {
+          "YES": 118,
+          "NO": -150
+        },
+        "3": {
+          "YES": 260,
+          "NO": -360
+        }
+      }
+    },
+    {
+      "fight_no": 4,
+      "a": "Austin Bashi",
+      "b": "Carlos Calderon",
+      "moneyline": {
+        "a": -590,
+        "b": 440
+      },
+      "method_of_victory": {
+        "a": {
+          "KO_TKO": 450,
+          "SUB": 100,
+          "DEC": 330
+        },
+        "b": {
+          "KO_TKO": 1500,
+          "SUB": 1300,
+          "DEC": 900
+        },
+        "DRAW": 5000
+      },
+      "double_chance": {
+        "a": {
+          "KO_OR_SUB": -200,
+          "KO_OR_DEC": 160,
+          "SUB_OR_DEC": -250
+        },
+        "b": {
+          "KO_OR_SUB": 800,
+          "KO_OR_DEC": 650,
+          "SUB_OR_DEC": 550
+        },
+        "DRAW": 5000
+      },
+      "goes_distance": {
+        "YES": 230,
+        "NO": -310
+      },
+      "total_rounds": {
+        "threshold": 1.5,
+        "OVER": -110,
+        "UNDER": -110
+      },
+      "how_fight_ends": {
+        "KO_TKO": 350,
+        "SUB": -130,
+        "DEC": 210
+      },
+      "round_to_start": {
+        "2": {
+          "YES": -172,
+          "NO": 134
+        },
+        "3": {
+          "YES": 134,
+          "NO": -172
+        }
+      }
+    },
+    {
+      "fight_no": 5,
+      "a": "Jose Delano",
+      "b": "Murtazali Magomedov",
+      "moneyline": {
+        "a": 118,
+        "b": 100
+      },
+      "method_of_victory": {
+        "a": {
+          "KO_TKO": 410,
+          "SUB": 650,
+          "DEC": 270
+        },
+        "b": {
+          "KO_TKO": 550,
+          "SUB": 360,
+          "DEC": 460
+        },
+        "DRAW": 5000
+      },
+      "double_chance": {
+        "a": {
+          "KO_OR_SUB": 220,
+          "KO_OR_DEC": 115,
+          "SUB_OR_DEC": 160
+        },
+        "b": {
+          "KO_OR_SUB": 180,
+          "KO_OR_DEC": 210,
+          "SUB_OR_DEC": 160
+        },
+        "DRAW": 5000
+      },
+      "goes_distance": {
+        "YES": 132,
+        "NO": -170
+      },
+      "total_rounds": {
+        "threshold": 2.5,
+        "OVER": 102,
+        "UNDER": -126
+      },
+      "how_fight_ends": {
+        "KO_TKO": 200,
+        "SUB": 200,
+        "DEC": 120
+      },
+      "round_to_start": {
+        "2": {
+          "YES": -310,
+          "NO": 225
+        },
+        "3": {
+          "YES": -128,
+          "NO": 100
+        }
+      }
+    },
+    {
+      "fight_no": 6,
+      "a": "Karine Silva",
+      "b": "Gabriella Fernandes",
+      "moneyline": {
+        "a": -220,
+        "b": 184
+      },
+      "method_of_victory": {
+        "a": {
+          "KO_TKO": 850,
+          "SUB": 290,
+          "DEC": 165
+        },
+        "b": {
+          "KO_TKO": 1200,
+          "SUB": 1200,
+          "DEC": 300
+        },
+        "DRAW": 5000
+      },
+      "double_chance": {
+        "a": {
+          "KO_OR_SUB": 185,
+          "KO_OR_DEC": 110,
+          "SUB_OR_DEC": -170
+        },
+        "b": {
+          "KO_OR_SUB": 650,
+          "KO_OR_DEC": 220,
+          "SUB_OR_DEC": 220
+        },
+        "DRAW": 5000
+      },
+      "goes_distance": {
+        "YES": -158,
+        "NO": 124
+      },
+      "total_rounds": {
+        "threshold": 2.5,
+        "OVER": -190,
+        "UNDER": 154
+      },
+      "how_fight_ends": {
+        "KO_TKO": 500,
+        "SUB": 210,
+        "DEC": -165
+      },
+      "round_to_start": {
+        "2": {
+          "YES": -600,
+          "NO": 390
+        },
+        "3": {
+          "YES": -260,
+          "NO": 192
+        }
+      }
+    },
+    {
+      "fight_no": 7,
+      "a": "Gabriel Lorenco",
+      "b": "Thomas Petersen",
+      "moneyline": {
+        "a": 138,
+        "b": -164
+      },
+      "method_of_victory": {
+        "a": {
+          "KO_TKO": 250,
+          "SUB": 2000,
+          "DEC": 650
+        },
+        "b": {
+          "KO_TKO": 260,
+          "SUB": 700,
+          "DEC": 260
+        },
+        "DRAW": 5000
+      },
+      "double_chance": {
+        "a": {
+          "KO_OR_SUB": 210,
+          "KO_OR_DEC": 145,
+          "SUB_OR_DEC": 500
+        },
+        "b": {
+          "KO_OR_SUB": 160,
+          "KO_OR_DEC": -120,
+          "SUB_OR_DEC": 160
+        },
+        "DRAW": 5000
+      },
+      "goes_distance": {
+        "YES": 158,
+        "NO": -205
+      },
+      "total_rounds": {
+        "threshold": 2.5,
+        "OVER": 122,
+        "UNDER": -148
+      },
+      "how_fight_ends": {
+        "KO_TKO": -125,
+        "SUB": 550,
+        "DEC": 145
+      },
+      "round_to_start": {
+        "2": {
+          "YES": -310,
+          "NO": 220
+        },
+        "3": {
+          "YES": -110,
+          "NO": -116
+        }
+      }
+    },
+    {
+      "fight_no": 8,
+      "a": "Keiichiro Nakamura",
+      "b": "Ollie Schmid",
+      "moneyline": {
+        "a": -360,
+        "b": 290
+      },
+      "method_of_victory": {
+        "a": {
+          "KO_TKO": -140,
+          "SUB": 1200,
+          "DEC": 480
+        },
+        "b": {
+          "KO_TKO": 700,
+          "SUB": 2700,
+          "DEC": 600
+        },
+        "DRAW": 5000
+      },
+      "double_chance": {
+        "a": {
+          "KO_OR_SUB": -185,
+          "KO_OR_DEC": -290,
+          "SUB_OR_DEC": 330
+        },
+        "b": {
+          "KO_OR_SUB": 600,
+          "KO_OR_DEC": 300,
+          "SUB_OR_DEC": 500
+        },
+        "DRAW": 5000
+      },
+      "goes_distance": {
+        "YES": 235,
+        "NO": -320
+      },
+      "total_rounds": null,
+      "how_fight_ends": {
+        "KO_TKO": -220,
+        "SUB": 1000,
+        "DEC": 220
+      },
+      "round_to_start": {
+        "2": {
+          "YES": -205,
+          "NO": 158
+        },
+        "3": {
+          "YES": 122,
+          "NO": -154
+        }
+      }
+    },
+    {
+      "fight_no": 9,
+      "a": "Mitch Raposo",
+      "b": "Marcos Degli",
+      "moneyline": {
+        "a": 188,
+        "b": -225
+      },
+      "method_of_victory": {
+        "a": {
+          "KO_TKO": 600,
+          "SUB": 1200,
+          "DEC": 450
+        },
+        "b": {
+          "KO_TKO": 320,
+          "SUB": 460,
+          "DEC": 200
+        },
+        "DRAW": 5000
+      },
+      "double_chance": {
+        "a": {
+          "KO_OR_SUB": 410,
+          "KO_OR_DEC": 220,
+          "SUB_OR_DEC": 320
+        },
+        "b": {
+          "KO_OR_SUB": 145,
+          "KO_OR_DEC": -130,
+          "SUB_OR_DEC": 100
+        },
+        "DRAW": 5000
+      },
+      "goes_distance": {
+        "YES": 104,
+        "NO": -132
+      },
+      "total_rounds": {
+        "threshold": 2.5,
+        "OVER": -132,
+        "UNDER": 108
+      },
+      "how_fight_ends": {
+        "KO_TKO": 175,
+        "SUB": 330,
+        "DEC": -105
+      },
+      "round_to_start": {
+        "2": {
+          "YES": -400,
+          "NO": 280
+        },
+        "3": {
+          "YES": -168,
+          "NO": 132
+        }
+      }
+    },
+    {
+      "fight_no": 10,
+      "a": "Priscila Cachoeira",
+      "b": "Nina Milosevic",
+      "moneyline": {
+        "a": 430,
+        "b": -590
+      },
+      "method_of_victory": {
+        "a": {
+          "KO_TKO": 600,
+          "SUB": 2700,
+          "DEC": 1500
+        },
+        "b": {
+          "KO_TKO": 165,
+          "SUB": 165,
+          "DEC": 500
+        },
+        "DRAW": 5000
+      },
+      "double_chance": {
+        "a": {
+          "KO_OR_SUB": 550,
+          "KO_OR_DEC": 470,
+          "SUB_OR_DEC": 1200
+        },
+        "b": {
+          "KO_OR_SUB": -260,
+          "KO_OR_DEC": -120,
+          "SUB_OR_DEC": -105
+        },
+        "DRAW": 5000
+      },
+      "goes_distance": {
+        "YES": 360,
+        "NO": -530
+      },
+      "total_rounds": {
+        "threshold": 1.5,
+        "OVER": 102,
+        "UNDER": -122
+      },
+      "how_fight_ends": {
+        "KO_TKO": -105,
+        "SUB": 165,
+        "DEC": 360
+      },
+      "round_to_start": {
+        "2": {
+          "YES": -154,
+          "NO": 120
+        },
+        "3": {
+          "YES": 162,
+          "NO": -210
+        }
+      }
+    },
+    {
+      "fight_no": 11,
+      "a": "Billy Elekana",
+      "b": "Lucas Fernando",
+      "moneyline": {
+        "a": 275,
+        "b": -340
+      },
+      "method_of_victory": {
+        "a": {
+          "KO_TKO": 1100,
+          "SUB": 800,
+          "DEC": 700
+        },
+        "b": {
+          "KO_TKO": 155,
+          "SUB": 700,
+          "DEC": 220
+        },
+        "DRAW": 5000
+      },
+      "double_chance": {
+        "a": {
+          "KO_OR_SUB": 500,
+          "KO_OR_DEC": 420,
+          "SUB_OR_DEC": 370
+        },
+        "b": {
+          "KO_OR_SUB": -105,
+          "KO_OR_DEC": -220,
+          "SUB_OR_DEC": 135
+        },
+        "DRAW": 5000
+      },
+      "goes_distance": {
+        "YES": 136,
+        "NO": -174
+      },
+      "total_rounds": {
+        "threshold": 2.5,
+        "OVER": 106,
+        "UNDER": -128
+      },
+      "how_fight_ends": {
+        "KO_TKO": 115,
+        "SUB": 400,
+        "DEC": 125
+      },
+      "round_to_start": {
+        "2": {
+          "YES": -310,
+          "NO": 225
+        },
+        "3": {
+          "YES": -122,
+          "NO": -104
+        }
+      }
+    },
+    {
+      "fight_no": 12,
+      "a": "Davey Grant",
+      "b": "Elijah Smith",
+      "moneyline": {
+        "a": 265,
+        "b": -330
+      },
+      "method_of_victory": {
+        "a": {
+          "KO_TKO": 800,
+          "SUB": 1800,
+          "DEC": 500
+        },
+        "b": {
+          "KO_TKO": 190,
+          "SUB": 440,
+          "DEC": 240
+        },
+        "DRAW": 5000
+      },
+      "double_chance": {
+        "a": {
+          "KO_OR_SUB": 600,
+          "KO_OR_DEC": 300,
+          "SUB_OR_DEC": 420
+        },
+        "b": {
+          "KO_OR_SUB": -110,
+          "KO_OR_DEC": -170,
+          "SUB_OR_DEC": 110
+        },
+        "DRAW": 5000
+      },
+      "goes_distance": {
+        "YES": 132,
+        "NO": -170
+      },
+      "total_rounds": {
+        "threshold": 2.5,
+        "OVER": 100,
+        "UNDER": -122
+      },
+      "how_fight_ends": {
+        "KO_TKO": 125,
+        "SUB": 360,
+        "DEC": 120
+      },
+      "round_to_start": {
+        "2": {
+          "YES": -340,
+          "NO": 240
+        },
+        "3": {
+          "YES": -134,
+          "NO": 106
+        }
+      }
+    },
+    {
+      "fight_no": 13,
+      "a": "Tatiana Suarez",
+      "b": "Virna Jandiroba",
+      "moneyline": {
+        "a": -200,
+        "b": 168
+      },
+      "method_of_victory": {
+        "a": {
+          "KO_TKO": 1100,
+          "SUB": 700,
+          "DEC": -110
+        },
+        "b": {
+          "KO_TKO": 2700,
+          "SUB": 750,
+          "DEC": 280
+        },
+        "DRAW": 5000
+      },
+      "double_chance": {
+        "a": {
+          "KO_OR_SUB": 450,
+          "KO_OR_DEC": -150,
+          "SUB_OR_DEC": -175
+        },
+        "b": {
+          "KO_OR_SUB": 650,
+          "KO_OR_DEC": 240,
+          "SUB_OR_DEC": 175
+        },
+        "DRAW": 5000
+      },
+      "goes_distance": {
+        "YES": -330,
+        "NO": 240
+      },
+      "total_rounds": {
+        "threshold": 2.5,
+        "OVER": -370,
+        "UNDER": 280
+      },
+      "how_fight_ends": {
+        "KO_TKO": 950,
+        "SUB": 370,
+        "DEC": -330
+      },
+      "round_to_start": {
+        "2": {
+          "YES": -1100,
+          "NO": 590
+        },
+        "3": {
+          "YES": -460,
+          "NO": 320
+        }
+      }
+    },
+    {
+      "fight_no": 14,
+      "a": "Waldo Cortes Acosta",
+      "b": "Johnny Walker",
+      "moneyline": {
+        "a": -230,
+        "b": 190
+      },
+      "method_of_victory": {
+        "a": {
+          "KO_TKO": -115,
+          "SUB": 1700,
+          "DEC": 500
+        },
+        "b": {
+          "KO_TKO": 330,
+          "SUB": 1200,
+          "DEC": 1000
+        },
+        "DRAW": 5000
+      },
+      "double_chance": {
+        "a": {
+          "KO_OR_SUB": -145,
+          "KO_OR_DEC": -210,
+          "SUB_OR_DEC": 420
+        },
+        "b": {
+          "KO_OR_SUB": 240,
+          "KO_OR_DEC": 230,
+          "SUB_OR_DEC": 600
+        },
+        "DRAW": 5000
+      },
+      "goes_distance": {
+        "YES": 300,
+        "NO": -430
+      },
+      "total_rounds": {
+        "threshold": 2.5,
+        "OVER": 114,
+        "UNDER": -138
+      },
+      "how_fight_ends": {
+        "KO_TKO": -280,
+        "SUB": 800,
+        "DEC": 330
+      },
+      "round_to_start": {
+        "2": {
+          "YES": -360,
+          "NO": 250
+        },
+        "3": {
+          "YES": -126,
+          "NO": -102
+        },
+        "4": {
+          "YES": 156,
+          "NO": -205
+        },
+        "5": {
+          "YES": 240,
+          "NO": -340
+        }
+      }
+    }
+  ]
+}

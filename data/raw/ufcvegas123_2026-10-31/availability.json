@@ -1,0 +1,202 @@
+{
+  "checked_at_utc": "2026-11-06T16:57:48.391030+00:00",
+  "event": "UFC Fight Night: Moicano vs Nolan (UFC Vegas 123)",
+  "event_date": "2026-10-31",
+  "event_rows": 1,
+  "expected_round_stat_rows_from_results": 64,
+  "fighter_round_stat_rows": 64,
+  "full_card_stats_available": true,
+  "governance": {
+    "count_as_official_prediction_record": false,
+    "official_stage_a_frozen_before_event": false,
+    "official_stage_b_fanduel_frozen_before_event": false,
+    "prospective_win_rate_unaffected": true,
+    "use_after_event_for_future_training": true
+  },
+  "integrity_issues": [],
+  "missing_stat_bouts": [],
+  "official_crosscheck_sources": [
+    "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "https://www.ufc.com/news/ufc-fight-night-moicano-vs-nolan-results",
+    "https://www.ufc.com/index.php/news/ufc-fight-night-moicano-vs-nolan-prelim-results",
+    "https://www.ufc.com/news/ufc-fight-night-moicano-vs-nolan-official-scorecards"
+  ],
+  "official_results": [
+    {
+      "bout": "Renato Moicano vs. Tom Nolan",
+      "details": "Elbows to Head From Half Guard",
+      "method_class": "KO",
+      "method_source": "KO/TKO",
+      "round": 3,
+      "special_stoppage": false,
+      "time": "1:28",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/6d7244be5589953c",
+      "winner": "Tom Nolan"
+    },
+    {
+      "bout": "Randy Brown vs. Jacobe Smith",
+      "details": "Mike Bell 26 - 30.Eric Colon 26 - 30.Junichiro Kamijo 26 - 30.",
+      "method_class": "DEC",
+      "method_source": "Decision - Unanimous",
+      "round": 3,
+      "special_stoppage": false,
+      "time": "5:00",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/d37d3af2529c3fd5",
+      "winner": "Jacobe Smith"
+    },
+    {
+      "bout": "Ode Osbourne vs. Cody Durden",
+      "details": "Derek Cleary 28 - 29.Sal D'amato 28 - 29.Bryan Miner 28 - 29.",
+      "method_class": "DEC",
+      "method_source": "Decision - Unanimous",
+      "round": 3,
+      "special_stoppage": false,
+      "time": "5:00",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/b74a628c5fa4ce55",
+      "winner": "Cody Durden"
+    },
+    {
+      "bout": "Yana Santos vs. Luana Santos",
+      "details": "Derek Cleary 28 - 29.Eric Colon 28 - 29.Sal D'amato 28 - 29.",
+      "method_class": "DEC",
+      "method_source": "Decision - Unanimous",
+      "round": 3,
+      "special_stoppage": false,
+      "time": "5:00",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/d08ad0f685b82b5b",
+      "winner": "Luana Santos"
+    },
+    {
+      "bout": "Jean-Paul Lebosnoyani vs. Farman Hasanov",
+      "details": "Facial cut",
+      "method_class": "KO",
+      "method_source": "TKO - Doctor's Stoppage",
+      "round": 3,
+      "special_stoppage": true,
+      "time": "2:11",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/a7b3c1386172d083",
+      "winner": "Jean-Paul Lebosnoyani"
+    },
+    {
+      "bout": "Francis Marshall vs. Dakota Hope",
+      "details": "Derek Cleary 29 - 28.Eric Colon 28 - 29.Sal D'amato 28 - 29.",
+      "method_class": "DEC",
+      "method_source": "Decision - Split",
+      "round": 3,
+      "special_stoppage": false,
+      "time": "5:00",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/b7f8e619c7d9a7de",
+      "winner": "Dakota Hope"
+    },
+    {
+      "bout": "Rodrigo Sezinando vs. Theodor Berggren",
+      "details": "Facial cut",
+      "method_class": "KO",
+      "method_source": "TKO - Doctor's Stoppage",
+      "round": 2,
+      "special_stoppage": true,
+      "time": "5:00",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/8b2fcf7f83bf72b6",
+      "winner": "Rodrigo Sezinando"
+    },
+    {
+      "bout": "Julian Erosa vs. JeongYeong Lee",
+      "details": "Punch to Head At Distance",
+      "method_class": "KO",
+      "method_source": "KO/TKO",
+      "round": 1,
+      "special_stoppage": false,
+      "time": "1:31",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/52d61656f77f6650",
+      "winner": "Julian Erosa"
+    },
+    {
+      "bout": "Zach Reese vs. Mickey Gall",
+      "details": "Mike Bell 27 - 29.Derek Cleary 27 - 29.Bryan Miner 27 - 29.",
+      "method_class": "DEC",
+      "method_source": "Decision - Unanimous",
+      "round": 3,
+      "special_stoppage": false,
+      "time": "5:00",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/b6cee8bf625cc566",
+      "winner": "Zach Reese"
+    },
+    {
+      "bout": "Nick Klein vs. Joe Kropschot",
+      "details": "Triangle Armbar From Back Control",
+      "method_class": "SUB",
+      "method_source": "Submission",
+      "round": 2,
+      "special_stoppage": false,
+      "time": "1:25",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/f9bda28454d49c78",
+      "winner": "Joe Kropschot"
+    },
+    {
+      "bout": "Talita Alencar vs. Piera Rodriguez",
+      "details": "Mike Bell 27 - 30.Derek Cleary 27 - 30.Sal D'amato 27 - 30.",
+      "method_class": "DEC",
+      "method_source": "Decision - Unanimous",
+      "round": 3,
+      "special_stoppage": false,
+      "time": "5:00",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/78b166a244a2b534",
+      "winner": "Piera Rodriguez"
+    },
+    {
+      "bout": "Lucia Szabova vs. Tainara Lisboa",
+      "details": "Punches to Head From Back Control",
+      "method_class": "KO",
+      "method_source": "KO/TKO",
+      "round": 3,
+      "special_stoppage": false,
+      "time": "3:20",
+      "ufcstats_fight_url": "http://ufcstats.com/fight-details/1bf2edb30de4c976",
+      "winner": "Lucia Szabova"
+    }
+  ],
+  "receipt": {
+    "ufc_event_details.csv": {
+      "bytes": 103042,
+      "sha256": "34b43588d55c757a75262a2a04b6578d522a47ad0f98a89a313b4b13fb283f26",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/3d4886d222e72be2c5336b49b98b721f5103d949/ufc_event_details.csv"
+    },
+    "ufc_fight_details.csv": {
+      "bytes": 1048218,
+      "sha256": "b3abd2d38a0c4ec163e1fb7d35c2104ee4bd259b489ccee8b68b1984bc156766",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/3d4886d222e72be2c5336b49b98b721f5103d949/ufc_fight_details.csv"
+    },
+    "ufc_fight_results.csv": {
+      "bytes": 2113619,
+      "sha256": "c1c3ee8004a205ef3bb71bbe74e60d589569df136235a01ac803b156f75af9ff",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/3d4886d222e72be2c5336b49b98b721f5103d949/ufc_fight_results.csv"
+    },
+    "ufc_fight_stats.csv": {
+      "bytes": 7694855,
+      "sha256": "873527e4231fc9c7198e6332703d40c170678d75fecc99db47f0d8e2bb11d87f",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/3d4886d222e72be2c5336b49b98b721f5103d949/ufc_fight_stats.csv"
+    },
+    "ufc_fighter_details.csv": {
+      "bytes": 340441,
+      "sha256": "a1f6e4326217fab9734ac42f1958cd07b0b2b98f3caa5da08497ec7648eb6f70",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/3d4886d222e72be2c5336b49b98b721f5103d949/ufc_fighter_details.csv"
+    },
+    "ufc_fighter_tott.csv": {
+      "bytes": 508399,
+      "sha256": "3296e67941f984cd5484488226e5a5d94de3249c63fe289fbc66d98546311ea1",
+      "url": "https://raw.githubusercontent.com/Greco1899/scrape_ufc_stats/3d4886d222e72be2c5336b49b98b721f5103d949/ufc_fighter_tott.csv"
+    }
+  },
+  "record_type": "RETROSPECTIVE_OUTCOME_ONLY_NO_OFFICIAL_STAGE_A_OR_STAGE_B",
+  "result_methods": {
+    "DEC": 6,
+    "KO": 5,
+    "SUB": 1
+  },
+  "round_key_duplicates": [],
+  "unique_detail_bouts": 12,
+  "unique_result_bouts": 12,
+  "unique_stat_bouts": 12,
+  "upstream_commit": "3d4886d222e72be2c5336b49b98b721f5103d949",
+  "upstream_repo": "Greco1899/scrape_ufc_stats"
+}

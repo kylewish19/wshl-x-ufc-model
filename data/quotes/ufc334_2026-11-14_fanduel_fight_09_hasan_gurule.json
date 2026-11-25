@@ -1,0 +1,78 @@
+{
+  "event": "UFC 334: Gane vs Hokit",
+  "event_date": "2026-11-14",
+  "sportsbook": "FanDuel",
+  "status": "FULL_DISPLAYED_FIGHT_MARKETS_TRANSCRIBED_PENDING_OTHER_FIGHTS",
+  "fight_no": 9,
+  "a": "Bilal Hasan",
+  "b": "Luis Gurule",
+  "stage_a_locked": true,
+  "stage_a_final_selection_github_blob_sha": "564b8dbf2147f7a1cc839917ca3a4eb2d42ed63e",
+  "price_source": "User-supplied FanDuel screenshots in conversation on November 11, 2026 (4 images)",
+  "exact_quote_capture_timestamp_utc": null,
+  "collected_before_event_start": true,
+  "odds_used_in_stage_a": false,
+  "moneyline": {
+    "a": -1200,
+    "b": 630
+  },
+  "method_of_victory": {
+    "a": {
+      "KO_TKO": -310,
+      "SUB": 1100,
+      "DEC": 600
+    },
+    "b": {
+      "KO_TKO": 1100,
+      "SUB": 2700,
+      "DEC": 2500
+    },
+    "DRAW": 5000
+  },
+  "double_chance": {
+    "a": {
+      "KO_OR_SUB": -425,
+      "KO_OR_DEC": -600,
+      "SUB_OR_DEC": 400
+    },
+    "b": {
+      "KO_OR_SUB": 900,
+      "KO_OR_DEC": 850,
+      "SUB_OR_DEC": 1600
+    },
+    "DRAW": 5000
+  },
+  "goes_distance": {
+    "YES": 470,
+    "NO": -770
+  },
+  "total_rounds": {
+    "threshold": 1.5,
+    "OVER": 138,
+    "UNDER": -170
+  },
+  "how_fight_ends": {
+    "KO_TKO": -400,
+    "SUB": 900,
+    "DEC": 480
+  },
+  "round_to_start": {
+    "2": {
+      "YES": -122,
+      "NO": -104
+    },
+    "3": {
+      "YES": 240,
+      "NO": -330
+    }
+  },
+  "market_count": 27,
+  "missing_markets": [
+    "Only Over/Under 1.5 shown; no 2.5 alternate supplied",
+    "No exact finish-round market shown"
+  ],
+  "full_fight_pricing_complete": true,
+  "full_event_pricing_complete": false,
+  "used_for_price_comparison_yet": false,
+  "odds_freshness_note": "User-provided screenshot price snapshot; not independently reverified as live FanDuel availability; no wager placement implied."
+}

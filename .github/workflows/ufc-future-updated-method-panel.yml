@@ -1,0 +1,59 @@
+name: UFC future updated method panel readiness
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths:
+      - "tools/run_future_updated_method_panel.py"
+      - "tools/audit_riyadh_draft_lineup_readiness.py"
+      - "tests/test_ufc_updated_method_panel.py"
+      - "src/wshlx_ufc/round_method_v10.py"
+      - "src/wshlx_ufc/finish_conversion_v9.py"
+      - ".github/workflows/ufc-future-updated-method-panel.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  readiness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      REQUIRE_REGIONAL_INTEGRATION: '1'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -e ".[dev]"
+      - name: Recover pinned regional source and audited identity map
+        run: |
+          mkdir -p .research_cache/fightcanon
+          curl --fail --silent --show-error --location --retry 2 --max-time 360 --output .research_cache/fightcanon/canon.db https://github.com/Jadevit/fight-canon-db/releases/download/db-2026-11-19-1934/canon.db
+          echo '8185a2163b5f97071dbc4ec68667cceb43f5e321fadc38c26b5069303af4d949  .research_cache/fightcanon/canon.db' | sha256sum --check
+          python tools/audit_worldwide_mma_history_v4.py > regional_source_audit.log
+      - name: Test future panel on hypothetical fixture only
+        run: pytest -q tests/test_ufc_updated_method_panel.py tests/test_ufc_round_method_v10.py tests/test_ufc_finish_conversion_v9.py
+      - name: Draft lineup identity readiness without picks
+        run: python tools/audit_riyadh_draft_lineup_readiness.py
+      - name: Confirm existing November locks untouched
+        run: |
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          d=json.loads(Path("data/grades/ufcqatar_2026_11_21_all_frozen_models_and_public_card_grade.json").read_text())
+          for name,sha in d["frozen_source_hashes"].items():
+              source=Path("data/locks/ufcqatar_2026-11-21" if name=="stage_a_final_selection.json" else "data/shadow_locks/ufcqatar_2026-11-21")/name
+              assert hashlib.sha256(source.read_bytes()).hexdigest()==sha
+          print("FROZEN_SOURCE_HASHES_VERIFIED")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: wshlx-riyadh-draft-readiness
+          path: |
+            reports/model_health/2026-11-24_riyadh_readiness/
+            regional_source_audit.log
+          if-no-files-found: warn

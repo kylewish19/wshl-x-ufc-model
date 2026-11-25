@@ -1,0 +1,421 @@
+{
+  "all_research_only": true,
+  "categories": {
+    "top_5_best_bets": [
+      {
+        "break_even_probability": 0.4424778761061947,
+        "fight": "Stephen Thompson vs Charles Radtke",
+        "fight_key": "charlesradtke|stephenthompson",
+        "fight_no": 8,
+        "is_original_primary_timing_market": false,
+        "market": "Charles Radtke ML",
+        "market_family": "moneyline",
+        "market_spec": {
+          "kind": "moneyline",
+          "side": "b"
+        },
+        "not_in_official_betting_grade": true,
+        "not_previously_frozen_official_stage_b_bet": true,
+        "original_stage_a_posture": "LEAN",
+        "rank": 1,
+        "raw_current_probability": 0.636224672421754,
+        "raw_current_probability_edge_pp": 19.374679631555924,
+        "raw_min_model_ev_per_unit_unvalidated": 0.43786775967316394,
+        "raw_unadjusted_ev_per_unit": 0.43786775967316394,
+        "reasons_not_approved": [
+          "independent_calibrated_conservative_probability_not_established",
+          "screenshot_quote_not_timestamp_verified_live_before_weigh_ins"
+        ],
+        "research_notes": "Reference, historical and unified winner views favor Radtke although the book prices Thompson as favorite; screenshot +126 vs two-view probabilities 63.6%/74.5%. This is the best side to investigate but the probability floor and actual fight tape are not independently validated.",
+        "scheduled_rounds": 3,
+        "screenshot_american_odds": 126,
+        "sportsbook": "FanDuel",
+        "stage_a_primary_timing_prediction": "Over 1.5 rounds",
+        "stage_a_reference_winner": "Charles Radtke",
+        "status": "PASS_RESEARCH_ONLY_NOT_APPROVED_OR_BETTABLE",
+        "unified_shadow_probability": 0.7450681807608617,
+        "unverified_two_view_min_probability_edge_pp": 19.374679631555924
+      },
+      {
+        "break_even_probability": 0.5495495495495496,
+        "fight": "Drew Dober vs Chris Duncan",
+        "fight_key": "chrisduncan|drewdober",
+        "fight_no": 7,
+        "is_original_primary_timing_market": true,
+        "market": "OVER 1.5 rounds",
+        "market_family": "timing",
+        "market_spec": {
+          "direction": "OVER",
+          "kind": "total_rounds",
+          "threshold": 1.5
+        },
+        "not_in_official_betting_grade": true,
+        "not_previously_frozen_official_stage_b_bet": true,
+        "original_stage_a_posture": "LEAN",
+        "rank": 2,
+        "raw_current_probability": 0.6938,
+        "raw_current_probability_edge_pp": 14.425045045045037,
+        "raw_min_model_ev_per_unit_unvalidated": 0.2624885245901639,
+        "raw_unadjusted_ev_per_unit": 0.2624885245901639,
+        "reasons_not_approved": [
+          "method_timing_finish_marginals_disagree_over_15pp",
+          "independent_calibrated_conservative_probability_not_established",
+          "screenshot_quote_not_timestamp_verified_live_before_weigh_ins"
+        ],
+        "research_notes": "Exact original Stage A primary timing outcome and both timing views near 69%; method-joint finish probability disagrees by 17.8pp. Watch only, no timing bet approval.",
+        "scheduled_rounds": 3,
+        "screenshot_american_odds": -122,
+        "sportsbook": "FanDuel",
+        "stage_a_primary_timing_prediction": "Over 1.5 rounds",
+        "stage_a_reference_winner": "Chris Duncan",
+        "status": "PASS_RESEARCH_ONLY_NOT_APPROVED_OR_BETTABLE",
+        "unified_shadow_probability": 0.701,
+        "unverified_two_view_min_probability_edge_pp": 14.425045045045037
+      },
+      {
+        "break_even_probability": 0.4444444444444444,
+        "fight": "Jim Miller vs Terrance McKinney",
+        "fight_key": "jimmiller|terrancemckinney",
+        "fight_no": 6,
+        "is_original_primary_timing_market": false,
+        "market": "Terrance McKinney KO_OR_DEC",
+        "market_family": "double_chance",
+        "market_spec": {
+          "kind": "double_chance",
+          "methods": [
+            "DEC",
+            "KO_TKO"
+          ],
+          "side": "b"
+        },
+        "not_in_official_betting_grade": true,
+        "not_previously_frozen_official_stage_b_bet": true,
+        "original_stage_a_posture": "SIDE",
+        "rank": 3,
+        "raw_current_probability": 0.6312648212752792,
+        "raw_current_probability_edge_pp": 18.682037683083475,
+        "raw_min_model_ev_per_unit_unvalidated": 0.2307318568776029,
+        "raw_unadjusted_ev_per_unit": 0.4203458478693781,
+        "reasons_not_approved": [
+          "fighter_method_double_chance_or_fight_end_model_not_independently_validated",
+          "independent_calibrated_conservative_probability_not_established",
+          "screenshot_quote_not_timestamp_verified_live_before_weigh_ins"
+        ],
+        "research_notes": "Winner consensus favors McKinney, though his specific method mixture remains unreliable; two-model joint method outcomes imply a raw edge but this is BLOCKED method-family research.",
+        "scheduled_rounds": 3,
+        "screenshot_american_odds": 125,
+        "sportsbook": "FanDuel",
+        "stage_a_primary_timing_prediction": "Fight goes distance NO",
+        "stage_a_reference_winner": "Terrance McKinney",
+        "status": "PASS_RESEARCH_ONLY_NOT_APPROVED_OR_BETTABLE",
+        "unified_shadow_probability": 0.5469919363900457,
+        "unverified_two_view_min_probability_edge_pp": 10.25474919456013
+      },
+      {
+        "break_even_probability": 0.46296296296296297,
+        "fight": "Donte Johnson vs Cesar Almeida",
+        "fight_key": "cesaralmeida|dontejohnson",
+        "fight_no": 5,
+        "is_original_primary_timing_market": false,
+        "market": "Donte Johnson KO_OR_SUB",
+        "market_family": "double_chance",
+        "market_spec": {
+          "kind": "double_chance",
+          "methods": [
+            "KO_TKO",
+            "SUB"
+          ],
+          "side": "a"
+        },
+        "not_in_official_betting_grade": true,
+        "not_previously_frozen_official_stage_b_bet": true,
+        "original_stage_a_posture": "LEAN",
+        "rank": 4,
+        "raw_current_probability": 0.6586536204181122,
+        "raw_current_probability_edge_pp": 19.56906574551492,
+        "raw_min_model_ev_per_unit_unvalidated": 0.20786433562610063,
+        "raw_unadjusted_ev_per_unit": 0.42269182010312223,
+        "reasons_not_approved": [
+          "fighter_method_double_chance_or_fight_end_model_not_independently_validated",
+          "independent_calibrated_conservative_probability_not_established",
+          "screenshot_quote_not_timestamp_verified_live_before_weigh_ins"
+        ],
+        "research_notes": "Strong three-view Johnson winner preference. However current versus unified method distributions differ materially and method-family calibration has not passed a betting gate.",
+        "scheduled_rounds": 3,
+        "screenshot_american_odds": 116,
+        "sportsbook": "FanDuel",
+        "stage_a_primary_timing_prediction": "Fight goes distance NO",
+        "stage_a_reference_winner": "Donte Johnson",
+        "status": "PASS_RESEARCH_ONLY_NOT_APPROVED_OR_BETTABLE",
+        "unified_shadow_probability": 0.5591964516787503,
+        "unverified_two_view_min_probability_edge_pp": 9.623348871578735
+      },
+      {
+        "break_even_probability": 0.42016806722689076,
+        "fight": "Bilal Hasan vs Luis Gurule",
+        "fight_key": "bilalhasan|luisgurule",
+        "fight_no": 9,
+        "is_original_primary_timing_market": false,
+        "market": "OVER 1.5 rounds",
+        "market_family": "timing",
+        "market_spec": {
+          "direction": "OVER",
+          "kind": "total_rounds",
+          "threshold": 1.5
+        },
+        "not_in_official_betting_grade": true,
+        "not_previously_frozen_official_stage_b_bet": true,
+        "original_stage_a_posture": "PASS",
+        "rank": 5,
+        "raw_current_probability": 0.5852,
+        "raw_current_probability_edge_pp": 16.503193277310928,
+        "raw_min_model_ev_per_unit_unvalidated": 0.3763540000000001,
+        "raw_unadjusted_ev_per_unit": 0.392776,
+        "reasons_not_approved": [
+          "frozen_stage_a_fight_PASS_research_only",
+          "sparse_less_than_two_prior_UFC_fights_for_one_side",
+          "independent_calibrated_conservative_probability_not_established",
+          "screenshot_quote_not_timestamp_verified_live_before_weigh_ins"
+        ],
+        "research_notes": "Both timing models put survival beyond 7:30 near 58% at +138, but Hasan has only one recorded UFC bout and the entire matchup is PASS. Not an approved selection.",
+        "scheduled_rounds": 3,
+        "screenshot_american_odds": 138,
+        "sportsbook": "FanDuel",
+        "stage_a_primary_timing_prediction": "Fight goes distance NO",
+        "stage_a_reference_winner": "Bilal Hasan",
+        "status": "PASS_RESEARCH_ONLY_NOT_APPROVED_OR_BETTABLE",
+        "unified_shadow_probability": 0.5783,
+        "unverified_two_view_min_probability_edge_pp": 15.813193277310928
+      }
+    ],
+    "top_5_longshots": [
+      {
+        "break_even_probability": 0.1724137931034483,
+        "fight": "Stephen Thompson vs Charles Radtke",
+        "fight_key": "charlesradtke|stephenthompson",
+        "fight_no": 8,
+        "is_original_primary_timing_market": false,
+        "market": "Charles Radtke by KO_TKO",
+        "market_family": "method",
+        "market_spec": {
+          "kind": "method",
+          "method": "KO_TKO",
+          "side": "b"
+        },
+        "not_in_official_betting_grade": true,
+        "not_previously_frozen_official_stage_b_bet": true,
+        "original_stage_a_posture": "LEAN",
+        "rank": 1,
+        "raw_current_probability": 0.34534205240080934,
+        "raw_current_probability_edge_pp": 17.292825929736104,
+        "raw_min_model_ev_per_unit_unvalidated": 0.623739746136259,
+        "raw_unadjusted_ev_per_unit": 1.0029839039246942,
+        "reasons_not_approved": [
+          "fighter_method_double_chance_or_fight_end_model_not_independently_validated",
+          "independent_calibrated_conservative_probability_not_established",
+          "screenshot_quote_not_timestamp_verified_live_before_weigh_ins"
+        ],
+        "research_notes": "All three winner views back Radtke and the KO/TKO raw 6-way probabilities appear above the +480 break-even. This is a BLOCKED exact-method candidate; compatible but highly correlated with Best Bet Radtke ML.",
+        "scheduled_rounds": 3,
+        "screenshot_american_odds": 480,
+        "sportsbook": "FanDuel",
+        "stage_a_primary_timing_prediction": "Over 1.5 rounds",
+        "stage_a_reference_winner": "Charles Radtke",
+        "status": "PASS_RESEARCH_ONLY_NOT_APPROVED_OR_BETTABLE",
+        "unified_shadow_probability": 0.2799551286441826,
+        "unverified_two_view_min_probability_edge_pp": 10.75413355407343
+      },
+      {
+        "break_even_probability": 0.2597402597402597,
+        "fight": "Drew Dober vs Chris Duncan",
+        "fight_key": "chrisduncan|drewdober",
+        "fight_no": 7,
+        "is_original_primary_timing_market": false,
+        "market": "Fight goes distance YES",
+        "market_family": "timing",
+        "market_spec": {
+          "kind": "goes_distance",
+          "outcome": "YES"
+        },
+        "not_in_official_betting_grade": true,
+        "not_previously_frozen_official_stage_b_bet": true,
+        "original_stage_a_posture": "LEAN",
+        "rank": 2,
+        "raw_current_probability": 0.5189,
+        "raw_current_probability_edge_pp": 25.91597402597403,
+        "raw_min_model_ev_per_unit_unvalidated": 0.9977650000000001,
+        "raw_unadjusted_ev_per_unit": 0.9977650000000001,
+        "reasons_not_approved": [
+          "method_timing_finish_marginals_disagree_over_15pp",
+          "independent_calibrated_conservative_probability_not_established",
+          "screenshot_quote_not_timestamp_verified_live_before_weigh_ins"
+        ],
+        "research_notes": "Both simulated timing views exceed 51% at +285, but the 17.8pp finish-family disagreement makes this a high-uncertainty blocked research longshot. Compatible with Dober-Duncan O1.5.",
+        "scheduled_rounds": 3,
+        "screenshot_american_odds": 285,
+        "sportsbook": "FanDuel",
+        "stage_a_primary_timing_prediction": "Over 1.5 rounds",
+        "stage_a_reference_winner": "Chris Duncan",
+        "status": "PASS_RESEARCH_ONLY_NOT_APPROVED_OR_BETTABLE",
+        "unified_shadow_probability": 0.5253,
+        "unverified_two_view_min_probability_edge_pp": 25.91597402597403
+      },
+      {
+        "break_even_probability": 0.13513513513513514,
+        "fight": "Jim Miller vs Terrance McKinney",
+        "fight_key": "jimmiller|terrancemckinney",
+        "fight_no": 6,
+        "is_original_primary_timing_market": false,
+        "market": "Round 3 starts YES",
+        "market_family": "timing",
+        "market_spec": {
+          "kind": "round_to_start",
+          "outcome": "YES",
+          "round": 3
+        },
+        "not_in_official_betting_grade": true,
+        "not_previously_frozen_official_stage_b_bet": true,
+        "original_stage_a_posture": "SIDE",
+        "rank": 3,
+        "raw_current_probability": 0.5066,
+        "raw_current_probability_edge_pp": 37.14648648648649,
+        "raw_min_model_ev_per_unit_unvalidated": 2.7088799999999997,
+        "raw_unadjusted_ev_per_unit": 2.748840000000001,
+        "reasons_not_approved": [
+          "independent_calibrated_conservative_probability_not_established",
+          "screenshot_quote_not_timestamp_verified_live_before_weigh_ins"
+        ],
+        "research_notes": "Extremely large apparent raw edge at +640: current/unified timing roughly 50%. The locked PRIMARY timing pick for this fight is GTD NO, NOT this alternative; long-horizon survival calibration is unreliable. Score as a separate shadow only, never pretend it was the Stage A primary timing prediction.",
+        "scheduled_rounds": 3,
+        "screenshot_american_odds": 640,
+        "sportsbook": "FanDuel",
+        "stage_a_primary_timing_prediction": "Fight goes distance NO",
+        "stage_a_reference_winner": "Terrance McKinney",
+        "status": "PASS_RESEARCH_ONLY_NOT_APPROVED_OR_BETTABLE",
+        "unified_shadow_probability": 0.5012,
+        "unverified_two_view_min_probability_edge_pp": 36.60648648648648
+      },
+      {
+        "break_even_probability": 0.3333333333333333,
+        "fight": "Macy Chiasson vs Bia Mesquita",
+        "fight_key": "biamesquita|macychiasson",
+        "fight_no": 3,
+        "is_original_primary_timing_market": false,
+        "market": "Fight goes distance YES",
+        "market_family": "timing",
+        "market_spec": {
+          "kind": "goes_distance",
+          "outcome": "YES"
+        },
+        "not_in_official_betting_grade": true,
+        "not_previously_frozen_official_stage_b_bet": true,
+        "original_stage_a_posture": "PASS",
+        "rank": 4,
+        "raw_current_probability": 0.4601,
+        "raw_current_probability_edge_pp": 12.67666666666667,
+        "raw_min_model_ev_per_unit_unvalidated": 0.38029999999999997,
+        "raw_unadjusted_ev_per_unit": 0.38029999999999997,
+        "reasons_not_approved": [
+          "frozen_stage_a_fight_PASS_research_only",
+          "method_timing_finish_marginals_disagree_over_15pp",
+          "independent_calibrated_conservative_probability_not_established",
+          "screenshot_quote_not_timestamp_verified_live_before_weigh_ins"
+        ],
+        "research_notes": "About 46% simulated fight-distance probability and +200 price, but Chiasson-Mesquita was a frozen PASS with three-model winner disagreement and a severe method/timing mismatch. No betting approval.",
+        "scheduled_rounds": 3,
+        "screenshot_american_odds": 200,
+        "sportsbook": "FanDuel",
+        "stage_a_primary_timing_prediction": "Over 1.5 rounds",
+        "stage_a_reference_winner": "Macy Chiasson",
+        "status": "PASS_RESEARCH_ONLY_NOT_APPROVED_OR_BETTABLE",
+        "unified_shadow_probability": 0.4678,
+        "unverified_two_view_min_probability_edge_pp": 12.67666666666667
+      },
+      {
+        "break_even_probability": 0.17543859649122806,
+        "fight": "Caio Borralho vs Yousri Belgaroui",
+        "fight_key": "caioborralho|yousribelgaroui",
+        "fight_no": 11,
+        "is_original_primary_timing_market": false,
+        "market": "Yousri Belgaroui by KO_TKO",
+        "market_family": "method",
+        "market_spec": {
+          "kind": "method",
+          "method": "KO_TKO",
+          "side": "b"
+        },
+        "not_in_official_betting_grade": true,
+        "not_previously_frozen_official_stage_b_bet": true,
+        "original_stage_a_posture": "PASS",
+        "rank": 5,
+        "raw_current_probability": 0.30935005646681923,
+        "raw_current_probability_edge_pp": 13.391145997559118,
+        "raw_min_model_ev_per_unit_unvalidated": 0.5622373873648393,
+        "raw_unadjusted_ev_per_unit": 0.7632953218608698,
+        "reasons_not_approved": [
+          "frozen_stage_a_fight_PASS_research_only",
+          "fighter_method_double_chance_or_fight_end_model_not_independently_validated",
+          "method_timing_finish_marginals_disagree_over_15pp",
+          "independent_calibrated_conservative_probability_not_established",
+          "screenshot_quote_not_timestamp_verified_live_before_weigh_ins"
+        ],
+        "research_notes": "The historical and unified winner views narrowly back Belgaroui; reference opposes him. Large apparent KO method edge at +470 is not validated and fight remains PASS with >15pp method/timing contradiction.",
+        "scheduled_rounds": 3,
+        "screenshot_american_odds": 470,
+        "sportsbook": "FanDuel",
+        "stage_a_primary_timing_prediction": "Over 1.5 rounds",
+        "stage_a_reference_winner": "Caio Borralho",
+        "status": "PASS_RESEARCH_ONLY_NOT_APPROVED_OR_BETTABLE",
+        "unified_shadow_probability": 0.2740767346254104,
+        "unverified_two_view_min_probability_edge_pp": 9.863813813418233
+      }
+    ]
+  },
+  "compatible_same_fight_pairs": [
+    {
+      "best_bet": "Charles Radtke ML",
+      "can_both_win": true,
+      "fight_key": "charlesradtke|stephenthompson",
+      "highly_correlated": true,
+      "longshot": "Charles Radtke by KO_TKO"
+    },
+    {
+      "best_bet": "OVER 1.5 rounds",
+      "can_both_win": true,
+      "fight_key": "chrisduncan|drewdober",
+      "highly_correlated": true,
+      "longshot": "Fight goes distance YES"
+    },
+    {
+      "best_bet": "Terrance McKinney KO_OR_DEC",
+      "can_both_win": true,
+      "fight_key": "jimmiller|terrancemckinney",
+      "highly_correlated": true,
+      "longshot": "Round 3 starts YES"
+    }
+  ],
+  "distinct_fights_reviewed": 7,
+  "event": "UFC 334: Gane vs Hokit",
+  "event_date": "2026-11-14",
+  "exact_fanduel_quote_timestamp_utc": null,
+  "fanduel_screenshot_sha256": "ce57c3a0e1d79154e164c7d3e1223adb15c03c0eefef3dbc5c76ccd55206aa2a",
+  "full_price_audit_sha256": "de50106f116d1931413c51518cfeafb0e4c8f2a51f0e54ff83edb682aef0d4d2",
+  "generated_at_utc": "2026-11-12T02:06:26.571575+00:00",
+  "input_price_freshness": "User FanDuel screenshot quotes captured Nov11; not live verified on Nov13 weigh-in/fight day",
+  "note": "All ten displayed slots are frozen research PASS, not ten approved bets or proof of money staked. The 1u hypothetical independent ledger is used for grade-after-event only.",
+  "official_bets_approved": 0,
+  "one_per_fight_within_each_tier": true,
+  "presented_research_candidates": {
+    "top_5_best_bets": 5,
+    "top_5_longshots": 5
+  },
+  "qualified_bets_in_either_category": 0,
+  "report_type": "POST_PRICE_RANKED_FANDUEL_TWO_TIER_RESEARCH_WATCHLIST",
+  "same_fight_cross_tier_allowed_only_if_outcomes_can_coexist": true,
+  "same_fight_exposure_warning": "Three logically compatible same-fight pairs can still lose together and are strongly correlated; do not interpret as two independent edges.",
+  "selection_rule": "Analyst-triaged 5+5 positive RAW model-expected-value research scenarios, checking agreement, known source quality, screenshot market definitions, method/timing failures and same-fight compatibility. NOT a validated calibrated EV or a fitted preference model. Not sorted solely by exaggerated longshot raw EV.",
+  "source_quotes_count": 334,
+  "stage_a_or_original_stage_b_mutated": false,
+  "stage_a_original_sha256": "fda4e7d5636174eb14114a1cabd55c804aae1c3e7de41bb0b12791b46920740a",
+  "stage_b_original_sha256": "de50106f116d1931413c51518cfeafb0e4c8f2a51f0e54ff83edb682aef0d4d2"
+}

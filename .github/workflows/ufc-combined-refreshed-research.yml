@@ -1,0 +1,46 @@
+name: UFC combined prospective research integration
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths: ["tools/audit_riyadh_written_stats.py","src/wshlx_ufc/combined_research_grade.py","src/wshlx_ufc/combined_research_cumulative.py","tools/run_refreshed_three_view_card.py","tools/run_combined_refreshed_research.py","tools/refreshed_identity_challenger_panel.py",".github/workflows/ufc-combined-refreshed-research.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -e ".[dev]"
+      - uses: actions/download-artifact@v4
+        with:
+          name: reference-identity-corrected-refit
+          run-id: '45656649064'
+          github-token: ${{ github.token }}
+          path: /tmp/refreshed-reference
+      - uses: actions/download-artifact@v4
+        with:
+          name: reference-corrected-method-offsets
+          run-id: '45656649131'
+          github-token: ${{ github.token }}
+          path: /tmp/refreshed-offsets
+      - uses: actions/download-artifact@v4
+        with:
+          name: historical-identity-corrected-refit
+          run-id: '45656649012'
+          github-token: ${{ github.token }}
+          path: /tmp/refreshed-historical
+      - run: |
+          mkdir -p .research_cache/fightcanon
+          curl --fail --silent --show-error --location --retry 2 --max-time 360 -o .research_cache/fightcanon/new.db https://github.com/Jadevit/fight-canon-db/releases/download/db-2026-11-24-2118/canon.db
+      - run: python tools/audit_riyadh_written_stats.py
+      - run: python tools/run_combined_refreshed_research.py --self-test --official-physical-shadow --reference /tmp/refreshed-reference --offsets /tmp/refreshed-offsets --historical /tmp/refreshed-historical

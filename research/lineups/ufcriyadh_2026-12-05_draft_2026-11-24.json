@@ -1,0 +1,87 @@
+{
+  "schema": "WSHLX_UPCOMING_LINEUP_DRAFT_NOT_LOCK",
+  "event": "UFC Fight Night: Adesanya vs Magomedov",
+  "event_date": "2026-12-05",
+  "first_fight_utc": "2026-12-05T15:00:00+00:00",
+  "main_card_utc": "2026-12-05T18:00:00+00:00",
+  "lineup_source_url": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
+  "lineup_observed_date": "2026-11-24",
+  "lineup_verified_by_caller": false,
+  "listed_on_official_event_page": true,
+  "needs_fight_week_reconfirmation": true,
+  "identity_verification_complete": false,
+  "odds_not_copied_or_used": true,
+  "order": "UFC page main card followed by prelims, not guaranteed chronological bout order",
+  "fights": [
+    {
+      "a": "Israel Adesanya",
+      "b": "Shara Magomedov",
+      "provisional": true
+    },
+    {
+      "a": "Ian Machado Garry",
+      "b": "Yaroslav Amosov",
+      "provisional": true
+    },
+    {
+      "a": "Levan Chokheli",
+      "b": "Islam Dulatov",
+      "provisional": true
+    },
+    {
+      "a": "Serghei Spivac",
+      "b": "Mario Pinto",
+      "provisional": true
+    },
+    {
+      "a": "Mairon Santos",
+      "b": "Akbar Abdullaev",
+      "provisional": true
+    },
+    {
+      "a": "Magomed Tuchalov",
+      "b": "Ion Cutelaba",
+      "provisional": true
+    },
+    {
+      "a": "Luke Riley",
+      "b": "Gabriel Santos",
+      "provisional": true
+    },
+    {
+      "a": "Bruno Silva",
+      "b": "Jafel Filho",
+      "provisional": true
+    },
+    {
+      "a": "Uran Satybaldiev",
+      "b": "Ivan Gnizditskiy",
+      "provisional": true
+    },
+    {
+      "a": "Marco Tulio",
+      "b": "JunYong Park",
+      "provisional": true
+    },
+    {
+      "a": "Pavel Andrusca",
+      "b": "Mahammadali Osmanli",
+      "provisional": true
+    },
+    {
+      "a": "Modestino Rodrigues",
+      "b": "Matthieu Duclos",
+      "provisional": true
+    },
+    {
+      "a": "Abdul Hussein",
+      "b": "Hecher Sosa",
+      "provisional": true
+    },
+    {
+      "a": "Mateusz Rębecki",
+      "b": "Elves Brener",
+      "provisional": true
+    }
+  ]
+}

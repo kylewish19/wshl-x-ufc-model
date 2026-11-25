@@ -1,0 +1,486 @@
+{
+  "status": "SHADOW_ONLY",
+  "full_fit_descriptive": {
+    "winner": {
+      "current": {
+        "n": 112,
+        "accuracy": 0.6071428571428571,
+        "brier": 0.23184323713795754,
+        "log_loss": 0.6569951637587409,
+        "roc_auc": 0.654291224686596
+      },
+      "historical": {
+        "n": 112,
+        "accuracy": 0.6071428571428571,
+        "brier": 0.27308183252023377,
+        "log_loss": 0.7854164305180685,
+        "roc_auc": 0.5776277724204435
+      },
+      "unified": {
+        "n": 112,
+        "accuracy": 0.6071428571428571,
+        "brier": 0.23184323713795754,
+        "log_loss": 0.6569951637587409,
+        "roc_auc": 0.654291224686596
+      }
+    },
+    "method": {
+      "current": {
+        "n": 88,
+        "joint_accuracy": 0.4090909090909091,
+        "winner_accuracy": 0.6022727272727273,
+        "method_accuracy": 0.5909090909090909,
+        "log_loss": 1.5601122516380812,
+        "multiclass_brier": 0.7603767374447817
+      },
+      "historical": {
+        "n": 88,
+        "joint_accuracy": 0.26136363636363635,
+        "winner_accuracy": 0.6136363636363636,
+        "method_accuracy": 0.4431818181818182,
+        "log_loss": 1.6704920395115495,
+        "multiclass_brier": 0.8060858106626996
+      },
+      "unified": {
+        "n": 88,
+        "joint_accuracy": 0.3977272727272727,
+        "winner_accuracy": 0.6022727272727273,
+        "method_accuracy": 0.5909090909090909,
+        "log_loss": 1.559714355450363,
+        "multiclass_brier": 0.7607276197779792
+      }
+    },
+    "timing": {
+      "current": {
+        "n": 456,
+        "accuracy": 0.543859649122807,
+        "brier": 0.2562433405093673,
+        "log_loss": 0.7084332154494329,
+        "roc_auc": 0.6789628044309692
+      },
+      "historical": {
+        "n": 456,
+        "accuracy": 0.5942982456140351,
+        "brier": 0.252948437162428,
+        "log_loss": 0.7396219459641519,
+        "roc_auc": 0.6540435566652795
+      },
+      "unified": {
+        "n": 456,
+        "accuracy": 0.5942982456140351,
+        "brier": 0.2409887624046697,
+        "log_loss": 0.6755263169960058,
+        "roc_auc": 0.6812714265897786
+      },
+      "n_fights": 88,
+      "per_market": {
+        "GTD_YES": {
+          "current": {
+            "n": 88,
+            "accuracy": 0.5340909090909091,
+            "brier": 0.23471330044762573,
+            "log_loss": 0.6595882690592388,
+            "roc_auc": 0.6023411371237458
+          },
+          "historical": {
+            "n": 88,
+            "accuracy": 0.5909090909090909,
+            "brier": 0.24357243690787522,
+            "log_loss": 0.7578444085988281,
+            "roc_auc": 0.5698996655518395
+          },
+          "unified": {
+            "n": 88,
+            "accuracy": 0.6136363636363636,
+            "brier": 0.22695243037232124,
+            "log_loss": 0.6451129572525205,
+            "roc_auc": 0.5959866220735786
+          }
+        },
+        "OVER_1.5": {
+          "current": {
+            "n": 88,
+            "accuracy": 0.5340909090909091,
+            "brier": 0.26850638053525305,
+            "log_loss": 0.7355860021246191,
+            "roc_auc": 0.6180878552971576
+          },
+          "historical": {
+            "n": 88,
+            "accuracy": 0.6136363636363636,
+            "brier": 0.2522663539670289,
+            "log_loss": 0.719769928148439,
+            "roc_auc": 0.6651162790697676
+          },
+          "unified": {
+            "n": 88,
+            "accuracy": 0.5795454545454546,
+            "brier": 0.24635614722748375,
+            "log_loss": 0.6861712332656352,
+            "roc_auc": 0.6718346253229975
+          }
+        },
+        "OVER_2.5": {
+          "current": {
+            "n": 88,
+            "accuracy": 0.5454545454545454,
+            "brier": 0.2523769876492619,
+            "log_loss": 0.6968523013052832,
+            "roc_auc": 0.6049801924165252
+          },
+          "historical": {
+            "n": 88,
+            "accuracy": 0.6136363636363636,
+            "brier": 0.24739379165823838,
+            "log_loss": 0.7432835771642938,
+            "roc_auc": 0.620826259196378
+          },
+          "unified": {
+            "n": 88,
+            "accuracy": 0.6136363636363636,
+            "brier": 0.23678581544614977,
+            "log_loss": 0.6644076359616954,
+            "roc_auc": 0.6485568760611204
+          }
+        },
+        "ROUND_2_STARTS_YES": {
+          "current": {
+            "n": 88,
+            "accuracy": 0.6022727272727273,
+            "brier": 0.2614808551006653,
+            "log_loss": 0.728419809106444,
+            "roc_auc": 0.5842607313195549
+          },
+          "historical": {
+            "n": 88,
+            "accuracy": 0.5681818181818182,
+            "brier": 0.2672538632324837,
+            "log_loss": 0.7442763242098684,
+            "roc_auc": 0.6009538950715421
+          },
+          "unified": {
+            "n": 88,
+            "accuracy": 0.6363636363636364,
+            "brier": 0.24846866730967168,
+            "log_loss": 0.699033837066496,
+            "roc_auc": 0.6083730789613142
+          }
+        },
+        "ROUND_3_STARTS_YES": {
+          "current": {
+            "n": 88,
+            "accuracy": 0.48863636363636365,
+            "brier": 0.2707098321097259,
+            "log_loss": 0.7358338435430596,
+            "roc_auc": 0.5947658402203857
+          },
+          "historical": {
+            "n": 88,
+            "accuracy": 0.5681818181818182,
+            "brier": 0.26234570297601306,
+            "log_loss": 0.7605286880685305,
+            "roc_auc": 0.6247933884297521
+          },
+          "unified": {
+            "n": 88,
+            "accuracy": 0.5340909090909091,
+            "brier": 0.2534188527230221,
+            "log_loss": 0.6987053722281079,
+            "roc_auc": 0.6402203856749311
+          }
+        },
+        "ROUND_4_STARTS_YES": {
+          "current": {
+            "n": 8,
+            "accuracy": 0.625,
+            "brier": 0.22068666543553409,
+            "log_loss": 0.6311928186529835,
+            "roc_auc": 0.75
+          },
+          "historical": {
+            "n": 8,
+            "accuracy": 0.625,
+            "brier": 0.2008833740000896,
+            "log_loss": 0.5737150783866855,
+            "roc_auc": 0.875
+          },
+          "unified": {
+            "n": 8,
+            "accuracy": 0.625,
+            "brier": 0.1992635028288032,
+            "log_loss": 0.5844996961495144,
+            "roc_auc": 0.75
+          }
+        },
+        "ROUND_5_STARTS_YES": {
+          "current": {
+            "n": 8,
+            "accuracy": 0.625,
+            "brier": 0.2195228293305514,
+            "log_loss": 0.6304179854396078,
+            "roc_auc": 0.6875
+          },
+          "historical": {
+            "n": 8,
+            "accuracy": 0.75,
+            "brier": 0.2160239081002738,
+            "log_loss": 0.6020036534804157,
+            "roc_auc": 0.875
+          },
+          "unified": {
+            "n": 8,
+            "accuracy": 0.5,
+            "brier": 0.20529491037223668,
+            "log_loss": 0.5927589791038179,
+            "roc_auc": 0.75
+          }
+        }
+      }
+    }
+  },
+  "chronological_walk_forward": {
+    "winner": {
+      "2026-08-29": {
+        "train_n": 24,
+        "test_n": 13,
+        "weight_current": 0.6000000000000001,
+        "metrics": {
+          "n": 13,
+          "accuracy": 0.6923076923076923,
+          "brier": 0.2636613149861052,
+          "log_loss": 0.7322943205670971,
+          "roc_auc": 0.6333333333333333
+        }
+      },
+      "2026-09-05": {
+        "train_n": 37,
+        "test_n": 14,
+        "weight_current": 1.0,
+        "metrics": {
+          "n": 14,
+          "accuracy": 0.42857142857142855,
+          "brier": 0.26955550000000006,
+          "log_loss": 0.7325698253846217,
+          "roc_auc": 0.48958333333333337
+        }
+      },
+      "2026-09-19": {
+        "train_n": 51,
+        "test_n": 12,
+        "weight_current": 1.0,
+        "metrics": {
+          "n": 12,
+          "accuracy": 0.5833333333333334,
+          "brier": 0.24207817780292698,
+          "log_loss": 0.6874779659302271,
+          "roc_auc": 0.4444444444444445
+        }
+      },
+      "2026-09-26": {
+        "train_n": 63,
+        "test_n": 11,
+        "weight_current": 1.0,
+        "metrics": {
+          "n": 11,
+          "accuracy": 0.8181818181818182,
+          "brier": 0.13088957191378825,
+          "log_loss": 0.43633940764431234,
+          "roc_auc": 1.0
+        }
+      },
+      "2026-10-03": {
+        "train_n": 74,
+        "test_n": 14,
+        "weight_current": 1.0,
+        "metrics": {
+          "n": 14,
+          "accuracy": 0.9285714285714286,
+          "brier": 0.15393430403520889,
+          "log_loss": 0.48303065739043916,
+          "roc_auc": 0.875
+        }
+      },
+      "2026-10-10": {
+        "train_n": 88,
+        "test_n": 11,
+        "weight_current": 1.0,
+        "metrics": {
+          "n": 11,
+          "accuracy": 0.5454545454545454,
+          "brier": 0.26162792323347567,
+          "log_loss": 0.7235409144550428,
+          "roc_auc": 0.4166666666666667
+        }
+      },
+      "2026-10-17": {
+        "train_n": 99,
+        "test_n": 13,
+        "weight_current": 1.0,
+        "metrics": {
+          "n": 13,
+          "accuracy": 0.23076923076923078,
+          "brier": 0.3383839517522778,
+          "log_loss": 0.8827627939664922,
+          "roc_auc": 0.19444444444444445
+        }
+      }
+    },
+    "method": {
+      "2026-09-19": {
+        "train_n": 27,
+        "test_n": 12,
+        "weight_current": 1.0,
+        "metrics": {
+          "n": 12,
+          "joint_accuracy": 0.16666666666666666,
+          "winner_accuracy": 0.5833333333333334,
+          "method_accuracy": 0.5,
+          "log_loss": 1.7260015418672279,
+          "multiclass_brier": 0.8362606674101727
+        }
+      },
+      "2026-09-26": {
+        "train_n": 39,
+        "test_n": 11,
+        "weight_current": 1.0,
+        "metrics": {
+          "n": 11,
+          "joint_accuracy": 0.5454545454545454,
+          "winner_accuracy": 0.8181818181818182,
+          "method_accuracy": 0.45454545454545453,
+          "log_loss": 1.4020269782463246,
+          "multiclass_brier": 0.7030297348689911
+        }
+      },
+      "2026-10-03": {
+        "train_n": 50,
+        "test_n": 14,
+        "weight_current": 1.0,
+        "metrics": {
+          "n": 14,
+          "joint_accuracy": 0.6428571428571429,
+          "winner_accuracy": 0.9285714285714286,
+          "method_accuracy": 0.7857142857142857,
+          "log_loss": 1.1769503903294998,
+          "multiclass_brier": 0.6054481231843704
+        }
+      },
+      "2026-10-10": {
+        "train_n": 64,
+        "test_n": 11,
+        "weight_current": 1.0,
+        "metrics": {
+          "n": 11,
+          "joint_accuracy": 0.6363636363636364,
+          "winner_accuracy": 0.5454545454545454,
+          "method_accuracy": 0.7272727272727273,
+          "log_loss": 1.5360461358746962,
+          "multiclass_brier": 0.7261355194646594
+        }
+      },
+      "2026-10-17": {
+        "train_n": 75,
+        "test_n": 13,
+        "weight_current": 1.0,
+        "metrics": {
+          "n": 13,
+          "joint_accuracy": 0.3076923076923077,
+          "winner_accuracy": 0.23076923076923078,
+          "method_accuracy": 0.6923076923076923,
+          "log_loss": 1.790229151582715,
+          "multiclass_brier": 0.8302106633317975
+        }
+      }
+    },
+    "timing": {
+      "2026-09-19": {
+        "train_fights": 27,
+        "test_fights": 12,
+        "test_market_rows": 64,
+        "weight_current": 0.65,
+        "metrics": {
+          "n": 64,
+          "accuracy": 0.453125,
+          "brier": 0.28279796650727174,
+          "log_loss": 0.7696633509391908,
+          "roc_auc": 0.5196078431372549
+        }
+      },
+      "2026-09-26": {
+        "train_fights": 39,
+        "test_fights": 11,
+        "test_market_rows": 57,
+        "weight_current": 0.75,
+        "metrics": {
+          "n": 57,
+          "accuracy": 0.6666666666666666,
+          "brier": 0.21828046054138045,
+          "log_loss": 0.630565851335363,
+          "roc_auc": 0.7185185185185186
+        }
+      },
+      "2026-10-03": {
+        "train_fights": 50,
+        "test_fights": 14,
+        "test_market_rows": 72,
+        "weight_current": 0.75,
+        "metrics": {
+          "n": 72,
+          "accuracy": 0.5416666666666666,
+          "brier": 0.2627622558317867,
+          "log_loss": 0.7202417524395899,
+          "roc_auc": 0.7080745341614906
+        }
+      },
+      "2026-10-10": {
+        "train_fights": 64,
+        "test_fights": 11,
+        "test_market_rows": 57,
+        "weight_current": 0.75,
+        "metrics": {
+          "n": 57,
+          "accuracy": 0.543859649122807,
+          "brier": 0.2454498691476646,
+          "log_loss": 0.682935036062154,
+          "roc_auc": 0.7142857142857143
+        }
+      },
+      "2026-10-17": {
+        "train_fights": 75,
+        "test_fights": 13,
+        "test_market_rows": 67,
+        "weight_current": 0.7000000000000001,
+        "metrics": {
+          "n": 67,
+          "accuracy": 0.6716417910447762,
+          "brier": 0.2030472539728607,
+          "log_loss": 0.5892620595148187,
+          "roc_auc": 0.9031620553359683
+        }
+      }
+    },
+    "winner_overall": {
+      "n": 88,
+      "accuracy": 0.6022727272727273,
+      "brier": 0.23838723073121512,
+      "log_loss": 0.6707110043413993,
+      "roc_auc": 0.6343167701863355
+    },
+    "method_overall": {
+      "n": 61,
+      "joint_accuracy": 0.45901639344262296,
+      "winner_accuracy": 0.6229508196721312,
+      "method_accuracy": 0.639344262295082,
+      "log_loss": 1.521001757261086,
+      "multiclass_brier": 0.7381140681063406
+    },
+    "timing_overall": {
+      "n": 317,
+      "accuracy": 0.5741324921135647,
+      "brier": 0.24307491193946776,
+      "log_loss": 0.6797033728861516,
+      "roc_auc": 0.6984666390385411
+    }
+  },
+  "warning": "Full-fit metrics are descriptive, not prospective proof. Use chronological walk-forward and separately preserved Edmonton holdout evidence for validation."
+}

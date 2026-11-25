@@ -1,0 +1,166 @@
+{
+  "event": "UFC Fight Night: Moicano vs Nolan (UFC Vegas 123)",
+  "event_date": "2026-10-31",
+  "generated_at_utc": "2026-11-06T17:02:45.030885+00:00",
+  "governance": {
+    "champion_changed": false,
+    "clean139_ledger_untouched": true,
+    "historical_shadow_only": true,
+    "model_promoted": false,
+    "official_prediction_record": false,
+    "official_profit_loss": null,
+    "official_stage_a": false,
+    "official_stage_b": false,
+    "retrospective_model_predictions_are_not_official": true,
+    "warning": "Oct31 lacked any pre-event freeze. Future-data refresh is allowed, but never score retro-predicted winner/method/timing as official selections."
+  },
+  "integrity": {
+    "aggregate_notice": "139 previous frozen-graded bouts plus 12 unpicked results = 151 observed fights, NOT 151 officially predicted or graded fights.",
+    "class_counts": {
+      "DEC": 6,
+      "KO": 5,
+      "SUB": 1
+    },
+    "doctor_stoppages": 2,
+    "fighter_bout_aggregates": 24,
+    "fighter_round_rows": 64,
+    "prior139_counts": {
+      "DEC": 42,
+      "KO": 74,
+      "SUB": 23
+    },
+    "source_bouts": 12,
+    "total_combined_observed_method_counts_diagnostic_only": {
+      "DEC": 48,
+      "KO": 79,
+      "SUB": 24
+    }
+  },
+  "offline_conditional_method_reconstruction": {
+    "access_training_finish_rows": 97,
+    "access_training_submission_rows": 23,
+    "baseline": {
+      "accuracy": 0.5833333333333334,
+      "actual": {
+        "DEC": 6,
+        "KO": 5,
+        "SUB": 1
+      },
+      "brier": 0.5159859928226945,
+      "calls": {
+        "DEC": 4,
+        "KO": 8,
+        "SUB": 0
+      },
+      "log_loss": 0.8659230268159256,
+      "n": 12,
+      "recall": {
+        "DEC": 0.5,
+        "KO": 0.8,
+        "SUB": 0.0
+      }
+    },
+    "calibrated": {
+      "accuracy": 0.6666666666666666,
+      "actual": {
+        "DEC": 6,
+        "KO": 5,
+        "SUB": 1
+      },
+      "brier": 0.5917179614606501,
+      "calls": {
+        "DEC": 3,
+        "KO": 9,
+        "SUB": 0
+      },
+      "log_loss": 0.9723660783076461,
+      "n": 12,
+      "recall": {
+        "DEC": 0.5,
+        "KO": 1.0,
+        "SUB": 0.0
+      }
+    },
+    "interpretation": "Not a fight-side or fighter+method pre-fight prediction. A known winner is used only to evaluate the conditional method learner on prefight snapshots. Pre-Oct31 labels only used to fit baseline/calibration/access.",
+    "status": "OFFLINE_RETROSPECTIVE_METHOD_CONDITIONAL_ON_OBSERVED_WINNER",
+    "submission_access": {
+      "accuracy": 0.6666666666666666,
+      "actual": {
+        "DEC": 6,
+        "KO": 5,
+        "SUB": 1
+      },
+      "brier": 0.5892786038470836,
+      "calls": {
+        "DEC": 3,
+        "KO": 9,
+        "SUB": 0
+      },
+      "log_loss": 0.9345005394607946,
+      "n": 12,
+      "recall": {
+        "DEC": 0.5,
+        "KO": 1.0,
+        "SUB": 0.0
+      }
+    },
+    "training_baseline_rows": 8781,
+    "training_feedback_rows": 139,
+    "training_max_date_before_test": "2026-10-24T00:00:00+00:00"
+  },
+  "provenance": {
+    "availability": "data/raw/ufcvegas123_2026-10-31/availability.json",
+    "source_urls": [
+      "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+      "https://www.ufc.com/news/ufc-fight-night-moicano-vs-nolan-results",
+      "https://www.ufc.com/index.php/news/ufc-fight-night-moicano-vs-nolan-prelim-results",
+      "https://www.ufc.com/news/ufc-fight-night-moicano-vs-nolan-official-scorecards"
+    ],
+    "upstream_commit": "3d4886d222e72be2c5336b49b98b721f5103d949"
+  },
+  "shadow_artifacts": {
+    "method_baseline": {
+      "path": "artifacts/ufcvegas123_post_event_shadow/method_baseline_shadow_through_2026-10-31.joblib",
+      "sha256": "92e1dbd6a485e8fce4724fdab14fda40437748d7f1aa2e124259759e64a17cff"
+    },
+    "method_calibrator": {
+      "path": "artifacts/ufcvegas123_post_event_shadow/method_calibrator_shadow_through_2026-10-31.joblib",
+      "sha256": "a4e69f02090737f918af129d14ae19f03d26993b95abaaa759798ec9315af07e"
+    },
+    "method_residual": {
+      "path": "artifacts/ufcvegas123_post_event_shadow/method_residual_shadow_through_2026-10-31.joblib",
+      "sha256": "befdd2c4574ee0b156a8f520cd4d563de36f9f0d9c4f8f97e9b2b9e36e623447"
+    },
+    "timing_30s": {
+      "path": "artifacts/ufcvegas123_post_event_shadow/timing_30s_shadow_through_2026-10-31.joblib",
+      "sha256": "84df80f6a789e722478d89f696ee6df9cc17d57492c0088ebb2403732c43e86a"
+    },
+    "winner": {
+      "path": "artifacts/ufcvegas123_post_event_shadow/winner_shadow_through_2026-10-31.joblib",
+      "sha256": "e016017ab66deb9373eeb304270481fc9635edd8b98338923977f500460e258d"
+    }
+  },
+  "status": "OCT31_FULL_STATS_INTEGRATED_UNPICKED_RETROSPECTIVE",
+  "training": {
+    "data_cutoff_exclusive": "2026-11-01",
+    "future_only_artifact": true,
+    "historical_performance_fights": 8793,
+    "identity_reconciliation": {
+      "anthony_romero": {
+        "older_identity_kept_separate": true,
+        "relabelled_fight_fields": 0,
+        "relabelled_stat_rows": 0
+      },
+      "kai_kamaka": {
+        "relabelled_fight_fields": 4,
+        "round_rows": 11
+      },
+      "zach_reese": {
+        "relabelled_fight_fields": 14,
+        "round_rows": 20
+      }
+    },
+    "latest_performance_date": "2026-10-31 00:00:00+00:00",
+    "locked_feedback_unchanged": 139
+  }
+}

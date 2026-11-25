@@ -1,0 +1,32 @@
+name: UFC Reference corrected backbone refit
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths: ["tools/refit_reference_identity_corrected.py", "tools/refit_historical_identity_corrected.py", ".github/workflows/ufc-reference-corrected-refit.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  refit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -e ".[dev]"
+      - run: |
+          mkdir -p .research_cache/fightcanon
+          curl --fail --silent --show-error --location --retry 2 --max-time 360 -o .research_cache/fightcanon/new.db https://github.com/Jadevit/fight-canon-db/releases/download/db-2026-11-24-2118/canon.db
+      - run: python tools/refit_reference_identity_corrected.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reference-identity-corrected-refit
+          path: research_outputs/reference_identity_refit_2026-11-25/
+          if-no-files-found: error

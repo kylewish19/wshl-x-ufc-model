@@ -1,0 +1,42 @@
+name: UFC identity corrected paired benchmark
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths: ["tools/benchmark_ufc_identity_overlay.py", ".github/workflows/ufc-identity-benchmark.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -e ".[dev]"
+      - run: |
+          mkdir -p .research_cache/fightcanon
+          curl --fail --silent --show-error --location --retry 2 --max-time 360 -o .research_cache/fightcanon/new.db https://github.com/Jadevit/fight-canon-db/releases/download/db-2026-11-24-2118/canon.db
+      - run: python tools/benchmark_ufc_identity_overlay.py
+      - name: Check frozen Qatar hashes
+        run: |
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          d=json.loads(Path("data/grades/ufcqatar_2026_11_21_all_frozen_models_and_public_card_grade.json").read_text())
+          for name,sha in d["frozen_source_hashes"].items():
+              p=Path("data/locks/ufcqatar_2026-11-21" if name=="stage_a_final_selection.json" else "data/shadow_locks/ufcqatar_2026-11-21")/name
+              assert hashlib.sha256(p.read_bytes()).hexdigest()==sha
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: identity-corrected-paired-benchmark
+          path: identity_corrected_benchmark.json
+          if-no-files-found: error

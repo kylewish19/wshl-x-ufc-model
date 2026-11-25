@@ -1,0 +1,41 @@
+name: UFC334 Nov14 run 13 fight Stage A three-view raw probabilities
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/historical-conditional-rates]
+    paths:
+      - "tools/run_ufc334_2026_11_14_stage_a.py"
+      - ".github/workflows/run-ufc334-nov14-stage-a-raw.yml"
+permissions:
+  contents: write
+concurrency:
+  group: ufc334-nov14-stage-a-raw
+  cancel-in-progress: true
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11", cache: "pip"}
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Run 10k three-model UFC334 probabilities with no FanDuel odds
+        run: PYTHONPATH=src:tools python tools/run_ufc334_2026_11_14_stage_a.py
+      - name: Regression suite
+        run: pytest -q
+      - name: Commit UFC334 pre-price raw model files; not the final approved Stage A lock
+        run: |
+          git config user.name "WSHL_X model bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/locks/ufc334_2026-11-14/stage_a_model_raw_three_view.json
+          git add data/locks/ufc334_2026-11-14/stage_a_model_raw_audit.json
+          git add data/locks/ufc334_2026-11-14/stage_a_model_raw_summary.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "model: UFC334 all 13 10k triple-view odds-blind pre-price raw predictions, research pending"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

@@ -1,0 +1,182 @@
+{
+  "schema": "WSHLX_MATCHUP_WRITTEN_EVIDENCE_BATCH_V1",
+  "observed_date": "2026-11-25",
+  "event_date": "2026-12-05",
+  "source_history_run": 45673398387,
+  "cutoff_exclusive": "2026-11-25",
+  "odds_copied": false,
+  "odds_used": false,
+  "tape_reviewed": false,
+  "actual_predictions": 0,
+  "training_changed": false,
+  "matchups": [
+    {
+      "fighters": [
+        "Israel Adesanya",
+        "Shara Magomedov"
+      ],
+      "pinned": {
+        "adesanya": {
+          "record": "24-6",
+          "ufc": "13-6",
+          "reference_bouts": 19
+        },
+        "magomedov": {
+          "record": "17-1",
+          "ufc": "6-1",
+          "reference_bouts": 7
+        }
+      },
+      "scheduled_rounds_expected": 5,
+      "rounds_status": "Main event; final schedule recheck required",
+      "written_evidence": [
+        {
+          "fact": "Adesanya's four consecutive defeats: Strickland five-round DEC, Du Plessis R4 SUB, Imavov R2 KO, Pyfer R2 TKO. The losses have distinct mechanisms; do not assume one shared vulnerability.",
+          "urls": [
+            "https://www.ufc.com/athlete/israel-adesanya",
+            "https://www.ufc.com/index.php/news/ufc-seattle-official-scorecards-adesanya-vs-pyfer-judges-fight-night"
+          ]
+        },
+        {
+          "fact": "Magomedov lost a unanimous decision to Michael Page Feb1 2025, then beat Barriault and Pereira by unanimous decision July26 2025 and June27 2026.",
+          "urls": [
+            "https://www.reuters.com/sports/imavov-knocks-out-former-champ-adesanya-stake-ufc-title-claim-2025-02-01/",
+            "https://www.ufc.com/athlete/shara-magomedov"
+          ]
+        },
+        {
+          "fact": "Pereira bout scored 29-28 on all three cards.",
+          "url": "https://www.ufc.com/index.php/news/ufc-fight-night-fiziev-vs-torres-results-highlights-interviews-main-card-baku"
+        },
+        {
+          "fact": "UFC announcement lists Adesanya as former two-time champion, 16 KO wins.",
+          "url": "https://www.ufc.com/news/ufc-returns-to-saudi-arabia-middleweight-showdown-between-israel-adesanya-shara-magomedov"
+        }
+      ],
+      "questions": [
+        "Distinguish recent age/form from strength of opposition; no unsupported age or chin multiplier.",
+        "Compare counterstriking range and kicking defense, particularly Page's success against Magomedov.",
+        "Adesanya's recent submission and ground-strike losses do not automatically transfer to a striker-heavy matchup.",
+        "Check Magomedov's sustained pace and available five-round evidence; do not infer proven five-round conditioning from three-round wins."
+      ],
+      "film_queue": [
+        "Adesanya vs Strickland — range and pressure",
+        "Adesanya vs Imavov and Pyfer — defensive reactions, location of stoppage, fatigue and grappling context",
+        "Magomedov vs Page — distance and entries",
+        "Magomedov vs Pereira and Barriault — pace and scoreable offense"
+      ]
+    },
+    {
+      "fighters": [
+        "Serghei Spivac",
+        "Mario Pinto"
+      ],
+      "pinned": {
+        "spivac": {
+          "record": "18-7",
+          "reference_bouts": 16
+        },
+        "pinto": {
+          "record": "13-0",
+          "ufc": "4-0",
+          "reference_bouts": 4
+        }
+      },
+      "written_evidence": [
+        {
+          "fact": "Spivac submitted Derrick Lewis via arm triangle R1 in Feb2023, submitted Marcin Tybura by armbar R1 in Aug2024.",
+          "urls": [
+            "https://www.ufc.com/athlete/serghei-spivac",
+            "https://www.ufc.com/athlete/marcin-tybura?page=1"
+          ]
+        },
+        {
+          "fact": "Spivac lost all three scorecards 30-27 against Vitor Petrino Aug22 2026.",
+          "url": "https://www.ufc.com/news/ufc-sacramento-hernandez-vs-rodrigues-official-scorecards"
+        },
+        {
+          "fact": "Pinto stopped Austen Lane and Jhonata Diniz in first two UFC bouts, then beat Felipe Franco by unanimous decision March21 2026.",
+          "urls": [
+            "https://www.ufc.com/news/examining-heavyweight-landscape-ahead-ufc-freedom-250",
+            "https://www.ufc.com/athlete/mario-pinto"
+          ]
+        },
+        {
+          "fact": "Pinto stopped Ryan Spann via R2 TKO at 0:55 Sep5 2026; three finishes in four UFC wins.",
+          "url": "https://www.ufc.com/news/ufc-paris-official-scorecards-hooker-vs-parnasse"
+        }
+      ],
+      "questions": [
+        "Does Pinto have defensive wrestling and get-up evidence against comparable heavyweight grapplers?",
+        "Can Spivac establish clinch/takedown control against Pinto, and sustain attempts if initially denied?",
+        "Examine Petrino loss for evidence of denied entries or striking exchanges, not just scorecards.",
+        "Separate Pinto's ability to win three rounds from his knockout threat; no blanket heavyweight finish assumption."
+      ],
+      "film_queue": [
+        "Spivac vs Lewis and Tybura — clinch, entries and submission transitions",
+        "Spivac vs Petrino — recent failures and defensive recovery",
+        "Pinto vs Franco — extended pace and defensive grappling",
+        "Pinto vs Spann and Diniz — power and transitions"
+      ]
+    },
+    {
+      "fighters": [
+        "Luke Riley",
+        "Gabriel Santos"
+      ],
+      "pinned": {
+        "riley": {
+          "record": "14-0",
+          "ufc": "3-0",
+          "reference_bouts": 3
+        },
+        "santos": {
+          "record": "12-2",
+          "ufc": "2-2",
+          "reference_bouts": 4
+        }
+      },
+      "written_evidence": [
+        {
+          "fact": "Riley stopped Bogdan Grad in R2 on debut, then beat Michael Aswell Jr. by 30-27 on every card March21 2026, and stopped Kai Kamaka III R1 July11 2026.",
+          "urls": [
+            "https://www.ufc.com/news/fighters-rise-ufc-329-mcgregor-vs-holloway-2-steveson-riley-pinas",
+            "https://www.ufc.com/news/ufc-london-official-scorecards-evloev-vs-murphy-fight-night",
+            "https://www.ufc.com/news/ufc-329-mcgregor-vs-holloway-2-prelim-results"
+          ]
+        },
+        {
+          "fact": "Gabriel Santos lost split DEC to Lerone Murphy and R2 KO to David Onama; then beat Yizha by DEC and Jack Jenkins by R3 rear-naked choke Feb8 2025. Official athlete page lists five career SUB wins, all RNC.",
+          "urls": [
+            "https://www.ufc.com/athlete/gabriel-santos",
+            "https://www.ufc.com/athlete/jack-jenkins"
+          ]
+        },
+        {
+          "fact": "Latest recorded Santos UFC bout Feb8 2025; roughly 22 months before Dec5. Reason for inactivity not established.",
+          "url": "https://www.ufc.com/athlete/gabriel-santos"
+        },
+        {
+          "fact": "Matchup listed Dec5 on official event page; November23 reporting confirms late addition. Earlier Dec12 reports superseded; actual camp length unknown.",
+          "urls": [
+            "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
+            "https://talksport.com/mma/4725703/paddy-pimblett-teammate-luke-riley-ufc-qatar-israel-adesanya/"
+          ]
+        }
+      ],
+      "questions": [
+        "Can Riley defend takedowns, back exposure and rear-naked choke attempts while maintaining striking offense?",
+        "Compare Santos' loss to Onama with Riley's finishing style; do not treat a single KO loss as stable chin rating.",
+        "Santos has documented late-round submission ability and competitive UFC opposition despite long inactivity.",
+        "Verify camp and weigh-in context; announcement timing is not proof of short training camp."
+      ],
+      "film_queue": [
+        "Riley vs Grad and Kamaka III — striking and defensive entries",
+        "Riley vs Aswell — three-round pace",
+        "Santos vs Jenkins — back takes and late submission",
+        "Santos vs Murphy and Onama — defense and quality of opposition"
+      ]
+    }
+  ],
+  "limits": "Written evidence only. No visual footage reviewed. No new numerical probability adjustment, no betting prices or third-party forecasts used. Source searches may surface odds and predictions; not included. Matchups and rounds require fight-week verification."
+}

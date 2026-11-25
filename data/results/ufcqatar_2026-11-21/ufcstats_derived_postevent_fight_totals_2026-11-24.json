@@ -1,0 +1,435 @@
+{
+  "schema": "WSHLX_POSTEVENT_UFC_QATAR_FIGHT_TOTALS_FIGHT_BY_FIGHT_V1",
+  "event_date": "2026-11-21",
+  "observed_after_event_asof_date": "2026-11-24",
+  "source": "Cage Almanac per-fight summaries attributed to UFCStats; second-hand transcribed post-event source, not independent UFCStats raw scrape",
+  "source_listing_url": "https://cagealmanac.com/events/ufc-fight-night-prochazka-vs-stirling-cbf69f",
+  "original_event_results_path": "data/results/ufcqatar_2026-11-21/verified_event_results_2026-11-24.json",
+  "fighter_stats_are_POSTEVENT_NOT_pre_event_features": true,
+  "chronological_training_warning": "These are results of 2026-11-21; they MUST NOT be used as any feature for Nov21 predictions. Eligible only as historical records for FUTURE fight dates (2026-11-22 onward), subject to independent source verification.",
+  "verified_source_status": "UFCStats-derived secondary fight-by-fight totals; official ufcstats 2026 event URL not independently accessible in this session",
+  "all_12_bouts_present": true,
+  "fighter_stat_names_order": "winner then loser; see official event results for winner and finish class; missing denominator zeros recorded as zero not missing attempts",
+  "columns": [
+    "knockdowns",
+    "significant_strikes_landed",
+    "significant_strikes_attempted",
+    "total_strikes_landed",
+    "total_strikes_attempted",
+    "takedowns_landed",
+    "takedowns_attempted",
+    "submission_attempts",
+    "reversals",
+    "control_time_mmss"
+  ],
+  "fights": [
+    {
+      "fight_no": 1,
+      "source_url": "https://cagealmanac.com/fights/9012",
+      "fighter_stats": [
+        {
+          "name": "Diyar Nurgozhay",
+          "result": "W",
+          "knockdowns": 1,
+          "significant_strikes_landed": 37,
+          "significant_strikes_attempted": 56,
+          "total_strikes_landed": 61,
+          "total_strikes_attempted": 94,
+          "takedowns_landed": 2,
+          "takedowns_attempted": 5,
+          "submission_attempts": 0,
+          "reversals": 0,
+          "control_time_mmss": "2:51"
+        },
+        {
+          "name": "Alik Lorenz",
+          "result": "L",
+          "knockdowns": 0,
+          "significant_strikes_landed": 18,
+          "significant_strikes_attempted": 39,
+          "total_strikes_landed": 22,
+          "total_strikes_attempted": 45,
+          "takedowns_landed": 0,
+          "takedowns_attempted": 0,
+          "submission_attempts": 0,
+          "reversals": 0,
+          "control_time_mmss": "0:00"
+        }
+      ]
+    },
+    {
+      "fight_no": 2,
+      "source_url": "https://cagealmanac.com/fights/9011",
+      "fighter_stats": [
+        {
+          "name": "Dom Mar Fan",
+          "result": "W",
+          "knockdowns": 0,
+          "significant_strikes_landed": 59,
+          "significant_strikes_attempted": 110,
+          "total_strikes_landed": 111,
+          "total_strikes_attempted": 182,
+          "takedowns_landed": 4,
+          "takedowns_attempted": 9,
+          "submission_attempts": 0,
+          "reversals": 0,
+          "control_time_mmss": "6:01"
+        },
+        {
+          "name": "Nikolas Motta",
+          "result": "L",
+          "knockdowns": 1,
+          "significant_strikes_landed": 14,
+          "significant_strikes_attempted": 85,
+          "total_strikes_landed": 19,
+          "total_strikes_attempted": 90,
+          "takedowns_landed": 0,
+          "takedowns_attempted": 0,
+          "submission_attempts": 0,
+          "reversals": 0,
+          "control_time_mmss": "0:06"
+        }
+      ]
+    },
+    {
+      "fight_no": 3,
+      "source_url": "https://cagealmanac.com/fights/9010",
+      "fighter_stats": [
+        {
+          "name": "Tahir Abdullayev",
+          "result": "W",
+          "knockdowns": 0,
+          "significant_strikes_landed": 32,
+          "significant_strikes_attempted": 72,
+          "total_strikes_landed": 63,
+          "total_strikes_attempted": 113,
+          "takedowns_landed": 5,
+          "takedowns_attempted": 7,
+          "submission_attempts": 0,
+          "reversals": 1,
+          "control_time_mmss": "9:02"
+        },
+        {
+          "name": "Jake Matthews",
+          "result": "L",
+          "knockdowns": 0,
+          "significant_strikes_landed": 18,
+          "significant_strikes_attempted": 71,
+          "total_strikes_landed": 52,
+          "total_strikes_attempted": 111,
+          "takedowns_landed": 1,
+          "takedowns_attempted": 1,
+          "submission_attempts": 1,
+          "reversals": 0,
+          "control_time_mmss": "0:32"
+        }
+      ]
+    },
+    {
+      "fight_no": 4,
+      "source_url": "https://cagealmanac.com/fights/9009",
+      "fighter_stats": [
+        {
+          "name": "Amir Albazi",
+          "result": "W",
+          "knockdowns": 0,
+          "significant_strikes_landed": 29,
+          "significant_strikes_attempted": 51,
+          "total_strikes_landed": 80,
+          "total_strikes_attempted": 112,
+          "takedowns_landed": 7,
+          "takedowns_attempted": 10,
+          "submission_attempts": 1,
+          "reversals": 1,
+          "control_time_mmss": "6:19"
+        },
+        {
+          "name": "Alessandro Costa",
+          "result": "L",
+          "knockdowns": 1,
+          "significant_strikes_landed": 13,
+          "significant_strikes_attempted": 46,
+          "total_strikes_landed": 57,
+          "total_strikes_attempted": 106,
+          "takedowns_landed": 5,
+          "takedowns_attempted": 5,
+          "submission_attempts": 0,
+          "reversals": 0,
+          "control_time_mmss": "1:49"
+        }
+      ]
+    },
+    {
+      "fight_no": 5,
+      "source_url": "https://cagealmanac.com/fights/9008",
+      "fighter_stats": [
+        {
+          "name": "Tallison Teixeira",
+          "result": "W",
+          "knockdowns": 0,
+          "significant_strikes_landed": 47,
+          "significant_strikes_attempted": 114,
+          "total_strikes_landed": 80,
+          "total_strikes_attempted": 150,
+          "takedowns_landed": 0,
+          "takedowns_attempted": 1,
+          "submission_attempts": 0,
+          "reversals": 0,
+          "control_time_mmss": "0:00"
+        },
+        {
+          "name": "Shamil Gaziev",
+          "result": "L",
+          "knockdowns": 0,
+          "significant_strikes_landed": 15,
+          "significant_strikes_attempted": 42,
+          "total_strikes_landed": 31,
+          "total_strikes_attempted": 59,
+          "takedowns_landed": 0,
+          "takedowns_attempted": 0,
+          "submission_attempts": 0,
+          "reversals": 0,
+          "control_time_mmss": "2:42"
+        }
+      ]
+    },
+    {
+      "fight_no": 6,
+      "source_url": "https://cagealmanac.com/fights/9007",
+      "fighter_stats": [
+        {
+          "name": "Santiago Luna",
+          "result": "W",
+          "knockdowns": 0,
+          "significant_strikes_landed": 142,
+          "significant_strikes_attempted": 363,
+          "total_strikes_landed": 159,
+          "total_strikes_attempted": 383,
+          "takedowns_landed": 0,
+          "takedowns_attempted": 1,
+          "submission_attempts": 0,
+          "reversals": 0,
+          "control_time_mmss": "0:00"
+        },
+        {
+          "name": "Aleksandre Topuria",
+          "result": "L",
+          "knockdowns": 0,
+          "significant_strikes_landed": 65,
+          "significant_strikes_attempted": 149,
+          "total_strikes_landed": 67,
+          "total_strikes_attempted": 151,
+          "takedowns_landed": 0,
+          "takedowns_attempted": 0,
+          "submission_attempts": 0,
+          "reversals": 0,
+          "control_time_mmss": "0:06"
+        }
+      ]
+    },
+    {
+      "fight_no": 7,
+      "source_url": "https://cagealmanac.com/fights/9006",
+      "fighter_stats": [
+        {
+          "name": "Ikram Aliskerov",
+          "result": "W",
+          "knockdowns": 0,
+          "significant_strikes_landed": 39,
+          "significant_strikes_attempted": 79,
+          "total_strikes_landed": 70,
+          "total_strikes_attempted": 114,
+          "takedowns_landed": 4,
+          "takedowns_attempted": 6,
+          "submission_attempts": 3,
+          "reversals": 0,
+          "control_time_mmss": "6:55"
+        },
+        {
+          "name": "Jared Cannonier",
+          "result": "L",
+          "knockdowns": 0,
+          "significant_strikes_landed": 20,
+          "significant_strikes_attempted": 73,
+          "total_strikes_landed": 25,
+          "total_strikes_attempted": 80,
+          "takedowns_landed": 0,
+          "takedowns_attempted": 0,
+          "submission_attempts": 0,
+          "reversals": 0,
+          "control_time_mmss": "0:03"
+        }
+      ]
+    },
+    {
+      "fight_no": 8,
+      "source_url": "https://cagealmanac.com/fights/9005",
+      "fighter_stats": [
+        {
+          "name": "Kyoji Horiguchi",
+          "result": "W",
+          "knockdowns": 0,
+          "significant_strikes_landed": 17,
+          "significant_strikes_attempted": 40,
+          "total_strikes_landed": 158,
+          "total_strikes_attempted": 185,
+          "takedowns_landed": 1,
+          "takedowns_attempted": 1,
+          "submission_attempts": 2,
+          "reversals": 1,
+          "control_time_mmss": "0:49"
+        },
+        {
+          "name": "Asu Almabayev",
+          "result": "L",
+          "knockdowns": 0,
+          "significant_strikes_landed": 8,
+          "significant_strikes_attempted": 31,
+          "total_strikes_landed": 22,
+          "total_strikes_attempted": 49,
+          "takedowns_landed": 7,
+          "takedowns_attempted": 9,
+          "submission_attempts": 0,
+          "reversals": 0,
+          "control_time_mmss": "9:43"
+        }
+      ]
+    },
+    {
+      "fight_no": 9,
+      "source_url": "https://cagealmanac.com/fights/9004",
+      "fighter_stats": [
+        {
+          "name": "Dan Hooker",
+          "result": "W",
+          "knockdowns": 0,
+          "significant_strikes_landed": 146,
+          "significant_strikes_attempted": 281,
+          "total_strikes_landed": 160,
+          "total_strikes_attempted": 297,
+          "takedowns_landed": 0,
+          "takedowns_attempted": 0,
+          "submission_attempts": 0,
+          "reversals": 0,
+          "control_time_mmss": "0:00"
+        },
+        {
+          "name": "Brian Ortega",
+          "result": "L",
+          "knockdowns": 0,
+          "significant_strikes_landed": 70,
+          "significant_strikes_attempted": 186,
+          "total_strikes_landed": 73,
+          "total_strikes_attempted": 189,
+          "takedowns_landed": 2,
+          "takedowns_attempted": 11,
+          "submission_attempts": 1,
+          "reversals": 0,
+          "control_time_mmss": "1:42"
+        }
+      ]
+    },
+    {
+      "fight_no": 10,
+      "source_url": "https://cagealmanac.com/fights/9003",
+      "fighter_stats": [
+        {
+          "name": "Kevin Vallejos",
+          "result": "W",
+          "knockdowns": 0,
+          "significant_strikes_landed": 37,
+          "significant_strikes_attempted": 94,
+          "total_strikes_landed": 61,
+          "total_strikes_attempted": 119,
+          "takedowns_landed": 0,
+          "takedowns_attempted": 1,
+          "submission_attempts": 0,
+          "reversals": 0,
+          "control_time_mmss": "0:58"
+        },
+        {
+          "name": "Aljamain Sterling",
+          "result": "L",
+          "knockdowns": 0,
+          "significant_strikes_landed": 32,
+          "significant_strikes_attempted": 93,
+          "total_strikes_landed": 74,
+          "total_strikes_attempted": 138,
+          "takedowns_landed": 1,
+          "takedowns_attempted": 12,
+          "submission_attempts": 0,
+          "reversals": 0,
+          "control_time_mmss": "3:32"
+        }
+      ]
+    },
+    {
+      "fight_no": 11,
+      "source_url": "https://cagealmanac.com/fights/9002",
+      "fighter_stats": [
+        {
+          "name": "Navajo Stirling",
+          "result": "W",
+          "knockdowns": 1,
+          "significant_strikes_landed": 48,
+          "significant_strikes_attempted": 94,
+          "total_strikes_landed": 51,
+          "total_strikes_attempted": 98,
+          "takedowns_landed": 0,
+          "takedowns_attempted": 0,
+          "submission_attempts": 0,
+          "reversals": 0,
+          "control_time_mmss": "0:08"
+        },
+        {
+          "name": "Jiri Prochazka",
+          "result": "L",
+          "knockdowns": 0,
+          "significant_strikes_landed": 23,
+          "significant_strikes_attempted": 45,
+          "total_strikes_landed": 26,
+          "total_strikes_attempted": 48,
+          "takedowns_landed": 0,
+          "takedowns_attempted": 0,
+          "submission_attempts": 0,
+          "reversals": 0,
+          "control_time_mmss": "0:18"
+        }
+      ]
+    },
+    {
+      "fight_no": 12,
+      "source_url": "https://cagealmanac.com/fights/9013",
+      "fighter_stats": [
+        {
+          "name": "John Mitchell",
+          "result": "W",
+          "knockdowns": 1,
+          "significant_strikes_landed": 26,
+          "significant_strikes_attempted": 35,
+          "total_strikes_landed": 28,
+          "total_strikes_attempted": 37,
+          "takedowns_landed": 0,
+          "takedowns_attempted": 1,
+          "submission_attempts": 0,
+          "reversals": 0,
+          "control_time_mmss": "0:46"
+        },
+        {
+          "name": "Shoaib Yousaf",
+          "result": "L",
+          "knockdowns": 0,
+          "significant_strikes_landed": 16,
+          "significant_strikes_attempted": 38,
+          "total_strikes_landed": 20,
+          "total_strikes_attempted": 42,
+          "takedowns_landed": 0,
+          "takedowns_attempted": 1,
+          "submission_attempts": 0,
+          "reversals": 0,
+          "control_time_mmss": "0:13"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+name: UFC Qatar 2026-11-21 Stage A research runner
+
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths:
+      - "tools/run_ufcqatar_2026_11_21_stage_a.py"
+      - ".github/workflows/ufcqatar-stage-a.yml"
+      - "tools/finalize_ufcqatar_2026_11_21_stage_a.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  qatar-stage-a:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install pinned project dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Refuse a second freeze if original Stage A already exists
+        run: |
+          if test -e data/locks/ufcqatar_2026-11-21/stage_a_final_selection.json; then
+            echo "STOP: existing original Stage A must not be rewritten"
+            exit 1
+          fi
+          if test -e data/shadow_locks/ufcqatar_2026-11-21/coherent_joint_pre_event_shadow.json; then
+            echo "STOP: existing pre-event shadow must not be rewritten"
+            exit 1
+          fi
+      - name: Run existing three-view prediction models on Qatar card
+        run: python tools/run_ufcqatar_2026_11_21_stage_a.py > qatar_raw_stage_a_execution.log
+      - name: Validate 12 unique bouts and finite model distributions
+        run: |
+          python - <<'PY'
+          import json,math
+          from pathlib import Path
+          p=Path('data/locks/ufcqatar_2026-11-21/stage_a_model_raw_three_view.json')
+          d=json.loads(p.read_text())
+          assert d['event_date']=='2026-11-21' and d['odds_used'] is False
+          assert len(d['fights'])==12
+          assert len({(r['a'],r['b']) for r in d['fights']})==12
+          assert sum(r['scheduled_seconds']==1500 for r in d['fights'])==1
+          for r in d['fights']:
+              for m in ('joint_calibrated','historical_shadow','oof_unified_shadow'):
+                  j=r[m] if m=='joint_calibrated' else r[m]['joint_method']
+                  assert abs(sum(j.values())-1)<1e-6
+                  assert all(math.isfinite(v) and 0<=v<=1 for v in j.values())
+              for key in ('joint_calibrated_sim_10000','timing_v033_sim_10000'):
+                  assert key in r
+          print('ALL_12_UNPRICED_THREE_VIEW_RAW_VALIDATED')
+          PY
+      - name: Freeze original odds-blind Stage A research card
+        run: python tools/finalize_ufcqatar_2026_11_21_stage_a.py > qatar_stage_a_freeze.log
+      - name: Verify frozen lock and no-price model integrity
+        run: |
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          d=Path('data/locks/ufcqatar_2026-11-21')
+          r=d/'stage_a_model_raw_three_view.json'; f=d/'stage_a_final_selection.json'
+          j=json.loads(f.read_text())
+          assert j['stage_a_frozen'] is True and j['odds_used'] is False
+          assert len(j['fights'])==12 and j['research']['official_ufc_site_fights_verified']==11
+          assert j['raw_model_sha256']==hashlib.sha256(r.read_bytes()).hexdigest()
+          assert j['fights'][11]['stage_a_posture']=='PASS' and j['fights'][11]['model_extrapolation_quarantine']
+          assert sum(x['primary_timing_forecast']['stage_a_primary_timing_for_grade'] for x in j['fights'])==12
+          assert all(x['method']['official_method_if_any'] is None for x in j['fights'])
+          print('QATAR_STAGE_A_FROZEN_UNPRICED_PASS')
+          PY
+      - name: Commit SHA-checked original Stage A to research branch before event
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/locks/ufcqatar_2026-11-21/stage_a_model_raw_three_view.json
+          git add data/locks/ufcqatar_2026-11-21/stage_a_model_raw_summary.json
+          git add data/locks/ufcqatar_2026-11-21/stage_a_model_raw_audit.json
+          git add data/locks/ufcqatar_2026-11-21/stage_a_final_selection.json
+          git add data/locks/ufcqatar_2026-11-21/stage_a_final_audit.json
+          git commit -m "freeze: UFC Qatar Nov21 original Stage A, 11 official + 1 provisional [skip ci]"
+          git push origin HEAD:feature/historical-conditional-rates
+      - name: Generate independent research-only coherence sidecar under live UTC cutoff
+        run: python tools/lock_prospective_coherence_shadow.py --event-slug ufcqatar_2026-11-21 > qatar_coherent_pre_event_lock.log
+      - name: Commit separately timestamped challenger shadow before fight
+        run: |
+          git add data/shadow_locks/ufcqatar_2026-11-21/coherent_joint_pre_event_shadow.json
+          git commit -m "research: pre-event locked coherent UFC Qatar three-view shadow [skip ci]"
+          git push origin HEAD:feature/historical-conditional-rates
+      - name: Archive generated model raw and model stdout for validation
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wshlx-qatar-nov21-raw-stage-a-research
+          path: |
+            data/locks/ufcqatar_2026-11-21/
+            qatar_raw_stage_a_execution.log
+            qatar_stage_a_freeze.log
+            data/shadow_locks/ufcqatar_2026-11-21/coherent_joint_pre_event_shadow.json
+            qatar_coherent_pre_event_lock.log
+          if-no-files-found: warn

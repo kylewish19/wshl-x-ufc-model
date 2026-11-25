@@ -1,0 +1,38 @@
+{
+  "event": "UFC 334: Gane vs Hokit",
+  "event_date": "2026-11-14",
+  "sportsbook": "FanDuel",
+  "stage_a_locked": true,
+  "stage_a_final_selection_github_blob_sha": "564b8dbf2147f7a1cc839917ca3a4eb2d42ed63e",
+  "price_source": "User-supplied FanDuel screenshots in conversation, November 11 2026",
+  "exact_quote_capture_timestamp_utc": null,
+  "collected_before_event_start": true,
+  "odds_used_in_stage_a": false,
+  "full_event_pricing_complete": false,
+  "used_for_price_comparison_yet": false,
+  "odds_freshness_note": "Snapshot prices can change. No independent live FanDuel authentication. No bet placement implied.",
+  "status": "PARTIAL_STAGE_B_MARKETS_MONEYLINE_ONLY_DO_NOT_COMPLETE_FIGHT",
+  "fight_no": 2,
+  "a": "Alatengheili",
+  "b": "Juan Diaz",
+  "moneyline": {
+    "a": 265,
+    "b": -370
+  },
+  "method_of_victory": null,
+  "double_chance": null,
+  "goes_distance": null,
+  "total_rounds": null,
+  "how_fight_ends": null,
+  "round_to_start": null,
+  "market_count": 2,
+  "missing_markets": [
+    "Fighter method of victory",
+    "Double chance",
+    "Goes distance Yes/No",
+    "Total rounds Over/Under",
+    "How fight ends",
+    "Rounds to start"
+  ],
+  "full_fight_pricing_complete": false
+}

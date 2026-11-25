@@ -1,0 +1,67 @@
+name: Riyadh source ID identity audit
+on:
+  push:
+    branches: ["feature/historical-conditional-rates"]
+    paths: [".github/workflows/ufc-riyadh-source-identity.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  identity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download pinned refreshed source
+        run: |
+          curl --fail --silent --show-error --location --retry 2 --max-time 360 -o /tmp/canon.db https://github.com/Jadevit/fight-canon-db/releases/download/db-2026-11-24-2118/canon.db
+          echo 'e7e0a53ff47d336ed961b228e31a1ef98c77129fa9104e82496637e69f3ade29  /tmp/canon.db' | sha256sum -c
+      - name: Verify source IDs and dated opponents, not name alone
+        run: |
+          python - <<'PY'
+          import sqlite3,json,re,unicodedata
+          from pathlib import Path
+          def key(n):
+              return re.sub(r"[^a-z0-9]","",unicodedata.normalize("NFKD",n).encode("ascii","ignore").decode().lower())
+          # Independently checked Sherdog profile IDs and dated pro opponent evidence Nov25.
+          specs=[
+            ("Akbar Abdullaev","377895",["138491"],[("2026-09-15","Ednilson Barros Santos"),("2025-01-10","Kai Tang")]),
+            ("Bruno Silva","118601",["24299","39109","46961","50558","55096","67724","68315","85935","95531","103172","118410","122745","144630","149616"],[("2026-06-06","Edgar Chairez"),("2026-03-14","Charles Johnson")]),
+            ("Ivan Gnizditskiy","291329",["121393","180152"],[("2026-03-28","Tursunbek Sodikov"),("2025-03-07","Kevin Church")]),
+            ("Mahammadali Osmanli","390629",["133556"],[("2026-09-26","Ilimbek Akylbek Uulu"),("2025-09-13","Ali Yousefi")]),
+            ("Modestino Rodrigues","397486",["146940"],[("2026-09-01","Brandon Holmes"),("2025-06-28","Virgilio Ailton")])]
+          c=sqlite3.connect("file:/tmp/canon.db?mode=ro",uri=True)
+          c.row_factory=sqlite3.Row
+          out=[]
+          for name,sid,candidates,anchors in specs:
+              ids=[r[0] for r in c.execute("SELECT DISTINCT fighter_id FROM fighter_aliases WHERE source='sherdog' AND source_id=?",(sid,))]
+              entry={"name":name,"sherdog_source_id":sid,"source_profile":"https://www.sherdog.com/fighter/"+name.replace(" ","-")+"-"+sid,"source_ids":ids,"prior_alias_candidates":candidates,"anchors":anchors,"verified":False}
+              if len(ids)==1:
+                  fid=ids[0]
+                  entry["canonical_id"]=fid
+                  entry["profile"]=dict(c.execute("SELECT name,nickname,dob,height_in,weight_lbs FROM fighters WHERE fighter_id=?",(fid,)).fetchone())
+                  history=[dict(r) for r in c.execute("""SELECT e.date,e.promotion,f.method,f.bout_type,p.result,q.fighter_id AS opponent_id,g.name AS opponent
+                    FROM fight_participants p JOIN fight_participants q ON q.fight_id=p.fight_id AND p.corner<>q.corner
+                    JOIN fights f ON f.fight_id=p.fight_id JOIN events e ON e.event_id=f.event_id JOIN fighters g ON g.fighter_id=q.fighter_id
+                    WHERE p.fighter_id=? AND e.date<'2026-11-25' ORDER BY e.date,f.fight_id""",(fid,))]
+                  matches=[]
+                  for day,opp in anchors:
+                      found=[]
+                      for h in history:
+                          if h["date"]!=day:continue
+                          aliases=[r[0] for r in c.execute("SELECT name FROM fighter_aliases WHERE fighter_id=?",(h["opponent_id"],))]
+                          if key(opp) in {key(x) for x in aliases+[h["opponent"]]}:found.append(h)
+                      matches.append(found)
+                  entry["anchor_matches"]=matches
+                  entry["verified"]=str(fid) in candidates and all(len(x)==1 for x in matches)
+                  entry["prior_history"]=history
+              out.append(entry)
+          result={"source_release":"db-2026-11-24-2118","source_cutoff_exclusive":"2026-11-25","verified_count":sum(x["verified"] for x in out),"fighters":out,"live_lineup_approval":False,"predictions_generated":0,"notes":"External source-ID joins and dated opponents only; final fight-week verification remains mandatory. Not a production model migration."}
+          Path("riyadh_source_identity_audit.json").write_text(json.dumps(result,indent=2))
+          print(json.dumps(result))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: riyadh-source-identity-audit
+          path: riyadh_source_identity_audit.json
+          if-no-files-found: error

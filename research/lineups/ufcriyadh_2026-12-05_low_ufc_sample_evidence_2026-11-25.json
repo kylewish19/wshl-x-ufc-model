@@ -1,0 +1,105 @@
+{
+  "schema": "WSHLX_PREFIGHT_RESEARCH_EVIDENCE_V1",
+  "observed_date": "2026-11-25",
+  "event_date": "2026-12-05",
+  "odds_used": false,
+  "model_inputs_changed": false,
+  "tape_reviewed": false,
+  "scope": "Four low-UFC-sample fighters; written primary-source research and outstanding source-history reconciliation",
+  "fighters": [
+    {
+      "fighter": "Akbar Abdullaev",
+      "regional_id": 138491,
+      "opponent": "Mairon Santos",
+      "evidence": [
+        {
+          "fact": "ONE wins over Tang Kai (R5 TKO) and Ibragim Dauev (R3 TKO); promotion-level experience beyond entry regional MMA.",
+          "source": "https://www.onefc.com/athletes/akbar-abdullaev/"
+        },
+        {
+          "fact": "DWCS Sept15 2026 knocked out Ednilson Santos in 19 seconds; contract earned.",
+          "source": "https://www.ufc.com/news/welcome-ufc-dwcs-season-10-week-6"
+        },
+        {
+          "fact": "Official UFC highlight available; not viewed as tape.",
+          "source": "https://www.ufc.com/video/160137"
+        }
+      ],
+      "risk_questions": [
+        "Check DWCS result is present in pinned worldwide history under exact identity; do not count as UFC main-roster fight.",
+        "Check verified weight history and relevance of ONE weight classes to UFC lightweight.",
+        "Compare quality of opposition and late-round evidence; five-round TKO is evidence of experience, not proof of reliable cardio.",
+        "Review defensive wrestling and recovery against sustained pressure."
+      ]
+    },
+    {
+      "fighter": "Ivan Gnizditskiy",
+      "regional_id": 121393,
+      "opponent": "Uran Satybaldiev",
+      "evidence": [
+        {
+          "fact": "7-0 record, two ONE appearances in 2025, most recent March 2026 stoppage of Tursunbek Sodikov. Planned DWCS appearance did not occur due to visa issues.",
+          "source": "https://www.sherdog.com/news/news/70-finisher-Ivan-Gnizditskiy-joins-UFC-despite-missing-DWCS-203246"
+        },
+        {
+          "fact": "Official UFC profile lists Dec5 octagon debut.",
+          "source": "https://www.ufc.com/athlete/ivan-gnizditskiy"
+        },
+        {
+          "fact": "ONE profile provides regional bout evidence.",
+          "source": "https://www.onefc.com/athletes/ivan-gnizditskiy/"
+        }
+      ],
+      "risk_questions": [
+        "Preserve seven regional bouts under ID 121393 and profile-only ID 180152 separate.",
+        "No UFC/DWCS fight experience; assess grappling resistance, pace beyond early finishes and opponent quality.",
+        "Verify each regional result and distinguish professional fights from any exhibitions."
+      ]
+    },
+    {
+      "fighter": "Mahammadali Osmanli",
+      "regional_id": 133556,
+      "opponent": "Pavel Andrusca",
+      "evidence": [
+        {
+          "fact": "Official UFC profile documents Sept26 2026 DQ loss to Ilimbek Akylbek after illegal knee at 2:19 R1 in TUF final.",
+          "source": "https://www.ufc.com/athlete/mahammadali-osmanli"
+        },
+        {
+          "fact": "Before final, UFC preview reported 10 finishes in 12 career wins, eight submissions; quarterfinal and semifinal both ended by stoppage.",
+          "source": "https://www.ufc.com/news/fight-fight-preview-ufc-fight-night-rosas-jr-vs-barcelos"
+        }
+      ],
+      "risk_questions": [
+        "Zero decisive supported KO/SUB/DEC results is not zero UFC appearances; audit DQ history policy and stats availability separately.",
+        "Do not turn DQ into KO loss or count TUF exhibitions as professional wins.",
+        "Review takedown entries, submission transitions, rule discipline and opponent get-ups."
+      ]
+    },
+    {
+      "fighter": "Modestino Rodrigues",
+      "regional_id": 146940,
+      "opponent": "Matthieu Duclos",
+      "evidence": [
+        {
+          "fact": "DWCS Sept1 2026 R1 TKO of Brandon Holmes in 15 seconds.",
+          "source": "https://www.ufc.com/news/dana-whites-contender-series-season-10-week-4-results"
+        },
+        {
+          "fact": "UFC preview reported 7-1 record pre-DWCS, all wins by finish, K-1 participation, limited prior opponent winning records and first MMA bout in 14 months.",
+          "source": "https://www.ufc.com/news/week-4-preview-dana-whites-contender-series-season-10"
+        },
+        {
+          "fact": "UFC reporting noted debate about potentially early stoppage.",
+          "source": "https://www.ufc.com/index.php/news/dana-white-contender-series-season-10-week-4-adam-darby-silvestre-sanchez-gabriel-lorenco"
+        }
+      ],
+      "risk_questions": [
+        "Confirm DWCS inclusion in worldwide MMA history and exclusion from UFC main roster count.",
+        "Short knockout supplies limited evidence of wrestling defense, endurance and sustained striking.",
+        "Check quality of opponents without treating K-1 results as MMA wins."
+      ]
+    }
+  ],
+  "notes": "No selections or subjective numerical overrides. Primary sources written only. DWCS and TUF evidence must be reconciled with pinned records before any new model inputs."
+}

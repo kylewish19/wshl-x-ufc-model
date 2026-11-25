@@ -1,0 +1,2780 @@
+{
+  "bet_authorized": false,
+  "event": "UFC Fight Night: Prochazka vs Stirling",
+  "event_date": "2026-11-21",
+  "event_slug": "ufcqatar_2026-11-21",
+  "fanduel_odds_used": false,
+  "fights": [
+    {
+      "a": "Diyar Nurgozhay",
+      "b": "Alik Lorenz",
+      "bet_authorized": false,
+      "fight_no": 1,
+      "models": {
+        "historical": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.15243999960723176,
+              "A_KO": 0.28470286465435835,
+              "A_SUB": 0.08105663597384459,
+              "B_DEC": 0.09640884317763668,
+              "B_KO": 0.1881431375732099,
+              "B_SUB": 0.19724851901371873
+            },
+            "winner_aligned": {
+              "A_DEC": 0.1582889083580708,
+              "A_KO": 0.29562651383276484,
+              "A_SUB": 0.08416666528821427,
+              "B_DEC": 0.0924303142295097,
+              "B_KO": 0.18037898550422124,
+              "B_SUB": 0.18910861278721927
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.09588746952105817,
+              "A_KO": 0.34419905498326886,
+              "A_SUB": 0.09799556297472276,
+              "B_DEC": 0.05319693101641539,
+              "B_KO": 0.19953220714034842,
+              "B_SUB": 0.20918877436418637
+            }
+          },
+          "original_direct_gtd_no": 0.8509155994654696,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.5179978561325794,
+            "FINISH_ROUND_1_NO": 0.4820021438674206,
+            "FINISH_ROUND_2": 0.22528824822577198,
+            "FINISH_ROUND_2_NO": 0.774711751774228,
+            "FINISH_ROUND_3": 0.10762949510711811,
+            "FINISH_ROUND_3_NO": 0.8923705048928818,
+            "GTD_NO": 0.8509155994654696,
+            "GTD_YES": 0.14908440053453048,
+            "OVER_0.5": 0.6850373309561442,
+            "OVER_1.5": 0.34770332617040833,
+            "OVER_2.5": 0.19367526741438346,
+            "ROUND_2_STARTS_NO": 0.5179978561325794,
+            "ROUND_2_STARTS_YES": 0.4820021438674206,
+            "ROUND_3_STARTS_NO": 0.7432861043583514,
+            "ROUND_3_STARTS_YES": 0.2567138956416486,
+            "UNDER_0.5": 0.31496266904385584,
+            "UNDER_1.5": 0.6522966738295917,
+            "UNDER_2.5": 0.8063247325856165
+          },
+          "original_frozen_fighter_pick": "Diyar Nurgozhay",
+          "original_frozen_winner_p_a": 0.5380820874790498,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Diyar Nurgozhay",
+              "selected_method_conditional_probability": 0.549407833324827,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Diyar Nurgozhay",
+              "selected_method_conditional_probability": 0.549407833324827,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Diyar Nurgozhay",
+              "selected_method_conditional_probability": 0.6396775937958913,
+              "selected_method_given_frozen_winner": "KO"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "reference": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.18150207327224951,
+              "A_KO": 0.42054026092431596,
+              "A_SUB": 0.07715521969246117,
+              "B_DEC": 0.053381068208842815,
+              "B_KO": 0.16948318882886865,
+              "B_SUB": 0.09793818907326197
+            },
+            "winner_aligned": {
+              "A_DEC": 0.1815020732722495,
+              "A_KO": 0.4205402609243159,
+              "A_SUB": 0.07715521969246115,
+              "B_DEC": 0.053381068208842815,
+              "B_KO": 0.16948318882886865,
+              "B_SUB": 0.09793818907326197
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.26212289726891397,
+              "A_KO": 0.3524176765731899,
+              "A_SUB": 0.06465698004692273,
+              "B_DEC": 0.08211098844949835,
+              "B_KO": 0.1512750764655879,
+              "B_SUB": 0.08741638119588717
+            }
+          },
+          "original_direct_gtd_no": 0.6557661142795912,
+          "original_direct_timing_markets_untouched": {
+            "GTD_NO": 0.6557661142795912,
+            "GTD_YES": 0.34423388572040875,
+            "OVER_0.5": 0.8096792904692371,
+            "OVER_1.5": 0.554045062345414,
+            "OVER_2.5": 0.3988870843590957,
+            "ROUND_2_STARTS_NO": 0.3347700497429579,
+            "ROUND_2_STARTS_YES": 0.6652299502570421,
+            "ROUND_3_STARTS_NO": 0.5326632244663888,
+            "ROUND_3_STARTS_YES": 0.4673367755336112,
+            "UNDER_0.5": 0.19032070953076285,
+            "UNDER_1.5": 0.44595493765458605,
+            "UNDER_2.5": 0.6011129156409043
+          },
+          "original_frozen_fighter_pick": "Diyar Nurgozhay",
+          "original_frozen_winner_p_a": 0.6791975538890266,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Diyar Nurgozhay",
+              "selected_method_conditional_probability": 0.6191722253950102,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Diyar Nurgozhay",
+              "selected_method_conditional_probability": 0.6191722253950103,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Diyar Nurgozhay",
+              "selected_method_conditional_probability": 0.5188735951053957,
+              "selected_method_given_frozen_winner": "KO"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "unified": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.16577758639746815,
+              "A_KO": 0.33568436953320036,
+              "A_SUB": 0.08105190578850126,
+              "B_DEC": 0.07867769835196435,
+              "B_KO": 0.1842833519273501,
+              "B_SUB": 0.15452508800151576
+            },
+            "winner_aligned": {
+              "A_DEC": 0.165691831570725,
+              "A_KO": 0.33551072389403247,
+              "A_SUB": 0.08100997857572698,
+              "B_DEC": 0.07873448531094297,
+              "B_KO": 0.1844163615522571,
+              "B_SUB": 0.1546366190963154
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.19586479408873236,
+              "A_KO": 0.31120616367309334,
+              "A_SUB": 0.0751415762786588,
+              "B_DEC": 0.09540689872693425,
+              "B_KO": 0.1753479681271628,
+              "B_SUB": 0.1470325991054185
+            }
+          },
+          "original_direct_gtd_no": 0.708728307184018,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.3761879882098065,
+            "FINISH_ROUND_2": 0.20914141078549964,
+            "FINISH_ROUND_3": 0.12339890818871196,
+            "GTD_NO": 0.708728307184018,
+            "GTD_YES": 0.2912716928159819,
+            "OVER_0.5": 0.7831219472682288,
+            "OVER_1.5": 0.5048574635095286,
+            "OVER_2.5": 0.3453160895161894,
+            "ROUND_2_STARTS_NO": 0.3761879882098065,
+            "ROUND_2_STARTS_YES": 0.6238120117901935,
+            "ROUND_3_STARTS_NO": 0.5853293989953061,
+            "ROUND_3_STARTS_YES": 0.4146706010046939,
+            "UNDER_0.5": 0.2168780527317712,
+            "UNDER_1.5": 0.49514253649047135,
+            "UNDER_2.5": 0.6546839104838106
+          },
+          "original_frozen_fighter_pick": "Diyar Nurgozhay",
+          "original_frozen_winner_p_a": 0.5822125340404845,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Diyar Nurgozhay",
+              "selected_method_conditional_probability": 0.5762684660284255,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Diyar Nurgozhay",
+              "selected_method_conditional_probability": 0.5762684660284255,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Diyar Nurgozhay",
+              "selected_method_conditional_probability": 0.5345232977266228,
+              "selected_method_given_frozen_winner": "KO"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        }
+      },
+      "original_stage_a_posture": "PASS",
+      "scheduled_rounds": 3
+    },
+    {
+      "a": "Nikolas Motta",
+      "b": "Dom Mar Fan",
+      "bet_authorized": false,
+      "fight_no": 2,
+      "models": {
+        "historical": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.11428867946052236,
+              "A_KO": 0.10290134915176263,
+              "A_SUB": 0.038442401802513126,
+              "B_DEC": 0.28534455326800695,
+              "B_KO": 0.3365623214501477,
+              "B_SUB": 0.12246069486704722
+            },
+            "winner_aligned": {
+              "A_DEC": 0.09786921201135759,
+              "A_KO": 0.08811786087586455,
+              "A_SUB": 0.03291951215111849,
+              "B_DEC": 0.29942297415914665,
+              "B_KO": 0.3531677409796519,
+              "B_SUB": 0.12850269982286083
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.09917659014693667,
+              "A_KO": 0.08716606093356556,
+              "A_SUB": 0.032563933957838416,
+              "B_DEC": 0.3038907970501325,
+              "B_KO": 0.34989186854937004,
+              "B_SUB": 0.12731074936215683
+            }
+          },
+          "original_direct_gtd_no": 0.5969326128025161,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.2947573039949146,
+            "FINISH_ROUND_1_NO": 0.7052426960050854,
+            "FINISH_ROUND_2": 0.18313231879569358,
+            "FINISH_ROUND_2_NO": 0.8168676812043064,
+            "FINISH_ROUND_3": 0.11904299001190793,
+            "FINISH_ROUND_3_NO": 0.8809570099880921,
+            "GTD_NO": 0.5969326128025161,
+            "GTD_YES": 0.40306738719748386,
+            "OVER_0.5": 0.834326833391725,
+            "OVER_1.5": 0.6034000764794718,
+            "OVER_2.5": 0.4565214113553275,
+            "ROUND_2_STARTS_NO": 0.2947573039949146,
+            "ROUND_2_STARTS_YES": 0.7052426960050854,
+            "ROUND_3_STARTS_NO": 0.4778896227906082,
+            "ROUND_3_STARTS_YES": 0.5221103772093918,
+            "UNDER_0.5": 0.16567316660827502,
+            "UNDER_1.5": 0.3965999235205282,
+            "UNDER_2.5": 0.5434785886446725
+          },
+          "original_frozen_fighter_pick": "Dom Mar Fan",
+          "original_frozen_winner_p_a": 0.21890658503834062,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Dom Mar Fan",
+              "selected_method_conditional_probability": 0.45214533142234653,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Dom Mar Fan",
+              "selected_method_conditional_probability": 0.45214533142234653,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Dom Mar Fan",
+              "selected_method_conditional_probability": 0.4479513741215509,
+              "selected_method_given_frozen_winner": "KO"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "reference": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.08092450783769331,
+              "A_KO": 0.17679257224742073,
+              "A_SUB": 0.034777192089085064,
+              "B_DEC": 0.1708042775036942,
+              "B_KO": 0.48515885376264106,
+              "B_SUB": 0.05154259655946568
+            },
+            "winner_aligned": {
+              "A_DEC": 0.08092450783769331,
+              "A_KO": 0.17679257224742073,
+              "A_SUB": 0.034777192089085064,
+              "B_DEC": 0.1708042775036942,
+              "B_KO": 0.48515885376264106,
+              "B_SUB": 0.05154259655946568
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.13716119328869902,
+              "A_KO": 0.1297999015001059,
+              "A_SUB": 0.025533177385394144,
+              "B_DEC": 0.2996496409404852,
+              "B_KO": 0.3686872683027766,
+              "B_SUB": 0.03916881858253907
+            }
+          },
+          "original_direct_gtd_no": 0.5631891657691179,
+          "original_direct_timing_markets_untouched": {
+            "GTD_NO": 0.5631891657691179,
+            "GTD_YES": 0.43681083423088213,
+            "OVER_0.5": 0.8486758927536993,
+            "OVER_1.5": 0.6320424358624641,
+            "OVER_2.5": 0.48973383594704123,
+            "ROUND_2_STARTS_NO": 0.27148735372729005,
+            "ROUND_2_STARTS_YES": 0.72851264627271,
+            "ROUND_3_STARTS_NO": 0.4462006290050041,
+            "ROUND_3_STARTS_YES": 0.5537993709949959,
+            "UNDER_0.5": 0.15132410724630074,
+            "UNDER_1.5": 0.3679575641375359,
+            "UNDER_2.5": 0.5102661640529588
+          },
+          "original_frozen_fighter_pick": "Dom Mar Fan",
+          "original_frozen_winner_p_a": 0.2924942721741991,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Dom Mar Fan",
+              "selected_method_conditional_probability": 0.6857313441879227,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Dom Mar Fan",
+              "selected_method_conditional_probability": 0.6857313441879227,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Dom Mar Fan",
+              "selected_method_conditional_probability": 0.521108527892446,
+              "selected_method_given_frozen_winner": "KO"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "unified": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.10315093244986731,
+              "A_KO": 0.12949508871326812,
+              "A_SUB": 0.0380349752330635,
+              "B_DEC": 0.24181550518868533,
+              "B_KO": 0.3965642347271937,
+              "B_SUB": 0.09093926368792192
+            },
+            "winner_aligned": {
+              "A_DEC": 0.09126834216390561,
+              "A_KO": 0.11457775305106387,
+              "A_SUB": 0.03365349252130179,
+              "B_DEC": 0.25215411977343766,
+              "B_KO": 0.4135189985573402,
+              "B_SUB": 0.09482729393295097
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.11230606754875298,
+              "A_KO": 0.09831630092203637,
+              "A_SUB": 0.028877219265481886,
+              "B_DEC": 0.31610603726557274,
+              "B_KO": 0.3614967191233371,
+              "B_SUB": 0.08289765587481886
+            }
+          },
+          "original_direct_gtd_no": 0.5715878951839728,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.2771664132918027,
+            "FINISH_ROUND_2": 0.17685212174085685,
+            "FINISH_ROUND_3": 0.1175693601513133,
+            "GTD_NO": 0.5715878951839728,
+            "GTD_YES": 0.42841210481602715,
+            "OVER_0.5": 0.8451959104458906,
+            "OVER_1.5": 0.6250123916180116,
+            "OVER_2.5": 0.4815019172413578,
+            "ROUND_2_STARTS_NO": 0.2771664132918027,
+            "ROUND_2_STARTS_YES": 0.7228335867081973,
+            "ROUND_3_STARTS_NO": 0.45401853503265954,
+            "ROUND_3_STARTS_YES": 0.5459814649673405,
+            "UNDER_0.5": 0.1548040895541094,
+            "UNDER_1.5": 0.3749876083819884,
+            "UNDER_2.5": 0.5184980827586422
+          },
+          "original_frozen_fighter_pick": "Dom Mar Fan",
+          "original_frozen_winner_p_a": 0.23949958773627125,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Dom Mar Fan",
+              "selected_method_conditional_probability": 0.5437459229330946,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Dom Mar Fan",
+              "selected_method_conditional_probability": 0.5437459229330946,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Dom Mar Fan",
+              "selected_method_conditional_probability": 0.47534059586804817,
+              "selected_method_given_frozen_winner": "KO"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        }
+      },
+      "original_stage_a_posture": "LEAN",
+      "scheduled_rounds": 3
+    },
+    {
+      "a": "Jake Matthews",
+      "b": "Tahir Abdullayev",
+      "bet_authorized": false,
+      "fight_no": 3,
+      "models": {
+        "historical": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.18532806851319625,
+              "A_KO": 0.12654402321155384,
+              "A_SUB": 0.1602036393004814,
+              "B_DEC": 0.2073697010106297,
+              "B_KO": 0.23042311407277136,
+              "B_SUB": 0.09013145389136723
+            },
+            "winner_aligned": {
+              "A_DEC": 0.15536408712805466,
+              "A_KO": 0.10608429044505208,
+              "A_SUB": 0.13430179451063104,
+              "B_DEC": 0.23735053210199833,
+              "B_KO": 0.2637369319974488,
+              "B_SUB": 0.10316236381681504
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.16251381754240898,
+              "A_KO": 0.1029290575703205,
+              "A_SUB": 0.1303072969710083,
+              "B_DEC": 0.24826906044945576,
+              "B_KO": 0.25588840461912604,
+              "B_SUB": 0.1000923628476804
+            }
+          },
+          "original_direct_gtd_no": 0.5892171220081353,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.28960991293915617,
+            "FINISH_ROUND_1_NO": 0.7103900870608438,
+            "FINISH_ROUND_2": 0.18115786958113456,
+            "FINISH_ROUND_2_NO": 0.8188421304188654,
+            "FINISH_ROUND_3": 0.11844933948784458,
+            "FINISH_ROUND_3_NO": 0.8815506605121555,
+            "GTD_NO": 0.5892171220081353,
+            "GTD_YES": 0.4107828779918647,
+            "OVER_0.5": 0.8374778996710566,
+            "OVER_1.5": 0.609785053991991,
+            "OVER_2.5": 0.46404918753891966,
+            "ROUND_2_STARTS_NO": 0.28960991293915617,
+            "ROUND_2_STARTS_YES": 0.7103900870608438,
+            "ROUND_3_STARTS_NO": 0.4707677825202907,
+            "ROUND_3_STARTS_YES": 0.5292322174797093,
+            "UNDER_0.5": 0.16252210032894343,
+            "UNDER_1.5": 0.390214946008009,
+            "UNDER_2.5": 0.5359508124610803
+          },
+          "original_frozen_fighter_pick": "Tahir Abdullayev",
+          "original_frozen_winner_p_a": 0.3957501720837378,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Tahir Abdullayev",
+              "selected_method_conditional_probability": 0.4364700158987846,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Tahir Abdullayev",
+              "selected_method_conditional_probability": 0.4364700158987846,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Tahir Abdullayev",
+              "selected_method_conditional_probability": 0.4234811377630833,
+              "selected_method_given_frozen_winner": "KO"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "reference": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.18192911733551234,
+              "A_KO": 0.23572735492986954,
+              "A_SUB": 0.09636750333574304,
+              "B_DEC": 0.16972818004221255,
+              "B_KO": 0.28808002005817934,
+              "B_SUB": 0.02816782429848318
+            },
+            "winner_aligned": {
+              "A_DEC": 0.18192911733551234,
+              "A_KO": 0.23572735492986954,
+              "A_SUB": 0.09636750333574304,
+              "B_DEC": 0.16972818004221255,
+              "B_KO": 0.28808002005817934,
+              "B_SUB": 0.02816782429848318
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.27332431986467187,
+              "A_KO": 0.17085327209102255,
+              "A_SUB": 0.0698463836454305,
+              "B_DEC": 0.2559251635016444,
+              "B_KO": 0.2095605007411,
+              "B_SUB": 0.020490360156130726
+            }
+          },
+          "original_direct_gtd_no": 0.4707505166336805,
+          "original_direct_timing_markets_untouched": {
+            "GTD_NO": 0.4707505166336805,
+            "GTD_YES": 0.5292494833663195,
+            "OVER_0.5": 0.8815087622703006,
+            "OVER_1.5": 0.702876294705106,
+            "OVER_2.5": 0.5778211617064203,
+            "ROUND_2_STARTS_NO": 0.2160756686484011,
+            "ROUND_2_STARTS_YES": 0.7839243313515989,
+            "ROUND_3_STARTS_NO": 0.3649688096591698,
+            "ROUND_3_STARTS_YES": 0.6350311903408302,
+            "UNDER_0.5": 0.11849123772969938,
+            "UNDER_1.5": 0.29712370529489396,
+            "UNDER_2.5": 0.4221788382935797
+          },
+          "original_frozen_fighter_pick": "Jake Matthews",
+          "original_frozen_winner_p_a": 0.5140239756011249,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Jake Matthews",
+              "selected_method_conditional_probability": 0.45859213989814074,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Jake Matthews",
+              "selected_method_conditional_probability": 0.45859213989814074,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Jake Matthews",
+              "selected_method_conditional_probability": 0.5317345743358235,
+              "selected_method_given_frozen_winner": "DEC"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "unified": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.18829665845224522,
+              "A_KO": 0.16348232328057805,
+              "A_SUB": 0.13545974304494915,
+              "B_DEC": 0.19680656436074015,
+              "B_KO": 0.2563375544168587,
+              "B_SUB": 0.059617156444628734
+            },
+            "winner_aligned": {
+              "A_DEC": 0.166407634394642,
+              "A_KO": 0.1444779047386049,
+              "A_SUB": 0.1197128806273156,
+              "B_DEC": 0.21854608404258494,
+              "B_KO": 0.2846529478974682,
+              "B_SUB": 0.06620254829938421
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.21622827617651807,
+              "A_KO": 0.1172325111212295,
+              "A_SUB": 0.09713763246281497,
+              "B_DEC": 0.2843426485471164,
+              "B_KO": 0.23127146677273613,
+              "B_SUB": 0.053787464919584894
+            }
+          },
+          "original_direct_gtd_no": 0.49942907526965896,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.2328434394231923,
+            "FINISH_ROUND_2": 0.1570480429634865,
+            "FINISH_ROUND_3": 0.10953759288298015,
+            "GTD_NO": 0.49942907526965896,
+            "GTD_YES": 0.500570924730341,
+            "OVER_0.5": 0.8716532153367765,
+            "OVER_1.5": 0.6812854110806542,
+            "OVER_2.5": 0.5506360226295647,
+            "ROUND_2_STARTS_NO": 0.2328434394231923,
+            "ROUND_2_STARTS_YES": 0.7671565605768077,
+            "ROUND_3_STARTS_NO": 0.3898914823866788,
+            "ROUND_3_STARTS_YES": 0.6101085176133212,
+            "UNDER_0.5": 0.12834678466322347,
+            "UNDER_1.5": 0.3187145889193458,
+            "UNDER_2.5": 0.4493639773704353
+          },
+          "original_frozen_fighter_pick": "Tahir Abdullayev",
+          "original_frozen_winner_p_a": 0.4305984197605625,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Tahir Abdullayev",
+              "selected_method_conditional_probability": 0.4999159780655502,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Tahir Abdullayev",
+              "selected_method_conditional_probability": 0.49991597806555027,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Tahir Abdullayev",
+              "selected_method_conditional_probability": 0.4993710211122847,
+              "selected_method_given_frozen_winner": "DEC"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        }
+      },
+      "original_stage_a_posture": "PASS",
+      "scheduled_rounds": 3
+    },
+    {
+      "a": "Amir Albazi",
+      "b": "Alessandro Costa",
+      "bet_authorized": false,
+      "fight_no": 4,
+      "models": {
+        "historical": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.26464924244032845,
+              "A_KO": 0.08929183440495336,
+              "A_SUB": 0.09758501464930078,
+              "B_DEC": 0.3025936217488102,
+              "B_KO": 0.2078917909668526,
+              "B_SUB": 0.03798849578975463
+            },
+            "winner_aligned": {
+              "A_DEC": 0.29274160799788884,
+              "A_KO": 0.09877011150213674,
+              "A_SUB": 0.10794360808108117,
+              "B_DEC": 0.27615101270183523,
+              "B_KO": 0.18972484706089252,
+              "B_SUB": 0.034668812656165615
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.2654262812543297,
+              "A_KO": 0.11182167805329883,
+              "A_SUB": 0.12220736827347813,
+              "B_DEC": 0.24845568532522622,
+              "B_KO": 0.21314124731682646,
+              "B_SUB": 0.03894773977684059
+            }
+          },
+          "original_direct_gtd_no": 0.48611803342057003,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.22586474886667196,
+            "FINISH_ROUND_1_NO": 0.774135251133328,
+            "FINISH_ROUND_2": 0.15304711963376005,
+            "FINISH_ROUND_2_NO": 0.84695288036624,
+            "FINISH_ROUND_3": 0.10720616492013801,
+            "FINISH_ROUND_3_NO": 0.892793835079862,
+            "GTD_NO": 0.48611803342057003,
+            "GTD_YES": 0.51388196657943,
+            "OVER_0.5": 0.8756324329287396,
+            "OVER_1.5": 0.6905363040224702,
+            "OVER_2.5": 0.5629357658984011,
+            "ROUND_2_STARTS_NO": 0.22586474886667196,
+            "ROUND_2_STARTS_YES": 0.774135251133328,
+            "ROUND_3_STARTS_NO": 0.378911868500432,
+            "ROUND_3_STARTS_YES": 0.621088131499568,
+            "UNDER_0.5": 0.1243675670712604,
+            "UNDER_1.5": 0.30946369597752976,
+            "UNDER_2.5": 0.4370642341015989
+          },
+          "original_frozen_fighter_pick": "Alessandro Costa",
+          "original_frozen_winner_p_a": 0.4994553275811067,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Alessandro Costa",
+              "selected_method_conditional_probability": 0.5517010327316626,
+              "selected_method_given_frozen_winner": "DEC"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Alessandro Costa",
+              "selected_method_conditional_probability": 0.5517010327316626,
+              "selected_method_given_frozen_winner": "DEC"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Alessandro Costa",
+              "selected_method_conditional_probability": 0.4963706518432382,
+              "selected_method_given_frozen_winner": "DEC"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "reference": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.2683524039214453,
+              "A_KO": 0.17886221997919077,
+              "A_SUB": 0.09862971264821513,
+              "B_DEC": 0.18310808101277112,
+              "B_KO": 0.23386653905433297,
+              "B_SUB": 0.037181043384044675
+            },
+            "winner_aligned": {
+              "A_DEC": 0.2683524039214453,
+              "A_KO": 0.17886221997919077,
+              "A_SUB": 0.09862971264821513,
+              "B_DEC": 0.18310808101277112,
+              "B_KO": 0.23386653905433297,
+              "B_SUB": 0.037181043384044675
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.35856410649425446,
+              "A_KO": 0.12071470831102087,
+              "A_SUB": 0.06656552174357598,
+              "B_DEC": 0.2598613815534683,
+              "B_KO": 0.1676418983585215,
+              "B_SUB": 0.02665238353915902
+            }
+          },
+          "original_direct_gtd_no": 0.3815745119482278,
+          "original_direct_timing_markets_untouched": {
+            "GTD_NO": 0.3815745119482278,
+            "GTD_YES": 0.6184254880517722,
+            "OVER_0.5": 0.9091014344422284,
+            "OVER_1.5": 0.7661649696968984,
+            "OVER_2.5": 0.6608065427451495,
+            "ROUND_2_STARTS_NO": 0.1680062392856958,
+            "ROUND_2_STARTS_YES": 0.8319937607143042,
+            "ROUND_3_STARTS_NO": 0.2903702158761038,
+            "ROUND_3_STARTS_YES": 0.7096297841238962,
+            "UNDER_0.5": 0.09089856555777165,
+            "UNDER_1.5": 0.2338350303031016,
+            "UNDER_2.5": 0.3391934572548505
+          },
+          "original_frozen_fighter_pick": "Amir Albazi",
+          "original_frozen_winner_p_a": 0.5458443365488512,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Amir Albazi",
+              "selected_method_conditional_probability": 0.49162808140160796,
+              "selected_method_given_frozen_winner": "DEC"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Amir Albazi",
+              "selected_method_conditional_probability": 0.49162808140160796,
+              "selected_method_given_frozen_winner": "DEC"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Amir Albazi",
+              "selected_method_conditional_probability": 0.6568980980205958,
+              "selected_method_given_frozen_winner": "DEC"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "unified": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.2699535019226464,
+              "A_KO": 0.11757285640658997,
+              "A_SUB": 0.0994197387563813,
+              "B_DEC": 0.25433604875710336,
+              "B_KO": 0.22047868935639467,
+              "B_SUB": 0.038239164800884365
+            },
+            "winner_aligned": {
+              "A_DEC": 0.2846232205061545,
+              "A_KO": 0.1239619593604687,
+              "A_SUB": 0.10482237135353102,
+              "B_DEC": 0.24121832048193528,
+              "B_KO": 0.20910720052665163,
+              "B_SUB": 0.03626692777125896
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.31897669414238133,
+              "A_KO": 0.10534825496255514,
+              "A_SUB": 0.08908260211521772,
+              "B_DEC": 0.27469670863651413,
+              "B_KO": 0.18057700431684934,
+              "B_SUB": 0.03131873582648244
+            }
+          },
+          "original_direct_gtd_no": 0.4063265972126975,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.18110744009196833,
+            "FINISH_ROUND_2": 0.12980303532639004,
+            "FINISH_ROUND_3": 0.09541612179433911,
+            "GTD_NO": 0.4063265972126975,
+            "GTD_YES": 0.5936734027873025,
+            "OVER_0.5": 0.9016265057119633,
+            "OVER_1.5": 0.7488223818418095,
+            "OVER_2.5": 0.637859402802313,
+            "ROUND_2_STARTS_NO": 0.18110744009196833,
+            "ROUND_2_STARTS_YES": 0.8188925599080317,
+            "ROUND_3_STARTS_NO": 0.31091047541835837,
+            "ROUND_3_STARTS_YES": 0.6890895245816416,
+            "UNDER_0.5": 0.09837349428803666,
+            "UNDER_1.5": 0.2511776181581905,
+            "UNDER_2.5": 0.362140597197687
+          },
+          "original_frozen_fighter_pick": "Amir Albazi",
+          "original_frozen_winner_p_a": 0.5134075512201541,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Amir Albazi",
+              "selected_method_conditional_probability": 0.5543806666452891,
+              "selected_method_given_frozen_winner": "DEC"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Amir Albazi",
+              "selected_method_conditional_probability": 0.5543806666452891,
+              "selected_method_given_frozen_winner": "DEC"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Amir Albazi",
+              "selected_method_conditional_probability": 0.6212933436298467,
+              "selected_method_given_frozen_winner": "DEC"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        }
+      },
+      "original_stage_a_posture": "PASS",
+      "scheduled_rounds": 3
+    },
+    {
+      "a": "Shamil Gaziev",
+      "b": "Tallison Teixeira",
+      "bet_authorized": false,
+      "fight_no": 5,
+      "models": {
+        "historical": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.08021093070281148,
+              "A_KO": 0.1641846582404488,
+              "A_SUB": 0.03917290144136186,
+              "B_DEC": 0.2007115363875701,
+              "B_KO": 0.417154215392666,
+              "B_SUB": 0.09856575783514175
+            },
+            "winner_aligned": {
+              "A_DEC": 0.06242658732468517,
+              "A_KO": 0.1277816853041666,
+              "A_SUB": 0.030487497541338802,
+              "B_DEC": 0.21832561407921042,
+              "B_KO": 0.4537629071079904,
+              "B_SUB": 0.10721570864260868
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.03498662180280758,
+              "A_KO": 0.1499358720891988,
+              "A_SUB": 0.03577327627818418,
+              "B_DEC": 0.12215656949534079,
+              "B_KO": 0.5315518709275582,
+              "B_SUB": 0.12559578940691038
+            }
+          },
+          "original_direct_gtd_no": 0.8428568087039323,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.5082101049621619,
+            "FINISH_ROUND_1_NO": 0.4917898950378381,
+            "FINISH_ROUND_2": 0.225255768740444,
+            "FINISH_ROUND_2_NO": 0.774744231259556,
+            "FINISH_ROUND_3": 0.1093909350013264,
+            "FINISH_ROUND_3_NO": 0.8906090649986735,
+            "GTD_NO": 0.8428568087039323,
+            "GTD_YES": 0.15714319129606763,
+            "OVER_0.5": 0.6922038218089288,
+            "OVER_1.5": 0.35798197982995045,
+            "OVER_2.5": 0.20266360378297182,
+            "ROUND_2_STARTS_NO": 0.5082101049621619,
+            "ROUND_2_STARTS_YES": 0.49178989503783804,
+            "ROUND_3_STARTS_NO": 0.733465873702606,
+            "ROUND_3_STARTS_YES": 0.26653412629739404,
+            "UNDER_0.5": 0.3077961781910712,
+            "UNDER_1.5": 0.6420180201700496,
+            "UNDER_2.5": 0.7973363962170281
+          },
+          "original_frozen_fighter_pick": "Tallison Teixeira",
+          "original_frozen_winner_p_a": 0.22069577017019057,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Tallison Teixeira",
+              "selected_method_conditional_probability": 0.582266706299139,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Tallison Teixeira",
+              "selected_method_conditional_probability": 0.582266706299139,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Tallison Teixeira",
+              "selected_method_conditional_probability": 0.6820851864792812,
+              "selected_method_given_frozen_winner": "KO"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "reference": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.06240132360711107,
+              "A_KO": 0.24676845611292036,
+              "A_SUB": 0.01941320456176388,
+              "B_DEC": 0.09068388022842075,
+              "B_KO": 0.5169150276710063,
+              "B_SUB": 0.0638181078187777
+            },
+            "winner_aligned": {
+              "A_DEC": 0.06240132360711107,
+              "A_KO": 0.24676845611292036,
+              "A_SUB": 0.01941320456176388,
+              "B_DEC": 0.09068388022842074,
+              "B_KO": 0.5169150276710062,
+              "B_SUB": 0.06381810781877768
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.10581882645792637,
+              "A_KO": 0.20651748570565298,
+              "A_SUB": 0.01624667211821599,
+              "B_DEC": 0.16138209645646592,
+              "B_KO": 0.4539860019886864,
+              "B_SUB": 0.056048917273052376
+            }
+          },
+          "original_direct_gtd_no": 0.7327990770828336,
+          "original_direct_timing_markets_untouched": {
+            "GTD_NO": 0.7327990770828336,
+            "GTD_YES": 0.26720092291716635,
+            "OVER_0.5": 0.7702215700667312,
+            "OVER_1.5": 0.4816756974452838,
+            "OVER_2.5": 0.3206991086224846,
+            "ROUND_2_STARTS_NO": 0.39599213098721797,
+            "ROUND_2_STARTS_YES": 0.604007869012782,
+            "ROUND_3_STARTS_NO": 0.6098245883183149,
+            "ROUND_3_STARTS_YES": 0.3901754116816852,
+            "UNDER_0.5": 0.2297784299332688,
+            "UNDER_1.5": 0.5183243025547162,
+            "UNDER_2.5": 0.6793008913775154
+          },
+          "original_frozen_fighter_pick": "Tallison Teixeira",
+          "original_frozen_winner_p_a": 0.32858298428179533,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Tallison Teixeira",
+              "selected_method_conditional_probability": 0.7698866957044125,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Tallison Teixeira",
+              "selected_method_conditional_probability": 0.7698866957044125,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Tallison Teixeira",
+              "selected_method_conditional_probability": 0.676161001822488,
+              "selected_method_given_frozen_winner": "KO"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "unified": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.0745527133383122,
+              "A_KO": 0.19534903990453764,
+              "A_SUB": 0.03074484835597052,
+              "B_DEC": 0.15216028092407427,
+              "B_KO": 0.46167609554952094,
+              "B_SUB": 0.08551702192758431
+            },
+            "winner_aligned": {
+              "A_DEC": 0.06204482748646755,
+              "A_KO": 0.16257486733612284,
+              "A_SUB": 0.025586712098424898,
+              "B_DEC": 0.16313469558994415,
+              "B_KO": 0.4949740421825742,
+              "B_SUB": 0.09168485530646651
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.06540440624025463,
+              "A_KO": 0.15967213303806077,
+              "A_SUB": 0.02512986764269989,
+              "B_DEC": 0.17234531223486388,
+              "B_KO": 0.4872028890112115,
+              "B_SUB": 0.0902453918329093
+            }
+          },
+          "original_direct_gtd_no": 0.7622502815248673,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.4226673754536948,
+            "FINISH_ROUND_2": 0.2185189919893537,
+            "FINISH_ROUND_3": 0.12106391408181877,
+            "GTD_NO": 0.7622502815248673,
+            "GTD_YES": 0.2377497184751327,
+            "OVER_0.5": 0.7523594362366123,
+            "OVER_1.5": 0.451254627778885,
+            "OVER_2.5": 0.2899078480812543,
+            "ROUND_2_STARTS_NO": 0.4226673754536948,
+            "ROUND_2_STARTS_YES": 0.5773326245463052,
+            "ROUND_3_STARTS_NO": 0.6411863674430485,
+            "ROUND_3_STARTS_YES": 0.3588136325569515,
+            "UNDER_0.5": 0.24764056376338772,
+            "UNDER_1.5": 0.5487453722211151,
+            "UNDER_2.5": 0.7100921519187458
+          },
+          "original_frozen_fighter_pick": "Tallison Teixeira",
+          "original_frozen_winner_p_a": 0.2502064069210153,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Tallison Teixeira",
+              "selected_method_conditional_probability": 0.6601470681417687,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Tallison Teixeira",
+              "selected_method_conditional_probability": 0.6601470681417687,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Tallison Teixeira",
+              "selected_method_conditional_probability": 0.6497826782041982,
+              "selected_method_given_frozen_winner": "KO"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        }
+      },
+      "original_stage_a_posture": "LEAN",
+      "scheduled_rounds": 3
+    },
+    {
+      "a": "Aleksandre Topuria",
+      "b": "Santiago Luna",
+      "bet_authorized": false,
+      "fight_no": 6,
+      "models": {
+        "historical": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.15184777480591705,
+              "A_KO": 0.06371048776912228,
+              "A_SUB": 0.10757675725805711,
+              "B_DEC": 0.26854660744987446,
+              "B_KO": 0.27193343977174567,
+              "B_SUB": 0.13638493294528342
+            },
+            "winner_aligned": {
+              "A_DEC": 0.1508761148370435,
+              "A_KO": 0.06330281020755256,
+              "A_SUB": 0.10688838346566876,
+              "B_DEC": 0.26936697322030506,
+              "B_KO": 0.2727641517585498,
+              "B_SUB": 0.1368015665108803
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.20095271229475734,
+              "A_KO": 0.044676762194796604,
+              "A_SUB": 0.07543783402071089,
+              "B_DEC": 0.3759975762653361,
+              "B_KO": 0.20174989276740254,
+              "B_SUB": 0.10118522245699642
+            }
+          },
+          "original_direct_gtd_no": 0.4230497114395634,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.19067155071717679,
+            "FINISH_ROUND_1_NO": 0.8093284492828232,
+            "FINISH_ROUND_2": 0.13464730990312535,
+            "FINISH_ROUND_2_NO": 0.8653526900968747,
+            "FINISH_ROUND_3": 0.09773085081926125,
+            "FINISH_ROUND_3_NO": 0.9022691491807387,
+            "GTD_NO": 0.4230497114395634,
+            "GTD_YES": 0.5769502885604366,
+            "OVER_0.5": 0.8960543576981576,
+            "OVER_1.5": 0.7364158398949026,
+            "OVER_2.5": 0.6220663853744891,
+            "ROUND_2_STARTS_NO": 0.19067155071717679,
+            "ROUND_2_STARTS_YES": 0.8093284492828232,
+            "ROUND_3_STARTS_NO": 0.32531886062030213,
+            "ROUND_3_STARTS_YES": 0.6746811393796979,
+            "UNDER_0.5": 0.10394564230184244,
+            "UNDER_1.5": 0.26358416010509744,
+            "UNDER_2.5": 0.3779336146255109
+          },
+          "original_frozen_fighter_pick": "Santiago Luna",
+          "original_frozen_winner_p_a": 0.3210673085102648,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Santiago Luna",
+              "selected_method_conditional_probability": 0.40175433467497673,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Santiago Luna",
+              "selected_method_conditional_probability": 0.4017543346749768,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Santiago Luna",
+              "selected_method_conditional_probability": 0.5538068515161798,
+              "selected_method_given_frozen_winner": "DEC"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "reference": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.2387712054874105,
+              "A_KO": 0.1390270519503103,
+              "A_SUB": 0.07819784620280612,
+              "B_DEC": 0.20077785459101857,
+              "B_KO": 0.2945679622648027,
+              "B_SUB": 0.04865807950365185
+            },
+            "winner_aligned": {
+              "A_DEC": 0.2387712054874105,
+              "A_KO": 0.1390270519503103,
+              "A_SUB": 0.07819784620280612,
+              "B_DEC": 0.20077785459101857,
+              "B_KO": 0.2945679622648027,
+              "B_SUB": 0.04865807950365185
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.34492022030102487,
+              "A_KO": 0.07109015925321084,
+              "A_SUB": 0.03998572408629117,
+              "B_DEC": 0.3389189611645479,
+              "B_KO": 0.17601068712709364,
+              "B_SUB": 0.029074248067831546
+            }
+          },
+          "original_direct_gtd_no": 0.3161608185340561,
+          "original_direct_timing_markets_untouched": {
+            "GTD_NO": 0.3161608185340561,
+            "GTD_YES": 0.6838391814659439,
+            "OVER_0.5": 0.9273888341431233,
+            "OVER_1.5": 0.8100454371874024,
+            "OVER_2.5": 0.7206277906007793,
+            "ROUND_2_STARTS_NO": 0.13539399841849353,
+            "ROUND_2_STARTS_YES": 0.8646060015815065,
+            "ROUND_3_STARTS_NO": 0.2375936942299801,
+            "ROUND_3_STARTS_YES": 0.7624063057700199,
+            "UNDER_0.5": 0.07261116585687666,
+            "UNDER_1.5": 0.1899545628125976,
+            "UNDER_2.5": 0.2793722093992207
+          },
+          "original_frozen_fighter_pick": "Santiago Luna",
+          "original_frozen_winner_p_a": 0.4559961036405269,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Santiago Luna",
+              "selected_method_conditional_probability": 0.541481346431671,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Santiago Luna",
+              "selected_method_conditional_probability": 0.541481346431671,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Santiago Luna",
+              "selected_method_conditional_probability": 0.6230083340075806,
+              "selected_method_given_frozen_winner": "DEC"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "unified": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.18466018948319587,
+              "A_KO": 0.0876080166935249,
+              "A_SUB": 0.09795392711992178,
+              "B_DEC": 0.24711863545001436,
+              "B_KO": 0.28756331160824966,
+              "B_SUB": 0.09509591964509337
+            },
+            "winner_aligned": {
+              "A_DEC": 0.1793562227812862,
+              "A_KO": 0.0850916648763668,
+              "A_SUB": 0.09514041128188767,
+              "B_DEC": 0.2512912473737775,
+              "B_KO": 0.2924188341416609,
+              "B_SUB": 0.09670161954502098
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.2588264166899353,
+              "A_KO": 0.0475719777492153,
+              "A_SUB": 0.05318990450039015,
+              "B_DEC": 0.40028237539478234,
+              "B_KO": 0.18045398741984395,
+              "B_SUB": 0.059675338245833
+            }
+          },
+          "original_direct_gtd_no": 0.34089120791513927,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.1476640725896391,
+            "FINISH_ROUND_2": 0.10984459361860699,
+            "FINISH_ROUND_3": 0.08338254170689319,
+            "GTD_NO": 0.34089120791513927,
+            "GTD_YES": 0.6591087920848607,
+            "OVER_0.5": 0.9205215638259345,
+            "OVER_1.5": 0.7935092328799735,
+            "OVER_2.5": 0.698030481634608,
+            "ROUND_2_STARTS_NO": 0.1476640725896391,
+            "ROUND_2_STARTS_YES": 0.8523359274103609,
+            "ROUND_3_STARTS_NO": 0.2575086662082461,
+            "ROUND_3_STARTS_YES": 0.7424913337917539,
+            "UNDER_0.5": 0.07947843617406547,
+            "UNDER_1.5": 0.20649076712002645,
+            "UNDER_2.5": 0.301969518365392
+          },
+          "original_frozen_fighter_pick": "Santiago Luna",
+          "original_frozen_winner_p_a": 0.3595882989395407,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Santiago Luna",
+              "selected_method_conditional_probability": 0.45661069848886876,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Santiago Luna",
+              "selected_method_conditional_probability": 0.45661069848886865,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Santiago Luna",
+              "selected_method_conditional_probability": 0.6250391345628973,
+              "selected_method_given_frozen_winner": "DEC"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        }
+      },
+      "original_stage_a_posture": "PASS",
+      "scheduled_rounds": 3
+    },
+    {
+      "a": "Jared Cannonier",
+      "b": "Ikram Aliskerov",
+      "bet_authorized": false,
+      "fight_no": 7,
+      "models": {
+        "historical": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.07101223191811992,
+              "A_KO": 0.11350922544902857,
+              "A_SUB": 0.06620768148986342,
+              "B_DEC": 0.2551149741956392,
+              "B_KO": 0.30859204060684287,
+              "B_SUB": 0.18556384634050602
+            },
+            "winner_aligned": {
+              "A_DEC": 0.053818865361627055,
+              "A_KO": 0.08602655566139226,
+              "A_SUB": 0.050177584899978804,
+              "B_DEC": 0.2757844601454238,
+              "B_KO": 0.33359425330583975,
+              "B_SUB": 0.2005982806257383
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.05278177775858588,
+              "A_KO": 0.08668158034743371,
+              "A_SUB": 0.050559647816978484,
+              "B_DEC": 0.27088711424245443,
+              "B_KO": 0.33665256345790695,
+              "B_SUB": 0.2024373163766404
+            }
+          },
+          "original_direct_gtd_no": 0.6763311079991141,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.35163991070067224,
+            "FINISH_ROUND_1_NO": 0.6483600892993278,
+            "FINISH_ROUND_2": 0.20198391566889112,
+            "FINISH_ROUND_2_NO": 0.7980160843311088,
+            "FINISH_ROUND_3": 0.1227072816295508,
+            "FINISH_ROUND_3_NO": 0.8772927183704492,
+            "GTD_NO": 0.6763311079991141,
+            "GTD_YES": 0.32366889200088583,
+            "OVER_0.5": 0.7987436903410977,
+            "OVER_1.5": 0.534236907371885,
+            "OVER_2.5": 0.37782405639876027,
+            "ROUND_2_STARTS_NO": 0.35163991070067224,
+            "ROUND_2_STARTS_YES": 0.6483600892993278,
+            "ROUND_3_STARTS_NO": 0.5536238263695634,
+            "ROUND_3_STARTS_YES": 0.44637617363043663,
+            "UNDER_0.5": 0.2012563096589023,
+            "UNDER_1.5": 0.465763092628115,
+            "UNDER_2.5": 0.6221759436012397
+          },
+          "original_frozen_fighter_pick": "Ikram Aliskerov",
+          "original_frozen_winner_p_a": 0.1900230059229981,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Ikram Aliskerov",
+              "selected_method_conditional_probability": 0.41185645486879846,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Ikram Aliskerov",
+              "selected_method_conditional_probability": 0.41185645486879846,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Ikram Aliskerov",
+              "selected_method_conditional_probability": 0.41563225365621004,
+              "selected_method_given_frozen_winner": "KO"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "reference": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.06616572572246787,
+              "A_KO": 0.16798182586455862,
+              "A_SUB": 0.02338007058013253,
+              "B_DEC": 0.21748433229903802,
+              "B_KO": 0.478805327524875,
+              "B_SUB": 0.04618271800892801
+            },
+            "winner_aligned": {
+              "A_DEC": 0.06616572572246787,
+              "A_KO": 0.16798182586455862,
+              "A_SUB": 0.02338007058013253,
+              "B_DEC": 0.21748433229903802,
+              "B_KO": 0.478805327524875,
+              "B_SUB": 0.04618271800892801
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.09144941942826787,
+              "A_KO": 0.14578722436755637,
+              "A_SUB": 0.020290978371334787,
+              "B_DEC": 0.29512834084491774,
+              "B_KO": 0.4079915913676001,
+              "B_SUB": 0.03935244562032315
+            }
+          },
+          "original_direct_gtd_no": 0.6134222397263651,
+          "original_direct_timing_markets_untouched": {
+            "GTD_NO": 0.6134222397263651,
+            "GTD_YES": 0.3865777602736349,
+            "OVER_0.5": 0.8284380073119457,
+            "OVER_1.5": 0.5907464476655804,
+            "OVER_2.5": 0.4408095118018812,
+            "ROUND_2_STARTS_NO": 0.3046726203338932,
+            "ROUND_2_STARTS_YES": 0.6953273796661068,
+            "ROUND_3_STARTS_NO": 0.4923854082799657,
+            "ROUND_3_STARTS_YES": 0.5076145917200343,
+            "UNDER_0.5": 0.17156199268805428,
+            "UNDER_1.5": 0.4092535523344196,
+            "UNDER_2.5": 0.5591904881981188
+          },
+          "original_frozen_fighter_pick": "Ikram Aliskerov",
+          "original_frozen_winner_p_a": 0.257527622167159,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Ikram Aliskerov",
+              "selected_method_conditional_probability": 0.6448796505028668,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Ikram Aliskerov",
+              "selected_method_conditional_probability": 0.6448796505028668,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Ikram Aliskerov",
+              "selected_method_conditional_probability": 0.5495040671525893,
+              "selected_method_given_frozen_winner": "KO"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "unified": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.07205498758998581,
+              "A_KO": 0.13699706170010073,
+              "A_SUB": 0.0466904795899355,
+              "B_DEC": 0.25037379715668234,
+              "B_KO": 0.37911282927446593,
+              "B_SUB": 0.1147708446888297
+            },
+            "winner_aligned": {
+              "A_DEC": 0.05881104395972904,
+              "A_KO": 0.11181655132389597,
+              "A_SUB": 0.03810861592662539,
+              "B_DEC": 0.26618707509075995,
+              "B_KO": 0.40305709423259173,
+              "B_SUB": 0.12201961946639783
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.06773474338910111,
+              "A_KO": 0.1051611157253078,
+              "A_SUB": 0.03584035209584147,
+              "B_DEC": 0.3030773263197592,
+              "B_KO": 0.3747395606647356,
+              "B_SUB": 0.11344690180525475
+            }
+          },
+          "original_direct_gtd_no": 0.6291879302895659,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.31596174330972415,
+            "FINISH_ROUND_2": 0.191482497191462,
+            "FINISH_ROUND_3": 0.12174368978837974,
+            "GTD_NO": 0.6291879302895659,
+            "GTD_YES": 0.3708120697104341,
+            "OVER_0.5": 0.8213934204866059,
+            "OVER_1.5": 0.5770007616597522,
+            "OVER_2.5": 0.42516672789779125,
+            "ROUND_2_STARTS_NO": 0.31596174330972415,
+            "ROUND_2_STARTS_YES": 0.6840382566902758,
+            "ROUND_3_STARTS_NO": 0.5074442405011861,
+            "ROUND_3_STARTS_YES": 0.49255575949881386,
+            "UNDER_0.5": 0.1786065795133941,
+            "UNDER_1.5": 0.4229992383402478,
+            "UNDER_2.5": 0.5748332721022087
+          },
+          "original_frozen_fighter_pick": "Ikram Aliskerov",
+          "original_frozen_winner_p_a": 0.20873621121025038,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Ikram Aliskerov",
+              "selected_method_conditional_probability": 0.5093839752847453,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Ikram Aliskerov",
+              "selected_method_conditional_probability": 0.5093839752847453,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Ikram Aliskerov",
+              "selected_method_conditional_probability": 0.4735962468823522,
+              "selected_method_given_frozen_winner": "KO"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        }
+      },
+      "original_stage_a_posture": "SIDE",
+      "scheduled_rounds": 3
+    },
+    {
+      "a": "Kyoji Horiguchi",
+      "b": "Asu Almabayev",
+      "bet_authorized": false,
+      "fight_no": 8,
+      "models": {
+        "historical": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.23701017722766102,
+              "A_KO": 0.09786044445832685,
+              "A_SUB": 0.03121693165081653,
+              "B_DEC": 0.3869445715124203,
+              "B_KO": 0.06360317861692326,
+              "B_SUB": 0.183364696533852
+            },
+            "winner_aligned": {
+              "A_DEC": 0.2723373929250731,
+              "A_KO": 0.11244689416298725,
+              "A_SUB": 0.035869927107549424,
+              "B_DEC": 0.3536367017647669,
+              "B_KO": 0.05812826943127724,
+              "B_SUB": 0.16758081460834606
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.23165817449662837,
+              "A_KO": 0.14328797968566523,
+              "A_SUB": 0.04570806001331618,
+              "B_DEC": 0.29617046710572165,
+              "B_KO": 0.07292790758352626,
+              "B_SUB": 0.2102474111151423
+            }
+          },
+          "original_direct_gtd_no": 0.4721713583981797,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.21786407469300306,
+            "FINISH_ROUND_1_NO": 0.7821359253069969,
+            "FINISH_ROUND_2": 0.14904324794984614,
+            "FINISH_ROUND_2_NO": 0.8509567520501539,
+            "FINISH_ROUND_3": 0.1052640357553305,
+            "FINISH_ROUND_3_NO": 0.8947359642446695,
+            "GTD_NO": 0.4721713583981797,
+            "GTD_YES": 0.5278286416018203,
+            "OVER_0.5": 0.8803133990228026,
+            "OVER_1.5": 0.7008867283658324,
+            "OVER_2.5": 0.5760929006484773,
+            "ROUND_2_STARTS_NO": 0.21786407469300306,
+            "ROUND_2_STARTS_YES": 0.7821359253069969,
+            "ROUND_3_STARTS_NO": 0.3669073226428492,
+            "ROUND_3_STARTS_YES": 0.6330926773571508,
+            "UNDER_0.5": 0.11968660097719741,
+            "UNDER_1.5": 0.29911327163416757,
+            "UNDER_2.5": 0.4239070993515227
+          },
+          "original_frozen_fighter_pick": "Asu Almabayev",
+          "original_frozen_winner_p_a": 0.42065421419560983,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Asu Almabayev",
+              "selected_method_conditional_probability": 0.6104069632158652,
+              "selected_method_given_frozen_winner": "DEC"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Asu Almabayev",
+              "selected_method_conditional_probability": 0.6104069632158652,
+              "selected_method_given_frozen_winner": "DEC"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Asu Almabayev",
+              "selected_method_conditional_probability": 0.511215364576278,
+              "selected_method_given_frozen_winner": "DEC"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "reference": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.3015922350177431,
+              "A_KO": 0.2305981208663537,
+              "A_SUB": 0.05068986375663839,
+              "B_DEC": 0.20178780090226456,
+              "B_KO": 0.07727489205357542,
+              "B_SUB": 0.13805708740342482
+            },
+            "winner_aligned": {
+              "A_DEC": 0.3015922350177431,
+              "A_KO": 0.2305981208663537,
+              "A_SUB": 0.05068986375663839,
+              "B_DEC": 0.20178780090226456,
+              "B_KO": 0.07727489205357542,
+              "B_SUB": 0.13805708740342482
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.38681926328490485,
+              "A_KO": 0.16072953905767062,
+              "A_SUB": 0.035331417298159716,
+              "B_DEC": 0.26401377852617386,
+              "B_KO": 0.054944229808509285,
+              "B_SUB": 0.09816177202458162
+            }
+          },
+          "original_direct_gtd_no": 0.34916695818876975,
+          "original_direct_timing_markets_untouched": {
+            "GTD_NO": 0.34916695818876975,
+            "GTD_YES": 0.6508330418112303,
+            "OVER_0.5": 0.9183444115295938,
+            "OVER_1.5": 0.7881486240896043,
+            "OVER_2.5": 0.6905465029830801,
+            "ROUND_2_STARTS_NO": 0.1515980698002003,
+            "ROUND_2_STARTS_YES": 0.8484019301997997,
+            "ROUND_3_STARTS_NO": 0.26403478967261806,
+            "ROUND_3_STARTS_YES": 0.7359652103273819,
+            "UNDER_0.5": 0.08165558847040622,
+            "UNDER_1.5": 0.2118513759103957,
+            "UNDER_2.5": 0.30945349701691993
+          },
+          "original_frozen_fighter_pick": "Kyoji Horiguchi",
+          "original_frozen_winner_p_a": 0.5828802196407352,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Kyoji Horiguchi",
+              "selected_method_conditional_probability": 0.5174171722684858,
+              "selected_method_given_frozen_winner": "DEC"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Kyoji Horiguchi",
+              "selected_method_conditional_probability": 0.5174171722684858,
+              "selected_method_given_frozen_winner": "DEC"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Kyoji Horiguchi",
+              "selected_method_conditional_probability": 0.6636342257819715,
+              "selected_method_given_frozen_winner": "DEC"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "unified": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.26794079284758404,
+              "A_KO": 0.13938861705007838,
+              "A_SUB": 0.03866929130113379,
+              "B_DEC": 0.31307109484597817,
+              "B_KO": 0.07066682401636484,
+              "B_SUB": 0.17026337993886076
+            },
+            "winner_aligned": {
+              "A_DEC": 0.2818309868697931,
+              "A_KO": 0.14661459751664488,
+              "A_SUB": 0.04067392804631058,
+              "B_DEC": 0.3000053173786621,
+              "B_KO": 0.06771759934465231,
+              "B_SUB": 0.16315757084393714
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.30048712816025036,
+              "A_KO": 0.13201005813927327,
+              "A_SUB": 0.03662232613322492,
+              "B_DEC": 0.3217668801722123,
+              "B_KO": 0.06133475276499025,
+              "B_SUB": 0.14777885463004886
+            }
+          },
+          "original_direct_gtd_no": 0.3777459916674366,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.1662358210475119,
+            "FINISH_ROUND_2": 0.1211544577488074,
+            "FINISH_ROUND_3": 0.09035571287111732,
+            "GTD_NO": 0.3777459916674366,
+            "GTD_YES": 0.6222540083325634,
+            "OVER_0.5": 0.9100734902820791,
+            "OVER_1.5": 0.7685954884385194,
+            "OVER_2.5": 0.6642468116526943,
+            "ROUND_2_STARTS_NO": 0.1662358210475119,
+            "ROUND_2_STARTS_YES": 0.8337641789524881,
+            "ROUND_3_STARTS_NO": 0.2873902787963193,
+            "ROUND_3_STARTS_YES": 0.7126097212036807,
+            "UNDER_0.5": 0.08992650971792093,
+            "UNDER_1.5": 0.23140451156148056,
+            "UNDER_2.5": 0.3357531883473057
+          },
+          "original_frozen_fighter_pick": "Asu Almabayev",
+          "original_frozen_winner_p_a": 0.4691195124327486,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Asu Almabayev",
+              "selected_method_conditional_probability": 0.5651089546602664,
+              "selected_method_given_frozen_winner": "DEC"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Asu Almabayev",
+              "selected_method_conditional_probability": 0.5651089546602666,
+              "selected_method_given_frozen_winner": "DEC"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Asu Almabayev",
+              "selected_method_conditional_probability": 0.6061004081101232,
+              "selected_method_given_frozen_winner": "DEC"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        }
+      },
+      "original_stage_a_posture": "PASS",
+      "scheduled_rounds": 3
+    },
+    {
+      "a": "Dan Hooker",
+      "b": "Brian Ortega",
+      "bet_authorized": false,
+      "fight_no": 9,
+      "models": {
+        "historical": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.21387012031771752,
+              "A_KO": 0.20274660422015767,
+              "A_SUB": 0.12040952618991518,
+              "B_DEC": 0.16452341662210324,
+              "B_KO": 0.1104122730858478,
+              "B_SUB": 0.18803805956425867
+            },
+            "winner_aligned": {
+              "A_DEC": 0.23764195729664286,
+              "A_KO": 0.22528205338151025,
+              "A_SUB": 0.13379314248490812,
+              "B_DEC": 0.14331152021254395,
+              "B_KO": 0.09617689099175673,
+              "B_SUB": 0.16379443563263815
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.3095268180529755,
+              "A_KO": 0.18018183697933043,
+              "A_SUB": 0.10700849813075526,
+              "B_DEC": 0.19077497902892268,
+              "B_KO": 0.07861769335274203,
+              "B_SUB": 0.13389017445527407
+            }
+          },
+          "original_direct_gtd_no": 0.49969820291617406,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.23378379399532534,
+            "FINISH_ROUND_1_NO": 0.7662162060046747,
+            "FINISH_ROUND_2": 0.15690607482595342,
+            "FINISH_ROUND_2_NO": 0.8430939251740466,
+            "FINISH_ROUND_3": 0.1090083340948953,
+            "FINISH_ROUND_3_NO": 0.8909916659051047,
+            "GTD_NO": 0.49969820291617406,
+            "GTD_YES": 0.5003017970838259,
+            "OVER_0.5": 0.8709764028508057,
+            "OVER_1.5": 0.6803381130733774,
+            "OVER_2.5": 0.5500775682878863,
+            "ROUND_2_STARTS_NO": 0.23378379399532534,
+            "ROUND_2_STARTS_YES": 0.7662162060046747,
+            "ROUND_3_STARTS_NO": 0.39068986882127876,
+            "ROUND_3_STARTS_YES": 0.6093101311787212,
+            "UNDER_0.5": 0.1290235971491943,
+            "UNDER_1.5": 0.31966188692662256,
+            "UNDER_2.5": 0.44992243171211366
+          },
+          "original_frozen_fighter_pick": "Dan Hooker",
+          "original_frozen_winner_p_a": 0.5967171531630612,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Dan Hooker",
+              "selected_method_conditional_probability": 0.39824891246540706,
+              "selected_method_given_frozen_winner": "DEC"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Dan Hooker",
+              "selected_method_conditional_probability": 0.3982489124654071,
+              "selected_method_given_frozen_winner": "DEC"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Dan Hooker",
+              "selected_method_conditional_probability": 0.518716139484586,
+              "selected_method_given_frozen_winner": "DEC"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "reference": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.1940001625501956,
+              "A_KO": 0.309003011142109,
+              "A_SUB": 0.048946016112500136,
+              "B_DEC": 0.15889454745761367,
+              "B_KO": 0.20439213060546987,
+              "B_SUB": 0.0847641321321118
+            },
+            "winner_aligned": {
+              "A_DEC": 0.19400016255019553,
+              "A_KO": 0.30900301114210893,
+              "A_SUB": 0.04894601611250012,
+              "B_DEC": 0.15889454745761367,
+              "B_KO": 0.20439213060546987,
+              "B_SUB": 0.0847641321321118
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.29019542076405525,
+              "A_KO": 0.2259615103070412,
+              "A_SUB": 0.03579225873370827,
+              "B_DEC": 0.23711098563513436,
+              "B_KO": 0.14910429317072263,
+              "B_SUB": 0.06183553138933831
+            }
+          },
+          "original_direct_gtd_no": 0.4726935936008101,
+          "original_direct_timing_markets_untouched": {
+            "GTD_NO": 0.4726935936008101,
+            "GTD_YES": 0.5273064063991899,
+            "OVER_0.5": 0.8808675242652614,
+            "OVER_1.5": 0.7014467113236225,
+            "OVER_2.5": 0.5759926174646268,
+            "ROUND_2_STARTS_NO": 0.2171764878607254,
+            "ROUND_2_STARTS_YES": 0.7828235121392746,
+            "ROUND_3_STARTS_NO": 0.36663237897609857,
+            "ROUND_3_STARTS_YES": 0.6333676210239014,
+            "UNDER_0.5": 0.11913247573473862,
+            "UNDER_1.5": 0.29855328867637754,
+            "UNDER_2.5": 0.4240073825353732
+          },
+          "original_frozen_fighter_pick": "Dan Hooker",
+          "original_frozen_winner_p_a": 0.5519491898048047,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Dan Hooker",
+              "selected_method_conditional_probability": 0.5598395954732481,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Dan Hooker",
+              "selected_method_conditional_probability": 0.5598395954732484,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Dan Hooker",
+              "selected_method_conditional_probability": 0.5257647372698961,
+              "selected_method_given_frozen_winner": "DEC"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "unified": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.21245545790905745,
+              "A_KO": 0.24466976007828645,
+              "A_SUB": 0.08852283654982683,
+              "B_DEC": 0.1673233241562631,
+              "B_KO": 0.14332046037450163,
+              "B_SUB": 0.14370816093206454
+            },
+            "winner_aligned": {
+              "A_DEC": 0.2271624312068324,
+              "A_KO": 0.26160672966079845,
+              "A_SUB": 0.09465072333698993,
+              "B_DEC": 0.15341316450462153,
+              "B_KO": 0.131405740802625,
+              "B_SUB": 0.13176121048813272
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.30918030374507205,
+              "A_KO": 0.20137942149386373,
+              "A_SUB": 0.07286015896568507,
+              "B_DEC": 0.21144092530366745,
+              "B_KO": 0.1024310505631521,
+              "B_SUB": 0.10270813992855965
+            }
+          },
+          "original_direct_gtd_no": 0.4793787709512526,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.2212328593718259,
+            "FINISH_ROUND_2": 0.15131931805129606,
+            "FINISH_ROUND_3": 0.10682659352813062,
+            "GTD_NO": 0.4793787709512526,
+            "GTD_YES": 0.5206212290487474,
+            "OVER_0.5": 0.8784619866871531,
+            "OVER_1.5": 0.6962707722048825,
+            "OVER_2.5": 0.5695954765877466,
+            "ROUND_2_STARTS_NO": 0.2212328593718259,
+            "ROUND_2_STARTS_YES": 0.7787671406281741,
+            "ROUND_3_STARTS_NO": 0.37255217742312197,
+            "ROUND_3_STARTS_YES": 0.627447822576878,
+            "UNDER_0.5": 0.12153801331284686,
+            "UNDER_1.5": 0.30372922779511746,
+            "UNDER_2.5": 0.43040452341225344
+          },
+          "original_frozen_fighter_pick": "Dan Hooker",
+          "original_frozen_winner_p_a": 0.5834198842046208,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Dan Hooker",
+              "selected_method_conditional_probability": 0.4484021486813879,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Dan Hooker",
+              "selected_method_conditional_probability": 0.4484021486813879,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Dan Hooker",
+              "selected_method_conditional_probability": 0.529944748397767,
+              "selected_method_given_frozen_winner": "DEC"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        }
+      },
+      "original_stage_a_posture": "PASS",
+      "scheduled_rounds": 3
+    },
+    {
+      "a": "Aljamain Sterling",
+      "b": "Kevin Vallejos",
+      "bet_authorized": false,
+      "fight_no": 10,
+      "models": {
+        "historical": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.25249126022068596,
+              "A_KO": 0.04935778258607363,
+              "A_SUB": 0.09352204585053295,
+              "B_DEC": 0.3052975267685417,
+              "B_KO": 0.2556541348631575,
+              "B_SUB": 0.04367724971100837
+            },
+            "winner_aligned": {
+              "A_DEC": 0.21973929725855929,
+              "A_KO": 0.04295532625654028,
+              "A_SUB": 0.08139081176677981,
+              "B_DEC": 0.33119338262408077,
+              "B_KO": 0.2773391537211978,
+              "B_SUB": 0.047382028372841944
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.2026603407297251,
+              "A_KO": 0.048855245316991945,
+              "A_SUB": 0.09256984923516229,
+              "B_DEC": 0.2969148787100587,
+              "B_KO": 0.30661587415266783,
+              "B_SUB": 0.05238381185539411
+            }
+          },
+          "original_direct_gtd_no": 0.5004247805613494,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.23421116983309365,
+            "FINISH_ROUND_1_NO": 0.7657888301669064,
+            "FINISH_ROUND_2": 0.1571113875172725,
+            "FINISH_ROUND_2_NO": 0.8428886124827275,
+            "FINISH_ROUND_3": 0.10910222321098328,
+            "FINISH_ROUND_3_NO": 0.8908977767890167,
+            "GTD_NO": 0.5004247805613494,
+            "GTD_YES": 0.4995752194386506,
+            "OVER_0.5": 0.8707244731992076,
+            "OVER_1.5": 0.679789060739337,
+            "OVER_2.5": 0.5493882885605449,
+            "ROUND_2_STARTS_NO": 0.23421116983309365,
+            "ROUND_2_STARTS_YES": 0.7657888301669064,
+            "ROUND_3_STARTS_NO": 0.39132255735036614,
+            "ROUND_3_STARTS_YES": 0.6086774426496339,
+            "UNDER_0.5": 0.12927552680079235,
+            "UNDER_1.5": 0.320210939260663,
+            "UNDER_2.5": 0.4506117114394551
+          },
+          "original_frozen_fighter_pick": "Kevin Vallejos",
+          "original_frozen_winner_p_a": 0.34408543528187935,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Kevin Vallejos",
+              "selected_method_conditional_probability": 0.5049337222240388,
+              "selected_method_given_frozen_winner": "DEC"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Kevin Vallejos",
+              "selected_method_conditional_probability": 0.5049337222240388,
+              "selected_method_given_frozen_winner": "DEC"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Kevin Vallejos",
+              "selected_method_conditional_probability": 0.4674631280438727,
+              "selected_method_given_frozen_winner": "KO"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "reference": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.14055463467071144,
+              "A_KO": 0.11373024673080039,
+              "A_SUB": 0.07579203748245462,
+              "B_DEC": 0.18695331470027818,
+              "B_KO": 0.4421027410474553,
+              "B_SUB": 0.04086702536830007
+            },
+            "winner_aligned": {
+              "A_DEC": 0.14055463467071144,
+              "A_KO": 0.11373024673080039,
+              "A_SUB": 0.07579203748245462,
+              "B_DEC": 0.18695331470027818,
+              "B_KO": 0.4421027410474553,
+              "B_SUB": 0.04086702536830007
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.2188032024777618,
+              "A_KO": 0.06677413832397064,
+              "A_SUB": 0.04449957808223402,
+              "B_DEC": 0.3393149317846297,
+              "B_KO": 0.3026333720985313,
+              "B_SUB": 0.02797477723287249
+            }
+          },
+          "original_direct_gtd_no": 0.4418818657370147,
+          "original_direct_timing_markets_untouched": {
+            "GTD_NO": 0.4418818657370147,
+            "GTD_YES": 0.5581181342629853,
+            "OVER_0.5": 0.8908216917517481,
+            "OVER_1.5": 0.7238485521876331,
+            "OVER_2.5": 0.6048816940275444,
+            "ROUND_2_STARTS_NO": 0.2000046293014971,
+            "ROUND_2_STARTS_YES": 0.7999953706985029,
+            "ROUND_3_STARTS_NO": 0.3404532901127102,
+            "ROUND_3_STARTS_YES": 0.6595467098872898,
+            "UNDER_0.5": 0.10917830824825192,
+            "UNDER_1.5": 0.2761514478123669,
+            "UNDER_2.5": 0.39511830597245556
+          },
+          "original_frozen_fighter_pick": "Kevin Vallejos",
+          "original_frozen_winner_p_a": 0.33007691888396645,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Kevin Vallejos",
+              "selected_method_conditional_probability": 0.6599306002577947,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Kevin Vallejos",
+              "selected_method_conditional_probability": 0.6599306002577947,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Kevin Vallejos",
+              "selected_method_conditional_probability": 0.5064983448836552,
+              "selected_method_given_frozen_winner": "DEC"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "unified": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.2095731511674786,
+              "A_KO": 0.0697895670648776,
+              "A_SUB": 0.08936548739314812,
+              "B_DEC": 0.2626284244172761,
+              "B_KO": 0.3245965891250056,
+              "B_SUB": 0.04404678083221401
+            },
+            "winner_aligned": {
+              "A_DEC": 0.19316139788850148,
+              "A_KO": 0.06432431949029642,
+              "A_SUB": 0.08236724204262691,
+              "B_DEC": 0.2746414122979599,
+              "B_KO": 0.33944408668709164,
+              "B_SUB": 0.04606154159352373
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.21836417144667247,
+              "A_KO": 0.05327289130004204,
+              "A_SUB": 0.06821589667471034,
+              "B_DEC": 0.32546248922412085,
+              "B_KO": 0.2946952872503738,
+              "B_SUB": 0.039989264104080546
+            }
+          },
+          "original_direct_gtd_no": 0.45617333932393245,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.20813247015716962,
+            "FINISH_ROUND_2": 0.14458710376157013,
+            "FINISH_ROUND_3": 0.10345376540519269,
+            "GTD_NO": 0.45617333932393245,
+            "GTD_YES": 0.5438266606760676,
+            "OVER_0.5": 0.8860863598871218,
+            "OVER_1.5": 0.7132987542563533,
+            "OVER_2.5": 0.591414077587984,
+            "ROUND_2_STARTS_NO": 0.20813247015716962,
+            "ROUND_2_STARTS_YES": 0.7918675298428304,
+            "ROUND_3_STARTS_NO": 0.35271957391873976,
+            "ROUND_3_STARTS_YES": 0.6472804260812602,
+            "UNDER_0.5": 0.11391364011287819,
+            "UNDER_1.5": 0.28670124574364675,
+            "UNDER_2.5": 0.40858592241201597
+          },
+          "original_frozen_fighter_pick": "Kevin Vallejos",
+          "original_frozen_winner_p_a": 0.33985295942142485,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Kevin Vallejos",
+              "selected_method_conditional_probability": 0.5141946654636085,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Kevin Vallejos",
+              "selected_method_conditional_probability": 0.5141946654636085,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Kevin Vallejos",
+              "selected_method_conditional_probability": 0.4930151454422556,
+              "selected_method_given_frozen_winner": "DEC"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        }
+      },
+      "original_stage_a_posture": "LEAN",
+      "scheduled_rounds": 3
+    },
+    {
+      "a": "Jiri Prochazka",
+      "b": "Navajo Stirling",
+      "bet_authorized": false,
+      "fight_no": 11,
+      "models": {
+        "historical": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.08384088680618444,
+              "A_KO": 0.18001696132580322,
+              "A_SUB": 0.06174673850759949,
+              "B_DEC": 0.18184368551323998,
+              "B_KO": 0.45266913186948393,
+              "B_SUB": 0.039882595977688944
+            },
+            "winner_aligned": {
+              "A_DEC": 0.08547422935067311,
+              "A_KO": 0.18352395383105566,
+              "A_SUB": 0.06294965487489679,
+              "B_DEC": 0.18013329396406896,
+              "B_KO": 0.4484114010852947,
+              "B_SUB": 0.03950746689401078
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.027971829525824284,
+              "A_KO": 0.22634017186769123,
+              "A_SUB": 0.07763583666311005,
+              "B_DEC": 0.05960541876087222,
+              "B_KO": 0.5591799672068068,
+              "B_SUB": 0.04926677597569549
+            }
+          },
+          "original_direct_gtd_no": 0.9124227517133602,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.44830530668638047,
+            "FINISH_ROUND_1_NO": 0.5516946933136195,
+            "FINISH_ROUND_2": 0.22870732364239504,
+            "FINISH_ROUND_2_NO": 0.7712926763576049,
+            "FINISH_ROUND_3": 0.12348534273204911,
+            "FINISH_ROUND_3_NO": 0.8765146572679509,
+            "FINISH_ROUND_4": 0.0701704697044078,
+            "FINISH_ROUND_4_NO": 0.9298295302955922,
+            "FINISH_ROUND_5": 0.04175430894812773,
+            "FINISH_ROUND_5_NO": 0.9582456910518723,
+            "GTD_NO": 0.9124227517133602,
+            "GTD_YES": 0.08757724828663985,
+            "OVER_0.5": 0.7369859150818778,
+            "OVER_1.5": 0.41916155364385527,
+            "OVER_2.5": 0.2522346552841541,
+            "OVER_3.5": 0.1597112051726847,
+            "OVER_4.5": 0.10587732799831548,
+            "ROUND_2_STARTS_NO": 0.44830530668638047,
+            "ROUND_2_STARTS_YES": 0.5516946933136195,
+            "ROUND_3_STARTS_NO": 0.6770126303287756,
+            "ROUND_3_STARTS_YES": 0.3229873696712245,
+            "ROUND_4_STARTS_NO": 0.8004979730608246,
+            "ROUND_4_STARTS_YES": 0.19950202693917538,
+            "ROUND_5_STARTS_NO": 0.8706684427652325,
+            "ROUND_5_STARTS_YES": 0.12933155723476758,
+            "UNDER_0.5": 0.26301408491812217,
+            "UNDER_1.5": 0.5808384463561447,
+            "UNDER_2.5": 0.7477653447158459,
+            "UNDER_3.5": 0.8402887948273153,
+            "UNDER_4.5": 0.8941226720016845
+          },
+          "original_frozen_fighter_pick": "Navajo Stirling",
+          "original_frozen_winner_p_a": 0.33194783805662553,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Navajo Stirling",
+              "selected_method_conditional_probability": 0.6712221389731885,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Navajo Stirling",
+              "selected_method_conditional_probability": 0.6712221389731885,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Navajo Stirling",
+              "selected_method_conditional_probability": 0.8370303983152203,
+              "selected_method_given_frozen_winner": "KO"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "reference": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.06752700969673903,
+              "A_KO": 0.32561569072470736,
+              "A_SUB": 0.04370646286775657,
+              "B_DEC": 0.09431121922276714,
+              "B_KO": 0.4453364577101977,
+              "B_SUB": 0.023503159777832183
+            },
+            "winner_aligned": {
+              "A_DEC": 0.06752700969673903,
+              "A_KO": 0.32561569072470736,
+              "A_SUB": 0.04370646286775657,
+              "B_DEC": 0.09431121922276714,
+              "B_KO": 0.4453364577101977,
+              "B_SUB": 0.023503159777832183
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.11721935635007844,
+              "A_KO": 0.2818040546723694,
+              "A_SUB": 0.037825752266755185,
+              "B_DEC": 0.16189682846181508,
+              "B_KO": 0.38113894818238636,
+              "B_SUB": 0.020115060066595577
+            }
+          },
+          "original_direct_gtd_no": 0.7208838151881017,
+          "original_direct_timing_markets_untouched": {
+            "GTD_NO": 0.7208838151881017,
+            "GTD_YES": 0.27911618481189826,
+            "OVER_0.5": 0.8502277393704296,
+            "OVER_1.5": 0.6308716622167938,
+            "OVER_2.5": 0.4832075477173297,
+            "OVER_3.5": 0.38077116015296414,
+            "OVER_4.5": 0.30777376318954563,
+            "ROUND_2_STARTS_NO": 0.2706802813035648,
+            "ROUND_2_STARTS_YES": 0.7293197186964352,
+            "ROUND_3_STARTS_NO": 0.44994230224917786,
+            "ROUND_3_STARTS_YES": 0.5500576977508221,
+            "ROUND_4_STARTS_NO": 0.5724949385369036,
+            "ROUND_4_STARTS_YES": 0.42750506146309636,
+            "ROUND_5_STARTS_NO": 0.6586939076584564,
+            "ROUND_5_STARTS_YES": 0.34130609234154363,
+            "UNDER_0.5": 0.1497722606295704,
+            "UNDER_1.5": 0.3691283377832062,
+            "UNDER_2.5": 0.5167924522826703,
+            "UNDER_3.5": 0.6192288398470358,
+            "UNDER_4.5": 0.6922262368104544
+          },
+          "original_frozen_fighter_pick": "Navajo Stirling",
+          "original_frozen_winner_p_a": 0.436849163289203,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Navajo Stirling",
+              "selected_method_conditional_probability": 0.7907942751382215,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Navajo Stirling",
+              "selected_method_conditional_probability": 0.7907942751382215,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Navajo Stirling",
+              "selected_method_conditional_probability": 0.6767972687539806,
+              "selected_method_given_frozen_winner": "KO"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "unified": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.0787920721735672,
+              "A_KO": 0.22914159227017133,
+              "A_SUB": 0.05528495054647399,
+              "B_DEC": 0.14489092620168267,
+              "B_KO": 0.45855315137445435,
+              "B_SUB": 0.033337307433650536
+            },
+            "winner_aligned": {
+              "A_DEC": 0.07857453729025345,
+              "A_KO": 0.22850896149702682,
+              "A_SUB": 0.055132315834194284,
+              "B_DEC": 0.14511909975958212,
+              "B_KO": 0.4592752787483209,
+              "B_SUB": 0.03338980687062243
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.07830612581901508,
+              "A_KO": 0.22872520092142817,
+              "A_SUB": 0.0551844878810313,
+              "B_DEC": 0.1446300647732206,
+              "B_KO": 0.45973116995359425,
+              "B_SUB": 0.033422950651710706
+            }
+          },
+          "original_direct_gtd_no": 0.7770638094077669,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.3093354242333878,
+            "FINISH_ROUND_2": 0.19479105201612162,
+            "FINISH_ROUND_3": 0.1272579420333984,
+            "FINISH_ROUND_4": 0.08592449034173588,
+            "FINISH_ROUND_5": 0.05975490078312312,
+            "GTD_NO": 0.7770638094077669,
+            "GTD_YES": 0.22293619059223319,
+            "OVER_0.5": 0.8268241330059249,
+            "OVER_1.5": 0.5825421589286546,
+            "OVER_2.5": 0.4257812366797382,
+            "OVER_3.5": 0.32161945666627056,
+            "OVER_4.5": 0.25021434817099464,
+            "ROUND_2_STARTS_NO": 0.3093354242333878,
+            "ROUND_2_STARTS_YES": 0.6906645757666122,
+            "ROUND_3_STARTS_NO": 0.5041264762495095,
+            "ROUND_3_STARTS_YES": 0.4958735237504906,
+            "ROUND_4_STARTS_NO": 0.6313844182829078,
+            "ROUND_4_STARTS_YES": 0.3686155817170922,
+            "ROUND_5_STARTS_NO": 0.7173089086246437,
+            "ROUND_5_STARTS_YES": 0.2826910913753563,
+            "UNDER_0.5": 0.17317586699407506,
+            "UNDER_1.5": 0.4174578410713454,
+            "UNDER_2.5": 0.5742187633202618,
+            "UNDER_3.5": 0.6783805433337294,
+            "UNDER_4.5": 0.7497856518290054
+          },
+          "original_frozen_fighter_pick": "Navajo Stirling",
+          "original_frozen_winner_p_a": 0.36221581462147456,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Navajo Stirling",
+              "selected_method_conditional_probability": 0.7201107980997375,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Navajo Stirling",
+              "selected_method_conditional_probability": 0.7201107980997375,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "Navajo Stirling",
+              "selected_method_conditional_probability": 0.7208256029125955,
+              "selected_method_given_frozen_winner": "KO"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        }
+      },
+      "original_stage_a_posture": "LEAN",
+      "scheduled_rounds": 5
+    },
+    {
+      "a": "John Mitchell",
+      "b": "Shoaib Yousaf",
+      "bet_authorized": false,
+      "fight_no": 12,
+      "models": {
+        "historical": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.13710257576839233,
+              "A_KO": 0.23259180221879774,
+              "A_SUB": 0.13030562201280993,
+              "B_DEC": 0.13710257576839233,
+              "B_KO": 0.23259180221879774,
+              "B_SUB": 0.13030562201280993
+            },
+            "winner_aligned": {
+              "A_DEC": 0.13710257576839233,
+              "A_KO": 0.23259180221879774,
+              "A_SUB": 0.13030562201280993,
+              "B_DEC": 0.13710257576839233,
+              "B_KO": 0.23259180221879774,
+              "B_SUB": 0.13030562201280993
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.10478570142526733,
+              "A_KO": 0.25330465258267526,
+              "A_SUB": 0.1419096459920574,
+              "B_DEC": 0.10478570142526733,
+              "B_KO": 0.25330465258267526,
+              "B_SUB": 0.1419096459920574
+            }
+          },
+          "original_direct_gtd_no": 0.7904285971494653,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.45101290445940834,
+            "FINISH_ROUND_1_NO": 0.5489870955405917,
+            "FINISH_ROUND_2": 0.22168764764421384,
+            "FINISH_ROUND_2_NO": 0.7783123523557862,
+            "FINISH_ROUND_3": 0.11772804504584322,
+            "FINISH_ROUND_3_NO": 0.8822719549541568,
+            "GTD_NO": 0.7904285971494653,
+            "GTD_YES": 0.2095714028505346,
+            "OVER_0.5": 0.7327840611162953,
+            "OVER_1.5": 0.41984848887221105,
+            "OVER_2.5": 0.25974020533357634,
+            "ROUND_2_STARTS_NO": 0.45101290445940834,
+            "ROUND_2_STARTS_YES": 0.5489870955405917,
+            "ROUND_3_STARTS_NO": 0.6727005521036222,
+            "ROUND_3_STARTS_YES": 0.3272994478963778,
+            "UNDER_0.5": 0.26721593888370465,
+            "UNDER_1.5": 0.580151511127789,
+            "UNDER_2.5": 0.7402597946664237
+          },
+          "original_frozen_fighter_pick": "John Mitchell",
+          "original_frozen_winner_p_a": 0.5,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "John Mitchell",
+              "selected_method_conditional_probability": 0.4651836044375955,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "John Mitchell",
+              "selected_method_conditional_probability": 0.4651836044375955,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "John Mitchell",
+              "selected_method_conditional_probability": 0.5066093051653505,
+              "selected_method_given_frozen_winner": "KO"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "reference": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.06956624603567384,
+              "A_KO": 0.7845994535898554,
+              "A_SUB": 0.11011526630610685,
+              "B_DEC": 0.002576882879520189,
+              "B_KO": 0.0290632456752057,
+              "B_SUB": 0.004078905513638077
+            },
+            "winner_aligned": {
+              "A_DEC": 0.06956624603567384,
+              "A_KO": 0.7845994535898554,
+              "A_SUB": 0.11011526630610685,
+              "B_DEC": 0.002576882879520189,
+              "B_KO": 0.0290632456752057,
+              "B_SUB": 0.004078905513638077
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.12708161173268442,
+              "A_KO": 0.7341626791684593,
+              "A_SUB": 0.10303667503049234,
+              "B_DEC": 0.0047073753183096345,
+              "B_KO": 0.02719495943135594,
+              "B_SUB": 0.0038166993186983917
+            }
+          },
+          "original_direct_gtd_no": 0.8682110129490059,
+          "original_direct_timing_markets_untouched": {
+            "GTD_NO": 0.8682110129490059,
+            "GTD_YES": 0.13178898705099404,
+            "OVER_0.5": 0.6702533931565328,
+            "OVER_1.5": 0.32613330948570046,
+            "OVER_2.5": 0.1745215790739432,
+            "ROUND_2_STARTS_NO": 0.5383677780939912,
+            "ROUND_2_STARTS_YES": 0.46163222190600883,
+            "ROUND_3_STARTS_NO": 0.764056824497331,
+            "ROUND_3_STARTS_YES": 0.235943175502669,
+            "UNDER_0.5": 0.32974660684346724,
+            "UNDER_1.5": 0.6738666905142996,
+            "UNDER_2.5": 0.8254784209260568
+          },
+          "original_frozen_fighter_pick": "John Mitchell",
+          "original_frozen_winner_p_a": 0.964280965931636,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "John Mitchell",
+              "selected_method_conditional_probability": 0.8136626992650611,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "John Mitchell",
+              "selected_method_conditional_probability": 0.8136626992650611,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "John Mitchell",
+              "selected_method_conditional_probability": 0.7613576385998153,
+              "selected_method_given_frozen_winner": "KO"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        },
+        "unified": {
+          "distributions": {
+            "raw_archived": {
+              "A_DEC": 0.1382987817744184,
+              "A_KO": 0.4773972198485573,
+              "A_SUB": 0.15915129571832878,
+              "B_DEC": 0.04018642718088958,
+              "B_KO": 0.1387205900562161,
+              "B_SUB": 0.04624568542158973
+            },
+            "winner_aligned": {
+              "A_DEC": 0.13008590823220814,
+              "A_KO": 0.44904698461355547,
+              "A_SUB": 0.14970009557727793,
+              "B_DEC": 0.04839930072309985,
+              "B_KO": 0.167070825291218,
+              "B_SUB": 0.05569688556264058
+            },
+            "winner_and_timing_aligned": {
+              "A_DEC": 0.10907483533401535,
+              "A_KO": 0.46480482167126924,
+              "A_SUB": 0.15495333141775686,
+              "B_DEC": 0.040581995608856704,
+              "B_KO": 0.17293363014737895,
+              "B_SUB": 0.05765138582072277
+            }
+          },
+          "original_direct_gtd_no": 0.8503431690571279,
+          "original_direct_timing_markets_untouched": {
+            "FINISH_ROUND_1": 0.5159674327581372,
+            "FINISH_ROUND_2": 0.225973263849226,
+            "FINISH_ROUND_3": 0.10840247244976473,
+            "GTD_NO": 0.8503431690571279,
+            "GTD_YES": 0.14965683094287205,
+            "OVER_0.5": 0.6867883941115689,
+            "OVER_1.5": 0.3494678078265768,
+            "OVER_2.5": 0.19460521379343854,
+            "ROUND_2_STARTS_NO": 0.5159674327581372,
+            "ROUND_2_STARTS_YES": 0.4840325672418628,
+            "ROUND_3_STARTS_NO": 0.7419406966073632,
+            "ROUND_3_STARTS_YES": 0.2580593033926368,
+            "UNDER_0.5": 0.3132116058884311,
+            "UNDER_1.5": 0.6505321921734232,
+            "UNDER_2.5": 0.8053947862065615
+          },
+          "original_frozen_fighter_pick": "John Mitchell",
+          "original_frozen_winner_p_a": 0.7288329884230416,
+          "variant_selections": {
+            "raw_archived": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "John Mitchell",
+              "selected_method_conditional_probability": 0.6161178099047734,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "John Mitchell",
+              "selected_method_conditional_probability": 0.6161178099047735,
+              "selected_method_given_frozen_winner": "KO"
+            },
+            "winner_and_timing_aligned": {
+              "bet_authorized": false,
+              "frozen_winner_changed": false,
+              "frozen_winner_pick": "John Mitchell",
+              "selected_method_conditional_probability": 0.6377384518186482,
+              "selected_method_given_frozen_winner": "KO"
+            }
+          },
+          "wager_gate": "UNAPPROVED_SHADOW_ONLY"
+        }
+      },
+      "original_stage_a_posture": "PASS",
+      "scheduled_rounds": 3
+    }
+  ],
+  "generated_at_utc": "2026-11-18T21:31:33.464944+00:00",
+  "historical_results_seen": false,
+  "model_promoted": false,
+  "models_present": [
+    "reference",
+    "historical",
+    "unified"
+  ],
+  "new_model_trained": false,
+  "official_event_page": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+  "original_10000_simulations_unchanged": true,
+  "original_frozen_at_utc": "2026-11-18T21:31:31.338799+00:00",
+  "original_stage_a_and_stage_b_unchanged": true,
+  "original_winner_method_timing_picks_untouched": true,
+  "schema": "WSHL_X_THREE_VIEW_PROSPECTIVE_COHERENCE_SHADOW_LOCK_V1",
+  "shadow_is_frozen_probability_reconciliation_not_new_fighter_model": true,
+  "source_event_manifest_sha256": "50d614348ab66fe57b3997c2777dfcdc14476ec45079413a06f01f78b3fc6dfd",
+  "source_frozen_stage_a_sha256": "eb5b161b2ff2ac541de7319d2047fffc1dc40c5afed5192643649cd5c5fcb277",
+  "source_original_fight_count": 12,
+  "source_raw_sha256": "e5083bd605640e82731d8ee487fb1ac7c4d81d280faaf4f359edbeda1e8c2500",
+  "status": "ODDS_BLIND_PROSPECTIVE_RESEARCH_UNPROMOTED",
+  "timing_scope": "Direct GTD_NO only for joint finish-vs-decision alignment; other pre-fight timing props NOT changed",
+  "utc_event_earliest_start": "2026-11-21T15:00:00+00:00",
+  "variants": [
+    "raw_archived",
+    "winner_aligned",
+    "winner_and_timing_aligned"
+  ],
+  "video_consensus_overlay_changed": false
+}

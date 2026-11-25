@@ -1,0 +1,88 @@
+{
+  "schema": "WSHLX_RESEARCH_OPERATIONAL_REVISION_V1",
+  "registered_date": "2026-11-25",
+  "parent_freeze": "research/config/refreshed_2026-11-25_freeze.json",
+  "validated_code_commit": "fc2e346e88cfee73e92d39301572db1325218dfb",
+  "source_blob_sha1": {
+    "tools/smoke_refreshed_three_view.py": "19732d5704d5ce4ede48f6512578275d80113567",
+    "tools/run_refreshed_three_view_card.py": "22f8afbd38aafcd2e204ae7f574fcedf2f5a5db2",
+    "tools/run_combined_refreshed_research.py": "a2d5925727babf02c336a1a81e1bd6f9c4a85b6a",
+    "tools/refreshed_identity_challenger_panel.py": "c47d806cb28601c6a1c9a33978fd793486e7ee72",
+    "src/wshlx_ufc/refreshed_unified.py": "030238f0d716224912a73ba70a9b55aca278cf92",
+    "src/wshlx_ufc/combined_research_grade.py": "66908107cef96e4429e86f216394089ea700ec1e",
+    "src/wshlx_ufc/combined_research_cumulative.py": "4e310ebaabd26e8d63554cf7753e422e072167a3",
+    "tools/grade_combined_refreshed_research.py": "f0882c576b6b47076ff191d0e8acdb91c35457ec",
+    "data/unified/oof_global_unified_shadow.json": "c22c068ace74d0ad9b5e09ecbe232556b76ba89f",
+    "tools/prospective_physical_overlay.py": "03d21a08417a64bb565f27d833479f8e1ddcf9b3",
+    "tools/audit_riyadh_written_stats.py": "4e440a873283861b9ab7e51d070c3e82454b070d",
+    "research/lineups/ufcriyadh_2026-12-05_physical_observed_2026-11-25.json": "a0e85208f72aa8efe3bdcbbdfb1d5bf436a8ac5c"
+  },
+  "model_configuration_changed": false,
+  "trained_artifacts_changed": false,
+  "original_primary_arms_unchanged": true,
+  "physical_shadow": {
+    "optional": true,
+    "registered_primary_arm": false,
+    "observation_sha256": "d7ec3e1722ec905ef970dc587a892557f81c44a0691d55041b42c04ebdd902b4",
+    "verified_fields": 12
+  },
+  "validation": {
+    "regression": {
+      "run_id": 45676618631,
+      "job_id": 139425745342,
+      "passed": 348,
+      "skipped": 1,
+      "warnings": 3,
+      "failed": 0
+    },
+    "combined": {
+      "run_id": 45676608452,
+      "job_id": 139425709353,
+      "fictional_fights": 14,
+      "graded_fixture_fights": 13,
+      "registered_arms": 13,
+      "dq_excluded": 1,
+      "fixture_rejected_by_real_grader": true,
+      "fixture_rejected_by_real_cumulative": true,
+      "actual_prospective_bouts": 0
+    },
+    "core": {
+      "run_id": 45676608532,
+      "job_id": 139425709644,
+      "fictional_fights": 14,
+      "target_reversal_verified": true
+    },
+    "physical_overlay_run": 45676608395,
+    "historical_benchmark_run": 45676608511,
+    "written_statistics": {
+      "run_id": 45676608452,
+      "claims_matched": 12,
+      "claims_checked": 12,
+      "makhachev_vs_garry": {
+        "td_landed": 7,
+        "td_attempted": 15,
+        "ctrl_seconds": 750
+      }
+    }
+  },
+  "upcoming": {
+    "event_date": "2026-12-05",
+    "provisional_first_fight_utc": "2026-12-05T15:00:00Z",
+    "earliest_lock_if_schedule_unchanged_utc": "2026-12-02T15:00:00Z",
+    "written_matchups": 14,
+    "visual_tape_review_completed": false,
+    "lineup_attested": false,
+    "source_freshness_final_verified": false,
+    "stage_a_locked": false,
+    "stage_b_priced": false
+  },
+  "limitations": [
+    "72-hour window was added; full positive/negative boundary matrix not separately tested",
+    "External pre-event publication proof is caller verified, not independently authenticated by grader",
+    "One skipped regression test and three warnings, including future pandas compatibility warning and invalid escape deprecation",
+    "Written statistics checked against archive, not independently validated live raw source",
+    "Unresolved physical and record discrepancies remain missing or pinned, not imputed",
+    "No actual predictions, no actual prospective grading, no demonstrated accuracy improvement"
+  ],
+  "production_migrated": false
+}

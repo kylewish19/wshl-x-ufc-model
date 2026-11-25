@@ -1,0 +1,364 @@
+# UFC 334 — lessons learned, code changes, and next-model audit queue
+
+Post-event audit date: 2026-11-15. Event Nov14. Predictions and prices frozen Nov11. NO old locks, model coefficients, trained artifacts, or Stage B decisions were rewritten.
+
+## Full grading is complete
+
+- New immutable-source verified outcomes ledger: data/results/ufc334_2026-11-14_verified_outcomes.json (13 fights including a majority draw).
+- New machine-readable complete model/method/timing and priced-research grade: data/results/ufc334_2026-11-14_all_models_grading.json.
+- Public-facing internal score report: reports/ufc334_2026-11-14/STAGE_A_B_POST_EVENT_GRADE.md.
+- Cross-card evidence audit: data/results/ufc334_2026-11-14_two_card_finish_class_diagnostic.json.
+- New reusable post-event diagnostic code: src/wshlx_ufc/finish_class_diagnostics.py.
+- Regression tests: tests/test_ufc334_post_event_grading_integrity.py (freeze hashes, source identity, 13 results, draw, 334 FanDuel quotes, 5+5 research-only settlements, two-card method bias).
+- Stage B 0 official bets; separate virtual research list 3-2 (+1.4497u) and longshots 1-4 (-1.1500u). Combined 4-6 (+0.2997u). Nothing represented as real money staked.
+
+## Model performance lessons (priority ranked)
+
+### P0 — Repeated KO leading-method excess vs actual decisions
+
+Nov7 decisive 14 fights: Reference selected top method KO10 / SUB1 / DEC3; actual KO6 / SUB1 / DEC7.
+Nov14 decisive 12 fights: Reference selected top method KO11 / SUB1 / DEC0; actual KO3 / SUB2 / DEC7.
+Combined 26 decisive fights: **21 KO top labels vs 9 actual KO; 3 DEC top labels vs 14 actual DEC**.
+Reference exact fighter+method: Nov7 5/14 and Nov14 1/12 => 6/26 (23.1%) across these two dates. Reference winners 9/14 + 8/12 = 17/26 (65.4%). Therefore finish-method calibration is a substantially bigger observed problem than the basic fighter winner.
+Important statistical caution: counted most-likely class labels, NOT a full method probability calibration. Must also use conditional-method class-specific Brier/log loss and realized frequencies by confidence bin.
+**Do not silently flip finish-method picks to decisions or manually force a DEC share.** Require time-ordered out-of-sample recalibration comparison across more than these two cards.
+
+### P0 — Shadow winner probability and joint method mass coherence
+
+Frozen Historical shadow standalone winner forecasts vs six-outcome joint mass differ by as much as 17.569 percentage points; Unified by 10.228pp.
+That arithmetic mismatch is a diagnostic/integration issue independent of who won the card. Future model candidate should enforce P(A KO)+P(A SUB)+P(A DEC)=P(A) and the equivalent for B, without inventing post-event probabilities.
+Preserve the Nov11 original raw distributions. Repair the assembly/calibration in a *new challenger/shadow build*, rerun chronology-safe probability validation, and block exact-method betting families until coherent.
+
+### P1 — Fighter opponent quality and defensive counter-matchups
+
+- Johnson/Almeida: Reference Johnson win 85.2%, lost R1 TKO. Review strength of pre-UFC competition, opponent kickboxing quality and counter-striking defense, not just newcomer finish streak.
+- Thompson/Radtke: all three winner models missed; Radtke pressure/grappling vs Thompson technical counter-striking and stand-ups. Review spacing, defensive wrestling, get-up frequency and how much control actually translates to winning rounds.
+- Hasan/Gurule: underestimated ability to wrestle through rounds and neutralize explosive counters; fold non-UFC and UFC opponent competition level and fight-duration experience into OOF evaluations.
+- Borralho/Belgaroui: Reference correct 54.3%, shadows wrong. Evaluate striking-only specialists against experienced wrestlers/multiphase MMA with actual takedown success and control.
+- Elder/Sanches: inexperienced UFC newcomer with 0 prior UFC bouts got favored by shadow models while Elder won 30-26 x3. Apply evidenced uncertainty and minimum-information gates on new fighters; don't blindly use regional KO stats as UFC-level equivalence.
+
+### P1 — Finish hazard and five-round championship pacing
+
+Reference predicted approximately 7.57 of 13 fights to end early, versus only 5. Stage A GTD NO 2-3 vs Over 1.5 rounds 7-1.
+Gane-Hokit GTD No was 81.0% simulated yet the fight went 25 minutes; separate five-round heavyweight late-finish, full-distance, and matchup-specific pacing calibration.
+Do not conflate exact method, fight-distance outcome and round-to-start markets. Enforce method-timing coherence warnings per original six blocked fights; no post hoc gate override.
+
+### P1 — Unanimous model errors and ensemble dependence
+
+All three views favored Johnson, Radtke and Hasan, and all three were wrong. Unified blends the other components, so 3/3 is not three independent confirmations.
+Reference won 8/12 decisive fights versus Historical 6/12, Unified 7/12 and presentation consensus 7/12. No evidence this card supports promoting either shadow.
+The original SIDE model pick tier went 2-0; LEAN went 1-2, PASS 5-2 plus draw. Small samples: evaluate confidence threshold calibration across previous events before changing risk gates.
+
+### P2 — Fight-day context source checks
+
+Terrance McKinney and Juan Diaz missed official weight on Nov13, after the Nov11 original Stage A lock. Never backfill or modify originally frozen inputs with post-lock information.
+Future predeclared fight-day quality audit should flag missed weights, catchweights, opponent changes, late injury/news and lineup changes separately, producing a dated revised scenario only when compliant with odds-blind policy.
+
+### P2 — FanDuel Stage B price realism
+
+Radtke ML +126 and Radtke KO +480 showed purported raw edges but both lost; some inflated raw win probabilities are likely model risk, not bookmaker errors.
+McKinney Round3 starts Yes +640 had a stated 50% shadow simulation chance while McKinney won R1. This was not our Stage A primary timing pick and illustrates possible bad survival hazard modeling.
+Keep original zero-wager gate. Conservative calibrated probability bounds, model/market consistency, verified original screenshot timing and official weigh-ins must precede any future approval.
+The 4-6 research-only 10-pick slate with +0.30u hypothetical net is too small/correlated to validate price-gate ROI. Report best/longshot independently and use original quotes, never current post-fight prices.
+
+## Exact code and training status
+
+**Code updates completed:** verified-result recording, all-view grader output, repeated cross-event finish-class diagnostic, and automated regression assertions in test suite. These are audit/diagnostic code changes, not recalibration or new winner picks.
+**Predictive code/weights today:** unchanged. Reference remains champion, Historical and Unified remain shadows, Stage A and B preserved.
+**Do not overfit:** there is repeated directionality in KO-vs-DEC top labels, but it is insufficient to fit a new probability correction without actual per-fighter/per-round stats and a chronological holdout.
+
+## Mandatory follow-up before predictive change
+
+1. Obtain official UFCStats fighter and per-round UFC334 records (striking, accuracy, TD, control, knockdowns, submission attempts) and review provenance. Do not claim them ingested until verified.
+2. Assemble pre-fight causal opponent-quality and actual defense/get-up features WITHOUT introducing post-event stats as prediction inputs for the same fight.
+3. Investigate six-class conditional method mass vs winner probability mismatch in Historical/Unified; fix forward only as versioned shadow and unit-test constraints.
+4. Run chronological held-out experiments on (a) winner probabilities, (b) conditional method probabilities including decision, (c) timing/finish hazard incl five-round, (d) double chance coherence, with Brier/log-loss and exact hit rates.
+5. Compare champion vs shadow across multiple event dates, repeat significant evidence before any promotion. Never use one card's 12 decisive outcomes alone to retrain confidence blindly.
+6. Continue Stage A odds-blind, then FanDuel-only Stage B. Grade each frozen view and each odds-price research vs approved official bets as separate ledgers.
+
+## Source links
+
+https://www.cbssports.com/ufc/news/ufc-334-fight-card-ciryl-gane-josh-hokit-results-winners/
+https://www.sherdog.com/news/news/UFC-334-Gane-vs-Hokit-playbyplay-results-round-scoring-203625
+https://www.ufc.com/news/official-weigh-results-polymarket-ufc-334-gane-vs-hokit
+
+
+## November 15 additional Stage B audit — all 334 archived quotes
+
+Saved `data/results/ufc334_2026-11-14_all_334_fanduel_markets_settlement_diagnostic.json`
+after the complete Stage A and Top5+Top5 grading. All originally displayed
+FanDuel prices and betting-block decisions remain frozen. The retrospective
+research scoring covers 293 supported quote outcomes (108 W/185 L),
+excludes 24 unmodeled draw quotes, and leaves 17 draw-affected special
+markets unresolved until the actual FanDuel settlement terms are verified.
+This includes multiple complementary and correlated markets per fight,
+**so the 108/185 count is NOT a pick-card hit rate or an actual-bet record**.
+
+In 127 settled quotes with positive uncalibrated raw model EV, 43 settled W
+and 84 L. Mean raw selected-outcome probability was 44.38% versus a
+33.86% observed event frequency in this highly correlated sample. This is
+an exploratory warning that non-calibrated raw EV selection can mislead,
+not proof of a calibrated 10.5 percentage-point population bias.
+Only chronological, matchup-clustered, market-specific probability
+calibration and return simulations may support adjusting Stage B gates.
+
+**Code changes this event remain recording/diagnostic/testing only.
+There is still no champion, shadow weight, market gate, or original prediction
+change.**
+
+
+## November 16 additional data and method challenger follow-up
+
+**UFC334 performance stats acquired and validated — PROVISIONAL secondary mirrors.**
+We now have **13/13 fights, 26 fighter totals (32 columns) and 72 fighter-round
+records**, sourced from UFCStats-derived FightingData and Cage Almanac mirrors.
+Round sig-strike, takedown, knockdown and control sums agree with fighter totals;
+strike target/position aggregates also reconcile. Direct first-party UFCStats
+still returns 502 and a third-party feed differs on Gane/Hokit strike totals.
+The manifest enforces `allow_training=false` until approved source
+reconciliation. See
+`data/raw/ufc334_2026-11-14/INGESTION_MANIFEST_PROVISIONAL.json`,
+`src/wshlx_ufc/post_event_stats_audit.py` and the accompanying regression tests.
+
+**Actual prior-only method correction experiment was run, and rejected.**
+The existing `MethodInterceptCalibrator` was fitted on exactly **153 earlier
+causal graded fights through November 7**, with the Nov14 UFC334 predictions
+and results held completely out of fitting. Its prospective-style shadow
+retained only **1/12** correct Reference fighter+method combinations;
+on the eight correctly predicted Reference winners, method probability
+Brier **worsened 0.7754 → 0.9948** and method log loss **worsened
+1.2247 → 1.6049**. No improvement in top-label method accuracy. It was
+**NOT promoted**; no champion coefficients, predictions, or previously
+frozen outputs changed. The clean holdout study and reproducer live at
+`reports/ufc334_2026-11-14/PRE_NOV14_METHOD_OFFSET_SHADOW_HOLDOUT.json`
+and `tools/benchmark_ufc334_pre_nov14_method_offset_shadow.py`.
+The linked tests pass.
+
+**Before the Nov21 UFC card:** prioritize validating primary UFCStats (or
+formal mirror approval), training only on previous-event stats, designing a
+coherent six-way method/winner *shadow* (currently max discrepancies 17.569pp
+Historical, 10.228pp Unified), adding opponent-quality/defensive
+wrestling/decision-survival features from PRIOR fights, and testing 3- versus
+5-round timing hazard out of time. Do not blindly force extra decisions or
+relax Stage B FanDuel edge/quote/coherence gates. Full checklist:
+`reports/ufc334_2026-11-14/PRE_NEXT_UFC_CARD_READINESS_2026-11-16.md`.
+
+**Code status:** diagnostic/testing and held-out experiment code added,
+but no predictive model promoted, original locks untouched and Stage B
+unchanged.
+
+
+## November 16 continuation — coherent six-method shadow prototype added
+
+Built `src/wshlx_ufc/joint_coherence_shadow.py` and regression tests to
+repair **probability arithmetic** in a *parallel, non-promoted candidate*
+using iterative proportional fitting. Original Stage A odds-blind files
+are hash verified, not rewritten. A standalone pre-fight sidecar generator
+is in `tools/generate_coherent_joint_method_sidecar.py`.
+
+Across 40 decisive fights from Oct24/Nov7/Nov14, combined winner+timing
+constraints improved retrospective six-way Brier/log loss for both Historical
+and Unified, and exact fighter+method research counts Historical 13/40->20/40,
+Unified 14/40->16/40. By contrast winner-only projection worsened scores.
+Historical's Nov14 subset also worsened, and the idea was devised after
+looking at these dates: **no honest prospective success has yet been
+demonstrated, no model promoted, no official wagers authorized.**
+
+Next run this as an isolated, frozen shadow on the future UFC card. Source
+checks and 300-prospective-observation promotion requirements still apply.
+Full reproducible report:
+`reports/ufc334_2026-11-14/THREE_EVENT_COHERENT_METHOD_SHADOW_EXPERIMENT.md`.
+
+
+## November 16 additional opponent-quality development and ablation
+
+**Code added:** `prefight_opponent_quality.py` creates historical UFC-only
+Elo and opponent-strength-of-schedule snapshots strictly before each event;
+`opponent_quality_join.py` matched **all 153/153** causally dated method
+examples to those pre-bout snapshots; opponent-style and Elo feature
+challengers were compared on seven later event dates (89 actual-winner
+conditional method labels). Same-day results are forbidden from entering
+same-day feature snapshots, unknown UFC debutants receive neutral/uncertain
+strength, and past opponents' ratings are held at the date of the past fight.
+
+**Measured result:** causal conditional-method baseline **39/89**
+(Brier 0.604224), intercept-only **49/89** (0.558746),
+opponent-defense-only **49/89** (0.558784),
+opponent-quality-only **49/89** (0.558435),
+quality+defense **48/89** (0.558617). The quality-only improvement over
+intercept was extremely small (Brier 0.000311; logloss 0.000972),
+and combining features lost one hit. These are *given-known-winner*
+oracle metrics, NOT exact winner+method predictions, and the prior-only
+intercept model separately failed on Nov14 UFC334.
+
+**Promotion: REJECTED/PENDING.** No training artifact, champion/reference
+weights, Stage A, Stage B, simulations, or FanDuel approval path changed.
+Model source and new official data provenance gates still apply.
+
+Report and link:
+`reports/ufc334_2026-11-14/OPPONENT_QUALITY_SHADOW_DEVELOPMENT_2026-11-16.md`,
+`reports/ufc334_2026-11-14/QUALITY_AWARE_METHOD_153_7FOLD_RESEARCH_RESULTS.json`.
+CI benchmark: https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/43986253261
+
+
+## November 16 final fighter-selected method benchmark — decisive negative result
+
+Completed a **genuine selected-side retrospective grade** using three
+SHA-verified archived odds-blind Stage A cards (UFC333 Oct24, Vegas124 Nov7,
+UFC334 Nov14). We use each **original model-selected fighter**, rather than
+the actual winning fighter. Historical method calibrators trained only on
+**125 / 139 / 153** previous causal method cases respectively; opponent
+quality features also built strictly from earlier completed UFC fights.
+40 decisive bouts plus one draw.
+
+| Model | Baseline exact fighter+method | Intercept-only exact | Quality-only exact | Baseline 6-state Brier | Quality 6-state Brier |
+|---|---|---|---|---|---|
+| Reference | 9/40 | 6/40 | 6/40 | 0.82084 | 0.88940 |
+| Historical | 13/40 | 13/40 | 12/40 | 0.75924 | 0.80232 |
+| Unified | 14/40 | 13/40 | 11/40 | 0.76488 | 0.81733 |
+
+Thus the apparent prior *actual-winner conditional method* improvement
+was not a real fighter+method improvement. Both models also lost
+six-state log-loss calibration. **REJECT both modifications**, and keep the
+intercept/quality source and test code as a documented failure. Do not
+tune performance from the already-known results. Winner side, original
+Stage A odds-blind locks, 10k simulations, Stage B FanDuel gates and
+original historical predictions all remain unchanged.
+
+Original Historical/Unified source joint arrays have known marginal
+winner-probability inconsistencies. This benchmark compares each
+model's *already-saved conditional method proportions recombined with its
+own saved winner marginal* so the original coherent comparator and
+adjustments share identical winner probabilities. It does not modify
+the raw original six-way arrays.
+
+Complete report:
+`reports/ufc334_2026-11-14/TRUE_SELECTED_FIGHTER_METHOD_BENCHMARK_2026-11-16.md`.
+JSON:
+`reports/ufc334_2026-11-14/SELECTED_FIGHTER_EXACT_METHOD_3CARD_RETROSPECTIVE.json`.
+Reproduced from read-only GitHub research run:
+https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/43987572406
+
+
+## November 16 — full pre-fight finishing-resistance investigation
+
+**Historical data:** A pinned UFCStats-compatible secondary source archive
+through Nov7 reconstructed **8,871 completed UFC fights** (8,850 with both
+fighters' recorded stat rows), **2,773 fighter histories**, and precisely
+date-lagged KO/sub loss, knockdowns absorbed, survival after a knockdown,
+opponent submission threats, takedowns faced, and control conceded. Reversals
+are **NOT** equivalent to direct get-ups and no such count was invented.
+The historical ingest recorded **27 legacy round-format discrepancies** and
+42 individual missing fighter-stat records (not zero-filled).
+
+**UFC334 pre-Nov14 feature availability:** 13/13 original matchups queried,
+25/26 fighters had prior UFC statistics, 20/26 had prior exposure to an
+already established UFC finisher. These retrospective data queries do NOT
+alter any of our November 11 original Stage A inputs.
+
+**Genuine original-selected-fighter methodological result:** A prior-only
+125/139/153 labeled-method fit on the three original Oct24, Nov7 and Nov14
+frozen cards **failed to improve** exact winner+method: Reference baseline
+**9/40** vs resistance **6/40**, Historical **13/40** vs **12/40**, Unified
+**14/40** vs **13/40**. Six-class Brier/log-loss worsened for all three
+families. Original model-selected winners all unchanged.
+
+**Status: REJECT method adjustment, retain historical features.** No
+predictive coefficients/trained model, Stage A/B, FanDuel gates, 10k sims or
+original betting cards changed. A historical resistance indicator is not
+evidence of a predictive lift until out-of-time proper scores and
+frozen selected-fighter exact-method accuracy improve.
+
+New code:
+`src/wshlx_ufc/prefight_finish_resistance.py` and
+`src/wshlx_ufc/resistance_method_shadow.py`.
+Docs/grade:
+`reports/ufc334_2026-11-14/FINISH_RESISTANCE_2026-11-16_RESULTS_AND_DECISION.md`,
+`reports/ufc334_2026-11-14/FINISH_RESISTANCE_SELECTED_FIGHTER_3CARD_RESEARCH.json`.
+CI runs: https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/43988964181
+and https://github.com/kylewish19/wshl-x-ufc-model/actions/runs/43989338994 .
+
+
+## November 16 — separate prospective coherence lock and grader
+
+After earlier historical KO/DEC intercept, opponent-strength and
+finishing-resistance modifications failed genuine chosen-fighter+
+method tests, **no predictor was changed or promoted**. The
+remaining mathematical winner+method+direct-GTD coherence candidate is
+now implemented as a **strict prospective sidecar pathway** with
+independent timing/odds guards:
+
+- Three original frozen views (Reference, Historical, Unified).
+- Read-only original six-way forecasts and reference/historical/unified
+  winner P; 2 constrained projections per view.
+- Direct `GTD_NO` used only to reconcile six-way finish/decision mass;
+  all other original timing props and 10k sims unchanged.
+- Exact raw/final frozen Stage A SHA and fighter/selection identity
+  assertions; latest UFC Nov21 official event-start manifest.
+- A real UTC lock must happen before Nov21 **15:00 UTC** or fail closed.
+  Post-event replay cannot be mislabeled as a real live lock.
+- Separate exclusive-written `data/shadow_locks` file, with all
+  forecast values reconstructed and checked at scoring time to reject
+  post-event editing. Never overwrites Stage A/B or an existing lock.
+- Post-event-only, independently verified results gate scores
+  exact originally selected fighter+method, six-way Brier/log loss,
+  KO/SUB/DEC recall, GTD Brier and explicit draw exclusions.
+- No official predictions are made for Nov21 until the ordinary
+  Stage A card is prepared and frozen; the user-provided complete card
+  and established FanDuel Stage B workflow stay primary.
+
+See `reports/ufcqatar_2026-11-21/PROSPECTIVE_COHERENCE_READINESS.md`.
+All work remains on `feature/historical-conditional-rates`; no model
+coefficient, official pick, betting wager or original freeze changed.
+
+## November 17 — full-history model audit and training-data reset
+
+After months of iterative code development, no newer model has yet
+demonstrated sustained improvement in actual selected-fighter+method
+or FanDuel-ROI outcomes. We therefore stopped adding reactive KO/DEC
+and grappling weights and performed the first complete repository-backed
+longitudinal audit.
+
+**Source-verified baseline:** 153 clean reference fights / 12 dated
+events Aug8–Nov7, with 8 identical-prefix cumulative snapshots;
+92/153 winners, 79/153 method-class, 48/153 exact fighter+method.
+Seven original separate Stage A selection artifacts matched the 89
+later cleaned fighter choices; the earliest 64 rows have historical
+grade snapshots but no independently source-matched Stage A card in
+the present repo. UFC334 separate: 12 decisive, 8 winners, 3 method
+classes, **1 exact**. Mixed-vintage combined totals: 100/165
+winners, **49/165 exact**; do not treat as a homogeneous
+fully prospective performance sample.
+
+**Specific repeatable method failure:** 24 actual submissions versus
+only 10 model SUB class calls, **2/24** correct class and 2/24 exact
+fighter+method. The fixed KO-on-the-same-model-fighter baseline chosen
+from the first 64 achieved **30/89** later exact predictions versus
+the model's **33/89** — not persuasive proof of incremental complexity.
+
+**Original Stage B recommended strategy ledger:** post-Sep19-recheck
+scenario 9–10, 14u risked, -0.1661u; initial frozen-Sep19
+alternative 10–10, 14.5u risked, +0.6739u. These are alternative
+documented selection-accounting outcomes, **not actual placed bet
+receipts or FanDuel edge proof**. Research virtual odds/units excluded.
+
+**2021–2026 pinned full fight archive:** 3,036 complete fighter-stat
+bouts (2,544 in 2021–2025 plus 492 in 2026), of which **21 are
+DRAW results** that must not be mislabeled as decision victories
+even when the result-method text says DEC. 3,015 decisive win/loss
+labels. 568 UFC-debutant bouts and 1,873 with an under-five-bout
+participant. These are possible larger historical training records,
+not validated firsthand UFCStats or unseen prospective trials.
+
+**Governance:** retain existing reference/historical/unified champion
+outputs and full Stage A/B locks. Do not promote more model versions
+or target submission weights until a preregistered, date-heldout
+proper-score and real selected-fighter+method test beats the
+unchanged baseline. No production model or FanDuel price gate updated.
+
+Main audit:
+`reports/model_health/2026-11-17_EVIDENCE_FIRST_MODEL_RESET.md`.
+Machine source audit:
+`reports/model_health/2026-11-17_FULL_HISTORY_BASELINE_AUDIT.json`.
+Modern source eligibility:
+`reports/model_health/2026-11-17_2021_2026_TRAINING_ELIGIBILITY.json`.

@@ -1,0 +1,66 @@
+{
+  "schema": "WSHL_X_REPEATED_FINISH_CLASS_SELECTION_BIAS_TWO_CARD_DIAGNOSTIC_V1",
+  "status": "POST_EVENT_DIAGNOSTIC_ONLY_NOT_TRAINING",
+  "source_files": [
+    "data/results/ufcvegas124_2026-11-07_all_models_grading.json",
+    "data/results/ufc334_2026-11-14_all_models_grading.json"
+  ],
+  "events": [
+    {
+      "event": "UFC Fight Night: Cortes Acosta vs Walker",
+      "event_date": "2026-11-07",
+      "n_decisive": 14,
+      "reference_winners_correct": 9,
+      "reference_exact_winner_method_correct": 5,
+      "selected_fighter_leading_method": {
+        "KO": 10,
+        "SUB": 1,
+        "DEC": 3
+      },
+      "actual_method": {
+        "KO": 6,
+        "SUB": 1,
+        "DEC": 7
+      },
+      "KO_top_over_observed": 4,
+      "DEC_top_under_observed": 4
+    },
+    {
+      "event": "UFC 334: Gane vs Hokit",
+      "event_date": "2026-11-14",
+      "n_decisive": 12,
+      "reference_winners_correct": 8,
+      "reference_exact_winner_method_correct": 1,
+      "selected_fighter_leading_method": {
+        "KO": 11,
+        "SUB": 1,
+        "DEC": 0
+      },
+      "actual_method": {
+        "KO": 3,
+        "SUB": 2,
+        "DEC": 7
+      },
+      "KO_top_over_observed": 8,
+      "DEC_top_under_observed": 7
+    }
+  ],
+  "decisive_n": 26,
+  "reference_winner_correct": 17,
+  "reference_exact_fighter_method_correct": 6,
+  "combined_reference_top_method_counts": {
+    "KO": 21,
+    "SUB": 2,
+    "DEC": 3
+  },
+  "combined_actual_method_counts": {
+    "KO": 9,
+    "SUB": 3,
+    "DEC": 14
+  },
+  "repeated_ko_top_overcall": true,
+  "repeated_decision_top_undercall": true,
+  "method_top_label_counts_are_not_full_calibration": true,
+  "no_retraining_or_promotions": true,
+  "next_action": "Obtain complete official UFCStats, correct mismatched historical/unified joint calibration, walk-forward held-out recalibration of method/decision hazard with min-sample and opponent-quality context; evaluate logloss/Brier per method and exact method hit, require repeated evidence before champion change."
+}

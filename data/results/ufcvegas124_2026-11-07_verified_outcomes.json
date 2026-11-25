@@ -1,0 +1,161 @@
+{
+  "event": "UFC Fight Night: Cortes Acosta vs Walker",
+  "event_date": "2026-11-07",
+  "status": "VERIFIED_EVENT_OUTCOMES_POST_EVENT",
+  "bout_count": 14,
+  "source_urls": [
+    "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "https://www.fightful.com/mma/ufc-fight-night-cortes-acosta-vs-walker-results-11-7/",
+    "https://www.mmafighting.com/fight-results/ufc",
+    "https://jp.ufc.com/news/ufc-fight-night-cortes-acosta-vs-walker-results"
+  ],
+  "source_notes": [
+    "Official UFC event results cross-checked with Fightful's exact 14-result fight times, and MMA Fighting / UFC editorial for main-event Walker winner.",
+    "UFC fight pages may display contemporaneous website listed sportsbook odds; grading uses the USER-SUPPLIED screenshot odds, never those website odds.",
+    "KO includes official KO/TKO classification. DEC includes official UD; all listed are 3-round decisions except no main-event decision.",
+    "Not a UFCStats significant-strike/control-stat collection: those deeper records require separate validation before training integration.",
+    "A syndicated report lists Bashi R1 time 1:01; official UFC event page, Fightful, and MMA Fighting list 1:07. Use official 1:07, note source disagreement."
+  ],
+  "fights": [
+    {
+      "fight_no": 1,
+      "winner": "Jose Souza",
+      "method": "KO",
+      "round": 1,
+      "time": "4:16",
+      "detail": "KO punch",
+      "elapsed_seconds": 256,
+      "scheduled_rounds": 3
+    },
+    {
+      "fight_no": 2,
+      "winner": "Seokhyeon Ko",
+      "method": "DEC",
+      "round": 3,
+      "time": "5:00",
+      "detail": "UD (30-27 x3)",
+      "elapsed_seconds": 900,
+      "scheduled_rounds": 3
+    },
+    {
+      "fight_no": 3,
+      "winner": "Andre Petroski",
+      "method": "KO",
+      "round": 2,
+      "time": "4:39",
+      "detail": "TKO punches",
+      "elapsed_seconds": 579,
+      "scheduled_rounds": 3
+    },
+    {
+      "fight_no": 4,
+      "winner": "Austin Bashi",
+      "method": "SUB",
+      "round": 1,
+      "time": "1:07",
+      "detail": "RNC",
+      "elapsed_seconds": 67,
+      "scheduled_rounds": 3
+    },
+    {
+      "fight_no": 5,
+      "winner": "Murtazali Magomedov",
+      "method": "DEC",
+      "round": 3,
+      "time": "5:00",
+      "detail": "UD (29-28 x3)",
+      "elapsed_seconds": 900,
+      "scheduled_rounds": 3
+    },
+    {
+      "fight_no": 6,
+      "winner": "Karine Silva",
+      "method": "DEC",
+      "round": 3,
+      "time": "5:00",
+      "detail": "UD (29-28 x3)",
+      "elapsed_seconds": 900,
+      "scheduled_rounds": 3
+    },
+    {
+      "fight_no": 7,
+      "winner": "Thomas Petersen",
+      "method": "KO",
+      "round": 3,
+      "time": "4:47",
+      "detail": "TKO punches",
+      "elapsed_seconds": 887,
+      "scheduled_rounds": 3
+    },
+    {
+      "fight_no": 8,
+      "winner": "Ollie Schmid",
+      "method": "DEC",
+      "round": 3,
+      "time": "5:00",
+      "detail": "UD (29-28 x3)",
+      "elapsed_seconds": 900,
+      "scheduled_rounds": 3
+    },
+    {
+      "fight_no": 9,
+      "winner": "Mitch Raposo",
+      "method": "DEC",
+      "round": 3,
+      "time": "5:00",
+      "detail": "UD (29-28 x3)",
+      "elapsed_seconds": 900,
+      "scheduled_rounds": 3
+    },
+    {
+      "fight_no": 10,
+      "winner": "Nina Milosevic",
+      "method": "KO",
+      "round": 2,
+      "time": "3:40",
+      "detail": "TKO punches",
+      "elapsed_seconds": 520,
+      "scheduled_rounds": 3
+    },
+    {
+      "fight_no": 11,
+      "winner": "Lucas Fernando",
+      "method": "DEC",
+      "round": 3,
+      "time": "5:00",
+      "detail": "UD (29-28 x3)",
+      "elapsed_seconds": 900,
+      "scheduled_rounds": 3
+    },
+    {
+      "fight_no": 12,
+      "winner": "Elijah Smith",
+      "method": "KO",
+      "round": 1,
+      "time": "1:00",
+      "detail": "KO punch",
+      "elapsed_seconds": 60,
+      "scheduled_rounds": 3
+    },
+    {
+      "fight_no": 13,
+      "winner": "Tatiana Suarez",
+      "method": "DEC",
+      "round": 3,
+      "time": "5:00",
+      "detail": "UD (30-27 x2, 29-28)",
+      "elapsed_seconds": 900,
+      "scheduled_rounds": 3
+    },
+    {
+      "fight_no": 14,
+      "winner": "Johnny Walker",
+      "method": "KO",
+      "round": 3,
+      "time": "2:27",
+      "detail": "TKO punches after head kick",
+      "elapsed_seconds": 747,
+      "scheduled_rounds": 5
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "champion_not_promoted": true,
+  "event": "UFC 334: Gane vs Hokit",
+  "event_date": "2026-11-14",
+  "fights": 13,
+  "method_vs_timing_discrepancy_over_15pp": [
+    1,
+    2,
+    3,
+    4,
+    7,
+    11
+  ],
+  "no_method_or_timing_bet_approved_before_prices": true,
+  "odds_used": false,
+  "passes": [
+    1,
+    2,
+    3,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "primary_timing_per_fight": 13,
+  "raw_model_sha256": "13aeb532c5fddd5ec3cdc003ac7500a231addc45e34b45b7aebc38c5c241270d",
+  "simulation": {
+    "current_joint_per_fight": 10000,
+    "current_timing_per_fight": 10000,
+    "unified_joint_per_fight": 10000,
+    "unified_timing_per_fight": 10000
+  },
+  "stage_a_frozen": true,
+  "winner_disagreements": [
+    1,
+    3,
+    11,
+    13
+  ]
+}

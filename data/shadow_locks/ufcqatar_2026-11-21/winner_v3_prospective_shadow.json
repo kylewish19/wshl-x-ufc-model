@@ -1,0 +1,1652 @@
+{
+  "all_input_fighter_history_strictly_before_event_date": true,
+  "betting_odds_used": false,
+  "conditional_method_model_training_decisive_bouts": 3015,
+  "event_date": "2026-11-21",
+  "event_first_fight_utc": "2026-11-21T15:00:00+00:00",
+  "fan_duel_stage_b_approval": false,
+  "fighter_method_bets_approved": 0,
+  "fights": [
+    {
+      "a": "Diyar Nurgozhay",
+      "a_prior_ufc_bouts": 4,
+      "a_stats_coverage": 1.0,
+      "b": "Alik Lorenz",
+      "b_prior_ufc_bouts": 0,
+      "b_stats_coverage": 0.0,
+      "fight_no": 1,
+      "identity_a": {
+        "prior_ufc_name_resolution": "EXACT_NORMALIZED_MATCH_IN_PINNED_ARCHIVE",
+        "screen_name": "Diyar Nurgozhay",
+        "source_name": "Diyar Nurgozhay",
+        "source_name_matched": true
+      },
+      "identity_b": {
+        "prior_ufc_name_resolution": "NO_MATCHING_UFC_SOURCE_NAME_REQUIRES_INDEPENDENT_ALIAS_VERIFICATION",
+        "screen_name": "Alik Lorenz",
+        "source_name": "Alik Lorenz",
+        "source_name_matched": false
+      },
+      "not_authorized_for_betting": true,
+      "original_official_stage_a_status": "PASS",
+      "provisional_bout": false,
+      "research_models": {
+        "boost_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.49448557345862876,
+          "p_exact_winner_method": 0.227124998843955,
+          "p_winner": 0.5055144265413712,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2511282348651776,
+            "A_KO": 0.20706129847471305,
+            "A_SUB": 0.036296040118738035,
+            "B_DEC": 0.1539010492113483,
+            "B_KO": 0.227124998843955,
+            "B_SUB": 0.12448837848606785
+          },
+          "winner": "Alik Lorenz"
+        },
+        "boost_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.5573552898267672,
+          "p_exact_winner_method": 0.2830570953728258,
+          "p_winner": 0.5573552898267672,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2830570953728258,
+            "A_KO": 0.23338741556417916,
+            "A_SUB": 0.04091077888976216,
+            "B_DEC": 0.13476071452520358,
+            "B_KO": 0.1988779627402987,
+            "B_SUB": 0.10900603290773048
+          },
+          "winner": "Diyar Nurgozhay"
+        },
+        "logit_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.4561479328572933,
+          "p_exact_winner_method": 0.24434990108232005,
+          "p_winner": 0.5438520671427067,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.23165817440260594,
+            "A_KO": 0.19100776310492223,
+            "A_SUB": 0.03348199534976511,
+            "B_DEC": 0.16557273018235666,
+            "B_KO": 0.24434990108232005,
+            "B_SUB": 0.13392943587802994
+          },
+          "winner": "Alik Lorenz"
+        },
+        "logit_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.5707011429697855,
+          "p_exact_winner_method": 0.2898348877341564,
+          "p_winner": 0.5707011429697855,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2898348877341564,
+            "A_KO": 0.2389758691599389,
+            "A_SUB": 0.041890386075690116,
+            "B_DEC": 0.1306976439311876,
+            "B_KO": 0.1928817404357874,
+            "B_SUB": 0.10571947266323947
+          },
+          "winner": "Diyar Nurgozhay"
+        },
+        "past_only_elo": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.5007983726697555,
+          "p_exact_winner_method": 0.254334237644713,
+          "p_winner": 0.5007983726697555,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.254334237644713,
+            "A_KO": 0.20970472524351322,
+            "A_SUB": 0.03675940978152915,
+            "B_DEC": 0.15197915268170803,
+            "B_KO": 0.22428869103897503,
+            "B_SUB": 0.12293378360956143
+          },
+          "winner": "Diyar Nurgozhay"
+        },
+        "ufc_winrate": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.5,
+          "p_exact_winner_method": 0.25392877805179115,
+          "p_winner": 0.5,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.25392877805179115,
+            "A_KO": 0.20937041401071013,
+            "A_SUB": 0.03670080793749866,
+            "B_DEC": 0.15222221279055137,
+            "B_KO": 0.224647395721126,
+            "B_SUB": 0.12313039148832257
+          },
+          "winner": "Diyar Nurgozhay"
+        }
+      },
+      "research_uncertainty": "HIGH_UNVERIFIED_UFC_IDENTITY",
+      "source_a": "Diyar Nurgozhay",
+      "source_alias_unverified": true,
+      "source_b": "Alik Lorenz"
+    },
+    {
+      "a": "Nikolas Motta",
+      "a_prior_ufc_bouts": 6,
+      "a_stats_coverage": 1.0,
+      "b": "Dom Mar Fan",
+      "b_prior_ufc_bouts": 2,
+      "b_stats_coverage": 1.0,
+      "fight_no": 2,
+      "identity_a": {
+        "prior_ufc_name_resolution": "EXACT_NORMALIZED_MATCH_IN_PINNED_ARCHIVE",
+        "screen_name": "Nikolas Motta",
+        "source_name": "Nikolas Motta",
+        "source_name_matched": true
+      },
+      "identity_b": {
+        "prior_ufc_name_resolution": "EXACT_NORMALIZED_MATCH_IN_PINNED_ARCHIVE",
+        "screen_name": "Dom Mar Fan",
+        "source_name": "Dom Mar Fan",
+        "source_name_matched": true
+      },
+      "not_authorized_for_betting": true,
+      "original_official_stage_a_status": "LEAN",
+      "provisional_bout": false,
+      "research_models": {
+        "boost_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.48879092052054074,
+          "p_exact_winner_method": 0.2675817842173456,
+          "p_winner": 0.5112090794794593,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.14572789274625783,
+            "A_KO": 0.2900900246549086,
+            "A_SUB": 0.05297300311937434,
+            "B_DEC": 0.19860818460744475,
+            "B_KO": 0.2675817842173456,
+            "B_SUB": 0.04501911065466894
+          },
+          "winner": "Dom Mar Fan"
+        },
+        "boost_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.4287914218535236,
+          "p_exact_winner_method": 0.29898727670549646,
+          "p_winner": 0.5712085781464764,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.12783967072841682,
+            "A_KO": 0.2544812289165153,
+            "A_SUB": 0.046470522208591485,
+            "B_DEC": 0.22191839560711438,
+            "B_KO": 0.29898727670549646,
+            "B_SUB": 0.050302905833865555
+          },
+          "winner": "Dom Mar Fan"
+        },
+        "logit_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.37035404728988314,
+          "p_exact_winner_method": 0.32957510774840054,
+          "p_winner": 0.6296459527101168,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.11041717964835752,
+            "A_KO": 0.21979953022644685,
+            "A_SUB": 0.040137337415078765,
+            "B_DEC": 0.24462171082821313,
+            "B_KO": 0.32957510774840054,
+            "B_SUB": 0.055449134133503115
+          },
+          "winner": "Dom Mar Fan"
+        },
+        "logit_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.2843839012658209,
+          "p_exact_winner_method": 0.37457439666159487,
+          "p_winner": 0.7156160987341791,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.08478608117002934,
+            "A_KO": 0.16877754775355788,
+            "A_SUB": 0.030820272342233706,
+            "B_DEC": 0.2780216939616543,
+            "B_KO": 0.37457439666159487,
+            "B_SUB": 0.06302000811092984
+          },
+          "winner": "Dom Mar Fan"
+        },
+        "past_only_elo": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.5052048741100611,
+          "p_exact_winner_method": 0.299831458060418,
+          "p_winner": 0.5052048741100611,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.15062154106871098,
+            "A_KO": 0.299831458060418,
+            "A_SUB": 0.05475187498093215,
+            "B_DEC": 0.19223125263283086,
+            "B_KO": 0.25899024082766864,
+            "B_SUB": 0.04357363242943935
+          },
+          "winner": "Nikolas Motta"
+        },
+        "ufc_winrate": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.5,
+          "p_exact_winner_method": 0.29674244393285326,
+          "p_winner": 0.5,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.1490697623751522,
+            "A_KO": 0.29674244393285326,
+            "A_SUB": 0.05418779369199456,
+            "B_DEC": 0.19425338142436588,
+            "B_KO": 0.2617146241708107,
+            "B_SUB": 0.044031994404823395
+          },
+          "winner": "Nikolas Motta"
+        }
+      },
+      "research_uncertainty": "HIGH_SPARSE_UFC_PRIOR",
+      "source_a": "Nikolas Motta",
+      "source_alias_unverified": false,
+      "source_b": "Dom Mar Fan"
+    },
+    {
+      "a": "Jake Matthews",
+      "a_prior_ufc_bouts": 24,
+      "a_stats_coverage": 1.0,
+      "b": "Tahir Abdullayev",
+      "b_prior_ufc_bouts": 1,
+      "b_stats_coverage": 1.0,
+      "fight_no": 3,
+      "identity_a": {
+        "prior_ufc_name_resolution": "EXACT_NORMALIZED_MATCH_IN_PINNED_ARCHIVE",
+        "screen_name": "Jake Matthews",
+        "source_name": "Jake Matthews",
+        "source_name_matched": true
+      },
+      "identity_b": {
+        "prior_ufc_name_resolution": "EXACT_NORMALIZED_MATCH_IN_PINNED_ARCHIVE",
+        "screen_name": "Tahir Abdullayev",
+        "source_name": "Tahir Abdullayev",
+        "source_name_matched": true
+      },
+      "not_authorized_for_betting": true,
+      "original_official_stage_a_status": "PASS",
+      "provisional_bout": false,
+      "research_models": {
+        "boost_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.4768200761649398,
+          "p_exact_winner_method": 0.3337617141577587,
+          "p_winner": 0.5231799238350602,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2914587884141231,
+            "A_KO": 0.10655899552236577,
+            "A_SUB": 0.07880229222845099,
+            "B_DEC": 0.3337617141577587,
+            "B_KO": 0.11454855018895142,
+            "B_SUB": 0.07486965948835002
+          },
+          "winner": "Tahir Abdullayev"
+        },
+        "boost_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.5564376487130858,
+          "p_exact_winner_method": 0.34012544988944465,
+          "p_winner": 0.5564376487130858,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.34012544988944465,
+            "A_KO": 0.1243518045519184,
+            "A_SUB": 0.09196039427172274,
+            "B_DEC": 0.28296982349047367,
+            "B_KO": 0.09711654049312639,
+            "B_SUB": 0.06347598730331418
+          },
+          "winner": "Jake Matthews"
+        },
+        "logit_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.40821369937809626,
+          "p_exact_winner_method": 0.3775290318152859,
+          "p_winner": 0.5917863006219037,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2495227784696523,
+            "A_KO": 0.0912269510840646,
+            "A_SUB": 0.06746396982437938,
+            "B_DEC": 0.3775290318152859,
+            "B_KO": 0.12956969422873582,
+            "B_SUB": 0.08468757457788197
+          },
+          "winner": "Tahir Abdullayev"
+        },
+        "logit_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.5435896847589561,
+          "p_exact_winner_method": 0.33227206410548776,
+          "p_winner": 0.5435896847589561,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.33227206410548776,
+            "A_KO": 0.12148056191366581,
+            "A_SUB": 0.08983705873980251,
+            "B_DEC": 0.29116615954506453,
+            "B_KO": 0.09992956059725684,
+            "B_SUB": 0.06531459509872252
+          },
+          "winner": "Jake Matthews"
+        },
+        "past_only_elo": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.5929821121397214,
+          "p_exact_winner_method": 0.36246344605613084,
+          "p_winner": 0.5929821121397214,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.36246344605613084,
+            "A_KO": 0.13251870336617697,
+            "A_SUB": 0.09799996271741361,
+            "B_DEC": 0.2596563471880176,
+            "B_KO": 0.08911524856229533,
+            "B_SUB": 0.05824629210996564
+          },
+          "winner": "Jake Matthews"
+        },
+        "ufc_winrate": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.5172413793103449,
+          "p_exact_winner_method": 0.31616652332250905,
+          "p_winner": 0.5172413793103449,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.31616652332250905,
+            "A_KO": 0.11559228433755704,
+            "A_SUB": 0.08548257165027878,
+            "B_DEC": 0.30797501476110134,
+            "B_KO": 0.10569843675548186,
+            "B_SUB": 0.06908516917307189
+          },
+          "winner": "Jake Matthews"
+        }
+      },
+      "research_uncertainty": "HIGH_SPARSE_UFC_PRIOR",
+      "source_a": "Jake Matthews",
+      "source_alias_unverified": false,
+      "source_b": "Tahir Abdullayev"
+    },
+    {
+      "a": "Amir Albazi",
+      "a_prior_ufc_bouts": 7,
+      "a_stats_coverage": 1.0,
+      "b": "Alessandro Costa",
+      "b_prior_ufc_bouts": 8,
+      "b_stats_coverage": 1.0,
+      "fight_no": 4,
+      "identity_a": {
+        "prior_ufc_name_resolution": "EXACT_NORMALIZED_MATCH_IN_PINNED_ARCHIVE",
+        "screen_name": "Amir Albazi",
+        "source_name": "Amir Albazi",
+        "source_name_matched": true
+      },
+      "identity_b": {
+        "prior_ufc_name_resolution": "EXACT_NORMALIZED_MATCH_IN_PINNED_ARCHIVE",
+        "screen_name": "Alessandro Costa",
+        "source_name": "Alessandro Costa",
+        "source_name_matched": true
+      },
+      "not_authorized_for_betting": true,
+      "original_official_stage_a_status": "PASS",
+      "provisional_bout": false,
+      "research_models": {
+        "boost_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.6327312838547977,
+          "p_exact_winner_method": 0.2871631134970782,
+          "p_winner": 0.6327312838547977,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2871631134970782,
+            "A_KO": 0.2119565202401437,
+            "A_SUB": 0.1336116501175759,
+            "B_DEC": 0.19983933768115406,
+            "B_KO": 0.13637487643431437,
+            "B_SUB": 0.031054502029733866
+          },
+          "winner": "Amir Albazi"
+        },
+        "boost_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.5376200662119675,
+          "p_exact_winner_method": 0.2439971849524716,
+          "p_winner": 0.5376200662119675,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2439971849524716,
+            "A_KO": 0.18009553400194223,
+            "A_SUB": 0.11352734725755367,
+            "B_DEC": 0.25159153410911433,
+            "B_KO": 0.17169174384871747,
+            "B_SUB": 0.03909665583020075
+          },
+          "winner": "Amir Albazi"
+        },
+        "logit_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.6283114598504276,
+          "p_exact_winner_method": 0.28515719020137575,
+          "p_winner": 0.6283114598504276,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.28515719020137575,
+            "A_KO": 0.21047593829336086,
+            "A_SUB": 0.13267833135569104,
+            "B_DEC": 0.20224426536182094,
+            "B_KO": 0.13801605338721085,
+            "B_SUB": 0.03142822140054059
+          },
+          "winner": "Amir Albazi"
+        },
+        "logit_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.5112254648107705,
+          "p_exact_winner_method": 0.23201807768958263,
+          "p_winner": 0.5112254648107705,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.23201807768958263,
+            "A_KO": 0.17125369543812122,
+            "A_SUB": 0.10795369168306666,
+            "B_DEC": 0.2659534425170384,
+            "B_KO": 0.18149263444022132,
+            "B_SUB": 0.041328458231969775
+          },
+          "winner": "Amir Albazi"
+        },
+        "past_only_elo": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.514720962256825,
+          "p_exact_winner_method": 0.233604498268813,
+          "p_winner": 0.514720962256825,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.233604498268813,
+            "A_KO": 0.17242464034645616,
+            "A_SUB": 0.10869182364155584,
+            "B_DEC": 0.2640514621310762,
+            "B_KO": 0.18019468007785283,
+            "B_SUB": 0.04103289553424599
+          },
+          "winner": "Amir Albazi"
+        },
+        "ufc_winrate": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.5217391304347826,
+          "p_exact_winner_method": 0.23678967193803674,
+          "p_winner": 0.5217391304347826,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.23678967193803674,
+            "A_KO": 0.17477563285056852,
+            "A_SUB": 0.11017382564617739,
+            "B_DEC": 0.2602327157506643,
+            "B_KO": 0.17758868132002284,
+            "B_SUB": 0.0404394724945302
+          },
+          "winner": "Amir Albazi"
+        }
+      },
+      "research_uncertainty": "NORMAL_RESEARCH_SHADOW",
+      "source_a": "Amir Albazi",
+      "source_alias_unverified": false,
+      "source_b": "Alessandro Costa"
+    },
+    {
+      "a": "Shamil Gaziev",
+      "a_prior_ufc_bouts": 7,
+      "a_stats_coverage": 1.0,
+      "b": "Tallison Teixeira",
+      "b_prior_ufc_bouts": 4,
+      "b_stats_coverage": 1.0,
+      "fight_no": 5,
+      "identity_a": {
+        "prior_ufc_name_resolution": "EXACT_NORMALIZED_MATCH_IN_PINNED_ARCHIVE",
+        "screen_name": "Shamil Gaziev",
+        "source_name": "Shamil Gaziev",
+        "source_name_matched": true
+      },
+      "identity_b": {
+        "prior_ufc_name_resolution": "EXACT_NORMALIZED_MATCH_IN_PINNED_ARCHIVE",
+        "screen_name": "Tallison Teixeira",
+        "source_name": "Tallison Teixeira",
+        "source_name_matched": true
+      },
+      "not_authorized_for_betting": true,
+      "original_official_stage_a_status": "LEAN",
+      "provisional_bout": false,
+      "research_models": {
+        "boost_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.4900571353038736,
+          "p_exact_winner_method": 0.31078277811208305,
+          "p_winner": 0.5099428646961264,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.164867230848673,
+            "A_KO": 0.27634295733310227,
+            "A_SUB": 0.04884694712209837,
+            "B_DEC": 0.1447724450981548,
+            "B_KO": 0.31078277811208305,
+            "B_SUB": 0.05438764148588856
+          },
+          "winner": "Tallison Teixeira"
+        },
+        "boost_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.5025540203500062,
+          "p_exact_winner_method": 0.283389944148137,
+          "p_winner": 0.5025540203500062,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.16907148925726143,
+            "A_KO": 0.283389944148137,
+            "A_SUB": 0.05009258694460776,
+            "B_DEC": 0.14122458762334283,
+            "B_KO": 0.3031665981019974,
+            "B_SUB": 0.053054793924653565
+          },
+          "winner": "Shamil Gaziev"
+        },
+        "logit_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.4666613686806369,
+          "p_exact_winner_method": 0.3250412408745029,
+          "p_winner": 0.5333386313193631,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.1569963215630382,
+            "A_KO": 0.2631500970072724,
+            "A_SUB": 0.04651495011032633,
+            "B_DEC": 0.15141448791016693,
+            "B_KO": 0.3250412408745029,
+            "B_SUB": 0.05688290253469323
+          },
+          "winner": "Tallison Teixeira"
+        },
+        "logit_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.5680824988122962,
+          "p_exact_winner_method": 0.3203414182177456,
+          "p_winner": 0.5680824988122962,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.19111687541229752,
+            "A_KO": 0.3203414182177456,
+            "A_SUB": 0.05662420518225317,
+            "B_DEC": 0.1226210955317325,
+            "B_KO": 0.26323051115605334,
+            "B_SUB": 0.04606589449991792
+          },
+          "winner": "Shamil Gaziev"
+        },
+        "past_only_elo": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.5165776537659857,
+          "p_exact_winner_method": 0.2912978635549713,
+          "p_winner": 0.5165776537659857,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.17378938323567647,
+            "A_KO": 0.2912978635549713,
+            "A_SUB": 0.05149040697533802,
+            "B_DEC": 0.13724328728687993,
+            "B_KO": 0.29461994698875815,
+            "B_SUB": 0.05155911195837618
+          },
+          "winner": "Shamil Gaziev"
+        },
+        "ufc_winrate": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.5217391304347826,
+          "p_exact_winner_method": 0.2942084174967616,
+          "p_winner": 0.5217391304347826,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.17552583048676468,
+            "A_KO": 0.2942084174967616,
+            "A_SUB": 0.052004882451256416,
+            "B_DEC": 0.13577794744316218,
+            "B_KO": 0.2914743042720094,
+            "B_SUB": 0.051008617850045866
+          },
+          "winner": "Shamil Gaziev"
+        }
+      },
+      "research_uncertainty": "NORMAL_RESEARCH_SHADOW",
+      "source_a": "Shamil Gaziev",
+      "source_alias_unverified": false,
+      "source_b": "Tallison Teixeira"
+    },
+    {
+      "a": "Aleksandre Topuria",
+      "a_prior_ufc_bouts": 2,
+      "a_stats_coverage": 1.0,
+      "b": "Santiago Luna",
+      "b_prior_ufc_bouts": 3,
+      "b_stats_coverage": 1.0,
+      "fight_no": 6,
+      "identity_a": {
+        "prior_ufc_name_resolution": "EXACT_NORMALIZED_MATCH_IN_PINNED_ARCHIVE",
+        "screen_name": "Aleksandre Topuria",
+        "source_name": "Aleksandre Topuria",
+        "source_name_matched": true
+      },
+      "identity_b": {
+        "prior_ufc_name_resolution": "EXACT_NORMALIZED_MATCH_IN_PINNED_ARCHIVE",
+        "screen_name": "Santiago Luna",
+        "source_name": "Santiago Luna",
+        "source_name_matched": true
+      },
+      "not_authorized_for_betting": true,
+      "original_official_stage_a_status": "PASS",
+      "provisional_bout": false,
+      "research_models": {
+        "boost_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.5983592675309735,
+          "p_exact_winner_method": 0.35006364946753454,
+          "p_winner": 0.5983592675309735,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.35006364946753454,
+            "A_KO": 0.17245090575968677,
+            "A_SUB": 0.07584471230375218,
+            "B_DEC": 0.18280011570056137,
+            "B_KO": 0.16382604501755396,
+            "B_SUB": 0.05501457175091119
+          },
+          "winner": "Aleksandre Topuria"
+        },
+        "boost_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.5398842951929939,
+          "p_exact_winner_method": 0.31585349625371023,
+          "p_winner": 0.5398842951929939,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.31585349625371023,
+            "A_KO": 0.15559805080923642,
+            "A_SUB": 0.0684327481300472,
+            "B_DEC": 0.2094140291929986,
+            "B_KO": 0.18767751892497403,
+            "B_SUB": 0.06302415668903351
+          },
+          "winner": "Aleksandre Topuria"
+        },
+        "logit_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.5478842630850815,
+          "p_exact_winner_method": 0.32053379136718463,
+          "p_winner": 0.5478842630850815,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.32053379136718463,
+            "A_KO": 0.15790369189127668,
+            "A_SUB": 0.06944677982662026,
+            "B_DEC": 0.20577297653560364,
+            "B_KO": 0.1844143959544242,
+            "B_SUB": 0.061928364424890615
+          },
+          "winner": "Aleksandre Topuria"
+        },
+        "logit_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.5565088240655207,
+          "p_exact_winner_method": 0.325579497944649,
+          "p_winner": 0.5565088240655207,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.325579497944649,
+            "A_KO": 0.16038934463129947,
+            "A_SUB": 0.07053998148957222,
+            "B_DEC": 0.2018476506967648,
+            "B_KO": 0.18089650645464087,
+            "B_SUB": 0.06074701878307359
+          },
+          "winner": "Aleksandre Topuria"
+        },
+        "past_only_elo": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.5163332539565867,
+          "p_exact_winner_method": 0.30207521305272295,
+          "p_winner": 0.5163332539565867,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.30207521305272295,
+            "A_KO": 0.14881049254251014,
+            "A_SUB": 0.06544754836135365,
+            "B_DEC": 0.22013289487282833,
+            "B_KO": 0.1972838004345404,
+            "B_SUB": 0.06625005073604455
+          },
+          "winner": "Aleksandre Topuria"
+        },
+        "ufc_winrate": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.5384615384615384,
+          "p_exact_winner_method": 0.3150211277407716,
+          "p_winner": 0.5384615384615384,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.3150211277407716,
+            "A_KO": 0.15518800336729138,
+            "A_SUB": 0.06825240735347542,
+            "B_DEC": 0.21006157331414638,
+            "B_KO": 0.1882578500256161,
+            "B_SUB": 0.06321903819869906
+          },
+          "winner": "Aleksandre Topuria"
+        }
+      },
+      "research_uncertainty": "HIGH_SPARSE_UFC_PRIOR",
+      "source_a": "Aleksandre Topuria",
+      "source_alias_unverified": false,
+      "source_b": "Santiago Luna"
+    },
+    {
+      "a": "Jared Cannonier",
+      "a_prior_ufc_bouts": 21,
+      "a_stats_coverage": 1.0,
+      "b": "Ikram Aliskerov",
+      "b_prior_ufc_bouts": 6,
+      "b_stats_coverage": 1.0,
+      "fight_no": 7,
+      "identity_a": {
+        "prior_ufc_name_resolution": "EXACT_NORMALIZED_MATCH_IN_PINNED_ARCHIVE",
+        "screen_name": "Jared Cannonier",
+        "source_name": "Jared Cannonier",
+        "source_name_matched": true
+      },
+      "identity_b": {
+        "prior_ufc_name_resolution": "EXACT_NORMALIZED_MATCH_IN_PINNED_ARCHIVE",
+        "screen_name": "Ikram Aliskerov",
+        "source_name": "Ikram Aliskerov",
+        "source_name_matched": true
+      },
+      "not_authorized_for_betting": true,
+      "original_official_stage_a_status": "SIDE",
+      "provisional_bout": false,
+      "research_models": {
+        "boost_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.3460545043350585,
+          "p_exact_winner_method": 0.30387872849972103,
+          "p_winner": 0.6539454956649415,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.16763218388582757,
+            "A_KO": 0.15698217907478654,
+            "A_SUB": 0.021440141374444426,
+            "B_DEC": 0.30387872849972103,
+            "B_KO": 0.2965010895351904,
+            "B_SUB": 0.05356567763003022
+          },
+          "winner": "Ikram Aliskerov"
+        },
+        "boost_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.28573463356135154,
+          "p_exact_winner_method": 0.3319084737238905,
+          "p_winner": 0.7142653664386485,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.13841264897777406,
+            "A_KO": 0.12961901911892654,
+            "A_SUB": 0.017702965464650968,
+            "B_DEC": 0.3319084737238905,
+            "B_KO": 0.32385032203787834,
+            "B_SUB": 0.058506570676879734
+          },
+          "winner": "Ikram Aliskerov"
+        },
+        "logit_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.20804003311793517,
+          "p_exact_winner_method": 0.36801199695411396,
+          "p_winner": 0.7919599668820648,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.10077662521471849,
+            "A_KO": 0.09437408652257674,
+            "A_SUB": 0.01288932138063995,
+            "B_DEC": 0.36801199695411396,
+            "B_KO": 0.3590773154726299,
+            "B_SUB": 0.06487065445532109
+          },
+          "winner": "Ikram Aliskerov"
+        },
+        "logit_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.2428123214855078,
+          "p_exact_winner_method": 0.35185383263275966,
+          "p_winner": 0.7571876785144922,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.11762066152906804,
+            "A_KO": 0.11014798783285479,
+            "A_SUB": 0.015043672123584978,
+            "B_DEC": 0.35185383263275966,
+            "B_KO": 0.3433114428502736,
+            "B_SUB": 0.06202240303145904
+          },
+          "winner": "Ikram Aliskerov"
+        },
+        "past_only_elo": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.46536890864114044,
+          "p_exact_winner_method": 0.24843510252082032,
+          "p_winner": 0.5346310913588596,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.22542924738973072,
+            "A_KO": 0.21110728060747386,
+            "A_SUB": 0.02883238064393587,
+            "B_DEC": 0.24843510252082032,
+            "B_KO": 0.24240353689737643,
+            "B_SUB": 0.04379245194066286
+          },
+          "winner": "Ikram Aliskerov"
+        },
+        "ufc_winrate": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.42622950819672134,
+          "p_exact_winner_method": 0.26662259875733446,
+          "p_winner": 0.5737704918032787,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2064697393056303,
+            "A_KO": 0.19335230764085523,
+            "A_SUB": 0.02640746125023583,
+            "B_DEC": 0.26662259875733446,
+            "B_KO": 0.2601494728392157,
+            "B_SUB": 0.04699842020672858
+          },
+          "winner": "Ikram Aliskerov"
+        }
+      },
+      "research_uncertainty": "NORMAL_RESEARCH_SHADOW",
+      "source_a": "Jared Cannonier",
+      "source_alias_unverified": false,
+      "source_b": "Ikram Aliskerov"
+    },
+    {
+      "a": "Kyoji Horiguchi",
+      "a_prior_ufc_bouts": 11,
+      "a_stats_coverage": 1.0,
+      "b": "Asu Almabayev",
+      "b_prior_ufc_bouts": 8,
+      "b_stats_coverage": 1.0,
+      "fight_no": 8,
+      "identity_a": {
+        "prior_ufc_name_resolution": "EXACT_NORMALIZED_MATCH_IN_PINNED_ARCHIVE",
+        "screen_name": "Kyoji Horiguchi",
+        "source_name": "Kyoji Horiguchi",
+        "source_name_matched": true
+      },
+      "identity_b": {
+        "prior_ufc_name_resolution": "EXACT_NORMALIZED_MATCH_IN_PINNED_ARCHIVE",
+        "screen_name": "Asu Almabayev",
+        "source_name": "Asu Almabayev",
+        "source_name_matched": true
+      },
+      "not_authorized_for_betting": true,
+      "original_official_stage_a_status": "PASS",
+      "provisional_bout": false,
+      "research_models": {
+        "boost_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "SUB",
+          "p_a": 0.3904798462369961,
+          "p_exact_winner_method": 0.3007821623331382,
+          "p_winner": 0.609520153763004,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.17686126906845617,
+            "A_KO": 0.18183054628916867,
+            "A_SUB": 0.03178803087937124,
+            "B_DEC": 0.18924237264218668,
+            "B_KO": 0.11949561878767911,
+            "B_SUB": 0.3007821623331382
+          },
+          "winner": "Asu Almabayev"
+        },
+        "boost_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "SUB",
+          "p_a": 0.4685281668948321,
+          "p_exact_winner_method": 0.2622673691650982,
+          "p_winner": 0.5314718331051679,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2122119412561027,
+            "A_KO": 0.21817446754126105,
+            "A_SUB": 0.0381417580974683,
+            "B_DEC": 0.16501011503619775,
+            "B_KO": 0.10419434890387202,
+            "B_SUB": 0.2622673691650982
+          },
+          "winner": "Asu Almabayev"
+        },
+        "logit_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "SUB",
+          "p_a": 0.39619363665391644,
+          "p_exact_winner_method": 0.29796255706478164,
+          "p_winner": 0.6038063633460835,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.17944923419409897,
+            "A_KO": 0.18449122556084577,
+            "A_SUB": 0.03225317689897165,
+            "B_DEC": 0.18746836853649365,
+            "B_KO": 0.1183754377448083,
+            "B_SUB": 0.29796255706478164
+          },
+          "winner": "Asu Almabayev"
+        },
+        "logit_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "SUB",
+          "p_a": 0.46220609104733046,
+          "p_exact_winner_method": 0.26538714729237733,
+          "p_winner": 0.5377939089526695,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2093484634907034,
+            "A_KO": 0.2152305345416176,
+            "A_SUB": 0.03762709301500938,
+            "B_DEC": 0.16697297816060605,
+            "B_KO": 0.10543378349968621,
+            "B_SUB": 0.26538714729237733
+          },
+          "winner": "Asu Almabayev"
+        },
+        "past_only_elo": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.5102572537646789,
+          "p_exact_winner_method": 0.23760600218975406,
+          "p_winner": 0.5102572537646789,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.23111242826456566,
+            "A_KO": 0.23760600218975406,
+            "A_SUB": 0.041538823310359116,
+            "B_DEC": 0.15205416705205246,
+            "B_KO": 0.09601341669650812,
+            "B_SUB": 0.24167516248676058
+          },
+          "winner": "Kyoji Horiguchi"
+        },
+        "ufc_winrate": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "SUB",
+          "p_a": 0.49438202247191004,
+          "p_exact_winner_method": 0.24950917152862462,
+          "p_winner": 0.50561797752809,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.22392200965461193,
+            "A_KO": 0.2302135541383402,
+            "A_SUB": 0.040246458678957854,
+            "B_DEC": 0.156983071236007,
+            "B_KO": 0.09912573476345847,
+            "B_SUB": 0.24950917152862462
+          },
+          "winner": "Asu Almabayev"
+        }
+      },
+      "research_uncertainty": "NORMAL_RESEARCH_SHADOW",
+      "source_a": "Kyoji Horiguchi",
+      "source_alias_unverified": false,
+      "source_b": "Asu Almabayev"
+    },
+    {
+      "a": "Dan Hooker",
+      "a_prior_ufc_bouts": 25,
+      "a_stats_coverage": 1.0,
+      "b": "Brian Ortega",
+      "b_prior_ufc_bouts": 13,
+      "b_stats_coverage": 1.0,
+      "fight_no": 9,
+      "identity_a": {
+        "prior_ufc_name_resolution": "EXACT_NORMALIZED_MATCH_IN_PINNED_ARCHIVE",
+        "screen_name": "Dan Hooker",
+        "source_name": "Dan Hooker",
+        "source_name_matched": true
+      },
+      "identity_b": {
+        "prior_ufc_name_resolution": "EXACT_NORMALIZED_MATCH_IN_PINNED_ARCHIVE",
+        "screen_name": "Brian Ortega",
+        "source_name": "Brian Ortega",
+        "source_name_matched": true
+      },
+      "not_authorized_for_betting": true,
+      "original_official_stage_a_status": "PASS",
+      "provisional_bout": false,
+      "research_models": {
+        "boost_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.4152208471682091,
+          "p_exact_winner_method": 0.2629036365063518,
+          "p_winner": 0.5847791528317909,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.18443028156992297,
+            "A_KO": 0.19773571589419928,
+            "A_SUB": 0.033054849704086814,
+            "B_DEC": 0.20996799411742495,
+            "B_KO": 0.2629036365063518,
+            "B_SUB": 0.11190752220801423
+          },
+          "winner": "Brian Ortega"
+        },
+        "boost_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.4987309977216466,
+          "p_exact_winner_method": 0.22535933938260166,
+          "p_winner": 0.5012690022783535,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.22152331455599977,
+            "A_KO": 0.23750476775355067,
+            "A_SUB": 0.039702915412096106,
+            "B_DEC": 0.17998324053098316,
+            "B_KO": 0.22535933938260166,
+            "B_SUB": 0.09592642236476864
+          },
+          "winner": "Brian Ortega"
+        },
+        "logit_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.41010238934603976,
+          "p_exact_winner_method": 0.26520478073872794,
+          "p_winner": 0.5898976106539602,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.18215679596874348,
+            "A_KO": 0.1952982132287059,
+            "A_SUB": 0.0326473801485903,
+            "B_DEC": 0.2118058030008149,
+            "B_KO": 0.26520478073872794,
+            "B_SUB": 0.11288702691441738
+          },
+          "winner": "Brian Ortega"
+        },
+        "logit_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.5368583758893851,
+          "p_exact_winner_method": 0.2556617183705135,
+          "p_winner": 0.5368583758893851,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.23845850251430162,
+            "A_KO": 0.2556617183705135,
+            "A_SUB": 0.04273815500456995,
+            "B_DEC": 0.16629340723909883,
+            "B_KO": 0.20821812235697582,
+            "B_SUB": 0.08863009451454025
+          },
+          "winner": "Dan Hooker"
+        },
+        "past_only_elo": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.48977995455461315,
+          "p_exact_winner_method": 0.22938352832255066,
+          "p_winner": 0.5102200454453869,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.21754749440414756,
+            "A_KO": 0.23324211827266797,
+            "A_SUB": 0.03899034187779757,
+            "B_DEC": 0.18319715910167664,
+            "B_KO": 0.22938352832255066,
+            "B_SUB": 0.09763935802115964
+          },
+          "winner": "Brian Ortega"
+        },
+        "ufc_winrate": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.4839857651245552,
+          "p_exact_winner_method": 0.23198846638231604,
+          "p_winner": 0.5160142348754448,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.21497386642919633,
+            "A_KO": 0.23048281993109176,
+            "A_SUB": 0.03852907876426709,
+            "B_DEC": 0.18527759293088258,
+            "B_KO": 0.23198846638231604,
+            "B_SUB": 0.09874817556224623
+          },
+          "winner": "Brian Ortega"
+        }
+      },
+      "research_uncertainty": "NORMAL_RESEARCH_SHADOW",
+      "source_a": "Dan Hooker",
+      "source_alias_unverified": false,
+      "source_b": "Brian Ortega"
+    },
+    {
+      "a": "Aljamain Sterling",
+      "a_prior_ufc_bouts": 22,
+      "a_stats_coverage": 1.0,
+      "b": "Kevin Vallejos",
+      "b_prior_ufc_bouts": 4,
+      "b_stats_coverage": 1.0,
+      "fight_no": 10,
+      "identity_a": {
+        "prior_ufc_name_resolution": "EXACT_NORMALIZED_MATCH_IN_PINNED_ARCHIVE",
+        "screen_name": "Aljamain Sterling",
+        "source_name": "Aljamain Sterling",
+        "source_name_matched": true
+      },
+      "identity_b": {
+        "prior_ufc_name_resolution": "EXACT_NORMALIZED_MATCH_IN_PINNED_ARCHIVE",
+        "screen_name": "Kevin Vallejos",
+        "source_name": "Kevin Vallejos",
+        "source_name_matched": true
+      },
+      "not_authorized_for_betting": true,
+      "original_official_stage_a_status": "LEAN",
+      "provisional_bout": false,
+      "research_models": {
+        "boost_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.34291195440445316,
+          "p_exact_winner_method": 0.395812390934146,
+          "p_winner": 0.6570880455955468,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.19205640930356097,
+            "A_KO": 0.07499725662039267,
+            "A_SUB": 0.07585828848049954,
+            "B_DEC": 0.24386201226084403,
+            "B_KO": 0.395812390934146,
+            "B_SUB": 0.017413642400556793
+          },
+          "winner": "Kevin Vallejos"
+        },
+        "boost_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.4106877433114471,
+          "p_exact_winner_method": 0.35498605535470135,
+          "p_winner": 0.5893122566885529,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2300159335721157,
+            "A_KO": 0.08982029841879016,
+            "A_SUB": 0.09085151132054126,
+            "B_DEC": 0.2187087008040122,
+            "B_KO": 0.35498605535470135,
+            "B_SUB": 0.01561750052983941
+          },
+          "winner": "Kevin Vallejos"
+        },
+        "logit_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.48270686526795054,
+          "p_exact_winner_method": 0.3116036486199308,
+          "p_winner": 0.5172931347320495,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2703520425543276,
+            "A_KO": 0.10557138700456944,
+            "A_SUB": 0.10678343570905353,
+            "B_DEC": 0.1919805810043981,
+            "B_KO": 0.3116036486199308,
+            "B_SUB": 0.013708905107720626
+          },
+          "winner": "Kevin Vallejos"
+        },
+        "logit_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.4952516796647401,
+          "p_exact_winner_method": 0.3040469855311691,
+          "p_winner": 0.5047483203352598,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2773780793473911,
+            "A_KO": 0.1083150261588392,
+            "A_SUB": 0.10955857415850978,
+            "B_DEC": 0.1873248827266015,
+            "B_KO": 0.3040469855311691,
+            "B_SUB": 0.013376452077489252
+          },
+          "winner": "Kevin Vallejos"
+        },
+        "past_only_elo": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "DEC",
+          "p_a": 0.6163976364361663,
+          "p_exact_winner_method": 0.34522889982862187,
+          "p_winner": 0.6163976364361663,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.34522889982862187,
+            "A_KO": 0.13481049909820914,
+            "A_SUB": 0.1363582375093353,
+            "B_DEC": 0.14236455055563765,
+            "B_KO": 0.23107187797424686,
+            "B_SUB": 0.010165935033949197
+          },
+          "winner": "Aljamain Sterling"
+        },
+        "ufc_winrate": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.49350649350649345,
+          "p_exact_winner_method": 0.305098239332773,
+          "p_winner": 0.5064935064935066,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.2764006442279266,
+            "A_KO": 0.10793334166963062,
+            "A_SUB": 0.10917250760893624,
+            "B_DEC": 0.18797256550088492,
+            "B_KO": 0.305098239332773,
+            "B_SUB": 0.013422701659848591
+          },
+          "winner": "Kevin Vallejos"
+        }
+      },
+      "research_uncertainty": "NORMAL_RESEARCH_SHADOW",
+      "source_a": "Aljamain Sterling",
+      "source_alias_unverified": false,
+      "source_b": "Kevin Vallejos"
+    },
+    {
+      "a": "Jiri Prochazka",
+      "a_prior_ufc_bouts": 9,
+      "a_stats_coverage": 1.0,
+      "b": "Navajo Stirling",
+      "b_prior_ufc_bouts": 6,
+      "b_stats_coverage": 1.0,
+      "fight_no": 11,
+      "identity_a": {
+        "prior_ufc_name_resolution": "EXACT_NORMALIZED_MATCH_IN_PINNED_ARCHIVE",
+        "screen_name": "Jiri Prochazka",
+        "source_name": "Jiri Prochazka",
+        "source_name_matched": true
+      },
+      "identity_b": {
+        "prior_ufc_name_resolution": "EXACT_NORMALIZED_MATCH_IN_PINNED_ARCHIVE",
+        "screen_name": "Navajo Stirling",
+        "source_name": "Navajo Stirling",
+        "source_name_matched": true
+      },
+      "not_authorized_for_betting": true,
+      "original_official_stage_a_status": "LEAN",
+      "provisional_bout": false,
+      "research_models": {
+        "boost_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.3383198683123793,
+          "p_exact_winner_method": 0.38733664302936816,
+          "p_winner": 0.6616801316876206,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.15557656188327781,
+            "A_KO": 0.15217572594864354,
+            "A_SUB": 0.03056758048045795,
+            "B_DEC": 0.24984149421337712,
+            "B_KO": 0.38733664302936816,
+            "B_SUB": 0.024501994444875344
+          },
+          "winner": "Navajo Stirling"
+        },
+        "boost_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.2981583695206216,
+          "p_exact_winner_method": 0.4108465224651489,
+          "p_winner": 0.7018416304793784,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.13710827643120388,
+            "A_KO": 0.13411114917900993,
+            "A_SUB": 0.026938943910407746,
+            "B_DEC": 0.26500593453349025,
+            "B_KO": 0.4108465224651489,
+            "B_SUB": 0.02598917348073928
+          },
+          "winner": "Navajo Stirling"
+        },
+        "logit_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.37981760652044017,
+          "p_exact_winner_method": 0.36304455106368383,
+          "p_winner": 0.6201823934795598,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.17465931770411358,
+            "A_KO": 0.1708413410322001,
+            "A_SUB": 0.03431694778412647,
+            "B_DEC": 0.2341725079103818,
+            "B_KO": 0.36304455106368383,
+            "B_SUB": 0.022965334505494213
+          },
+          "winner": "Navajo Stirling"
+        },
+        "logit_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.2992316422508741,
+          "p_exact_winner_method": 0.41021824629894355,
+          "p_winner": 0.7007683577491259,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.13760182143690716,
+            "A_KO": 0.1345939055056832,
+            "A_SUB": 0.027035915308283746,
+            "B_DEC": 0.26460068122485475,
+            "B_KO": 0.41021824629894355,
+            "B_SUB": 0.025949430225327617
+          },
+          "winner": "Navajo Stirling"
+        },
+        "past_only_elo": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.4691582947022982,
+          "p_exact_winner_method": 0.3107459847488176,
+          "p_winner": 0.5308417052977018,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.21574267817286935,
+            "A_KO": 0.21102663712090805,
+            "A_SUB": 0.04238897940852079,
+            "B_DEC": 0.2004386689140727,
+            "B_KO": 0.3107459847488176,
+            "B_SUB": 0.019657051634811518
+          },
+          "winner": "Navajo Stirling"
+        },
+        "ufc_winrate": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.43478260869565216,
+          "p_exact_winner_method": 0.33086894474413436,
+          "p_winner": 0.5652173913043479,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.1999350016448237,
+            "A_KO": 0.19556450952214127,
+            "A_SUB": 0.039283097528687194,
+            "B_DEC": 0.2134184643548174,
+            "B_KO": 0.33086894474413436,
+            "B_SUB": 0.020929982205396127
+          },
+          "winner": "Navajo Stirling"
+        }
+      },
+      "research_uncertainty": "NORMAL_RESEARCH_SHADOW",
+      "source_a": "Jiri Prochazka",
+      "source_alias_unverified": false,
+      "source_b": "Navajo Stirling"
+    },
+    {
+      "a": "John Mitchell",
+      "a_prior_ufc_bouts": 0,
+      "a_stats_coverage": 0.0,
+      "b": "Shoaib Yousaf",
+      "b_prior_ufc_bouts": 0,
+      "b_stats_coverage": 0.0,
+      "fight_no": 12,
+      "identity_a": {
+        "prior_ufc_name_resolution": "NO_MATCHING_UFC_SOURCE_NAME_REQUIRES_INDEPENDENT_ALIAS_VERIFICATION",
+        "screen_name": "John Mitchell",
+        "source_name": "John Mitchell",
+        "source_name_matched": false
+      },
+      "identity_b": {
+        "prior_ufc_name_resolution": "NO_MATCHING_UFC_SOURCE_NAME_REQUIRES_INDEPENDENT_ALIAS_VERIFICATION",
+        "screen_name": "Shoaib Yousaf",
+        "source_name": "Shoaib Yousaf",
+        "source_name_matched": false
+      },
+      "not_authorized_for_betting": true,
+      "original_official_stage_a_status": "PASS",
+      "provisional_bout": true,
+      "research_models": {
+        "boost_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.5,
+          "p_exact_winner_method": 0.2168259130495675,
+          "p_winner": 0.5,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.21057781475180518,
+            "A_KO": 0.2168259130495675,
+            "A_SUB": 0.07259627219862738,
+            "B_DEC": 0.21057781475180518,
+            "B_KO": 0.2168259130495675,
+            "B_SUB": 0.07259627219862738
+          },
+          "winner": "John Mitchell"
+        },
+        "boost_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.5,
+          "p_exact_winner_method": 0.2168259130495675,
+          "p_winner": 0.5,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.21057781475180518,
+            "A_KO": 0.2168259130495675,
+            "A_SUB": 0.07259627219862738,
+            "B_DEC": 0.21057781475180518,
+            "B_KO": 0.2168259130495675,
+            "B_SUB": 0.07259627219862738
+          },
+          "winner": "John Mitchell"
+        },
+        "logit_original_38": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.5,
+          "p_exact_winner_method": 0.2168259130495675,
+          "p_winner": 0.5,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.21057781475180518,
+            "A_KO": 0.2168259130495675,
+            "A_SUB": 0.07259627219862738,
+            "B_DEC": 0.21057781475180518,
+            "B_KO": 0.2168259130495675,
+            "B_SUB": 0.07259627219862738
+          },
+          "winner": "John Mitchell"
+        },
+        "logit_recent_57": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.5,
+          "p_exact_winner_method": 0.2168259130495675,
+          "p_winner": 0.5,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.21057781475180518,
+            "A_KO": 0.2168259130495675,
+            "A_SUB": 0.07259627219862738,
+            "B_DEC": 0.21057781475180518,
+            "B_KO": 0.2168259130495675,
+            "B_SUB": 0.07259627219862738
+          },
+          "winner": "John Mitchell"
+        },
+        "past_only_elo": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.5,
+          "p_exact_winner_method": 0.2168259130495675,
+          "p_winner": 0.5,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.21057781475180518,
+            "A_KO": 0.2168259130495675,
+            "A_SUB": 0.07259627219862738,
+            "B_DEC": 0.21057781475180518,
+            "B_KO": 0.2168259130495675,
+            "B_SUB": 0.07259627219862738
+          },
+          "winner": "John Mitchell"
+        },
+        "ufc_winrate": {
+          "independent_method_head": "MultinomialFinish trained 2021 through Nov7 historical results",
+          "method": "KO_TKO",
+          "p_a": 0.5,
+          "p_exact_winner_method": 0.2168259130495675,
+          "p_winner": 0.5,
+          "research_only": true,
+          "six_joint": {
+            "A_DEC": 0.21057781475180518,
+            "A_KO": 0.2168259130495675,
+            "A_SUB": 0.07259627219862738,
+            "B_DEC": 0.21057781475180518,
+            "B_KO": 0.2168259130495675,
+            "B_SUB": 0.07259627219862738
+          },
+          "winner": "John Mitchell"
+        }
+      },
+      "research_uncertainty": "HIGH_UNVERIFIED_UFC_IDENTITY",
+      "source_a": "John Mitchell",
+      "source_alias_unverified": true,
+      "source_b": "Shoaib Yousaf"
+    }
+  ],
+  "historical_source_through": "2026-11-07",
+  "locked_at_utc": "2026-11-19T21:22:24.603880+00:00",
+  "new_feature_family": "Past-only significant striking accuracy, striking defence, recent 3/5 results, form and grappling",
+  "nov14_UFC334_outcomes_used": false,
+  "nov21_provisional_bout_explicit": true,
+  "original_coherent_shadow_sha256": "56953d0b7507f42697e7deab49dbe91a25ae0a3c3ff1947399ea4bae7192cdd4",
+  "original_stage_a_and_coherent_shadow_unchanged": true,
+  "original_stage_a_frozen_at_utc": "2026-11-18T21:31:31.338799+00:00",
+  "original_stage_a_sha256": "eb5b161b2ff2ac541de7319d2047fffc1dc40c5afed5192643649cd5c5fcb277",
+  "other_winner_models_research_diagnostics_only": [
+    "ufc_winrate",
+    "past_only_elo",
+    "logit_original_38",
+    "boost_original_38",
+    "boost_recent_57"
+  ],
+  "real_later_results_available_to_training": false,
+  "research_prediction_bouts": 12,
+  "research_results_not_yet_observed": true,
+  "schema": "WSHLX_UFC_QATAR_WINNER_V3_ACTUAL_FUTURE_PRE_EVENT_SHADOW",
+  "source_archive_ufc_fight_stats_sha256": "f5b316d5e745bd89da921b2c9711ec9209c2fa39dcbcd80bcb063b62d9175bcb",
+  "source_form_date_join_audit": {
+    "example_unmatched": [],
+    "historical_snapshots": 8871,
+    "modern_rows_joined": 3036,
+    "modern_rows_unmatched": 0,
+    "new_feature_columns": [
+      "prior_recorded_stat_fights",
+      "lifetime_sig_strikes_landed_per15",
+      "lifetime_sig_strikes_absorbed_per15",
+      "lifetime_sig_strike_accuracy",
+      "lifetime_sig_strike_defense",
+      "lifetime_td_accuracy",
+      "lifetime_td_defense",
+      "recent3_wins_fraction_smoothed",
+      "recent5_wins_fraction_smoothed",
+      "streak_signed_scaled",
+      "recent3_sig_strikes_landed_per15",
+      "recent3_sig_strikes_absorbed_per15",
+      "recent3_knockdowns_per15",
+      "recent3_takedowns_per15",
+      "recent3_submission_attempts_per15",
+      "last12months_bout_count",
+      "recent3_stats_coverage",
+      "no_previous_ufc_stats",
+      "last3_sig_absorbed_per15_missing"
+    ],
+    "same_day_frozen_before_update": true,
+    "schema": "WSHLX_PRIOR_STRIKING_AND_RECENT_FORM_V3",
+    "source_bout_count": 8871,
+    "source_class": "PINNED_SECONDARY_UFCSTATS_COMPATIBLE",
+    "source_values_only_prio_event": true,
+    "unmeasured_getups_injuries_regional_mma_not_added": true
+  },
+  "training_decisive_bouts": 3015,
+  "winner_v3_not_a_promoted_official_fourth_production_model": true,
+  "winner_v3_primary_prespecified": "logit_recent_57"
+}
