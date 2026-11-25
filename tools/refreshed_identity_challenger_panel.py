@@ -19,7 +19,6 @@ from run_future_updated_method_panel import fit_round,method_vector,cond,project
 from benchmark_strict_history_v1 import train,predict
 from benchmark_worldwide_mma_winner_v4 import features as encode
 from benchmark_worldwide_method_v5 import train_methods,conditional
-from lock_ufcqatar_worldwide_winner_v4_research import historic_verified_id_map
 from regional_v5_refreshed_inputs import FLAGGED
 CUTOFF="2026-11-25"
 
@@ -78,7 +77,15 @@ def regional(features,queries,original,query_ids):
 def panel(day,pairs,query_ids):
     original,audit=load_extended_records(as_of_exclusive=day)
     matches=mapping();records,_=overlay(original,matches)
-    strict,qa=strict_records(records)
+    # The strict complete-case parser and round model must see the same identity keys.
+    t,_=corrected_tables(load_source_files(ARCHIVE),matches)
+    with tempfile.TemporaryDirectory() as tmp:
+        p=Path(tmp);t["stats"].to_csv(p/FILES["stats"],index=False)
+        strict,qa=strict_records(records,root=p)
+        raw,ra=read_rounds(p)
+    assert ra=={"parsed_round_fighter_rows":42310,"duplicate_rows_excluded":2}
+    assert len(strict)==len(records)==8896
+    assert all(all(x[k]==y[k] for k in x if k not in ("stats_a","stats_b")) for x,y in zip(records,strict,strict=True))
     f,l,forms=matrices_from_records(records,day)
     ff,qforms=query(records,day,pairs)
     sf,sl,sforms=matrices_from_records(strict,day)
@@ -89,12 +96,6 @@ def panel(day,pairs,query_ids):
     labels={x["bout_id"]:x for x in l}
     rows=[(x,labels[x["bout_id"]]) for x in f if "2021-01-01"<=x["event_date"]<day and labels[x["bout_id"]]["result_status"]=="DECISIVE"]
     assert len(rows)==3039
-    # Re-key both records and round statistics from the same verified map.
-    t,_=corrected_tables(load_source_files(ARCHIVE),matches)
-    with tempfile.TemporaryDirectory() as tmp:
-        p=Path(tmp);t["stats"].to_csv(p/FILES["stats"],index=False)
-        raw,ra=read_rounds(p)
-    assert ra=={"parsed_round_fighter_rows":42310,"duplicate_rows_excluded":2}
     rounds,roundaudit=build_round_history(records,raw,query_date=day,query_bouts=pairs)
     conv=build_conversion(records,query_date=day,query_bouts=pairs)
     rm,rt=fit_round(rows,conv,rounds)
@@ -113,13 +114,15 @@ def panel(day,pairs,query_ids):
             assert np.isclose(sum(v["six_joint"]["A_"+m] for m in ("KO","SUB","DEC")),v["p_a"])
             if "strict" not in k:assert v["p_a"]==p
         out.append({"source_names":[aa,bb],"models":models,"regional_eligible":bool(ext[x["bout_id"]][2]),"bet_authorized":False})
-    return out,{"training_fights":3039,"regional":regaudit,"round":{**ra,**roundaudit,**rt},"source_outcomes_through":"2026-11-21","secondary_qatar_rounds_used":False,"research_only":True}
+    return out,{"training_fights":3039,"regional":regaudit,"round":{**ra,**roundaudit,**rt},"source_outcomes_through":"2026-11-21","secondary_qatar_rounds_used":False,"strict_audit":qa,"research_only":True}
 
 def main():
     # Hypothetical pairs only; test corrected identity + newcomer + abstention.
-    ids=historic_verified_id_map()
-    pairs=[(NAMES[55096],"Dan Hooker"),("Akbar Abdullaev","Amir Albazi"),("Identity Test Unknown","Mateusz Gamrot")]
-    qids={NAMES[55096]:55096,"Dan Hooker":ids["danhooker"],"Akbar Abdullaev":138491,"Amir Albazi":ids["amiralbazi"],"Mateusz Gamrot":ids["mateuszgamrot"]}
+    # IDs were corroborated by the successful Nov25 Riyadh source audit.
+    # The rebuilt dated crosswalk inside regional() independently checks them.
+    # Do not depend on a locally generated, untracked prior audit report.
+    pairs=[(NAMES[55096],"Israel Adesanya"),("Akbar Abdullaev","Ion Cutelaba"),("Identity Test Unknown","Shara Magomedov")]
+    qids={NAMES[55096]:55096,"Israel Adesanya":64102,"Akbar Abdullaev":138491,"Ion Cutelaba":64455,"Shara Magomedov":117117}
     result,audit=panel("2026-12-05",pairs,qids)
     assert [x["regional_eligible"] for x in result]==[True,True,False]
     print(json.dumps({**audit,"hypothetical_matchups":len(result),"models_checked":sum(len(x["models"]) for x in result),"new_live_forecasts":0,"production_migrated":False}))
