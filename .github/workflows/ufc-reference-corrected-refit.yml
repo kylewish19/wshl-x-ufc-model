@@ -2,7 +2,7 @@ name: UFC Reference corrected backbone refit
 on:
   push:
     branches: ["feature/historical-conditional-rates"]
-    paths: ["tools/refit_reference_identity_corrected.py", ".github/workflows/ufc-reference-corrected-refit.yml"]
+    paths: ["tools/refit_reference_identity_corrected.py", "tools/refit_historical_identity_corrected.py", ".github/workflows/ufc-reference-corrected-refit.yml"]
   workflow_dispatch:
 permissions:
   contents: read

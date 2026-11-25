@@ -85,6 +85,7 @@ def main():
     selfcheck()
     if OUT.exists():raise FileExistsError("Do not overwrite refit")
     t=source()
+    # Shared recent-outcome validation includes explicit D/D normalization.
     with tempfile.TemporaryDirectory() as tmp:
         path=Path(tmp)
         for k,v in FILES.items():t[k].to_csv(path/v,index=False)

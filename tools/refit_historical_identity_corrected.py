@@ -18,7 +18,28 @@ from wshlx_ufc.historical_method_model import fit_historical_method_model
 from wshlx_ufc.historical_timing_model import fit_historical_timing_model
 
 OUT=Path("research_outputs/historical_identity_refit_2026-11-25")
+def verified_method(res,raw_method,expected_res,expected_method):
+    if tuple(res)!=tuple(expected_res):
+        raise ValueError(f"Result disagreement: {res!r} versus {expected_res!r}")
+    normalized=method(raw_method)
+    # A judged draw may be stored under Decision - Majority/Split/Unanimous.
+    # Require D/D on BOTH sources; never relabel a decisive decision as a draw.
+    if tuple(res)==("D","D") and normalized in ("DEC","DRAW"):
+        normalized="DRAW"
+    if normalized!=expected_method:
+        raise ValueError(f"Method disagreement: {raw_method!r} -> {normalized!r} versus {expected_method!r}")
+    return "DRAW" if normalized=="DRAW" else raw_method
+
+def selfcheck_recent():
+    assert verified_method(("D","D"),"Decision - Majority",("D","D"),"DRAW")=="DRAW"
+    assert verified_method(("W","L"),"Decision - Split",("W","L"),"DEC")=="Decision - Split"
+    for args in [(("W","L"),"Decision - Majority",("D","D"),"DRAW"),(("W","L"),"Submission",("W","L"),"KO_TKO"),(("D","D"),"KO/TKO",("D","D"),"DRAW")]:
+        try:verified_method(*args)
+        except ValueError:pass
+        else:raise AssertionError("Invalid source agreement accepted")
+
 def append_recent(t):
+    selfcheck_recent()
     records,_=load_extended_records(as_of_exclusive="2026-12-05")
     extra=[r for r in records if r["date"].isoformat()>="2026-11-14"]
     assert len(extra)==25
@@ -42,13 +63,21 @@ def append_recent(t):
             x,reverse=hits[0]
             _,_,_,ra,rb,m,rnd,clock,scheduled,wc=x
             res=(rb,ra) if reverse else (ra,rb)
-            assert res==tuple(r["result"]) and method(m)==r["method"]
-            assert scheduled in (3,5) and wc and rnd and clock
-            assert (rnd-1)*300+secs(clock)==r["elapsed_seconds"]
+            try:
+                normalized_method=verified_method(res,m,r["result"],r["method"])
+                if scheduled not in (3,5) or not wc or not rnd or not clock:
+                    raise ValueError(f"Incomplete schedule metadata: {x!r}")
+                if (rnd-1)*300+secs(clock)!=r["elapsed_seconds"]:
+                    raise ValueError(f"Duration disagreement: {rnd}, {clock} versus {r['elapsed_seconds']}")
+            except ValueError as exc:
+                raise ValueError(f"{day} {r['a']} vs {r['b']}: {exc}") from exc
+            print("VERIFIED_RECENT",day,r["a"],r["b"],res,repr(m),normalized_method,flush=True)
             events[r["event"]]={"EVENT":r["event"],"DATE":day}
-            rows.append({"EVENT":r["event"],"BOUT":r["a"]+" vs. "+r["b"],"OUTCOME":"/".join(res),"METHOD":m,"ROUND":rnd,"TIME":clock,"WEIGHTCLASS":wc,"TIME FORMAT":str(scheduled)+" Rnd"})
+            rows.append({"EVENT":r["event"],"BOUT":r["a"]+" vs. "+r["b"],"OUTCOME":"/".join(res),"METHOD":normalized_method,"ROUND":rnd,"TIME":clock,"WEIGHTCLASS":wc,"TIME FORMAT":str(scheduled)+" Rnd"})
         t["events"]=pd.concat([t["events"],pd.DataFrame(events.values())],ignore_index=True)
         df=pd.DataFrame(rows)
+        # Use one date representation for both legacy date parsers.
+        t["events"]["DATE"]=pd.to_datetime(t["events"]["DATE"],format="mixed",errors="raise").dt.strftime("%Y-%m-%d")
         tf=col(t["results"],"TIME FORMAT","TIME_FORMAT")
         if tf!="TIME FORMAT":df=df.rename(columns={"TIME FORMAT":tf})
         t["results"]=pd.concat([t["results"],df],ignore_index=True)
