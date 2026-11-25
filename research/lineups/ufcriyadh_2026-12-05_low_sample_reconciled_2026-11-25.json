@@ -1,0 +1,120 @@
+{
+  "schema": "WSHLX_LOW_SAMPLE_RECONCILIATION_SUMMARY_V1",
+  "source_run": 45673143457,
+  "source_job": 139413513704,
+  "cutoff_exclusive": "2026-11-25",
+  "physical_shadow_run": 45672764004,
+  "target_results_matched": 4,
+  "ambiguous_opponent_joins": 0,
+  "fighters": [
+    {
+      "name": "Akbar Abdullaev",
+      "id": 138491,
+      "non_ufc_wins": 14,
+      "non_ufc_losses": 0,
+      "non_ufc_ko_wins": 13,
+      "non_ufc_sub_wins": 1,
+      "non_ufc_dec_wins": 0,
+      "non_ufc_ko_losses": 0,
+      "ufc_wins": 0,
+      "ufc_losses": 0
+    },
+    {
+      "name": "Mairon Santos",
+      "id": 127793,
+      "non_ufc_wins": 13,
+      "non_ufc_losses": 1,
+      "non_ufc_ko_wins": 7,
+      "non_ufc_sub_wins": 0,
+      "non_ufc_dec_wins": 6,
+      "non_ufc_ko_losses": 1,
+      "ufc_wins": 4,
+      "ufc_losses": 0
+    },
+    {
+      "name": "Ivan Gnizditskiy",
+      "id": 121393,
+      "non_ufc_wins": 7,
+      "non_ufc_losses": 0,
+      "non_ufc_ko_wins": 6,
+      "non_ufc_sub_wins": 1,
+      "non_ufc_dec_wins": 0,
+      "non_ufc_ko_losses": 0,
+      "ufc_wins": 0,
+      "ufc_losses": 0
+    },
+    {
+      "name": "Uran Satybaldiev",
+      "id": 136337,
+      "non_ufc_wins": 8,
+      "non_ufc_losses": 0,
+      "non_ufc_ko_wins": 5,
+      "non_ufc_sub_wins": 1,
+      "non_ufc_dec_wins": 2,
+      "non_ufc_ko_losses": 0,
+      "ufc_wins": 1,
+      "ufc_losses": 1
+    },
+    {
+      "name": "Mahammadali Osmanli",
+      "id": 133556,
+      "non_ufc_wins": 11,
+      "non_ufc_losses": 1,
+      "non_ufc_ko_wins": 3,
+      "non_ufc_sub_wins": 6,
+      "non_ufc_dec_wins": 2,
+      "non_ufc_ko_losses": 0,
+      "ufc_wins": 0,
+      "ufc_losses": 1
+    },
+    {
+      "name": "Pavel Andrusca",
+      "id": 140692,
+      "non_ufc_wins": 8,
+      "non_ufc_losses": 0,
+      "non_ufc_ko_wins": 6,
+      "non_ufc_sub_wins": 1,
+      "non_ufc_dec_wins": 1,
+      "non_ufc_ko_losses": 0,
+      "ufc_wins": 1,
+      "ufc_losses": 0
+    },
+    {
+      "name": "Modestino Rodrigues",
+      "id": 146940,
+      "non_ufc_wins": 8,
+      "non_ufc_losses": 1,
+      "non_ufc_ko_wins": 8,
+      "non_ufc_sub_wins": 0,
+      "non_ufc_dec_wins": 0,
+      "non_ufc_ko_losses": 1,
+      "ufc_wins": 0,
+      "ufc_losses": 0
+    },
+    {
+      "name": "Matthieu Duclos",
+      "id": 133359,
+      "non_ufc_wins": 10,
+      "non_ufc_losses": 3,
+      "non_ufc_ko_wins": 8,
+      "non_ufc_sub_wins": 0,
+      "non_ufc_dec_wins": 2,
+      "non_ufc_ko_losses": 2,
+      "ufc_wins": 1,
+      "ufc_losses": 0
+    }
+  ],
+  "open_discrepancies": [
+    {
+      "fighter": "Mahammadali Osmanli",
+      "known_database_non_ufc_wins": 11,
+      "known_database_non_ufc_submission_wins": 6,
+      "previously_recorded_ufc_preview_wins": 12,
+      "previously_recorded_ufc_preview_submission_wins": 8,
+      "resolution": "UNRESOLVED: do not fabricate missing fights; preview may use different scope or coverage; reconcile fight by fight."
+    }
+  ],
+  "model_inputs_changed": false,
+  "actual_predictions": 0,
+  "tape_reviewed": false
+}
