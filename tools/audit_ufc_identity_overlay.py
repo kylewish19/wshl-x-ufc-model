@@ -81,7 +81,11 @@ def main():
         for label in ("result_status","label_a_win","label_method"):
             assert l[label]==m[label]
         diff=any(x[z]!=y[z] for z in fields)
-        formdiff=any(not np.array_equal(np.asarray(u),np.asarray(v),equal_nan=True) for u,v in zip(oldform[x["bout_id"]],newform[y["bout_id"]]))
+        formdiff=False
+        if k[0]>="2021-01-01":
+            formdiff=any(not np.array_equal(np.asarray(u),np.asarray(v),equal_nan=True) for u,v in zip(oldform[x["bout_id"]],newform[y["bout_id"]],strict=True))
+        else:
+            assert x["bout_id"] not in oldform and y["bout_id"] not in newform
         if formdiff:form_changed+=1
         if diff or formdiff:
             changed["all"]+=1
@@ -92,7 +96,7 @@ def main():
     o,_=build_from_records(records,as_of_exclusive=day,query_bouts=[("Bruno Silva","Identity Audit Control")])
     n,_=build_from_records(fixed,as_of_exclusive=day,query_bouts=[(NAMES[55096],NAMES[50558])])
     before=o[-1]["a_pre"];after=n[-1]
-    result={"matched_raw_rows":len(matched),"raw_rows_by_id":dict(Counter(x[0] for x in matched.values())),"eligible_records_by_id":counts,"original_combined_eligible_bouts":before["prior_ufc_bouts"],"separated_eligible_bouts":{"bulldog":after["a_pre"]["prior_ufc_bouts"],"blindado":after["b_pre"]["prior_ufc_bouts"]},"changed_feature_rows":dict(changed),"changed_modern_decisive_rows":dec["modern_decisive"],"changed_recent_form_rows":form_changed,"same_result_labels":True,"source_unchanged":True,"production_migrated":False,"predictions_generated":0,"profile_ids_verified":PROFILE_IDS}
+    result={"matched_raw_rows":len(matched),"raw_rows_by_id":dict(Counter(x[0] for x in matched.values())),"eligible_records_by_id":counts,"original_combined_eligible_bouts":before["prior_ufc_bouts"],"separated_eligible_bouts":{"bulldog":after["a_pre"]["prior_ufc_bouts"],"blindado":after["b_pre"]["prior_ufc_bouts"]},"changed_feature_rows":dict(changed),"changed_modern_decisive_rows":dec["modern_decisive"],"changed_recent_form_rows_2021_onward":form_changed,"same_result_labels":True,"source_unchanged":True,"production_migrated":False,"predictions_generated":0,"profile_ids_verified":PROFILE_IDS}
     Path("ufc_identity_overlay_audit.json").write_text(json.dumps(result,indent=2))
     print(json.dumps(result))
 if __name__=="__main__":main()
