@@ -1,0 +1,4 @@
+# November 25 verified integration milestones
+Run 45658442987 passed: SHA-verified five corrected Reference artifacts; two hypothetical 3/5 round matchups, 2 model views, 10k simulations, 8786 paired/45 missing. No live predictions. Run 45658442243 passed all four synthetic Unified contract tests and Qatar hash checks. General tests 45658458373 passed; historical benchmark 45658442327 passed.
+Historical run 45655231290 completed all three fits through Nov21 (183/399/220 features), but predates last Romero adapter fix and must not be used as the final refreshed arm. Latest run 45656649012 was still executing. Do not confuse the synthetic Unified contract or Reference-only inference with actual full three-view inference.
+Draft lineup source coverage tool joins provisional regional IDs to exact raw UFCStats profile IDs, with explicit unknown coverage; no caller attestation or card forecast. No promotions or previous pick edits.
