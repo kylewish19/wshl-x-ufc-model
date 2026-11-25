@@ -2,7 +2,7 @@
 CI uses rotated fictional matchups, no saved forecasts or live attestation.
 Real mode uses the exact existing caller verification gate and source ID joins.
 """
-import argparse,hashlib,json
+import argparse,hashlib,json,subprocess
 from datetime import datetime,timezone
 from pathlib import Path
 import pandas as pd
@@ -66,6 +66,38 @@ def attach(core,challenger,details):
         x["bet_authorized"]=False
     return core
 
+def report_for(*,event,day,first,created,raw,lineup_source,coverage,audit,physical,result,synthetic,runner_commit):
+    return {"schema":"WSHLX_REFRESHED_COMBINED_RESEARCH_V1","run_kind":"SYNTHETIC_CONTRACT_TEST" if synthetic else "PROSPECTIVE_RESEARCH","runner_commit":runner_commit,"event":event,"event_date":day,"first_fight_utc":first.isoformat(),"generated_at_utc":created.isoformat(),"lineup_sha256":hashlib.sha256(raw).hexdigest(),"lineup_source_url":lineup_source,"history_through":CUTOFF,"worldwide_source_sha256":SHA,"artifact_hashes":{"reference":REFERENCE,"offsets":OFFSETS,"historical":HISTORICAL},"source_coverage":coverage,"challenger_audit":audit,"official_physical_shadow_metadata":physical,"research_only":True,"odds_used":False,"model_vote_created":False,"bet_authorized":False,"production_migrated":False,"fights":result}
+
+def contract_selftest(result,coverage,audit,physical):
+    from datetime import timedelta
+    from wshlx_ufc.combined_research_grade import grade
+    from wshlx_ufc.combined_research_cumulative import summarize
+    first=datetime(2026,12,5,15,tzinfo=timezone.utc)
+    created=first-timedelta(hours=24)
+    lock=report_for(event="SYNTHETIC CONTRACT TEST",day="2026-12-05",first=first,created=created,raw=b"synthetic",lineup_source="https://example.invalid/fixture",coverage=coverage,audit=audit,physical=physical,result=result,synthetic=True,runner_commit="0"*40)
+    raw=json.dumps(lock,allow_nan=False).encode()
+    e={"sha256":hashlib.sha256(raw).hexdigest(),"published_at_utc":(created+timedelta(minutes=1)).isoformat(),"externally_verified_by_caller":True,"evidence_url":"https://example.invalid/fixture"}
+    actual={"event":lock["event"],"event_date":lock["event_date"],"verified_at_utc":(first+timedelta(days=1)).isoformat(),"results_verified_by_caller":True,"fights":[]}
+    for i,r in enumerate(result):
+        ids=[z["regional_id"] for z in r["identities"]]
+        m=("KO_TKO","SUB","DEC")[i%3]
+        row={"fight_no":r["fight_no"],"regional_ids":ids[::-1],"status":"DECISIVE","winner_id":ids[i%2],"method":m,"timing_eligible":True,"went_distance":m=="DEC"}
+        if i==len(result)-1:row["status"]="DQ"
+        actual["fights"].append(row)
+    try:grade(raw,actual,e)
+    except ValueError as exc:require("run kind" in str(exc),"Unexpected fixture rejection")
+    else:raise AssertionError("Fixture accepted by prospective grader")
+    scored=grade(raw,actual,e,synthetic=True)
+    require(scored["unique_decisive_bouts"]==len(result)-1 and len(scored["models"])==13,"Runner/grade coverage mismatch")
+    require(all(v["n"]==len(result)-1 for v in scored["timing_gtd"].values()),"Timing grade mismatch")
+    try:summarize([scored])
+    except ValueError as exc:require("run kind" in str(exc),"Unexpected synthetic grade rejection")
+    else:raise AssertionError("Fixture accepted into prospective cohort")
+    summary=summarize([scored],synthetic=True)
+    require(summary["unique_decisive_bouts"]==len(result)-1,"Synthetic aggregation failed")
+    print("RUNNER_GRADER_CONTRACT",json.dumps({"synthetic_only":True,"fictional_bouts":len(result),"graded_fixture_bouts":len(result)-1,"registered_arms":len(scored["models"]),"excluded_DQ":1,"fixture_rejected_by_real_grader":True,"fixture_rejected_by_real_cumulative":True,"actual_prospective_bouts":0}))
+
 def main():
     ap=argparse.ArgumentParser()
     for n in ("reference","offsets","historical"):ap.add_argument("--"+n,type=Path,required=True)
@@ -118,10 +150,14 @@ def main():
     for row,pair in zip(result,identities,strict=True):row["identities"]=pair
     json.dumps(result,allow_nan=False)
     if args.self_test:
+        contract_selftest(result,coverage,audit,physical)
         print(json.dumps({"fictional_fights":len(result),"core_views":len(result)*3,"core_coherence_variants":len(result)*9,"challenger_outputs":sum(len(x["challengers"]) for x in result),"regional_eligible":sum(x["regional_status"]=="ELIGIBLE" for x in result),"missing_physical_profiles_retained":sum(not z["height_known"] or not z["reach_known"] for x in result for z in x["source_coverage"]),"official_physical_shadow_checked":physical is not None,"official_physical_shadow_fields":physical["filled_fields"] if physical else 0,"draft_rejected":True,"actual_forecasts":0,"production_migrated":False}))
         return
     require(datetime.now(timezone.utc)<first,"Event already started")
-    report={"schema":"WSHLX_REFRESHED_COMBINED_RESEARCH_V1","event":d["event"],"event_date":day,"first_fight_utc":first.isoformat(),"generated_at_utc":datetime.now(timezone.utc).isoformat(),"lineup_sha256":hashlib.sha256(raw).hexdigest(),"lineup_source_url":d["lineup_source_url"],"history_through":CUTOFF,"worldwide_source_sha256":SHA,"artifact_hashes":{"reference":REFERENCE,"offsets":OFFSETS,"historical":HISTORICAL},"source_coverage":coverage,"challenger_audit":audit,"official_physical_shadow_metadata":physical,"research_only":True,"odds_used":False,"model_vote_created":False,"bet_authorized":False,"production_migrated":False,"fights":result}
+    commit=subprocess.check_output(["git","rev-parse","HEAD"],cwd=ROOT,text=True).strip()
+    require(not subprocess.check_output(["git","status","--porcelain","--untracked-files=no"],cwd=ROOT,text=True).strip(),"Tracked runner source must be clean")
+    report=report_for(event=d["event"],day=day,first=first,created=datetime.now(timezone.utc),raw=raw,lineup_source=d["lineup_source_url"],coverage=coverage,audit=audit,physical=physical,result=result,synthetic=False,runner_commit=commit)
+    require(datetime.now(timezone.utc)<first,"Event started before publication")
     args.output.parent.mkdir(parents=True,exist_ok=True)
     with args.output.open("x") as f:json.dump(report,f,indent=2,allow_nan=False)
 if __name__=="__main__":main()

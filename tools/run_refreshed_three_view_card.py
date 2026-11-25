@@ -42,6 +42,7 @@ def gate(d,now):
     require(now.tzinfo is not None,"Aware clock required")
     first,verified=dt(d["first_fight_utc"]),dt(d["verified_at_utc"])
     require(first>now and first.date().isoformat()==d["event_date"] and d["event_date"]>CUTOFF,"Must be a future event after source cutoff")
+    require(first-now<=timedelta(hours=72),"Event outside 72-hour lock window")
     require(timedelta(0)<=now-verified<=timedelta(hours=72),"Caller verification must be recent, not future dated")
     require(all(d[k] is True for k in ("lineup_verified_by_caller","identity_verification_complete","UFC_history_current_through_last_completed_event_verified")),"Caller verification incomplete")
     require(d["last_completed_event_date"]==CUTOFF,"Refit required for new completed event")

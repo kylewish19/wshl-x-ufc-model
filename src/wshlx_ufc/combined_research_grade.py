@@ -2,10 +2,10 @@
 External pre-event publication must be independently verified by the caller.
 The pure scorer checks a supplied digest and timestamp, not their authenticity.
 """
-from datetime import datetime,timezone
+from datetime import datetime,timezone,timedelta
 from collections import defaultdict
 from math import isfinite,log
-import hashlib,json
+import hashlib,json,re
 import numpy as np
 from .finish_v1_research import score_six,aggregate
 from .joint_coherence_shadow import JOINT_KEYS
@@ -34,15 +34,20 @@ def distributions(row):
     require(set(CHALLENGERS[:3])<=set(ch)<=set(CHALLENGERS),"Missing or unregistered challenger")
     require((CHALLENGERS[-1] in ch)==(row["regional_status"]=="ELIGIBLE"),"Regional eligibility mismatch")
     for name,v in ch.items():yield name,prob(v["p_a"]),v["six_joint"]
-def grade(lock_bytes,actual,evidence):
+def grade(lock_bytes,actual,evidence,*,synthetic=False):
     lock=json.loads(lock_bytes)
     require(lock["schema"]=="WSHLX_REFRESHED_COMBINED_RESEARCH_V1" and lock["research_only"] is True and lock["odds_used"] is False and lock["bet_authorized"] is False,"Not an odds-blind research lock")
+    kind="SYNTHETIC_CONTRACT_TEST" if synthetic else "PROSPECTIVE_RESEARCH"
+    require(lock.get("run_kind")==kind,"Wrong run kind; fictional fixtures cannot enter prospective grades")
+    require(isinstance(lock.get("runner_commit"),str) and re.fullmatch(r"[0-9a-f]{40}",lock["runner_commit"]),"Runner commit required")
     digest=hashlib.sha256(lock_bytes).hexdigest()
     require(evidence["sha256"]==digest and evidence["externally_verified_by_caller"] is True and evidence["evidence_url"].startswith("https://"),"External lock proof required")
     first=stamp(lock["first_fight_utc"]);created=stamp(lock["generated_at_utc"]);published=stamp(evidence["published_at_utc"])
     require(created<=published<first,"Pre-event publication required")
+    require(first-created<=timedelta(hours=72),"Lock outside 72-hour event window")
     require(actual["event_date"]==lock["event_date"] and actual["event"]==lock["event"] and stamp(actual["verified_at_utc"])>=first and actual["results_verified_by_caller"] is True,"Verified post-event result register required")
     rows=lock["fights"];truth=actual["fights"]
+    require(1<=len(rows)<=20,"Invalid lock bout count")
     byno={r["fight_no"]:r for r in truth}
     require(len(byno)==len(truth)==len(rows) and set(byno)=={r["fight_no"] for r in rows} and len({r["fight_no"] for r in rows})==len(rows),"Incomplete or duplicate results")
     groups=defaultdict(dict);excluded=[];seen=set();eligible=set();timing=defaultdict(list)
@@ -88,4 +93,4 @@ def grade(lock_bytes,actual,evidence):
         for v in VARIANTS[1:]:
             s=groups[n+":"+v];require(set(s)==set(base),"Unpaired core variants")
             if base:own[n+":"+v]={"paired_fights":len(base),"six_log_loss_delta":sum(s[k]["six_log_loss"]-base[k]["six_log_loss"] for k in base)/len(base),"six_brier_delta":sum(s[k]["six_brier"]-base[k]["six_brier"] for k in base)/len(base),"exact_hit_delta":sum(s[k]["exact"]-base[k]["exact"] for k in base)}
-    return {"schema":"WSHLX_COMBINED_RESEARCH_EVENT_GRADE_V1","event":lock["event"],"event_date":lock["event_date"],"lock_sha256":digest,"publication_evidence":evidence,"external_evidence_authenticity_checked_by_caller_not_code":True,"unique_decisive_bouts":len(eligible),"decisive_bout_keys":[list(k) for k in sorted(eligible)],"per_bout_scores":{n:[{"regional_ids":list(k),**v} for k,v in sorted(s.items())] for n,s in groups.items()},"non_gradeable":excluded,"models":metrics,"paired_vs_reference_raw":paired,"paired_vs_own_raw":own,"timing_gtd":{n:{"n":len(s),**{k:sum(x[k] for x in s)/len(s) for k in s[0]}} for n,s in timing.items()},"prospective_promotion_authorized":False,"research_only":True}
+    return {"schema":"WSHLX_COMBINED_RESEARCH_EVENT_GRADE_V1","run_kind":kind,"runner_commit":lock["runner_commit"],"event":lock["event"],"event_date":lock["event_date"],"lock_sha256":digest,"publication_evidence":evidence,"external_evidence_authenticity_checked_by_caller_not_code":True,"unique_decisive_bouts":len(eligible),"decisive_bout_keys":[list(k) for k in sorted(eligible)],"per_bout_scores":{n:[{"regional_ids":list(k),**v} for k,v in sorted(s.items())] for n,s in groups.items()},"non_gradeable":excluded,"models":metrics,"paired_vs_reference_raw":paired,"paired_vs_own_raw":own,"timing_gtd":{n:{"n":len(s),**{k:sum(x[k] for x in s)/len(s) for k in s[0]}} for n,s in timing.items()},"prospective_promotion_authorized":False,"research_only":True}

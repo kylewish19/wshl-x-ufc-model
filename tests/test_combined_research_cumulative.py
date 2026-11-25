@@ -5,10 +5,10 @@ from wshlx_ufc.combined_research_grade import grade,CHALLENGERS
 from wshlx_ufc.combined_research_cumulative import summarize
 
 def base():
-    b,a,e=fixture();return grade(b,a,e)
+    b,a,e=fixture();return grade(b,a,e,synthetic=True)
 def test_empty_and_single_event():
-    assert summarize([])["unique_decisive_bouts"]==0
-    g=summarize([base()])
+    assert summarize([],synthetic=True)["unique_decisive_bouts"]==0
+    g=summarize([base()],synthetic=True)
     assert g["unique_decisive_bouts"]==2 and g["graded_events"]==1
     assert g["model_metrics"]["reference:raw"]["fights"]==2
     assert g["paired_vs_reference_raw"][CHALLENGERS[-1]]["paired_fights"]==1
@@ -16,9 +16,9 @@ def test_empty_and_single_event():
     assert not g["prospective_promotion_authorized"]
 def test_duplicate_or_missing_rejected():
     x=base()
-    with pytest.raises(ValueError,match="Duplicate"):summarize([x,x])
+    with pytest.raises(ValueError,match="Duplicate"):summarize([x,x],synthetic=True)
     y=copy.deepcopy(x);y["per_bout_scores"]["reference:raw"].pop()
-    with pytest.raises(ValueError,match="coverage"):summarize([y])
+    with pytest.raises(ValueError,match="coverage"):summarize([y],synthetic=True)
 def test_event_cluster_intervals_and_unique_counts():
     # Pure synthetic aggregation test, never live prospective evidence.
     events=[]
@@ -26,7 +26,10 @@ def test_event_cluster_intervals_and_unique_counts():
         e=base();e["event_date"]=f"2026-12-{i+1:02}"
         e["lock_sha256"]=f"{i:064x}";e["publication_evidence"]["sha256"]=e["lock_sha256"]
         events.append(e)
-    s=summarize(events);p=s["paired_vs_own_raw"]["reference:winner_aligned"]
+    s=summarize(events,synthetic=True);p=s["paired_vs_own_raw"]["reference:winner_aligned"]
     assert s["unique_decisive_bouts"]==20 and p["paired_events"]==10
     assert p["event_cluster_percentile_95"]["six_log_loss"]==[0.,0.]
     assert not s["minimum_fight_count_met"]
+
+def test_fixture_rejected_from_real_cumulative():
+    with pytest.raises(ValueError,match="run kind"):summarize([base()])

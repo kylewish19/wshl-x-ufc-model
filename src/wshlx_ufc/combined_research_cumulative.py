@@ -35,11 +35,13 @@ def comparison(events,model,base):
         interval={k:[float(q) for q in np.quantile(v[:,i],[.025,.975])] for i,k in enumerate((PRIMARY,SECONDARY,"exact"))}
     return {"paired_fights":n,"paired_events":len(z),"six_log_loss_delta":float(d[0]),"six_brier_delta":float(d[1]),"exact_accuracy_delta":float(d[2]),"event_cluster_percentile_95":interval,"interval_status":"EXPLORATORY" if interval else "INSUFFICIENT_EVENT_CLUSTERS"}
 
-def summarize(grades):
+def summarize(grades,*,synthetic=False):
+    kind="SYNTHETIC_CONTRACT_TEST" if synthetic else "PROSPECTIVE_RESEARCH"
     # One grade per calendar event and one unordered fighter pair per date.
     event_keys=set();digests=set();all_bouts=set();by=defaultdict(list)
     for e in grades:
         require(e["schema"]=="WSHLX_COMBINED_RESEARCH_EVENT_GRADE_V1" and e["research_only"] is True and e["prospective_promotion_authorized"] is False,"Wrong grade schema or authorization")
+        require(e.get("run_kind")==kind,"Wrong run kind; fictional grades cannot enter prospective cohort")
         require(e["publication_evidence"]["externally_verified_by_caller"] is True and e["publication_evidence"]["sha256"]==e["lock_sha256"],"Unverified publication evidence")
         key=(e["event_date"],e["event"]);digest=e["lock_sha256"]
         require(key not in event_keys and digest not in digests,"Duplicate event grade or lock")
@@ -62,4 +64,4 @@ def summarize(grades):
     metrics={m:aggregate(by[m]) for m in REGISTERED if by[m]}
     paired={m:v for m in REGISTERED if m!="reference:raw" and (v:=comparison(ordered,m,"reference:raw")) is not None}
     own={n+":"+v:x for n in CORE for v in VARIANTS[1:] if (x:=comparison(ordered,n+":"+v,n+":raw")) is not None}
-    return {"schema":"WSHLX_COMBINED_RESEARCH_CUMULATIVE_V1","unique_decisive_bouts":len(all_bouts),"graded_events":len(event_keys),"minimum_prospective_fights":MIN_FIGHTS,"minimum_fight_count_met":len(all_bouts)>=MIN_FIGHTS,"model_metrics":metrics,"paired_vs_reference_raw":paired,"paired_vs_own_raw":own,"minimum_events_for_exploratory_interval":MIN_EVENTS_FOR_INTERVAL,"bootstrap_reps":BOOTSTRAP_REPS,"prospective_promotion_authorized":False,"research_only":True,"notes":"Caller verifies external pre-event evidence; count threshold alone never authorizes promotion. Event-cluster intervals exploratory and not multiplicity-adjusted."}
+    return {"schema":"WSHLX_COMBINED_RESEARCH_CUMULATIVE_V1","run_kind":kind,"unique_decisive_bouts":len(all_bouts),"graded_events":len(event_keys),"minimum_prospective_fights":MIN_FIGHTS,"minimum_fight_count_met":len(all_bouts)>=MIN_FIGHTS,"model_metrics":metrics,"paired_vs_reference_raw":paired,"paired_vs_own_raw":own,"minimum_events_for_exploratory_interval":MIN_EVENTS_FOR_INTERVAL,"bootstrap_reps":BOOTSTRAP_REPS,"prospective_promotion_authorized":False,"research_only":True,"notes":"Caller verifies external pre-event evidence; count threshold alone never authorizes promotion. Event-cluster intervals exploratory and not multiplicity-adjusted."}
