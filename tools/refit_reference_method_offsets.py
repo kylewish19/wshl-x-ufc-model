@@ -47,7 +47,9 @@ def main():
     chosen=[]
     for r in old.to_dict("records"):
         k=key(r)
-        if k not in idx:raise ValueError("Historical feedback identity mismatch: "+str(k))
+        if k not in idx:
+            candidates=[z for z in idx if z[0]==k[0] and set(z[1:])&set(k[1:])]
+            raise ValueError("Historical feedback identity mismatch: "+str((k,candidates)))
         x=idx[k]
         if x["method"]!=r["clean_actual_method"] or rb.norm_name(x["winner"])!=rb.norm_name(r["winner"]):
             raise ValueError("Historical feedback label disagreement: "+str(k))

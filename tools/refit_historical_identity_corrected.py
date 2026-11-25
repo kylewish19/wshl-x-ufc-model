@@ -84,17 +84,45 @@ def append_recent(t):
         return t,len(rows)
     finally:con.close()
 
+def reconcile_legacy_aliases(t):
+    # Reuse historical policies, but identify the UFC332 prospect by the
+    # authoritative event date AND opponent instead of raw event punctuation.
+    from wshlx_ufc.historical_data import normalize_events,bout,txt
+    days={txt(x.event):x.date.date().isoformat() for x in normalize_events(t["events"]).itertuples(index=False) if pd.notna(x.date)}
+    prospect=0
+    def identity(n,day,pair):
+        name=txt(n)
+        if a.namekey(name)=="anthonyromero":
+            if day=="2026-10-03" and {a.namekey(z) for z in pair}=={"anthonyromero","marcusmcghee"}:
+                return "Anthony Romero"
+            return "Anthony Romero (The Genius)"
+        return clean_name(name,"")
+    for k in ("results","stats"):
+        df=t[k]
+        df["EVENT"]=df["EVENT"].map(txt)
+        fixed=[];fighters=[]
+        for row in df.to_dict("records"):
+            ev=txt(row["EVENT"]);pair=bout(row["BOUT"])
+            if not pair or ev not in days:raise ValueError("Unresolved source date or bout "+str((ev,row["BOUT"])))
+            day=days[ev]
+            aa,bb=(identity(z,day,pair) for z in pair)
+            fixed.append(aa+" vs. "+bb)
+            if k=="results" and day=="2026-10-03" and {aa,bb}=={"Anthony Romero","Marcus McGhee"}:prospect+=1
+            if k=="stats":fighters.append(identity(row["FIGHTER"],day,pair))
+        df["BOUT"]=fixed
+        if k=="stats":df["FIGHTER"]=fighters
+    assert prospect==1, f"Expected exactly one verified UFC332 prospect result, got {prospect}"
+    t["fighters"]["FIGHTER"]=t["fighters"]["FIGHTER"].replace({"Kai Kamaka":"Kai Kamaka III","Zach Reese":"Zachary Reese"})
+    t["fighters"]=t["fighters"][t["fighters"]["FIGHTER"]!="Anthony Romero (The Genius)"]
+    print("LEGACY_ALIAS_AUDIT UFC332 prospect matched by date and opponent",flush=True)
+    return t
+
 def main():
     if OUT.exists():raise FileExistsError("Never overwrite research output")
     t,_=corrected_tables(load_source_files(ARCHIVE),mapping())
     t,n=append_recent(t)
     # Preserve earlier Historical refit's known identity policies.
-    for k in ("results","stats"):
-        df=t[k]
-        df["BOUT"]=[map_bout(b,e) for b,e in zip(df["BOUT"],df["EVENT"])]
-        if k=="stats":df["FIGHTER"]=[clean_name(f,e) for f,e in zip(df["FIGHTER"],df["EVENT"])]
-    t["fighters"]["FIGHTER"]=t["fighters"]["FIGHTER"].replace({"Kai Kamaka":"Kai Kamaka III","Zach Reese":"Zachary Reese"})
-    t["fighters"]=t["fighters"][t["fighters"]["FIGHTER"]!="Anthony Romero (The Genius)"]
+    t=reconcile_legacy_aliases(t)
     f=frame(t)
     f["date"]=pd.to_datetime(f["date"])
     assert str(f["date"].max().date())=="2026-11-21"

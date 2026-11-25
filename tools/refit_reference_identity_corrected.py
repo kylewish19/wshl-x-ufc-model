@@ -9,7 +9,7 @@ import joblib
 import rebuild_v027 as rb
 from audit_identity_safe_csv import corrected_tables,FILES
 from audit_ufc_identity_overlay import mapping
-from refit_historical_identity_corrected import append_recent
+from refit_historical_identity_corrected import append_recent,reconcile_legacy_aliases
 from refit_ufcvegas124_historical_shadow import clean_name,map_bout
 from wshlx_ufc.historical_data import load_source_files
 from wshlx_ufc.prefight_finish_resistance import ARCHIVE
@@ -73,12 +73,7 @@ def selfcheck():
 def source():
     t,_=corrected_tables(load_source_files(ARCHIVE),mapping())
     t,n=append_recent(t)
-    for k in ("results","stats"):
-        df=t[k]
-        df["BOUT"]=[map_bout(b,e) for b,e in zip(df["BOUT"],df["EVENT"])]
-        if k=="stats":df["FIGHTER"]=[clean_name(f,e) for f,e in zip(df["FIGHTER"],df["EVENT"])]
-    t["fighters"]["FIGHTER"]=t["fighters"]["FIGHTER"].replace({"Kai Kamaka":"Kai Kamaka III","Zach Reese":"Zachary Reese"})
-    t["fighters"]=t["fighters"][t["fighters"]["FIGHTER"]!="Anthony Romero (The Genius)"]
+    t=reconcile_legacy_aliases(t)
     return t
 
 def main():
@@ -93,6 +88,8 @@ def main():
         fights,stats,static=rb.load_fights(path)
     assert str(fights.event_date.max().date())=="2026-11-21"
     assert all(sum(fights.event_date.dt.strftime("%Y-%m-%d")==d)==12 for d in ("2026-11-14","2026-11-21"))
+    match=fights[(fights.event_date.dt.strftime("%Y-%m-%d")=="2026-10-03") & (fights.fighter_a.eq("Anthony Romero") | fights.fighter_b.eq("Anthony Romero"))]
+    assert len(match)==1 and {match.iloc[0].fighter_a,match.iloc[0].fighter_b}=={"Anthony Romero","Marcus McGhee"}
     agg=rb.aggregate_fight_stats(fights,stats)
     (w,m,t),history,coverage=rebuild(fights,agg,static)
     assert len(w)==len(m)==len(t)==len(fights)

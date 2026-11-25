@@ -2,7 +2,7 @@ name: UFC Reference corrected method offset compatibility
 on:
   push:
     branches: ["feature/historical-conditional-rates"]
-    paths: ["tools/refit_reference_method_offsets.py", ".github/workflows/ufc-reference-offsets.yml"]
+    paths: ["tools/refit_reference_method_offsets.py", "tools/refit_reference_identity_corrected.py", "tools/refit_historical_identity_corrected.py", ".github/workflows/ufc-reference-offsets.yml"]
   workflow_dispatch:
 permissions:
   contents: read
